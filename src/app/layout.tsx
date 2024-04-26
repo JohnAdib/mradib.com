@@ -29,8 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="fa"
-      dir="rtl"
+      lang="en"
+      dir="ltr"
       prefix="og: http://ogp.me/ns#"
       suppressHydrationWarning
     >
