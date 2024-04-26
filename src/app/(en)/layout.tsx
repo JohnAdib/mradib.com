@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html
       prefix="og: http://ogp.me/ns#"
-      dir="rtl"
-      lang="fa"
+      dir="ltr"
+      lang="en"
     >
       <body>
         <Providers>

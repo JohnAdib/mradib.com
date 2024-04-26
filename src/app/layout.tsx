@@ -1,5 +1,3 @@
-import { Providers } from '@/app/providers';
-import { Layout } from '@/components/layout';
 import { rootMetadata } from '@/lib/root-metadata';
 import { rootViewport } from '@/lib/root-viewport';
 import '@/styles/tailwind.css';
@@ -10,7 +8,6 @@ import { Inter, Vazirmatn } from 'next/font/google';
 export const metadata = rootMetadata;
 export const viewport = rootViewport;
 
-// If loading a variable font, you don't need to specify the font weight
 const vazirmatn = Vazirmatn({
   subsets: ['latin'],
   display: 'swap',
@@ -29,8 +26,6 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
-      dir="ltr"
       prefix="og: http://ogp.me/ns#"
       suppressHydrationWarning
     >
@@ -42,12 +37,8 @@ export default function RootLayout({
           )
         }
       >
-        <Providers>
-          <div className="flex w-full">
-            <Layout>{children}</Layout>
-          </div>
-        </Providers>
-        <GoogleAnalytics gaId="G-0T9SVDBER6" />
+        {children}
+        <GoogleAnalytics gaId="G-0T9SVDBER6"/>
       </body>
     </html>
   );
