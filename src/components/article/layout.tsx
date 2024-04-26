@@ -3,7 +3,7 @@
 import { AppContext } from '@/app/providers';
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
-import { formatDate } from '@/lib/format-date';
+import { formatDatePersian } from '@/lib/fa/format-date';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
@@ -67,7 +67,7 @@ export function ArticleLayout({
                 >
                   <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                   <span className="mr-3">
-                    {formatDate({ date, time })}
+                    {formatDatePersian({ date, time })}
                   </span>
                 </time>
                 <ArticleReadTime minutes={readTimeMinutes} />

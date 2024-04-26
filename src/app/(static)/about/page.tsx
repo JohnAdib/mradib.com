@@ -6,9 +6,9 @@ import { SocialMediaLinks } from '@/components/social-media-links';
 import portraitImage from '@/images/portrait.jpg';
 
 export const metadata: Metadata = {
-  title: 'درباره جان ادیب',
+  title: 'About John Adib',
   description:
-    'جان ادیب - مهندس نرم‌افزار مستقر در لندن',
+    'John Adib - Senior Software Engineer, Web Developer, Open Source Contributor..',
 };
 
 export default function About() {
@@ -31,7 +31,7 @@ export default function About() {
           <h1
             className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
           >
-            جان ادیب از لندن
+            John Adib
           </h1>
           <div
             className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400"

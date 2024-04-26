@@ -5,13 +5,13 @@ import { SocialLink } from './social-link';
 export function EmailLink() {
   return <SocialLink
     href="mailto:Mr.JohnAdib@Gmail.com"
-    ariaLabel="ایمیل"
+    ariaLabel="Send an email to MrAdib"
     icon={MailIcon}
     className={clsx(
       'mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40',
     )}
   >
-      ایمیل
+      Email
   </SocialLink>;
 }
 
@@ -32,44 +32,39 @@ export function SocialMediaLinks({
     >
       <SocialLink
         href="https://www.linkedin.com/in/MrAdib/"
-        ariaLabel="لینکداین"
+        ariaLabel="Connected to MrAdib on LinkedIn"
         icon={LinkedInIcon}
         isShowName={isShowName}
-      >
-      لینکداین
-      </SocialLink>
+      >Linkedin</SocialLink>
+
       <SocialLink
         href="https://twitter.com/MrAdib"
-        ariaLabel="اکس یا توییتر؟"
+        ariaLabel="Follow MrAdib on Twitter"
         icon={XIcon}
         isShowName={isShowName}
-      >
-      اکس
-      </SocialLink>
+      >X</SocialLink>
+
       <SocialLink
         href="https://t.me/mradib"
-        ariaLabel="تلگرام"
+        ariaLabel="You can find me on Telegram"
         icon={InstagramIcon}
         isShowName={isShowName}
-      >
-      تلگرام
-      </SocialLink>
+      >Telegram</SocialLink>
+
       <SocialLink
         href="https://github.com/JohnAdib"
-        ariaLabel="گیت‌هاب"
+        ariaLabel="Check out my GitHub profile"
         icon={GitHubIcon}
         isShowName={isShowName}
-      >
-      گیت‌هاب
-      </SocialLink>
+      >GitHub</SocialLink>
+
       <SocialLink
         href="https://www.instagram.com/MrJohnAdib/"
-        ariaLabel="اینستاگرام"
+        ariaLabel="See MrAdib photos on Instagram"
         icon={InstagramIcon}
         isShowName={isShowName}
-      >
-      اینستاگرام
-      </SocialLink>
+      >Instagram</SocialLink>
+
     </nav>
   );
 }

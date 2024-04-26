@@ -3,7 +3,7 @@ interface IFormatDate {
   time?: string;
 }
 
-export function formatDate({ date, time }: IFormatDate) {
+export function formatDatePersian({ date, time }: IFormatDate) {
   const myTime = time ? time : '00:00:00';
   const dateAndTime = `${date}T${myTime}Z`;
 
