@@ -1,0 +1,100 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the 3 resume formats for a job?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>As of 2023, there are three main resume formats:</p>\n<ul>\n<li><strong>The </strong><a href=\"https://resumelab.com/resume/chronological\"><strong>reverse-chronological format</strong></a><strong> is the most common one. </strong>It lists your <a href=\"https://resumelab.com/resume/work-experience\">work history</a> and shows what you&rsquo;ve achieved while working for each employer. It can also be tweaked to focus on your academic achievements if you don&rsquo;t have much work experience yet.</li>\n<li><strong>The </strong><a href=\"https://resumelab.com/resume/functional\"><strong>functional resume format</strong></a><strong> is also known as the skills-based resume format.</strong> It focuses on your <a href=\"https://resumelab.com/resume/skills\">resume skill set</a> rather than your work history, so you may use it to gloss over <a href=\"https://resumelab.com/resume/employment-gaps\">employment gaps</a> and employment histories that aren&rsquo;t perfectly neat and linear. However, many recruiters aren&rsquo;t familiar with functional resumes and might reject them. Also, companies use Applicant Tracking Software to parse resumes, and functional resumes aren&rsquo;t ATS-friendly</li>\n<li><strong>The combination format gives equal attention to your skills and work experience.</strong> It can be useful in certain situations but has the same drawbacks as the functional resume format.</li>\n</ul>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best resume format in 2023?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p><strong>The </strong><a href=\"https://resumelab.com/resume/chronological\"><strong>reverse-chronological resume format</strong></a><strong> is the standard and best resume format to use in 2023.</strong> In a reverse-chronological resume, you list your <a href=\"https://resumelab.com/resume/work-experience\">work experience</a> and <a href=\"https://resumelab.com/resume/education\">educational background</a>, starting with your most recent jobs and ending with your earliest successes.</p>\n<p>Here&rsquo;s why it&rsquo;s the golden standard:</p>\n<ul>\n<li>It offers a quick overview of your <a href=\"https://resumelab.com/resume/achievements\">key achievements</a> and professional growth over the years, arranged in an easy-to-read order.</li>\n<li>It can be skimmed in a few seconds&mdash;recruiters don&rsquo;t have the time to read more complicated documents.</li>\n<li>It&rsquo;s easily scannable by Applicant Tracking Software that helps evaluate candidates.</li>\n</ul>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which resume format do employers prefer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p><strong>Most employers and hiring managers prefer the reverse-chronological resume format.</strong> It&rsquo;s a resume that lists your work history and education in reverse chronological order, with bullet points that show what you achieved while working for each employer. This resume format is ATS-friendly</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What file format should a resume be in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p><strong>Unless the job ad clearly asks for a specific resume file format, it&rsquo;s best to go with a PDF file. </strong>The reason is that a <a href=\"https://resumelab.com/resume/pdf-doc\">PDF resume</a> looks the same on every device, so your resume will always look perfect, no matter if the recruiter opens it on a PC, a Mac, or a phone.</p>\n<p>However, keep in mind that some companies use applicant tracking software that doesn&rsquo;t support PDF files. In this case, the job ad will specifically ask for resumes to be submitted as DOCX or even TXT files.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which resume format is the most ATS-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p><strong>Applicant Tracking Systems are primarily designed for reading reverse-chronological resumes.</strong> Other resume formats might confuse the software and lead to your resume getting rejected.</p>\n<p>Here&rsquo;s how you can make sure you have an <a href=\"https://resumelab.com/resume/ats\">ATS-friendly resume</a>:</p>\n<ul>\n<li>Avoid unusual resume formats.</li>\n<li>Choose an ATS-friendly resume template.</li>\n<li>Write the <a href=\"https://resumelab.com/resume/profile\">resume profile</a> in a way that mentions the company and the position you&rsquo;re applying for.</li>\n<li>Make sure your <a href=\"https://resumelab.com/resume/sections\">resume sections</a> have standard headings.</li>\n<li>Borrow <a href=\"https://resumelab.com/resume/keywords\">resume keywords</a> from the job ad.</li>\n<li>Avoid pictures and infographics.</li>\n<li>Save your resume as PDF or in the file format specified in the job ad.</li>\n</ul>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a special resume format for students?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>The reverse-chronological format is best for a <a href=\"https://resumelab.com/resume-examples/student\">student's resume</a>.<strong> Just put the education section of your resume above the work experience section.</strong> A <a href=\"https://resumelab.com/resume-examples/no-experience\">resume with no experience</a> should highlight academic achievements or other relevant accomplishments, such as volunteer work or personal projects.</p>\n<p>Applying for an academic position or writing a <a href=\"https://resumelab.com/resume-examples/graduate-school\">grad school resume</a>? Forget what you&rsquo;ve just read and go with an <a href=\"https://resumelab.com/cv/academic\">academic CV</a> rather than a job resume.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I format a resume in Word or Google Docs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>If you want to make a resume from scratch without relying on <a href=\"https://resumelab.com/resume/free-templates-word\">resume templates for Word</a> or <a href=\"https://resumelab.com/resume/google-docs\">resume templates for Google Docs</a>, these are the resume formatting rules to follow:</p>\n<ul>\n<li >Set the page margins to 1&rdquo; on all sides.</li>\n<li>Pick a classic combo of <a href=\"https://resumelab.com/resume/font\">resume fonts</a> (one for headings, one for body text), or use a single font throughout your resume.</li>\n<li>Set the body font size to 11&ndash;12 pts, depending on the font.</li>\n<li>Create the following resume sections: header, profile, work experience, education, skills, and any additional sections you may find necessary (like languages or volunteering work).</li>\n<li>Leave lots of white space between the resume sections.</li>\n<li>Follow the best practices for <a href=\"https://resumelab.com/resume/length\">resume length</a>.</li>\n</ul>\n<p>However, making a DIY resume can be difficult, so we recommend using a <a href=\"https://resumelab.com/resume-templates\">high-quality resume template</a> for your favorite word processing software or a dedicated <a href=\"https://resumelab.com/resume-builder\">resume builder</a>.</p>"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://resumelab.com/resume/format",
+  "image": "https://cdn-images.resumelab.com/pages/executive_assistant_resume.png",
+  "name": "here are the three most common resume formats that recruiters expect to see:",
+  "itemListElement": [
+    "Reverse-chronological resume format",
+    "Functional resume format",
+    "Combination (hybrid) resume format"
+  ],
+  "itemListOrder": "unordered",
+  "numberOfItems": "3",
+  "url": "https://resumelab.com/resume/format#:~:text=here%20are%20the,hybrid)%20resume%20format"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "QAPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What Are the 3 Main Resume Formats?",
+"answerCount": 1,
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "<ol>\n<li aria-level=\"1\"><a href=\"https://resumelab.com/resume/chronological\"><strong>Reverse-chronological resume format</strong></a>. Most commonly referenced resume format for job applicants at all experience levels.</li>\n<li aria-level=\"1\"><a href=\"https://resumelab.com/resume/functional\"><strong>Functional resume format</strong></a>. Also known as a skills-based resume.</li>\n<li aria-level=\"1\"><a href=\"https://resumelab.com/resume/chrono-functional\"><strong>Chrono-functional resume format</strong></a>. Called a combination resume or a hybrid resume, too, as it combines the two above formats.</li>\n</ol>",
+"url": "https://resumelab.com/resume/format#:~:text=Reverse%2Dchronological%20resume%20format.%20Most,combines%20the%20two%20above%20formats."
+}
+}
+]
+}
+</script>
