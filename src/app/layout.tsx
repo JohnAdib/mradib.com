@@ -3,22 +3,11 @@ import { rootViewport } from '@/lib/root-viewport';
 import '@/styles/tailwind.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import clsx from 'clsx';
-import { Inter, Vazirmatn } from 'next/font/google';
+import { inter, vazirmatn } from './fonts';
 import { Providers } from './providers';
 
 export const metadata = rootMetadata;
 export const viewport = rootViewport;
-
-const vazirmatn = Vazirmatn({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-vazirmatn',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
 
 export default function RootLayout({
   children,
