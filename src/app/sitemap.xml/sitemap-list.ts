@@ -1,90 +1,90 @@
-import { siteUrl } from '@/lib/constants/url';
+import { siteUrl, siteUrlFa } from '@/lib/constants/url';
 import { SitemapType } from './sitemap-type';
 
 export const sitemapList: SitemapType = [
   {
-    url: siteUrl + '/',
+    url: siteUrl,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 1,
   },
   // static pages
   {
-    url: siteUrl + '/about',
+    url: siteUrl + 'about',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   // articles
   {
-    url: siteUrl + '/mysql-auto-backup',
+    url: siteUrlFa + 'mysql-auto-backup',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   // resume
   {
-    url: siteUrl + '/resume',
+    url: siteUrlFa + 'resume',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/action-verbs',
+    url: siteUrlFa + 'resume/action-verbs',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/ats',
+    url: siteUrlFa + 'resume/ats',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/contact',
+    url: siteUrlFa + 'resume/contact',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/education',
+    url: siteUrlFa + 'resume/education',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/experience',
+    url: siteUrlFa + 'resume/experience',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/length',
+    url: siteUrlFa + 'resume/length',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/optional',
+    url: siteUrlFa + 'resume/optional',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/skills',
+    url: siteUrlFa + 'resume/skills',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/summary',
+    url: siteUrlFa + 'resume/summary',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
   },
   {
-    url: siteUrl + '/resume/template',
+    url: siteUrlFa + 'resume/template',
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 1,
