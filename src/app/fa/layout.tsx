@@ -1,10 +1,8 @@
 import { Layout } from '@/components/layout';
-import { rootMetadata } from '@/lib/root-metadata';
-import { rootViewport } from '@/lib/root-viewport';
+import { rootMetadataFa } from '@/lib/root-metadata-fa';
 import '@/styles/tailwind.css';
 
-export const metadata = rootMetadata;
-export const viewport = rootViewport;
+export const metadata = rootMetadataFa;
 
 export default function RootLayout({
   children,
