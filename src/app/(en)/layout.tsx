@@ -1,4 +1,3 @@
-import { Providers } from '@/app/providers';
 import { Layout } from '@/components/layout';
 import { rootMetadata } from '@/lib/root-metadata';
 import { rootViewport } from '@/lib/root-viewport';
@@ -13,18 +12,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      prefix="og: http://ogp.me/ns#"
-      dir="ltr"
-      lang="en"
-    >
-      <body>
-        <Providers>
-          <div className="flex w-full">
-            <Layout>{children}</Layout>
-          </div>
-        </Providers>
-      </body>
-    </html>
+    <div className="flex w-full">
+      <Layout>{children}</Layout>
+    </div>
   );
 }

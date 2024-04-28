@@ -4,6 +4,7 @@ import '@/styles/tailwind.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import clsx from 'clsx';
 import { Inter, Vazirmatn } from 'next/font/google';
+import { Providers } from './providers';
 
 export const metadata = rootMetadata;
 export const viewport = rootViewport;
@@ -37,7 +38,9 @@ export default function RootLayout({
           )
         }
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
         <GoogleAnalytics gaId="G-0T9SVDBER6"/>
       </body>
     </html>
