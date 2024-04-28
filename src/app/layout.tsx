@@ -22,8 +22,8 @@ export default function RootLayout({
       <body
         className={
           clsx(
-            vazirmatn.className,
             inter.variable,
+            vazirmatn.variable,
           )
         }
       >

@@ -23,6 +23,18 @@ export default {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    fontFamily: {
+      sans: [
+        'var(--font-inter)',
+        'var(--font-vazirmatn)',
+      ],
+      en: [
+        'var(--font-inter)',
+      ],
+      fa: [
+        'var(--font-vazirmatn)',
+      ],
+    },
     typography: typographyStyles,
   },
 } satisfies Config;
