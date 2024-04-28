@@ -1,4 +1,4 @@
-import { siteUrl } from '@/lib/root-metadata';
+import { siteUrl } from '@/lib/constants/url';
 import { SitemapType } from './sitemap-type';
 
 export const sitemapList: SitemapType = [

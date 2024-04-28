@@ -2,8 +2,9 @@
 
 import { ArticleLayout } from '@/components/article/layout';
 import { Pre } from '@/components/syntax-highlighter/pre';
+import { separator } from '@/lib/constants/en';
+import { myNameFa } from '@/lib/constants/fa';
 import { readingTime } from '@/lib/reading-time';
-import { myNameFa, separator } from '@/lib/root-metadata';
 import { type Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';

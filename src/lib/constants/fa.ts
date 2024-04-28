@@ -1,4 +1,4 @@
-const separator = ' | ';
+import { separator } from './en';
 
 export const myNameFa = 'جان ادیب';
 export const myTitleFa = 'مستر ادیب';

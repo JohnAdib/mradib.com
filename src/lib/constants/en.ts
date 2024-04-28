@@ -1,4 +1,4 @@
-const separator = ' - ';
+export const separator = ' - ';
 
 export const myName = 'John Adib';
 export const myTitle = 'MrAdib';
