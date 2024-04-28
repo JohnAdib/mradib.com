@@ -12,15 +12,18 @@ body{
 }
 
 
-[lang="fa"]{
+[dir="rtl"]{
     font-family: var(--font-fa);
 }
-[lang="en"]{
+[dir="ltr"]{
     font-family: var(--font-en);
 }
 
 a[href^="/fa"]{
     font-family: var(--font-fa);
+}
+a:not([href^="/fa"]){
+    font-family: var(--font-en);
 }
 
 ::selection{
