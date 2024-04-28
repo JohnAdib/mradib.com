@@ -3,6 +3,10 @@
 @import './prism.css';
 @import 'tailwindcss/utilities';
 
+html{
+    @apply h-full;
+}
+
 body{
     @apply antialiased;
     @apply flex h-full ;
