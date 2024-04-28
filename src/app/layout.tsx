@@ -3,7 +3,7 @@ import { rootViewport } from '@/lib/root-viewport';
 import '@/styles/tailwind.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import clsx from 'clsx';
-import { inter, vazirmatn } from './fonts';
+import { fontEn, fontFa } from './fonts';
 import { Providers } from './providers';
 
 export const metadata = rootMetadata;
@@ -22,8 +22,8 @@ export default function RootLayout({
       <body
         className={
           clsx(
-            inter.variable,
-            vazirmatn.variable,
+            fontEn.variable,
+            fontFa.variable,
           )
         }
       >

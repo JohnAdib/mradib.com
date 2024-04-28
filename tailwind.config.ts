@@ -25,14 +25,14 @@ export default {
     },
     fontFamily: {
       sans: [
-        'var(--font-inter)',
-        'var(--font-vazirmatn)',
+        'var(--font-en)',
+        'var(--font-fa)',
       ],
       en: [
-        'var(--font-inter)',
+        'var(--font-en)',
       ],
       fa: [
-        'var(--font-vazirmatn)',
+        'var(--font-fa)',
       ],
     },
     typography: typographyStyles,

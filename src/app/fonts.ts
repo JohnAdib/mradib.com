@@ -1,12 +1,12 @@
 import { Inter, Vazirmatn } from 'next/font/google';
 
-export const vazirmatn = Vazirmatn({
+export const fontFa = Vazirmatn({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-vazirmatn',
+  variable: '--font-fa',
 });
 
-export const inter = Inter({
+export const fontEn = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-en',
 });
