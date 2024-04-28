@@ -1,20 +1,7 @@
-import { siteUrl, siteUrlFa } from '@/lib/constants/url';
-import { SitemapType } from './sitemap-type';
+import { siteUrlFa } from '@/lib/constants/url';
+import { SitemapType } from '../_tools/sitemap-type';
 
-export const sitemapList: SitemapType = [
-  {
-    url: siteUrl,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 1,
-  },
-  // static pages
-  {
-    url: siteUrl + 'about',
-    lastModified: new Date(),
-    changeFrequency: 'daily',
-    priority: 1,
-  },
+export const sitemapListFa: SitemapType = [
   // articles
   {
     url: siteUrlFa + 'mysql-auto-backup',
