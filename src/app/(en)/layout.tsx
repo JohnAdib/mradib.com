@@ -12,7 +12,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex w-full">
+    <div
+      className="flex w-full"
+      dir='ltr'
+      lang='en'
+    >
       <Layout>{children}</Layout>
     </div>
   );

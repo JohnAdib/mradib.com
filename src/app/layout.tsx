@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      prefix="og: http://ogp.me/ns#"
+      prefix="og:http://ogp.me/ns#"
       suppressHydrationWarning
     >
       <body
