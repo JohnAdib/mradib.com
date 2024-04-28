@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production'
-const productionUrl = 'https://blog.mradib.com';
-const assetPrefix = isProd ? productionUrl : undefined;
+// const isProd = process.env.NODE_ENV === 'production';
+// const productionUrl = 'https://blog.mradib.com';
+// const assetPrefix = isProd ? productionUrl : undefined;
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: assetPrefix,
+  // assetPrefix: assetPrefix,
   images: {
     unoptimized: true,
   },

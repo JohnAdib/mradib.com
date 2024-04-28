@@ -8,7 +8,8 @@
     "dev": "next dev",
     "lint": "eslint . --ext .json,.js,.ts,.tsx",
     "lint:fix": "eslint . --ext .json,.js,.ts,.tsx --fix",
-    "start": "next start"
+    "start": "next start",
+    "start:local": "npx serve@latest out"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
