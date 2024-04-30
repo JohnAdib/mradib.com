@@ -132,9 +132,9 @@ function MobileNavigation(
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/">صفحه نخست</MobileNavItem>
-                <MobileNavItem href="/about">درباره من</MobileNavItem>
-                <MobileNavItem href="/resume">آموزش رایگان رزومه‌نویسی</MobileNavItem>
+                <MobileNavItem href="/">Homepage</MobileNavItem>
+                <MobileNavItem href="/about">About</MobileNavItem>
+                <MobileNavItem href="/fa">فارسی</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
