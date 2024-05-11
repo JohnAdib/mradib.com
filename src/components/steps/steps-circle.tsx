@@ -5,21 +5,23 @@ import { IStep } from './step-interface';
 // Define meaningful text and background color variables
 // TODO: read the colors from template for dark and light mode
 const textColorWhite = 'text-white';
-const textColorIndigo900 = 'text-indigo-900';
-const textColorIndigo600 = 'text-indigo-600';
-const textColorGray500 = 'text-gray-500';
-const bgColorGray300 = 'bg-gray-300';
-const bgColorIndigo600 = 'bg-indigo-600';
-const bgColorWhite = 'bg-white';
-const borderColorGray300 = 'border-gray-300';
-const groupHoverBorderColorGray400 = 'group-hover:border-gray-400';
+const headingLinkComplete = 'text-sky-900 dark:text-sky-500';
+const headingLinkCurrent = 'text-sky-700 dark:text-sky-300';
+const headingLinkUpcoming = 'text-stone-600 dark:text-stone-300';
+const stepDesc = 'text-stone-500 dark:text-stone-400';
+const verticalLineColor = 'bg-stone-300 dark:bg-stone-500';
+const borderCircle = 'border-stone-300 dark:border-stone-500';
+const borderCircleHover = 'group-hover:border-stone-400 dark:group-hover:border-stone-300';
+const bgCircleComplete = 'bg-sky-900';
+const bgCircleCurrent = 'bg-sky-600';
+const bgCircleUpcoming = 'bg-stone-50 dark:bg-stone-800';
 
 function VerticalLine() {
   return (
     <div
       className={clsx(
         'absolute right-4 top-4 -mr-px mt-0.5 h-full w-0.5',
-        bgColorGray300,
+        verticalLineColor,
       )}
       aria-hidden="true"
     />
@@ -37,7 +39,7 @@ function StepCircle({ circleColor, isComplete, isCurrent }: IStepCircle) {
   const currentCircleEl =
         <span className={clsx(
           'h-2.5 w-2.5 rounded-full',
-          isCurrent && bgColorIndigo600,
+          isCurrent && bgCircleCurrent,
           isUpcoming && 'transition bg-transparent group-hover:bg-gray-300',
         )} />;
 
@@ -65,14 +67,17 @@ function StepDetails({ step, isCurrent, isComplete }: IStepDetails) {
   return (
     <span className={clsx(
       'mr-4 flex flex-col',
-      isComplete && textColorIndigo900,
-      isCurrent && textColorIndigo600,
-      isUncomplete && textColorGray500,
     )}>
-      <span className="text-sm font-bold">
+      <span className={clsx(
+        isComplete && headingLinkComplete,
+        isCurrent && headingLinkCurrent,
+        isUncomplete && headingLinkUpcoming,
+        'text-sm',
+        'font-bold',
+      )}>
         {step.name}
       </span>
-      <span className={clsx('text-xs', textColorGray500)}>{step.description}</span>
+      <span className={clsx('text-xs', stepDesc)}>{step.description}</span>
     </span>
   );
 }
@@ -88,11 +93,11 @@ function renderStep({ step, index, totalSteps }: IRenderStep) {
   const isComplete = step.status === 'complete';
   const isCurrent = step.status === 'current';
   const circleColor = clsx(
-    isComplete ? bgColorIndigo600 : bgColorWhite,
+    isComplete ? bgCircleComplete : bgCircleUpcoming,
     'border-2',
     'transition',
-    borderColorGray300,
-    groupHoverBorderColorGray400,
+    borderCircle,
+    borderCircleHover,
   );
 
   return (
@@ -106,7 +111,7 @@ function renderStep({ step, index, totalSteps }: IRenderStep) {
         href={step.href}
         className={clsx(
           'group relative flex items-start',
-          isCurrent && textColorIndigo600,
+          isCurrent && headingLinkCurrent,
         )}
         aria-current={isCurrent ? 'step' : undefined}
       >
