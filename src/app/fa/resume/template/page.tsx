@@ -23,8 +23,8 @@ const publicTime = '00:02:31';
 const publishTime = `${publishDate}T${publicTime}.000Z`;
 const articleTitle = 'قالب رزومه کاری';
 const articleDescription = 'واقعا فکر کردین رکروتر رزومه شما رو میخونه؟ چطوری تو ۶ ثانیه نظرشون رو جلب کنیم؟ جواب ساده است، خیلی ساده با یک قالب خوب برای رزومه. این صفحه رو بخون تا بفهمی چه قالب رزومه‌ای لازم داری';
-const pageTitle = 'قالب رزومه کاری' + pageResumeSuffix;
-const pageDesc = 'انتخاب بهترین قالب رزومه کار سخته؟ اگه بدونی چه فرقی دارن و دنبال چی هستی، نخیر';
+const pageTitle = 'آموزش رایگان انتخاب قالب رزومه کاری' + pageResumeSuffix;
+const pageDesc = 'انتخاب بهترین قالب رزومه کار سختیه؟ اگه بدونی چه فرقی دارن، نه! تمپلیت رزومه کاری و دانلود رایگان نمونه رزومه شرکت. ساخت رزومه فارسی رایگان';
 
 export const metadata: Metadata = {
   title: pageTitle,
