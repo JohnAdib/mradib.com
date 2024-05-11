@@ -4,6 +4,7 @@ import { AppContext } from '@/app/providers';
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
 import { formatDatePersian } from '@/lib/fa/format-date';
+import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
@@ -46,7 +47,14 @@ export function ArticleLayout({
           )}
           <article>
             <header className="flex flex-col gap-4">
-              <h1 className="text-balance text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#003C43] dark:text-zinc-100">
+              <h1 className={clsx(
+                'text-balance',
+                'text-3xl sm:text-4xl md:text-5xl',
+                'font-black',
+                'tracking-tight',
+                'text-[#003C43]',
+                'dark:text-zinc-100',
+              )}>
                 {title}
               </h1>
               <p className='text-pretty text-sm md:text-base leading-relaxed'>
