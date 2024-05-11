@@ -26,14 +26,14 @@ export function Footer() {
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-stone-600 dark:text-stone-400">
                 <NavLink href="/">Homepage</NavLink>
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/fa">فارسی</NavLink>
               </div>
               <div
                 dir="ltr"
-                className="flex gap-1 text-sm text-zinc-400 dark:text-zinc-500"
+                className="flex gap-1 text-sm text-stone-600 dark:text-stone-400"
               >
                 <span>&copy;</span>
                 <span>{new Date().getFullYear()}</span>
