@@ -38,7 +38,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-bullets': theme('colors.slate.900'),
         '--tw-prose-hr': theme('colors.slate.100'),
         '--tw-prose-quote-borders': theme('colors.slate.200'),
-        '--tw-prose-captions': theme('colors.slate.400'),
+        '--tw-prose-captions': theme('colors.slate.500'),
         '--tw-prose-code': theme('colors.slate.700'),
         '--tw-prose-code-bg': theme('colors.slate.300 / 0.2'),
         '--tw-prose-pre-code': theme('colors.slate.100'),

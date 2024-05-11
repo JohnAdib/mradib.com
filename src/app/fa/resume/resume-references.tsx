@@ -36,6 +36,7 @@ export function ResumeReferences(): JSX.Element {
             <Link
               href={ref}
               target="_blank"
+              className='block py-1.5 md:py-1'
               rel="nofollow noreferrer noopener"
             >{ref}</Link>
           </li>
