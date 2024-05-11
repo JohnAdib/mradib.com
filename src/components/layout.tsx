@@ -12,7 +12,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             'ring-1',
             'bg-white',
             'ring-slate-100',
-            'dark:bg-slate-900',
+            'dark:bg-[#282A36]',
             'dark:ring-slate-300/20',
           )}
           />
