@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { ArticleLayout } from '@/components/article/layout';
+import Faq from '@/components/faq/faq';
 import { Msg } from '@/components/msg/msg';
 import { separator } from '@/lib/constants/en';
 import { myNameFa } from '@/lib/constants/fa';
@@ -185,7 +186,6 @@ function PageContent(): JSX.Element {
         />
         <figcaption>تنها ۷ درصد ریکروترها موافق رزومه خلاقانه هستند</figcaption>
       </figure>
-
     </section>
   );
 }
@@ -206,6 +206,7 @@ export default function Page() {
       >
         <PageContent />
       </ArticleLayout>
+      <Faq />
     </>
   );
 }
