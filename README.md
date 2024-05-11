@@ -43,6 +43,6 @@ For questions, feedback, or collaboration opportunities related to this blog or 
 ### Technical Enhancements
 - [x] Implement a sitemap to aid search engines in crawling and indexing your website.
 - [x] Submit the sitemap to Google Search Console to improve website visibility and SEO performance.
-- [ ] Adjust color scheme for dark mode to ensure readability and visual consistency.
-- [ ] Update the green color used in the design to a different hue or shade for improved aesthetics.
+- [x] Adjust color scheme for dark mode to ensure readability and visual consistency.
+- [x] Update the green color used in the design to a different hue or shade for improved aesthetics.
 
