@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
+import { Breadcrumb } from '../breadcrumb/breadcrumb';
 import Faq from '../faq/faq';
 import { ArrowRightIcon } from '../icon/arrow-right';
 import { ArticleJsonLD } from './article-json-ld';
@@ -45,6 +46,7 @@ export function ArticleLayout({
           )}
           <article>
             <header className="flex flex-col gap-4">
+              <Breadcrumb />
               <h1 className={clsx(
                 'text-balance',
                 'text-3xl sm:text-4xl md:text-5xl',
