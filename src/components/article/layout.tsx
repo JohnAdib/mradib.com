@@ -8,8 +8,21 @@ import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
+import Faq from '../faq/faq';
+import { IFaqQA } from '../faq/faq-interface';
 import { ArrowRightIcon } from '../icon/arrow-right';
 import { ArticleReadTime } from './read-time';
+
+interface IArticleLayout {
+  title: string;
+  intro: string;
+  coverImage: StaticImageData;
+  date: string;
+  time?: string;
+  readTimeMinutes?: number;
+  faq?: IFaqQA[];
+  children: React.ReactNode
+}
 
 export function ArticleLayout({
   title,
@@ -18,22 +31,15 @@ export function ArticleLayout({
   date,
   time,
   readTimeMinutes,
+  faq,
   children,
-}: {
-  title: string
-  intro: string
-  coverImage: StaticImageData
-  date: string
-  time?: string
-  readTimeMinutes?: number
-  children: React.ReactNode
-}) {
+}: IArticleLayout) {
   let router = useRouter();
   let { previousPathname } = useContext(AppContext);
 
   return (
     <Container className="mt-8 md:mt-12 lg:mt-16">
-      <div className="xl:relative">
+      <div className="articleBox xl:relative">
         <div className="mx-auto max-w-2xl">
           {previousPathname && (
             <button
@@ -88,6 +94,7 @@ export function ArticleLayout({
           </article>
         </div>
       </div>
+      <Faq list={faq} />
     </Container>
   );
 }

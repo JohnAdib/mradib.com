@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { ArticleLayout } from '@/components/article/layout';
-import Faq from '@/components/faq/faq';
 import { Msg } from '@/components/msg/msg';
 import { separator } from '@/lib/constants/en';
 import { myNameFa } from '@/lib/constants/fa';
@@ -17,6 +16,7 @@ import imgResumeFormatStructureExample from './_img/resume-format-structure-exam
 import imgResumeFormatStructureFunctional from './_img/resume-format-structure-functional.jpg';
 import imgResumeFormatStructure from './_img/resume-format-structure.png';
 import imgResumeFormatingInfographic from './_img/resume-formating-infographic.jpg';
+import { resumeTemplateFaq } from './faq';
 import imgCover from './opengraph-image.png';
 
 const publishDate = '2024-04-10';
@@ -203,10 +203,10 @@ export default function Page() {
         date={publishDate}
         time={publicTime}
         readTimeMinutes={articleReadingTime}
+        faq={resumeTemplateFaq}
       >
         <PageContent />
       </ArticleLayout>
-      <Faq />
     </>
   );
 }
