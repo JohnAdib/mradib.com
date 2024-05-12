@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { ArticleLayout } from '@/components/article/layout';
-import { Container } from '@/components/container';
 import { Msg } from '@/components/msg/msg';
 import StepsCircle from '@/components/steps/steps-circle';
 import { Todo } from '@/components/todo';
@@ -85,8 +84,6 @@ export default function Page() {
   const articleReadingTime = readingTime(<PageContent />);
   return (
     <>
-      <Container className="mt-9">
-      </Container>
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
