@@ -10,8 +10,8 @@ const pages = [
 
 export function Breadcrumb() {
   return (
-    <nav className="flex my-1" aria-label="Breadcrumb">
-      <ol role="list" className="flex items-center gap-4 ">
+    <nav className="flex" aria-label="Breadcrumb">
+      <ol role="list" className="flex items-center gap-2 md:gap-4">
         <li>
           <div>
             <Link
@@ -29,12 +29,13 @@ export function Breadcrumb() {
         </li>
         {pages.map((page) => (
           <li key={page.name}>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <ChevronLeftIcon className="h-5 w-5 flex-shrink-0 text-slate-400" aria-hidden="true" />
               <Link
                 href={page.href}
                 className={clsx(
-                  'text-sm',
+                  'text-xs md:text-sm',
+                  'leading-8',
                   'font-medium',
                   'text-slate-500 hover:text-slate-700',
                   'dark:text-slate-300 dark:hover:text-slate-500',
