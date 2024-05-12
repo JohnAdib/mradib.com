@@ -1,5 +1,5 @@
 import { IFaqQA } from './faq-interface';
-import { FaqJsonLD } from './faq-page-schema';
+import { FaqJsonLD } from './faq-json-ld';
 
 export default function Faq({
   list,

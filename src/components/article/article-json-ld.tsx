@@ -1,43 +1,23 @@
+import { homepageUrl } from '@/lib/constants/url';
 import { IArticleLayout } from './interface';
 
 interface IArticleJSONLD {
   articleData: IArticleLayout;
 }
 
-interface IArticlestructuredData {
-  '@context': string;
-  '@type': string;
-  headline: string;
-  image: string[];
-  datePublished: string;
-  dateModified?: string;
-  author: {
-    '@type': string;
-    name: string;
-    additionalName: string;
-    alternateName: string;
-    familyName: string;
-    disambiguatingDescription?: string;
-    jobTitle?: string;
-    url?: string;
-  }[];
-  publisher: {
-    name: string;
-    url: string;
-  };
-}
-
 export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
-  const { title, coverImage, datePublished, dateModified } = articleData;
+  const { title, intro, coverImage, datePublished, dateModified } = articleData;
 
-  const structuredData: IArticlestructuredData = {
+  const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
+    description: intro,
     image: [
-      coverImage.src,
+      homepageUrl + coverImage.src,
     ],
     datePublished: datePublished,
+    dateModified: dateModified ?? datePublished,
     author: [
       {
         '@type': 'Person',
@@ -57,13 +37,10 @@ export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
     },
   };
 
-  if (dateModified) {
-    structuredData.dateModified = dateModified;
-  }
-
   return (
-    <script type="application/ld+json">
-      {JSON.stringify(structuredData, null, 2)}
-    </script>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
   );
 };

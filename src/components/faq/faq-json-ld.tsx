@@ -5,7 +5,7 @@ interface FAQProps {
 }
 
 export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }) => {
-  const structuredData = {
+  const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqData.map(({ q, a }) => ({
@@ -19,8 +19,10 @@ export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }) => {
   };
 
   return (
-    <script type="application/ld+json">
-      {JSON.stringify(structuredData, null, 2)}
-    </script>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
   );
 };
