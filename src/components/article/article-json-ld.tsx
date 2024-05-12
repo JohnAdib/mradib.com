@@ -1,22 +1,40 @@
 import { homepageUrl } from '@/lib/constants/url';
+import { StaticImageData } from 'next/image';
 import { Article, WithContext } from 'schema-dts';
-import { IArticleLayout } from './interface';
 
 interface IArticleJSONLD {
-  articleData: Partial<IArticleLayout>;
+  headline: string;
+  name: string;
+  description: string;
+  coverImage: StaticImageData;
+  urlPath: string;
+  keywords: string[];
+  datePublished: string;
+  dateModified: string;
 }
 
-export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
-  const { title, intro, coverImage, datePublished, dateModified } = articleData;
+export function ArticleJsonLD({
+  headline,
+  name,
+  description,
+  coverImage,
+  urlPath,
+  keywords,
+  datePublished,
+  dateModified,
+}: IArticleJSONLD): JSX.Element {
+  const articleImg = homepageUrl + coverImage?.src;
+  const articleUrl = homepageUrl + urlPath;
 
   const jsonLd: WithContext<Article> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: title,
-    description: intro,
-    image: [
-      homepageUrl + coverImage?.src,
-    ],
+    '@id': articleUrl + '#article',
+    mainEntityOfPage: articleUrl,
+    headline: headline,
+    name: name,
+    description: description,
+    image: articleImg,
     datePublished: datePublished,
     dateModified: dateModified ?? datePublished,
     author: [
@@ -38,6 +56,8 @@ export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
       alternateName: 'مستر ادیب',
       url: 'https://mradib.com',
     },
+    url: articleUrl,
+    keywords: keywords,
   };
 
   return (
@@ -46,4 +66,4 @@ export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
   );
-};
+}

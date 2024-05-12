@@ -27,6 +27,8 @@ const articleTitle = 'قالب رزومه کاری';
 const articleDescription = 'واقعا فکر کردین رکروتر رزومه شما رو میخونه؟ چطوری تو ۶ ثانیه نظرشون رو جلب کنیم؟ جواب ساده است، خیلی ساده با یک قالب خوب برای رزومه. این صفحه رو بخون تا بفهمی چه قالب رزومه‌ای لازم داری';
 const pageTitle = 'آموزش رایگان انتخاب قالب رزومه کاری' + pageResumeSuffix;
 const pageDesc = 'انتخاب بهترین قالب رزومه کار سختیه؟ اگه بدونی چه فرقی دارن، نه! تمپلیت رزومه کاری و دانلود رایگان نمونه رزومه شرکت. ساخت رزومه فارسی رایگان';
+const pagePath = '/fa/resume/template';
+const keywords = ['رزومه کاری', 'قالب رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -200,6 +202,8 @@ export default function Page() {
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
+        urlPath={pagePath}
+        keywords={keywords}
         coverImage={imgCover}
         datePublished={datePublished}
         dateModified={dateModified}

@@ -18,6 +18,8 @@ export function ArticleLayout({
   title,
   intro,
   coverImage,
+  urlPath,
+  keywords,
   datePublished,
   dateModified,
   readTimeMinutes,
@@ -92,7 +94,14 @@ export function ArticleLayout({
           </article>
         </div>
         <ArticleJsonLD
-          articleData={{ title, coverImage, datePublished, dateModified }}
+          headline={title}
+          name={title}
+          description={intro}
+          coverImage={coverImage}
+          urlPath={urlPath}
+          keywords={keywords}
+          datePublished={datePublished}
+          dateModified={dateModified}
         />
       </div>
       <Faq list={faq} />
