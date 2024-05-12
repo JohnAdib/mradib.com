@@ -12,8 +12,9 @@ import coverImg from './opengraph-image.png';
 import imgResumeEducationCover from './resume-education-cover.jpg';
 
 const publishDate = '2024-04-21';
-const publicTime = '20:14:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '20:14:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'بخش تحصیلات در رزومه';
 const articleDescription = 'بخش رزومه که مربوط به تحصیلات شماست. چطور بنویسید؟ چه چیزهایی بنویسید؟';
 const pageTitle = articleTitle + pageResumeSuffix;
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -95,8 +96,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />

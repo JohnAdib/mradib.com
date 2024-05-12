@@ -20,8 +20,9 @@ import { resumeTemplateFaq } from './faq';
 import imgCover from './opengraph-image.png';
 
 const publishDate = '2024-04-10';
-const publicTime = '00:02:31';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '00:02:31';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:04:00' + '.000Z';
 const articleTitle = 'قالب رزومه کاری';
 const articleDescription = 'واقعا فکر کردین رکروتر رزومه شما رو میخونه؟ چطوری تو ۶ ثانیه نظرشون رو جلب کنیم؟ جواب ساده است، خیلی ساده با یک قالب خوب برای رزومه. این صفحه رو بخون تا بفهمی چه قالب رزومه‌ای لازم داری';
 const pageTitle = 'آموزش رایگان انتخاب قالب رزومه کاری' + pageResumeSuffix;
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -200,8 +201,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={imgCover}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
         faq={resumeTemplateFaq}
       >

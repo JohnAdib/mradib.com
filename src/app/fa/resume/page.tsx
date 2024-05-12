@@ -18,8 +18,9 @@ import { resumeSteps } from './resume-steps';
 import { resumeTodoList } from './resume-todo-list';
 
 const publishDate = '2024-04-08';
-const publicTime = '02:53:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '02:53:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:04:00' + '.000Z';
 const articleTitle = 'بهترین آموزش ساخت رزومه';
 const articleDescription = 'قصد دارید رزومه بسازید و برای شغلی اپلای کنید؟ صفر تا صد ساخت رزومه رو اینجا بخونید تا یک رزومه حرفه‌ای بسازید. این بهترین و کامل‌ترین و جامع‌ترین آموزش ساخت رزومه در کهکشان است!';
 const pageTitle = 'آموزش ساخت رزومه' + pageResumeSuffix;
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -88,8 +89,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />

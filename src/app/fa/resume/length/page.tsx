@@ -10,8 +10,9 @@ import { type Metadata } from 'next';
 import coverImg from './opengraph-image.png';
 
 const publishDate = '2024-04-18';
-const publicTime = '22:07:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '22:07:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'رزومه باید چند صفحه باشه؟';
 const articleDescription = 'درباره تعداد صفحات رزومه حرف و حدیث زیاده ولی بیاین واقع بین باشیم، ۶ ثانیه وقت دارید.';
 const pageTitle = articleTitle + pageResumeSuffix;
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -94,8 +95,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />

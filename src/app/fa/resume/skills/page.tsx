@@ -16,8 +16,9 @@ import imgResumeTopSkills from './_img/resume-top-skills.png';
 import coverImg from './opengraph-image.png';
 
 const publishDate = '2024-04-21';
-const publicTime = '01:27:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '01:27:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'آموزش نوشتن مهارت‌ها در رزومه';
 const articleDescription = 'مهارت‌ها یکی از مهمترین بخش‌های رزومه شما هستند. چطور مهارت‌های خود را بهتر بنویسید؟ هارد اسکیل و سافت اسکیل چی هستند؟';
 const pageTitle = articleTitle + pageResumeSuffix;
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -163,8 +164,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />

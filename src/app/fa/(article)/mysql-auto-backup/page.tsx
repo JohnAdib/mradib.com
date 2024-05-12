@@ -12,8 +12,9 @@ import coverImg from './opengraph-image.jpg';
 import phpmyadminPrivilegesImg from './phpmyadmin-privileges.png';
 
 const publishDate = '2021-03-25';
-const publicTime = '00:20:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '00:20:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:04:00' + '.000Z';
 const articleTitle = 'آموزش صفر تا صد بکاپ خودکار از دیتابیس در سرور لینوکس';
 const articleDescription = 'هرچیزی که برای بکاپ گرفتن از دیتابیس یک سرور لینوکس لازمه رو توضیح میدم تا بتونید سریع و بدون دردسر از سرورتون بکاپ بگیرید';
 const pageTitle = 'بکاپ خودکار از دیتابیس سرور';
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -170,8 +171,8 @@ export default function Page() {
       title={articleTitle}
       intro={articleDescription}
       coverImage={coverImg}
-      date={publishDate}
-      time={publicTime}
+      datePublished={datePublished}
+      dateModified={dateModified}
       readTimeMinutes={articleReadingTime}
     >
       <PageContent />

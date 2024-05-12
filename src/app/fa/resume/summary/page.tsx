@@ -12,8 +12,9 @@ import imgResumeSummaryCover from './_img/resume-summary-cover.png';
 import coverImg from './opengraph-image.png';
 
 const publishDate = '2024-04-21';
-const publicTime = '00:14:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '00:14:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'بخش خلاصه در رزومه';
 const articleDescription = 'فکر نمی‌کنم شک داشته باشد که همیشه اولین نگاه مهم است. پس این فرصت رو دارید که با یک خلاصه عالی، توجه استخدام‌کننده رو جلب کنید.';
 const pageTitle = articleTitle + pageResumeSuffix;
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -92,8 +93,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />

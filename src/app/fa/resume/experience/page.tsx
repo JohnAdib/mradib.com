@@ -15,8 +15,9 @@ import imgResumeExperienceExample1 from './_img/resume-experience-example-1.png'
 import coverImg from './opengraph-image.png';
 
 const publishDate = '2024-04-08';
-const publicTime = '02:53:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '02:53:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'بخش تجربه کاری در رزومه';
 const articleDescription = 'مهم‌ترین بخش رزومه شما بدون استثنا سابقه کاری شماست. اینجا جاییه که شما خودتون رو با نمایش دستاوردها و مسئولیت‌های گذشته خودتون می‌فروشید.';
 const pageTitle = articleTitle + pageResumeSuffix;
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -140,8 +141,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />

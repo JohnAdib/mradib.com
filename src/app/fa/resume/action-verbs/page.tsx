@@ -14,8 +14,9 @@ import { ListActionVerbs } from './list/html-section';
 import coverImg from './opengraph-image.jpg';
 
 const publishDate = '2024-04-08';
-const publicTime = '02:53:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '02:53:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'افعال مناسب برای دستاوردهای شما در رزومه';
 const articleDescription = 'هر دستاورد در رزومه باید با یک فعل اکشن شروع شود. لیستی ارزشمند و کاربردی از افعال اکشن مناسب برای استفاده در بخش دستاوردهای رزومه. سعی کنید از هر فعل بیش از ۲ بار استفاده نکنید.';
 const pageTitle = 'افعال مناسب برای دستاوردها در رزومه' + pageResumeSuffix;
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -76,8 +77,8 @@ export default function Page() {
       title={articleTitle}
       intro={articleDescription}
       coverImage={coverImg}
-      date={publishDate}
-      time={publicTime}
+      datePublished={datePublished}
+      dateModified={dateModified}
       readTimeMinutes={articleReadingTime}
     >
       <PageContent />

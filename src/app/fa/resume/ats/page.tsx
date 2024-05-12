@@ -14,8 +14,9 @@ import imgResumeAtsUsage from './_img/resume-ats-usage.png';
 import coverImg from './opengraph-image.png';
 
 const publishDate = '2024-04-08';
-const publicTime = '02:53:24';
-const publishTime = `${publishDate}T${publicTime}.000Z`;
+const publishTime = '02:53:24';
+const datePublished = `${publishDate}T${publishTime}.000Z`;
+const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
 const articleTitle = 'ATS سیستم ردیابی متقاضی';
 const articleDescription = 'آیا می‌دونید حدود ۷۰ درصد رزومه‌ها که برای شغل‌ها فرستاده میشه اصلا خونده نمیشه؟ چرا؟';
 const pageTitle = articleTitle + pageResumeSuffix;
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   description: pageDesc + separator + myNameFa,
   openGraph: {
     type: 'article',
-    publishedTime: publishTime,
+    publishedTime: datePublished,
   },
   twitter: {
     card: 'summary_large_image',
@@ -85,8 +86,8 @@ export default function Page() {
         title={articleTitle}
         intro={articleDescription}
         coverImage={coverImg}
-        date={publishDate}
-        time={publicTime}
+        datePublished={datePublished}
+        dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
       >
         <PageContent />
