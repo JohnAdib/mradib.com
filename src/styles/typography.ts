@@ -47,8 +47,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
         '--tw-prose-th-borders': theme('colors.slate.200'),
         '--tw-prose-td-borders': theme('colors.slate.100'),
 
-        '--tw-prose-invert-body': theme('colors.slate.400'),
-        '--tw-prose-invert-headings': theme('colors.slate.200'),
+        '--tw-prose-invert-body': theme('colors.slate.300'),
+        '--tw-prose-invert-headings': theme('colors.slate.100'),
         '--tw-prose-invert-links': theme('colors.sky.400'),
         '--tw-prose-invert-links-hover': theme('colors.sky.400'),
         '--tw-prose-invert-underline': theme('colors.sky.400 / 0.3'),
