@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import { IBreadcrumbItem } from '../breadcrumb/interface';
 import { IFaqQA } from '../faq/faq-interface';
+import { INavNextPrev } from '../nav-next-prev/interface';
 
 export interface IArticleLayout {
   title: string;
@@ -13,5 +14,6 @@ export interface IArticleLayout {
   readTimeMinutes?: number;
   faq?: IFaqQA[];
   breadcrumb?: IBreadcrumbItem[];
+  nextPrev?: INavNextPrev;
   children: React.ReactNode;
 }

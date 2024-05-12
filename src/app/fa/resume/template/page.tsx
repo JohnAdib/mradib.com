@@ -18,6 +18,7 @@ import imgResumeFormatStructure from './_img/resume-format-structure.png';
 import imgResumeFormatingInfographic from './_img/resume-formating-infographic.jpg';
 import { breadcrumb } from './breadcrumb';
 import { resumeTemplateFaq } from './faq';
+import { nextPrev } from './next-prev';
 import imgCover from './opengraph-image.png';
 
 const publishDate = '2024-04-10';
@@ -221,6 +222,7 @@ export default function Page() {
         readTimeMinutes={articleReadingTime}
         faq={resumeTemplateFaq}
         breadcrumb={breadcrumb}
+        nextPrev={nextPrev}
       >
         <PageContent />
       </ArticleLayout>

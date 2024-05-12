@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import { Breadcrumb } from '../breadcrumb/breadcrumb';
 import Faq from '../faq/faq';
 import { ArrowRightIcon } from '../icon/arrow-right';
+import { NavNextPrev } from '../nav-next-prev/nav-next-prev';
 import { ArticleJsonLD } from './article-json-ld';
 import { IArticleLayout } from './interface';
 import { ArticleReadTime } from './read-time';
@@ -26,6 +27,7 @@ export function ArticleLayout({
   readTimeMinutes,
   faq,
   breadcrumb,
+  nextPrev,
   children,
 }: IArticleLayout) {
   let router = useRouter();
@@ -95,6 +97,8 @@ export function ArticleLayout({
               {children}
             </Prose>
           </article>
+          <NavNextPrev next={nextPrev?.next} prev={nextPrev?.prev} />
+
         </div>
         <ArticleJsonLD
           headline={title}
