@@ -2,7 +2,7 @@ import { homepageUrl } from '@/lib/constants/url';
 import { IArticleLayout } from './interface';
 
 interface IArticleJSONLD {
-  articleData: IArticleLayout;
+  articleData: Partial<IArticleLayout>;
 }
 
 export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
@@ -14,7 +14,7 @@ export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
     headline: title,
     description: intro,
     image: [
-      homepageUrl + coverImage.src,
+      homepageUrl + coverImage?.src,
     ],
     datePublished: datePublished,
     dateModified: dateModified ?? datePublished,

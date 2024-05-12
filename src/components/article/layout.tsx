@@ -3,33 +3,23 @@
 import { AppContext } from '@/app/providers';
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
-import { formatDatePersian } from '@/lib/fa/format-date';
+import { formatDateTimePersian } from '@/lib/fa/format-date';
 import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
 import Faq from '../faq/faq';
-import { IFaqQA } from '../faq/faq-interface';
 import { ArrowRightIcon } from '../icon/arrow-right';
+import { ArticleJsonLD } from './article-json-ld';
+import { IArticleLayout } from './interface';
 import { ArticleReadTime } from './read-time';
-
-interface IArticleLayout {
-  title: string;
-  intro: string;
-  coverImage: StaticImageData;
-  date: string;
-  time?: string;
-  readTimeMinutes?: number;
-  faq?: IFaqQA[];
-  children: React.ReactNode
-}
 
 export function ArticleLayout({
   title,
   intro,
   coverImage,
-  date,
-  time,
+  datePublished,
+  dateModified,
   readTimeMinutes,
   faq,
   children,
@@ -76,13 +66,21 @@ export function ArticleLayout({
 
               <div className='infoBox flex justify-between text-sm select-none'>
                 <time
-                  dateTime={date}
+                  dateTime={datePublished}
+                  title={'Published on ' + datePublished}
                   className="flex items-center text-stone-500 dark:text-stone-400"
                 >
                   <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                   <span className="mr-3">
-                    {formatDatePersian({ date, time })}
+                    {formatDateTimePersian(datePublished)}
                   </span>
+                </time>
+                <time
+                  dateTime={dateModified}
+                  title={'Last modified on ' + dateModified}
+                  className="text-stone-500 dark:text-stone-400 hidden"
+                >
+                  {formatDateTimePersian(dateModified)}
                 </time>
                 <ArticleReadTime minutes={readTimeMinutes} />
               </div>
@@ -93,6 +91,9 @@ export function ArticleLayout({
             </Prose>
           </article>
         </div>
+        <ArticleJsonLD
+          articleData={{ title, coverImage, datePublished, dateModified }}
+        />
       </div>
       <Faq list={faq} />
     </Container>

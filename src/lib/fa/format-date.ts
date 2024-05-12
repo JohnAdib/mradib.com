@@ -14,3 +14,12 @@ export function formatDatePersian({ date, time }: IFormatDate) {
     timeZone: 'UTC',
   });
 }
+
+export function formatDateTimePersian(datetime: string) {
+  return new Date(datetime).toLocaleDateString('fa-IR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
