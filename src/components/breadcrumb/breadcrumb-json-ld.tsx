@@ -1,3 +1,4 @@
+import { homepageUrl } from '@/lib/constants/url';
 import { BreadcrumbList, WithContext } from 'schema-dts';
 import { IBreadcrumb } from './interface';
 
@@ -13,7 +14,7 @@ export const BreadcrumbJsonLD: React.FC<IBreadcrumb> = ({ list }) => {
       '@type': 'ListItem',
       position: position,
       name: name,
-      item: item,
+      item: homepageUrl + item,
     })),
   };
 
