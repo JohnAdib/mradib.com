@@ -17,6 +17,8 @@ const articleTitle = 'رزومه باید چند صفحه باشه؟';
 const articleDescription = 'درباره تعداد صفحات رزومه حرف و حدیث زیاده ولی بیاین واقع بین باشیم، ۶ ثانیه وقت دارید.';
 const pageTitle = articleTitle + pageResumeSuffix;
 const pageDesc = articleDescription;
+const pagePath = '/fa/resume/length';
+const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی', 'تعداد صفحات رزومه'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -94,6 +96,8 @@ export default function Page() {
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
+        urlPath={pagePath}
+        keywords={keywords}
         coverImage={coverImg}
         datePublished={datePublished}
         dateModified={dateModified}

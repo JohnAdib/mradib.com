@@ -19,6 +19,8 @@ const articleTitle = 'بخش تحصیلات در رزومه';
 const articleDescription = 'بخش رزومه که مربوط به تحصیلات شماست. چطور بنویسید؟ چه چیزهایی بنویسید؟';
 const pageTitle = articleTitle + pageResumeSuffix;
 const pageDesc = articleDescription;
+const pagePath = '/fa/resume/education';
+const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -95,6 +97,8 @@ export default function Page() {
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
+        urlPath={pagePath}
+        keywords={keywords}
         coverImage={coverImg}
         datePublished={datePublished}
         dateModified={dateModified}

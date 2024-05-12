@@ -18,6 +18,8 @@ const articleTitle = 'بخش‌های اختیاری در رزومه';
 const articleDescription = 'اگه توی رزومه‌تون فضای خالی دارید و میخواین با یه اطلاعات بدردبخور پر کنید، میتونید از بخش اختیاری‌ها ایده بگیرید مثل زبان، فعالیت‌های داوطلبانه، مقالات، گواهینامه‌ها و ...';
 const pageTitle = articleTitle + pageResumeSuffix;
 const pageDesc = articleDescription;
+const pagePath = '/fa/resume/optional';
+const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -91,6 +93,8 @@ export default function Page() {
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
+        urlPath={pagePath}
+        keywords={keywords}
         coverImage={coverImg}
         datePublished={datePublished}
         dateModified={dateModified}

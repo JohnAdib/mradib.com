@@ -21,6 +21,8 @@ const articleTitle = 'افعال مناسب برای دستاوردهای شما
 const articleDescription = 'هر دستاورد در رزومه باید با یک فعل اکشن شروع شود. لیستی ارزشمند و کاربردی از افعال اکشن مناسب برای استفاده در بخش دستاوردهای رزومه. سعی کنید از هر فعل بیش از ۲ بار استفاده نکنید.';
 const pageTitle = 'افعال مناسب برای دستاوردها در رزومه' + pageResumeSuffix;
 const pageDesc = 'لیستی ارزشمند و کاربردی از افعال اکشن مناسب برای استفاده در بخش دستاوردها. فعل مناسب برای شروع رزومه نویسی' + ' | ' + 'Resume Action Verb';
+const pagePath = '/fa/resume/action-verbs';
+const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -76,6 +78,8 @@ export default function Page() {
     <ArticleLayout
       title={articleTitle}
       intro={articleDescription}
+      urlPath={pagePath}
+      keywords={keywords}
       coverImage={coverImg}
       datePublished={datePublished}
       dateModified={dateModified}

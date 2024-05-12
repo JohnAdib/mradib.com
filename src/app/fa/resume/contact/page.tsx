@@ -24,6 +24,8 @@ const articleTitle = 'اطلاعات تماس در رزومه';
 const articleDescription = 'اطلاعات تماس یک بخش حیاتی تو رزومه شماست. به‌نظر ساده‌ترین بخش رزومه است، اما یک اشتباه کوچک ممکنه ضرر بزرگی بزنه. پس این صفحه رو بخون تا مطمئن بشی همه چی درسته.';
 const pageTitle = articleTitle + pageResumeSuffix;
 const pageDesc = 'اطلاعات تماس یک بخش حیاتی تو رزومه شماست. چطور اطلاعات تماس خودت رو در رزومه بنویسی؟';
+const pagePath = '/fa/resume/contact';
+const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -171,6 +173,8 @@ export default function Page() {
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
+        urlPath={pagePath}
+        keywords={keywords}
         coverImage={coverImg}
         datePublished={datePublished}
         dateModified={dateModified}

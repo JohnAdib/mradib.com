@@ -19,6 +19,8 @@ const articleTitle = 'آموزش صفر تا صد بکاپ خودکار از د�
 const articleDescription = 'هرچیزی که برای بکاپ گرفتن از دیتابیس یک سرور لینوکس لازمه رو توضیح میدم تا بتونید سریع و بدون دردسر از سرورتون بکاپ بگیرید';
 const pageTitle = 'بکاپ خودکار از دیتابیس سرور';
 const pageDesc = 'آموزش صفر تا صد بکاپ خودکار از دیتابیس در سرور لینوکس تا بتونید سریع و بدون دردسر از سرورتون بکاپ بگیرید';
+const pagePath = '/fa/mysql-auto-backup';
+const keywords = ['بکاپ', 'دیتابیس', 'لینوکس', 'سرور', 'بکاپ خودکار', 'mysql', 'rsync', 'cronjob', 'کرون‌جاب', 'mysql-auto-backup'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -170,6 +172,8 @@ export default function Page() {
     <ArticleLayout
       title={articleTitle}
       intro={articleDescription}
+      urlPath={pagePath}
+      keywords={keywords}
       coverImage={coverImg}
       datePublished={datePublished}
       dateModified={dateModified}

@@ -25,6 +25,8 @@ const articleTitle = 'بهترین آموزش ساخت رزومه';
 const articleDescription = 'قصد دارید رزومه بسازید و برای شغلی اپلای کنید؟ صفر تا صد ساخت رزومه رو اینجا بخونید تا یک رزومه حرفه‌ای بسازید. این بهترین و کامل‌ترین و جامع‌ترین آموزش ساخت رزومه در کهکشان است!';
 const pageTitle = 'آموزش ساخت رزومه' + pageResumeSuffix;
 const pageDesc = 'وقتشه رزومه خفن خودت رو بسازی. آموزش صفر تا صد ساخت رزومه';
+const pagePath = '/fa/resume';
+const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -88,6 +90,8 @@ export default function Page() {
       <ArticleLayout
         title={articleTitle}
         intro={articleDescription}
+        urlPath={pagePath}
+        keywords={keywords}
         coverImage={coverImg}
         datePublished={datePublished}
         dateModified={dateModified}
