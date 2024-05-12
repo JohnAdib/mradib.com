@@ -25,6 +25,7 @@ export function ArticleLayout({
   dateModified,
   readTimeMinutes,
   faq,
+  breadcrumb,
   children,
 }: IArticleLayout) {
   let router = useRouter();
@@ -46,7 +47,7 @@ export function ArticleLayout({
           )}
           <article>
             <header className="flex flex-col gap-4">
-              <Breadcrumb />
+              <Breadcrumb list={breadcrumb} />
               <h1 className={clsx(
                 'text-balance',
                 'text-3xl sm:text-4xl md:text-5xl',

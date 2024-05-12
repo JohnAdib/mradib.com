@@ -16,6 +16,7 @@ import imgResumeFormatStructureExample from './_img/resume-format-structure-exam
 import imgResumeFormatStructureFunctional from './_img/resume-format-structure-functional.jpg';
 import imgResumeFormatStructure from './_img/resume-format-structure.png';
 import imgResumeFormatingInfographic from './_img/resume-formating-infographic.jpg';
+import { breadcrumb } from './breadcrumb';
 import { resumeTemplateFaq } from './faq';
 import imgCover from './opengraph-image.png';
 
@@ -219,6 +220,7 @@ export default function Page() {
         dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
         faq={resumeTemplateFaq}
+        breadcrumb={breadcrumb}
       >
         <PageContent />
       </ArticleLayout>

@@ -21,7 +21,6 @@ export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }) => {
   };
 
   return (
-
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

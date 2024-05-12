@@ -1,14 +1,13 @@
 import { ChevronLeftIcon, HomeIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { IBreadcrumb } from './interface';
 
-const pages = [
-  { name: 'فارسی', href: '/fa', current: false },
-  { name: 'رزومه', href: '/fa/resume', current: false },
-  { name: 'قالب رزومه', href: '/fa/resume/template', current: true },
-];
+export function Breadcrumb({ list }: IBreadcrumb) {
+  if (!list) {
+    return null;
+  }
 
-export function Breadcrumb() {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol role="list" className="flex items-center gap-2 md:gap-4">
@@ -27,12 +26,12 @@ export function Breadcrumb() {
             </Link>
           </div>
         </li>
-        {pages.map((page) => (
+        {list?.map((page) => (
           <li key={page.name}>
             <div className="flex items-center gap-2 md:gap-4">
               <ChevronLeftIcon className="h-5 w-5 flex-shrink-0 text-slate-400" aria-hidden="true" />
               <Link
-                href={page.href}
+                href={page.item}
                 className={clsx(
                   'text-xs md:text-sm',
                   'leading-8',

@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import { IBreadcrumbItem } from '../breadcrumb/interface';
 import { IFaqQA } from '../faq/faq-interface';
 
 export interface IArticleLayout {
@@ -11,5 +12,6 @@ export interface IArticleLayout {
   dateModified: string;
   readTimeMinutes?: number;
   faq?: IFaqQA[];
-  children: React.ReactNode
+  breadcrumb?: IBreadcrumbItem[];
+  children: React.ReactNode;
 }
