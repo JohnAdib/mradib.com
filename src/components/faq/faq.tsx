@@ -23,7 +23,7 @@ export default function Faq({
         <div className="mt-10 lg:col-span-7 lg:mt-0">
           <div className="space-y-10">
             {list?.map((faq) => (
-              <div id={faq.id} key={faq.id}>
+              <div id={'faq-' + faq.id} key={faq.id}>
                 <h3 className="text-base font-semibold leading-7">{faq.q}</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-00 dark:text-slate-300">{faq.a}</p>
               </div>
