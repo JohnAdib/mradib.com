@@ -10,6 +10,7 @@ export const BreadcrumbJsonLD: React.FC<IBreadcrumb> = ({ list }) => {
   const jsonLd: WithContext<BreadcrumbList> = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    'name': 'Breadcrumb',
     itemListElement: list?.map(({ position, name, item }) => ({
       '@type': 'ListItem',
       position: position,

@@ -28,7 +28,7 @@ export function ArticleJsonLD({
 
   const jsonLd: WithContext<Article> = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@type': 'Article',
     '@id': articleUrl + '#article',
     mainEntityOfPage: articleUrl,
     headline: headline,
