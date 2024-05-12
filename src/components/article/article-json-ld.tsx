@@ -1,4 +1,5 @@
 import { homepageUrl } from '@/lib/constants/url';
+import { Article, WithContext } from 'schema-dts';
 import { IArticleLayout } from './interface';
 
 interface IArticleJSONLD {
@@ -8,7 +9,7 @@ interface IArticleJSONLD {
 export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
   const { title, intro, coverImage, datePublished, dateModified } = articleData;
 
-  const jsonLd = {
+  const jsonLd: WithContext<Article> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
@@ -32,7 +33,9 @@ export const ArticleJsonLD: React.FC<IArticleJSONLD> = ({ articleData }) => {
     ],
     publisher:
     {
-      name: 'MrAdib.com',
+      '@type': 'Person',
+      name: 'MrAdib',
+      alternateName: 'مستر ادیب',
       url: 'https://mradib.com',
     },
   };

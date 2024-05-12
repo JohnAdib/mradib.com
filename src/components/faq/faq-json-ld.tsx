@@ -1,3 +1,4 @@
+import { FAQPage, WithContext } from 'schema-dts';
 import { IFaqQA } from './faq-interface';
 
 interface FAQProps {
@@ -5,7 +6,7 @@ interface FAQProps {
 }
 
 export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }) => {
-  const jsonLd = {
+  const jsonLd: WithContext<FAQPage> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqData.map(({ q, a }) => ({
