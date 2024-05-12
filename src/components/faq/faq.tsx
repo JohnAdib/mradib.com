@@ -1,4 +1,5 @@
 import { IFaqQA } from './faq-interface';
+import { FaqJsonLD } from './faq-page-schema';
 
 export default function Faq({
   list,
@@ -10,7 +11,7 @@ export default function Faq({
   }
 
   return (
-    <div className="faq mx-auto max-w-7xl py-16 lg:py-32">
+    <section className="faq mx-auto max-w-7xl py-16 lg:py-32">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5">
           <h2 className="text-3xl font-bold leading-10 tracking-tight">سوالات متداول</h2>
@@ -20,16 +21,17 @@ export default function Faq({
           </p>
         </div>
         <div className="mt-10 lg:col-span-7 lg:mt-0">
-          <dl className="space-y-10">
+          <div className="space-y-10">
             {list?.map((faq) => (
               <div id={faq.id} key={faq.id}>
-                <dt className="text-base font-semibold leading-7">{faq.q}</dt>
-                <dd className="mt-2 text-sm leading-7 text-slate-300">{faq.a}</dd>
+                <h3 className="text-base font-semibold leading-7">{faq.q}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-300">{faq.a}</p>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
-    </div>
+      <FaqJsonLD faqData={list} />
+    </section>
   );
 }
