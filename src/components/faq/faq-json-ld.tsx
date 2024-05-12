@@ -9,6 +9,7 @@ export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }) => {
   const jsonLd: WithContext<FAQPage> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    name: 'سوالات متداول',
     mainEntity: faqData.map(({ q, a }) => ({
       '@type': 'Question',
       name: q,
