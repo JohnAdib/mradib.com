@@ -7,6 +7,7 @@ import { myNameFa } from '@/lib/constants/fa';
 import { readingTime } from '@/lib/reading-time';
 import { pageResumeSuffix } from '@/lib/suffix';
 import { type Metadata } from 'next';
+import { breadcrumb } from './breadcrumb';
 import coverImg from './opengraph-image.png';
 
 const publishDate = '2024-04-18';
@@ -102,6 +103,7 @@ export default function Page() {
         datePublished={datePublished}
         dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
+        breadcrumb={breadcrumb}
       >
         <PageContent />
       </ArticleLayout>

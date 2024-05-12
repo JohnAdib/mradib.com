@@ -11,6 +11,7 @@ import { pageResumeSuffix } from '@/lib/suffix';
 import { type Metadata } from 'next';
 import Image from 'next/image';
 import imgResumeChecklist from './_img/resume-checklist.png';
+import { breadcrumb } from './breadcrumb';
 import coverImg from './opengraph-image.jpg';
 import { ResumeReferences } from './resume-references';
 import { resumeSteps } from './resume-steps';
@@ -93,6 +94,7 @@ export default function Page() {
         datePublished={datePublished}
         dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
+        breadcrumb={breadcrumb}
       >
         <PageContent />
       </ArticleLayout>
