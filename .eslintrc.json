@@ -161,7 +161,14 @@
         "case": "kebabCase"
       }
     ],
-    "no-console": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "info"
+        ]
+      }
+    ],
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error"
   }
