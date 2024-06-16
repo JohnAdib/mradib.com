@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { Container } from '@/components/container';
+import { HeroWithPhone } from '@/components/hero-with-phone/hero-with-phone';
 import { SocialMediaLinks } from '@/components/social-media-links';
 import image1 from '@/images/photos/image-1.jpg';
 import image2 from '@/images/photos/image-2.jpg';
@@ -41,7 +42,7 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl relative z-20">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             MrAdib
           </h1>
@@ -50,6 +51,7 @@ export default async function Home() {
           </p>
           <div className='mt-6'><SocialMediaLinks/></div>
         </div>
+        <HeroWithPhone />
       </Container>
       <Photos />
     </>
