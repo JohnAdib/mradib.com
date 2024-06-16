@@ -37,7 +37,7 @@ export function Footer() {
               >
                 <span>&copy;</span>
                 <span>{new Date().getFullYear()}</span>
-                <span>John Adib. All rights reserved.</span>
+                <span>MrAdib. All rights reserved.</span>
               </div>
             </div>
           </ContainerInner>

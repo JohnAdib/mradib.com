@@ -2,10 +2,10 @@ export const separator = ' - ';
 
 export const myName = 'John Adib';
 export const myTitle = 'MrAdib';
-export const myJobTitle = 'Senior Lead Software Engineer';
+export const myJobTitle = 'Photographer & Senior Lead Software Engineer';
 
 // site title
-export const defaultTitle = myName + separator + myJobTitle;
+export const defaultTitle = myTitle + separator + myJobTitle;
 
 // site description
 const desc1 = 'John Adib.';

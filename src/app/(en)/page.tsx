@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Container } from '@/components/container';
 import { SocialMediaLinks } from '@/components/social-media-links';
 import image1 from '@/images/photos/image-1.jpg';
@@ -42,10 +43,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            John Adib
+            MrAdib
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Senior Software Engineer from London.
+            I’m John Adib, a Senior Software Engineer and avid Photographer based in London. With a passion for creating innovative web solutions and capturing golden moments.
           </p>
           <div className='mt-6'><SocialMediaLinks/></div>
         </div>
