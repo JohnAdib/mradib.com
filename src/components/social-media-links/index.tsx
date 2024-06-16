@@ -31,35 +31,35 @@ export function SocialMediaLinks({
       )}
     >
       <SocialLink
-        href="https://www.linkedin.com/in/MrAdib/"
+        href="/linkedin"
         ariaLabel="Connected to MrAdib on LinkedIn"
         icon={LinkedInIcon}
         isShowName={isShowName}
       >Linkedin</SocialLink>
 
       <SocialLink
-        href="https://twitter.com/MrAdib"
+        href="/twitter"
         ariaLabel="Follow MrAdib on Twitter"
         icon={XIcon}
         isShowName={isShowName}
       >X</SocialLink>
 
       <SocialLink
-        href="https://t.me/mradib"
+        href="/telegram"
         ariaLabel="You can find me on Telegram"
         icon={InstagramIcon}
         isShowName={isShowName}
       >Telegram</SocialLink>
 
       <SocialLink
-        href="https://github.com/JohnAdib"
+        href="/github"
         ariaLabel="Check out my GitHub profile"
         icon={GitHubIcon}
         isShowName={isShowName}
       >GitHub</SocialLink>
 
       <SocialLink
-        href="https://www.instagram.com/MrJohnAdib/"
+        href="/instagram"
         ariaLabel="See MrAdib photos on Instagram"
         icon={InstagramIcon}
         isShowName={isShowName}
