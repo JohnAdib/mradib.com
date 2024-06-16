@@ -105,6 +105,27 @@ export default function Uses() {
             Set it and forget about it for easy, ultra-wide POV shots.
           </Tool>
         </ToolsSection>
+        <ToolsSection title="Power Bank">
+          <Tool
+            title="Anker Prime 27,650mAh Power Bank (250W)"
+            href="https://www.anker.com/uk/products/a1340-250w-power-bank"
+          >
+           The power bank combines ultra-compact dynamic power,
+           maximum charging speed for every port,
+           the advanced ActiveShield™ 2.0 safety system,
+           unparalleled compatibility, and Power Delivery 3.1 technology,
+           ensuring efficient and secure charging for all your devices.
+           Powered by the latest PD 3.1 technology,
+           the power bank comes with 2 USB-C ports and 1 USB-A port
+           to deliver up to 250W of power.
+           The power bank is the size of a soda can with a
+           capacity of 27,650mAh and can charge an iPhone 15
+           approximately 4 times.
+           This power bank is 99.54Wh,
+           which meets the requirements of the TSA (less than 100Wh)
+           to be taken on airplanes as carry-on baggage.
+          </Tool>
+        </ToolsSection>
       </div>
     </SimpleLayout>
   );
