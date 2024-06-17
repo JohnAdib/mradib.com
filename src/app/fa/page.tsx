@@ -1,13 +1,17 @@
-import { SimpleLayout } from '@/components/simple-layout';
-import Link from 'next/link';
+import { Container } from '@/components/container';
+import { CtaOnDarkPanel } from '@/components/cta-on-dark-panel/cta-on-dark-panel';
 
 export default function Home() {
   return (
-    <SimpleLayout
-      title="فارسی"
-      intro="بزودی تکمیل می‌شود."
-    >
-      <Link href="/fa/resume">آموزش رایگان ساخت رزومه</Link>
-    </SimpleLayout>
+    <>
+      <Container>
+        <CtaOnDarkPanel
+          title="جامع‌ترین آموزش رایگان ساخت رزومه در کهکشان"
+          desc="صفر تا صد ساخت رزومه ایده‌آل خودت رو رایگان یاد بگیر. یک رزومه حرفه‌ای می‌تونه کلید موفقیتت باشه"
+          linkPrimaryText="آموزش ساخت رزومه"
+          linkPrimaryLink="/fa/resume"
+        />
+      </Container>
+    </>
   );
 }
