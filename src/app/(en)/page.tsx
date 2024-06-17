@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-import { Container } from '@/components/container';
+import { Container, ContainerOuter } from '@/components/container';
 import { HeroWithPhone } from '@/components/hero-with-phone/hero-with-phone';
+import { HeroWithTile } from '@/components/hero-with-tile/hero-with-tile';
 import { SocialMediaLinks } from '@/components/social-media-links';
 import image1 from '@/images/photos/image-1.jpg';
 import image2 from '@/images/photos/image-2.jpg';
@@ -14,7 +15,7 @@ function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2'];
 
   return (
-    <div className="mt-16 sm:mt-20">
+    <div className="mt-16 sm:mt-20 select-none">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
@@ -54,6 +55,9 @@ export default async function Home() {
         <HeroWithPhone />
       </Container>
       <Photos />
+      <ContainerOuter>
+        <HeroWithTile />
+      </ContainerOuter>
     </>
   );
 }

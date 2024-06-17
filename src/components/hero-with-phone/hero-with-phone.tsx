@@ -9,7 +9,7 @@ export function HeroWithPhone() {
   return (
     <div className="relative isolate pt-14 z-10 -mt-10 lg:-mt-32">
       <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-gray-900 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        className="select-none absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-gray-900 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
       >
         <defs>
@@ -34,7 +34,7 @@ export function HeroWithPhone() {
       </svg>
       <div className="mx-auto py-12 sm:py-16 lg:flex lg:items-center lg:gap-x-10 lg:py-20">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
+          <div className="flex select-none">
             <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm transition leading-6 text-stone-600 dark:text-stone-300 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
               <span className="font-semibold text-sky-700 dark:text-sky-300">Follow me on</span>
               <span className="h-4 w-px bg-stone-900/10" aria-hidden="true" />
@@ -62,7 +62,7 @@ export function HeroWithPhone() {
             celebrating the spontaneous joy and connection
             that a simple portrait can bring.
           </p>
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-10 flex items-center gap-x-6 select-none">
             <Link
               href="/gallery"
               className="rounded-md bg-sky-700 dark:bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -74,7 +74,7 @@ export function HeroWithPhone() {
             </Link>
           </div>
         </div>
-        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow select-none">
           <svg viewBox="0 0 366 729" role="img" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
             <title>MrAdib Portfolio</title>
             <defs>
