@@ -1,5 +1,7 @@
 import { type Metadata } from 'next';
 
+import { ContainerOuter } from '@/components/container';
+import { CtaWithTile } from '@/components/cta-with-tile/cta-with-tile';
 import { SimpleLayout } from '@/components/simple-layout';
 
 export const metadata: Metadata = {
@@ -9,9 +11,14 @@ export const metadata: Metadata = {
 
 export default function ThankYou() {
   return (
-    <SimpleLayout
-      title="Gallery"
-      intro="Photography by John Adib. I will be adding photos soon."
-    />
+    <>
+      <ContainerOuter>
+        <CtaWithTile />
+      </ContainerOuter>
+      <SimpleLayout
+        title="Gallery"
+        intro="Photography by John Adib. I will be adding photos soon."
+      />
+    </>
   );
 }
