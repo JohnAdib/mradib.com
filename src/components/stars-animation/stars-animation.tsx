@@ -1,7 +1,7 @@
 export function StarAnimation() {
   return <>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
+    <span id='stars'></span>
+    <span id='stars2'></span>
+    <span id='stars3'></span>
   </>;
 }
