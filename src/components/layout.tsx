@@ -10,9 +10,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className={clsx(
             'w-full',
             'ring-1',
-            'bg-white',
+            'bg-white/30',
             'ring-slate-100',
-            'dark:bg-[#282A36]',
+            'dark:bg-[#282A36]/30',
+            'opacity-80',
+            'backdrop-blur-sm',
             'dark:ring-slate-300/20',
           )}
           />
