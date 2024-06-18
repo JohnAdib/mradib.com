@@ -5,8 +5,9 @@ export function Page404() {
   return (<>
     <div id="page404">
       <div className="ternary-system">
-        <div className="sun primary"></div>
-        <div className="sun secondary"></div>
+        <div className="sun primary animate-pulse"></div>
+        <div className="sun secondary animate-pulse"></div>
+        <div className="sun secondary animate-ping"></div>
         <div className="sun ternary"></div>
       </div>
       <div className="sand">
@@ -21,7 +22,7 @@ export function Page404() {
           <div className="pendulum shadow">
             <div className="bar"></div>
             <div className="motion">
-              <div className="string"></div>
+              <div className="string animate-pulse"></div>
               <div className="weight"></div>
             </div>
           </div>
