@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 
 export default function Page404Banner() {
@@ -8,7 +9,7 @@ export default function Page404Banner() {
           <Link href="/" className="text-sm leading-6 text-white flex flex-wrap items-end justify-between gap-4 sm:gap-6 lg:items-center lg:gap-8">
             <div className='basis-full sm:basis-auto flex flex-col gap-2 lg:gap-6 lg:flex-row lg:items-center'>
               <h1 className="text-xl font-bold">Page Not Found</h1>
-              <span className='text-xs sm:text-sm'>Unfortunately the page you were looking for could not be found.</span>
+              <span className='text-xs sm:text-sm'>Oops! It looks like this page has taken a vacation!</span>
             </div>
             <span className='text-xs sm:text-sm' aria-hidden="true">Go to Homepage &rarr;</span>
           </Link>
