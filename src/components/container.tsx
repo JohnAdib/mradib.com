@@ -14,7 +14,9 @@ React.ComponentPropsWithoutRef<'div'>
       )}
       {...props}
     >
-      <div className="mx-auto w-full max-w-7xl lg:px-8">{children}</div>
+      <div className="mx-auto w-full max-w-7xl lg:px-8">
+        {children}
+      </div>
     </div>
   );
 });

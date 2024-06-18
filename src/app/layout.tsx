@@ -1,4 +1,3 @@
-import { StarAnimation } from '@/components/stars-animation/stars-animation';
 import { rootMetadata } from '@/lib/root-metadata';
 import { rootViewport } from '@/lib/root-viewport';
 import '@/styles/tailwind.css';
@@ -31,7 +30,6 @@ export default function RootLayout({
         }
       >
         <Providers>
-          <StarAnimation/>
           {children}
         </Providers>
         <GoogleAnalytics gaId="G-0T9SVDBER6"/>
