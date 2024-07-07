@@ -1,5 +1,6 @@
 import { Container } from '@/components/container';
 import { StaticImageData } from 'next/image';
+import { ISectionFeature, SectionFeaturesList } from '../elements/features-list';
 import { SectionImageFullWidth } from '../elements/image-full-width';
 import { SectionIntro } from '../elements/intro';
 import { SectionSubTitle } from '../elements/sub-title';
@@ -11,6 +12,7 @@ interface IFeatureWithFullWidthImage {
   intro: string;
   children?: React.ReactNode;
   image?: StaticImageData;
+  features?:ISectionFeature[];
 }
 
 export function FeatureWithFullWidthImage({
@@ -19,6 +21,7 @@ export function FeatureWithFullWidthImage({
   intro,
   children,
   image,
+  features,
 }: IFeatureWithFullWidthImage) {
   return (
     <>
@@ -29,6 +32,7 @@ export function FeatureWithFullWidthImage({
           <SectionIntro>{intro}</SectionIntro>
         </header>
         <SectionImageFullWidth src={image} alt={title} />
+        <SectionFeaturesList features={features} />
 
         {children}
       </Container>
