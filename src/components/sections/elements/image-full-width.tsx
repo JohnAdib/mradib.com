@@ -15,7 +15,7 @@ export function SectionImageFullWidth({
   }
 
   return (
-    <div className="relative overflow-hidden pt-16 mb-12">
+    <div className="relative overflow-hidden pt-16 mb-12 select-none">
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <Image
           alt={alt || 'MrAdib Image'}
