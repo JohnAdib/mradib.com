@@ -8,4 +8,5 @@ export const urlSocial = {
   youtube: 'https://www.youtube.com/@mradib',
   facebook: 'https://www.facebook.com/MrJohnAdib',
   adpList: 'https://adplist.org/mentors/john-adib',
+  resume: 'https://resume.mradib.com',
 };

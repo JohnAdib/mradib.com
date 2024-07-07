@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Container } from '@/components/container';
 import { SocialMediaLinks } from '@/components/social-media-links';
 import portraitImage from '@/images/portrait.jpg';
+import { urlSocial } from '@/lib/constants/url-social';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export default function About() {
             <p>My journey as a software engineer has been enriched by diverse projects and roles, from startups to large enterprises. I'm an open source enthusiast who believes in the power of collaboration and community driven development.</p>
             <p>Throughout my career, I've had the privilege of leading diverse teams and collaborating on projects that span multiple industries, including finance, EdTech, and Ecommerce. My leadership philosophy centers on continuous learning, adaptability, and empowering others to achieve their full potential.</p>
             <p>By mentoring junior developers, fostering a collaborative work environment, and implementing best practices, I strive to drive productivity and quality. If you're looking to connect with me or explore mentorship opportunities, visit my <Link href="mentor">Mentorship Page</Link> to take the next step in your tech journey.</p>
+            <p>Curious about my background and skillset? Ever wondered if a resume could be a mix of HTML and CSS, then magically export as a PDF? Well, mine is! Feel free to discover the hidden pure JavaScript trick embedded within it at <Link href={urlSocial.resume} target='_blank'>resume.mradib.com</Link> and uncover how my journey and skills might resonate with your needs.</p>
           </div>
         </div>
         <div className="lg:px-20">
