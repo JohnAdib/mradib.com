@@ -39,9 +39,9 @@ export default function About() {
             className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400"
           >
             <p>I’m John Adib, based in London, where I design web solutions and enjoy photographing portraits and landscapes. Photography is a deep passion of mine.  London's dynamic atmosphere and diverse architecture offer endless inspiration for my work, allowing me to explore and document the world through my lens.</p>
-            <p>My journey as a software engineer has been enriched by diverse projects and roles, from startups to large enterprises. I am an open source enthusiast who believes in the power of collaboration and community driven development.</p>
-            <p>Throughout my career, I've had the privilege of leading diverse teams and collaborating on projects that span multiple industries, including finance, EdTech, and Ecommerce. I take pride in mentoring junior developers, fostering a collaborative work environment, and implementing best practices that drive both quality and productivity. My leadership philosophy centers on continuous learning, adaptability, and empowering others to achieve their full potential.</p>
-            <p>If you're looking to connect with me or explore mentorship opportunities, visit my <Link href="mentor">Mentorship Page</Link> to take the next step in your tech journey.</p>
+            <p>My journey as a software engineer has been enriched by diverse projects and roles, from startups to large enterprises. I'm an open source enthusiast who believes in the power of collaboration and community driven development.</p>
+            <p>Throughout my career, I've had the privilege of leading diverse teams and collaborating on projects that span multiple industries, including finance, EdTech, and Ecommerce. My leadership philosophy centers on continuous learning, adaptability, and empowering others to achieve their full potential.</p>
+            <p>By mentoring junior developers, fostering a collaborative work environment, and implementing best practices, I strive to drive productivity and quality. If you're looking to connect with me or explore mentorship opportunities, visit my <Link href="mentor">Mentorship Page</Link> to take the next step in your tech journey.</p>
           </div>
         </div>
         <div className="lg:px-20">
