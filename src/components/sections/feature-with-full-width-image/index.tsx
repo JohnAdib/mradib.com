@@ -1,4 +1,4 @@
-import { Container, ContainerOuter } from '@/components/container';
+import { Container } from '@/components/container';
 import { StaticImageData } from 'next/image';
 import { SectionImageFullWidth } from '../elements/image-full-width';
 import { SectionIntro } from '../elements/intro';
@@ -28,13 +28,9 @@ export function FeatureWithFullWidthImage({
           <SectionTitle>{title}</SectionTitle>
           <SectionIntro>{intro}</SectionIntro>
         </header>
-      </Container>
-
-      <ContainerOuter>
         <SectionImageFullWidth src={image} alt={title} />
-      </ContainerOuter>
-      <Container className="mt-16 sm:mt-32">
-        123
+
+        {children}
       </Container>
     </>
   );

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 
 interface ISectionImageFullWidth {
@@ -14,17 +15,25 @@ export function SectionImageFullWidth({
   }
 
   return (
-    <div className="relative overflow-hidden pt-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="relative overflow-hidden pt-16 mb-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <Image
           alt={alt || 'MrAdib Image'}
           src={src}
-          width={2432}
-          height={1442}
-          className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10 dark:ring-white/10"
+          className={clsx(
+            'dark:mb-[-10%]',
+            'rounded-xl',
+            'shadow-2xl ',
+            'ring-1',
+            'transition',
+            'ring-gray-900/10',
+            'hover:ring-gray-900/30',
+            'dark:ring-white/10',
+            'hover:dark:ring-white/30',
+          )}
         />
-        <div aria-hidden="true" className="relative">
-          <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white/60 dark:from-[#282A36]/60 pt-[7%]" />
+        <div aria-hidden="true" className="relative hidden dark:block">
+          <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white/60 dark:from-[#13141b] pt-[7%]" />
         </div>
       </div>
     </div>
