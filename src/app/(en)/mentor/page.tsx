@@ -1,16 +1,17 @@
 import { Container } from '@/components/container';
-import { SimpleLayout } from '@/components/simple-layout';
+import { FeatureWithFullWidthImage } from '@/components/sections/feature-with-full-width-image';
 import clsx from 'clsx';
+import imgMentorSwag from './_img/mentor-swag.png';
 
 export default function Page() {
   return (
     <>
-      <SimpleLayout
+      <FeatureWithFullWidthImage
+        subTitle='Wanna level up your tech career?'
         title="Mentorship with MrAdib"
-        intro="Hello! I'm John Adib, a Principal Software Engineer with a passion for helping others succeed. Whether you're looking to enhance your coding skills, polish your resume, conquer job interviews, or navigate tech immigration, I'm here to help."
+        intro="Hello! I'm John Adib, a Principal Software Engineer with a passion for helping others succeed. Whether you're looking to enhance your coding skills, polish your resume, conquer job interviews, or navigate tech immigration, I'm here to help. FREE!"
+        image={imgMentorSwag}
       />
-
-      {/* {/* <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"> */}
 
       <Container>
         <section className={clsx(
