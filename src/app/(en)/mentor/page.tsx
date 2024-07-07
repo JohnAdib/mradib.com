@@ -1,7 +1,7 @@
 import { Container } from '@/components/container';
 import { FeatureWithFullWidthImage } from '@/components/sections/feature-with-full-width-image';
 import clsx from 'clsx';
-import imgMentorSwag from './_img/mentor-swag.png';
+import imgMradibMentoring from './_img/mradib-mentoring.png';
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
         subTitle='Wanna level up your tech career?'
         title="Mentorship with MrAdib"
         intro="Hello! I'm John Adib, a Principal Software Engineer with a passion for helping others succeed. Whether you're looking to enhance your coding skills, polish your resume, conquer job interviews, or navigate tech immigration, I'm here to help. FREE!"
-        image={imgMentorSwag}
+        image={imgMradibMentoring}
       />
 
       <Container>
