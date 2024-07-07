@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import { Container, ContainerOuter } from '@/components/container';
-import { HeroWithPhone } from '@/components/hero-with-phone/hero-with-phone';
 import { HeroWithTile } from '@/components/hero-with-tile/hero-with-tile';
 import { SocialMediaLinks } from '@/components/social-media-links';
 import image1 from '@/images/photos/image-1.jpg';
@@ -52,12 +51,11 @@ export default async function Home() {
           </p>
           <div className='mt-6'><SocialMediaLinks/></div>
         </div>
-        <HeroWithPhone />
       </Container>
-      <Photos />
       <ContainerOuter>
         <HeroWithTile />
       </ContainerOuter>
+      <Photos />
     </>
   );
 }

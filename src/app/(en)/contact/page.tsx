@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Get in touch with John Adib',
 };
 
-export default function ThankYou() {
+export default function Page() {
   return (
     <SimpleLayout
       title="Contact"

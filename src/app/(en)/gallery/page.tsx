@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Photography by MrAdib.',
 };
 
-export default function ThankYou() {
+export default function Page() {
   return (
     <>
       <ContainerOuter>
