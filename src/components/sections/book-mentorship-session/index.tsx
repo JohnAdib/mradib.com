@@ -1,14 +1,26 @@
 import { Container } from '@/components/container';
+import { urlSocial } from '@/lib/constants/url-social';
 import clsx from 'clsx';
+import Link from 'next/link';
+import { SectionIntro } from '../elements/intro';
+import { SectionSubTitle } from '../elements/sub-title';
+import { SectionTitle } from '../elements/title';
 
 export function BookMentorshipSession() {
   return (
     <Container>
-      <section className='my-16 sm:my-32'>
-        <h2 className="mt-8 text-3xl font-bold text-center">Book a Mentorship Session</h2>
-        <p className="mt-2 mb-8 text-base text-center text-zinc-600 dark:text-zinc-400">
-          Ready to take the next step? Book a free 1:1 session with me today!
-        </p>
+      <section className='my-16 sm:my-32 text-center'>
+        <SectionSubTitle>Ready to take the next step?</SectionSubTitle>
+        <SectionTitle>Book a Mentorship Session</SectionTitle>
+        <SectionIntro>
+          <Link
+            target='_blank'
+            href={urlSocial.adpList}
+          >
+            Register on ADPList
+          </Link> and book a free 1:1 session with me today!
+        </SectionIntro>
+
         <div className={clsx(
           'h-[800px]',
           'w-full',

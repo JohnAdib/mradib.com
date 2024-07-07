@@ -7,4 +7,5 @@ export const urlSocial = {
   tiktok: 'https://www.tiktok.com/@SmileIsGold',
   youtube: 'https://www.youtube.com/@mradib',
   facebook: 'https://www.facebook.com/MrJohnAdib',
+  adpList: 'https://adplist.org/mentors/john-adib',
 };
