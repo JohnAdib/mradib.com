@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, XIcon } from '../icon/social-icons';
+import { GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, TelegramIcon, XIcon } from '../icon/social-icons';
 import { SocialLink } from './social-link';
 
 export function EmailLink() {
@@ -47,7 +47,7 @@ export function SocialMediaLinks({
       <SocialLink
         href="/telegram"
         ariaLabel="You can find me on Telegram"
-        icon={InstagramIcon}
+        icon={TelegramIcon}
         isShowName={isShowName}
       >Telegram</SocialLink>
 
