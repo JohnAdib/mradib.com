@@ -9,7 +9,7 @@ import { SectionTitle } from '../elements/title';
 export function BookMentorshipSession() {
   return (
     <Container>
-      <section className='my-16 sm:my-32 text-center'>
+      <section className='my-16 sm:mt-32 sm:text-center'>
         <SectionSubTitle>Ready to take the next step?</SectionSubTitle>
         <SectionTitle>Book a Mentorship Session</SectionTitle>
         <SectionIntro>
@@ -22,7 +22,7 @@ export function BookMentorshipSession() {
         </SectionIntro>
 
         <div className={clsx(
-          'h-[800px]',
+          'h-[700px]',
           'w-full',
           'lg:max-w-screen-sm',
           'mx-auto',
@@ -38,7 +38,7 @@ export function BookMentorshipSession() {
         )}>
           <iframe
             src="https://adplist.org/widgets/booking?src=john-adib"
-            title=""
+            title="book a mentorship session with MrAdib"
             width="100%"
             height="100%"
             loading="lazy"
