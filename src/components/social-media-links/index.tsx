@@ -26,6 +26,7 @@ export function SocialMediaLinks({
     <nav
       className={clsx(
         'flex',
+        'select-none',
         forAboutPage && 'flex-col',
         'gap-1',
       )}
