@@ -1,4 +1,4 @@
-export function SectionIntro({ children }: { children?: string }) {
+export function SectionIntro({ children }: { children?: React.ReactNode }) {
   if (!children) {
     return null;
   }
