@@ -2,7 +2,13 @@
 import { BookMentorshipSession } from '@/components/sections/book-mentorship-session';
 import { FeatureWithFullWidthImage } from '@/components/sections/feature-with-full-width-image';
 import { CommandLineIcon, DocumentCheckIcon, GlobeEuropeAfricaIcon } from '@heroicons/react/20/solid';
+import { Metadata } from 'next';
 import imgMradibMentoring from './_img/mradib-mentoring.png';
+
+export const metadata: Metadata = {
+  title: 'Mentorship with MrAdib',
+  description: 'I offer limited FREE mentorship to help you level up your tech career. Book a 1:1 session today!',
+};
 
 export default function Page() {
   const featuresList = [
