@@ -8,6 +8,9 @@ import imgMradibMentoring from './_img/mradib-mentoring.png';
 export const metadata: Metadata = {
   title: 'Mentorship with MrAdib',
   description: 'I offer limited FREE mentorship to help you level up your tech career. Book a 1:1 session today!',
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function Page() {
