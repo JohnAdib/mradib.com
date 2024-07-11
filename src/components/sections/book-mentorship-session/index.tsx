@@ -6,19 +6,31 @@ import { SectionIntro } from '../elements/intro';
 import { SectionSubTitle } from '../elements/sub-title';
 import { SectionTitle } from '../elements/title';
 
-export function BookMentorshipSession() {
+interface IBookMentorshipSession {
+  subTitle?: string;
+  title?: string;
+  linkText?: string;
+  linkDesc?: string;
+}
+
+export function BookMentorshipSession({
+  subTitle,
+  title,
+  linkText,
+  linkDesc,
+}: IBookMentorshipSession) {
   return (
     <Container>
       <section className='my-16 sm:mt-32 sm:text-center'>
-        <SectionSubTitle>Ready to take the next step?</SectionSubTitle>
-        <SectionTitle>Book a Mentorship Session</SectionTitle>
+        <SectionSubTitle>{subTitle}</SectionSubTitle>
+        <SectionTitle>{title}</SectionTitle>
         <SectionIntro>
           <Link
             target='_blank'
             href={urlSocial.adpList}
           >
-            Register on ADPList
-          </Link> and book a free 1:1 session with me today!
+            {linkText}
+          </Link> {linkDesc}
         </SectionIntro>
 
         <div className={clsx(

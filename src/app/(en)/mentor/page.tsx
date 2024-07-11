@@ -53,7 +53,12 @@ export default function Page() {
         I'm here to help. <b>FREE!</b>
       </FeatureWithFullWidthImage>
 
-      <BookMentorshipSession />
+      <BookMentorshipSession
+        subTitle='Ready to take the next step?'
+        title='Book a Mentorship Session'
+        linkText='Register on ADPList'
+        linkDesc='and book a free 1:1 session with me today!'
+      />
     </>
   );
 }
