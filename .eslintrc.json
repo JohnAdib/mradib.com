@@ -165,7 +165,10 @@
       "error",
       {
         "allow": [
-          "info"
+          "info",
+          "warn",
+          "debug",
+          "error"
         ]
       }
     ],
