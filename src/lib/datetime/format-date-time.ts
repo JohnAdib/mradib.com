@@ -1,13 +1,13 @@
-import { Locale } from './locale';
+import { LanguageLocale } from '../languages/locale';
 
 interface IFormatDateTime {
   datetime: string;
-  locale?: Locale;
+  locale?: LanguageLocale;
 }
 
 export function formatDateTime({
   datetime,
-  locale = Locale.enUS,
+  locale = 'en-US',
 }: IFormatDateTime,
 ) {
   return new Date(datetime).toLocaleDateString(locale, {

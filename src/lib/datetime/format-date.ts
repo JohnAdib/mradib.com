@@ -1,16 +1,16 @@
+import { LanguageLocale } from '../languages/locale';
 import { formatDateTime } from './format-date-time';
-import { Locale } from './locale';
 
 interface IFormatDate {
   date: string;
   time?: string;
-  locale?: Locale;
+  locale?: LanguageLocale;
 }
 
 export function formatDate({
   date,
   time,
-  locale = Locale.enUS,
+  locale = 'en-US',
 }: IFormatDate,
 ) {
   const myTime = time ? time : '00:00:00';
