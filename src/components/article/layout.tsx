@@ -3,7 +3,7 @@
 import { AppContext } from '@/app/providers';
 import { Container } from '@/components/container';
 import { Prose } from '@/components/prose';
-import { formatDateTimePersian } from '@/lib/fa/format-date';
+import { formatDateTime } from '@/lib/datetime/format-date-time';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -28,6 +28,7 @@ export function ArticleLayout({
   faq,
   breadcrumb,
   nextPrev,
+  lang,
   children,
 }: IArticleLayout) {
   let router = useRouter();
@@ -79,7 +80,7 @@ export function ArticleLayout({
                 >
                   <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                   <span className="mr-3">
-                    {formatDateTimePersian(datePublished)}
+                    {formatDateTime({ datetime: datePublished, locale: lang })}
                   </span>
                 </time>
                 <time
@@ -87,7 +88,7 @@ export function ArticleLayout({
                   title={'Last modified on ' + dateModified}
                   className="text-stone-500 dark:text-stone-400 hidden"
                 >
-                  {formatDateTimePersian(dateModified)}
+                  {formatDateTime({ datetime: dateModified, locale: lang })}
                 </time>
                 <ArticleReadTime minutes={readTimeMinutes} />
               </div>

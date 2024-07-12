@@ -104,6 +104,7 @@ export default function Page() {
         dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
         breadcrumb={breadcrumb}
+        lang='fa-IR'
       >
         <PageContent />
       </ArticleLayout>

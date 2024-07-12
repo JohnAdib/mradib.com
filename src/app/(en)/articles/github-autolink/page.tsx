@@ -36,7 +36,7 @@ export default function Page() {
         title={article.title}
         intro={article.description}
         datePublished={article.date}
-        locale='en-US'
+        lang='en-US'
       >
 
       </ArticleLayout>

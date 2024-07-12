@@ -223,6 +223,7 @@ export default function Page() {
         faq={resumeTemplateFaq}
         breadcrumb={breadcrumb}
         nextPrev={nextPrev}
+        lang='fa-IR'
       >
         <PageContent />
       </ArticleLayout>

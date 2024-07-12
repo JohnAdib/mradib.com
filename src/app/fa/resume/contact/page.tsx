@@ -179,6 +179,7 @@ export default function Page() {
         datePublished={datePublished}
         dateModified={dateModified}
         readTimeMinutes={articleReadingTime}
+        lang='fa-IR'
       >
         <PageContent />
       </ArticleLayout>

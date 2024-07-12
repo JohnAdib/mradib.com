@@ -1,3 +1,4 @@
+import { LanguageLocale } from '@/lib/languages/locale';
 import { StaticImageData } from 'next/image';
 import { IBreadcrumbItem } from '../breadcrumb/interface';
 import { IFaqQA } from '../faq/faq-interface';
@@ -15,5 +16,6 @@ export interface IArticleLayout {
   faq?: IFaqQA[];
   breadcrumb?: IBreadcrumbItem[];
   nextPrev?: INavNextPrev;
+  lang: LanguageLocale;
   children: React.ReactNode;
 }
