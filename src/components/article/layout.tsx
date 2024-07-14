@@ -65,12 +65,12 @@ export function ArticleLayout({
                 {intro}
               </p>
 
-              <Image
+              {coverImage && <Image
                 src={coverImage}
                 alt={title}
                 priority
                 className="rounded-xl md:rounded-3xl select-none touch-none max-md:pointer-events-none transition hover:brightness-110"
-              />
+              />}
 
               <div className='infoBox flex justify-between text-sm select-none'>
                 <time
@@ -79,7 +79,7 @@ export function ArticleLayout({
                   className="flex items-center text-stone-500 dark:text-stone-400"
                 >
                   <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                  <span className="mr-3">
+                  <span className="mx-3">
                     {formatDateTime({ datetime: datePublished, locale: lang })}
                   </span>
                 </time>
