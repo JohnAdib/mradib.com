@@ -5,18 +5,30 @@ import { separator } from '@/lib/constants/en';
 import { myNameFa } from '@/lib/constants/fa';
 import { readingTime } from '@/lib/reading-time';
 import { type Metadata } from 'next';
+import { resumeTodoList } from '../resume-todo-list';
+import { Checklist } from './_checklist';
 import coverImg from './opengraph-image.jpg';
 
-const publishDate = '2024-04-08';
-const publishTime = '02:53:24';
+const publishDate = '2024-07-22';
+const publishTime = '10:20:24';
 const datePublished = `${publishDate}T${publishTime}.000Z`;
-const dateModified = '2024-05-12' + 'T' + '19:31:00' + '.000Z';
-const articleTitle = 'بهترین آموزش ساخت رزومه';
-const articleDescription = 'قصد دارید رزومه بسازید و برای شغلی اپلای کنید؟ صفر تا صد ساخت رزومه رو اینجا بخونید تا یک رزومه حرفه‌ای بسازید. این بهترین و کامل‌ترین و جامع‌ترین آموزش ساخت رزومه در کهکشان است!';
-const pageTitle = 'آموزش ساخت رزومه';
-const pageDesc = 'وقتشه رزومه خفن خودت رو بسازی. آموزش صفر تا صد ساخت رزومه';
-const pagePath = '/fa/resume/sample';
-const keywords = ['رزومه کاری', 'رزومه', 'رزومه فارسی', 'رزومه انگلیسی'];
+const dateModified = '2024-07-22' + 'T' + '10:20:00' + '.000Z';
+const articleTitle = 'چک لیست ساخت رزومه';
+const articleDescription = 'با کمک این چک لیست به راحتی رزومه خودتون رو بررسی کنید و مشکلاتش رو پیدا کنید';
+const pageTitle = 'چک لیست ساخت رزومه از صفر تا صد';
+const pageDesc = articleDescription;
+const pagePath = '/fa/resume/checklist';
+const keywords = [
+  'رزومه',
+  'چک لیست',
+  'چک لیست رزومه',
+  'رزومه انگلیسی',
+  'رزومه فارسی',
+  'رزومه موفق',
+  'رزومه کاریابی',
+  'رزومه شغلی',
+  'رزومه کاری',
+];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -57,6 +69,7 @@ export default function Page() {
         lang='fa-IR'
       >
         <PageContent />
+        <Checklist list={resumeTodoList} />
       </ArticleLayout>
     </>
   );
