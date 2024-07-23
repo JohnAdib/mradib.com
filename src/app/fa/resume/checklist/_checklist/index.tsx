@@ -4,7 +4,7 @@ import { Msg } from '@/components/msg/msg';
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
-import { IChecklist } from './interface';
+import { IChecklist } from './i-group';
 
 type IChecklistStatus = 'completed' | 'inProgress' | 'notStarted';
 

@@ -1,4 +1,4 @@
-import { IChecklist } from './interface';
+import { IChecklist } from './i-group';
 
 export const checklistSampleData: IChecklist[] = [
   {
