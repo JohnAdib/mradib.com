@@ -1,6 +1,7 @@
 import React from 'react';
 import { IChecklistGroupItem } from './i-checklist-group-item';
 import { ChecklistGroupType } from './type-checklist-groups';
+import { ChecklistItemStatusType } from './type-checklist-item-status';
 
 export interface IChecklistGroup {
   id: string;
@@ -11,5 +12,6 @@ export interface IChecklistGroup {
   passedNote?: string | React.ReactNode;
   failedNote?: string | React.ReactNode;
   unknownNote?: string | React.ReactNode;
+  status?: ChecklistItemStatusType;
   items: IChecklistGroupItem[];
 }

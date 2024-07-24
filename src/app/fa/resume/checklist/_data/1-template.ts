@@ -8,4 +8,8 @@ export const resumeChecklistTemplate: IChecklistGroup = {
   title: 'قالب رزومه',
   desc: 'این موارد باید در قالب رزومه‌ی شما وجود داشته باشد.',
   items: resumeChecklistTemplateItems,
+  passedNote: 'تبریک! قالب رزومه‌ی شما کامل است.',
+  failedNote: 'قالب رزومه‌ی شما نیاز به بهبود دارد.',
+  unknownNote: 'قالب رزومه‌ی شما نیاز به بررسی دارد.',
+  // status: 'passed',
 };

@@ -23,7 +23,12 @@ export function Msg({
   title,
   severity = 'info',
   children,
-}: IMsg): JSX.Element {
+}: IMsg,
+): JSX.Element | null {
+  if (!children) {
+    return null;
+  }
+
   const colors = getMsgSeverityColor(severity);
 
   return (
@@ -37,7 +42,7 @@ export function Msg({
       colors.bg,
     )}>
       <div className={colors.icon}>
-        <MsgSeverityIcon severity={severity}/>
+        <MsgSeverityIcon severity={severity} />
       </div>
       <div className={clsx(
         'flex flex-col',
