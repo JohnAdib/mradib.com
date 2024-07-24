@@ -4,10 +4,13 @@ import { RenderChecklist } from './render';
 import { IChecklistRenderProps } from './render/i-checklist-render';
 
 export function Checklist({
-  name,
+  id,
   list,
 }: IChecklistRenderProps) {
+  if (!id) {
+    return null;
+  }
   // TODO: Implement logic to handle the checklist
 
-  return <RenderChecklist name={name} list={list} />;
+  return <RenderChecklist id={id} list={list} />;
 }

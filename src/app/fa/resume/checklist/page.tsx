@@ -69,7 +69,7 @@ export default function Page() {
         lang='fa-IR'
       >
         <PageContent />
-        <Checklist name="resume" list={resumeChecklist} />
+        <Checklist id="resume" list={resumeChecklist} />
       </ArticleLayout>
     </>
   );

@@ -4,19 +4,15 @@ import { ChecklistGroupDesc } from './group-desc';
 import { ChecklistGroupTitle } from './group-title';
 import { ChecklistSpecialMsg } from './special-msg';
 
-interface IRenderChecklistGroupProps {
-  id: string;
+interface IChecklistGroupProps {
   group: IChecklistGroup;
 }
 
-export function RenderChecklistGroup({
-  id,
+export function ChecklistGroup({
   group,
-}: IRenderChecklistGroupProps) {
-  const groupId = `${id}-${group.id}`;
-
+}: IChecklistGroupProps) {
   return (
-    <div id={groupId} className={
+    <div className={
       clsx(
         'my-6 lg:my-12',
       )
