@@ -1,25 +1,29 @@
 import clsx from 'clsx';
+import { RenderChecklistGroup } from './group/render-group';
 import { IChecklistRenderProps } from './i-checklist-render';
-import { RenderChecklistGroupTitle } from './render-group-title';
 
 export function RenderChecklist({
   name,
   list,
 }: IChecklistRenderProps) {
-  console.log('list', list);
+  const uniqueId = `ls-${name}`;
+  console.debug('list', list);
 
   // foreach list, render group
   const listGroups = list.map((group) => {
-    return <RenderChecklistGroupTitle
-      key={group.id}
-      title={group.title}
-      desc={group.desc}
-    />;
+    return <>
+      <RenderChecklistGroup
+        key={group.id}
+        id={uniqueId}
+        group={group}
+      />
+      {/* render checklist items */}
+    </>;
   });
 
   return (
     <section
-      id={`checklist-${name}`}
+      id={uniqueId}
       className={
         clsx(
           'checklist',
