@@ -10,14 +10,18 @@ export function RenderChecklist({
   const uniqueId = `ls-${id}`;
   console.debug('list', list);
 
+  if (!list) {
+    return null;
+  }
+
   // foreach list, render group
-  const listGroups = list.map((group) => {
+  const ChecklistGroupsAndItems = list.map((group) => {
     const groupId = `${id}-${group.id}`;
     return (
       <div key={group.id} id={groupId}>
 
         <ChecklistGroup group={group} />
-        <ChecklistItems items={group.items} />
+        <ChecklistItems groupId={groupId} items={group.items} />
       </div>
     );
   });
@@ -30,7 +34,7 @@ export function RenderChecklist({
           'checklist',
         )
       } >
-      {listGroups}
+      {ChecklistGroupsAndItems}
     </section >
   );
 }

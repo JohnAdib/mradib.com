@@ -1,16 +1,22 @@
 import clsx from 'clsx';
 import { IChecklistGroupItem } from '../../interfaces/i-checklist-group-item';
-import { ChecklistGroupDesc } from '../group/group-desc';
-import { ChecklistGroupTitle } from '../group/group-title';
-import { ChecklistSpecialMsg } from '../group/special-msg';
+import { ChecklistItem } from './item';
 
-interface IChecklistGroupProps {
+interface IChecklistItemsProps {
+  groupId: string;
   items: IChecklistGroupItem[];
 }
 
 export function ChecklistItems({
+  groupId,
   items,
-}: IChecklistGroupProps) {
+}: IChecklistItemsProps) {
+
+  // foreach item, render item
+  const GroupItems = items.map((item) => {
+    const itemId = `${groupId}-${item.id}`;
+    return <ChecklistItem key={itemId} item={item} />;
+  });
 
   return (
     <div className={
@@ -18,15 +24,7 @@ export function ChecklistItems({
         'my-6 lg:my-12',
       )
     }>
-      <ChecklistGroupTitle title={items.title} />
-      <ChecklistGroupDesc desc={items.desc} />
-
-      <ChecklistSpecialMsg
-        status={items.status}
-        unknownNote={items.unknownNote}
-        passedNote={items.passedNote}
-        failedNote={items.failedNote}
-      />
+      {GroupItems}
     </div>
   );
 }
