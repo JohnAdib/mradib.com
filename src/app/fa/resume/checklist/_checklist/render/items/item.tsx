@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { IChecklistGroupItem } from '../../interfaces/i-checklist-group-item';
-import { ChecklistSpecialMsg } from '../group/special-msg';
 import { ChecklistItemCheckbox } from './item-checkbox';
 
 interface IChecklistItemProps {
@@ -20,13 +19,6 @@ export function ChecklistItem({
       )
     }>
       <ChecklistItemCheckbox item={item} itemId={itemId} />
-
-      <ChecklistSpecialMsg
-        status={item.status}
-        unknownNote={item.unknownNote}
-        passedNote={item.passedNote}
-        failedNote={item.failedNote}
-      />
     </div>
   );
 }

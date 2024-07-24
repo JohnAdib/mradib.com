@@ -3,10 +3,13 @@ import { getMsgSeverityColor } from './severity-colors';
 import { MsgSeverityIcon } from './severity-icon';
 
 export type SeverityType = 'info' | 'success' | 'warning' | 'error';
+type SizeType = 'xs' | 'sm' | 'md' | 'lg';
+
 interface IMsg {
   title?: string;
   severity?: SeverityType;
   children: React.ReactNode;
+  size?: SizeType;
 }
 
 function MsgTitle({ children }: { children: React.ReactNode })
@@ -22,6 +25,7 @@ function MsgTitle({ children }: { children: React.ReactNode })
 export function Msg({
   title,
   severity = 'info',
+  size = 'md',
   children,
 }: IMsg,
 ): JSX.Element | null {
@@ -33,13 +37,21 @@ export function Msg({
 
   return (
     <div className={clsx(
-      'rounded-md p-4',
+      size === 'xs' && 'p-1',
+      size === 'sm' && 'p-2',
+      size === 'md' && 'p-4',
+      size === 'lg' && 'p-6',
+
+      'rounded-md',
       'flex gap-3',
       'items-center',
-      'mt-6',
-      'mb-4',
-      'select-none',
       colors.bg,
+
+      size === 'xs' && 'mt-1 mb-1',
+      size === 'sm' && 'mt-2 mb-2',
+      size === 'md' && 'mt-6 mb-4',
+      size === 'lg' && 'mt-8 mb-6',
+      'select-none',
     )}>
       <div className={colors.icon}>
         <MsgSeverityIcon severity={severity} />

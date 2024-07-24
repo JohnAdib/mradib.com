@@ -26,6 +26,7 @@ const check2: IChecklistGroupItem = {
   desc: 'آیا بخش اطلاعات تماس در بالای صفحه قرار داره؟',
   passedNote: 'ایول!',
   failedNote: 'بخش اطلاعات تماست رو منتقل کن به بالای صفحه',
+  status: 'failed',
 };
 
 const check3: IChecklistGroupItem = {
@@ -33,6 +34,7 @@ const check3: IChecklistGroupItem = {
   order: 3,
   title: 'بخش خلاصه',
   desc: 'آیا بخش خلاصه بعد از اطلاعات تماس تو رزومه قرار گرفته؟',
+  status: 'passed',
 };
 
 const check4: IChecklistGroupItem = {

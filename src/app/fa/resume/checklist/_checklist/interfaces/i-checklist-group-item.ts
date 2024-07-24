@@ -11,4 +11,5 @@ export interface IChecklistGroupItem {
   failedNote?: string | React.ReactNode;
   unknownNote?: string | React.ReactNode;
   status?: ChecklistItemStatusType;
+  checked?: boolean;
 }

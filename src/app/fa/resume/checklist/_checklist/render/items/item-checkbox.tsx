@@ -1,5 +1,7 @@
-import { CheckCircleIcon, QuestionMarkCircleIcon } from '@heroicons/react/20/solid';
+import clsx from 'clsx';
 import { IChecklistGroupItem } from '../../interfaces/i-checklist-group-item';
+import { ChecklistSpecialMsg } from '../group/special-msg';
+import { ChecklistItemCheckboxIcon } from './item-checkbox-icon';
 
 interface IChecklistItemCheckboxProps {
   item: IChecklistGroupItem;
@@ -11,25 +13,45 @@ export function ChecklistItemCheckbox({
   itemId,
 }: IChecklistItemCheckboxProps) {
   return (
-    <div className="px-1">
+    <div className="md:px-1">
       <input
         className="hidden"
         type="checkbox"
         id={itemId}
-        checked={!item.status}
+        checked={item.checked}
       // onChange={() => handleTaskClick(index)}
       />
       <label
-        className="flex gap-2 items-center px-4 py-2 rounded-lg cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-800"
+        className={clsx(
+          'flex gap-2 items-center',
+          'px-2 md:px-4',
+          'py-2 md:py-2',
+          'rounded-lg',
+          'cursor-pointer',
+          'transition',
+          'hover:bg-gray-100 dark:hover:bg-gray-800',
+        )}
         htmlFor={itemId}
       >
-        {item.status ?
-          <CheckCircleIcon className="w-5 h-5 text-green-500" />
-          :
-          <QuestionMarkCircleIcon className="w-5 h-5 text-gray-300" />
-        }
-        <span className="text-xs md:text-sm leading-5"><b>{item.title}</b> {item.desc}</span>
-      </label>
-    </div>
+        <ChecklistItemCheckboxIcon status={item.status} />
+        <div className={clsx(
+          'text-xs md:text-sm leading-5',
+          'flex flex-col',
+        )}>
+          <span className='font-bold'>{item.title}</span>
+          <span className='opacity-80'>{item.desc}</span>
+        </div>
+      </label >
+
+      <div className='px-4'>
+        <ChecklistSpecialMsg
+          status={item.status}
+          size="sm"
+          unknownNote={item.unknownNote}
+          passedNote={item.passedNote}
+          failedNote={item.failedNote}
+        />
+      </div>
+    </div >
   );
 }
