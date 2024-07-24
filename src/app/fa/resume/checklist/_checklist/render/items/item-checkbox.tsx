@@ -36,9 +36,9 @@ export function ChecklistItemCheckbox({
         <ChecklistItemCheckboxIcon status={item.status} />
         <div className={clsx(
           'text-xs md:text-sm leading-5',
-          'flex flex-col',
+          // 'flex items-center flex-col sm:gap-1 sm:flex-row',
         )}>
-          <span className='font-bold'>{item.title}</span>
+          <span className='font-bold inline-block pl-1'>{item.title}</span>
           <span className='opacity-80'>{item.desc}</span>
         </div>
       </label >
