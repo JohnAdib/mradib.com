@@ -1,25 +1,25 @@
 import clsx from 'clsx';
 import { IChecklistGroupItem } from '../../interfaces/i-checklist-group-item';
-import { ChecklistGroupDesc } from '../group/group-desc';
-import { ChecklistGroupTitle } from '../group/group-title';
 import { ChecklistSpecialMsg } from '../group/special-msg';
+import { ChecklistItemCheckbox } from './item-checkbox';
 
 interface IChecklistItemProps {
   item: IChecklistGroupItem;
+  itemId: string;
 }
 
 export function ChecklistItem({
   item,
+  itemId,
 }: IChecklistItemProps) {
 
   return (
     <div className={
       clsx(
-        'my-6 lg:my-12',
+        'my-1 lg:my-2',
       )
     }>
-      <ChecklistGroupTitle title={item.title} />
-      <ChecklistGroupDesc desc={item.desc} />
+      <ChecklistItemCheckbox item={item} itemId={itemId} />
 
       <ChecklistSpecialMsg
         status={item.status}

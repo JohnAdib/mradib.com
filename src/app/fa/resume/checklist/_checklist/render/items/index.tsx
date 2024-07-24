@@ -15,7 +15,7 @@ export function ChecklistItems({
   // foreach item, render item
   const GroupItems = items.map((item) => {
     const itemId = `${groupId}-${item.id}`;
-    return <ChecklistItem key={itemId} item={item} />;
+    return <ChecklistItem key={itemId} item={item} itemId={itemId} />;
   });
 
   return (
