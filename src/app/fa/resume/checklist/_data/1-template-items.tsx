@@ -72,13 +72,6 @@ const check8: IChecklistGroupItem = {
   reference: '/fa/resume/length',
 };
 
-const check9: IChecklistGroupItem = {
-  id: 9,
-  order: 9,
-  title: '',
-  desc: 'آیا سایر بخش‌های اختیاری در انتهای رزومه و بعد از بخش تحصیلات قرار گرفته؟',
-};
-
 export const resumeChecklistTemplateItems: IChecklistGroupItem[] = [
   check1,
   check2,

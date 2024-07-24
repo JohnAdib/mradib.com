@@ -5,8 +5,8 @@ import { separator } from '@/lib/constants/en';
 import { myNameFa } from '@/lib/constants/fa';
 import { readingTime } from '@/lib/reading-time';
 import { type Metadata } from 'next';
-import { resumeTodoList } from '../resume-todo-list';
 import { Checklist } from './_checklist';
+import { resumeChecklist } from './_data';
 import coverImg from './opengraph-image.jpg';
 
 const publishDate = '2024-07-22';
@@ -69,7 +69,7 @@ export default function Page() {
         lang='fa-IR'
       >
         <PageContent />
-        <Checklist list={resumeTodoList} />
+        <Checklist name="resume" list={resumeChecklist} />
       </ArticleLayout>
     </>
   );
