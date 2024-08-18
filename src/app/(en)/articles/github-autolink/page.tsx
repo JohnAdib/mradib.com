@@ -1,4 +1,3 @@
-import { ArticleLayout } from '@/components/article/layout';
 import { type Metadata } from 'next';
 
 interface IArticle {
@@ -46,14 +45,14 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <ArticleLayout
+      {/* <ArticleLayout
         title={article.title}
         intro={article.description}
         datePublished={article.date}
         lang='en-US'
       >
       The article
-      </ArticleLayout>
+      </ArticleLayout> */}
     </>
   );
 }
