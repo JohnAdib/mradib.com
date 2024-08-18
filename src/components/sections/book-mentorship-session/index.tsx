@@ -34,7 +34,7 @@ export function BookMentorshipSession({
         </SectionIntro>
 
         <div className={clsx(
-          'h-[700px]',
+          'h-[770px]',
           'w-full',
           'lg:max-w-screen-sm',
           'mx-auto',
