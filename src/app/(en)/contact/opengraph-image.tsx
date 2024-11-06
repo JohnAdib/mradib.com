@@ -1,11 +1,11 @@
-import { ImageResponse } from 'next/og';
+import { ImageResponse } from "next/og";
 
 // Route segment config
-export const runtime = 'edge';
+export const runtime = "edge";
 
 // Image metadata
-export const alt = 'Contact John Adib';
-export const contentType = 'image/png';
+export const alt = "Contact John Adib";
+export const contentType = "image/png";
 export const size = {
   width: 1200,
   height: 630,
@@ -15,7 +15,7 @@ export const size = {
 export default async function Image() {
   // Font
   const interSemiBold = fetch(
-    new URL('./Inter-SemiBold.ttf', import.meta.url),
+    new URL("./Inter-SemiBold.ttf", import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -24,12 +24,12 @@ export default async function Image() {
       <div
         style={{
           fontSize: 128,
-          background: 'white',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          background: "white",
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         Contact John Adib
@@ -42,9 +42,9 @@ export default async function Image() {
       ...size,
       fonts: [
         {
-          name: 'Inter',
+          name: "Inter",
           data: await interSemiBold,
-          style: 'normal',
+          style: "normal",
           weight: 400,
         },
       ],

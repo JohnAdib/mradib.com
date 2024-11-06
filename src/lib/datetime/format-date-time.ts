@@ -1,4 +1,4 @@
-import { LanguageLocale } from '../languages/locale';
+import { LanguageLocale } from "../languages/locale";
 
 interface IFormatDateTime {
   datetime: string;
@@ -7,13 +7,12 @@ interface IFormatDateTime {
 
 export function formatDateTime({
   datetime,
-  locale = 'en-US',
-}: IFormatDateTime,
-) {
+  locale = "en-US",
+}: IFormatDateTime) {
   return new Date(datetime).toLocaleDateString(locale, {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    timeZone: 'UTC',
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
   });
 }

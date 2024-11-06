@@ -1,4 +1,4 @@
-import { ChecklistItemStatusType } from './type-checklist-item-status';
+import { ChecklistItemStatusType } from "./type-checklist-item-status";
 
 export interface IChecklistGroupItem {
   id: number;

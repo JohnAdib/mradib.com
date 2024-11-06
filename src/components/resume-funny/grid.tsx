@@ -1,7 +1,7 @@
-import { featuredTestimonial, testimonials } from './tweets-data';
+import { featuredTestimonial, testimonials } from "./tweets-data";
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function TestimonialsGrid() {
@@ -15,7 +15,7 @@ export default function TestimonialsGrid() {
           className="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
           style={{
             clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
         />
       </div>
@@ -27,7 +27,7 @@ export default function TestimonialsGrid() {
           className="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]"
           style={{
             clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
         />
       </div>
@@ -37,10 +37,13 @@ export default function TestimonialsGrid() {
             Testimonials
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-9001 sm:text-4xl">
-              مردم درباره رزومه چی میگن؟
+            مردم درباره رزومه چی میگن؟
           </p>
         </div>
-        <div dir="ltr" className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+        <div
+          dir="ltr"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4"
+        >
           <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
             <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
               <p>{`“${featuredTestimonial.body}”`}</p>
@@ -52,26 +55,33 @@ export default function TestimonialsGrid() {
                 alt=""
               />
               <div className="flex-auto">
-                <div className="font-semibold">{featuredTestimonial.author.name}</div>
+                <div className="font-semibold">
+                  {featuredTestimonial.author.name}
+                </div>
                 <div className="text-gray-600">{`@${featuredTestimonial.author.handle}`}</div>
               </div>
-              <img className="h-10 w-auto flex-none" src={featuredTestimonial.author.logoUrl} alt="" />
+              <img
+                className="h-10 w-auto flex-none"
+                src={featuredTestimonial.author.logoUrl}
+                alt=""
+              />
             </figcaption>
           </figure>
           {testimonials.map((columnGroup, columnGroupIdx) => (
-            <div key={columnGroupIdx} className="space-y-8 xl:contents xl:space-y-0">
+            <div
+              key={columnGroupIdx}
+              className="space-y-8 xl:contents xl:space-y-0"
+            >
               {columnGroup.map((column, columnIdx) => (
                 <div
                   key={columnIdx}
                   className={classNames(
                     (columnGroupIdx === 0 && columnIdx === 0) ||
-                        (
-                          columnGroupIdx === testimonials.length - 1 &&
-                             columnIdx === columnGroup.length - 1
-                        )
-                      ? 'xl:row-span-2'
-                      : 'xl:row-start-1',
-                    'space-y-8',
+                      (columnGroupIdx === testimonials.length - 1 &&
+                        columnIdx === columnGroup.length - 1)
+                      ? "xl:row-span-2"
+                      : "xl:row-start-1",
+                    "space-y-8",
                   )}
                 >
                   {column.map((testimonial) => (
@@ -83,9 +93,15 @@ export default function TestimonialsGrid() {
                         <p>{`“${testimonial.body}”`}</p>
                       </blockquote>
                       <figcaption className="mt-6 flex items-center gap-x-4">
-                        <img className="h-10 w-10 rounded-full bg-gray-50" src={testimonial.author.imageUrl} alt="" />
+                        <img
+                          className="h-10 w-10 rounded-full bg-gray-50"
+                          src={testimonial.author.imageUrl}
+                          alt=""
+                        />
                         <div>
-                          <div className="font-semibold">{testimonial.author.name}</div>
+                          <div className="font-semibold">
+                            {testimonial.author.name}
+                          </div>
                           <div className="text-gray-600">{`@${testimonial.author.handle}`}</div>
                         </div>
                       </figcaption>

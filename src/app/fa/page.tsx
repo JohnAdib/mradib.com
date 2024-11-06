@@ -1,5 +1,5 @@
-import { Container } from '@/components/container';
-import { CtaOnDarkPanel } from '@/components/cta-on-dark-panel/cta-on-dark-panel';
+import { Container } from "@/components/container";
+import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel";
 
 export default function Home() {
   return (

@@ -5,12 +5,12 @@
 // const assetPrefix = isProd ? productionUrl : undefined;
 
 const nextConfig = {
-  output: 'export',
+  output: "export",
   // assetPrefix: assetPrefix,
   images: {
     unoptimized: true,
   },
-  pageExtensions: ['ts', 'tsx'],
+  pageExtensions: ["ts", "tsx"],
   eslint: {
     ignoreDuringBuilds: true,
   },

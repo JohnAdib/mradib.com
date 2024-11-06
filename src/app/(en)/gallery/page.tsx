@@ -1,12 +1,12 @@
-import { type Metadata } from 'next';
+import { type Metadata } from "next";
 
-import { ContainerOuter } from '@/components/container';
-import { CtaWithTile } from '@/components/cta-with-tile/cta-with-tile';
-import { SimpleLayout } from '@/components/simple-layout';
+import { ContainerOuter } from "@/components/container";
+import { CtaWithTile } from "@/components/cta-with-tile/cta-with-tile";
+import { SimpleLayout } from "@/components/simple-layout";
 
 export const metadata: Metadata = {
-  title: 'Gallery',
-  description: 'Photography by MrAdib.',
+  title: "Gallery",
+  description: "Photography by MrAdib.",
 };
 
 export default function Page() {

@@ -1,6 +1,5 @@
-import Link from 'next/link';
+import Link from "next/link";
 
- 
 export function CtaWithTile() {
   return (
     <div className="overflow-hidden py-32">
@@ -8,31 +7,26 @@ export function CtaWithTile() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                MrAdib Gallery
+              MrAdib Gallery
             </h1>
             <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-400">
-              Welcome to my photo gallery,
-              where I capture the essence of humanity.
-              Each image tells a unique story,
-              showcasing the diverse and beautiful faces of people
-              I encounter on the streets.
+              Welcome to my photo gallery, where I capture the essence of
+              humanity. Each image tells a unique story, showcasing the diverse
+              and beautiful faces of people I encounter on the streets.
             </p>
             <p className="mt-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
-              In addition to portraits,
-              my gallery features a collection of
-              landscapes, cityscapes, flowers, and animals,
-              all captured with the same attention to detail
-              and love for the subject.
-              These images offer a glimpse into the world as I see it,
-              full of vibrant colors, breathtaking scenes,
-              and moments of quiet beauty.
+              In addition to portraits, my gallery features a collection of
+              landscapes, cityscapes, flowers, and animals, all captured with
+              the same attention to detail and love for the subject. These
+              images offer a glimpse into the world as I see it, full of vibrant
+              colors, breathtaking scenes, and moments of quiet beauty.
             </p>
             <div className="mt-10 flex">
               <Link
                 href="/gallery/tools"
                 className="rounded-md bg-sky-700 dark:bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
               >
-                  Photography tools <span aria-hidden="true">&rarr;</span>
+                Photography tools <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { ChevronRightIcon } from '@heroicons/react/20/solid';
-import Image from 'next/image';
-import Link from 'next/link';
-import imgInstagramPageScreenshot from './instagram-page-screenshot.jpg';
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import Link from "next/link";
+import imgInstagramPageScreenshot from "./instagram-page-screenshot.jpg";
 
 export function HeroWithPhone() {
   return (
@@ -24,42 +24,57 @@ export function HeroWithPhone() {
             <path d="M100 200V.5M.5 .5H200" fill="none" />
           </pattern>
         </defs>
-        <svg x="50%" y={-1} className="overflow-visible fill-gray-50 dark:fill-gray-800">
+        <svg
+          x="50%"
+          y={-1}
+          className="overflow-visible fill-gray-50 dark:fill-gray-800"
+        >
           <path
             d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
             strokeWidth={0}
           />
         </svg>
-        <rect width="100%" height="100%" strokeWidth={0} fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+        <rect
+          width="100%"
+          height="100%"
+          strokeWidth={0}
+          fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
+        />
       </svg>
       <div className="mx-auto py-12 sm:py-16 lg:flex lg:items-center lg:gap-x-10 lg:py-20">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <div className="flex select-none">
             <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm transition leading-6 text-stone-600 dark:text-stone-300 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
-              <span className="font-semibold text-sky-700 dark:text-sky-300">Follow me on</span>
+              <span className="font-semibold text-sky-700 dark:text-sky-300">
+                Follow me on
+              </span>
               <span className="h-4 w-px bg-stone-900/10" aria-hidden="true" />
-              <Link href="https://mradib.com/instagram" className="flex items-center gap-x-1" target='_blank'>
+              <Link
+                href="https://mradib.com/instagram"
+                className="flex items-center gap-x-1"
+                target="_blank"
+              >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Instagram
-                <ChevronRightIcon className="-mr-2 h-5 w-5 text-gray-400" aria-hidden="true" />
+                <ChevronRightIcon
+                  className="-mr-2 h-5 w-5 text-gray-400"
+                  aria-hidden="true"
+                />
               </Link>
             </div>
           </div>
           <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight sm:text-6xl">
-              Smile is Gold
+            Smile is Gold
           </h1>
           <p className="mt-6 text-sm md:text-base leading-7 text-zinc-600 dark:text-zinc-400">
-            In the bustling streets of London,
-            I find beauty in the everyday faces of strangers.
-            Through my lens,
-            I capture candid portraits that reveal the genuine emotions
-            and unique stories of the people I meet.
+            In the bustling streets of London, I find beauty in the everyday
+            faces of strangers. Through my lens, I capture candid portraits that
+            reveal the genuine emotions and unique stories of the people I meet.
           </p>
           <p className="mt-2 text-sm md:text-base leading-7 text-zinc-600 dark:text-zinc-400">
-            I take a photo, print it on the spot, and gift it to them,
-            recording their heartfelt reactions.
-            These golden moments are then crafted into 1 minute videos,
-            celebrating the spontaneous joy and connection
+            I take a photo, print it on the spot, and gift it to them, recording
+            their heartfelt reactions. These golden moments are then crafted
+            into 1 minute videos, celebrating the spontaneous joy and connection
             that a simple portrait can bring.
           </p>
           <div className="mt-10 flex items-center gap-x-6 select-none">
@@ -67,15 +82,22 @@ export function HeroWithPhone() {
               href="/gallery"
               className="rounded-md bg-sky-700 dark:bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-                Visit my Gallery
+              Visit my Gallery
             </Link>
-            <Link href="/gallery/tools" className="text-sm font-semibold leading-6 text-stone-700 dark:text-stone-300 transition hover:opacity-90">
+            <Link
+              href="/gallery/tools"
+              className="text-sm font-semibold leading-6 text-stone-700 dark:text-stone-300 transition hover:opacity-90"
+            >
               Photography Tools <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow select-none">
-          <svg viewBox="0 0 366 729" role="img" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
+          <svg
+            viewBox="0 0 366 729"
+            role="img"
+            className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+          >
             <title>MrAdib Portfolio</title>
             <defs>
               <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
@@ -96,7 +118,10 @@ export function HeroWithPhone() {
               transform="translate(24 24)"
               clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
             >
-              <Image src={imgInstagramPageScreenshot} alt="Smile Is Gold Instagram page" />
+              <Image
+                src={imgInstagramPageScreenshot}
+                alt="Smile Is Gold Instagram page"
+              />
             </foreignObject>
           </svg>
         </div>

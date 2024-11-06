@@ -1,23 +1,20 @@
-import { FAQPage, WithContext } from 'schema-dts';
-import { IFaqQA } from './faq-interface';
+import { FAQPage, WithContext } from "schema-dts";
+import { IFaqQA } from "./faq-interface";
 
 interface FAQProps {
   faqData: IFaqQA[];
 }
 
-export const FaqJsonLD: React.FC<FAQProps> = ({
-  faqData
-}: FAQProps
-) => {
+export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }: FAQProps) => {
   const jsonLd: WithContext<FAQPage> = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    name: 'سوالات متداول',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    name: "سوالات متداول",
     mainEntity: faqData.map(({ q, a }) => ({
-      '@type': 'Question',
+      "@type": "Question",
       name: q,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: a,
       },
     })),

@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import Link from 'next/link';
+import Link from "next/link";
 
 export function HeroWithTile() {
-
   return (
     <section className="relative isolate">
       <svg
@@ -21,13 +20,22 @@ export function HeroWithTile() {
             <path d="M.5 200V.5H200" fill="none" />
           </pattern>
         </defs>
-        <svg x="50%" y={-1} className="overflow-visible fill-gray-50 dark:fill-gray-900">
+        <svg
+          x="50%"
+          y={-1}
+          className="overflow-visible fill-gray-50 dark:fill-gray-900"
+        >
           <path
             d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
             strokeWidth={0}
           />
         </svg>
-        <rect width="100%" height="100%" strokeWidth={0} fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
+        <rect
+          width="100%"
+          height="100%"
+          strokeWidth={0}
+          fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
+        />
       </svg>
       <div
         className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
@@ -37,7 +45,7 @@ export function HeroWithTile() {
           className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
           style={{
             clipPath:
-                  'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
+              "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
           }}
         />
       </div>
@@ -46,30 +54,31 @@ export function HeroWithTile() {
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full max-w-md lg:shrink-0 xl:max-w-xl">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                    The Beauty of Every Smile
+                The Beauty of Every Smile
               </h1>
               <p className="mt-6 text-sm md:text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:max-w-md lg:max-w-none">
-                    People are wonderfully unique,
-                    each with their own story to tell.
-                    My passion lies in capturing these stories
-                    through portrait photography.
-                    There's a special magic in those spontaneous moments
-                    when a genuine smile appears,
-                    reflecting the true essence of a person.
+                People are wonderfully unique, each with their own story to
+                tell. My passion lies in capturing these stories through
+                portrait photography. There's a special magic in those
+                spontaneous moments when a genuine smile appears, reflecting the
+                true essence of a person.
               </p>
-              <p className='mt-2 text-sm md:text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:max-w-md lg:max-w-none'>
-                    Each portrait is a celebration of individuality and beauty,
-                    showcasing the diverse faces that make our world so vibrant.
+              <p className="mt-2 text-sm md:text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:max-w-md lg:max-w-none">
+                Each portrait is a celebration of individuality and beauty,
+                showcasing the diverse faces that make our world so vibrant.
               </p>
               <div className="mt-10 flex items-center gap-x-6 select-none">
                 <Link
                   href="/gallery"
                   className="rounded-md bg-sky-700 dark:bg-sky-600 tranisiton px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
                 >
-                      MrAdib Gallery
+                  MrAdib Gallery
                 </Link>
-                <Link href="/gallery/tools" className="text-sm font-semibold leading-6 tranisiton text-stone-700 dark:text-stone-300">
-                      Photography tools <span aria-hidden="true">→</span>
+                <Link
+                  href="/gallery/tools"
+                  className="text-sm font-semibold leading-6 tranisiton text-stone-700 dark:text-stone-300"
+                >
+                  Photography tools <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
@@ -125,6 +134,5 @@ export function HeroWithTile() {
         </div>
       </div>
     </section>
-
   );
 }

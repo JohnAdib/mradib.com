@@ -1,7 +1,7 @@
-import React from 'react';
-import { IChecklistGroupItem } from './i-checklist-group-item';
-import { ChecklistGroupType } from './type-checklist-groups';
-import { ChecklistItemStatusType } from './type-checklist-item-status';
+import React from "react";
+import { IChecklistGroupItem } from "./i-checklist-group-item";
+import { ChecklistGroupType } from "./type-checklist-groups";
+import { ChecklistItemStatusType } from "./type-checklist-item-status";
 
 export interface IChecklistGroup {
   id: string;
