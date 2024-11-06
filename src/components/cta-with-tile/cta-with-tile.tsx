@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-/* eslint-disable react/no-unescaped-entities */
+ 
 export function CtaWithTile() {
   return (
     <div className="overflow-hidden py-32">

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+ 
 
 import { ArticleLayout } from '@/components/article/layout';
 import { separator } from '@/lib/constants/en';
