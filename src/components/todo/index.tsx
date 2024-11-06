@@ -57,9 +57,9 @@ export function Todo({ list }: { list: ITodo[] }) {
   const isSomeChecked = taskList.some((task) => task.completed);
 
   const listStatusType: ITodoStatus =
-      isAllCompleted ? 'completed' :
-        isSomeChecked ? 'inProgress' :
-          'notStarted';
+    isAllCompleted ? 'completed' :
+      isSomeChecked ? 'inProgress' :
+        'notStarted';
 
   const totalTasks = taskList.length;
   const completedTasks = taskList.filter((task) => task.completed).length;

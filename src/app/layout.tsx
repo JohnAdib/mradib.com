@@ -15,6 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    /* eslint-disable react/no-unknown-property */
     <html
       prefix="og:http://ogp.me/ns#"
       dir="ltr"
@@ -32,7 +33,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
-        <GoogleAnalytics gaId="G-0T9SVDBER6"/>
+        <GoogleAnalytics gaId="G-0T9SVDBER6" />
       </body>
     </html>
   );

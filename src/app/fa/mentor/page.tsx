@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+ 
 import { BookMentorshipSession } from '@/components/sections/book-mentorship-session';
 import { FeatureWithFullWidthImage } from '@/components/sections/feature-with-full-width-image';
 import { CommandLineIcon, DocumentCheckIcon, GlobeEuropeAfricaIcon } from '@heroicons/react/20/solid';

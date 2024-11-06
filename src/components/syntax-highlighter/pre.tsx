@@ -1,5 +1,5 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
-// eslint-disable-next-line @typescript-eslint/no-restricted-imports
+ 
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 type HighlightLanguageType =

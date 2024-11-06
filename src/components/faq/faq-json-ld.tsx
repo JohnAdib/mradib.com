@@ -5,7 +5,10 @@ interface FAQProps {
   faqData: IFaqQA[];
 }
 
-export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }) => {
+export const FaqJsonLD: React.FC<FAQProps> = ({
+  faqData
+}: FAQProps
+) => {
   const jsonLd: WithContext<FAQPage> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

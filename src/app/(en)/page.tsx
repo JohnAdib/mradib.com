@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+ 
 import { Container, ContainerOuter } from '@/components/container';
 import { HeroWithTile } from '@/components/hero-with-tile/hero-with-tile';
 import { SocialMediaLinks } from '@/components/social-media-links';
@@ -11,7 +11,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2'];
+  const rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2'];
 
   return (
     <div className="mt-16 sm:mt-20 select-none">

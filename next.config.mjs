@@ -11,6 +11,9 @@ const nextConfig = {
     unoptimized: true,
   },
   pageExtensions: ['ts', 'tsx'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

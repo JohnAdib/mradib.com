@@ -31,8 +31,8 @@ export function ArticleLayout({
   lang,
   children,
 }: IArticleLayout) {
-  let router = useRouter();
-  let { previousPathname } = useContext(AppContext);
+  const router = useRouter();
+  const { previousPathname } = useContext(AppContext);
 
   return (
     <Container className="mt-8 md:mt-12 lg:mt-16">
