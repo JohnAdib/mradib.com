@@ -6,8 +6,8 @@
     "build": "next build",
     "check-types": "tsc --noEmit --pretty",
     "dev": "next dev",
-    "lint": "eslint . --ext .json,.js,.ts,.tsx",
-    "lint:fix": "eslint . --ext .json,.js,.ts,.tsx --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "next start",
     "start:local": "npx serve@latest out"
   },
@@ -28,19 +28,17 @@
     "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
     "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/webpack-env": "^1.18.5",
-    "@typescript-eslint/eslint-plugin": "^7.15.0",
-    "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-typescript": "^18.0.0",
-    "eslint-config-next": "^14.2.3",
-    "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-unicorn": "^56.0.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
     "sharp": "0.33.4",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0"
   }
 }
