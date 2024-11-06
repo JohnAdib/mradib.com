@@ -1,5 +1,5 @@
 import pluginJs from "@eslint/js";
-import prettierConfigRecommended from "eslint-plugin-prettier/recommended";
+// import prettierConfigRecommended from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -12,5 +12,5 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  prettierConfigRecommended,
+  // prettierConfigRecommended,
 ];
