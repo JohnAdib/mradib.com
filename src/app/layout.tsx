@@ -15,6 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    /* eslint-disable react/no-unknown-property */
     <html
       prefix="og:http://ogp.me/ns#"
       dir="ltr"

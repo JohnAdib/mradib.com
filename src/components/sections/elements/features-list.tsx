@@ -2,6 +2,7 @@ export interface ISectionFeature {
   name: string;
   description: string;
   href?: string;
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   icon: any;
 }
 

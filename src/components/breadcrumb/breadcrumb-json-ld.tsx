@@ -2,7 +2,10 @@ import { homepageUrl } from '@/lib/constants/url';
 import { BreadcrumbList, WithContext } from 'schema-dts';
 import { IBreadcrumb } from './interface';
 
-export const BreadcrumbJsonLD: React.FC<IBreadcrumb> = ({ list }) => {
+export const BreadcrumbJsonLD: React.FC<IBreadcrumb> = ({
+  list
+}: IBreadcrumb
+) => {
   if (!list) {
     return null;
   }

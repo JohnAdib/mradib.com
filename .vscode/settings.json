@@ -63,7 +63,7 @@
     },
     "[javascript]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "[yamlgithubactionsworkflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml",
@@ -79,5 +79,8 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 }
