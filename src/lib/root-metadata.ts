@@ -1,20 +1,25 @@
-import { Metadata } from 'next';
-import { defaultDescription, defaultTitle, myName, myTitle } from './constants/en';
-import { homepageUrl, siteUrl } from './constants/url';
+import { Metadata } from "next";
+import {
+  defaultDescription,
+  defaultTitle,
+  myName,
+  myTitle,
+} from "./constants/en";
+import { homepageUrl, siteUrl } from "./constants/url";
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     // template: '%s | ' + myName,
-    template: '%s',
+    template: "%s",
     default: defaultTitle,
   },
   description: defaultDescription,
   // TODO: Add manifest.json
   //   manifest: siteUrl + '/manifest.json',
   generator: myTitle,
-  category: 'blog',
-  applicationName: myTitle + ' Blog',
+  category: "blog",
+  applicationName: myTitle + " Blog",
   authors: [
     {
       name: myName,
@@ -28,7 +33,7 @@ export const rootMetadata: Metadata = {
     telephone: false,
   },
   twitter: {
-    creator: '@MrAdib',
+    creator: "@MrAdib",
   },
   //   verification: {
   //     google: 'google-site-verification',

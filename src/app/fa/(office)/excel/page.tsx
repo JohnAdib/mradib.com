@@ -1,10 +1,10 @@
-import { type Metadata } from 'next';
+import { type Metadata } from "next";
 
-import { SimpleLayout } from '@/components/simple-layout';
+import { SimpleLayout } from "@/components/simple-layout";
 
 export const metadata: Metadata = {
-  title: 'اکسل',
-  description: 'آموزش رایگان اکسل بزودی در این صفحه قرار خواهد گرفت.',
+  title: "اکسل",
+  description: "آموزش رایگان اکسل بزودی در این صفحه قرار خواهد گرفت.",
 };
 
 export default function MyPage() {

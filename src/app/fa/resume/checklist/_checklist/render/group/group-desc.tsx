@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 interface IChecklistGroupDescProps {
   desc: string | React.ReactNode;
@@ -6,18 +6,10 @@ interface IChecklistGroupDescProps {
 
 export function ChecklistGroupDesc({
   desc,
-}: IChecklistGroupDescProps,
-): JSX.Element | null {
+}: IChecklistGroupDescProps): JSX.Element | null {
   if (!desc) {
     return null;
   }
 
-  return (
-    <p className={clsx(
-      'mt-4',
-    )}
-    >
-      {desc}
-    </p>
-  );
+  return <p className={clsx("mt-4")}>{desc}</p>;
 }

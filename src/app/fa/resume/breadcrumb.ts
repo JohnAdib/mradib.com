@@ -1,16 +1,16 @@
-import { IBreadcrumbItem } from '@/components/breadcrumb/interface';
+import { IBreadcrumbItem } from "@/components/breadcrumb/interface";
 
 export const breadcrumb: IBreadcrumbItem[] = [
   {
     position: 1,
-    item: '/fa',
+    item: "/fa",
     current: false,
-    name: 'فارسی',
+    name: "فارسی",
   },
   {
     position: 2,
     current: false,
-    item: '/fa/resume',
-    name: 'رزومه',
+    item: "/fa/resume",
+    name: "رزومه",
   },
 ];

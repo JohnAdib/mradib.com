@@ -1,3 +1,1 @@
-export type LanguageLocale =
-| 'en-US'
-| 'fa-IR';
+export type LanguageLocale = "en-US" | "fa-IR";

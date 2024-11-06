@@ -1,4 +1,4 @@
-import { type Metadata } from 'next';
+import { type Metadata } from "next";
 
 interface IArticle {
   author: string;
@@ -15,27 +15,25 @@ interface IArticle {
 }
 
 export const article: IArticle = {
-  author: 'John Adib',
-  publishDate: '2024-07-12',
-  publishTime: '14:28:00',
-  datePublished: '',
-  dateModified: '',
-  title: 'GitHub Autolink',
+  author: "John Adib",
+  publishDate: "2024-07-12",
+  publishTime: "14:28:00",
+  datePublished: "",
+  dateModified: "",
+  title: "GitHub Autolink",
   description:
-    'Automatically linkify references to GitHub issues, PRs, commits, and users.',
-  pageTitle: 'GitHub Autolink',
+    "Automatically linkify references to GitHub issues, PRs, commits, and users.",
+  pageTitle: "GitHub Autolink",
   pageDesc:
-    'Automatically linkify references to GitHub issues, PRs, commits, and users.',
-  pagePath: '/en/articles/github-autolink',
-  keywords: [
-    'GitHub',
-    'autolink',
-  ],
+    "Automatically linkify references to GitHub issues, PRs, commits, and users.",
+  pagePath: "/en/articles/github-autolink",
+  keywords: ["GitHub", "autolink"],
 };
 
 // set publish date and time
-article.datePublished = article.publishDate + 'T' + article.publishTime + '.000Z';
-article.dateModified = '2024-05-12' + 'T' + '19:04:00' + '.000Z';
+article.datePublished =
+  article.publishDate + "T" + article.publishTime + ".000Z";
+article.dateModified = "2024-05-12" + "T" + "19:04:00" + ".000Z";
 
 export const metadata: Metadata = {
   title: article.title,

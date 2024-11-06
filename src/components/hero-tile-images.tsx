@@ -6,7 +6,6 @@
 // ];
 
 export default function HeroTileImages() {
-
   return (
     <div className="relative isolate">
       <svg
@@ -31,7 +30,12 @@ export default function HeroTileImages() {
             strokeWidth={0}
           />
         </svg>
-        <rect width="100%" height="100%" strokeWidth={0} fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
+        <rect
+          width="100%"
+          height="100%"
+          strokeWidth={0}
+          fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
+        />
       </svg>
       <div
         className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
@@ -41,7 +45,7 @@ export default function HeroTileImages() {
           className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
           style={{
             clipPath:
-                  'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
+              "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
           }}
         />
       </div>
@@ -50,24 +54,23 @@ export default function HeroTileImages() {
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl opacity-90">
-                    We’re changing the way people connect.
+                We’re changing the way people connect.
               </h1>
               <p className="mt-6 text-lg leading-8  sm:max-w-md lg:max-w-none opacity-60">
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit
-                    in quis cupidatat mollit aute velit. Et
-                    labore commodo nulla aliqua proident mollit ullamco
-                     exercitation tempor. Sint aliqua anim nulla sunt
-                    mollit id pariatur in voluptate cillum.
+                Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis
+                cupidatat mollit aute velit. Et labore commodo nulla aliqua
+                proident mollit ullamco exercitation tempor. Sint aliqua anim
+                nulla sunt mollit id pariatur in voluptate cillum.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
                   href="#"
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                      Get started
+                  Get started
                 </a>
                 <a href="#" className="text-sm font-semibold leading-6">
-                      Live demo <span aria-hidden="true">→</span>
+                  Live demo <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -123,6 +126,5 @@ export default function HeroTileImages() {
         </div>
       </div>
     </div>
-
   );
 }

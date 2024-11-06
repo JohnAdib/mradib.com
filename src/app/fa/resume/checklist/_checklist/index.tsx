@@ -1,12 +1,9 @@
-'use client';
+"use client";
 
-import { RenderChecklist } from './render';
-import { IChecklistRenderProps } from './render/i-checklist-render';
+import { RenderChecklist } from "./render";
+import { IChecklistRenderProps } from "./render/i-checklist-render";
 
-export function Checklist({
-  id,
-  list,
-}: IChecklistRenderProps) {
+export function Checklist({ id, list }: IChecklistRenderProps) {
   if (!id) {
     return null;
   }

@@ -1,8 +1,8 @@
-import { ChevronLeftIcon, HomeIcon } from '@heroicons/react/20/solid';
-import clsx from 'clsx';
-import Link from 'next/link';
-import { BreadcrumbJsonLD } from './breadcrumb-json-ld';
-import { IBreadcrumb } from './interface';
+import { ChevronLeftIcon, HomeIcon } from "@heroicons/react/20/solid";
+import clsx from "clsx";
+import Link from "next/link";
+import { BreadcrumbJsonLD } from "./breadcrumb-json-ld";
+import { IBreadcrumb } from "./interface";
 
 export function Breadcrumb({ list }: IBreadcrumb) {
   if (!list) {
@@ -17,9 +17,9 @@ export function Breadcrumb({ list }: IBreadcrumb) {
             <Link
               href="/"
               className={clsx(
-                'transition',
-                'text-slate-400 hover:text-slate-500',
-                'dark:text-slate-300 hover:text-slate-400',
+                "transition",
+                "text-slate-400 hover:text-slate-500",
+                "dark:text-slate-300 hover:text-slate-400",
               )}
             >
               <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
@@ -30,17 +30,20 @@ export function Breadcrumb({ list }: IBreadcrumb) {
         {list?.map((page) => (
           <li key={page.name}>
             <div className="flex items-center gap-2 md:gap-4">
-              <ChevronLeftIcon className="h-5 w-5 flex-shrink-0 text-slate-400" aria-hidden="true" />
+              <ChevronLeftIcon
+                className="h-5 w-5 flex-shrink-0 text-slate-400"
+                aria-hidden="true"
+              />
               <Link
                 href={page.item}
                 className={clsx(
-                  'text-xs md:text-sm',
-                  'leading-8',
-                  'font-medium',
-                  'text-slate-500 hover:text-slate-700',
-                  'dark:text-slate-300 dark:hover:text-slate-500',
+                  "text-xs md:text-sm",
+                  "leading-8",
+                  "font-medium",
+                  "text-slate-500 hover:text-slate-700",
+                  "dark:text-slate-300 dark:hover:text-slate-500",
                 )}
-                aria-current={page.current ? 'page' : undefined}
+                aria-current={page.current ? "page" : undefined}
               >
                 {page.name}
               </Link>

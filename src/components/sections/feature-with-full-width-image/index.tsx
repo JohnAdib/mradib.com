@@ -1,17 +1,20 @@
-import { Container } from '@/components/container';
-import { StaticImageData } from 'next/image';
-import { ISectionFeature, SectionFeaturesList } from '../elements/features-list';
-import { SectionImageFullWidth } from '../elements/image-full-width';
-import { SectionIntro } from '../elements/intro';
-import { SectionSubTitle } from '../elements/sub-title';
-import { SectionTitle } from '../elements/title';
+import { Container } from "@/components/container";
+import { StaticImageData } from "next/image";
+import {
+  ISectionFeature,
+  SectionFeaturesList,
+} from "../elements/features-list";
+import { SectionImageFullWidth } from "../elements/image-full-width";
+import { SectionIntro } from "../elements/intro";
+import { SectionSubTitle } from "../elements/sub-title";
+import { SectionTitle } from "../elements/title";
 
 interface IFeatureWithFullWidthImage {
   subTitle: string;
   title: string;
   children?: React.ReactNode;
   image?: StaticImageData;
-  features?:ISectionFeature[];
+  features?: ISectionFeature[];
 }
 
 export function FeatureWithFullWidthImage({

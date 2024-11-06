@@ -1,6 +1,6 @@
-import { homepageUrl } from '@/lib/constants/url';
-import { StaticImageData } from 'next/image';
-import { Article, WithContext } from 'schema-dts';
+import { homepageUrl } from "@/lib/constants/url";
+import { StaticImageData } from "next/image";
+import { Article, WithContext } from "schema-dts";
 
 interface IArticleJSONLD {
   headline: string;
@@ -27,9 +27,9 @@ export function ArticleJsonLD({
   const articleUrl = homepageUrl + urlPath;
 
   const jsonLd: WithContext<Article> = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    '@id': articleUrl + '#article',
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": articleUrl + "#article",
     mainEntityOfPage: articleUrl,
     headline: headline,
     name: name,
@@ -39,22 +39,21 @@ export function ArticleJsonLD({
     dateModified: dateModified ?? datePublished,
     author: [
       {
-        '@type': 'Person',
-        name: 'جان ادیب',
-        additionalName: 'مستر ادیب',
-        alternateName: 'جواد ادیب',
-        familyName: 'ادیب',
-        disambiguatingDescription: 'جواد عوض زاده سابق',
-        jobTitle: 'Senior Software Engineer',
-        url: 'https://mradib.com/about',
+        "@type": "Person",
+        name: "جان ادیب",
+        additionalName: "مستر ادیب",
+        alternateName: "جواد ادیب",
+        familyName: "ادیب",
+        disambiguatingDescription: "جواد عوض زاده سابق",
+        jobTitle: "Senior Software Engineer",
+        url: "https://mradib.com/about",
       },
     ],
-    publisher:
-    {
-      '@type': 'Person',
-      name: 'MrAdib',
-      alternateName: 'مستر ادیب',
-      url: 'https://mradib.com',
+    publisher: {
+      "@type": "Person",
+      name: "MrAdib",
+      alternateName: "مستر ادیب",
+      url: "https://mradib.com",
     },
     url: articleUrl,
     keywords: keywords,

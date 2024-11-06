@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 function calculateReadingMin(text: string) {
   const wordsPerMinute = 200;
@@ -8,13 +8,13 @@ function calculateReadingMin(text: string) {
 
 // Function to extract text content from JSX element
 function extractTextFromElement(element: ReactNode): string {
-  if (typeof element === 'string') {
+  if (typeof element === "string") {
     // If the element is a string, return it
     return element;
   } else if (Array.isArray(element)) {
     // If the element is an array of JSX elements, concatenate their text content
-    return element.map(extractTextFromElement).join('');
-  } else if (element && typeof element === 'object' && 'props' in element) {
+    return element.map(extractTextFromElement).join("");
+  } else if (element && typeof element === "object" && "props" in element) {
     // If the element is a React component, recursively extract text from its children
     const { children } = element.props;
     if (children) {
@@ -22,7 +22,7 @@ function extractTextFromElement(element: ReactNode): string {
     }
   }
   // Default case: return an empty string
-  return '';
+  return "";
 }
 
 export function readingTime(element: ReactNode): number | undefined {
