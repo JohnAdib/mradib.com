@@ -15,4 +15,11 @@ export const sitemapListFa: SitemapType = [
     changeFrequency: "daily",
     priority: 1,
   },
+  // articles
+  {
+    url: siteUrl + "github-autolink",
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  },
 ];
