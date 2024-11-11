@@ -5,7 +5,7 @@ import { ChecklistItems } from "./items";
 
 export function RenderChecklist({ id, list }: IChecklistRenderProps) {
   const uniqueId = `ls-${id}`;
-  console.debug("list", list);
+  // console.debug("list", list);
 
   if (!list) {
     return null;
