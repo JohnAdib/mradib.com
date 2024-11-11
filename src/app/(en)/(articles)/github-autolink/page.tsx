@@ -1,3 +1,4 @@
+import { ArticleSection } from "@/components/article/article-section";
 import { ArticleLayout } from "@/components/article/layout";
 import { type Metadata } from "next";
 import Image from "next/image";
@@ -79,45 +80,42 @@ function Intro() {
 
 function Problem() {
   return (
-    <section id="problem">
-      <h2>What’s the Problem?</h2>
-      <h3>
-        The Pain of Manual Linking Between GitHub and JIRA, Asana, Zendesk…
-      </h3>
-      <p>
-        In development teams, linking GitHub issues and commits to external
-        project management tools like JIRA, Asana, or Zendesk is crucial for
-        staying organized. But doing it manually every time is cumbersome and
-        time-consuming. Imagine if typing &quot;JIRA-123&quot; or
-        &quot;TASK-456&quot; in GitHub could automatically generate a link to
-        the corresponding task or issue in your project management tool—that’s
-        what GitHub Autolink References can do!
-      </p>
-    </section>
+    <ArticleSection
+      heading="Problem"
+      title="The Pain of Manual Linking Between GitHub and JIRA"
+    >
+      In development teams, linking GitHub issues and commits to external
+      project management tools like JIRA, Asana, or Zendesk is crucial for
+      staying organized. But doing it manually every time is cumbersome and
+      time-consuming. Imagine if typing &quot;JIRA-123&quot; or
+      &quot;TASK-456&quot; in GitHub could automatically generate a link to the
+      corresponding task or issue in your project management tool—that’s what
+      GitHub Autolink References can do!
+    </ArticleSection>
   );
 }
 
 function Solution() {
   return (
-    <section id="solution">
-      <h2>The Solution</h2>
-      <h3>Automatically Link GitHub Issues with Autolink References</h3>
-      <p>
-        GitHub’s Autolink References feature allows you to set up automatic
-        links to external resources, so every time you reference an issue, task,
-        or ticket in GitHub, it’s converted into a clickable link. Whether
-        you’re linking to JIRA issues, Asana tasks, or other platforms, this
-        setup will help you streamline your workflow.
-      </p>
-    </section>
+    <ArticleSection
+      heading="Solution"
+      title="Automatically Link GitHub Issues with Autolink References"
+    >
+      GitHub’s Autolink References feature allows you to set up automatic links
+      to external resources, so every time you reference an issue, task, or
+      ticket in GitHub, it’s converted into a clickable link. Whether you’re
+      linking to JIRA issues, Asana tasks, or other platforms, this setup will
+      help you streamline your workflow.
+    </ArticleSection>
   );
 }
 
 function Why() {
   return (
-    <section id="why">
-      <h2>Why?</h2>
-      <h3>Using GitHub Autolink References comes with several benefits</h3>
+    <ArticleSection
+      heading="Why"
+      title="Using GitHub Autolink References comes with several benefits"
+    >
       <ul>
         <li>
           <b>Increased Efficiency</b> No more copy-pasting URLs manually.
@@ -131,15 +129,17 @@ function Why() {
           team.
         </li>
       </ul>
-    </section>
+    </ArticleSection>
   );
 }
 
 function Requirements() {
   return (
-    <section id="requirements">
-      <h2>Requirements</h2>
-      <p>Before we start, here’s what you’ll need</p>
+    <ArticleSection
+      heading="Requirements"
+      title="Before we start, here’s what you’ll need"
+    >
+      <p></p>
       <ol>
         <li>
           <b>GitHub Admin Access</b> for your repository.
@@ -152,15 +152,16 @@ function Requirements() {
           <code>https://jira.example.com/browse/</code>.
         </li>
       </ol>
-    </section>
+    </ArticleSection>
   );
 }
 
 function StepByStep() {
   return (
-    <section id="step-by-step">
-      <h2>Step-by-Step Guide</h2>
-      <h3>How to Set Up Autolink References in GitHub</h3>
+    <ArticleSection
+      heading="Step-by-Step"
+      title="How to Set Up Autolink References in GitHub"
+    >
       <p>Follow these simple steps to configure GitHub autolinks</p>
 
       <h4>Step 1: Open Repository Settings</h4>
@@ -236,15 +237,16 @@ function StepByStep() {
         “JIRA-123,” and see how GitHub automatically converts it into a
         clickable link.
       </p>
-    </section>
+    </ArticleSection>
   );
 }
 
 function Troubleshooting() {
   return (
-    <section id="troubleshooting">
-      <h2>Troubleshooting</h2>
-      <h3>Tips for GitHub Autolink References</h3>
+    <ArticleSection
+      heading="Troubleshooting"
+      title="Tips for GitHub Autolink References"
+    >
       <ol>
         <li>
           <b>Ensure Unique Prefixes</b> Avoid overlap with other prefixes.
@@ -257,15 +259,16 @@ function Troubleshooting() {
           <code>https://jira.example.com/browse/</code>.
         </li>
       </ol>
-    </section>
+    </ArticleSection>
   );
 }
 
 function Conclusion() {
   return (
-    <section id="conclusion">
-      <h2>Conclusion</h2>
-      <h3>How GitHub Autolink References Enhance Collaboration</h3>
+    <ArticleSection
+      heading="Conclusion"
+      title="How GitHub Autolink References Enhance Collaboration"
+    >
       <p>
         GitHub Autolink References are a must-have for teams using multiple
         tools. By configuring them, you’re not only saving time but also
@@ -273,6 +276,6 @@ function Conclusion() {
         autolinks today, and take one step closer to a seamless, well-connected
         workflow!
       </p>
-    </section>
+    </ArticleSection>
   );
 }
