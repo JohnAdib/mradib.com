@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <>
       <ArticleLayout
-        title={article.title}
+        subTitle={article.title}
         intro={article.description}
         datePublished={article.datePublished}
         lang="en-US"
@@ -81,8 +81,8 @@ function Intro() {
 function Problem() {
   return (
     <ArticleSection
-      heading="Problem"
-      title="The Pain of Manual Linking Between GitHub and JIRA"
+      title="Problem"
+      subTitle="The Pain of Manual Linking Between GitHub and JIRA"
     >
       In development teams, linking GitHub issues and commits to external
       project management tools like JIRA, Asana, or Zendesk is crucial for
@@ -98,8 +98,8 @@ function Problem() {
 function Solution() {
   return (
     <ArticleSection
-      heading="Solution"
-      title="Automatically Link GitHub Issues with Autolink References"
+      title="Solution"
+      subTitle="Automatically Link GitHub Issues with Autolink References"
     >
       GitHub’s Autolink References feature allows you to set up automatic links
       to external resources, so every time you reference an issue, task, or
@@ -113,8 +113,8 @@ function Solution() {
 function Why() {
   return (
     <ArticleSection
-      heading="Why"
-      title="Using GitHub Autolink References comes with several benefits"
+      title="Why"
+      subTitle="Using GitHub Autolink References comes with several benefits"
     >
       <ul>
         <li>
@@ -136,8 +136,8 @@ function Why() {
 function Requirements() {
   return (
     <ArticleSection
-      heading="Requirements"
-      title="Before we start, here’s what you’ll need"
+      title="Requirements"
+      subTitle="Before we start, here’s what you’ll need"
     >
       <p></p>
       <ol>
@@ -159,8 +159,8 @@ function Requirements() {
 function StepByStep() {
   return (
     <ArticleSection
-      heading="Step-by-Step"
-      title="How to Set Up Autolink References in GitHub"
+      title="Step-by-Step"
+      subTitle="How to Set Up Autolink References in GitHub"
     >
       <p>Follow these simple steps to configure GitHub autolinks</p>
 
@@ -244,8 +244,8 @@ function StepByStep() {
 function Troubleshooting() {
   return (
     <ArticleSection
-      heading="Troubleshooting"
-      title="Tips for GitHub Autolink References"
+      title="Troubleshooting"
+      subTitle="Tips for GitHub Autolink References"
     >
       <ol>
         <li>
@@ -266,8 +266,8 @@ function Troubleshooting() {
 function Conclusion() {
   return (
     <ArticleSection
-      heading="Conclusion"
-      title="How GitHub Autolink References Enhance Collaboration"
+      title="Conclusion"
+      subTitle="How GitHub Autolink References Enhance Collaboration"
     >
       <p>
         GitHub Autolink References are a must-have for teams using multiple

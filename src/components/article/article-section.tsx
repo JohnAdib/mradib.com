@@ -3,13 +3,18 @@ import React from "react";
 
 interface SectionProps {
   id?: string;
-  heading: string;
   title: string;
+  subTitle: string;
   children: React.ReactNode;
 }
 
-export function ArticleSection({ id, heading, title, children }: SectionProps) {
-  const createdId = heading
+export function ArticleSection({
+  id,
+  title,
+  subTitle,
+  children,
+}: SectionProps) {
+  const createdId = title
     .toLowerCase()
     .replace(/['?]/g, "")
     .replace(/’/g, "")
@@ -20,9 +25,9 @@ export function ArticleSection({ id, heading, title, children }: SectionProps) {
   return (
     <section id={myId}>
       <h2 className={clsx("text-sm md:text-base", "mb-0", "font-light")}>
-        {heading}
+        {title}
       </h2>
-      <h3>{title}</h3>
+      <h3>{subTitle}</h3>
       <div>{children}</div>
     </section>
   );
