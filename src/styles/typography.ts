@@ -193,6 +193,11 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         "ul, ol": {
           paddingRight: theme("spacing.6"),
+          paddingLeft: theme("spacing.6"),
+        },
+        '[dir="ltr"] ul, [dir="ltr"] ol': {
+          paddingRight: theme("spacing.0"),
+          paddingLeft: theme("spacing.6"),
         },
         'ul[dir="ltr"], ol[dir="ltr"]': {
           paddingRight: theme("spacing.0"),
