@@ -15,7 +15,7 @@ export const article: IArticle = {
   publishTime: "14:28:00",
   datePublished: "",
   dateModified: "",
-  title: "GitHub Autolink - Simplify Issue Linking and Workflow",
+  title: "GitHub Autolink",
   description:
     "Boost Productivity with GitHub Autolink References: Seamlessly Link GitHub Issues to JIRA, Asana, and More",
   pageTitle: "GitHub Autolink - Simplify Issue Linking and Workflow",
@@ -31,8 +31,8 @@ article.datePublished =
 article.dateModified = "2024-11-11" + "T" + "11:26:00" + ".000Z";
 
 export const metadata: Metadata = {
-  title: article.title,
-  description: article.description,
+  title: article.pageTitle,
+  description: article.pageDesc,
   openGraph: {
     type: "article",
     publishedTime: article.datePublished,
