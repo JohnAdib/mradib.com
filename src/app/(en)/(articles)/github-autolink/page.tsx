@@ -190,16 +190,35 @@ function StepByStep() {
         src={imgGithubAddNewAutoLinkReference}
         alt="GitHub Add New Autolink Reference"
       />
-      <ul>
-        <li>
-          Reference Prefix: Choose a unique prefix (e.g., JIRA- or TASK-) for
-          the external tool.
-        </li>
-        <li>
-          Target URL: Input the URL of your external tool with as a placeholder.
-          For instance, https://jira.example.com/browse/ for JIRA.
-        </li>
-      </ul>
+
+      <h5>Options</h5>
+      <h6>Alphanumeric</h6>
+      <p>
+        Matches any combination of letters and numbers in the reference (e.g.,
+        TASK-123).
+      </p>
+
+      <h6>Numeric</h6>
+      <p>Restricts matches to numbers only (e.g., 123).</p>
+
+      <h5>Reference Prefix</h5>
+      <p>
+        This is the identifier you’ll use in GitHub to create an autolink. For
+        example, if you set the prefix to <code>TASK-</code>, then typing{" "}
+        <code>TASK-123</code> in an issue or commit message will automatically
+        create a link.
+      </p>
+
+      <h5>Target URL</h5>
+      <p>
+        The URL format of your external system where <code>{"<num>"}</code> is a
+        placeholder for the reference number. GitHub will replace{" "}
+        <code>{"<num>"}</code> with the actual number from your reference.
+        Example: For a JIRA ticket link, you might use
+        <code>https://[YOUR_PROJECT].atlassian.net/browse/&lt;num&gt;</code>. So
+        <code>TASK-123</code> would become a link to
+        <code>https://[YOUR_PROJECT].atlassian.net/browse/123</code>.
+      </p>
 
       <h4>Step 5: Preview and Save</h4>
       <p>
