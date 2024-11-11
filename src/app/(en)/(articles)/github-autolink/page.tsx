@@ -3,7 +3,7 @@ import { ArticleLayout } from "@/components/article/layout";
 import { type Metadata } from "next";
 import Image from "next/image";
 import { IArticle } from "../i-article-interface";
-import imgCover from "./_img/cover.webp";
+import imgCover from "./_img/cover.png";
 import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
 import imgGithubAutoLinkReferencesList from "./_img/github-autolink-references-list.png";
@@ -33,6 +33,10 @@ article.dateModified = "2024-11-11" + "T" + "11:26:00" + ".000Z";
 export const metadata: Metadata = {
   title: article.title,
   description: article.description,
+  openGraph: {
+    type: "article",
+    publishedTime: article.datePublished,
+  },
   twitter: {
     card: "summary_large_image",
   },
