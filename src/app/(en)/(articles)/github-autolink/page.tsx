@@ -15,10 +15,10 @@ export const article: IArticle = {
   publishTime: "14:28:00",
   datePublished: "",
   dateModified: "",
-  title: "GitHub Autolink",
+  title: "GitHub Autolink - Simplify Issue Linking and Workflow",
   description:
     "Boost Productivity with GitHub Autolink References: Seamlessly Link GitHub Issues to JIRA, Asana, and More",
-  pageTitle: "GitHub Autolink",
+  pageTitle: "GitHub Autolink - Simplify Issue Linking and Workflow",
   pageDesc:
     "Automatically linkify references to GitHub issues, PRs, commits, and users.",
   pagePath: "/github-autolink",
