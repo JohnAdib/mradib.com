@@ -24,7 +24,14 @@ export function ArticleSection({
 
   return (
     <section id={myId}>
-      <h2 className={clsx("text-sm md:text-base", "mb-0", "font-light")}>
+      <h2
+        className={clsx(
+          "text-sm md:text-base",
+          "mb-0",
+          "font-light",
+          "text-indigo-600 dark:text-indigo-400",
+        )}
+      >
         {title}
       </h2>
       <h3>{subTitle}</h3>

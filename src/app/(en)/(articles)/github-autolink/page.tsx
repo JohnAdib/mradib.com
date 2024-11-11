@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <>
       <ArticleLayout
-        subTitle={article.title}
+        title={article.title}
         intro={article.description}
         datePublished={article.datePublished}
         lang="en-US"
@@ -87,10 +87,9 @@ function Problem() {
       In development teams, linking GitHub issues and commits to external
       project management tools like JIRA, Asana, or Zendesk is crucial for
       staying organized. But doing it manually every time is cumbersome and
-      time-consuming. Imagine if typing &quot;JIRA-123&quot; or
-      &quot;TASK-456&quot; in GitHub could automatically generate a link to the
-      corresponding task or issue in your project management tool—that’s what
-      GitHub Autolink References can do!
+      time-consuming. Imagine if typing <code>TASK-456</code> in GitHub could
+      automatically generate a link to the corresponding task or issue in your
+      project management tool—that’s what GitHub Autolink References can do!
     </ArticleSection>
   );
 }
@@ -159,21 +158,21 @@ function Requirements() {
 function StepByStep() {
   return (
     <ArticleSection
-      title="Step-by-Step"
+      title="Step by Step"
       subTitle="How to Set Up Autolink References in GitHub"
     >
       <p>Follow these simple steps to configure GitHub autolinks</p>
 
       <h4>Step 1: Open Repository Settings</h4>
       <p>
-        In your GitHub repository, go to <b>Settings</b> under your repository’s
-        name.
+        In your GitHub repository, go to <strong>Settings</strong> under your
+        repository’s name.
       </p>
 
       <h4>Step 2: Access Autolink References</h4>
       <p>
-        In the sidebar, locate the <b>Integrations</b> section and click on
-        <b>Autolink references</b>.
+        In the sidebar, locate the <strong>Integrations</strong> section and
+        click on <strong>Autolink references</strong>.
       </p>
       <Image
         src={imgGithubAutoLinkReferencesList}
@@ -182,8 +181,8 @@ function StepByStep() {
 
       <h4>Step 3: Add a New Autolink Reference</h4>
       <p>
-        Click <b>Add autolink reference</b>. This is where you’ll define the
-        rules for automatic linking.
+        Click <strong>Add autolink reference</strong>. This is where you’ll
+        define the rules for automatic linking.
       </p>
 
       <h4>Step 4: Define Your Reference Prefix and Target URL</h4>
@@ -196,11 +195,13 @@ function StepByStep() {
       <h6>Alphanumeric</h6>
       <p>
         Matches any combination of letters and numbers in the reference (e.g.,
-        TASK-123).
+        <code>TASK-123</code>).
       </p>
 
       <h6>Numeric</h6>
-      <p>Restricts matches to numbers only (e.g., 123).</p>
+      <p>
+        Restricts matches to numbers only (e.g., <code>123</code>).
+      </p>
 
       <h5>Reference Prefix</h5>
       <p>
@@ -216,15 +217,15 @@ function StepByStep() {
         placeholder for the reference number. GitHub will replace{" "}
         <code>{"<num>"}</code> with the actual number from your reference.
         Example: For a JIRA ticket link, you might use
-        <code>https://[YOUR_PROJECT].atlassian.net/browse/&lt;num&gt;</code>. So
-        <code>TASK-123</code> would become a link to
+        <code>https://[YOUR_PROJECT].atlassian.net/browse/&lt;num&gt;</code>. So{" "}
+        <code>TASK-123</code> would become a link to{" "}
         <code>https://[YOUR_PROJECT].atlassian.net/browse/123</code>.
       </p>
 
       <h4>Step 5: Preview and Save</h4>
       <p>
         Verify the preview to ensure the link format is correct. If everything
-        looks good, click <b>Add autolink reference</b>.
+        looks good, click <strong>Add autolink reference</strong>.
       </p>
       <Image
         src={imgGithubAddNewAutoLinkReferencePreview}
@@ -234,8 +235,8 @@ function StepByStep() {
       <h4>Step 6: Test Your Autolinks</h4>
       <p>
         Try referencing an issue in a GitHub comment or commit, such as
-        “JIRA-123,” and see how GitHub automatically converts it into a
-        clickable link.
+        <code>JIRA-123</code> and see how GitHub automatically converts it into
+        a clickable link.
       </p>
     </ArticleSection>
   );
