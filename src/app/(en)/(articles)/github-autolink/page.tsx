@@ -3,7 +3,9 @@ import { type Metadata } from "next";
 import Image from "next/image";
 import { IArticle } from "../i-article-interface";
 import imgCover from "./_img/cover.webp";
-import imgGithubAutoLink from "./_img/github-add-autolink.png";
+import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
+import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
+import imgGithubAutoLinkReferencesList from "./_img/github-autolink-references-list.png";
 
 export const article: IArticle = {
   author: "John Adib",
@@ -172,6 +174,10 @@ function StepByStep() {
         In the sidebar, locate the <b>Integrations</b> section and click on
         <b>Autolink references</b>.
       </p>
+      <Image
+        src={imgGithubAutoLinkReferencesList}
+        alt="GitHub Autolink References List"
+      />
 
       <h4>Step 3: Add a New Autolink Reference</h4>
       <p>
@@ -180,7 +186,10 @@ function StepByStep() {
       </p>
 
       <h4>Step 4: Define Your Reference Prefix and Target URL</h4>
-      <Image src={imgGithubAutoLink} alt="Add new GitHub autolink reference" />
+      <Image
+        src={imgGithubAddNewAutoLinkReference}
+        alt="GitHub Add New Autolink Reference"
+      />
       <ul>
         <li>
           Reference Prefix: Choose a unique prefix (e.g., JIRA- or TASK-) for
@@ -197,6 +206,10 @@ function StepByStep() {
         Verify the preview to ensure the link format is correct. If everything
         looks good, click <b>Add autolink reference</b>.
       </p>
+      <Image
+        src={imgGithubAddNewAutoLinkReferencePreview}
+        alt="GitHub Add New Autolink Reference Preview"
+      />
 
       <h4>Step 6: Test Your Autolinks</h4>
       <p>
