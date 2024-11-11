@@ -3,3 +3,5 @@ export interface IFaqQA {
   q: string;
   a: string;
 }
+
+export type FaqLanguage = "en" | "fa";

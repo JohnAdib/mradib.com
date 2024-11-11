@@ -7,6 +7,7 @@ import imgCover from "./_img/cover.webp";
 import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
 import imgGithubAutoLinkReferencesList from "./_img/github-autolink-references-list.png";
+import { articleFaq } from "./faq";
 
 export const article: IArticle = {
   author: "John Adib",
@@ -49,6 +50,7 @@ export default function Page() {
         keywords={[]}
         coverImage={imgCover}
         dateModified={""}
+        faq={articleFaq}
       >
         <Intro />
         <Problem />

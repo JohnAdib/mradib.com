@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { Breadcrumb } from "../breadcrumb/breadcrumb";
 import Faq from "../faq/faq";
+import { FaqLanguage } from "../faq/faq-interface";
 import { ArrowRightIcon } from "../icon/arrow-right";
 import { NavNextPrev } from "../nav-next-prev/nav-next-prev";
 import { ArticleJsonLD } from "./article-json-ld";
@@ -33,6 +34,8 @@ export function ArticleLayout({
 }: IArticleLayout) {
   const router = useRouter();
   const { previousPathname } = useContext(AppContext);
+
+  const myLanguage: FaqLanguage = (lang.split("-")[0] || "en") as FaqLanguage;
 
   return (
     <Container className="mt-8 md:mt-12 lg:mt-16">
@@ -112,7 +115,7 @@ export function ArticleLayout({
           dateModified={dateModified}
         />
       </div>
-      <Faq list={faq} />
+      <Faq list={faq} language={myLanguage} />
     </Container>
   );
 }

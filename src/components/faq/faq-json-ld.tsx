@@ -3,13 +3,14 @@ import { IFaqQA } from "./faq-interface";
 
 interface FAQProps {
   faqData: IFaqQA[];
+  title: string;
 }
 
-export const FaqJsonLD: React.FC<FAQProps> = ({ faqData }: FAQProps) => {
+export const FaqJsonLD: React.FC<FAQProps> = ({ faqData, title }: FAQProps) => {
   const jsonLd: WithContext<FAQPage> = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    name: "سوالات متداول",
+    name: title,
     mainEntity: faqData.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
