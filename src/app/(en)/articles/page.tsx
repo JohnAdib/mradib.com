@@ -32,9 +32,7 @@ function Article({ article }: { article: IArticle }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/articles/${article.pagePath}`}>
-          {article.title}
-        </Card.Title>
+        <Card.Title href={`${article.pagePath}`}>{article.title}</Card.Title>
         <Card.Eyebrow
           as="time"
           dateTime={article.datePublished}
