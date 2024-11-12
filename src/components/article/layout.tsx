@@ -4,6 +4,7 @@ import { AppContext } from "@/app/providers";
 import { Container } from "@/components/container";
 import { Prose } from "@/components/prose";
 import { formatDateTime } from "@/lib/datetime/format-date-time";
+import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -65,7 +66,8 @@ export function ArticleLayout({
                 "select-none",
               )}
             >
-              <ArrowRightIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
+              <ArrowRightIcon className="ltr:hidden h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
+              <ArrowLeftIcon className="rtl:hidden h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
             </button>
           )}
           <article>
