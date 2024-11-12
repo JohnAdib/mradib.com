@@ -1,0 +1,11 @@
+# security.txt for mradib.com
+# Because even personal sites need a little security love!
+
+# Contact Information
+Contact: https://mradib.com/contact
+
+# Preferred Languages
+Preferred-Languages: en
+
+# Version Information
+Expires: 2091-11-12T15:26:00Z
