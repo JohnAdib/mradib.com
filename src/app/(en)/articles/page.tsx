@@ -7,16 +7,16 @@ import { articlesList } from "../(articles)/articles-list";
 import { IArticle } from "../(articles)/i-article-interface";
 
 export const metadata: Metadata = {
-  title: "Articles",
+  title: "A Collection of Insights and Ideas",
   description:
-    "All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.",
+    "A mix of articles on whatever I find interesting from programming, leadership, design, to anything else I think could be useful for you or just me!",
 };
 
 export default async function ArticlesIndex() {
   return (
     <SimpleLayout
-      title="My Articles"
-      intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+      title={metadata.title as string}
+      intro={metadata.description as string}
     >
       <div
         className={clsx(
