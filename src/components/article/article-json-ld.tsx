@@ -44,7 +44,6 @@ export function ArticleJsonLD({
         additionalName: "مستر ادیب",
         alternateName: "جواد ادیب",
         familyName: "ادیب",
-        disambiguatingDescription: "جواد عوض زاده سابق",
         jobTitle: "Senior Software Engineer",
         url: "https://mradib.com/about",
       },
