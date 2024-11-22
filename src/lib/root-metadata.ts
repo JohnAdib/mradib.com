@@ -14,6 +14,9 @@ export const rootMetadata: Metadata = {
     template: "%s",
     default: defaultTitle,
   },
+  alternates: {
+    canonical: "./",
+  },
   description: defaultDescription,
   // TODO: Add manifest.json
   //   manifest: siteUrl + '/manifest.json',
