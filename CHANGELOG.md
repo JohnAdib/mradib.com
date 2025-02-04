@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/JohnAdib/mradib.com/compare/v1.0.0...v1.1.0) (2025-02-04)
+
+
+### Features
+
+* Merge pull request [#67](https://github.com/JohnAdib/mradib.com/issues/67) from JohnAdib/dependabot/npm_and_yarn/eslint-plugin-prettier-5.2.3 ([bbc1e40](https://github.com/JohnAdib/mradib.com/commit/bbc1e40a8c156ab8631a6dc0f15e74da8f31cd74))
+
 ## 1.0.0 (2025-02-04)
 
 
