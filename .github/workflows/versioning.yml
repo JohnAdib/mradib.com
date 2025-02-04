@@ -22,4 +22,13 @@ jobs:
       - name: Release Please
         uses: googleapis/release-please-action@v4
         with:
+          skip-github-pull-request: true
           release-type: node
+
+      - name: Commit & Push Updated package.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json
+          git commit -m "chore: bump version to $(jq -r .version package.json)"
+          git push origin main
