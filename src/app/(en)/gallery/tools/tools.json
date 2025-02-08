@@ -129,6 +129,21 @@
     ]
   },
   {
+    "category": "🚄 Card Reader",
+    "items": [
+      {
+        "title": "Apple USB-C to SD Card Reader",
+        "href": "https://www.apple.com/uk/shop/product/MW653ZM/A/usb-c-to-sd-card-reader",
+        "description": "Transfers photos and videos at UHS-II speeds to USB-C-enabled Mac, iPad or iPhone",
+        "properties": [
+          { "key": "Weight", "value": "20g" }
+        ],
+        "priceGBP": 39,
+        "datetime": "2024-06-19"
+      }
+    ]
+  },
+  {
     "category": "🖨️ Printer",
     "items": [
       {
