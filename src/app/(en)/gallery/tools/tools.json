@@ -128,7 +128,17 @@
   "items": [{
     "title": "Anker Prime 27,650mAh Power Bank (250W)",
     "href": "https://www.anker.com/uk/products/a1340-250w-power-bank",
-    "description": "The power bank combines ultra-compact dynamic power, maximum charging speed for every port, the advanced ActiveShield™ 2.0 safety system, unparalleled compatibility, and Power Delivery 3.1 technology, ensuring efficient and secure charging for all your devices. Powered by the latest PD 3.1 technology, the power bank comes with 2 USB-C ports and 1 USB-A port to deliver up to 250W of power. The power bank is the size of a soda can with a capacity of 27,650mAh and can charge an iPhone 15 approximately 4 times. This power bank is 99.54Wh, which meets the requirements of the TSA (less than 100Wh) to be taken on airplanes as carry-on baggage."
+    "description": "The power bank combines ultra-compact dynamic power, maximum charging speed for every port, the advanced ActiveShield™ 2.0 safety system, unparalleled compatibility, and Power Delivery 3.1 technology, ensuring efficient and secure charging for all your devices. Powered by the latest PD 3.1 technology, the power bank comes with 2 USB-C ports and 1 USB-A port to deliver up to 250W of power. The power bank is the size of a soda can with a capacity of 27,650mAh and can charge an iPhone 15 approximately 4 times. This power bank is 99.54Wh, which meets the requirements of the TSA (less than 100Wh) to be taken on airplanes as carry-on baggage.",
+    "properties": [
+      { "key": "Capacity", "value": "27,650mAh" },
+      { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
+      { "key": "Recharge Speed", "value": "170W input, fully recharges in 37 min" },
+      { "key": "Airline Approved", "value": "Meets TSA regulations (under 100Wh) for carry-on luggage." },
+      { "key": "Weight", "value": "667" }
+    ],
+    "priceGBP": 126,
+    "compareAtPriceGBP": 180,
+    "datetime": "2024-06-06"
   }]
 }
 ]
