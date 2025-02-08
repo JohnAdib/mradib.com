@@ -144,6 +144,30 @@
     ]
   },
   {
+    "category": "🪜 Tripod",
+    "items": [
+      {
+        "title": "Nothing Yet!"
+      }
+    ]
+  },
+  {
+    "category": "📱 Phone Holder",
+    "items": [
+      {
+        "title": "CAMOLO Metal Phone Holder",
+        "href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
+        "description": "High-quality metal phone tripod mount with 360° rotation, 135° tilt, Arca Swiss compatibility, and four cold shoes. Supports multiple accessories for vlogging, live streaming, and photography. Perfect for mounting a phone on top of a camera for recording.",
+        "properties": [
+          { "key": "Weight", "value": "137g" }
+        ],
+        "priceGBP": 18,
+        "compareAtPriceGBP": 24,
+        "datetime": "2024-06-23"
+      }
+    ]
+  },
+  {
     "category": "🖨️ Printer",
     "items": [
       {
