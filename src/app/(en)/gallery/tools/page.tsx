@@ -2,14 +2,13 @@
 import { Card } from "@/components/card";
 import { Section } from "@/components/section";
 import { SimpleLayout } from "@/components/simple-layout";
-
 function ToolsSection({
   children,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Section>) {
   return (
-    <Section {...props}>
-      <ul role="list" className="space-y-16">
+    <Section{...props}>
+      <ul role="list" className="space-y-16" data-testid="tools-section-list">
         {children}
       </ul>
     </Section>
@@ -21,6 +20,9 @@ function Tool({
   href,
   children,
   properties,
+  priceGBP,
+  compareAtPriceGBP,
+  datetime,
 }: {
   title: string;
   href?: string;
@@ -29,6 +31,9 @@ function Tool({
     key: string;
     value: string;
   }[];
+  priceGBP?: number;
+  compareAtPriceGBP?: number;
+  datetime?: Date;
 }) {
   return (
     <Card as="li">
@@ -37,6 +42,7 @@ function Tool({
       </Card.Title>
       <Card.Description>{children}</Card.Description>
       <Card.Properties properties={properties} />
+      <Card.Price priceGBP={priceGBP} compareAtPriceGBP={compareAtPriceGBP} datetime={datetime} />
     </Card>
   );
 }
@@ -52,11 +58,14 @@ export default function Uses() {
       title="Photography Tools I Use"
       intro="Explore the tools that help me capture and create stunning photographs."
     >
-      <div className="space-y-20">
+      <div className="space-y-20" data-testid="tools-section">
         <ToolsSection title="Camera">
           <Tool
             title="Canon EOS R8"
             href="https://www.canon.co.uk/cameras/eos-r8/"
+            priceGBP={1899}
+            compareAtPriceGBP={1699}
+            datetime={new Date("2024-02-08")}
             properties={[
               { key: "Sensor", value: "24.2MP Full-Frame CMOS" },
               { key: "Video", value: "4K 60p (oversampled from 6K), 10-bit C-Log 3" },

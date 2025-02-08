@@ -89,15 +89,21 @@ Card.Properties = function CardProperties({
   if (!properties) return null;
 
   return (
-    <ul className="z-10 flex flex-col group gap-1 mt-2 list-inside list-[square] text-xs leading-normal text-zinc-600 dark:text-zinc-400">
-      {properties?.map((property) => (
-        <li key={property.key}>
-          <span className="font-bold">{property.key}</span>{" "}
-          <span>{property.value}</span>
-        </li>
-      ))}
-    </ul>
+    <div className="z-10 flex gap-2" data-testid="card-properties">
+      <ul className="flex grow flex-col group gap-1 mt-2 list-inside list-[square] text-xs leading-normal text-zinc-600 dark:text-zinc-400">
+        {properties?.map((property) => (
+          <li key={property.key}>
+            <span className="font-bold">{property.key}</span>{" "}
+            <span>{property.value}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
+};
+
+Card.Image = function CardImage({ src, alt }: { src: string; alt: string }) {
+  return <img src={src} alt={alt} className="z-10 mt-4 w-32 rounded-lg" />;
 };
 
 Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
@@ -108,6 +114,31 @@ Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
     >
       {children}
       <ChevronRightIcon className="h-4 w-4 stroke-current" />
+    </div>
+  );
+};
+
+Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { priceGBP?: number, compareAtPriceGBP?: number, datetime?: Date }) {
+  if (!priceGBP) return null;
+
+  // convert GBP to USD
+  const GBP2USD = 1.24;
+  const priceUSD = priceGBP ? Math.round(priceGBP * GBP2USD) : null;
+  const compareAtUSD = compareAtPriceGBP ? Math.round(compareAtPriceGBP * GBP2USD) : null;
+
+  // if user is in the UK, show pounds, otherwise show USD
+  const isUK = navigator.language === "en-GB";
+  const priceStr = isUK ? `£${priceGBP?.toLocaleString()}` : `$${priceUSD}`;
+  const compareAtPriceStr = isUK ? `£${compareAtPriceGBP?.toLocaleString()}` : `$${compareAtUSD}`;
+
+  return (
+    <div
+      aria-hidden="true"
+      className="relative z-10 mt-2 flex gap-1 items-center text-sm font-medium text-teal-500"
+      title={datetime ? `at ${datetime.toLocaleDateString()}` : undefined}
+    >
+      {compareAtPriceGBP && <span className="text-zinc-400 line-through">{compareAtPriceStr}</span>}
+      <span className="text-zinc-400">{priceStr}</span>
     </div>
   );
 };

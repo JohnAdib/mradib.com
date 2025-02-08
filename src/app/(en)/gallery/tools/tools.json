@@ -1,0 +1,19 @@
+[{
+  "category": "Camera",
+  "items": [{
+    "title": "Canon EOS R8",
+    "url": "https://www.canon.co.uk/cameras/eos-r8/",
+    "priceGBP": 1899,
+    "compareAtPriceGBP": 1699,
+    "datetime": "2024-02-08",
+    "properties": [
+      { "key": "Sensor", "value": "24.2MP Full-Frame CMOS" },
+      { "key": "Video", "value": "4K 60p (oversampled from 6K), 10-bit C-Log 3" },
+      { "key": "Continuous Shooting", "value": "Up to 40fps (electronic shutter)" },
+      { "key": "Autofocus", "value": "Dual Pixel CMOS AF II (1,053 AF points)" },
+      { "key": "Weight", "value": "461g (body only)" }
+    ],
+    "description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes."
+  }]
+}
+]
