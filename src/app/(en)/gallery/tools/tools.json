@@ -172,10 +172,30 @@
     ]
   },
   {
-    "category": "💡 Flash",
+    "category": "💡 Speedlite Flash",
     "items": [
       {
-        "title": "..."
+        "title": "NEEWER Z2-C 2600mAh Battery TTL Round Head",
+        "href": "https://uk.neewer.com/products/neewer-z2-c-ttl-round-head-flash-speedlite-for-canon-66603347",
+        "description": "Powerful speedlight with enhanced UI, instant TTL/M mode switch, and 2.4G wireless control. Features 76Ws output, adjustable LED modeling lamps, and flexible bounce angles.",
+        "properties": [
+          {
+            "key": "Battery",
+            "value": "7.4V 2600mAh lithium battery - 480 flashes!"
+          },
+          { "key": "Maximum Flash Power", "value": "76Ws" },
+          {
+            "key": "Effective Range",
+            "value": "Central: 0.6-10m / Edge: 0.6-5m"
+          },
+          { "key": "Color Temperature", "value": "5600K ±200K (warm white)" },
+          { "key": "Flash ", "value": "Yes" },
+          { "key": "TTL", "value": "Yes" },
+          { "key": "Weight", "value": "580g" }
+        ],
+        "priceGBP": 153,
+        "compareAtPriceGBP": 250,
+        "datetime": "2025-02-03"
       }
     ]
   },
