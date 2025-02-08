@@ -247,6 +247,25 @@
     ]
   },
   {
+    "category": "Backdrop Stand",
+    "items": [
+      {
+        "title": "NEEWER NK-ST300 10x8ft Backdrop Stand",
+        "href": "https://www.amazon.co.uk/gp/product/B0CQ7T2BV7",
+        "description": "NEEWER Backdrop Stand Heavy Duty with Widened Bases, 10x8ft Background Stand with 4 Crossbars, 2 Telescopic Poles, 4 Spring Clips, and Carrying Bag. With four detachable crossbars (two upper, two lower) and two telescopic extension poles, this adjustable backdrop stand easily adjust width from 5.9ft/180cm to 9.8ft/300cm by adding or removing crossbars, and set at your preferred height from 3.2ft/98cm to 8ft/245cm with a simple twist",
+        "properties": [
+          { "key": "Width", "value": "Max 315cm (10ft) / Min 173cm (5.7ft)" },
+          { "key": "Height", "value": "Max 245cm (8ft) / Min 96cm (3.1ft)" },
+          { "key": "Weight", "value": "6.19kg" }
+        ],
+        "studio": true,
+        "priceGBP": 97,
+        "compareAtPriceGBP": 103,
+        "datetime": "2025-02-07"
+      }
+    ]
+  },
+  {
     "category": "🖨️ Printer",
     "items": [
       {
