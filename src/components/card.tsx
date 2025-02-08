@@ -132,7 +132,7 @@ Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { pri
   const compareAtUSD = compareAtPriceGBP ? Math.round(compareAtPriceGBP * GBP2USD) : null;
 
   // if user is in the UK, show pounds, otherwise show USD
-  const isUK = navigator.language === "en-GB" || true;
+  const isUK = true;
   // check location
 
 
