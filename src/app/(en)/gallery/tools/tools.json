@@ -145,7 +145,15 @@
     "category": "🪜 Tripod",
     "items": [
       {
-        "title": "Nothing Yet!"
+        "title": "2-in-1 Invisible Selfie Stick + Tripod",
+        "href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
+        "description": "Foldable 2-in-1 selfie stick and tripod with a 1/4 standard screw.",
+        "properties": [
+          { "key": "1/4 Screw", "value": "Yes" },
+          { "key": "Weight", "value": "216g" }
+        ],
+        "priceGBP": 27,
+        "datetime": "2023-12-30"
       }
     ]
   },
@@ -177,9 +185,10 @@
       {
         "title": "Godox LITEMONS LED 6R RGB",
         "href": "https://www.godox.com/product-d/LED6R-LED6Bi.html",
-        "description": "Compact and lightweight RGB light with adjustable 3200K–6500K color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
+        "description": "Compact and lightweight RGB light with adjustable color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
         "properties": [
           { "key": "Battery Capacity", "value": "1800mAh (2-10 hours)" },
+          { "key": "Color Temperature", "value": "3200K–6500K" },
           { "key": "CRI", "value": "95" },
           { "key": "Weight", "value": "110g" }
         ],
