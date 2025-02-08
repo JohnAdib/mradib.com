@@ -97,6 +97,24 @@
     ]
   },
   {
+    "category": "💾 Memory Card",
+    "items": [
+      {
+        "title": "Kingston 64GB SDXC UHS-II 300R/260W U3 V90",
+        "href": "https://www.amazon.co.uk/dp/B09XC5GG83",
+        "description": "High-speed SD card for professional 4K/8K recording and continuous shooting, ensuring smooth performance and durability.",
+        "properties": [
+          { "key": "Speed Class", "value": "UHS-II U3 V90" },
+          { "key": "Read speed", "value": "300MB/s" },
+          { "key": "Write speed", "value": "260MB/s" },
+          { "key": "Weight", "value": "10g" }
+        ],
+        "priceGBP": 47,
+        "datetime": "2024-06-15"
+      }
+    ]
+  },
+  {
     "category": "🖨️ Printer",
     "items": [
       {
