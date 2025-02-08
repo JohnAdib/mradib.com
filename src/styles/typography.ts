@@ -1,6 +1,5 @@
-import { type PluginUtils } from "tailwindcss/types/config";
-
-export default function typographyStyles({ theme }: PluginUtils) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function typographyStyles({ theme }: { theme: any }) {
   return {
     invert: {
       css: {
