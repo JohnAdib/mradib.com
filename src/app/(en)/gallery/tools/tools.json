@@ -223,6 +223,21 @@
     "category": "💡 Video Light",
     "items": [
       {
+        "title": "NEEWER CB300B 320W LED Video Light",
+        "href": "https://uk.neewer.com/products/neewer-cb300b-320w-bi-color-continuous-led-video-light-66603804",
+        "description": "with 2.4G/APP Remote Control, All Metal Bi Color COB Continuous Output Lighting with Bowens Mount 150000lux/1m 2700K-6500K CRI/TLCI97+ 12 Effects for Video. Suitable as a key light for vivid, attractive camera photo shooting with 28db ultra-low noise.",
+        "properties": [
+          { "key": "Maximum Power", "value": "320W" },
+          { "key": "Maximum Illumination", "value": "150000lux/1m" },
+          { "key": "Color Temperature", "value": "2700K-6500K" },
+          { "key": "CRI/TLCI", "value": "97+/97+" },
+          { "key": "Weight", "value": "6.85kg" }
+        ],
+        "priceGBP": 260,
+        "compareAtPriceGBP": 400,
+        "datetime": "2025-02-07"
+      },
+      {
         "title": "Godox LITEMONS LED 6R RGB",
         "href": "https://www.godox.com/product-d/LED6R-LED6Bi.html",
         "description": "Compact and lightweight RGB light with adjustable color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
@@ -264,7 +279,7 @@
         "datetime": "2025-02-07"
       },
       {
-        "title": "Neewer 10x20FT Collapsible White Backdrop",
+        "title": "Neewer 10x20FT Collapsible White Backdrop Background",
         "href": "https://www.amazon.co.uk/dp/B00SR28VRW",
         "description": "PRO Photo Studio 100% Pure Polyester Collapsible Backdrop Background. Durable and anti-wrinkle in single piece seamless design with consistent white color. Made of 100% pure muslin.",
         "properties": [
