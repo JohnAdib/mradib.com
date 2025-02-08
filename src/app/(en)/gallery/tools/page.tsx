@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Card } from "@/components/card";
 import { Section } from "@/components/section";
 import { SimpleLayout } from "@/components/simple-layout";
@@ -41,16 +40,20 @@ function Tool({
 }) {
   return (
     <Card as="li" returned={returned}>
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
+      <div className="flex gap-2 items-center w-full">
+        <div className="grow">
+          <Card.Title as="h3" href={href}>
+            {title}
+          </Card.Title>
+        </div>
+        <Card.Price
+          priceGBP={priceGBP}
+          compareAtPriceGBP={compareAtPriceGBP}
+          datetime={datetime}
+        />
+      </div>
       <Card.Description>{children}</Card.Description>
       <Card.Properties properties={properties} />
-      <Card.Price
-        priceGBP={priceGBP}
-        compareAtPriceGBP={compareAtPriceGBP}
-        datetime={datetime}
-      />
     </Card>
   );
 }

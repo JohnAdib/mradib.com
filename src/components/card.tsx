@@ -165,7 +165,7 @@ Card.Price = function CardPrice({
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-2 flex gap-1 items-center text-sm font-medium text-teal-500"
+      className="relative z-10 flex gap-1 items-center text-sm font-medium text-teal-500"
       title={dateStr}
     >
       <CompareAtPrice />
