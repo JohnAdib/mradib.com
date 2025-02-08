@@ -16,6 +16,25 @@ function ToolsSection({
   );
 }
 
+interface IToolCategory {
+  category: string;
+  items: ITool[];
+}
+
+interface ITool {
+  title: string;
+  href?: string;
+  description: string;
+  properties?: {
+    key: string;
+    value: string;
+  }[];
+  priceGBP?: number;
+  compareAtPriceGBP?: number;
+  datetime?: string;
+  returned?: boolean;
+}
+
 function Tool({
   title,
   href,
@@ -64,13 +83,35 @@ export const metadata = {
 };
 
 export default function Uses() {
+  const myTools = tools as unknown as IToolCategory[];
+  // total price except returned items
+  const totalPriceGBP = myTools.reduce((acc, tool) => {
+    return (
+      acc +
+      tool.items.reduce((acc, item) => {
+        if (item?.returned) {
+          return acc;
+        }
+        return acc + (item?.priceGBP ?? 0);
+      }, 0)
+    );
+  }, 0);
+
+  const totalPriceGBPWith3NumbersSeparated = totalPriceGBP.toLocaleString(
+    "en-GB",
+    {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    },
+  );
+
   return (
     <SimpleLayout
-      title="Photography Tools I Use"
-      intro="Explore the tools that help me capture and create stunning photographs."
+      title={`Photography Tools I Use`}
+      intro={`Explore the tools that help me capture and create stunning photographs. I've spent £${totalPriceGBPWith3NumbersSeparated} on these!`}
     >
       <div className="space-y-20" data-testid="tools-section">
-        {tools.map((tool) => (
+        {myTools.map((tool) => (
           <ToolsSection key={tool.category} title={tool.category}>
             {tool.items.map((item) => (
               <Tool key={item.title} {...item}>
