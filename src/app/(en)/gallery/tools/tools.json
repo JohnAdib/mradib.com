@@ -87,7 +87,11 @@
   "items": [{
     "title": "Canon Zoemini 2",
     "href": "https://www.canon.co.uk/printers/zoemini-2/",
-    "description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos."
+    "description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
+    "priceGBP": 100,
+    "compareAtPriceGBP": 130,
+    "datetime": "2024-06-15",
+    "returned": true
   },
   {
     "title": "Canon SELPHY CP1500",

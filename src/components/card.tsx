@@ -18,15 +18,17 @@ export function Card<T extends React.ElementType = "div">({
   as,
   className,
   children,
+  returned,
 }: Omit<React.ComponentPropsWithoutRef<T>, "as" | "className"> & {
   as?: T;
   className?: string;
+  returned?: boolean;
 }) {
   const Component = as ?? "div";
 
   return (
     <Component
-      className={clsx(className, "group relative flex flex-col items-start")}
+      className={clsx(className, "group relative flex flex-col items-start", returned && "opacity-50 line-through")}
       data-testid="card"
     >
       {children}
@@ -152,7 +154,7 @@ Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { pri
       title={dateStr}
     >
       <CompareAtPrice />
-      <span className="text-zinc-400">{priceStr}</span>
+      <span className="text-zinc-400 font-bold">{priceStr}</span>
     </div>
   );
 };

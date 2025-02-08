@@ -25,6 +25,7 @@ function Tool({
   priceGBP,
   compareAtPriceGBP,
   datetime,
+  returned,
 }: {
   title: string;
   href?: string;
@@ -36,9 +37,10 @@ function Tool({
   priceGBP?: number;
   compareAtPriceGBP?: number;
   datetime?: string;
+  returned?: boolean;
 }) {
   return (
-    <Card as="li">
+    <Card as="li" returned={returned}>
       <Card.Title as="h3" href={href}>
         {title}
       </Card.Title>
