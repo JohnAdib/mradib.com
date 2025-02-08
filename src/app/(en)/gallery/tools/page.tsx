@@ -7,7 +7,6 @@ function ToolsSection({
   children,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Section>) {
-  const id = props.title.toLowerCase().replace(/ /g, "-");
   return (
     <Section {...props}>
       <ul role="list" className="space-y-16" data-testid="tools-section-list">
