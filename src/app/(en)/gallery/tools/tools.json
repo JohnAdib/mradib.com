@@ -135,9 +135,7 @@
         "title": "Apple USB-C to SD Card Reader",
         "href": "https://www.apple.com/uk/shop/product/MW653ZM/A/usb-c-to-sd-card-reader",
         "description": "Transfers photos and videos at UHS-II speeds to USB-C-enabled Mac, iPad or iPhone",
-        "properties": [
-          { "key": "Weight", "value": "20g" }
-        ],
+        "properties": [{ "key": "Weight", "value": "20g" }],
         "priceGBP": 39,
         "datetime": "2024-06-19"
       }
@@ -158,12 +156,44 @@
         "title": "CAMOLO Metal Phone Holder",
         "href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
         "description": "High-quality metal phone tripod mount with 360° rotation, 135° tilt, Arca Swiss compatibility, and four cold shoes. Supports multiple accessories for vlogging, live streaming, and photography. Perfect for mounting a phone on top of a camera for recording.",
-        "properties": [
-          { "key": "Weight", "value": "137g" }
-        ],
+        "properties": [{ "key": "Weight", "value": "137g" }],
         "priceGBP": 18,
         "compareAtPriceGBP": 24,
         "datetime": "2024-06-23"
+      }
+    ]
+  },
+  {
+    "category": "💡 Flash",
+    "items": [
+      {
+        "title": "..."
+      }
+    ]
+  },
+  {
+    "category": "💡 Video Light",
+    "items": [
+      {
+        "title": "Godox LITEMONS LED 6R RGB",
+        "href": "https://www.godox.com/product-d/LED6R-LED6Bi.html",
+        "description": "Compact and lightweight RGB light with adjustable 3200K–6500K color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
+        "properties": [
+          { "key": "Battery Capacity", "value": "1800mAh (2-10 hours)" },
+          { "key": "CRI", "value": "95" },
+          { "key": "Weight", "value": "110g" }
+        ],
+        "priceGBP": 25,
+        "compareAtPriceGBP": 30,
+        "datetime": "2024-06-24"
+      }
+    ]
+  },
+  {
+    "category": "Light Stand",
+    "items": [
+      {
+        "title": "..."
       }
     ]
   },
