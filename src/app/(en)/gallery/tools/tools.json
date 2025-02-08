@@ -247,7 +247,7 @@
     ]
   },
   {
-    "category": "Backdrop Stand",
+    "category": "Backdrop & Stand",
     "items": [
       {
         "title": "NEEWER NK-ST300 10x8ft Backdrop Stand",
@@ -261,6 +261,19 @@
         "studio": true,
         "priceGBP": 97,
         "compareAtPriceGBP": 103,
+        "datetime": "2025-02-07"
+      },
+      {
+        "title": "Neewer 10x20FT Collapsible White Backdrop",
+        "href": "https://www.amazon.co.uk/dp/B00SR28VRW",
+        "description": "PRO Photo Studio 100% Pure Polyester Collapsible Backdrop Background. Durable and anti-wrinkle in single piece seamless design with consistent white color. Made of 100% pure muslin.",
+        "properties": [
+          { "key": "Size", "value": "Width 305cm (10ft) / Height 610cm (20ft)" },
+          { "key": "Weight", "value": "2.2kg" }
+        ],
+        "studio": true,
+        "priceGBP": 52,
+        "compareAtPriceGBP": 58,
         "datetime": "2025-02-07"
       }
     ]
