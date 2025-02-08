@@ -101,20 +101,21 @@
     "category": "🚄 Battery",
     "items": [
       {
-        "title": "llano LP-E17 18W Dual Camera Battery Charger",
+        "title": "llano LP-E17 18W Charger + 2x Battery",
         "href": "https://www.amazon.co.uk/dp/B0CTY8BRK3",
         "description": "Employing 18W QC3.0 and PD3.0 technology. Capable of charging two batteries simultaneously or independently with a single USB-C port.",
         "properties": [
-          { "key": "Battery", "value": "LP-E17" },
+          { "key": "Battery", "value": "2x LP-E17" },
           { "key": "Full Charge Time", "value": "135 minutes" },
           { "key": "Weight", "value": "320g" }
         ],
-        "priceGBP": 42,
-        "compareAtPriceGBP": 50,
+        "priceGBP": 76,
+        "compareAtPriceGBP": 85,
         "datetime": "2025-02-04"
       }
     ]
   },
+
   {
     "category": "💾 Memory Card",
     "items": [
