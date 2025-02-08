@@ -3,17 +3,17 @@
   "items": [{
     "title": "Canon EOS R8",
     "href": "https://www.canon.co.uk/cameras/eos-r8/",
-    "priceGBP": 1899,
-    "compareAtPriceGBP": 1699,
-    "datetime": "2024-02-08",
+    "description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes.",
     "properties": [
       { "key": "Sensor", "value": "24.2MP Full-Frame CMOS" },
       { "key": "Video", "value": "4K 60p (oversampled from 6K), 10-bit C-Log 3" },
       { "key": "Continuous Shooting", "value": "Up to 40fps (electronic shutter)" },
       { "key": "Autofocus", "value": "Dual Pixel CMOS AF II (1,053 AF points)" },
-      { "key": "Weight", "value": "461g (body only)" }
+      { "key": "Weight", "value": "461g" }
     ],
-    "description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes."
+    "priceGBP": 899,
+    "compareAtPriceGBP": 1630,
+    "datetime": "2024-11-05"
   }]
 },
 {
@@ -21,8 +21,66 @@
   "items": [{
     "title": "Canon RF 24-240mm F4-6.3 IS USM",
     "href": "https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/",
-    "description": "A portable, versatile 10x zoom lens for the EOS R system that’s ideal for everything from wide-angle landscapes to frame-filling portraits, and even close-up sport and wildlife. At just 750g, it's ideal for the travelling photographer. Built-in Image Stabilizer technology allows for hand-held shooting at shutter speeds up to 5 stops. Shoot everything with a single lens, from big landscapes to powerful portraits and frame-filling action shots."
-  }]
+    "description": "A portable, versatile 10x zoom lens for the EOS R system that’s ideal for everything from wide-angle landscapes to frame-filling portraits, and even close-up sport and wildlife. At just 750g, it's ideal for the travelling photographer. Built-in Image Stabilizer technology allows for hand-held shooting at shutter speeds up to 5 stops. Shoot everything with a single lens, from big landscapes to powerful portraits and frame-filling action shots.",
+    "properties": [
+      { "key": "Focal Length", "value": "24-240mm (10x zoom range)" },
+      { "key": "Aperture", "value": "f/4-6.3 (variable)" },
+      { "key": "Image Stabilizer", "value": "Up to 5 stops of Optical IS" },
+      { "key": "Filter Size", "value": "72mm" },
+      { "key": "Weight", "value": "750g" }
+    ],
+    "priceGBP": 909,
+    "compareAtPriceGBP": 1000,
+    "datetime": "2024-06-15"
+  },
+  {
+    "title": "K&F Concept 72MM UV Filter Nano-K MCUV",
+    "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
+    "description": "An ultra-slim, multi-coated UV filter with Japanese optical glass for clarity and protection. Nano-coating reduces reflections and glare, while the scratch-resistant, waterproof design ensures durability. The slim aluminum frame prevents vignetting.",
+    "properties": [
+      { "key": "Filter Size", "value": "72mm" },
+      { "key": "Weight", "value": "15g" }
+    ],
+    "priceGBP": 14,
+    "compareAtPriceGBP": 14,
+    "datetime": "2024-06-15"
+  },
+  {
+    "title": "Canon EW-78F Lens Hood",
+    "href": "https://www.amazon.co.uk/dp/B07V44S8G1",
+    "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
+    "properties": [
+      { "key": "Weight", "value": "50g" }
+    ],
+    "priceGBP": 38,
+    "datetime": "2024-06-15"
+  },
+  {
+    "title": "Canon RF 50mm F1.8 STM",
+    "href": "https://www.canon.co.uk/lenses/rf-50mm-f1-8-stm/",
+    "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
+    "properties": [
+      { "key": "Focal Length", "value": "50mm (standard prime lens)" },
+      { "key": "Aperture", "value": "f/1.8 (wide aperture for low-light and bokeh)" },
+      { "key": "Filter Size", "value": "43mm" },
+      { "key": "Weight", "value": "160g" }
+    ],
+    "priceGBP": 124,
+    "compareAtPriceGBP": 220,
+    "datetime": "2024-07-16"
+  },
+  {
+    "title": "K&F Concept 43mm UV Filter Nano-K MCUV",
+    "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
+    "description": "A multi-coated UV filter with Japanese optical glass for clarity and protection. Shields the lens from scratches, dust, and moisture with a lightweight aluminum frame to prevent vignetting.",
+    "properties": [
+      { "key": "Filter Size", "value": "43mm" },
+      { "key": "Weight", "value": "10g" }
+    ],
+    "priceGBP": 8,
+    "datetime": "2024-07-17"
+  }
+]
 },
 {
   "category": "Printer",
@@ -30,7 +88,32 @@
     "title": "Canon Zoemini 2",
     "href": "https://www.canon.co.uk/printers/zoemini-2/",
     "description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos."
-  }]
+  },
+  {
+    "title": "Canon SELPHY CP1500",
+    "href": "https://www.canon.co.uk/printers/selphy-cp1500/",
+    "description": "A compact and wireless photo printer delivering high-quality, durable prints in seconds.",
+    "properties": [
+      { "key":"Print Technology", "value":"Dye-sublimation for vibrant, long-lasting photos"},
+      { "key": "Print Size", "value": "Up to postcard (100 x 148mm)" },
+      { "key": "Print Speed", "value": "41 seconds per photo" },
+      { "key": "Weight", "value": "850g" }
+    ],
+    "priceGBP": 134,
+    "datetime": "2024-06-27"
+  },
+  {
+    "title": "DuraPro 1Pc 2000mAh Battery + Charger",
+    "href": "https://www.amazon.co.uk/dp/B07MR9W4BB",
+    "description": "Battery and charger for Canon SELPHY CP series printers, providing portable power for on-the-go printing.",
+    "properties": [
+      { "key": "Charge Time", "value": "4 Hours" },
+      { "key": "Weight", "value": "134g" }
+    ],
+    "priceGBP": 38,
+    "datetime": "2024-06-27"
+  }
+]
 },
 {
   "category": "Video",

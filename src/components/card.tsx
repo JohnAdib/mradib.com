@@ -41,7 +41,7 @@ Card.Link = function CardLink({
   return (
     <>
       <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
-      <Link {...props}>
+      <Link {...props} target="_blank">
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </Link>
@@ -137,13 +137,21 @@ Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { pri
   const priceStr = isUK ? `£${priceGBP?.toLocaleString()}` : `$${priceUSD}`;
   const compareAtPriceStr = isUK ? `£${compareAtPriceGBP?.toLocaleString()}` : `$${compareAtUSD}`;
 
+  function CompareAtPrice() {
+    if (!compareAtPriceGBP) return null;
+    if (compareAtPriceGBP === priceGBP) return null;
+    return (
+      <span className="text-zinc-400 line-through">{compareAtPriceStr}</span>
+    )
+  }
+
   return (
     <div
       aria-hidden="true"
       className="relative z-10 mt-2 flex gap-1 items-center text-sm font-medium text-teal-500"
       title={dateStr}
     >
-      {compareAtPriceGBP && <span className="text-zinc-400 line-through">{compareAtPriceStr}</span>}
+      <CompareAtPrice />
       <span className="text-zinc-400">{priceStr}</span>
     </div>
   );
