@@ -27,6 +27,7 @@ export function Card<T extends React.ElementType = "div">({
   return (
     <Component
       className={clsx(className, "group relative flex flex-col items-start")}
+      data-testid="card"
     >
       {children}
     </Component>
@@ -74,6 +75,28 @@ Card.Description = function CardDescription({
     <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       {children}
     </p>
+  );
+};
+
+Card.Properties = function CardProperties({
+  properties,
+}: {
+  properties?: {
+    key: string;
+    value: string;
+  }[];
+}) {
+  if (!properties) return null;
+
+  return (
+    <ul className="z-10 flex flex-col group gap-1 mt-2 list-inside list-[square] text-xs leading-normal text-zinc-600 dark:text-zinc-400">
+      {properties?.map((property) => (
+        <li key={property.key}>
+          <span className="font-bold">{property.key}</span>{" "}
+          <span>{property.value}</span>
+        </li>
+      ))}
+    </ul>
   );
 };
 

@@ -20,10 +20,15 @@ function Tool({
   title,
   href,
   children,
+  properties,
 }: {
   title: string;
   href?: string;
   children: React.ReactNode;
+  properties?: {
+    key: string;
+    value: string;
+  }[];
 }) {
   return (
     <Card as="li">
@@ -31,6 +36,7 @@ function Tool({
         {title}
       </Card.Title>
       <Card.Description>{children}</Card.Description>
+      <Card.Properties properties={properties} />
     </Card>
   );
 }
@@ -51,6 +57,13 @@ export default function Uses() {
           <Tool
             title="Canon EOS R8"
             href="https://www.canon.co.uk/cameras/eos-r8/"
+            properties={[
+              { key: "Sensor", value: "24.2MP Full-Frame CMOS" },
+              { key: "Video", value: "4K 60p (oversampled from 6K), 10-bit C-Log 3" },
+              { key: "Continuous Shooting", value: "Up to 40fps (electronic shutter)" },
+              { key: "Autofocus", value: "Dual Pixel CMOS AF II (1,053 AF points)" },
+              { key: "Weight", value: "461g (body only)" },
+            ]}
           >
             A lightweight, travel-friendly, full-frame camera body, the Canon
             EOS R8 Mirrorless Camera offers powerful photo and video
@@ -61,6 +74,9 @@ export default function Uses() {
             video, and fast auto focus. A perfect choice for low-light portrait
             photography and wide, expansive landscapes.
           </Tool>
+        </ToolsSection>
+        <ToolsSection title="Lens">
+
           <Tool
             title="Canon RF 24-240mm F4-6.3 IS USM"
             href="https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/"
