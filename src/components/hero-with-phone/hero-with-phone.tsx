@@ -80,7 +80,7 @@ export function HeroWithPhone() {
           <div className="mt-10 flex items-center gap-x-6 select-none">
             <Link
               href="/gallery"
-              className="rounded-md bg-sky-700 dark:bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-sky-700 dark:bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs transition hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Visit my Gallery
             </Link>
@@ -92,7 +92,7 @@ export function HeroWithPhone() {
             </Link>
           </div>
         </div>
-        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow select-none">
+        <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow select-none">
           <svg
             viewBox="0 0 366 729"
             role="img"

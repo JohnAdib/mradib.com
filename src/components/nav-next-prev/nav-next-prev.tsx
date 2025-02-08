@@ -17,7 +17,7 @@ function NextLink({ url, title }: { url?: string; title?: string }) {
       )}
     >
       <span>{title}</span>
-      <ChevronLeftIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+      <ChevronLeftIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
     </Link>
   );
 }
@@ -35,7 +35,7 @@ function PrevLink({ url, title }: { url?: string; title?: string }) {
         "dark:text-stone-400 dark:hover:text-stone-200",
       )}
     >
-      <ChevronRightIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+      <ChevronRightIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
       <span>{title}</span>
     </Link>
   );

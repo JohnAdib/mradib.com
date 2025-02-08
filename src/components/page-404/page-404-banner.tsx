@@ -4,7 +4,7 @@ export default function Page404Banner() {
   return (
     <>
       <div className="pointer-events-none select-none fixed inset-x-0 top-0 sm:flex sm:justify-center sm:px-6 sm:pt-5 lg:px-8">
-        <div className="pointer-events-auto backdrop-blur-sm bg-gray-900/80 px-6 py-3 sm:rounded-xl sm:py-4 sm:pl-4 sm:px-3.5">
+        <div className="pointer-events-auto backdrop-blur-xs bg-gray-900/80 px-6 py-3 sm:rounded-xl sm:py-4 sm:pl-4 sm:px-3.5">
           <Link
             href="/"
             className="text-sm leading-6 text-white flex flex-wrap items-end justify-between gap-4 sm:gap-6 lg:items-center lg:gap-8"

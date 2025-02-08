@@ -14,7 +14,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               "bg-white/60",
               "ring-slate-100",
               "dark:bg-[#13141b]",
-              "backdrop-blur-sm",
+              "backdrop-blur-xs",
               "dark:ring-slate-300/20",
             )}
           />

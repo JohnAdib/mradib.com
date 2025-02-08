@@ -26,11 +26,11 @@ export function SectionImageFullWidth({ src, alt }: ISectionImageFullWidth) {
             "ring-gray-900/10",
             "hover:ring-gray-900/30",
             "dark:ring-white/10",
-            "hover:dark:ring-white/30",
+            "dark:hover:ring-white/30",
           )}
         />
         <div aria-hidden="true" className="relative hidden dark:block">
-          <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white/60 dark:from-[#13141b] pt-[7%]" />
+          <div className="absolute -inset-x-20 bottom-0 bg-linear-to-t from-white/60 dark:from-[#13141b] pt-[7%]" />
         </div>
       </div>
     </div>

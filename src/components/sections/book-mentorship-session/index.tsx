@@ -35,7 +35,7 @@ export function BookMentorshipSession({
           className={clsx(
             "h-[770px]",
             "w-full",
-            "lg:max-w-screen-sm",
+            "lg:max-w-(--breakpoint-sm)",
             "mx-auto",
             "my-12",
             "shadow-md",

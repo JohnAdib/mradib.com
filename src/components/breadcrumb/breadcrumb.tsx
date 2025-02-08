@@ -22,7 +22,7 @@ export function Breadcrumb({ list }: IBreadcrumb) {
                 "dark:text-slate-300 hover:text-slate-400",
               )}
             >
-              <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+              <HomeIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
               <span className="sr-only">Home</span>
             </Link>
           </div>
@@ -31,7 +31,7 @@ export function Breadcrumb({ list }: IBreadcrumb) {
           <li key={page.name}>
             <div className="flex items-center gap-2 md:gap-4">
               <ChevronLeftIcon
-                className="h-5 w-5 flex-shrink-0 text-slate-400"
+                className="h-5 w-5 shrink-0 text-slate-400"
                 aria-hidden="true"
               />
               <Link

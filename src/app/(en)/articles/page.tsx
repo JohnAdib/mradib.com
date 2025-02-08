@@ -21,8 +21,8 @@ export default async function ArticlesIndex() {
       <div
         className={clsx(
           "md:border-l md:border-zinc-100",
-          "rtl:md:pr-6",
-          "ltr:md:pl-6",
+          "md:rtl:pr-6",
+          "md:ltr:pl-6",
           "md:dark:border-zinc-700/40",
         )}
       >

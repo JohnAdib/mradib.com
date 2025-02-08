@@ -57,7 +57,7 @@ export function ArticleLayout({
                 "shadow-md shadow-zinc-800/5",
                 "ring-1 ring-zinc-900/5",
                 "lg:absolute",
-                "rtl:lg:-right-5",
+                "lg:rtl:-right-5",
                 "lg:-left-5",
                 "lg:-mt-2 lg:mb-0",
                 "xl:-top-1.5 xl:right-0 xl:mt-0",

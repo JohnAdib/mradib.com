@@ -12,7 +12,7 @@ export default function TestimonialsWithOverlappingImage() {
         )}
       >
         <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-          <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+          <div className="relative aspect-2/1 h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
             <img
               className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
               src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"

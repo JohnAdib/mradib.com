@@ -20,7 +20,7 @@ export function Page404() {
                 <div className="weight"></div>
               </div>
             </div>
-            <div className="pendulum shadow">
+            <div className="pendulum shadow-sm">
               <div className="bar"></div>
               <div className="motion">
                 <div className="string animate-pulse"></div>
