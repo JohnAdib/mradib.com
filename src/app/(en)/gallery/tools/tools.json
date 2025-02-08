@@ -416,16 +416,7 @@
         "href": "https://www.amazon.co.uk/dp/B079JS4FWM",
         "description": "Camera Bag with Side Access IPX5 Waterproof Camera Rucksack with Rain Cover RB02. 17L with dedicated space for a 15inch laptop, tripod and adjustable inner EPE dividers",
         "properties": [
-          { "key": "Capacity", "value": "27,650mAh" },
-          { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
-          {
-            "key": "Recharge Speed",
-            "value": "170W input, fully recharges in 37 min"
-          },
-          {
-            "key": "Airline Approved",
-            "value": "Meets TSA regulations (under 100Wh) for carry-on luggage."
-          },
+          { "key": "Capacity", "value": "17L" },
           { "key": "Weight", "value": "1550g" }
         ],
         "priceGBP": 54,
