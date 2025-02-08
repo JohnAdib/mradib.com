@@ -233,7 +233,7 @@
           { "key": "CRI/TLCI", "value": "97+/97+" },
           { "key": "Weight", "value": "6.85kg" }
         ],
-        "priceGBP": 260,
+        "priceGBP": 261,
         "compareAtPriceGBP": 400,
         "datetime": "2025-02-07"
       },
@@ -268,7 +268,7 @@
           { "key": "Grid Diameter", "value": "118cm" },
           { "key": "Weight", "value": "2.58kg" }
         ],
-        "priceGBP": 135,
+        "priceGBP": 136,
         "compareAtPriceGBP": 195,
         "datetime": "2025-02-07"
       }
