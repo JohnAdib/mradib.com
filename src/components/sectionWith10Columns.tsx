@@ -20,7 +20,12 @@ export function SectionWith10Columns({
       data-testid="section-with-10-columns"
       className="md:border-l md:border-zinc-100 md:px-6 md:dark:border-zinc-700/40"
     >
-      <div className={clsx("grid max-w-5xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-12", gap && "gap-x-10")}>
+      <div
+        className={clsx(
+          "grid max-w-5xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-12",
+          gap && "gap-x-10",
+        )}
+      >
         <h2
           id={id}
           className="text-sm font-semibold text-zinc-800 dark:text-zinc-100 md:col-span-2"

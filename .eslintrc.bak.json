@@ -1,18 +1,11 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "next",
-    "airbnb-typescript"
-  ],
+  "extends": ["eslint:recommended", "next", "airbnb-typescript"],
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "json-format",
-    "unicorn"
-  ],
+  "plugins": ["json-format", "unicorn"],
   "env": {
     "browser": true,
     "es2021": true,
@@ -20,18 +13,10 @@
     "es6": true,
     "jest": true
   },
-  "ignorePatterns": [
-    "node_modules",
-    "out",
-    "build",
-    "dist"
-  ],
+  "ignorePatterns": ["node_modules", "out", "build", "dist"],
   "rules": {
     "indent": "off",
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
+    "@typescript-eslint/indent": ["error", 2],
     "max-len": [
       "error",
       {
@@ -54,10 +39,7 @@
         "afterColon": true
       }
     ],
-    "space-in-parens": [
-      "error",
-      "never"
-    ],
+    "space-in-parens": ["error", "never"],
     "no-multiple-empty-lines": [
       "error",
       {
@@ -66,27 +48,18 @@
         "maxEOF": 0
       }
     ],
-    "curly": [
-      "error",
-      "all"
-    ],
-    "linebreak-style": [
-      0
-    ],
+    "curly": ["error", "all"],
+    "linebreak-style": [0],
     "no-underscore-dangle": [
       2,
       {
-        "allow": [
-          "_id"
-        ]
+        "allow": ["_id"]
       }
     ],
     "import/no-unresolved": [
       2,
       {
-        "ignore": [
-          "^@"
-        ]
+        "ignore": ["^@"]
       }
     ],
     "import/extensions": [
@@ -103,10 +76,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "**/*.stories.*",
-          "**/.storybook/**/*.*"
-        ],
+        "devDependencies": ["**/*.stories.*", "**/.storybook/**/*.*"],
         "peerDependencies": true
       }
     ],
@@ -121,15 +91,11 @@
       {
         "patterns": [
           {
-            "group": [
-              "**/dist/**"
-            ],
+            "group": ["**/dist/**"],
             "message": "imports from dist folder are not allowed."
           },
           {
-            "group": [
-              "**/node_modules/**"
-            ],
+            "group": ["**/node_modules/**"],
             "message": "imports from node_modules folder are not allowed."
           }
         ]
@@ -138,20 +104,12 @@
     "consistent-return": 2,
     "no-else-return": 1,
     "semi": "off",
-    "@typescript-eslint/semi": [
-      "error",
-      "always"
-    ],
+    "@typescript-eslint/semi": ["error", "always"],
     "space-unary-ops": 2,
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
     "unicorn/better-regex": "error",
@@ -164,12 +122,7 @@
     "no-console": [
       "error",
       {
-        "allow": [
-          "info",
-          "warn",
-          "debug",
-          "error"
-        ]
+        "allow": ["info", "warn", "debug", "error"]
       }
     ],
     "no-unused-vars": "off",

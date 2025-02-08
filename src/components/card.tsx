@@ -28,7 +28,11 @@ export function Card<T extends React.ElementType = "div">({
 
   return (
     <Component
-      className={clsx(className, "group relative flex flex-col items-start", returned && "opacity-50 line-through")}
+      className={clsx(
+        className,
+        "group relative flex flex-col items-start",
+        returned && "opacity-50 line-through",
+      )}
       data-testid="card"
     >
       {children}
@@ -120,7 +124,15 @@ Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
   );
 };
 
-Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { priceGBP?: number, compareAtPriceGBP?: number, datetime?: string }) {
+Card.Price = function CardPrice({
+  priceGBP,
+  compareAtPriceGBP,
+  datetime,
+}: {
+  priceGBP?: number;
+  compareAtPriceGBP?: number;
+  datetime?: string;
+}) {
   if (!priceGBP) return null;
 
   const dateObj = datetime ? new Date(datetime) : undefined;
@@ -129,22 +141,25 @@ Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { pri
   // convert GBP to USD
   const GBP2USD = 1.24;
   const priceUSD = priceGBP ? Math.round(priceGBP * GBP2USD) : null;
-  const compareAtUSD = compareAtPriceGBP ? Math.round(compareAtPriceGBP * GBP2USD) : null;
+  const compareAtUSD = compareAtPriceGBP
+    ? Math.round(compareAtPriceGBP * GBP2USD)
+    : null;
 
   // if user is in the UK, show pounds, otherwise show USD
   const isUK = true;
   // check location
 
-
   const priceStr = isUK ? `£${priceGBP?.toLocaleString()}` : `$${priceUSD}`;
-  const compareAtPriceStr = isUK ? `£${compareAtPriceGBP?.toLocaleString()}` : `$${compareAtUSD}`;
+  const compareAtPriceStr = isUK
+    ? `£${compareAtPriceGBP?.toLocaleString()}`
+    : `$${compareAtUSD}`;
 
   function CompareAtPrice() {
     if (!compareAtPriceGBP) return null;
     if (compareAtPriceGBP === priceGBP) return null;
     return (
       <span className="text-zinc-400 line-through">{compareAtPriceStr}</span>
-    )
+    );
   }
 
   return (

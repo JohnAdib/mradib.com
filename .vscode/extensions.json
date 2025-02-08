@@ -5,6 +5,6 @@
     "ms-vscode.vscode-typescript-next",
     "redhat.vscode-yaml",
     "csstools.postcss",
-    "bradlc.vscode-tailwindcss",
+    "bradlc.vscode-tailwindcss"
   ]
 }

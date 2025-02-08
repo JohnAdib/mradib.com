@@ -2,11 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -30,9 +26,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -45,10 +39,5 @@
     "*.json",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "package-lock.json",
-    "out/",
-    ".next"
-  ]
+  "exclude": ["node_modules", "package-lock.json", "out/", ".next"]
 }

@@ -1,7 +1,7 @@
-@import 'tailwindcss';
-@import './prism.css' layer(components);
-@import './star-animation.css' layer(components);
-@import './page-404.css' layer(components);
+@import "tailwindcss";
+@import "./prism.css" layer(components);
+@import "./star-animation.css" layer(components);
+@import "./page-404.css" layer(components);
 
 @config '../../tailwind.config.ts';
 
@@ -23,40 +23,39 @@
   }
 }
 
-html{
-    @apply h-full;
+html {
+  @apply h-full;
 }
 
-body{
-    @apply antialiased;
-    @apply flex h-full ;
-    @apply bg-zinc-50;
-    @apply dark:bg-black;
-    font-family: var(--font-en);
+body {
+  @apply antialiased;
+  @apply flex h-full;
+  @apply bg-zinc-50;
+  @apply dark:bg-black;
+  font-family: var(--font-en);
 }
 
-
-[dir="rtl"]{
-    font-family: var(--font-fa);
+[dir="rtl"] {
+  font-family: var(--font-fa);
 }
-[dir="ltr"]{
-    font-family: var(--font-en);
-}
-
-a[href^="/fa"]{
-    font-family: var(--font-fa);
-}
-a:not([href^="/fa"]){
-    font-family: var(--font-en);
+[dir="ltr"] {
+  font-family: var(--font-en);
 }
 
-::selection{
-    @apply text-[#E3FEF7];
-    @apply bg-[#003C43];
-    @apply dark:bg-[#135D66];
-    @apply dark:text-[#E3FEF7];
+a[href^="/fa"] {
+  font-family: var(--font-fa);
+}
+a:not([href^="/fa"]) {
+  font-family: var(--font-en);
 }
 
-kbd{
-    @apply px-2 py-1 mx-1 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500;
+::selection {
+  @apply text-[#E3FEF7];
+  @apply bg-[#003C43];
+  @apply dark:bg-[#135D66];
+  @apply dark:text-[#E3FEF7];
+}
+
+kbd {
+  @apply px-2 py-1 mx-1 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500;
 }

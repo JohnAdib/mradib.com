@@ -1,10 +1,10 @@
-#page404{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+#page404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
 #page404 .pyramid {
@@ -16,7 +16,7 @@
   transform: translateX(0);
   border-style: solid;
   border-width: 0 100vw 120vw 100vw;
-  border-color: transparent transparent #E8A653 transparent;
+  border-color: transparent transparent #e8a653 transparent;
 }
 
 #page404 .sand {
@@ -25,7 +25,7 @@
   width: 100%;
   height: 9vw;
   min-height: 8rem;
-  background: #FFBD4D;
+  background: #ffbd4d;
 }
 
 #page404 .ternary-system {
@@ -38,7 +38,7 @@
 #page404 .sun {
   position: relative;
   border-radius: 50%;
-  background: #FFDE72;
+  background: #ffde72;
 }
 
 #page404 .sun.primary {
@@ -92,7 +92,8 @@
   left: -65%;
   bottom: 0;
   transform-origin: 50% 0;
-  transform: translateX(-50%) scaleY(-1) scaleZ(2) rotateY(-30deg) rotateX(-75deg) translateZ(300px);
+  transform: translateX(-50%) scaleY(-1) scaleZ(2) rotateY(-30deg)
+    rotateX(-75deg) translateZ(300px);
 }
 
 #page404 .pendulum .bar {
@@ -134,7 +135,9 @@
   animation: swing 1600ms infinite ease-in-out;
 }
 
-#page404 .pendulum.shadow .bar, #page404 .pendulum.shadow .string, #page404 .pendulum.shadow .weight {
+#page404 .pendulum.shadow .bar,
+#page404 .pendulum.shadow .string,
+#page404 .pendulum.shadow .weight {
   background: #3d3a34;
 }
 
@@ -196,7 +199,7 @@
   }
 }
 @media only screen and (orientation: portrait) {
-    #page404 .text {
+  #page404 .text {
     right: 50%;
     top: 10%;
     transform: translateX(50%);

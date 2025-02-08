@@ -1,169 +1,205 @@
-[{
-  "category": "📸 Camera",
-  "items": [{
-    "title": "Canon EOS R8",
-    "href": "https://www.canon.co.uk/cameras/eos-r8/",
-    "description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes.",
-    "properties": [
-      { "key": "Sensor", "value": "24.2MP Full-Frame CMOS" },
-      { "key": "Video", "value": "4K 60p (oversampled from 6K), 10-bit C-Log 3" },
-      { "key": "Continuous Shooting", "value": "Up to 40fps (electronic shutter)" },
-      { "key": "Autofocus", "value": "Dual Pixel CMOS AF II (1,053 AF points)" },
-      { "key": "Weight", "value": "461g" }
-    ],
-    "priceGBP": 899,
-    "compareAtPriceGBP": 1630,
-    "datetime": "2024-11-05"
-  }]
-},
-{
-  "category": "👓 Lens",
-  "items": [{
-    "title": "Canon RF 24-240mm F4-6.3 IS USM",
-    "href": "https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/",
-    "description": "A portable, versatile 10x zoom lens for the EOS R system that’s ideal for everything from wide-angle landscapes to frame-filling portraits, and even close-up sport and wildlife. At just 750g, it's ideal for the travelling photographer. Built-in Image Stabilizer technology allows for hand-held shooting at shutter speeds up to 5 stops. Shoot everything with a single lens, from big landscapes to powerful portraits and frame-filling action shots.",
-    "properties": [
-      { "key": "Focal Length", "value": "24-240mm (10x zoom range)" },
-      { "key": "Aperture", "value": "f/4-6.3 (variable)" },
-      { "key": "Image Stabilizer", "value": "Up to 5 stops of Optical IS" },
-      { "key": "Filter Size", "value": "72mm" },
-      { "key": "Weight", "value": "750g" }
-    ],
-    "priceGBP": 909,
-    "compareAtPriceGBP": 1000,
-    "datetime": "2024-06-15"
+[
+  {
+    "category": "📸 Camera",
+    "items": [
+      {
+        "title": "Canon EOS R8",
+        "href": "https://www.canon.co.uk/cameras/eos-r8/",
+        "description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes.",
+        "properties": [
+          { "key": "Sensor", "value": "24.2MP Full-Frame CMOS" },
+          {
+            "key": "Video",
+            "value": "4K 60p (oversampled from 6K), 10-bit C-Log 3"
+          },
+          {
+            "key": "Continuous Shooting",
+            "value": "Up to 40fps (electronic shutter)"
+          },
+          {
+            "key": "Autofocus",
+            "value": "Dual Pixel CMOS AF II (1,053 AF points)"
+          },
+          { "key": "Weight", "value": "461g" }
+        ],
+        "priceGBP": 899,
+        "compareAtPriceGBP": 1630,
+        "datetime": "2024-11-05"
+      }
+    ]
   },
   {
-    "title": "K&F Concept 72MM UV Filter Nano-K MCUV",
-    "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
-    "description": "An ultra-slim, multi-coated UV filter with Japanese optical glass for clarity and protection. Nano-coating reduces reflections and glare, while the scratch-resistant, waterproof design ensures durability. The slim aluminum frame prevents vignetting.",
-    "properties": [
-      { "key": "Filter Size", "value": "72mm" },
-      { "key": "Weight", "value": "15g" }
-    ],
-    "priceGBP": 14,
-    "compareAtPriceGBP": 14,
-    "datetime": "2024-06-15"
+    "category": "👓 Lens",
+    "items": [
+      {
+        "title": "Canon RF 24-240mm F4-6.3 IS USM",
+        "href": "https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/",
+        "description": "A portable, versatile 10x zoom lens for the EOS R system that’s ideal for everything from wide-angle landscapes to frame-filling portraits, and even close-up sport and wildlife. At just 750g, it's ideal for the travelling photographer. Built-in Image Stabilizer technology allows for hand-held shooting at shutter speeds up to 5 stops. Shoot everything with a single lens, from big landscapes to powerful portraits and frame-filling action shots.",
+        "properties": [
+          { "key": "Focal Length", "value": "24-240mm (10x zoom range)" },
+          { "key": "Aperture", "value": "f/4-6.3 (variable)" },
+          { "key": "Image Stabilizer", "value": "Up to 5 stops of Optical IS" },
+          { "key": "Filter Size", "value": "72mm" },
+          { "key": "Weight", "value": "750g" }
+        ],
+        "priceGBP": 909,
+        "compareAtPriceGBP": 1000,
+        "datetime": "2024-06-15"
+      },
+      {
+        "title": "K&F Concept 72MM UV Filter Nano-K MCUV",
+        "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
+        "description": "An ultra-slim, multi-coated UV filter with Japanese optical glass for clarity and protection. Nano-coating reduces reflections and glare, while the scratch-resistant, waterproof design ensures durability. The slim aluminum frame prevents vignetting.",
+        "properties": [
+          { "key": "Filter Size", "value": "72mm" },
+          { "key": "Weight", "value": "15g" }
+        ],
+        "priceGBP": 14,
+        "compareAtPriceGBP": 14,
+        "datetime": "2024-06-15"
+      },
+      {
+        "title": "Canon EW-78F Lens Hood",
+        "href": "https://www.amazon.co.uk/dp/B07V44S8G1",
+        "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
+        "properties": [{ "key": "Weight", "value": "50g" }],
+        "priceGBP": 38,
+        "datetime": "2024-06-15"
+      },
+      {
+        "title": "Canon RF 50mm F1.8 STM",
+        "href": "https://www.canon.co.uk/lenses/rf-50mm-f1-8-stm/",
+        "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
+        "properties": [
+          { "key": "Focal Length", "value": "50mm (standard prime lens)" },
+          {
+            "key": "Aperture",
+            "value": "f/1.8 (wide aperture for low-light and bokeh)"
+          },
+          { "key": "Filter Size", "value": "43mm" },
+          { "key": "Weight", "value": "160g" }
+        ],
+        "priceGBP": 124,
+        "compareAtPriceGBP": 220,
+        "datetime": "2024-07-16"
+      },
+      {
+        "title": "K&F Concept 43mm UV Filter Nano-K MCUV",
+        "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
+        "description": "A multi-coated UV filter with Japanese optical glass for clarity and protection. Shields the lens from scratches, dust, and moisture with a lightweight aluminum frame to prevent vignetting.",
+        "properties": [
+          { "key": "Filter Size", "value": "43mm" },
+          { "key": "Weight", "value": "10g" }
+        ],
+        "priceGBP": 8,
+        "datetime": "2024-07-17"
+      }
+    ]
   },
   {
-    "title": "Canon EW-78F Lens Hood",
-    "href": "https://www.amazon.co.uk/dp/B07V44S8G1",
-    "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
-    "properties": [
-      { "key": "Weight", "value": "50g" }
-    ],
-    "priceGBP": 38,
-    "datetime": "2024-06-15"
+    "category": "🖨️ Printer",
+    "items": [
+      {
+        "title": "Canon Zoemini 2",
+        "href": "https://www.canon.co.uk/printers/zoemini-2/",
+        "description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
+        "priceGBP": 100,
+        "compareAtPriceGBP": 130,
+        "datetime": "2024-06-15",
+        "returned": true
+      },
+      {
+        "title": "Canon SELPHY CP1500",
+        "href": "https://www.canon.co.uk/printers/selphy-cp1500/",
+        "description": "A compact and wireless photo printer delivering high-quality, durable prints in seconds.",
+        "properties": [
+          {
+            "key": "Print Technology",
+            "value": "Dye-sublimation for vibrant, long-lasting photos"
+          },
+          { "key": "Print Size", "value": "Up to postcard (100 x 148mm)" },
+          { "key": "Print Speed", "value": "41 seconds per photo" },
+          { "key": "Weight", "value": "850g" }
+        ],
+        "priceGBP": 134,
+        "datetime": "2024-06-27"
+      },
+      {
+        "title": "DuraPro 1Pc 2000mAh Battery + Charger",
+        "href": "https://www.amazon.co.uk/dp/B07MR9W4BB",
+        "description": "Battery and charger for Canon SELPHY CP series printers, providing portable power for on-the-go printing.",
+        "properties": [
+          { "key": "Charge Time", "value": "4 Hours" },
+          { "key": "Weight", "value": "134g" }
+        ],
+        "priceGBP": 38,
+        "datetime": "2024-06-27"
+      }
+    ]
   },
   {
-    "title": "Canon RF 50mm F1.8 STM",
-    "href": "https://www.canon.co.uk/lenses/rf-50mm-f1-8-stm/",
-    "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
-    "properties": [
-      { "key": "Focal Length", "value": "50mm (standard prime lens)" },
-      { "key": "Aperture", "value": "f/1.8 (wide aperture for low-light and bokeh)" },
-      { "key": "Filter Size", "value": "43mm" },
-      { "key": "Weight", "value": "160g" }
-    ],
-    "priceGBP": 124,
-    "compareAtPriceGBP": 220,
-    "datetime": "2024-07-16"
+    "category": "📹 Video",
+    "items": [
+      {
+        "title": "Insta360 GO 3S",
+        "href": "https://www.insta360.com/product/insta360-go3s",
+        "description": "Tiny 4K camera for hands-free POV & Action Pod for remote control & live preview. Small camera, huge potential. Go completely hands-free and live in the moment! Set it and forget about it for easy, ultra-wide POV shots.",
+        "priceGBP": 370,
+        "datetime": "2024-06-15",
+        "returned": true
+      }
+    ]
   },
   {
-    "title": "K&F Concept 43mm UV Filter Nano-K MCUV",
-    "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
-    "description": "A multi-coated UV filter with Japanese optical glass for clarity and protection. Shields the lens from scratches, dust, and moisture with a lightweight aluminum frame to prevent vignetting.",
-    "properties": [
-      { "key": "Filter Size", "value": "43mm" },
-      { "key": "Weight", "value": "10g" }
-    ],
-    "priceGBP": 8,
-    "datetime": "2024-07-17"
+    "category": "🔋 Power Bank",
+    "items": [
+      {
+        "title": "Anker Prime 27,650mAh Power Bank (250W)",
+        "href": "https://www.anker.com/uk/products/a1340-250w-power-bank",
+        "description": "The power bank combines ultra-compact dynamic power, maximum charging speed for every port, the advanced ActiveShield™ 2.0 safety system, unparalleled compatibility, and Power Delivery 3.1 technology, ensuring efficient and secure charging for all your devices. Powered by the latest PD 3.1 technology, the power bank comes with 2 USB-C ports and 1 USB-A port to deliver up to 250W of power. The power bank is the size of a soda can with a capacity of 27,650mAh and can charge an iPhone 15 approximately 4 times. This power bank is 99.54Wh, which meets the requirements of the TSA (less than 100Wh) to be taken on airplanes as carry-on baggage.",
+        "properties": [
+          { "key": "Capacity", "value": "27,650mAh" },
+          { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
+          {
+            "key": "Recharge Speed",
+            "value": "170W input, fully recharges in 37 min"
+          },
+          {
+            "key": "Airline Approved",
+            "value": "Meets TSA regulations (under 100Wh) for carry-on luggage."
+          },
+          { "key": "Weight", "value": "667g" }
+        ],
+        "priceGBP": 126,
+        "compareAtPriceGBP": 180,
+        "datetime": "2024-06-06"
+      }
+    ]
+  },
+  {
+    "category": "🎒 Backpack",
+    "items": [
+      {
+        "title": "TARION Leather Camera Backpack Waterproof",
+        "href": "https://www.amazon.co.uk/dp/B079JS4FWM",
+        "description": "Camera Bag with Side Access IPX5 Waterproof Camera Rucksack with Rain Cover RB02. 17L with dedicated space for a 15inch laptop, tripod and adjustable inner EPE dividers",
+        "properties": [
+          { "key": "Capacity", "value": "27,650mAh" },
+          { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
+          {
+            "key": "Recharge Speed",
+            "value": "170W input, fully recharges in 37 min"
+          },
+          {
+            "key": "Airline Approved",
+            "value": "Meets TSA regulations (under 100Wh) for carry-on luggage."
+          },
+          { "key": "Weight", "value": "1550g" }
+        ],
+        "priceGBP": 54,
+        "compareAtPriceGBP": 60,
+        "datetime": "2024-06-15"
+      }
+    ]
   }
-]
-},
-{
-  "category": "🖨️ Printer",
-  "items": [{
-    "title": "Canon Zoemini 2",
-    "href": "https://www.canon.co.uk/printers/zoemini-2/",
-    "description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
-    "priceGBP": 100,
-    "compareAtPriceGBP": 130,
-    "datetime": "2024-06-15",
-    "returned": true
-  },
-  {
-    "title": "Canon SELPHY CP1500",
-    "href": "https://www.canon.co.uk/printers/selphy-cp1500/",
-    "description": "A compact and wireless photo printer delivering high-quality, durable prints in seconds.",
-    "properties": [
-      { "key":"Print Technology", "value":"Dye-sublimation for vibrant, long-lasting photos"},
-      { "key": "Print Size", "value": "Up to postcard (100 x 148mm)" },
-      { "key": "Print Speed", "value": "41 seconds per photo" },
-      { "key": "Weight", "value": "850g" }
-    ],
-    "priceGBP": 134,
-    "datetime": "2024-06-27"
-  },
-  {
-    "title": "DuraPro 1Pc 2000mAh Battery + Charger",
-    "href": "https://www.amazon.co.uk/dp/B07MR9W4BB",
-    "description": "Battery and charger for Canon SELPHY CP series printers, providing portable power for on-the-go printing.",
-    "properties": [
-      { "key": "Charge Time", "value": "4 Hours" },
-      { "key": "Weight", "value": "134g" }
-    ],
-    "priceGBP": 38,
-    "datetime": "2024-06-27"
-  }
-]
-},
-{
-  "category": "📹 Video",
-  "items": [{
-    "title": "Insta360 GO 3S",
-    "href": "https://www.insta360.com/product/insta360-go3s",
-    "description": "Tiny 4K camera for hands-free POV & Action Pod for remote control & live preview. Small camera, huge potential. Go completely hands-free and live in the moment! Set it and forget about it for easy, ultra-wide POV shots.",
-    "priceGBP": 370,
-    "datetime": "2024-06-15",
-    "returned": true
-  }]
-},
-{
-  "category": "🔋 Power Bank",
-  "items": [{
-    "title": "Anker Prime 27,650mAh Power Bank (250W)",
-    "href": "https://www.anker.com/uk/products/a1340-250w-power-bank",
-    "description": "The power bank combines ultra-compact dynamic power, maximum charging speed for every port, the advanced ActiveShield™ 2.0 safety system, unparalleled compatibility, and Power Delivery 3.1 technology, ensuring efficient and secure charging for all your devices. Powered by the latest PD 3.1 technology, the power bank comes with 2 USB-C ports and 1 USB-A port to deliver up to 250W of power. The power bank is the size of a soda can with a capacity of 27,650mAh and can charge an iPhone 15 approximately 4 times. This power bank is 99.54Wh, which meets the requirements of the TSA (less than 100Wh) to be taken on airplanes as carry-on baggage.",
-    "properties": [
-      { "key": "Capacity", "value": "27,650mAh" },
-      { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
-      { "key": "Recharge Speed", "value": "170W input, fully recharges in 37 min" },
-      { "key": "Airline Approved", "value": "Meets TSA regulations (under 100Wh) for carry-on luggage." },
-      { "key": "Weight", "value": "667g" }
-    ],
-    "priceGBP": 126,
-    "compareAtPriceGBP": 180,
-    "datetime": "2024-06-06"
-  }]
-},
-{
-  "category": "🎒 Backpack",
-  "items": [{
-    "title": "TARION Leather Camera Backpack Waterproof",
-    "href": "https://www.amazon.co.uk/dp/B079JS4FWM",
-    "description": "Camera Bag with Side Access IPX5 Waterproof Camera Rucksack with Rain Cover RB02. 17L with dedicated space for a 15inch laptop, tripod and adjustable inner EPE dividers",
-    "properties": [
-      { "key": "Capacity", "value": "27,650mAh" },
-      { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
-      { "key": "Recharge Speed", "value": "170W input, fully recharges in 37 min" },
-      { "key": "Airline Approved", "value": "Meets TSA regulations (under 100Wh) for carry-on luggage." },
-      { "key": "Weight", "value": "1550g" }
-    ],
-    "priceGBP": 54,
-    "compareAtPriceGBP": 60,
-    "datetime": "2024-06-15"
-  }]
-}
 ]

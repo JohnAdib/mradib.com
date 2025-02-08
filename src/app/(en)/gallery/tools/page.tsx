@@ -9,7 +9,7 @@ function ToolsSection({
   ...props
 }: React.ComponentPropsWithoutRef<typeof Section>) {
   return (
-    <Section{...props}>
+    <Section {...props}>
       <ul role="list" className="space-y-16" data-testid="tools-section-list">
         {children}
       </ul>
@@ -46,7 +46,11 @@ function Tool({
       </Card.Title>
       <Card.Description>{children}</Card.Description>
       <Card.Properties properties={properties} />
-      <Card.Price priceGBP={priceGBP} compareAtPriceGBP={compareAtPriceGBP} datetime={datetime} />
+      <Card.Price
+        priceGBP={priceGBP}
+        compareAtPriceGBP={compareAtPriceGBP}
+        datetime={datetime}
+      />
     </Card>
   );
 }
@@ -66,7 +70,7 @@ export default function Uses() {
         {tools.map((tool) => (
           <ToolsSection key={tool.category} title={tool.category}>
             {tool.items.map((item) => (
-              <Tool key={item.title} {...item} >
+              <Tool key={item.title} {...item}>
                 {item.description}
               </Tool>
             ))}

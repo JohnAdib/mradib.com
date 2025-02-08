@@ -11,9 +11,9 @@ export default [
     languageOptions: { globals: globals.browser },
     settings: {
       react: {
-        version: "detect"
-      }
-    }
+        version: "detect",
+      },
+    },
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
