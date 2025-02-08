@@ -254,6 +254,27 @@
     ]
   },
   {
+    "category": "🪟 Softbox",
+    "items": [
+      {
+        "title": "NEEWER 120cm Parabolic Softbox",
+        "href": "https://uk.neewer.com/products/neewer-cb300b-320w-bi-color-continuous-led-video-light-66603804",
+        "description": "Hexadecagon parabolic softbox with Bowens mount, quick setup, and foldable design. Features dual diffusers, a honeycomb grid for directional light, and durable 16-rib construction with carry bag.",
+        "properties": [
+          { "key": "Material", "value": "Oxford cloth, aluminum alloy" },
+          { "key": "Softbox Size After Opening", "value": "120 x 120 x 75cm" },
+          { "key": "External Diffuser Diameter", "value": "115cm" },
+          { "key": "Internal Diffuser Diameter", "value": "82cm" },
+          { "key": "Grid Diameter", "value": "118cm" },
+          { "key": "Weight", "value": "2.58kg" }
+        ],
+        "priceGBP": 135,
+        "compareAtPriceGBP": 195,
+        "datetime": "2025-02-07"
+      }
+    ]
+  },
+  {
     "category": "🪜 Light Stand",
     "items": [
       {
@@ -268,7 +289,7 @@
         ],
         "priceGBP": 260,
         "compareAtPriceGBP": 400,
-        "datetime": "2025-02-07"
+        "datetime": "2025-02-08"
       }
     ]
   },
@@ -294,7 +315,10 @@
         "href": "https://www.amazon.co.uk/dp/B00SR28VRW",
         "description": "PRO Photo Studio 100% Pure Polyester Collapsible Backdrop Background. Durable and anti-wrinkle in single piece seamless design with consistent white color. Made of 100% pure muslin.",
         "properties": [
-          { "key": "Size", "value": "Width 305cm (10ft) / Height 610cm (20ft)" },
+          {
+            "key": "Size",
+            "value": "Width 305cm (10ft) / Height 610cm (20ft)"
+          },
           { "key": "Weight", "value": "2.2kg" }
         ],
         "studio": true,
