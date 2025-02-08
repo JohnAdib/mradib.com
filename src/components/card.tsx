@@ -118,8 +118,11 @@ Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
   );
 };
 
-Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { priceGBP?: number, compareAtPriceGBP?: number, datetime?: Date }) {
+Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { priceGBP?: number, compareAtPriceGBP?: number, datetime?: string }) {
   if (!priceGBP) return null;
+
+  const dateObj = datetime ? new Date(datetime) : undefined;
+  const dateStr = dateObj ? dateObj.toLocaleDateString() : undefined;
 
   // convert GBP to USD
   const GBP2USD = 1.24;
@@ -127,7 +130,10 @@ Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { pri
   const compareAtUSD = compareAtPriceGBP ? Math.round(compareAtPriceGBP * GBP2USD) : null;
 
   // if user is in the UK, show pounds, otherwise show USD
-  const isUK = navigator.language === "en-GB";
+  const isUK = navigator.language === "en-GB" || true;
+  // check location
+
+
   const priceStr = isUK ? `£${priceGBP?.toLocaleString()}` : `$${priceUSD}`;
   const compareAtPriceStr = isUK ? `£${compareAtPriceGBP?.toLocaleString()}` : `$${compareAtUSD}`;
 
@@ -135,7 +141,7 @@ Card.Price = function CardPrice({ priceGBP, compareAtPriceGBP, datetime }: { pri
     <div
       aria-hidden="true"
       className="relative z-10 mt-2 flex gap-1 items-center text-sm font-medium text-teal-500"
-      title={datetime ? `at ${datetime.toLocaleDateString()}` : undefined}
+      title={dateStr}
     >
       {compareAtPriceGBP && <span className="text-zinc-400 line-through">{compareAtPriceStr}</span>}
       <span className="text-zinc-400">{priceStr}</span>
