@@ -1,5 +1,5 @@
 [{
-  "category": "Camera",
+  "category": "📸 Camera",
   "items": [{
     "title": "Canon EOS R8",
     "href": "https://www.canon.co.uk/cameras/eos-r8/",
@@ -17,7 +17,7 @@
   }]
 },
 {
-  "category": "Lens",
+  "category": "👓 Lens",
   "items": [{
     "title": "Canon RF 24-240mm F4-6.3 IS USM",
     "href": "https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/",
@@ -83,7 +83,7 @@
 ]
 },
 {
-  "category": "Printer",
+  "category": "🖨️ Printer",
   "items": [{
     "title": "Canon Zoemini 2",
     "href": "https://www.canon.co.uk/printers/zoemini-2/",
@@ -120,15 +120,18 @@
 ]
 },
 {
-  "category": "Video",
+  "category": "📹 Video",
   "items": [{
     "title": "Insta360 GO 3S",
     "href": "https://www.insta360.com/product/insta360-go3s",
-    "description": "Tiny 4K camera for hands-free POV & Action Pod for remote control & live preview. Small camera, huge potential. Go completely hands-free and live in the moment! Set it and forget about it for easy, ultra-wide POV shots."
+    "description": "Tiny 4K camera for hands-free POV & Action Pod for remote control & live preview. Small camera, huge potential. Go completely hands-free and live in the moment! Set it and forget about it for easy, ultra-wide POV shots.",
+    "priceGBP": 370,
+    "datetime": "2024-06-15",
+    "returned": true
   }]
 },
 {
-  "category": "Power Bank",
+  "category": "🔋 Power Bank",
   "items": [{
     "title": "Anker Prime 27,650mAh Power Bank (250W)",
     "href": "https://www.anker.com/uk/products/a1340-250w-power-bank",
@@ -138,11 +141,29 @@
       { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
       { "key": "Recharge Speed", "value": "170W input, fully recharges in 37 min" },
       { "key": "Airline Approved", "value": "Meets TSA regulations (under 100Wh) for carry-on luggage." },
-      { "key": "Weight", "value": "667" }
+      { "key": "Weight", "value": "667g" }
     ],
     "priceGBP": 126,
     "compareAtPriceGBP": 180,
     "datetime": "2024-06-06"
+  }]
+},
+{
+  "category": "🎒 Backpack",
+  "items": [{
+    "title": "TARION Leather Camera Backpack Waterproof",
+    "href": "https://www.amazon.co.uk/dp/B079JS4FWM",
+    "description": "Camera Bag with Side Access IPX5 Waterproof Camera Rucksack with Rain Cover RB02. 17L with dedicated space for a 15inch laptop, tripod and adjustable inner EPE dividers",
+    "properties": [
+      { "key": "Capacity", "value": "27,650mAh" },
+      { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
+      { "key": "Recharge Speed", "value": "170W input, fully recharges in 37 min" },
+      { "key": "Airline Approved", "value": "Meets TSA regulations (under 100Wh) for carry-on luggage." },
+      { "key": "Weight", "value": "1550g" }
+    ],
+    "priceGBP": 54,
+    "compareAtPriceGBP": 60,
+    "datetime": "2024-06-15"
   }]
 }
 ]
