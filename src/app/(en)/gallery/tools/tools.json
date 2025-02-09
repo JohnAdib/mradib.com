@@ -257,20 +257,20 @@
     "category": "🪟 Softbox",
     "items": [
       {
-        "title": "NEEWER 120cm Parabolic Softbox",
-        "href": "https://uk.neewer.com/products/neewer-cb300b-320w-bi-color-continuous-led-video-light-66603804",
-        "description": "Hexadecagon parabolic softbox with Bowens mount, quick setup, and foldable design. Features dual diffusers, a honeycomb grid for directional light, and durable 16-rib construction with carry bag.",
+        "title": "NEEWER 85cm Softbox Parabolic Hexadecagon",
+        "href": "https://uk.neewer.com/products/neewer-ns85u-33-5-85cm-softbox-parabolic-hexadecagon-66602885?variant=47426274427179&country=GB&currency=GBP&gad_source=1&gclid=CjwKCAiAwaG9BhAREiwAdhv6Y7iHLtseIhT3Dd0-vc_N6SGS8U6fCXDfccsWB22fLlg2gT9_RJUW1RoC24EQAvD_BwE",
+        "description": "Hexadecagon parabolic softbox collapsible beauty dish features an opening size of 85 x 39cm, quick setup, and foldable design. Features dual diffusers, a honeycomb grid for directional light, and durable 16-rib construction with carry bag.",
         "properties": [
           { "key": "Material", "value": "Oxford cloth, aluminum alloy" },
-          { "key": "Softbox Size After Opening", "value": "120 x 120 x 75cm" },
-          { "key": "External Diffuser Diameter", "value": "115cm" },
-          { "key": "Internal Diffuser Diameter", "value": "82cm" },
-          { "key": "Grid Diameter", "value": "118cm" },
-          { "key": "Weight", "value": "2.58kg" }
+          { "key": "Softbox Size After Opening", "value": "85 x 85 x 39cm" },
+          { "key": "External Diffuser Diameter", "value": "83cm" },
+          { "key": "Internal Diffuser Diameter", "value": "65cm" },
+          { "key": "Grid Diameter", "value": "84cm" },
+          { "key": "Weight", "value": "1.84kg" }
         ],
-        "priceGBP": 136,
-        "compareAtPriceGBP": 195,
-        "datetime": "2025-02-07"
+        "priceGBP": 101,
+        "compareAtPriceGBP": 115,
+        "datetime": "2025-02-09"
       }
     ]
   },
