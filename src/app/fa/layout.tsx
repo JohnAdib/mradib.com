@@ -5,13 +5,13 @@ import "@/styles/tailwind.css";
 export const metadata = rootMetadataFa;
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <div className="flex w-full" dir="rtl" lang="fa">
-      <Layout>{children}</Layout>
-    </div>
-  );
+	return (
+		<div className="flex w-full" dir="rtl" lang="fa">
+			<Layout>{children}</Layout>
+		</div>
+	);
 }

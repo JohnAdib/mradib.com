@@ -1,6 +1,6 @@
 export interface IListActionVerbs {
-  group: string;
-  title: string;
-  description: string;
-  list: string[];
+	group: string;
+	title: string;
+	description: string;
+	list: string[];
 }

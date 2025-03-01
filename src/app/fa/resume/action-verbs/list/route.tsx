@@ -4,7 +4,7 @@ import { getAllActionVerbs } from "./get-all-action-verbs";
 export const dynamic = "force-static";
 
 export const GET = async () => {
-  const response = NextResponse.json(getAllActionVerbs());
+	const response = NextResponse.json(getAllActionVerbs());
 
-  return response;
+	return response;
 };

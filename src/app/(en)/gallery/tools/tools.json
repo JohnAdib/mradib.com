@@ -1,432 +1,432 @@
 [
-  {
-    "category": "📸 Camera",
-    "items": [
-      {
-        "title": "Canon EOS R8",
-        "href": "https://www.canon.co.uk/cameras/eos-r8/",
-        "description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes.",
-        "properties": [
-          { "key": "Sensor", "value": "24.2MP Full-Frame CMOS" },
-          {
-            "key": "Video",
-            "value": "4K 60p (oversampled from 6K), 10-bit C-Log 3"
-          },
-          {
-            "key": "Continuous Shooting",
-            "value": "Up to 40fps (electronic shutter)"
-          },
-          {
-            "key": "Autofocus",
-            "value": "Dual Pixel CMOS AF II (1,053 AF points)"
-          },
-          { "key": "Battery", "value": "LP-E17" },
-          { "key": "Weight", "value": "461g" }
-        ],
-        "priceGBP": 899,
-        "compareAtPriceGBP": 1630,
-        "datetime": "2024-11-05"
-      }
-    ]
-  },
-  {
-    "category": "👓 Lens",
-    "items": [
-      {
-        "title": "Canon RF 24-240mm F4-6.3 IS USM",
-        "href": "https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/",
-        "description": "A portable, versatile 10x zoom lens for the EOS R system that’s ideal for everything from wide-angle landscapes to frame-filling portraits, and even close-up sport and wildlife. At just 750g, it's ideal for the travelling photographer. Built-in Image Stabilizer technology allows for hand-held shooting at shutter speeds up to 5 stops. Shoot everything with a single lens, from big landscapes to powerful portraits and frame-filling action shots.",
-        "properties": [
-          { "key": "Focal Length", "value": "24-240mm (10x zoom range)" },
-          { "key": "Aperture", "value": "f/4-6.3 (variable)" },
-          { "key": "Image Stabilizer", "value": "Up to 5 stops of Optical IS" },
-          { "key": "Filter Size", "value": "72mm" },
-          { "key": "Weight", "value": "750g" }
-        ],
-        "priceGBP": 909,
-        "compareAtPriceGBP": 1000,
-        "datetime": "2024-06-15"
-      },
-      {
-        "title": "K&F Concept 72MM UV Filter Nano-K MCUV",
-        "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
-        "description": "An ultra-slim, multi-coated UV filter with Japanese optical glass for clarity and protection. Nano-coating reduces reflections and glare, while the scratch-resistant, waterproof design ensures durability. The slim aluminum frame prevents vignetting.",
-        "properties": [
-          { "key": "Filter Size", "value": "72mm" },
-          { "key": "Weight", "value": "15g" }
-        ],
-        "priceGBP": 14,
-        "compareAtPriceGBP": 14,
-        "datetime": "2024-06-15"
-      },
-      {
-        "title": "Canon EW-78F Lens Hood",
-        "href": "https://www.amazon.co.uk/dp/B07V44S8G1",
-        "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
-        "properties": [{ "key": "Weight", "value": "50g" }],
-        "priceGBP": 38,
-        "datetime": "2024-06-15"
-      },
-      {
-        "title": "Canon RF 50mm F1.8 STM",
-        "href": "https://www.canon.co.uk/lenses/rf-50mm-f1-8-stm/",
-        "description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
-        "properties": [
-          { "key": "Focal Length", "value": "50mm (standard prime lens)" },
-          {
-            "key": "Aperture",
-            "value": "f/1.8 (wide aperture for low-light and bokeh)"
-          },
-          { "key": "Filter Size", "value": "43mm" },
-          { "key": "Weight", "value": "160g" }
-        ],
-        "priceGBP": 124,
-        "compareAtPriceGBP": 220,
-        "datetime": "2024-07-16"
-      },
-      {
-        "title": "K&F Concept 43mm UV Filter Nano-K MCUV",
-        "href": "https://www.amazon.co.uk/dp/B07R5W1R42",
-        "description": "A multi-coated UV filter with Japanese optical glass for clarity and protection. Shields the lens from scratches, dust, and moisture with a lightweight aluminum frame to prevent vignetting.",
-        "properties": [
-          { "key": "Filter Size", "value": "43mm" },
-          { "key": "Weight", "value": "10g" }
-        ],
-        "priceGBP": 8,
-        "datetime": "2024-07-17"
-      }
-    ]
-  },
-  {
-    "category": "🔋 Battery & Charger",
-    "items": [
-      {
-        "title": "llano LP-E17 18W Charger + 2x Battery",
-        "href": "https://www.amazon.co.uk/dp/B0CTY8BRK3",
-        "description": "Employing 18W QC3.0 and PD3.0 technology. Capable of charging two batteries simultaneously or independently with a single USB-C port.",
-        "properties": [
-          { "key": "Battery", "value": "2x LP-E17" },
-          { "key": "Full Charge Time", "value": "135 minutes" },
-          { "key": "Weight", "value": "320g" }
-        ],
-        "priceGBP": 76,
-        "compareAtPriceGBP": 85,
-        "datetime": "2025-02-04"
-      }
-    ]
-  },
+	{
+		"category": "📸 Camera",
+		"items": [
+			{
+				"title": "Canon EOS R8",
+				"href": "https://www.canon.co.uk/cameras/eos-r8/",
+				"description": "A lightweight, travel-friendly, full-frame camera body, the Canon EOS R8 Mirrorless Camera offers powerful photo and video capabilities for both photographers and multimedia content creators. Utilising a newly developed sensor, the R8 features a 24.2MP CMOS sensor paired with a DIGIC X processor. Together, this combination provides outstanding stills performance, impressive 4K 60p 10-bit video, and fast auto focus. A perfect choice for low-light portrait photography and wide, expansive landscapes.",
+				"properties": [
+					{ "key": "Sensor", "value": "24.2MP Full-Frame CMOS" },
+					{
+						"key": "Video",
+						"value": "4K 60p (oversampled from 6K), 10-bit C-Log 3"
+					},
+					{
+						"key": "Continuous Shooting",
+						"value": "Up to 40fps (electronic shutter)"
+					},
+					{
+						"key": "Autofocus",
+						"value": "Dual Pixel CMOS AF II (1,053 AF points)"
+					},
+					{ "key": "Battery", "value": "LP-E17" },
+					{ "key": "Weight", "value": "461g" }
+				],
+				"priceGBP": 899,
+				"compareAtPriceGBP": 1630,
+				"datetime": "2024-11-05"
+			}
+		]
+	},
+	{
+		"category": "👓 Lens",
+		"items": [
+			{
+				"title": "Canon RF 24-240mm F4-6.3 IS USM",
+				"href": "https://www.canon.co.uk/lenses/rf-24-240mm-f4-6-3-is-usm/",
+				"description": "A portable, versatile 10x zoom lens for the EOS R system that’s ideal for everything from wide-angle landscapes to frame-filling portraits, and even close-up sport and wildlife. At just 750g, it's ideal for the travelling photographer. Built-in Image Stabilizer technology allows for hand-held shooting at shutter speeds up to 5 stops. Shoot everything with a single lens, from big landscapes to powerful portraits and frame-filling action shots.",
+				"properties": [
+					{ "key": "Focal Length", "value": "24-240mm (10x zoom range)" },
+					{ "key": "Aperture", "value": "f/4-6.3 (variable)" },
+					{ "key": "Image Stabilizer", "value": "Up to 5 stops of Optical IS" },
+					{ "key": "Filter Size", "value": "72mm" },
+					{ "key": "Weight", "value": "750g" }
+				],
+				"priceGBP": 909,
+				"compareAtPriceGBP": 1000,
+				"datetime": "2024-06-15"
+			},
+			{
+				"title": "K&F Concept 72MM UV Filter Nano-K MCUV",
+				"href": "https://www.amazon.co.uk/dp/B07R5W1R42",
+				"description": "An ultra-slim, multi-coated UV filter with Japanese optical glass for clarity and protection. Nano-coating reduces reflections and glare, while the scratch-resistant, waterproof design ensures durability. The slim aluminum frame prevents vignetting.",
+				"properties": [
+					{ "key": "Filter Size", "value": "72mm" },
+					{ "key": "Weight", "value": "15g" }
+				],
+				"priceGBP": 14,
+				"compareAtPriceGBP": 14,
+				"datetime": "2024-06-15"
+			},
+			{
+				"title": "Canon EW-78F Lens Hood",
+				"href": "https://www.amazon.co.uk/dp/B07V44S8G1",
+				"description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
+				"properties": [{ "key": "Weight", "value": "50g" }],
+				"priceGBP": 38,
+				"datetime": "2024-06-15"
+			},
+			{
+				"title": "Canon RF 50mm F1.8 STM",
+				"href": "https://www.canon.co.uk/lenses/rf-50mm-f1-8-stm/",
+				"description": "A lightweight, petal-shaped lens hood designed to reduce flare, enhance contrast, and protect the lens from bumps and scratches. Features a secure bayonet mount for easy attachment.",
+				"properties": [
+					{ "key": "Focal Length", "value": "50mm (standard prime lens)" },
+					{
+						"key": "Aperture",
+						"value": "f/1.8 (wide aperture for low-light and bokeh)"
+					},
+					{ "key": "Filter Size", "value": "43mm" },
+					{ "key": "Weight", "value": "160g" }
+				],
+				"priceGBP": 124,
+				"compareAtPriceGBP": 220,
+				"datetime": "2024-07-16"
+			},
+			{
+				"title": "K&F Concept 43mm UV Filter Nano-K MCUV",
+				"href": "https://www.amazon.co.uk/dp/B07R5W1R42",
+				"description": "A multi-coated UV filter with Japanese optical glass for clarity and protection. Shields the lens from scratches, dust, and moisture with a lightweight aluminum frame to prevent vignetting.",
+				"properties": [
+					{ "key": "Filter Size", "value": "43mm" },
+					{ "key": "Weight", "value": "10g" }
+				],
+				"priceGBP": 8,
+				"datetime": "2024-07-17"
+			}
+		]
+	},
+	{
+		"category": "🔋 Battery & Charger",
+		"items": [
+			{
+				"title": "llano LP-E17 18W Charger + 2x Battery",
+				"href": "https://www.amazon.co.uk/dp/B0CTY8BRK3",
+				"description": "Employing 18W QC3.0 and PD3.0 technology. Capable of charging two batteries simultaneously or independently with a single USB-C port.",
+				"properties": [
+					{ "key": "Battery", "value": "2x LP-E17" },
+					{ "key": "Full Charge Time", "value": "135 minutes" },
+					{ "key": "Weight", "value": "320g" }
+				],
+				"priceGBP": 76,
+				"compareAtPriceGBP": 85,
+				"datetime": "2025-02-04"
+			}
+		]
+	},
 
-  {
-    "category": "💾 Memory Card",
-    "items": [
-      {
-        "title": "Kingston 64GB SDXC UHS-II U3 V90",
-        "href": "https://www.amazon.co.uk/dp/B09XC5GG83",
-        "description": "High-speed SD card for professional 4K/8K recording and continuous shooting, ensuring smooth performance and durability.",
-        "properties": [
-          { "key": "Speed Class", "value": "UHS-II Class 10 U3 V90" },
-          { "key": "Read speed", "value": "300MB/s" },
-          { "key": "Write speed", "value": "260MB/s" },
-          { "key": "Weight", "value": "10g" }
-        ],
-        "priceGBP": 47,
-        "datetime": "2024-06-15"
-      },
-      {
-        "title": "SanDisk 128GB SDXC UHS-I U3 V30",
-        "href": "https://www.amazon.co.uk/dp/B09X7FXHVJ",
-        "description": "Ideal for burst photography, and reliable backup in tough conditions.",
-        "properties": [
-          { "key": "Speed Class", "value": "UHS-I Class 10 U3 V30" },
-          { "key": "Read speed", "value": "200MB/s" },
-          { "key": "Write speed", "value": "90MB/s" },
-          { "key": "Weight", "value": "2g" }
-        ],
-        "priceGBP": 20,
-        "compareAtPriceGBP": 27,
-        "datetime": "2024-07-24"
-      }
-    ]
-  },
-  {
-    "category": "⏳ Card Reader",
-    "items": [
-      {
-        "title": "Apple USB-C to SD Card Reader",
-        "href": "https://www.apple.com/uk/shop/product/MW653ZM/A/usb-c-to-sd-card-reader",
-        "description": "Transfers photos and videos at UHS-II speeds to USB-C-enabled Mac, iPad or iPhone",
-        "properties": [{ "key": "Weight", "value": "20g" }],
-        "priceGBP": 39,
-        "datetime": "2024-06-19"
-      }
-    ]
-  },
-  {
-    "category": "🪜 Tripod",
-    "items": [
-      {
-        "title": "2-in-1 Invisible Selfie Stick + Tripod",
-        "href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
-        "description": "Foldable 2-in-1 selfie stick and tripod with a 1/4 standard screw.",
-        "properties": [
-          { "key": "1/4 Screw", "value": "Yes" },
-          { "key": "Weight", "value": "216g" }
-        ],
-        "priceGBP": 27,
-        "datetime": "2023-12-30"
-      }
-    ]
-  },
-  {
-    "category": "📱 Phone Holder",
-    "items": [
-      {
-        "title": "CAMOLO Metal Phone Holder",
-        "href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
-        "description": "High-quality metal phone tripod mount with 360° rotation, 135° tilt, Arca Swiss compatibility, and four cold shoes. Supports multiple accessories for vlogging, live streaming, and photography. Perfect for mounting a phone on top of a camera for recording.",
-        "properties": [{ "key": "Weight", "value": "137g" }],
-        "priceGBP": 18,
-        "compareAtPriceGBP": 24,
-        "datetime": "2024-06-23"
-      }
-    ]
-  },
-  {
-    "category": "🔦 Speedlite Flash",
-    "items": [
-      {
-        "title": "NEEWER Z2-C 2600mAh Battery TTL Round Head",
-        "href": "https://uk.neewer.com/products/neewer-z2-c-ttl-round-head-flash-speedlite-for-canon-66603347",
-        "description": "Powerful speedlight with enhanced UI, instant TTL/M mode switch, and 2.4G wireless control. Features 76Ws output, adjustable LED modeling lamps, and flexible bounce angles.",
-        "properties": [
-          {
-            "key": "Battery",
-            "value": "7.4V 2600mAh lithium battery - 480 flashes!"
-          },
-          { "key": "Maximum Flash Power", "value": "76Ws" },
-          {
-            "key": "Effective Range",
-            "value": "Central: 0.6-10m / Edge: 0.6-5m"
-          },
-          { "key": "Color Temperature", "value": "5600K ±200K (warm white)" },
-          { "key": "Flash ", "value": "Yes" },
-          { "key": "TTL", "value": "Yes" },
-          { "key": "Weight", "value": "580g" }
-        ],
-        "priceGBP": 153,
-        "compareAtPriceGBP": 250,
-        "datetime": "2025-02-03"
-      }
-    ]
-  },
-  {
-    "category": "💡 Video Light",
-    "items": [
-      {
-        "title": "NEEWER CB300B 320W LED Video Light",
-        "href": "https://uk.neewer.com/products/neewer-cb300b-320w-bi-color-continuous-led-video-light-66603804",
-        "description": "with 2.4G/APP Remote Control, All Metal Bi Color COB Continuous Output Lighting with Bowens Mount 150000lux/1m 2700K-6500K CRI/TLCI97+ 12 Effects for Video. Suitable as a key light for vivid, attractive camera photo shooting with 28db ultra-low noise.",
-        "properties": [
-          { "key": "Maximum Power", "value": "320W" },
-          { "key": "Maximum Illumination", "value": "150000lux/1m" },
-          { "key": "Color Temperature", "value": "2700K-6500K" },
-          { "key": "CRI/TLCI", "value": "97+/97+" },
-          { "key": "Weight", "value": "6.85kg" }
-        ],
-        "priceGBP": 261,
-        "compareAtPriceGBP": 400,
-        "datetime": "2025-02-07"
-      },
-      {
-        "title": "Godox LITEMONS LED 6R RGB",
-        "href": "https://www.godox.com/product-d/LED6R-LED6Bi.html",
-        "description": "Compact and lightweight RGB light with adjustable color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
-        "properties": [
-          { "key": "Battery Capacity", "value": "1800mAh (2-10 hours)" },
-          { "key": "Color Temperature", "value": "3200K–6500K" },
-          { "key": "CRI", "value": "95" },
-          { "key": "Weight", "value": "110g" }
-        ],
-        "priceGBP": 25,
-        "compareAtPriceGBP": 30,
-        "datetime": "2024-06-24"
-      }
-    ]
-  },
-  {
-    "category": "🪟 Softbox",
-    "items": [
-      {
-        "title": "NEEWER 85cm Softbox Parabolic Hexadecagon",
-        "href": "https://uk.neewer.com/products/neewer-ns85u-33-5-85cm-softbox-parabolic-hexadecagon-66602885?variant=47426274427179&country=GB&currency=GBP&gad_source=1&gclid=CjwKCAiAwaG9BhAREiwAdhv6Y7iHLtseIhT3Dd0-vc_N6SGS8U6fCXDfccsWB22fLlg2gT9_RJUW1RoC24EQAvD_BwE",
-        "description": "Hexadecagon parabolic softbox collapsible beauty dish features an opening size of 85 x 39cm, quick setup, and foldable design. Features dual diffusers, a honeycomb grid for directional light, and durable 16-rib construction with carry bag.",
-        "properties": [
-          { "key": "Material", "value": "Oxford cloth, aluminum alloy" },
-          { "key": "Softbox Size After Opening", "value": "85 x 85 x 39cm" },
-          { "key": "External Diffuser Diameter", "value": "83cm" },
-          { "key": "Internal Diffuser Diameter", "value": "65cm" },
-          { "key": "Grid Diameter", "value": "84cm" },
-          { "key": "Weight", "value": "1.84kg" }
-        ],
-        "priceGBP": 101,
-        "compareAtPriceGBP": 115,
-        "datetime": "2025-02-09"
-      }
-    ]
-  },
-  {
-    "category": "🪜 Light Stand",
-    "items": [
-      {
-        "title": "NEEWER 2 Pack Air Cushioned Aluminum Light Stand 3m with Boom Arm",
-        "href": "https://uk.neewer.com/products/neewer-2-pack-air-cushioned-aluminum-light-stand-66602511",
-        "description": "Versatile 3m air-cushioned light stand with a 1.55m extendable boom arm, 5kg load capacity, and sturdy metal build. Includes 1kg counterweight and sandbag for extra stability. Adjustable height and arm length with a 1/4\"-3/8\" screw adapter for compatibility with various photography gear. Ideal for indoor and outdoor use.",
-        "properties": [
-          { "key": "Mounting Points", "value": "double ended, 1/4\" to 3/8\"" },
-          { "key": "Height", "value": "106cm - 3m (3.5ft–9.8ft)" },
-          { "key": "Stand Weight", "value": "1.5kg" },
-          { "key": "Arm Length", "value": "Max 155cm Min 89cm" },
-          { "key": "Arm Weight", "value": "980g" },
-          { "key": "Max Vertical Load Capacity", "value": "10kg" },
-          { "key": "Max Horizontal Load Capacity", "value": "5kg" },
-          { "key": "Weight", "value": "4kg" }
-        ],
-        "priceGBP": 112,
-        "compareAtPriceGBP": 180,
-        "datetime": "2025-02-09"
-      }
-    ]
-  },
-  {
-    "category": "🖼️ Backdrop & Stand",
-    "items": [
-      {
-        "title": "NEEWER NK-ST300 10x8ft Backdrop Stand",
-        "href": "https://www.amazon.co.uk/gp/product/B0CQ7T2BV7",
-        "description": "NEEWER Backdrop Stand Heavy Duty with Widened Bases, 10x8ft Background Stand with 4 Crossbars, 2 Telescopic Poles, 4 Spring Clips, and Carrying Bag. With four detachable crossbars (two upper, two lower) and two telescopic extension poles, this adjustable backdrop stand easily adjust width from 5.9ft/180cm to 9.8ft/300cm by adding or removing crossbars, and set at your preferred height from 3.2ft/98cm to 8ft/245cm with a simple twist",
-        "properties": [
-          { "key": "Width", "value": "Max 315cm (10ft) / Min 173cm (5.7ft)" },
-          { "key": "Height", "value": "Max 245cm (8ft) / Min 96cm (3.1ft)" },
-          { "key": "Weight", "value": "6.19kg" }
-        ],
-        "studio": true,
-        "priceGBP": 97,
-        "compareAtPriceGBP": 103,
-        "datetime": "2025-02-07"
-      },
-      {
-        "title": "Neewer 10x20FT Collapsible White Backdrop Background",
-        "href": "https://www.amazon.co.uk/dp/B00SR28VRW",
-        "description": "PRO Photo Studio 100% Pure Polyester Collapsible Backdrop Background. Durable and anti-wrinkle in single piece seamless design with consistent white color. Made of 100% pure muslin.",
-        "properties": [
-          {
-            "key": "Size",
-            "value": "Width 305cm (10ft) / Height 610cm (20ft)"
-          },
-          { "key": "Weight", "value": "2.2kg" }
-        ],
-        "studio": true,
-        "priceGBP": 52,
-        "compareAtPriceGBP": 58,
-        "datetime": "2025-02-07"
-      }
-    ]
-  },
-  {
-    "category": "🖨️ Printer",
-    "items": [
-      {
-        "title": "Canon Zoemini 2",
-        "href": "https://www.canon.co.uk/printers/zoemini-2/",
-        "description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
-        "priceGBP": 100,
-        "compareAtPriceGBP": 130,
-        "datetime": "2024-06-15",
-        "returned": true
-      },
-      {
-        "title": "Canon SELPHY CP1500",
-        "href": "https://www.canon.co.uk/printers/selphy-cp1500/",
-        "description": "A compact and wireless photo printer delivering high-quality, durable prints in seconds.",
-        "properties": [
-          {
-            "key": "Print Technology",
-            "value": "Dye-sublimation for vibrant, long-lasting photos"
-          },
-          { "key": "Print Size", "value": "Up to postcard (100 x 148mm)" },
-          { "key": "Print Speed", "value": "41 seconds per photo" },
-          { "key": "Weight", "value": "850g" }
-        ],
-        "priceGBP": 134,
-        "datetime": "2024-06-27"
-      },
-      {
-        "title": "DuraPro 1Pc 2000mAh Battery + Charger",
-        "href": "https://www.amazon.co.uk/dp/B07MR9W4BB",
-        "description": "Battery and charger for Canon SELPHY CP series printers, providing portable power for on-the-go printing.",
-        "properties": [
-          { "key": "Charge Time", "value": "4 Hours" },
-          { "key": "Weight", "value": "134g" }
-        ],
-        "priceGBP": 38,
-        "datetime": "2024-06-27"
-      }
-    ]
-  },
-  {
-    "category": "📹 Video",
-    "items": [
-      {
-        "title": "Insta360 GO 3S",
-        "href": "https://www.insta360.com/product/insta360-go3s",
-        "description": "Tiny 4K camera for hands-free POV & Action Pod for remote control & live preview. Small camera, huge potential. Go completely hands-free and live in the moment! Set it and forget about it for easy, ultra-wide POV shots.",
-        "priceGBP": 370,
-        "datetime": "2024-06-15",
-        "returned": true
-      }
-    ]
-  },
-  {
-    "category": "⚡️ Power Bank",
-    "items": [
-      {
-        "title": "Anker Prime 27,650mAh Power Bank (250W)",
-        "href": "https://www.anker.com/uk/products/a1340-250w-power-bank",
-        "description": "The power bank combines ultra-compact dynamic power, maximum charging speed for every port, the advanced ActiveShield™ 2.0 safety system, unparalleled compatibility, and Power Delivery 3.1 technology, ensuring efficient and secure charging for all your devices. Powered by the latest PD 3.1 technology, the power bank comes with 2 USB-C ports and 1 USB-A port to deliver up to 250W of power. The power bank is the size of a soda can with a capacity of 27,650mAh and can charge an iPhone 15 approximately 4 times. This power bank is 99.54Wh, which meets the requirements of the TSA (less than 100Wh) to be taken on airplanes as carry-on baggage.",
-        "properties": [
-          { "key": "Capacity", "value": "27,650mAh" },
-          { "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
-          {
-            "key": "Recharge Speed",
-            "value": "170W input, fully recharges in 37 min"
-          },
-          {
-            "key": "Airline Approved",
-            "value": "Meets TSA regulations (under 100Wh) for carry-on luggage."
-          },
-          { "key": "Weight", "value": "667g" }
-        ],
-        "priceGBP": 126,
-        "compareAtPriceGBP": 180,
-        "datetime": "2024-06-06"
-      }
-    ]
-  },
-  {
-    "category": "🎒 Backpack",
-    "items": [
-      {
-        "title": "TARION Leather Camera Backpack Waterproof",
-        "href": "https://www.amazon.co.uk/dp/B079JS4FWM",
-        "description": "Camera Bag with Side Access IPX5 Waterproof Camera Rucksack with Rain Cover RB02. 17L with dedicated space for a 15inch laptop, tripod and adjustable inner EPE dividers",
-        "properties": [
-          { "key": "Capacity", "value": "17L" },
-          { "key": "Weight", "value": "1550g" }
-        ],
-        "priceGBP": 54,
-        "compareAtPriceGBP": 60,
-        "datetime": "2024-06-15"
-      }
-    ]
-  }
+	{
+		"category": "💾 Memory Card",
+		"items": [
+			{
+				"title": "Kingston 64GB SDXC UHS-II U3 V90",
+				"href": "https://www.amazon.co.uk/dp/B09XC5GG83",
+				"description": "High-speed SD card for professional 4K/8K recording and continuous shooting, ensuring smooth performance and durability.",
+				"properties": [
+					{ "key": "Speed Class", "value": "UHS-II Class 10 U3 V90" },
+					{ "key": "Read speed", "value": "300MB/s" },
+					{ "key": "Write speed", "value": "260MB/s" },
+					{ "key": "Weight", "value": "10g" }
+				],
+				"priceGBP": 47,
+				"datetime": "2024-06-15"
+			},
+			{
+				"title": "SanDisk 128GB SDXC UHS-I U3 V30",
+				"href": "https://www.amazon.co.uk/dp/B09X7FXHVJ",
+				"description": "Ideal for burst photography, and reliable backup in tough conditions.",
+				"properties": [
+					{ "key": "Speed Class", "value": "UHS-I Class 10 U3 V30" },
+					{ "key": "Read speed", "value": "200MB/s" },
+					{ "key": "Write speed", "value": "90MB/s" },
+					{ "key": "Weight", "value": "2g" }
+				],
+				"priceGBP": 20,
+				"compareAtPriceGBP": 27,
+				"datetime": "2024-07-24"
+			}
+		]
+	},
+	{
+		"category": "⏳ Card Reader",
+		"items": [
+			{
+				"title": "Apple USB-C to SD Card Reader",
+				"href": "https://www.apple.com/uk/shop/product/MW653ZM/A/usb-c-to-sd-card-reader",
+				"description": "Transfers photos and videos at UHS-II speeds to USB-C-enabled Mac, iPad or iPhone",
+				"properties": [{ "key": "Weight", "value": "20g" }],
+				"priceGBP": 39,
+				"datetime": "2024-06-19"
+			}
+		]
+	},
+	{
+		"category": "🪜 Tripod",
+		"items": [
+			{
+				"title": "2-in-1 Invisible Selfie Stick + Tripod",
+				"href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
+				"description": "Foldable 2-in-1 selfie stick and tripod with a 1/4 standard screw.",
+				"properties": [
+					{ "key": "1/4 Screw", "value": "Yes" },
+					{ "key": "Weight", "value": "216g" }
+				],
+				"priceGBP": 27,
+				"datetime": "2023-12-30"
+			}
+		]
+	},
+	{
+		"category": "📱 Phone Holder",
+		"items": [
+			{
+				"title": "CAMOLO Metal Phone Holder",
+				"href": "https://www.amazon.co.uk/dp/B0CT8HM4QQ",
+				"description": "High-quality metal phone tripod mount with 360° rotation, 135° tilt, Arca Swiss compatibility, and four cold shoes. Supports multiple accessories for vlogging, live streaming, and photography. Perfect for mounting a phone on top of a camera for recording.",
+				"properties": [{ "key": "Weight", "value": "137g" }],
+				"priceGBP": 18,
+				"compareAtPriceGBP": 24,
+				"datetime": "2024-06-23"
+			}
+		]
+	},
+	{
+		"category": "🔦 Speedlite Flash",
+		"items": [
+			{
+				"title": "NEEWER Z2-C 2600mAh Battery TTL Round Head",
+				"href": "https://uk.neewer.com/products/neewer-z2-c-ttl-round-head-flash-speedlite-for-canon-66603347",
+				"description": "Powerful speedlight with enhanced UI, instant TTL/M mode switch, and 2.4G wireless control. Features 76Ws output, adjustable LED modeling lamps, and flexible bounce angles.",
+				"properties": [
+					{
+						"key": "Battery",
+						"value": "7.4V 2600mAh lithium battery - 480 flashes!"
+					},
+					{ "key": "Maximum Flash Power", "value": "76Ws" },
+					{
+						"key": "Effective Range",
+						"value": "Central: 0.6-10m / Edge: 0.6-5m"
+					},
+					{ "key": "Color Temperature", "value": "5600K ±200K (warm white)" },
+					{ "key": "Flash ", "value": "Yes" },
+					{ "key": "TTL", "value": "Yes" },
+					{ "key": "Weight", "value": "580g" }
+				],
+				"priceGBP": 153,
+				"compareAtPriceGBP": 250,
+				"datetime": "2025-02-03"
+			}
+		]
+	},
+	{
+		"category": "💡 Video Light",
+		"items": [
+			{
+				"title": "NEEWER CB300B 320W LED Video Light",
+				"href": "https://uk.neewer.com/products/neewer-cb300b-320w-bi-color-continuous-led-video-light-66603804",
+				"description": "with 2.4G/APP Remote Control, All Metal Bi Color COB Continuous Output Lighting with Bowens Mount 150000lux/1m 2700K-6500K CRI/TLCI97+ 12 Effects for Video. Suitable as a key light for vivid, attractive camera photo shooting with 28db ultra-low noise.",
+				"properties": [
+					{ "key": "Maximum Power", "value": "320W" },
+					{ "key": "Maximum Illumination", "value": "150000lux/1m" },
+					{ "key": "Color Temperature", "value": "2700K-6500K" },
+					{ "key": "CRI/TLCI", "value": "97+/97+" },
+					{ "key": "Weight", "value": "6.85kg" }
+				],
+				"priceGBP": 261,
+				"compareAtPriceGBP": 400,
+				"datetime": "2025-02-07"
+			},
+			{
+				"title": "Godox LITEMONS LED 6R RGB",
+				"href": "https://www.godox.com/product-d/LED6R-LED6Bi.html",
+				"description": "Compact and lightweight RGB light with adjustable color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
+				"properties": [
+					{ "key": "Battery Capacity", "value": "1800mAh (2-10 hours)" },
+					{ "key": "Color Temperature", "value": "3200K–6500K" },
+					{ "key": "CRI", "value": "95" },
+					{ "key": "Weight", "value": "110g" }
+				],
+				"priceGBP": 25,
+				"compareAtPriceGBP": 30,
+				"datetime": "2024-06-24"
+			}
+		]
+	},
+	{
+		"category": "🪟 Softbox",
+		"items": [
+			{
+				"title": "NEEWER 85cm Softbox Parabolic Hexadecagon",
+				"href": "https://uk.neewer.com/products/neewer-ns85u-33-5-85cm-softbox-parabolic-hexadecagon-66602885?variant=47426274427179&country=GB&currency=GBP&gad_source=1&gclid=CjwKCAiAwaG9BhAREiwAdhv6Y7iHLtseIhT3Dd0-vc_N6SGS8U6fCXDfccsWB22fLlg2gT9_RJUW1RoC24EQAvD_BwE",
+				"description": "Hexadecagon parabolic softbox collapsible beauty dish features an opening size of 85 x 39cm, quick setup, and foldable design. Features dual diffusers, a honeycomb grid for directional light, and durable 16-rib construction with carry bag.",
+				"properties": [
+					{ "key": "Material", "value": "Oxford cloth, aluminum alloy" },
+					{ "key": "Softbox Size After Opening", "value": "85 x 85 x 39cm" },
+					{ "key": "External Diffuser Diameter", "value": "83cm" },
+					{ "key": "Internal Diffuser Diameter", "value": "65cm" },
+					{ "key": "Grid Diameter", "value": "84cm" },
+					{ "key": "Weight", "value": "1.84kg" }
+				],
+				"priceGBP": 101,
+				"compareAtPriceGBP": 115,
+				"datetime": "2025-02-09"
+			}
+		]
+	},
+	{
+		"category": "🪜 Light Stand",
+		"items": [
+			{
+				"title": "NEEWER 2 Pack Air Cushioned Aluminum Light Stand 3m with Boom Arm",
+				"href": "https://uk.neewer.com/products/neewer-2-pack-air-cushioned-aluminum-light-stand-66602511",
+				"description": "Versatile 3m air-cushioned light stand with a 1.55m extendable boom arm, 5kg load capacity, and sturdy metal build. Includes 1kg counterweight and sandbag for extra stability. Adjustable height and arm length with a 1/4\"-3/8\" screw adapter for compatibility with various photography gear. Ideal for indoor and outdoor use.",
+				"properties": [
+					{ "key": "Mounting Points", "value": "double ended, 1/4\" to 3/8\"" },
+					{ "key": "Height", "value": "106cm - 3m (3.5ft–9.8ft)" },
+					{ "key": "Stand Weight", "value": "1.5kg" },
+					{ "key": "Arm Length", "value": "Max 155cm Min 89cm" },
+					{ "key": "Arm Weight", "value": "980g" },
+					{ "key": "Max Vertical Load Capacity", "value": "10kg" },
+					{ "key": "Max Horizontal Load Capacity", "value": "5kg" },
+					{ "key": "Weight", "value": "4kg" }
+				],
+				"priceGBP": 112,
+				"compareAtPriceGBP": 180,
+				"datetime": "2025-02-09"
+			}
+		]
+	},
+	{
+		"category": "🖼️ Backdrop & Stand",
+		"items": [
+			{
+				"title": "NEEWER NK-ST300 10x8ft Backdrop Stand",
+				"href": "https://www.amazon.co.uk/gp/product/B0CQ7T2BV7",
+				"description": "NEEWER Backdrop Stand Heavy Duty with Widened Bases, 10x8ft Background Stand with 4 Crossbars, 2 Telescopic Poles, 4 Spring Clips, and Carrying Bag. With four detachable crossbars (two upper, two lower) and two telescopic extension poles, this adjustable backdrop stand easily adjust width from 5.9ft/180cm to 9.8ft/300cm by adding or removing crossbars, and set at your preferred height from 3.2ft/98cm to 8ft/245cm with a simple twist",
+				"properties": [
+					{ "key": "Width", "value": "Max 315cm (10ft) / Min 173cm (5.7ft)" },
+					{ "key": "Height", "value": "Max 245cm (8ft) / Min 96cm (3.1ft)" },
+					{ "key": "Weight", "value": "6.19kg" }
+				],
+				"studio": true,
+				"priceGBP": 97,
+				"compareAtPriceGBP": 103,
+				"datetime": "2025-02-07"
+			},
+			{
+				"title": "Neewer 10x20FT Collapsible White Backdrop Background",
+				"href": "https://www.amazon.co.uk/dp/B00SR28VRW",
+				"description": "PRO Photo Studio 100% Pure Polyester Collapsible Backdrop Background. Durable and anti-wrinkle in single piece seamless design with consistent white color. Made of 100% pure muslin.",
+				"properties": [
+					{
+						"key": "Size",
+						"value": "Width 305cm (10ft) / Height 610cm (20ft)"
+					},
+					{ "key": "Weight", "value": "2.2kg" }
+				],
+				"studio": true,
+				"priceGBP": 52,
+				"compareAtPriceGBP": 58,
+				"datetime": "2025-02-07"
+			}
+		]
+	},
+	{
+		"category": "🖨️ Printer",
+		"items": [
+			{
+				"title": "Canon Zoemini 2",
+				"href": "https://www.canon.co.uk/printers/zoemini-2/",
+				"description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
+				"priceGBP": 100,
+				"compareAtPriceGBP": 130,
+				"datetime": "2024-06-15",
+				"returned": true
+			},
+			{
+				"title": "Canon SELPHY CP1500",
+				"href": "https://www.canon.co.uk/printers/selphy-cp1500/",
+				"description": "A compact and wireless photo printer delivering high-quality, durable prints in seconds.",
+				"properties": [
+					{
+						"key": "Print Technology",
+						"value": "Dye-sublimation for vibrant, long-lasting photos"
+					},
+					{ "key": "Print Size", "value": "Up to postcard (100 x 148mm)" },
+					{ "key": "Print Speed", "value": "41 seconds per photo" },
+					{ "key": "Weight", "value": "850g" }
+				],
+				"priceGBP": 134,
+				"datetime": "2024-06-27"
+			},
+			{
+				"title": "DuraPro 1Pc 2000mAh Battery + Charger",
+				"href": "https://www.amazon.co.uk/dp/B07MR9W4BB",
+				"description": "Battery and charger for Canon SELPHY CP series printers, providing portable power for on-the-go printing.",
+				"properties": [
+					{ "key": "Charge Time", "value": "4 Hours" },
+					{ "key": "Weight", "value": "134g" }
+				],
+				"priceGBP": 38,
+				"datetime": "2024-06-27"
+			}
+		]
+	},
+	{
+		"category": "📹 Video",
+		"items": [
+			{
+				"title": "Insta360 GO 3S",
+				"href": "https://www.insta360.com/product/insta360-go3s",
+				"description": "Tiny 4K camera for hands-free POV & Action Pod for remote control & live preview. Small camera, huge potential. Go completely hands-free and live in the moment! Set it and forget about it for easy, ultra-wide POV shots.",
+				"priceGBP": 370,
+				"datetime": "2024-06-15",
+				"returned": true
+			}
+		]
+	},
+	{
+		"category": "⚡️ Power Bank",
+		"items": [
+			{
+				"title": "Anker Prime 27,650mAh Power Bank (250W)",
+				"href": "https://www.anker.com/uk/products/a1340-250w-power-bank",
+				"description": "The power bank combines ultra-compact dynamic power, maximum charging speed for every port, the advanced ActiveShield™ 2.0 safety system, unparalleled compatibility, and Power Delivery 3.1 technology, ensuring efficient and secure charging for all your devices. Powered by the latest PD 3.1 technology, the power bank comes with 2 USB-C ports and 1 USB-A port to deliver up to 250W of power. The power bank is the size of a soda can with a capacity of 27,650mAh and can charge an iPhone 15 approximately 4 times. This power bank is 99.54Wh, which meets the requirements of the TSA (less than 100Wh) to be taken on airplanes as carry-on baggage.",
+				"properties": [
+					{ "key": "Capacity", "value": "27,650mAh" },
+					{ "key": "Power Output", "value": "Up to 250W (Dual USB-C + USB-A)" },
+					{
+						"key": "Recharge Speed",
+						"value": "170W input, fully recharges in 37 min"
+					},
+					{
+						"key": "Airline Approved",
+						"value": "Meets TSA regulations (under 100Wh) for carry-on luggage."
+					},
+					{ "key": "Weight", "value": "667g" }
+				],
+				"priceGBP": 126,
+				"compareAtPriceGBP": 180,
+				"datetime": "2024-06-06"
+			}
+		]
+	},
+	{
+		"category": "🎒 Backpack",
+		"items": [
+			{
+				"title": "TARION Leather Camera Backpack Waterproof",
+				"href": "https://www.amazon.co.uk/dp/B079JS4FWM",
+				"description": "Camera Bag with Side Access IPX5 Waterproof Camera Rucksack with Rain Cover RB02. 17L with dedicated space for a 15inch laptop, tripod and adjustable inner EPE dividers",
+				"properties": [
+					{ "key": "Capacity", "value": "17L" },
+					{ "key": "Weight", "value": "1550g" }
+				],
+				"priceGBP": 54,
+				"compareAtPriceGBP": 60,
+				"datetime": "2024-06-15"
+			}
+		]
+	}
 ]

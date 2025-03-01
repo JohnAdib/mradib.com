@@ -5,15 +5,15 @@
 // const assetPrefix = isProd ? productionUrl : undefined;
 
 const nextConfig = {
-  output: "export",
-  // assetPrefix: assetPrefix,
-  images: {
-    unoptimized: true,
-  },
-  pageExtensions: ["ts", "tsx"],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+	output: "export",
+	// assetPrefix: assetPrefix,
+	images: {
+		unoptimized: true,
+	},
+	pageExtensions: ["ts", "tsx"],
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 };
 
 export default nextConfig;

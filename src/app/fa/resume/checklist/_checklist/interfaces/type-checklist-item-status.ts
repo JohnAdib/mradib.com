@@ -1,5 +1,5 @@
 export type ChecklistItemStatusType =
-  | undefined
-  | "passed"
-  | "failed"
-  | "unknown";
+	| undefined
+	| "passed"
+	| "failed"
+	| "unknown";
