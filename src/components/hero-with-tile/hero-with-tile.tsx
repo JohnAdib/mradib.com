@@ -24,7 +24,9 @@ export function HeroWithTile() {
 					x="50%"
 					y={-1}
 					className="overflow-visible fill-gray-50 dark:fill-gray-900"
+					aria-label="Background pattern"
 				>
+					<title>Background pattern</title>
 					<path
 						d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
 						strokeWidth={0}

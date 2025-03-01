@@ -47,7 +47,7 @@ export function Checklist({ name, list }: IChecklistProps) {
 	return (
 		<div className="select-none">
 			{taskList.map((task, index) => (
-				<div key={index} className="px-2">
+				<div key={task.id} className="px-2">
 					<input
 						className="hidden"
 						type="checkbox"

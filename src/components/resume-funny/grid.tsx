@@ -46,7 +46,7 @@ export default function TestimonialsGrid() {
 				>
 					<figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
 						<blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
-							<p>{`“${featuredTestimonial.body}”`}</p>
+							<p>{`"${featuredTestimonial.body}"`}</p>
 						</blockquote>
 						<figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap">
 							<img
@@ -67,50 +67,53 @@ export default function TestimonialsGrid() {
 							/>
 						</figcaption>
 					</figure>
-					{testimonials.map((columnGroup, columnGroupIdx) => (
-						<div
-							key={columnGroupIdx}
-							className="space-y-8 xl:contents xl:space-y-0"
-						>
-							{columnGroup.map((column, columnIdx) => (
-								<div
-									key={columnIdx}
-									className={classNames(
-										(columnGroupIdx === 0 && columnIdx === 0) ||
-											(columnGroupIdx === testimonials.length - 1 &&
-												columnIdx === columnGroup.length - 1)
-											? "xl:row-span-2"
-											: "xl:row-start-1",
-										"space-y-8",
-									)}
-								>
-									{column.map((testimonial) => (
-										<figure
-											key={testimonial.author.handle}
-											className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+					{testimonials.map((columnGroup, groupIdx) => {
+						const groupId = columnGroup.flat()[0]?.author.handle;
+						return (
+							<div key={groupId} className="space-y-8 xl:contents xl:space-y-0">
+								{columnGroup.map((column, colIdx) => {
+									const columnId = column[0]?.author.handle;
+									return (
+										<div
+											key={columnId}
+											className={classNames(
+												(groupIdx === 0 && colIdx === 0) ||
+													(groupIdx === testimonials.length - 1 &&
+														colIdx === columnGroup.length - 1)
+													? "xl:row-span-2"
+													: "xl:row-start-1",
+												"space-y-8",
+											)}
 										>
-											<blockquote className="text-gray-900">
-												<p>{`“${testimonial.body}”`}</p>
-											</blockquote>
-											<figcaption className="mt-6 flex items-center gap-x-4">
-												<img
-													className="h-10 w-10 rounded-full bg-gray-50"
-													src={testimonial.author.imageUrl}
-													alt=""
-												/>
-												<div>
-													<div className="font-semibold">
-														{testimonial.author.name}
-													</div>
-													<div className="text-gray-600">{`@${testimonial.author.handle}`}</div>
-												</div>
-											</figcaption>
-										</figure>
-									))}
-								</div>
-							))}
-						</div>
-					))}
+											{column.map((testimonial) => (
+												<figure
+													key={testimonial.author.handle}
+													className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+												>
+													<blockquote className="text-gray-900">
+														<p>{`"${testimonial.body}"`}</p>
+													</blockquote>
+													<figcaption className="mt-6 flex items-center gap-x-4">
+														<img
+															className="h-10 w-10 rounded-full bg-gray-50"
+															src={testimonial.author.imageUrl}
+															alt=""
+														/>
+														<div>
+															<div className="font-semibold">
+																{testimonial.author.name}
+															</div>
+															<div className="text-gray-600">{`@${testimonial.author.handle}`}</div>
+														</div>
+													</figcaption>
+												</figure>
+											))}
+										</div>
+									);
+								})}
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</section>

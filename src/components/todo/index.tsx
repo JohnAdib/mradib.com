@@ -43,12 +43,10 @@ function TodoStatus({ type, completed, total }: ITodoStatusMsg) {
 export function Todo({ list }: { list: ITodo[] }) {
 	const [taskList, setTaskList] = useState(list);
 
-	const handleTaskClick = (index: number) => {
-		const updatedTasks = [...taskList];
-		updatedTasks[index] = {
-			...updatedTasks[index],
-			completed: !updatedTasks[index].completed,
-		};
+	const handleTaskClick = (taskId: string) => {
+		const updatedTasks = taskList.map((task) =>
+			task.id === taskId ? { ...task, completed: !task.completed } : task,
+		);
 		setTaskList(updatedTasks);
 	};
 
@@ -72,18 +70,18 @@ export function Todo({ list }: { list: ITodo[] }) {
 				completed={completedTasks}
 			/>
 
-			{taskList.map((task, index) => (
-				<div key={index} className="px-2">
+			{taskList.map((task) => (
+				<div key={task.id} className="px-2">
 					<input
 						className="hidden"
 						type="checkbox"
-						id={`task_${index + 1}`}
+						id={`task_${task.id}`}
 						checked={task.completed}
-						onChange={() => handleTaskClick(index)}
+						onChange={() => handleTaskClick(task.id)}
 					/>
 					<label
 						className="flex gap-2 items-center px-4 py-2 rounded-lg cursor-pointer transition hover:bg-gray-100"
-						htmlFor={`task_${index + 1}`}
+						htmlFor={`task_${task.id}`}
 					>
 						{task.completed ? (
 							<CheckCircleIcon className="w-5 h-5 text-green-500" />

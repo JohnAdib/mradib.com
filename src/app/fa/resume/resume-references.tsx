@@ -34,8 +34,8 @@ export function ResumeReferences(): JSX.Element {
 				باشه.
 			</p>
 			<ul dir="ltr" className="text-xs">
-				{references.map((ref, i) => (
-					<li key={i} className="my-1 leading-4">
+				{references.map((ref) => (
+					<li key={ref} className="my-1 leading-4">
 						<Link
 							href={ref}
 							target="_blank"

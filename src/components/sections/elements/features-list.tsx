@@ -2,8 +2,7 @@ export interface ISectionFeature {
 	name: string;
 	description: string;
 	href?: string;
-	/* eslint-disable @typescript-eslint/no-explicit-any */
-	icon: any;
+	icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
 }
 
 export interface ISectionFeaturesList {
@@ -39,7 +38,7 @@ export function SectionFeaturesList({ features }: ISectionFeaturesList) {
 					<div key={feature.name} className="flex flex-col">
 						<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
 							<feature.icon
-								aria-hidden="true"
+								aria-hidden={true}
 								className="h-5 w-5 flex-none text-indigo-600 dark:text-indigo-400"
 							/>
 							{feature.name}

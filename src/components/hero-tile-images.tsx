@@ -24,7 +24,13 @@ export default function HeroTileImages() {
 						<path d="M.5 200V.5H200" fill="none" />
 					</pattern>
 				</defs>
-				<svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+				<svg
+					x="50%"
+					y={-1}
+					className="overflow-visible fill-gray-50"
+					aria-label="Background pattern"
+				>
+					<title>Background pattern</title>
 					<path
 						d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
 						strokeWidth={0}
@@ -64,12 +70,12 @@ export default function HeroTileImages() {
 							</p>
 							<div className="mt-10 flex items-center gap-x-6">
 								<a
-									href="#"
+									href="/"
 									className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold shadow-xs hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 								>
 									Get started
 								</a>
-								<a href="#" className="text-sm font-semibold leading-6">
+								<a href="/" className="text-sm font-semibold leading-6">
 									Live demo <span aria-hidden="true">→</span>
 								</a>
 							</div>
