@@ -2,7 +2,7 @@ import { ArticleLayout } from "@/components/article/layout";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import coverImg from "./opengraph-image.jpg";
 
 const publishDate = "2024-04-08";

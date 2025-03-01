@@ -1,5 +1,5 @@
 import { siteUrlFa } from "@/lib/constants/url";
-import { SitemapType } from "../_tools/sitemap-type";
+import type { SitemapType } from "../_tools/sitemap-type";
 
 export const sitemapListFa: SitemapType = [
 	// articles

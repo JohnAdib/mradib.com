@@ -1,5 +1,5 @@
-import { FAQPage, WithContext } from "schema-dts";
-import { IFaqQA } from "./faq-interface";
+import type { FAQPage, WithContext } from "schema-dts";
+import type { IFaqQA } from "./faq-interface";
 
 interface FAQProps {
 	faqData: IFaqQA[];

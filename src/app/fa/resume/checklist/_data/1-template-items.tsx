@@ -1,4 +1,4 @@
-import { IChecklistGroupItem } from "../_checklist/interfaces/i-checklist-group-item";
+import type { IChecklistGroupItem } from "../_checklist/interfaces/i-checklist-group-item";
 
 const check1: IChecklistGroupItem = {
 	id: 1,

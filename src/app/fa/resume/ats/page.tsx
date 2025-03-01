@@ -4,7 +4,7 @@ import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import imgResumeAts70pDisqualified from "./_img/resume-ats-70p-disqualified.png";
 import imgResumeAtJobExample1 from "./_img/resume-ats-job-example-1.jpg";

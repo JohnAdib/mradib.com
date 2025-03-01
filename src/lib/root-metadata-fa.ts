@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { defaultDescriptionFa, defaultTitleFa } from "./constants/fa";
 
 export const rootMetadataFa: Metadata = {

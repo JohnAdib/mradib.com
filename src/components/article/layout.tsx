@@ -11,11 +11,11 @@ import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { Breadcrumb } from "../breadcrumb/breadcrumb";
 import Faq from "../faq/faq";
-import { FaqLanguage } from "../faq/faq-interface";
+import type { FaqLanguage } from "../faq/faq-interface";
 import { ArrowRightIcon } from "../icon/arrow-right";
 import { NavNextPrev } from "../nav-next-prev/nav-next-prev";
 import { ArticleJsonLD } from "./article-json-ld";
-import { IArticleLayout } from "./interface";
+import type { IArticleLayout } from "./interface";
 import { ArticleReadTime } from "./read-time";
 
 export function ArticleLayout({

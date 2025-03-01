@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ChecklistGroup } from "./group";
-import { IChecklistRenderProps } from "./i-checklist-render";
+import type { IChecklistRenderProps } from "./i-checklist-render";
 import { ChecklistItems } from "./items";
 
 export function RenderChecklist({ id, list }: IChecklistRenderProps) {

@@ -5,7 +5,7 @@ import {
 	DocumentCheckIcon,
 	GlobeEuropeAfricaIcon,
 } from "@heroicons/react/20/solid";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
 
 export const metadata: Metadata = {

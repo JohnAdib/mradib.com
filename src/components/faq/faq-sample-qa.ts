@@ -1,4 +1,4 @@
-import { IFaqQA } from "./faq-interface";
+import type { IFaqQA } from "./faq-interface";
 
 export const sampleQA: IFaqQA[] = [
 	{

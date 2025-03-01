@@ -1,6 +1,6 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
-import { IStep } from "./step-interface";
+import type { IStep } from "./step-interface";
 
 // Define meaningful text and background color variables
 // TODO: read the colors from template for dark and light mode

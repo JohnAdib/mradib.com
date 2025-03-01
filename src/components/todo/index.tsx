@@ -4,7 +4,7 @@ import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { Msg } from "../msg/msg";
-import { ITodo } from "./interface";
+import type { ITodo } from "./interface";
 
 type ITodoStatus = "completed" | "inProgress" | "notStarted";
 

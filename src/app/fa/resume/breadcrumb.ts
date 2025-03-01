@@ -1,4 +1,4 @@
-import { IBreadcrumbItem } from "@/components/breadcrumb/interface";
+import type { IBreadcrumbItem } from "@/components/breadcrumb/interface";
 
 export const breadcrumb: IBreadcrumbItem[] = [
 	{

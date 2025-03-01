@@ -2,7 +2,7 @@ import { ChevronLeftIcon, HomeIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import Link from "next/link";
 import { BreadcrumbJsonLD } from "./breadcrumb-json-ld";
-import { IBreadcrumb } from "./interface";
+import type { IBreadcrumb } from "./interface";
 
 export function Breadcrumb({ list }: IBreadcrumb) {
 	if (!list) {

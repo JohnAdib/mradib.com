@@ -1,4 +1,4 @@
-import { INavNextPrev } from "@/components/nav-next-prev/interface";
+import type { INavNextPrev } from "@/components/nav-next-prev/interface";
 
 export const nextPrev: INavNextPrev = {
 	next: {

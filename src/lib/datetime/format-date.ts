@@ -1,4 +1,4 @@
-import { LanguageLocale } from "../languages/locale";
+import type { LanguageLocale } from "../languages/locale";
 import { formatDateTime } from "./format-date-time";
 
 interface IFormatDate {

@@ -1,4 +1,4 @@
-import { IStep } from "./step-interface";
+import type { IStep } from "./step-interface";
 
 export const stepsSampleData: IStep[] = [
 	{

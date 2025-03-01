@@ -1,4 +1,4 @@
-import { IChecklistGroup } from "../_checklist/interfaces/i-checklist-group";
+import type { IChecklistGroup } from "../_checklist/interfaces/i-checklist-group";
 import { resumeChecklistTemplateItems } from "./1-template-items";
 
 export const resumeChecklistTemplate: IChecklistGroup = {

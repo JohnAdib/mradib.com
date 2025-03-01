@@ -1,8 +1,8 @@
 import { ArticleSection } from "@/components/article/article-section";
 import { ArticleLayout } from "@/components/article/layout";
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
-import { IArticle } from "../i-article-interface";
+import type { IArticle } from "../i-article-interface";
 import imgCover from "./_img/cover.png";
 import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";

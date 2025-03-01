@@ -1,4 +1,4 @@
-import { ITodo } from "./interface";
+import type { ITodo } from "./interface";
 
 export const todoSampleData: ITodo[] = [
 	{

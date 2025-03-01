@@ -3,7 +3,7 @@ import {
 	QuestionMarkCircleIcon,
 	XCircleIcon,
 } from "@heroicons/react/20/solid";
-import { ChecklistItemStatusType } from "../../interfaces/type-checklist-item-status";
+import type { ChecklistItemStatusType } from "../../interfaces/type-checklist-item-status";
 
 interface IChecklistItemCheckboxIconProps {
 	status: ChecklistItemStatusType;

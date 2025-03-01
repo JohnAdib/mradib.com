@@ -4,7 +4,7 @@ import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import imgResumeSummaryCover from "./_img/resume-summary-cover.png";
 import coverImg from "./opengraph-image.png";

@@ -4,7 +4,7 @@ import {
 	InformationCircleIcon,
 	XCircleIcon,
 } from "@heroicons/react/20/solid";
-import { SeverityType } from "./msg";
+import type { SeverityType } from "./msg";
 
 interface IMsgSeverityIcon {
 	severity: SeverityType;

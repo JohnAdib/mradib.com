@@ -2,9 +2,9 @@ import { Card } from "@/components/card";
 import { SimpleLayout } from "@/components/simple-layout";
 import { formatDateTime } from "@/lib/datetime/format-date-time";
 import clsx from "clsx";
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import { articlesList } from "../(articles)/articles-list";
-import { IArticle } from "../(articles)/i-article-interface";
+import type { IArticle } from "../(articles)/i-article-interface";
 
 export const metadata: Metadata = {
 	title: "A Collection of Insights and Ideas",

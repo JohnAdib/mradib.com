@@ -1,5 +1,5 @@
 import { Msg } from "@/components/msg/msg";
-import { ChecklistItemStatusType } from "../../interfaces/type-checklist-item-status";
+import type { ChecklistItemStatusType } from "../../interfaces/type-checklist-item-status";
 
 interface IChecklistGroupDescProps {
 	size?: "xs" | "sm" | "md" | "lg";

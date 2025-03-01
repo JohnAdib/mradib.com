@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 import {
-	ISectionFeature,
+	type ISectionFeature,
 	SectionFeaturesList,
 } from "../elements/features-list";
 import { SectionImageFullWidth } from "../elements/image-full-width";

@@ -1,7 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import Link from "next/link";
-import { INavNextPrev } from "./interface";
+import type { INavNextPrev } from "./interface";
 
 function NextLink({ url, title }: { url?: string; title?: string }) {
 	if (!url || !title) {

@@ -1,4 +1,4 @@
-import { ITodo } from "@/components/todo/interface";
+import type { ITodo } from "@/components/todo/interface";
 
 export const resumeTodoList: ITodo[] = [
 	{

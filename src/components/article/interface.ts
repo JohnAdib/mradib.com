@@ -1,8 +1,8 @@
-import { LanguageLocale } from "@/lib/languages/locale";
-import { StaticImageData } from "next/image";
-import { IBreadcrumbItem } from "../breadcrumb/interface";
-import { IFaqQA } from "../faq/faq-interface";
-import { INavNextPrev } from "../nav-next-prev/interface";
+import type { LanguageLocale } from "@/lib/languages/locale";
+import type { StaticImageData } from "next/image";
+import type { IBreadcrumbItem } from "../breadcrumb/interface";
+import type { IFaqQA } from "../faq/faq-interface";
+import type { INavNextPrev } from "../nav-next-prev/interface";
 
 export interface IArticleLayout {
 	title: string;

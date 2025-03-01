@@ -1,4 +1,4 @@
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 
 import { ContainerOuter } from "@/components/container";
 import { CtaWithTile } from "@/components/cta-with-tile/cta-with-tile";

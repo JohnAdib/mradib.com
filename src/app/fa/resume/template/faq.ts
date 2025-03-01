@@ -1,4 +1,4 @@
-import { IFaqQA } from "@/components/faq/faq-interface";
+import type { IFaqQA } from "@/components/faq/faq-interface";
 
 export const resumeTemplateFaq: IFaqQA[] = [
 	{

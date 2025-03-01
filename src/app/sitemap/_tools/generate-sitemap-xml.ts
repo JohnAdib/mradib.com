@@ -1,4 +1,4 @@
-import { SitemapType } from "./sitemap-type";
+import type { SitemapType } from "./sitemap-type";
 
 export function generateSitemapXml(sitemapList: SitemapType) {
 	return `<?xml version="1.0" encoding="UTF-8"?>

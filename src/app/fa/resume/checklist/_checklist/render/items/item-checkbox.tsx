@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { IChecklistGroupItem } from "../../interfaces/i-checklist-group-item";
+import type { IChecklistGroupItem } from "../../interfaces/i-checklist-group-item";
 import { ChecklistSpecialMsg } from "../group/special-msg";
 import { ChecklistItemCheckboxIcon } from "./item-checkbox-icon";
 

@@ -1,5 +1,5 @@
 import { getAllActionVerbs } from "./get-all-action-verbs";
-import { IListActionVerbs } from "./interface";
+import type { IListActionVerbs } from "./interface";
 
 export function ListActionVerbs(): JSX.Element {
 	// draw html grid

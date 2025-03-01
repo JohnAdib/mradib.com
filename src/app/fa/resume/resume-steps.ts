@@ -1,4 +1,4 @@
-import { IStep } from "@/components/steps/step-interface";
+import type { IStep } from "@/components/steps/step-interface";
 
 export const resumeSteps: IStep[] = [
 	{

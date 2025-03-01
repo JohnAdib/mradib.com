@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 interface ISectionImageFullWidth {
 	src?: StaticImageData;

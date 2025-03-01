@@ -1,6 +1,6 @@
 import { homepageUrl } from "@/lib/constants/url";
-import { StaticImageData } from "next/image";
-import { Article, WithContext } from "schema-dts";
+import type { StaticImageData } from "next/image";
+import type { Article, WithContext } from "schema-dts";
 
 interface IArticleJSONLD {
 	headline: string;

@@ -1,4 +1,4 @@
-import { FaqLanguage, IFaqQA } from "./faq-interface";
+import type { FaqLanguage, IFaqQA } from "./faq-interface";
 import { FaqJsonLD } from "./faq-json-ld";
 
 const faqText = {
