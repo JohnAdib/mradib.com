@@ -11,10 +11,12 @@ function extractTextFromElement(element: ReactNode): string {
 	if (typeof element === "string") {
 		// If the element is a string, return it
 		return element;
-	} else if (Array.isArray(element)) {
+	}
+	if (Array.isArray(element)) {
 		// If the element is an array of JSX elements, concatenate their text content
 		return element.map(extractTextFromElement).join("");
-	} else if (element && typeof element === "object" && "props" in element) {
+	}
+	if (element && typeof element === "object" && "props" in element) {
 		// If the element is a React component, recursively extract text from its children
 		const { children } = element.props;
 		if (children) {

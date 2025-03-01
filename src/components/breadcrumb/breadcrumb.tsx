@@ -11,7 +11,7 @@ export function Breadcrumb({ list }: IBreadcrumb) {
 
 	return (
 		<nav className="flex" aria-label="Breadcrumb">
-			<ol role="list" className="flex items-center gap-2 md:gap-4">
+			<ol className="flex items-center gap-2 md:gap-4">
 				<li>
 					<div>
 						<Link

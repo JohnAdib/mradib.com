@@ -6,30 +6,30 @@ export function Page404() {
 		<>
 			<div id="page404">
 				<div className="ternary-system">
-					<div className="sun primary animate-pulse"></div>
-					<div className="sun secondary animate-pulse"></div>
-					<div className="sun secondary animate-ping"></div>
-					<div className="sun ternary"></div>
+					<div className="sun primary animate-pulse" />
+					<div className="sun secondary animate-pulse" />
+					<div className="sun secondary animate-ping" />
+					<div className="sun ternary" />
 				</div>
 				<div className="sand">
 					<div className="pendulums">
 						<div className="pendulum">
-							<div className="bar"></div>
+							<div className="bar" />
 							<div className="motion">
-								<div className="string"></div>
-								<div className="weight"></div>
+								<div className="string" />
+								<div className="weight" />
 							</div>
 						</div>
 						<div className="pendulum shadow-sm">
-							<div className="bar"></div>
+							<div className="bar" />
 							<div className="motion">
-								<div className="string animate-pulse"></div>
-								<div className="weight"></div>
+								<div className="string animate-pulse" />
+								<div className="weight" />
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="pyramid"></div>
+				<div className="pyramid" />
 			</div>
 			<Page404Banner />
 		</>

@@ -22,7 +22,7 @@ export const rootMetadata: Metadata = {
 	//   manifest: siteUrl + '/manifest.json',
 	generator: myTitle,
 	category: "blog",
-	applicationName: myTitle + " Blog",
+	applicationName: `${myTitle} Blog`,
 	authors: [
 		{
 			name: myName,

@@ -11,4 +11,4 @@ export const defaultTitle = myTitle + separator + myJobTitle;
 const desc1 = "John Adib.";
 const desc2 = "Senior Lead Software Engineer from London.";
 const desc3 = "Read my tutorials and articles here.";
-export const defaultDescription = desc1 + " " + desc2 + " " + desc3;
+export const defaultDescription = `${desc1} ${desc2} ${desc3}`;

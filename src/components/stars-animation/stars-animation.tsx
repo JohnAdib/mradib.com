@@ -1,9 +1,9 @@
 export function StarAnimation() {
 	return (
 		<>
-			<span id="stars"></span>
-			<span id="stars2"></span>
-			<span id="stars3"></span>
+			<span id="stars" />
+			<span id="stars2" />
+			<span id="stars3" />
 		</>
 	);
 }

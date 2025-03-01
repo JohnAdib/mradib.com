@@ -9,7 +9,7 @@ function ToolsSection({
 }: React.ComponentPropsWithoutRef<typeof Section>) {
 	return (
 		<Section {...props}>
-			<ul role="list" className="space-y-16" data-testid="tools-section-list">
+			<ul className="space-y-16" data-testid="tools-section-list">
 				{children}
 			</ul>
 		</Section>
@@ -107,7 +107,7 @@ export default function Uses() {
 
 	return (
 		<SimpleLayout
-			title={`Photography Tools I Use`}
+			title={"Photography Tools I Use"}
 			intro={`Explore the tools that help me capture and create stunning photographs. I've spent £${totalPriceGBPWith3NumbersSeparated} on these!`}
 		>
 			<div className="space-y-20" data-testid="tools-section">

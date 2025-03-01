@@ -22,7 +22,7 @@ const dateModified = "2024-05-12" + "T" + "19:04:00" + ".000Z";
 const articleTitle = "بهترین آموزش ساخت رزومه";
 const articleDescription =
 	"قصد دارید رزومه بسازید و برای شغلی اپلای کنید؟ صفر تا صد ساخت رزومه رو اینجا بخونید تا یک رزومه حرفه‌ای بسازید. این بهترین و کامل‌ترین و جامع‌ترین آموزش ساخت رزومه در کهکشان است!";
-const pageTitle = "آموزش ساخت رزومه" + pageResumeSuffix;
+const pageTitle = `آموزش ساخت رزومه${pageResumeSuffix}`;
 const pageDesc = "وقتشه رزومه خفن خودت رو بسازی. آموزش صفر تا صد ساخت رزومه";
 const pagePath = "/fa/resume";
 const keywords = ["رزومه کاری", "رزومه", "رزومه فارسی", "رزومه انگلیسی"];

@@ -10,21 +10,21 @@ export const sitemapListFa: SitemapType = [
 	},
 	// static pages
 	{
-		url: siteUrl + "about",
+		url: `${siteUrl}about`,
 		lastModified: new Date(),
 		changeFrequency: "daily",
 		priority: 1,
 	},
 	// articles list
 	{
-		url: siteUrl + "articles",
+		url: `${siteUrl}articles`,
 		lastModified: new Date(),
 		changeFrequency: "weekly",
 		priority: 0.9,
 	},
 	// articles
 	{
-		url: siteUrl + "github-autolink",
+		url: `${siteUrl}github-autolink`,
 		lastModified: new Date(),
 		changeFrequency: "monthly",
 		priority: 0.8,

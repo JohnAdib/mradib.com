@@ -26,8 +26,7 @@ export const article: IArticle = {
 };
 
 // set publish date and time
-article.datePublished =
-	article.publishDate + "T" + article.publishTime + ".000Z";
+article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
 article.dateModified = "2024-11-11" + "T" + "11:26:00" + ".000Z";
 
 export const metadata: Metadata = {
@@ -144,7 +143,6 @@ function Requirements() {
 			title="Requirements"
 			subTitle="Before we start, here’s what you’ll need"
 		>
-			<p></p>
 			<ol>
 				<li>
 					<b>GitHub Admin Access</b> for your repository.

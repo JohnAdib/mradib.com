@@ -30,8 +30,6 @@ export function getMsgSeverityColor(severity: string): IMsgSeverityColors {
 				heading: "text-red-800",
 				text: "text-red-700",
 			};
-
-		case "info":
 		default:
 			return {
 				bg: "bg-blue-50",

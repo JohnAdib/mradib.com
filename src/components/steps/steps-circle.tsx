@@ -143,7 +143,7 @@ export default function StepsCircle({ steps }: { steps: IStep[] }) {
 
 	return (
 		<nav aria-label="Progress" className="select-none">
-			<ol role="list" className="overflow-hidden list-none p-0">
+			<ol className="overflow-hidden list-none p-0">
 				{steps.map((step, index) => renderStep({ step, index, totalSteps }))}
 			</ol>
 		</nav>

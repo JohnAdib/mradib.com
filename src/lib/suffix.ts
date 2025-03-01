@@ -1,2 +1,2 @@
 const coolResume = "رزومه خفن";
-export const pageResumeSuffix = " | " + coolResume;
+export const pageResumeSuffix = ` | ${coolResume}`;

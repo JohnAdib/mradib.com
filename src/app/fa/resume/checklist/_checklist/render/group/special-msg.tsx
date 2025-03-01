@@ -30,8 +30,6 @@ export function ChecklistSpecialMsg({
 					{failedNote}
 				</Msg>
 			);
-
-		case "unknown":
 		default:
 			return (
 				<Msg severity="info" size={size}>
