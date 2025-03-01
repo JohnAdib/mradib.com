@@ -6,7 +6,14 @@ import {
 	GlobeEuropeAfricaIcon,
 } from "@heroicons/react/20/solid";
 import type { Metadata } from "next";
+import type { ComponentType } from "react";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
+
+interface ISectionFeature {
+	name: string;
+	description: string;
+	icon: ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+}
 
 export const metadata: Metadata = {
 	title: "منتورشیپ با آقای ادیب",
@@ -18,24 +25,33 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-	const featuresList = [
+	const featuresList: ISectionFeature[] = [
 		{
 			name: "مهندسی نرم‌افزار",
 			description:
 				"راهنمایی در مورد بهترین روش‌ها، تکنیک‌های کدنویسی و رشد حرفه‌ای در مهندسی نرم‌افزار.",
-			icon: CommandLineIcon,
+			icon: CommandLineIcon as ComponentType<{
+				className?: string;
+				"aria-hidden"?: boolean;
+			}>,
 		},
 		{
 			name: "بررسی رزومه",
 			description:
 				"بررسی رایگان رزومه شما برای ارتقای رزومه تا بتوانید بهترین انتخاب برای کارفرمایان باشید.",
-			icon: DocumentCheckIcon,
+			icon: DocumentCheckIcon as ComponentType<{
+				className?: string;
+				"aria-hidden"?: boolean;
+			}>,
 		},
 		{
 			name: "مهاجرت موفقیت‌آمیز در تکنولوژی",
 			description:
 				"مشاوره رایگان در مورد مهاجرت به کشورهای تکنولوژی‌محور بر اساس تجربه شخصی.",
-			icon: GlobeEuropeAfricaIcon,
+			icon: GlobeEuropeAfricaIcon as ComponentType<{
+				className?: string;
+				"aria-hidden"?: boolean;
+			}>,
 		},
 	];
 

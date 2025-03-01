@@ -7,7 +7,14 @@ import {
 	GlobeEuropeAfricaIcon,
 } from "@heroicons/react/20/solid";
 import type { Metadata } from "next";
+import type { ComponentType } from "react";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
+
+interface ISectionFeature {
+	name: string;
+	description: string;
+	icon: ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+}
 
 export const metadata: Metadata = {
 	title: "Mentorship with MrAdib",
@@ -19,24 +26,33 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-	const featuresList = [
+	const featuresList: ISectionFeature[] = [
 		{
 			name: "Software Engineering",
 			description:
 				"Get guidance on best practices, coding techniques, and career growth in software engineering.",
-			icon: CommandLineIcon,
+			icon: CommandLineIcon as ComponentType<{
+				className?: string;
+				"aria-hidden"?: boolean;
+			}>,
 		},
 		{
 			name: "Resume Review",
 			description:
 				"Receive personalized feedback to improve your resume and stand out to employers.",
-			icon: DocumentCheckIcon,
+			icon: DocumentCheckIcon as ComponentType<{
+				className?: string;
+				"aria-hidden"?: boolean;
+			}>,
 		},
 		{
 			name: "Tech Immigration Success",
 			description:
 				"Navigate the complexities of tech immigration with tips and advice based on my own experience.",
-			icon: GlobeEuropeAfricaIcon,
+			icon: GlobeEuropeAfricaIcon as ComponentType<{
+				className?: string;
+				"aria-hidden"?: boolean;
+			}>,
 		},
 	];
 
