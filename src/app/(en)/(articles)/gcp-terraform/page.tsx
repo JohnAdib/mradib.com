@@ -34,8 +34,7 @@ export const article: IArticle = {
 };
 
 // set publish date and time
-article.datePublished =
-	`${article.publishDate}T${article.publishTime}.000Z`;
+article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
 article.dateModified = "2024-11-14" + "T" + "19:45:00" + ".000Z";
 
 export const metadata: Metadata = {
