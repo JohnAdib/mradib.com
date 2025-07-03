@@ -320,8 +320,7 @@ export default function Page() {
 	const articleReadingTime = readingTime(<PageContent />);
 
 	return (
-		<>
-			<ArticleLayout
+		<ArticleLayout
 				title={articleTitle}
 				intro={articleDescription}
 				urlPath={pagePath}
@@ -334,6 +333,5 @@ export default function Page() {
 			>
 				<PageContent />
 			</ArticleLayout>
-		</>
 	);
 }

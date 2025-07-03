@@ -2,8 +2,7 @@ import Link from "next/link";
 
 export default function Page404Banner() {
 	return (
-		<>
-			<div className="pointer-events-none select-none fixed inset-x-0 top-0 sm:flex sm:justify-center sm:px-6 sm:pt-5 lg:px-8">
+		<div className="pointer-events-none select-none fixed inset-x-0 top-0 sm:flex sm:justify-center sm:px-6 sm:pt-5 lg:px-8">
 				<div className="pointer-events-auto backdrop-blur-xs bg-gray-900/80 px-6 py-3 sm:rounded-xl sm:py-4 sm:pl-4 sm:px-3.5">
 					<Link
 						href="/"
@@ -21,6 +20,5 @@ export default function Page404Banner() {
 					</Link>
 				</div>
 			</div>
-		</>
 	);
 }

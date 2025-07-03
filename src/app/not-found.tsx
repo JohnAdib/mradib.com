@@ -19,8 +19,6 @@ export default function NotFound() {
 	}, [pathname]);
 
 	return (
-		<>
-			<Page404 />
-		</>
+		<Page404 />
 	);
 }

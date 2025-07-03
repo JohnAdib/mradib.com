@@ -51,8 +51,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	return (
-		<>
-			<ArticleLayout
+		<ArticleLayout
 				title={article.title}
 				intro={article.description}
 				datePublished={article.datePublished}
@@ -72,7 +71,6 @@ export default function Page() {
 				<Troubleshooting />
 				<Conclusion />
 			</ArticleLayout>
-		</>
 	);
 }
 

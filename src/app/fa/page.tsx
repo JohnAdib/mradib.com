@@ -3,8 +3,7 @@ import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel
 
 export default function Home() {
 	return (
-		<>
-			<Container>
+		<Container>
 				<CtaOnDarkPanel
 					title="جامع‌ترین آموزش رایگان ساخت رزومه در کهکشان"
 					desc="صفر تا صد ساخت رزومه ایده‌آل خودت رو رایگان یاد بگیر. یک رزومه حرفه‌ای می‌تونه کلید موفقیتت باشه"
@@ -12,6 +11,5 @@ export default function Home() {
 					linkPrimaryLink="/fa/resume"
 				/>
 			</Container>
-		</>
 	);
 }

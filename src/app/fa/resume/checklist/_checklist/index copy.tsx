@@ -35,14 +35,14 @@ export function Checklist({ name, list }: IChecklistProps) {
 	const isAllCompleted = taskList.every((task) => task.status);
 	const isSomeChecked = taskList.some((task) => task.status);
 
-	const listStatusType: IChecklistStatus = isAllCompleted
+	const _listStatusType: IChecklistStatus = isAllCompleted
 		? "completed"
 		: isSomeChecked
 			? "inProgress"
 			: "notStarted";
 
-	const totalTasks = taskList.length;
-	const completedTasks = taskList.filter((task) => task.status).length;
+	const _totalTasks = taskList.length;
+	const _completedTasks = taskList.filter((task) => task.status).length;
 
 	return (
 		<div className="select-none">

@@ -25,8 +25,7 @@ export function FeatureWithFullWidthImage({
 	features,
 }: IFeatureWithFullWidthImage) {
 	return (
-		<>
-			<Container className="my-16 sm:my-32">
+		<Container className="my-16 sm:my-32">
 				<header className="max-w-2xl mx-auto sm:text-center flex flex-col gap-2">
 					<SectionSubTitle>{subTitle}</SectionSubTitle>
 					<SectionTitle>{title}</SectionTitle>
@@ -35,6 +34,5 @@ export function FeatureWithFullWidthImage({
 				<SectionImageFullWidth src={image} alt={title} />
 				<SectionFeaturesList features={features} />
 			</Container>
-		</>
 	);
 }
