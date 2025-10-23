@@ -53,9 +53,9 @@ export default function Page() {
 			datePublished={article.datePublished}
 			coverImage={imgCover}
 			lang="en-US"
-			urlPath={""}
-			keywords={[]}
-			dateModified={""}
+			urlPath={article.pagePath}
+			keywords={article.keywords}
+			dateModified={article.dateModified}
 		>
 			<Intro />
 			<PDFPreview />
