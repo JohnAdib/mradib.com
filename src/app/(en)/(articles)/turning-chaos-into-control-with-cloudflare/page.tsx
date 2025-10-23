@@ -2,36 +2,36 @@ import { ArticleLayout } from "@/components/article/layout";
 import { Button } from "@/components/button";
 import type { Metadata } from "next";
 import type { IArticle } from "../i-article-interface";
-import imgCover from "./_img/cover.webp";
+import imgCover from "./opengraph-image.png";
 
 export const article: IArticle = {
 	author: "John Adib",
-	publishDate: "2025-07-03",
-	publishTime: "10:17:00",
+	publishDate: "2025-09-24",
+	publishTime: "10:00:00",
 	datePublished: "",
 	dateModified: "",
-	title: "Design Systems, AI, and the Art of Separation of Concern",
+	title: "Turning Chaos into Control with Cloudflare",
 	description:
-		"Learn 7 practical tips to build scalable, maintainable architectures that empower teams and AI tools alike",
-	pageTitle: "Design Systems, AI, and the Art of Separation of Concern",
+		"Learn how to transform chaotic infrastructure into a controlled, scalable system using Cloudflare's powerful tools and services",
+	pageTitle: "Turning Chaos into Control with Cloudflare",
 	pageDesc:
-		"Learn 7 practical tips to build scalable, maintainable architectures that empower teams and AI tools alike",
-	pagePath: "/design-systems-ai-and-the-art-of-separation-of-concern",
+		"Learn how to transform chaotic infrastructure into a controlled, scalable system using Cloudflare's powerful tools and services",
+	pagePath: "/turning-chaos-into-control-with-cloudflare",
 	keywords: [
-		"Design Systems",
-		"AI",
-		"Separation of Concern",
-		"Figma",
-		"React",
-		"React Advanced London",
+		"Cloudflare",
+		"Infrastructure",
+		"DevOps",
+		"Scalability",
+		"Control",
+		"Chaos Engineering",
 	],
 	pdfUrl:
-		"https://mradib.com/talks/2025-05-03-design-systems-ai-and-the-art-of-separation-of-concern.pdf",
+		"https://mradib.com/talks/2025-09-24-turning-chaos-into-control-with-cloudflare.pdf",
 };
 
 // set publish date and time
 article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
-article.dateModified = "2025-07-03" + "T" + "10:37:00" + ".000Z";
+article.dateModified = "2025-09-24" + "T" + "10:00:00" + ".000Z";
 
 export const metadata: Metadata = {
 	title: article.pageTitle,
@@ -51,10 +51,10 @@ export default function Page() {
 			title={article.title}
 			intro={article.description}
 			datePublished={article.datePublished}
+			coverImage={imgCover}
 			lang="en-US"
 			urlPath={""}
 			keywords={[]}
-			coverImage={imgCover}
 			dateModified={""}
 		>
 			<Intro />
@@ -67,12 +67,12 @@ function Intro() {
 	return (
 		<div id="intro">
 			<p>
-				Design Systems, AI, and the Art of Separation of Concern" is a talk
-				about how modern design systems can empower both humans and AI to build
-				scalable, maintainable products. It shares 7 practical tips for
-				structuring architecture, aligning design and code, and teaching AI
-				tools your system's logic—perfect for designers, developers, and product
-				teams navigating the future of AI-driven workflows.
+				"Turning Chaos into Control with Cloudflare" is a comprehensive talk
+				about transforming chaotic infrastructure into a controlled, scalable
+				system. This presentation covers how to leverage Cloudflare's powerful
+				tools and services to build resilient, performant applications that can
+				handle traffic spikes, security threats, and global distribution
+				challenges with confidence.
 			</p>
 		</div>
 	);

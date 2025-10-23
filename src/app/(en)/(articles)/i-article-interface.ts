@@ -10,4 +10,5 @@ export interface IArticle {
 	pageDesc: string;
 	pagePath: string;
 	keywords: string[];
+	pdfUrl?: string;
 }
