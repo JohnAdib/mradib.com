@@ -10,7 +10,7 @@ import { talkTopics } from "@/data/talks/talk-topics";
 
 const icons: Record<string, ComponentType<{ className?: string }>> = {
 	"co-founding": RocketLaunchIcon,
-	technologies: CommandLineIcon,
+	engineering: CommandLineIcon,
 	ai: SparklesIcon,
 	leadership: UserGroupIcon,
 };

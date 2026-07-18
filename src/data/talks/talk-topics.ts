@@ -13,10 +13,10 @@ export const talkTopics: ITalkTopic[] = [
 			"Building two companies from zero, once as CEO and once as CTO.",
 	},
 	{
-		slug: "technologies",
-		title: "Technologies",
+		slug: "engineering",
+		title: "Engineering",
 		description:
-			"Real evaluations of the tools and stacks teams actually ship with.",
+			"Architecture, guardrails, and the infrastructure decisions that keep systems fast to change.",
 	},
 	{
 		slug: "ai",

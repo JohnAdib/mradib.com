@@ -35,9 +35,9 @@ export function TalksHero() {
 				</span>
 			</h1>
 			<p className="reveal-up reveal-delay-4 mt-6 text-base text-zinc-600 dark:text-zinc-400">
-				At conferences and meetups, I cover founding and growing companies, new
-				technologies, applied AI, and the leadership it takes to hold a team
-				together.
+				At conferences and meetups, I cover founding and growing companies,
+				software engineering, applied AI, and the leadership it takes to hold a
+				team together.
 			</p>
 			<div className="reveal-up reveal-delay-4 mt-10 max-w-sm">
 				<StatBand stats={stats} gridClass="grid-cols-2" />

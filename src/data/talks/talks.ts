@@ -33,6 +33,7 @@ export const talks: ITalk[] = [
 		websiteUrl: "https://www.hackunited.org/",
 		city: "Online",
 		date: "2026-01-18",
+		audience: "25+ attendees",
 		summary:
 			"A session on architecting and shipping an enterprise dashboard with AI, from initial design to production, given during the United Hacks V6 hackathon.",
 		slidesPdf:
