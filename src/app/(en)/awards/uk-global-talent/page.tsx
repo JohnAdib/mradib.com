@@ -30,7 +30,7 @@ export default function Page() {
 
 			<h2>The work behind it</h2>
 			<p>
-				My evidence was seventeen years in the making: co-founding Sarshomar (a
+				My evidence was sixteen years in the making: co-founding Sarshomar (a
 				survey platform that raised $1M and reached one million users in its
 				first month) and Jibres (an e-commerce platform serving 1,200+
 				businesses that won a national award), leading engineering teams,

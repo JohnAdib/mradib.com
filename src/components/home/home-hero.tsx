@@ -3,6 +3,7 @@ import { Button } from "@/components/button";
 import { Container } from "@/components/container";
 import { SocialMediaLinks } from "@/components/social-media-links";
 import { mentoringStats } from "@/data/mentoring-stats";
+import { experienceYears } from "@/data/profile";
 import portraitImage from "@/images/portrait.jpg";
 
 export function HomeHero() {
@@ -15,17 +16,17 @@ export function HomeHero() {
 						<span className="reveal-up reveal-delay-1 block">
 							2× startup co-founder.
 						</span>
-						<span className="reveal-up reveal-delay-2 block text-accent-700 dark:text-accent-400">
+						<span className="reveal-up reveal-delay-2 mt-3 block text-2xl text-accent-700 sm:text-3xl dark:text-accent-400">
 							Mentor to hundreds of engineers.
 						</span>
 					</h1>
 					<p className="reveal-up reveal-delay-3 mt-6 text-base text-zinc-600 dark:text-zinc-400">
-						I'm John Adib, an engineering leader in London. Over 17+ years I've
-						co-founded two startups, taught 2,000+ students, and run{" "}
-						{mentoringStats.sessions}+ mentorship sessions on ADPList, where I
-						was named the World's Most Influential Mentor of 2024. These days
-						I'm focused on AI-first development: changing how teams work, not
-						just how fast they ship.
+						I'm John Adib, an engineering leader in London. Over{" "}
+						{experienceYears}+ years I've co-founded two startups, taught 2,000+
+						students, and run {mentoringStats.sessions}+ mentorship sessions on
+						ADPList, where I was named the World's Most Influential Mentor of
+						2024. These days I'm focused on AI-first development: changing how
+						teams work, not just how fast they ship.
 					</p>
 					<div className="reveal-up reveal-delay-4 mt-8 flex flex-wrap items-center gap-4">
 						<Button href="/mentor">Explore mentorship</Button>

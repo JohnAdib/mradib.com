@@ -1,10 +1,15 @@
 import { Container } from "@/components/container";
 import { StatBand } from "@/components/stat-band";
 import { mentoringStats } from "@/data/mentoring-stats";
+import { experienceYears } from "@/data/profile";
 
 export function HomeStats() {
 	const stats = [
-		{ value: "17+", label: "years in software", href: "/about" },
+		{
+			value: `${experienceYears}+`,
+			label: "years in software",
+			href: "/about",
+		},
 		{
 			value: `${mentoringStats.sessions}+`,
 			label: "mentoring sessions",

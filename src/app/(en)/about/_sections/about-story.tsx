@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { experienceYears } from "@/data/profile";
 
 function H2({ id, children }: { id?: string; children: React.ReactNode }) {
 	return (
@@ -20,8 +21,8 @@ export function AboutStory() {
 			<p>
 				I'm an Engineering Manager at Zapp in London, a two-time startup
 				co-founder, and one of ADPList's most recognized engineering mentors.
-				Seventeen-plus years in, I still write code most days. I just spend more
-				of my time making other engineers, and now AI, better at it.
+				{experienceYears}+ years in, I still write code most days. I just spend
+				more of my time making other engineers, and now AI, better at it.
 			</p>
 
 			<H2>It started with teaching</H2>
