@@ -17,6 +17,7 @@ export function sectionPersian(): string {
 		"## Persian content",
 		"",
 		`- John also publishes Persian-language tutorials and a resume-writing guide at ${homepageUrl}/fa`,
+		`- The complete single-page Persian resume-writing guide is at ${homepageUrl}/fa/resume`,
 	].join("\n");
 }
 

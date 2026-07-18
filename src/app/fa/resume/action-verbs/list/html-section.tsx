@@ -11,7 +11,7 @@ export function ListActionVerbs(): JSX.Element {
 			{allActionVerbs.map((verbsGroup) => {
 				return (
 					<section key={verbsGroup.title} dir="ltr" className="leading-relaxed">
-						<h2>{verbsGroup.title}</h2>
+						<h3>{verbsGroup.title}</h3>
 						<p>{verbsGroup.description}</p>
 						<div className="grid gap-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:md:grid-cols-5">
 							{verbsGroup.list.map((verb) => (

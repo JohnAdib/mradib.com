@@ -31,6 +31,7 @@ export function ArticleLayout({
 	breadcrumb,
 	nextPrev,
 	lang,
+	aside,
 	children,
 }: IArticleLayout) {
 	const router = useRouter();
@@ -123,6 +124,11 @@ export function ArticleLayout({
 					</article>
 					<NavNextPrev next={nextPrev?.next} prev={nextPrev?.prev} />
 				</div>
+				{aside ? (
+					<aside className="hidden xl:block absolute inset-y-0 end-0 w-44">
+						<div className="sticky top-24">{aside}</div>
+					</aside>
+				) : null}
 				<ArticleJsonLD
 					headline={title}
 					name={title}
