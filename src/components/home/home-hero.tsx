@@ -9,7 +9,7 @@ import portraitImage from "@/images/portrait.jpg";
 export function HomeHero() {
 	return (
 		<Container className="mt-10 sm:mt-16">
-			<div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[1fr_auto] lg:gap-x-16">
+			<div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16">
 				<div className="max-w-2xl">
 					<h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
 						<span className="reveal-up block">Engineering leader.</span>

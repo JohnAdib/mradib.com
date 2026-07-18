@@ -33,12 +33,12 @@ export function StatBand({
 					<Link
 						key={stat.label}
 						href={stat.href}
-						className="rounded-xl transition hover:-translate-y-0.5"
+						className="min-w-0 rounded-xl transition hover:-translate-y-0.5"
 					>
 						<StatContent stat={stat} />
 					</Link>
 				) : (
-					<div key={stat.label}>
+					<div key={stat.label} className="min-w-0">
 						<StatContent stat={stat} />
 					</div>
 				),

@@ -51,7 +51,18 @@ body {
 	@apply flex h-full;
 	@apply bg-zinc-50;
 	@apply dark:bg-black;
+	/* Horizontal overflow is a bug; clip it and break long words instead */
+	@apply overflow-x-clip;
+	overflow-wrap: break-word;
 	font-family: var(--font-en);
+}
+
+/* Embeds and media must never exceed their container */
+iframe,
+img,
+svg,
+video {
+	max-width: 100%;
 }
 
 [dir="rtl"] {
