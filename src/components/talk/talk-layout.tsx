@@ -1,31 +1,22 @@
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/button";
 import { Container } from "@/components/container";
 import { TalkEventJsonLd } from "@/components/json-ld/talk-event-json-ld";
 import type { ITalk } from "@/data/talks/talk-interface";
 import { getTalkResources } from "@/lib/talks/get-talk-resources";
-import { TalkFacts } from "./talk-facts";
-import { TalkLogo } from "./talk-logo";
+import { TalkHero } from "./talk-hero";
+import { TalkPdfPreview } from "./talk-pdf-preview";
 import { TalkResources } from "./talk-resources";
 
 export function TalkLayout({
 	talk,
-	coverImage,
 	children,
 }: {
 	talk: ITalk;
-	coverImage?: StaticImageData;
 	children?: React.ReactNode;
 }) {
 	const extras = getTalkResources(talk).filter((r) => r.kind !== "slides");
-	const kind =
-		talk.format === "workshop"
-			? "Workshop"
-			: talk.format === "panel"
-				? "Panel"
-				: "Talk";
 
 	return (
 		<Container className="mt-16 sm:mt-24">
@@ -38,47 +29,27 @@ export function TalkLayout({
 					Back to talks
 				</Link>
 
-				<header className="mt-8 flex items-start gap-4">
-					<TalkLogo talk={talk} className="h-20 w-20" />
-					<div className="min-w-0">
-						<p className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
-							{kind} · {talk.event}
-						</p>
-						<h1 className="mt-2 text-3xl font-bold tracking-tight text-balance text-zinc-800 sm:text-4xl dark:text-zinc-100">
-							{talk.title}
-						</h1>
-					</div>
-				</header>
-
-				<p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-					{talk.summary}
-				</p>
+				<TalkHero talk={talk} />
 
 				{children}
 
-				{coverImage && (
+				{/* The slides preview below already shows talk.image, so skip this
+				    standalone cover when both are set, the same photo twice reads
+				    as a mistake, not a feature. */}
+				{talk.image && !talk.slidesPdf && (
 					<Image
-						src={coverImage}
+						src={talk.image}
 						alt={talk.title}
+						width={1600}
+						height={900}
 						priority
-						className="mt-8 rounded-2xl ring-1 ring-zinc-100 dark:ring-zinc-700/50"
+						className="mt-8 h-auto w-full rounded-2xl ring-1 ring-zinc-100 dark:ring-zinc-700/50"
 					/>
 				)}
 
-				<div className="mt-8">
-					<TalkFacts talk={talk} />
-				</div>
-
 				{talk.slidesPdf && (
 					<div className="mt-8">
-						<Button
-							href={talk.slidesPdf}
-							variant="primary"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Download slides (PDF)
-						</Button>
+						<TalkPdfPreview href={talk.slidesPdf} previewImage={talk.image} />
 					</div>
 				)}
 

@@ -37,6 +37,10 @@ export interface ITalk {
 	summary: string;
 	/** Organizer logo under /talks/logos. Falls back to a monogram when unset. */
 	logo?: string;
+	/** Representative cover photo, e.g. the deck's first slide. Path under /talks/covers. */
+	image?: string;
+	/** Ambient background video behind the hero header. Always muted and looped. Path under /talks. */
+	video?: string;
 	slidesPdf?: string;
 	/** The specific event page. */
 	eventUrl?: string;

@@ -22,23 +22,6 @@ const panelists = [
 export default function Page() {
 	return (
 		<TalkLayout talk={talk}>
-			<figure className="mt-8">
-				{/* biome-ignore lint/a11y/useMediaCaption: promotional event intro, no caption track available */}
-				<video
-					controls
-					preload="metadata"
-					className="w-full rounded-2xl ring-1 ring-zinc-100 dark:ring-zinc-700/50"
-				>
-					<source
-						src="/talks/techlead-conf-london-2025-intro.mp4"
-						type="video/mp4"
-					/>
-				</video>
-				<figcaption className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
-					Event intro, TechLead Conf London 2025.
-				</figcaption>
-			</figure>
-
 			<div className="mt-8 space-y-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
 				<p>
 					This panel opened with a question most teams skip: what does
