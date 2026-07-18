@@ -7,7 +7,7 @@ export function HomeStats() {
 		{ value: "17+", label: "years in software", href: "/about" },
 		{
 			value: `${mentoringStats.sessions}+`,
-			label: "free mentoring sessions",
+			label: "mentoring sessions",
 			href: "/mentor",
 		},
 		{ value: "2", label: "startups co-founded", href: "/about#ventures" },

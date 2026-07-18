@@ -7,7 +7,7 @@ import { urlSocial } from "@/lib/constants/url-social";
 export const metadata: Metadata = {
 	title: "Contact",
 	description:
-		"Contact John Adib. Book a free mentorship session on ADPList, invite him to speak, or reach out on LinkedIn.",
+		"Contact John Adib. Book a mentorship session, invite him to speak, or reach out on LinkedIn.",
 };
 
 export default function Page() {
@@ -20,8 +20,8 @@ export default function Page() {
 				<Card as="article">
 					<Card.Title href={mentoringStats.profileUrl}>Mentorship</Card.Title>
 					<Card.Description>
-						Free 1:1 sessions on engineering careers, resumes, interviews, and
-						tech immigration, booked through ADPList.
+						1:1 sessions on engineering careers, resumes, interviews, and tech
+						immigration, booked through ADPList.
 					</Card.Description>
 					<Card.Cta>Book on ADPList</Card.Cta>
 				</Card>

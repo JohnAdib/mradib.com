@@ -13,7 +13,7 @@ export function TalksPodcast({ podcast }: { podcast?: IPodcastAppearance }) {
 			</h2>
 			<div className="mt-8">
 				<Card as="article">
-					<Card.Eyebrow decorate>
+					<Card.Eyebrow>
 						{podcast.show} · Spotify · {podcast.duration}
 					</Card.Eyebrow>
 					<Card.Title href={podcast.url}>{podcast.title}</Card.Title>

@@ -25,7 +25,7 @@ interface ISectionFeature {
 export const metadata: Metadata = {
 	title: "Mentorship",
 	description:
-		"John Adib has run 600+ free mentorship sessions on ADPList, where he was named the World's Most Influential Mentor of 2024 and #1 Mentor in Europe. Book a free 1:1 on engineering careers, resume reviews, or tech immigration.",
+		"John Adib has run 600+ mentorship sessions on ADPList, where he was named the World's Most Influential Mentor of 2024 and #1 Mentor in Europe. Book a 1:1 on engineering careers, resume reviews, or tech immigration.",
 };
 
 export default function Page() {
@@ -61,7 +61,8 @@ export default function Page() {
 				Hello! I'm John Adib, an Engineering Manager and 2× startup co-founder
 				with a passion for helping others succeed. Whether you're looking to
 				enhance your coding skills, polish your resume, conquer job interviews,
-				or navigate tech immigration, I'm here to help. <b>FREE!</b>
+				or navigate tech immigration, I'm here to help. I keep a limited number
+				of free slots open.
 			</FeatureWithFullWidthImage>
 
 			<MentorStats />
@@ -75,7 +76,7 @@ export default function Page() {
 				subTitle="Ready to take the next step?"
 				title="Book a Mentorship Session"
 				linkText="Register on ADPList"
-				linkDesc="and book a free 1:1 session with me today!"
+				linkDesc="and book a 1:1 session with me today!"
 			/>
 		</>
 	);

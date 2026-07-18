@@ -10,7 +10,7 @@ export function AwardCard({ award }: { award: IAward }) {
 
 	return (
 		<Card as="article">
-			<Card.Eyebrow decorate>
+			<Card.Eyebrow>
 				{award.issuer} · {awardYear(award)}
 			</Card.Eyebrow>
 			<Card.Title href={href}>{award.name}</Card.Title>

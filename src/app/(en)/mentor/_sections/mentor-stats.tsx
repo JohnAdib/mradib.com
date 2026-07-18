@@ -6,7 +6,7 @@ export function MentorStats() {
 	const stats = [
 		{
 			value: `${mentoringStats.sessions}+`,
-			label: "free mentorship sessions",
+			label: "mentorship sessions",
 			href: mentoringStats.profileUrl,
 		},
 		{

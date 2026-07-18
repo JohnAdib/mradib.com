@@ -86,7 +86,7 @@ export function AboutStory() {
 				whenever London's light cooperates, and a regular at this city's
 				developer communities. I{" "}
 				<Link href="/mentor" className={linkClass}>
-					mentor for free on ADPList
+					mentor on ADPList
 				</Link>{" "}
 				, 600+ sessions so far, because teaching is still the part I'd do even
 				if nobody paid me for it. And I keep an open-source habit on GitHub.

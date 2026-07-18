@@ -59,7 +59,7 @@ export function AwardLayout({
 						href="/mentor"
 						className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 					>
-						Book a free mentorship session →
+						Book a mentorship session →
 					</Link>
 				</footer>
 			</div>

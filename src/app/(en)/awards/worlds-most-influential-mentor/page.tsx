@@ -31,7 +31,7 @@ export default function Page() {
 			<h2>The work behind it</h2>
 			<p>
 				I joined ADPList as a mentor in June 2024. What started as a few weekend
-				sessions turned into a practice: 600+ free sessions covering engineering
+				sessions turned into a practice: 600+ sessions covering engineering
 				careers, resume reviews, interview preparation, tech immigration, and
 				the unglamorous details of growing from engineer to leader. The award
 				citation quoted something I still believe:
@@ -60,8 +60,8 @@ export default function Page() {
 
 			<h2>Want a session?</h2>
 			<p>
-				Mentorship with me is free. <a href="/mentor">Book a session</a> and
-				bring a real problem: career, code, resume, or visa.
+				<a href="/mentor">Book a session</a> and bring a real problem: career,
+				code, resume, or visa.
 			</p>
 		</AwardLayout>
 	);

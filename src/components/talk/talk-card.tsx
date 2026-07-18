@@ -10,7 +10,7 @@ export function TalkCard({ talk }: { talk: ITalk }) {
 	return (
 		<article className="md:grid md:grid-cols-4 md:items-baseline">
 			<Card className="md:col-span-3">
-				<Card.Eyebrow decorate className="md:hidden">
+				<Card.Eyebrow className="md:hidden">
 					{formatDateTime({ datetime: talk.date })}
 				</Card.Eyebrow>
 				<Card.Title href={talk.articlePath}>{talk.title}</Card.Title>

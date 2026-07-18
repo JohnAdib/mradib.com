@@ -4,12 +4,12 @@ export const mentorFaq: IFaqQA[] = [
 	{
 		id: "how-to-book",
 		q: "How do I book a mentorship session with John Adib?",
-		a: "Register on ADPList and pick a slot on my profile at adplist.org/mentors/john-adib. Sessions are free 1:1 video calls.",
+		a: "Register on ADPList and pick a slot on my profile at adplist.org/mentors/john-adib. Sessions are 1:1 video calls.",
 	},
 	{
 		id: "is-it-free",
-		q: "Is the mentorship really free?",
-		a: "Yes. Every session is free, always. Mentoring is how I give back to the community that raised me.",
+		q: "Is mentorship free?",
+		a: "I keep a limited number of free slots open on ADPList, first come, first served. Mentoring is how I give back, and broader or ongoing mentoring is something we can discuss directly.",
 	},
 	{
 		id: "topics",

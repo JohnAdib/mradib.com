@@ -60,8 +60,8 @@ export default function Page() {
 
 			<h2>Want a session?</h2>
 			<p>
-				Sessions are free. <a href="/mentor">Book one</a>. European timezone
-				friendly, but the whole world is welcome.
+				<a href="/mentor">Book a session</a>. European timezone friendly, but
+				the whole world is welcome.
 			</p>
 		</AwardLayout>
 	);

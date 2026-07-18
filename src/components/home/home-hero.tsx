@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/button";
 import { Container } from "@/components/container";
 import { SocialMediaLinks } from "@/components/social-media-links";
@@ -29,22 +28,10 @@ export function HomeHero() {
 						just how fast they ship.
 					</p>
 					<div className="reveal-up reveal-delay-4 mt-8 flex flex-wrap items-center gap-4">
-						<Button
-							href={mentoringStats.profileUrl}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Book a free mentorship session
-						</Button>
+						<Button href="/mentor">Explore mentorship</Button>
 						<Button href="/talks#invite" variant="secondary">
 							Invite me to speak
 						</Button>
-						<Link
-							href="/about"
-							className="text-sm font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
-						>
-							More about me →
-						</Link>
 					</div>
 					<div className="reveal-up reveal-delay-4 mt-8">
 						<SocialMediaLinks />

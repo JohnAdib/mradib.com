@@ -18,14 +18,7 @@ export default async function ArticlesIndex() {
 			title={metadata.title as string}
 			intro={metadata.description as string}
 		>
-			<div
-				className={clsx(
-					"md:border-l md:border-zinc-100",
-					"md:rtl:pr-6",
-					"md:ltr:pl-6",
-					"md:dark:border-zinc-700/40",
-				)}
-			>
+			<div className="max-w-3xl">
 				<div className="flex max-w-3xl flex-col space-y-16">
 					{articlesMeta.map((article) => (
 						<Article key={article.pagePath} article={article} />
@@ -45,7 +38,6 @@ function Article({ article }: { article: IArticle }) {
 					as="time"
 					dateTime={article.datePublished}
 					className="md:hidden"
-					decorate
 				>
 					{formatDateTime({ datetime: article.datePublished })}
 				</Card.Eyebrow>

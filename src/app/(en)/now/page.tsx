@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const nowItems = [
 	"Leading a consumer engineering team at Zapp in London. Weekly releases, AI reviewers on every pull request.",
 	"Making AI-first development the default, not the experiment: agents, skills, and architecture that AI can safely work on.",
-	`Mentoring on ADPList, ${mentoringStats.sessions}+ free sessions and counting, plus startup founders through MassChallenge Switzerland & UK.`,
+	`Mentoring on ADPList, ${mentoringStats.sessions}+ sessions and counting, plus startup founders through MassChallenge Switzerland & UK.`,
 	"Preparing my next talks on AI-first architecture and design systems. Invitations welcome.",
 	"Raising two daughters, the most important job I have.",
 ];
