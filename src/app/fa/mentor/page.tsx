@@ -1,5 +1,3 @@
-import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
-import { FeatureWithFullWidthImage } from "@/components/sections/feature-with-full-width-image";
 import {
 	CommandLineIcon,
 	DocumentCheckIcon,
@@ -7,6 +5,8 @@ import {
 } from "@heroicons/react/20/solid";
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
+import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
+import { FeatureWithFullWidthImage } from "@/components/sections/feature-with-full-width-image";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
 
 interface ISectionFeature {

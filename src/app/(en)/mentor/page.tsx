@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
-import { FeatureWithFullWidthImage } from "@/components/sections/feature-with-full-width-image";
+
 import {
 	CommandLineIcon,
 	DocumentCheckIcon,
@@ -8,6 +7,8 @@ import {
 } from "@heroicons/react/20/solid";
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
+import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
+import { FeatureWithFullWidthImage } from "@/components/sections/feature-with-full-width-image";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
 
 interface ISectionFeature {
@@ -64,10 +65,10 @@ export default function Page() {
 				image={imgMradibMentoring}
 				features={featuresList}
 			>
-				Hello! I'm John Adib, a Principal Software Engineer with a passion for
-				helping others succeed. Whether you're looking to enhance your coding
-				skills, polish your resume, conquer job interviews, or navigate tech
-				immigration, I'm here to help. <b>FREE!</b>
+				Hello! I'm John Adib, an Engineering Manager and 2× startup co-founder
+				with a passion for helping others succeed. Whether you're looking to
+				enhance your coding skills, polish your resume, conquer job interviews,
+				or navigate tech immigration, I'm here to help. <b>FREE!</b>
 			</FeatureWithFullWidthImage>
 
 			<BookMentorshipSession

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleLayout } from "@/components/article/layout";
 import { Msg } from "@/components/msg/msg";
 import StepsCircle from "@/components/steps/steps-circle";
@@ -6,8 +8,6 @@ import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import type { Metadata } from "next";
-import Image from "next/image";
 import imgResumeChecklist from "./_img/resume-checklist.png";
 import { breadcrumb } from "./breadcrumb";
 import coverImg from "./opengraph-image.jpg";
@@ -130,18 +130,18 @@ export default function Page() {
 	const articleReadingTime = readingTime(<PageContent />);
 	return (
 		<ArticleLayout
-				title={articleTitle}
-				intro={articleDescription}
-				urlPath={pagePath}
-				keywords={keywords}
-				coverImage={coverImg}
-				datePublished={datePublished}
-				dateModified={dateModified}
-				readTimeMinutes={articleReadingTime}
-				breadcrumb={breadcrumb}
-				lang="fa-IR"
-			>
-				<PageContent />
-			</ArticleLayout>
+			title={articleTitle}
+			intro={articleDescription}
+			urlPath={pagePath}
+			keywords={keywords}
+			coverImage={coverImg}
+			datePublished={datePublished}
+			dateModified={dateModified}
+			readTimeMinutes={articleReadingTime}
+			breadcrumb={breadcrumb}
+			lang="fa-IR"
+		>
+			<PageContent />
+		</ArticleLayout>
 	);
 }

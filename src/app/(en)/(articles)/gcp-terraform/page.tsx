@@ -1,41 +1,13 @@
-import { ArticleSection } from "@/components/article/article-section";
-import { ArticleLayout } from "@/components/article/layout";
 import type { Metadata } from "next";
 import Image from "next/image";
-import type { IArticle } from "../i-article-interface";
+import { ArticleSection } from "@/components/article/article-section";
+import { ArticleLayout } from "@/components/article/layout";
+import { articleGcpTerraform as article } from "@/data/articles/gcp-terraform";
 import imgCover from "./_img/cover.png";
-import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
+import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAutoLinkReferencesList from "./_img/github-autolink-references-list.png";
 import { articleFaq } from "./faq";
-
-export const article: IArticle = {
-	author: "John Adib",
-	publishDate: "2024-11-14",
-	publishTime: "19:38:00",
-	datePublished: "",
-	dateModified: "",
-	title: "How to Set Up Terraform with GCP Remote Backend",
-	description:
-		"Learn to configure Terraform with Google Cloud Platform, setting up a remote backend on GCS for efficient state management and IaC.",
-	pageTitle: "Setting Up Terraform with GCP Remote Backend",
-	pageDesc:
-		"A comprehensive guide to setting up Terraform with a GCP remote backend for seamless CI/CD pipeline integration and state management",
-	pagePath: "/gcp-terraform",
-	keywords: [
-		"GCP",
-		"terraform",
-		"remote backend",
-		"Google Cloud Platform",
-		"infrastructure as code",
-		"IaC",
-		"state management",
-	],
-};
-
-// set publish date and time
-article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
-article.dateModified = "2024-11-14" + "T" + "19:45:00" + ".000Z";
 
 export const metadata: Metadata = {
 	title: article.pageTitle,
@@ -52,25 +24,25 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<ArticleLayout
-				title={article.title}
-				intro={article.description}
-				datePublished={article.datePublished}
-				lang="en-US"
-				urlPath={""}
-				keywords={[]}
-				coverImage={imgCover}
-				dateModified={""}
-				faq={articleFaq}
-			>
-				<Intro />
-				<Problem />
-				<Solution />
-				<Why />
-				<Requirements />
-				<StepByStep />
-				<Troubleshooting />
-				<Conclusion />
-			</ArticleLayout>
+			title={article.title}
+			intro={article.description}
+			datePublished={article.datePublished}
+			lang="en-US"
+			urlPath={""}
+			keywords={[]}
+			coverImage={imgCover}
+			dateModified={""}
+			faq={articleFaq}
+		>
+			<Intro />
+			<Problem />
+			<Solution />
+			<Why />
+			<Requirements />
+			<StepByStep />
+			<Troubleshooting />
+			<Conclusion />
+		</ArticleLayout>
 	);
 }
 

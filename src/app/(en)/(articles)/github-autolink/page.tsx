@@ -1,33 +1,13 @@
-import { ArticleSection } from "@/components/article/article-section";
-import { ArticleLayout } from "@/components/article/layout";
 import type { Metadata } from "next";
 import Image from "next/image";
-import type { IArticle } from "../i-article-interface";
+import { ArticleSection } from "@/components/article/article-section";
+import { ArticleLayout } from "@/components/article/layout";
+import { articleGithubAutolink as article } from "@/data/articles/github-autolink";
 import imgCover from "./_img/cover.png";
-import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
+import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAutoLinkReferencesList from "./_img/github-autolink-references-list.png";
 import { articleFaq } from "./faq";
-
-export const article: IArticle = {
-	author: "John Adib",
-	publishDate: "2024-07-12",
-	publishTime: "14:28:00",
-	datePublished: "",
-	dateModified: "",
-	title: "GitHub Autolink",
-	description:
-		"Boost Productivity with GitHub Autolink References: Seamlessly Link GitHub Issues to JIRA, Asana, and More",
-	pageTitle: "GitHub Autolink - Simplify Issue Linking and Workflow",
-	pageDesc:
-		"Automatically linkify references to GitHub issues, PRs, commits, and users.",
-	pagePath: "/github-autolink",
-	keywords: ["GitHub", "autolink"],
-};
-
-// set publish date and time
-article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
-article.dateModified = "2024-11-11" + "T" + "11:26:00" + ".000Z";
 
 export const metadata: Metadata = {
 	title: article.pageTitle,
@@ -44,25 +24,25 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<ArticleLayout
-				title={article.title}
-				intro={article.description}
-				datePublished={article.datePublished}
-				lang="en-US"
-				urlPath={""}
-				keywords={[]}
-				coverImage={imgCover}
-				dateModified={""}
-				faq={articleFaq}
-			>
-				<Intro />
-				<Problem />
-				<Solution />
-				<Why />
-				<Requirements />
-				<StepByStep />
-				<Troubleshooting />
-				<Conclusion />
-			</ArticleLayout>
+			title={article.title}
+			intro={article.description}
+			datePublished={article.datePublished}
+			lang="en-US"
+			urlPath={""}
+			keywords={[]}
+			coverImage={imgCover}
+			dateModified={""}
+			faq={articleFaq}
+		>
+			<Intro />
+			<Problem />
+			<Solution />
+			<Why />
+			<Requirements />
+			<StepByStep />
+			<Troubleshooting />
+			<Conclusion />
+		</ArticleLayout>
 	);
 }
 

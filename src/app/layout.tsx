@@ -1,3 +1,4 @@
+import { PersonJsonLd } from "@/components/json-ld/person-json-ld";
 import { rootMetadata } from "@/lib/root-metadata";
 import { rootViewport } from "@/lib/root-viewport";
 import "@/styles/tailwind.css";
@@ -24,6 +25,7 @@ export default function RootLayout({
 		>
 			<body className={clsx(fontEn.variable, fontFa.variable)}>
 				<Providers>{children}</Providers>
+				<PersonJsonLd />
 				<GoogleAnalytics gaId="G-0T9SVDBER6" />
 			</body>
 		</html>

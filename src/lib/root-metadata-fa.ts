@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { defaultDescriptionFa, defaultTitleFa } from "./constants/fa";
+import { defaultDescriptionFa, defaultTitleFa, myNameFa } from "./constants/fa";
 
 export const rootMetadataFa: Metadata = {
 	title: {
-		// template: '%s' + separator + myNameFa,
-		template: "%s",
+		template: `%s | ${myNameFa}`,
 		default: defaultTitleFa,
 	},
 	description: defaultDescriptionFa,
+	openGraph: {
+		locale: "fa_IR",
+	},
 };

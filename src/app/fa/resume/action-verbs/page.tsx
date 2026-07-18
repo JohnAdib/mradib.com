@@ -1,11 +1,11 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleLayout } from "@/components/article/layout";
 import { Msg } from "@/components/msg/msg";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import type { Metadata } from "next";
-import Image from "next/image";
 import imgVerbMetricTask from "./_img/resume-action-verb-metric-task.jpg";
 import imgVerbTaskMetric from "./_img/resume-action-verb-task-metric.jpg";
 import { ListActionVerbs } from "./list/html-section";

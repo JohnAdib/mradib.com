@@ -1,10 +1,10 @@
-import { Card } from "@/components/card";
-import { SimpleLayout } from "@/components/simple-layout";
-import { formatDateTime } from "@/lib/datetime/format-date-time";
 import clsx from "clsx";
 import type { Metadata } from "next";
-import { articlesList } from "../(articles)/articles-list";
-import type { IArticle } from "../(articles)/i-article-interface";
+import { Card } from "@/components/card";
+import { SimpleLayout } from "@/components/simple-layout";
+import type { IArticle } from "@/data/articles/article-interface";
+import { articlesMeta } from "@/data/articles/articles-meta";
+import { formatDateTime } from "@/lib/datetime/format-date-time";
 
 export const metadata: Metadata = {
 	title: "A Collection of Insights and Ideas",
@@ -27,7 +27,7 @@ export default async function ArticlesIndex() {
 				)}
 			>
 				<div className="flex max-w-3xl flex-col space-y-16">
-					{articlesList.map((article) => (
+					{articlesMeta.map((article) => (
 						<Article key={article.pagePath} article={article} />
 					))}
 				</div>

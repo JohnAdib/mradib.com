@@ -1,6 +1,8 @@
-import { homepageUrl } from "@/lib/constants/url";
 import type { StaticImageData } from "next/image";
 import type { Article, WithContext } from "schema-dts";
+import { personId } from "@/components/json-ld/person-json-ld";
+import { profile } from "@/data/profile";
+import { homepageUrl } from "@/lib/constants/url";
 
 interface IArticleJSONLD {
 	headline: string;
@@ -40,19 +42,18 @@ export function ArticleJsonLD({
 		author: [
 			{
 				"@type": "Person",
-				name: "جان ادیب",
-				additionalName: "مستر ادیب",
-				alternateName: "جواد ادیب",
-				familyName: "ادیب",
-				jobTitle: "Senior Software Engineer",
-				url: "https://mradib.com/about",
+				"@id": personId,
+				name: profile.name,
+				alternateName: profile.alternateNames,
+				jobTitle: profile.jobTitle,
+				url: `${homepageUrl}/about`,
 			},
 		],
 		publisher: {
 			"@type": "Person",
-			name: "MrAdib",
-			alternateName: "مستر ادیب",
-			url: "https://mradib.com",
+			"@id": personId,
+			name: profile.name,
+			url: homepageUrl,
 		},
 		url: articleUrl,
 		keywords: keywords,
@@ -61,7 +62,7 @@ export function ArticleJsonLD({
 	return (
 		<script
 			type="application/ld+json"
-			// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+			// biome-ignore lint/security/noDangerouslySetInnerHtml: static, build-time JSON-LD
 			dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 		/>
 	);

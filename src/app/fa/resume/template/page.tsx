@@ -1,18 +1,18 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { ArticleLayout } from "@/components/article/layout";
 import { Msg } from "@/components/msg/msg";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import imgResumeDesignTraditionalVsCreative from "./_img/resume-design-traditional-vs-creative.jpg";
+import imgResumeFormatStructure from "./_img/resume-format-structure.png";
 import imgResumeFormatStructureChronological from "./_img/resume-format-structure-chronological.jpg";
 import imgResumeFormatStructureCombination from "./_img/resume-format-structure-combination.jpg";
 import imgResumeFormatStructureExample from "./_img/resume-format-structure-example.jpg";
 import imgResumeFormatStructureFunctional from "./_img/resume-format-structure-functional.jpg";
-import imgResumeFormatStructure from "./_img/resume-format-structure.png";
 import imgResumeFormatingInfographic from "./_img/resume-formating-infographic.jpg";
 import { breadcrumb } from "./breadcrumb";
 import { resumeTemplateFaq } from "./faq";
@@ -338,20 +338,20 @@ export default function Page() {
 
 	return (
 		<ArticleLayout
-				title={articleTitle}
-				intro={articleDescription}
-				urlPath={pagePath}
-				keywords={keywords}
-				coverImage={imgCover}
-				datePublished={datePublished}
-				dateModified={dateModified}
-				readTimeMinutes={articleReadingTime}
-				faq={resumeTemplateFaq}
-				breadcrumb={breadcrumb}
-				nextPrev={nextPrev}
-				lang="fa-IR"
-			>
-				<PageContent />
-			</ArticleLayout>
+			title={articleTitle}
+			intro={articleDescription}
+			urlPath={pagePath}
+			keywords={keywords}
+			coverImage={imgCover}
+			datePublished={datePublished}
+			dateModified={dateModified}
+			readTimeMinutes={articleReadingTime}
+			faq={resumeTemplateFaq}
+			breadcrumb={breadcrumb}
+			nextPrev={nextPrev}
+			lang="fa-IR"
+		>
+			<PageContent />
+		</ArticleLayout>
 	);
 }

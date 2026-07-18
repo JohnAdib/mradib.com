@@ -1,8 +1,8 @@
 "use client";
 
-import { Page404 } from "@/components/page-404/page-404";
 import { permanentRedirect, usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { Page404 } from "@/components/page-404/page-404";
 
 export default function NotFound() {
 	const pathname = usePathname();
@@ -18,7 +18,5 @@ export default function NotFound() {
 		}
 	}, [pathname]);
 
-	return (
-		<Page404 />
-	);
+	return <Page404 />;
 }

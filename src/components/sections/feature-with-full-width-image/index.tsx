@@ -1,5 +1,5 @@
-import { Container } from "@/components/container";
 import type { StaticImageData } from "next/image";
+import { Container } from "@/components/container";
 import {
 	type ISectionFeature,
 	SectionFeaturesList,
@@ -26,13 +26,13 @@ export function FeatureWithFullWidthImage({
 }: IFeatureWithFullWidthImage) {
 	return (
 		<Container className="my-16 sm:my-32">
-				<header className="max-w-2xl mx-auto sm:text-center flex flex-col gap-2">
-					<SectionSubTitle>{subTitle}</SectionSubTitle>
-					<SectionTitle>{title}</SectionTitle>
-					<SectionIntro>{children}</SectionIntro>
-				</header>
-				<SectionImageFullWidth src={image} alt={title} />
-				<SectionFeaturesList features={features} />
-			</Container>
+			<header className="max-w-2xl mx-auto sm:text-center flex flex-col gap-2">
+				<SectionSubTitle>{subTitle}</SectionSubTitle>
+				<SectionTitle>{title}</SectionTitle>
+				<SectionIntro>{children}</SectionIntro>
+			</header>
+			<SectionImageFullWidth src={image} alt={title} />
+			<SectionFeaturesList features={features} />
+		</Container>
 	);
 }

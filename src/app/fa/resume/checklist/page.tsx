@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import { ArticleLayout } from "@/components/article/layout";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
-import type { Metadata } from "next";
 import { Checklist } from "./_checklist";
 import { resumeChecklist } from "./_data";
 import coverImg from "./opengraph-image.jpg";
@@ -54,18 +54,18 @@ export default function Page() {
 
 	return (
 		<ArticleLayout
-				title={articleTitle}
-				intro={articleDescription}
-				urlPath={pagePath}
-				keywords={keywords}
-				coverImage={coverImg}
-				datePublished={datePublished}
-				dateModified={dateModified}
-				readTimeMinutes={articleReadingTime}
-				lang="fa-IR"
-			>
-				<PageContent />
-				<Checklist id="resume" list={resumeChecklist} />
-			</ArticleLayout>
+			title={articleTitle}
+			intro={articleDescription}
+			urlPath={pagePath}
+			keywords={keywords}
+			coverImage={coverImg}
+			datePublished={datePublished}
+			dateModified={dateModified}
+			readTimeMinutes={articleReadingTime}
+			lang="fa-IR"
+		>
+			<PageContent />
+			<Checklist id="resume" list={resumeChecklist} />
+		</ArticleLayout>
 	);
 }

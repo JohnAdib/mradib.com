@@ -5,15 +5,15 @@ export const rootViewport: Viewport = {
 	minimumScale: 1,
 	initialScale: 1,
 	maximumScale: 5,
-	colorScheme: "dark",
+	colorScheme: "light dark",
 	themeColor: [
 		{
 			media: "(prefers-color-scheme: light)",
-			color: "#f8f859",
+			color: "#fafafa",
 		},
 		{
 			media: "(prefers-color-scheme: dark)",
-			color: "#1d1a22",
+			color: "#000000",
 		},
 	],
 };

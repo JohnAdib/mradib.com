@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import Image from "next/image";
 import { Container, ContainerOuter } from "@/components/container";
 import { HeroWithTile } from "@/components/hero-with-tile/hero-with-tile";
 import { SocialMediaLinks } from "@/components/social-media-links";
@@ -6,8 +8,6 @@ import image2 from "@/images/photos/image-2.jpg";
 import image3 from "@/images/photos/image-3.jpg";
 import image4 from "@/images/photos/image-4.jpg";
 import image5 from "@/images/photos/image-5.jpg";
-import clsx from "clsx";
-import Image from "next/image";
 
 function Photos() {
 	const rotations = [
@@ -52,9 +52,10 @@ export default async function Home() {
 						MrAdib
 					</h1>
 					<p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-						I’m John Adib, a Senior Software Engineer and avid Photographer
-						based in London. With a passion for creating innovative web
-						solutions and capturing golden moments.
+						I’m John Adib — Engineering Manager at Zapp in London, 2× startup
+						co-founder, and mentor to hundreds of engineers. I spend my days
+						pioneering AI-first development: changing how teams work, not just
+						how fast they ship.
 					</p>
 					<div className="mt-6">
 						<SocialMediaLinks />

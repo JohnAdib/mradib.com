@@ -1,5 +1,5 @@
-import type { LanguageLocale } from "@/lib/languages/locale";
 import type { StaticImageData } from "next/image";
+import type { LanguageLocale } from "@/lib/languages/locale";
 import type { IBreadcrumbItem } from "../breadcrumb/interface";
 import type { IFaqQA } from "../faq/faq-interface";
 import type { INavNextPrev } from "../nav-next-prev/interface";

@@ -1,37 +1,8 @@
+import type { Metadata } from "next";
 import { ArticleLayout } from "@/components/article/layout";
 import { Button } from "@/components/button";
-import type { Metadata } from "next";
-import type { IArticle } from "../i-article-interface";
+import { articleTurningChaosCloudflare as article } from "@/data/articles/turning-chaos-cloudflare";
 import imgCover from "./opengraph-image.png";
-
-export const article: IArticle = {
-	author: "John Adib",
-	publishDate: "2025-09-24",
-	publishTime: "10:00:00",
-	datePublished: "",
-	dateModified: "",
-	title: "Turning Chaos into Control with Cloudflare",
-	description:
-		"Learn how to transform chaotic infrastructure into a controlled, scalable system using Cloudflare's powerful tools and services",
-	pageTitle: "Turning Chaos into Control with Cloudflare",
-	pageDesc:
-		"Learn how to transform chaotic infrastructure into a controlled, scalable system using Cloudflare's powerful tools and services",
-	pagePath: "/turning-chaos-into-control-with-cloudflare",
-	keywords: [
-		"Cloudflare",
-		"Infrastructure",
-		"DevOps",
-		"Scalability",
-		"Control",
-		"Chaos Engineering",
-	],
-	pdfUrl:
-		"https://mradib.com/talks/2025-09-24-turning-chaos-into-control-with-cloudflare.pdf",
-};
-
-// set publish date and time
-article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
-article.dateModified = "2025-09-24" + "T" + "10:00:00" + ".000Z";
 
 export const metadata: Metadata = {
 	title: article.pageTitle,

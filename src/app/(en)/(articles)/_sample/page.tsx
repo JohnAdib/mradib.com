@@ -1,11 +1,11 @@
-import { ArticleSection } from "@/components/article/article-section";
-import { ArticleLayout } from "@/components/article/layout";
 import type { Metadata } from "next";
 import Image from "next/image";
+import { ArticleSection } from "@/components/article/article-section";
+import { ArticleLayout } from "@/components/article/layout";
 import type { IArticle } from "../i-article-interface";
 import imgCover from "./_img/cover.png";
-import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
+import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
 import imgGithubAutoLinkReferencesList from "./_img/github-autolink-references-list.png";
 import { articleFaq } from "./faq";
 
@@ -44,25 +44,25 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<ArticleLayout
-				title={article.title}
-				intro={article.description}
-				datePublished={article.datePublished}
-				lang="en-US"
-				urlPath={""}
-				keywords={[]}
-				coverImage={imgCover}
-				dateModified={""}
-				faq={articleFaq}
-			>
-				<Intro />
-				<Problem />
-				<Solution />
-				<Why />
-				<Requirements />
-				<StepByStep />
-				<Troubleshooting />
-				<Conclusion />
-			</ArticleLayout>
+			title={article.title}
+			intro={article.description}
+			datePublished={article.datePublished}
+			lang="en-US"
+			urlPath={""}
+			keywords={[]}
+			coverImage={imgCover}
+			dateModified={""}
+			faq={articleFaq}
+		>
+			<Intro />
+			<Problem />
+			<Solution />
+			<Why />
+			<Requirements />
+			<StepByStep />
+			<Troubleshooting />
+			<Conclusion />
+		</ArticleLayout>
 	);
 }
 

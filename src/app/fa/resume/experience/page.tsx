@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleLayout } from "@/components/article/layout";
 import { Msg } from "@/components/msg/msg";
 import { Pre } from "@/components/syntax-highlighter/pre";
@@ -5,8 +7,6 @@ import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import type { Metadata } from "next";
-import Image from "next/image";
 import imgResumeExperienceAccomplishments from "./_img/resume-experience-accomplishments.png";
 import imgResumeExperienceCover from "./_img/resume-experience-cover.jpg";
 import imgResumeExperienceExample1 from "./_img/resume-experience-example-1.png";
@@ -226,17 +226,17 @@ export default function Page() {
 
 	return (
 		<ArticleLayout
-				title={articleTitle}
-				intro={articleDescription}
-				urlPath={pagePath}
-				keywords={keywords}
-				coverImage={coverImg}
-				datePublished={datePublished}
-				dateModified={dateModified}
-				readTimeMinutes={articleReadingTime}
-				lang="fa-IR"
-			>
-				<PageContent />
-			</ArticleLayout>
+			title={articleTitle}
+			intro={articleDescription}
+			urlPath={pagePath}
+			keywords={keywords}
+			coverImage={coverImg}
+			datePublished={datePublished}
+			dateModified={dateModified}
+			readTimeMinutes={articleReadingTime}
+			lang="fa-IR"
+		>
+			<PageContent />
+		</ArticleLayout>
 	);
 }

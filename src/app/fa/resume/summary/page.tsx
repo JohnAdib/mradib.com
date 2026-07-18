@@ -1,11 +1,11 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleLayout } from "@/components/article/layout";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import type { Metadata } from "next";
-import Image from "next/image";
 import imgResumeSummaryCover from "./_img/resume-summary-cover.png";
 import coverImg from "./opengraph-image.png";
 
@@ -128,17 +128,17 @@ export default function Page() {
 
 	return (
 		<ArticleLayout
-				title={articleTitle}
-				intro={articleDescription}
-				urlPath={pagePath}
-				keywords={keywords}
-				coverImage={coverImg}
-				datePublished={datePublished}
-				dateModified={dateModified}
-				readTimeMinutes={articleReadingTime}
-				lang="fa-IR"
-			>
-				<PageContent />
-			</ArticleLayout>
+			title={articleTitle}
+			intro={articleDescription}
+			urlPath={pagePath}
+			keywords={keywords}
+			coverImage={coverImg}
+			datePublished={datePublished}
+			dateModified={dateModified}
+			readTimeMinutes={articleReadingTime}
+			lang="fa-IR"
+		>
+			<PageContent />
+		</ArticleLayout>
 	);
 }

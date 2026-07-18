@@ -1,37 +1,8 @@
+import type { Metadata } from "next";
 import { ArticleLayout } from "@/components/article/layout";
 import { Button } from "@/components/button";
-import type { Metadata } from "next";
-import type { IArticle } from "../i-article-interface";
+import { articleDesignSystemsAi as article } from "@/data/articles/design-systems-ai";
 import imgCover from "./_img/cover.webp";
-
-export const article: IArticle = {
-	author: "John Adib",
-	publishDate: "2025-07-03",
-	publishTime: "10:17:00",
-	datePublished: "",
-	dateModified: "",
-	title: "Design Systems, AI, and the Art of Separation of Concern",
-	description:
-		"Learn 7 practical tips to build scalable, maintainable architectures that empower teams and AI tools alike",
-	pageTitle: "Design Systems, AI, and the Art of Separation of Concern",
-	pageDesc:
-		"Learn 7 practical tips to build scalable, maintainable architectures that empower teams and AI tools alike",
-	pagePath: "/design-systems-ai-and-the-art-of-separation-of-concern",
-	keywords: [
-		"Design Systems",
-		"AI",
-		"Separation of Concern",
-		"Figma",
-		"React",
-		"React Advanced London",
-	],
-	pdfUrl:
-		"https://mradib.com/talks/2025-05-03-design-systems-ai-and-the-art-of-separation-of-concern.pdf",
-};
-
-// set publish date and time
-article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
-article.dateModified = "2025-07-03" + "T" + "10:37:00" + ".000Z";
 
 export const metadata: Metadata = {
 	title: article.pageTitle,

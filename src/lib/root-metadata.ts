@@ -10,37 +10,42 @@ import { homepageUrl, siteUrl } from "./constants/url";
 export const rootMetadata: Metadata = {
 	metadataBase: new URL(siteUrl),
 	title: {
-		// template: '%s | ' + myName,
-		template: "%s",
+		template: `%s | ${myName}`,
 		default: defaultTitle,
 	},
 	alternates: {
 		canonical: "./",
+		types: {
+			"application/rss+xml": "/feed.xml",
+		},
 	},
 	description: defaultDescription,
-	// TODO: Add manifest.json
-	//   manifest: siteUrl + '/manifest.json',
 	generator: myTitle,
-	category: "blog",
-	applicationName: `${myTitle} Blog`,
+	category: "technology",
+	applicationName: myTitle,
 	authors: [
 		{
 			name: myName,
 			url: homepageUrl,
 		},
 	],
-	creator: myTitle,
+	creator: myName,
 	formatDetection: {
 		email: false,
 		address: false,
 		telephone: false,
 	},
-	twitter: {
-		creator: "@MrAdib",
+	openGraph: {
+		type: "website",
+		siteName: `${myName} — ${myTitle}`,
+		locale: "en_GB",
+		url: "./",
 	},
-	//   verification: {
-	//     google: 'google-site-verification',
-	//   },
+	twitter: {
+		card: "summary_large_image",
+		creator: "@MrAdib",
+		site: "@MrAdib",
+	},
 	appLinks: {
 		web: {
 			url: homepageUrl,

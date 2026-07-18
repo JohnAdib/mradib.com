@@ -1,11 +1,11 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleLayout } from "@/components/article/layout";
 import { Msg } from "@/components/msg/msg";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
 import { readingTime } from "@/lib/reading-time";
 import { pageResumeSuffix } from "@/lib/suffix";
-import type { Metadata } from "next";
-import Image from "next/image";
 import imgResumeContactCover from "./_img/resume-contact-cover.jpg";
 import imgResumeContactExample1 from "./_img/resume-contact-example-1.png";
 import imgResumeContactExample2 from "./_img/resume-contact-example-2.png";
@@ -225,17 +225,17 @@ export default function Page() {
 
 	return (
 		<ArticleLayout
-				title={articleTitle}
-				intro={articleDescription}
-				urlPath={pagePath}
-				keywords={keywords}
-				coverImage={coverImg}
-				datePublished={datePublished}
-				dateModified={dateModified}
-				readTimeMinutes={articleReadingTime}
-				lang="fa-IR"
-			>
-				<PageContent />
-			</ArticleLayout>
+			title={articleTitle}
+			intro={articleDescription}
+			urlPath={pagePath}
+			keywords={keywords}
+			coverImage={coverImg}
+			datePublished={datePublished}
+			dateModified={dateModified}
+			readTimeMinutes={articleReadingTime}
+			lang="fa-IR"
+		>
+			<PageContent />
+		</ArticleLayout>
 	);
 }

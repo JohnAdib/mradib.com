@@ -1,17 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 import Image from "next/image";
-
+import Link from "next/link";
 import { Container } from "@/components/container";
 import { SocialMediaLinks } from "@/components/social-media-links";
 import portraitImage from "@/images/portrait.jpg";
 import { urlSocial } from "@/lib/constants/url-social";
-import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "About MrAdib",
+	title: "About John Adib",
 	description:
-		"John Adib - Photographer & Senior Software Engineer based in London. Passionate about creating innovative web solutions and capturing the smiles.",
+		"John Adib is an Engineering Manager at Zapp in London, a 2× startup co-founder, award-winning mentor, speaker, and open-source contributor pioneering AI-first development.",
 };
 
 export default function About() {
@@ -34,11 +33,12 @@ export default function About() {
 					</h1>
 					<div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
 						<p>
-							I’m John Adib, based in London, where I design web solutions and
-							enjoy photographing portraits and landscapes. Photography is a
-							deep passion of mine. London's dynamic atmosphere and diverse
-							architecture offer endless inspiration for my work, allowing me to
-							explore and document the world through my lens.
+							I’m John Adib, an Engineering Manager at Zapp in London and a
+							two-time startup co-founder. Over 17+ years I've gone from
+							teaching thousands of students to founding companies to leading
+							engineering teams — and these days I'm focused on AI-first
+							development: weaving AI into how teams actually work, not just how
+							fast they ship.
 						</p>
 						<p>
 							My journey as a software engineer has been enriched by diverse

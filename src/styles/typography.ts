@@ -1,11 +1,7 @@
 type ThemeFunction = (path: string) => string;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function typographyStyles({
-	theme,
-}: {
-	theme: ThemeFunction;
-}) {
+export default function typographyStyles({ theme }: { theme: ThemeFunction }) {
 	return {
 		invert: {
 			css: {

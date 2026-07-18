@@ -1,7 +1,7 @@
-import { Container } from "@/components/container";
-import { urlSocial } from "@/lib/constants/url-social";
 import clsx from "clsx";
 import Link from "next/link";
+import { Container } from "@/components/container";
+import { urlSocial } from "@/lib/constants/url-social";
 import { SectionIntro } from "../elements/intro";
 import { SectionSubTitle } from "../elements/sub-title";
 import { SectionTitle } from "../elements/title";

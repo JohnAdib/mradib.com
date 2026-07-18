@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import clsx from "clsx";
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	return (

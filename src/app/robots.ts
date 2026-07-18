@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
 			allow: "/",
 			disallow: "/are-you-okay/",
 		},
-		sitemap: "https://blog.mradib.com/sitemap.xml",
+		sitemap: "https://mradib.com/sitemap.xml",
 	};
 }
