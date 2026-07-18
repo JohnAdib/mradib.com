@@ -48,7 +48,7 @@ export default function About() {
 				>
 					My resume
 				</Link>{" "}
-				is hand-coded in HTML and CSS — and yes, it exports itself to PDF with a
+				is hand-coded in HTML and CSS, and yes, it exports itself to PDF with a
 				pure-JavaScript trick.
 			</p>
 		</Container>

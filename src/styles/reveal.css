@@ -1,4 +1,4 @@
-/* Staggered entrance for the homepage hero — CSS only, motion-safe */
+/* Staggered entrance for the homepage hero. CSS only, motion-safe */
 @keyframes reveal-up {
 	from {
 		opacity: 0;

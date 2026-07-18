@@ -47,8 +47,8 @@ function Intro() {
 				about how modern design systems can empower both humans and AI to build
 				scalable, maintainable products. It shares 7 practical tips for
 				structuring architecture, aligning design and code, and teaching AI
-				tools your system's logic—perfect for designers, developers, and product
-				teams navigating the future of AI-driven workflows.
+				tools your system's logic. Perfect for designers, developers, and
+				product teams navigating the future of AI-driven workflows.
 			</p>
 		</div>
 	);

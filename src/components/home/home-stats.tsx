@@ -11,11 +11,6 @@ export function HomeStats() {
 			href: "/mentor",
 		},
 		{ value: "2", label: "startups co-founded", href: "/about#ventures" },
-		{
-			value: "5,000+",
-			label: "engineers reached at AI Coding Summit",
-			href: "/talks",
-		},
 		{ value: "2,000+", label: "students taught", href: "/about" },
 	];
 

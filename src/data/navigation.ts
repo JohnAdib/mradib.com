@@ -5,7 +5,7 @@ export interface INavItem {
 	dir?: "ltr" | "rtl";
 }
 
-// Order matters — rendered left-to-right in the header
+// Order matters, rendered left to right in the header
 export const mainNav: INavItem[] = [
 	{ label: "About", href: "/about" },
 	{ label: "Awards", href: "/awards" },
@@ -16,10 +16,10 @@ export const mainNav: INavItem[] = [
 ];
 
 export const footerNav: INavItem[] = [
-	{ label: "Homepage", href: "/" },
-	...mainNav,
-	{ label: "Gallery", href: "/gallery" },
-	{ label: "Now", href: "/now" },
+	{ label: "About", href: "/about" },
+	{ label: "Awards", href: "/awards" },
+	{ label: "Talks", href: "/talks" },
+	{ label: "Articles", href: "/articles" },
+	{ label: "Mentorship", href: "/mentor" },
 	{ label: "Contact", href: "/contact" },
-	{ label: "Resume", href: "https://resume.mradib.com" },
 ];

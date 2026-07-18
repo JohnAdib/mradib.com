@@ -5,7 +5,7 @@ import { articleGcpTerraform } from "./gcp-terraform";
 import { articleGithubAutolink } from "./github-autolink";
 import { articleTurningChaosCloudflare } from "./turning-chaos-cloudflare";
 
-// newest first — drives /articles, the sitemap, the RSS feed, and llms.txt
+// newest first, drives /articles, the sitemap, the RSS feed, and llms.txt
 export const articlesMeta: IArticle[] = [
 	articleAiFirstArchitecture,
 	articleTurningChaosCloudflare,

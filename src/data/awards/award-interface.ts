@@ -8,7 +8,7 @@ export type AwardGroup =
 	| "service";
 
 export interface IAward {
-	/** Only flagship awards have a slug — they get a page at /awards/<slug> */
+	/** Only flagship awards have a slug, they get a page at /awards/<slug> */
 	slug?: string;
 	name: string;
 	issuer: string;

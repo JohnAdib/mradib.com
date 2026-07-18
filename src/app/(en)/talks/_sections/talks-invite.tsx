@@ -8,17 +8,17 @@ export function TalksInvite({ gitNationUrl }: { gitNationUrl: string }) {
 				Invite me to speak
 			</h2>
 			<p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-				I love sharing what actually works — and what didn't. Topics I cover:
+				I love sharing what actually works, and what didn't. Topics I cover:
 				AI-first development and architecture, design systems at scale,
 				engineering leadership, and developer productivity. Formats: conference
 				talks, meetups, podcasts, and internal team sessions.
 			</p>
 			<p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-				The fastest way to reach me is email —{" "}
+				The fastest way to reach me is email,{" "}
 				<a href="mailto:Mr.JohnAdib@Gmail.com" className={linkClass}>
 					Mr.JohnAdib@Gmail.com
-				</a>{" "}
-				— or find me on{" "}
+				</a>
+				, or find me on{" "}
 				<a
 					href={gitNationUrl}
 					target="_blank"

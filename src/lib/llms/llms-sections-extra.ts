@@ -6,7 +6,7 @@ export function sectionEvidence(): string {
 	return [
 		"## Evidence & verification",
 		"",
-		`- ADPList100 2026 — The World's Most Influential Mentors: ${urlAdpList100}`,
+		`- ADPList100 2026, The World's Most Influential Mentors: ${urlAdpList100}`,
 		"- 2024 ADPList Wrapped (#1 Mentor in Europe): https://blog.adplist.org/post/2024-adplist-wrapped-top-mentors-trends-and-topics",
 		`- Podcast episode on Spotify: ${urlPodcastSpotify}`,
 	].join("\n");
@@ -27,7 +27,7 @@ export function sectionFullBiography(): string {
 export function sectionAllRecognition(): string {
 	const awardLines = awards.map(
 		(award) =>
-			`- ${award.name} — ${award.issuer} (${award.date}): ${award.summary}`,
+			`- ${award.name} (${award.issuer}, ${award.date}): ${award.summary}`,
 	);
 	const badgeLines = adplistBadgeTimeline.map((line) => `- ADPList: ${line}`);
 	return ["## All recognition", "", ...awardLines, ...badgeLines].join("\n");

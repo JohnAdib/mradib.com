@@ -1,7 +1,7 @@
 import { urlPodcastSpotify } from "@/data/profile";
 import type { IPodcastAppearance, ITalk } from "./talk-interface";
 
-// newest first — drives /talks, the sitemap, and llms.txt
+// newest first, drives /talks, the sitemap, and llms.txt
 export const talks: ITalk[] = [
 	{
 		slug: "ai-first-architecture",
@@ -22,7 +22,7 @@ export const talks: ITalk[] = [
 	{
 		slug: "turning-chaos-into-control-with-cloudflare",
 		title: "Turning Chaos into Control with Cloudflare",
-		event: "LNUG #110 — London Node User Group",
+		event: "LNUG #110, London Node User Group",
 		city: "London",
 		date: "2025-09-24",
 		summary:

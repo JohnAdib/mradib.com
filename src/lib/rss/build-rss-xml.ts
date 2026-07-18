@@ -41,7 +41,7 @@ export function buildRssXml(): string {
 		'<?xml version="1.0" encoding="UTF-8"?>',
 		'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
 		"<channel>",
-		`<title>${escapeXml(`${profile.name} (${profile.brand}) — Articles`)}</title>`,
+		`<title>${escapeXml(`Articles by ${profile.name} (${profile.brand})`)}</title>`,
 		`<link>${homepageUrl}</link>`,
 		`<description>${escapeXml(profile.shortBio)}</description>`,
 		"<language>en-gb</language>",

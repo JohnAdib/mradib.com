@@ -20,8 +20,8 @@ export function AboutStory() {
 			<p>
 				I'm an Engineering Manager at Zapp in London, a two-time startup
 				co-founder, and one of ADPList's most recognized engineering mentors.
-				Seventeen-plus years in, I still write code most days — I just spend
-				more of my time making other engineers, and now AI, better at it.
+				Seventeen-plus years in, I still write code most days. I just spend more
+				of my time making other engineers, and now AI, better at it.
 			</p>
 
 			<H2>It started with teaching</H2>
@@ -33,22 +33,22 @@ export function AboutStory() {
 				<Link href="/awards/worldskills" className={linkClass}>
 					WorldSkills
 				</Link>{" "}
-				— a national silver medal and a Medallion for Excellence — then spent
-				five years training the next generation of competitors. Teaching first,
-				titles later: that order shaped everything.
+				, winning a national silver medal and a Medallion for Excellence, then
+				spent five years training the next generation of competitors. Teaching
+				first, titles later: that order shaped everything.
 			</p>
 
 			<H2 id="ventures">The founder years</H2>
 			<p>
-				In 2015 I co-founded Sarshomar as CEO — a survey platform that raised
-				$1M, grew to a 15-person team, and reached roughly a million users in
-				its first month. In 2019 I co-founded Jibres as CTO: a cloud e-commerce
+				In 2015 I co-founded Sarshomar as CEO, a survey platform that raised
+				$1M, grew to a 15-person team, and reached one million users in its
+				first month. In 2019 I co-founded Jibres as CTO: a cloud e-commerce
 				platform serving 1,200+ businesses, with a firewall blocking 99% of
 				attacks and an "app factory" that generated a native Android app in
 				under ten minutes. Jibres won the national best-site-builder award at
 				the 14th Iran Web Festival in 2022. In between, I led engineering at
-				Ermile — an education platform serving 500,000+ students — and lectured
-				in IT at the University of Tehran.
+				Ermile, an education platform serving 500,000+ students, and lectured in
+				IT at the University of Tehran.
 			</p>
 
 			<H2>London</H2>
@@ -65,11 +65,11 @@ export function AboutStory() {
 
 			<H2>AI-first, by conviction</H2>
 			<p>
-				I believe AI belongs inside the way a team works — in reviews, in
-				agents, in the definition of done — not bolted on as a faster keyboard.
-				At Zapp that means AI reviewers on every pull request, releases that
-				went from monthly to weekly, and architecture deliberately shaped so AI
-				can work on it safely. It's also what I{" "}
+				I believe AI belongs inside the way a team works: in reviews, in agents,
+				in the definition of done. Not bolted on as a faster keyboard. At Zapp
+				that means AI reviewers on every pull request, releases that went from
+				monthly to weekly, and architecture deliberately shaped so AI can work
+				on it safely. It's also what I{" "}
 				<Link href="/talks" className={linkClass}>
 					speak about
 				</Link>
@@ -88,7 +88,7 @@ export function AboutStory() {
 				<Link href="/mentor" className={linkClass}>
 					mentor for free on ADPList
 				</Link>{" "}
-				— 600+ sessions so far — because teaching is still the part I'd do even
+				, 600+ sessions so far, because teaching is still the part I'd do even
 				if nobody paid me for it. And I keep an open-source habit on GitHub.
 			</p>
 		</div>

@@ -9,7 +9,7 @@ export function TalkMeta({ talk }: { talk: ITalk }) {
 		<>
 			<TalkEventJsonLd talk={talk} />
 			<p className="rounded-xl bg-zinc-50 px-4 py-3 text-sm text-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-400">
-				🎤 Presented at <strong>{where}</strong> —{" "}
+				🎤 Presented at <strong>{where}</strong> on{" "}
 				{formatDateTime({ datetime: talk.date })}
 				{talk.audience ? `, ${talk.audience}` : ""}.
 			</p>

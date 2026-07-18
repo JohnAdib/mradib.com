@@ -11,19 +11,19 @@ import { TalksPodcast } from "./_sections/talks-podcast";
 export const metadata: Metadata = {
 	title: "Talks & Speaking",
 	description:
-		"John Adib speaks about AI-first development, design systems, and engineering leadership. In 2025 he spoke at AI Coding Summit (GitNation), React Advanced London at Figma's office, and LNUG — reaching 5,000+ engineers.",
+		"John Adib speaks about AI-first development, design systems, and engineering leadership. In 2025 he spoke at AI Coding Summit (GitNation), React Advanced London at Figma's office, and LNUG in London.",
 };
 
 export default function TalksPage() {
 	return (
 		<SimpleLayout
 			title="Talks & Speaking"
-			intro="I speak about AI-first development, design systems, and engineering leadership. In 2025 that meant AI Coding Summit (5,000+ engineers, online), React Advanced London at Figma's office, and LNUG — the London Node User Group. Slides for every talk are free to download."
+			intro="I speak about AI-first development, design systems, and engineering leadership. In 2025 that meant AI Coding Summit, React Advanced London at Figma's office, and LNUG, the London Node User Group. Slides for every talk are free to download."
 		>
 			<ItemListJsonLd
 				name="Talks by John Adib"
 				items={talks.map((talk) => ({
-					name: `${talk.title} — ${talk.event}`,
+					name: `${talk.title} (${talk.event})`,
 					url: `${homepageUrl}${talk.articlePath ?? "/talks"}`,
 				}))}
 			/>

@@ -1,7 +1,7 @@
 import type { ITalk } from "./talk-interface";
 import { talks } from "./talks";
 
-/** Find a talk by slug — throws at build time if data is missing */
+/** Find a talk by slug, throws at build time if data is missing */
 export function getTalk(slug: string): ITalk {
 	const talk = talks.find((entry) => entry.slug === slug);
 	if (!talk) {

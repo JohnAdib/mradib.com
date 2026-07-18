@@ -18,7 +18,7 @@ export function TalksPodcast({ podcast }: { podcast?: IPodcastAppearance }) {
 					</Card.Eyebrow>
 					<Card.Title href={podcast.url}>{podcast.title}</Card.Title>
 					<Card.Description>
-						{podcast.summary} My first podcast in English — small, honest, and a
+						{podcast.summary} My first podcast in English. Small, honest, and a
 						lot of fun to record.
 					</Card.Description>
 					<Card.Cta>Listen on Spotify</Card.Cta>

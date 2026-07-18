@@ -9,12 +9,12 @@ export const mentorFaq: IFaqQA[] = [
 	{
 		id: "is-it-free",
 		q: "Is the mentorship really free?",
-		a: "Yes — every session is free, always. Mentoring is how I give back to the community that raised me.",
+		a: "Yes. Every session is free, always. Mentoring is how I give back to the community that raised me.",
 	},
 	{
 		id: "topics",
 		q: "What topics can we cover?",
-		a: "Software engineering and career growth, resume and LinkedIn reviews, interview preparation, engineering leadership, AI-first development, and tech immigration — including UK Global Talent applications.",
+		a: "Software engineering and career growth, resume and LinkedIn reviews, interview preparation, engineering leadership, AI-first development, and tech immigration, including UK Global Talent applications.",
 	},
 	{
 		id: "global-talent",
@@ -24,6 +24,6 @@ export const mentorFaq: IFaqQA[] = [
 	{
 		id: "not-senior-enough",
 		q: "I'm not sure I'm senior enough to book. Should I?",
-		a: "Book anyway. Many of my favourite sessions are with early-career engineers — bring a real problem and we'll work on it together.",
+		a: "Book anyway. Many of my favourite sessions are with early-career engineers. Bring a real problem and we'll work on it together.",
 	},
 ];

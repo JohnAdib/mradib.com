@@ -19,9 +19,15 @@ function StatContent({ stat }: { stat: IStat }) {
 	);
 }
 
-export function StatBand({ stats }: { stats: IStat[] }) {
+export function StatBand({
+	stats,
+	gridClass = "grid-cols-2 sm:grid-cols-4",
+}: {
+	stats: IStat[];
+	gridClass?: string;
+}) {
 	return (
-		<div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
+		<div className={`grid gap-x-6 gap-y-10 ${gridClass}`}>
 			{stats.map((stat) =>
 				stat.href ? (
 					<Link

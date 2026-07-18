@@ -92,7 +92,7 @@ function Problem() {
 			staying organized. But doing it manually every time is cumbersome and
 			time-consuming. Imagine if typing <code>TASK-456</code> in GitHub could
 			automatically generate a link to the corresponding task or issue in your
-			project management tool—that’s what GitHub Autolink References can do!
+			project management tool. That’s what GitHub Autolink References can do!
 		</ArticleSection>
 	);
 }

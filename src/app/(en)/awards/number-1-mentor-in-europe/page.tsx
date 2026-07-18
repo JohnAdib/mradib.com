@@ -7,15 +7,15 @@ const award = getAward("number-1-mentor-in-europe");
 export const metadata: Metadata = {
 	title: "#1 Mentor in Europe (2024)",
 	description:
-		"In December 2024, the 2024 ADPList Wrapped ranked John Adib the #1 mentor in Europe — seven months after his first session. The numbers behind the ranking.",
+		"In December 2024, the 2024 ADPList Wrapped ranked John Adib the #1 mentor in Europe, seven months after his first session. The numbers behind the ranking.",
 };
 
 export default function Page() {
 	return (
 		<AwardLayout award={award}>
 			<p>
-				In December 2024, ADPList published its year-in-review — the{" "}
-				<strong>2024 ADPList Wrapped</strong> — and ranked me the{" "}
+				In December 2024, ADPList published its year-in-review, the{" "}
+				<strong>2024 ADPList Wrapped</strong>, and ranked me the{" "}
 				<strong>#1 mentor in Europe</strong>.
 			</p>
 
@@ -24,7 +24,7 @@ export default function Page() {
 				ADPList Wrapped is a data-driven annual review of the platform's global
 				mentoring community: sessions delivered, minutes given, consistency, and
 				mentee feedback across tens of thousands of mentors. The Europe top-10
-				is computed, not nominated — you can't campaign for it.
+				is computed, not nominated. You can't campaign for it.
 			</p>
 
 			<h2>The numbers behind it</h2>
@@ -41,7 +41,7 @@ export default function Page() {
 				<li>Sessions with engineers across dozens of countries</li>
 			</ul>
 			<p>
-				Seven months from first session to first in Europe — not because any
+				Seven months from first session to first in Europe. Not because any
 				single session was heroic, but because the calendar never went quiet.
 				Consistency compounds. The same practice later led to the{" "}
 				<a href="/awards/worlds-most-influential-mentor">
@@ -52,7 +52,7 @@ export default function Page() {
 
 			<h2>What it means to me</h2>
 			<p>
-				Rankings measure hours; they can't measure what actually matters — the
+				Rankings measure hours; they can't measure what actually matters: the
 				engineer who negotiated a fair offer, the career-switcher who stopped
 				doubting themselves, the applicant whose visa evidence finally made
 				sense. The number one I care about is the next person on the calendar.
@@ -60,7 +60,7 @@ export default function Page() {
 
 			<h2>Want a session?</h2>
 			<p>
-				Sessions are free. <a href="/mentor">Book one</a> — European timezone
+				Sessions are free. <a href="/mentor">Book one</a>. European timezone
 				friendly, but the whole world is welcome.
 			</p>
 		</AwardLayout>

@@ -1,7 +1,7 @@
-# Launch checklist — run AFTER you push to production
+# Launch checklist, run AFTER you push to production
 
 The overhaul ships new pages, a new identity, and machine-readable metadata.
-None of it reaches search/AI engines until you push — and then these steps
+None of it reaches search/AI engines until you push, and then these steps
 make the reindexing fast and consistent.
 
 ## 1. Verify the deployment (first 30 minutes)
@@ -11,8 +11,8 @@ make the reindexing fast and consistent.
 - [ ] `curl -s https://mradib.com/llms.txt` → starts with `# John Adib (MrAdib)`
 - [ ] `curl -sI https://mradib.com/feed.xml` → 200
 - [ ] `curl -sI https://mradib.com/manifest.webmanifest` → 200
-- [ ] Open https://mradib.com — hero says "Engineering leader…", dark mode works, `/awards`, `/talks`, `/now` load
-- [ ] GitHub Pages CDN caches ~10 min — use `?v=2` query if you see stale pages
+- [ ] Open https://mradib.com and confirm the hero says "Engineering leader…", dark mode works, `/awards`, `/talks`, `/now` load
+- [ ] GitHub Pages CDN caches about 10 minutes. Use a `?v=2` query if you see stale pages
 
 ## 2. Search Console (same day)
 
@@ -21,9 +21,9 @@ make the reindexing fast and consistent.
 - [ ] Validate structured data: run https://search.google.com/test/rich-results on `/` (Person), `/about` (ProfilePage), one award page, one talk article (Event)
 - [ ] Check OG cards: LinkedIn Post Inspector (https://www.linkedin.com/post-inspector/) on `/` and one award page
 
-## 3. Sync off-site profiles (same week — AI engines cross-check sources)
+## 3. Sync off-site profiles (same week, AI engines cross-check sources)
 
-The canonical line: **"Engineering Manager & 2× startup co-founder — pioneering AI-first development in London."**
+The canonical line: **"Engineering Manager and 2× startup co-founder, pioneering AI-first development in London."**
 
 - [ ] LinkedIn headline → keep "Engineering Leader 🌟 UK Global Talent" or align with the canonical line; add the 2026 ADPList100 listing to Honors & Awards (only 2024 is there today)
 - [ ] GitHub bio → replace "Trust Me, I'm an Engineer" with the canonical line + link mradib.com
@@ -43,10 +43,10 @@ The canonical line: **"Engineering Manager & 2× startup co-founder — pioneeri
 
 - [ ] Update `/now` (`src/app/(en)/now/page.tsx`) + "Last updated" line
 - [ ] Bump `sessions` + `asOfDate` in `src/data/mentoring-stats.ts` (updates hero, mentor page, llms.txt automatically)
-- [ ] New award/talk? Add to `src/data/awards/awards.ts` or `src/data/talks/talks.ts` — sitemap, llms.txt, and pages derive from data
+- [ ] New award/talk? Add to `src/data/awards/awards.ts` or `src/data/talks/talks.ts`. The sitemap, llms.txt, and pages derive from data
 
 ## Related repo (separate task)
 
-- resume.mradib.com is a different repo (`MrJohnAdib/resume`) — its broken
+- resume.mradib.com is a different repo (`MrJohnAdib/resume`) and its broken
   certificates section still needs fixing there; this site now links to
   `/awards` as the canonical recognition page.

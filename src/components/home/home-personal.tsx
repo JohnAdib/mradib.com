@@ -6,7 +6,7 @@ export function HomePersonal() {
 		<Container className="mt-20 sm:mt-28">
 			<p className="mx-auto max-w-2xl text-center text-base text-zinc-600 dark:text-zinc-400">
 				Away from the terminal, I'm a father of two girls, and I carry a camera
-				almost everywhere — London gives you no excuse not to. The freshest
+				almost everywhere. London gives you no excuse not to. The freshest
 				frames live in the{" "}
 				<Link
 					href="/gallery"

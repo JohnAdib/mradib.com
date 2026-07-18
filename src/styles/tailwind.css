@@ -7,7 +7,7 @@
 @config '../../tailwind.config.ts';
 
 /*
-  Brand accent tokens — one accent family for the whole site.
+  Brand accent tokens, one accent family for the whole site.
   Aliased to Tailwind's teal scale; change these lines to rebrand.
 */
 @theme inline {

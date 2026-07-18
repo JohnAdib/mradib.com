@@ -10,7 +10,7 @@ export function TalkEventJsonLd({ talk }: { talk: ITalk }): JSX.Element {
 	const jsonLd: WithContext<Event> = {
 		"@context": "https://schema.org",
 		"@type": "Event",
-		name: `${talk.title} — ${talk.event}`,
+		name: `${talk.title} (${talk.event})`,
 		description: talk.summary,
 		startDate: talk.date,
 		eventAttendanceMode: isOnline
@@ -27,7 +27,7 @@ export function TalkEventJsonLd({ talk }: { talk: ITalk }): JSX.Element {
 		...(talk.slidesPdf && {
 			workFeatured: {
 				"@type": "CreativeWork",
-				name: `${talk.title} — slides (PDF)`,
+				name: `${talk.title}, slides (PDF)`,
 				url: `${homepageUrl}${talk.slidesPdf}`,
 			},
 		}),

@@ -37,7 +37,7 @@ export const rootMetadata: Metadata = {
 	},
 	openGraph: {
 		type: "website",
-		siteName: `${myName} — ${myTitle}`,
+		siteName: `${myName} (${myTitle})`,
 		locale: "en_GB",
 		url: "./",
 	},

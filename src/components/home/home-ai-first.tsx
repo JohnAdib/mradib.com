@@ -3,7 +3,7 @@ import { Container } from "@/components/container";
 
 const practices = [
 	"3 AI reviewers guarding every pull request",
-	"App releases accelerated from monthly to weekly — 4× faster",
+	"App releases accelerated from monthly to weekly, four times faster",
 	"An enterprise auth panel with passkeys and RBAC, shipped in 3 days with AI",
 	"A 90-component design system serving 5 production services",
 ];
@@ -16,7 +16,7 @@ export function HomeAiFirst() {
 					AI-first, for real
 				</p>
 				<h2 className="mt-3 max-w-2xl text-2xl font-bold tracking-tight text-white sm:text-3xl">
-					AI isn't a tool choice — it's how the team works.
+					AI isn't a tool choice. It's how the team works.
 				</h2>
 				<p className="mt-4 max-w-2xl text-base text-zinc-300">
 					At Zapp I lead teams that build with AI in the loop, not bolted on:

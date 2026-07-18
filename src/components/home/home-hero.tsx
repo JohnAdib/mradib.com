@@ -21,7 +21,7 @@ export function HomeHero() {
 						</span>
 					</h1>
 					<p className="reveal-up reveal-delay-3 mt-6 text-base text-zinc-600 dark:text-zinc-400">
-						I'm John Adib — Engineering Manager at Zapp in London. Over 17+
+						I'm John Adib, an Engineering Manager at Zapp in London. Over 17+
 						years I've co-founded two startups, taught 2,000+ students, and run{" "}
 						{mentoringStats.sessions}+ mentorship sessions on ADPList, where I
 						was named the World's Most Influential Mentor of 2024. These days

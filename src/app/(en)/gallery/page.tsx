@@ -6,7 +6,7 @@ import { urlSocial } from "@/lib/constants/url-social";
 export const metadata: Metadata = {
 	title: "Gallery",
 	description:
-		"Photography by John Adib — an off-hours passion, not a profession. Portraits and landscapes, mostly from London.",
+		"Photography by John Adib, an off-hours passion, not a profession. Portraits and landscapes, mostly from London.",
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
 	return (
 		<SimpleLayout
 			title="Photography"
-			intro="An off-hours passion, not a profession. I've photographed less since my daughters decided my weekends belong to them — fair — but the camera still comes along."
+			intro="An off-hours passion, not a profession. I photograph less since my daughters arrived, but the camera still comes along."
 		>
 			<div className="max-w-2xl space-y-6 text-base text-zinc-600 dark:text-zinc-400">
 				<p>

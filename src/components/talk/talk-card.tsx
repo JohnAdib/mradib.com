@@ -16,7 +16,7 @@ export function TalkCard({ talk }: { talk: ITalk }) {
 				<Card.Title href={talk.articlePath}>{talk.title}</Card.Title>
 				<Card.Description>
 					{where}
-					{talk.audience ? ` — ${talk.audience}.` : "."} {talk.summary}
+					{talk.audience ? `, ${talk.audience}.` : "."} {talk.summary}
 				</Card.Description>
 				<Card.Cta>
 					{talk.slidesPdf ? "Story & slides (PDF)" : "Read the story"}

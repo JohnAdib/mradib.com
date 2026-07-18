@@ -240,10 +240,10 @@
 			{
 				"title": "Godox LITEMONS LED 6R RGB",
 				"href": "https://www.godox.com/product-d/LED6R-LED6Bi.html",
-				"description": "Compact and lightweight RGB light with adjustable color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2–10 hours of runtime on a single charge!",
+				"description": "Compact and lightweight RGB light with adjustable color temperature for accurate colors. Perfect for photography, videography, and creative lighting effects, with 2 to 10 hours of runtime on a single charge!",
 				"properties": [
 					{ "key": "Battery Capacity", "value": "1800mAh (2-10 hours)" },
-					{ "key": "Color Temperature", "value": "3200K–6500K" },
+					{ "key": "Color Temperature", "value": "3200K-6500K" },
 					{ "key": "CRI", "value": "95" },
 					{ "key": "Weight", "value": "110g" }
 				],
@@ -283,7 +283,7 @@
 				"description": "Versatile 3m air-cushioned light stand with a 1.55m extendable boom arm, 5kg load capacity, and sturdy metal build. Includes 1kg counterweight and sandbag for extra stability. Adjustable height and arm length with a 1/4\"-3/8\" screw adapter for compatibility with various photography gear. Ideal for indoor and outdoor use.",
 				"properties": [
 					{ "key": "Mounting Points", "value": "double ended, 1/4\" to 3/8\"" },
-					{ "key": "Height", "value": "106cm - 3m (3.5ft–9.8ft)" },
+					{ "key": "Height", "value": "106cm - 3m (3.5ft-9.8ft)" },
 					{ "key": "Stand Weight", "value": "1.5kg" },
 					{ "key": "Arm Length", "value": "Max 155cm Min 89cm" },
 					{ "key": "Arm Weight", "value": "980g" },
@@ -338,7 +338,7 @@
 			{
 				"title": "Canon Zoemini 2",
 				"href": "https://www.canon.co.uk/printers/zoemini-2/",
-				"description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere – it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
+				"description": "Pocket-sized, ink-free and ready to print your photos anytime, anywhere - it’s the perfect partner for your smartphone. Ink-free, wireless and small enough to slip in your pocket, Canon Zoemini 2 is the rechargeable photo printer that’s always with you when you need it. Snap and personalise photos on your mobile device, then get instant peel-and-stick prints. Wherever you are, this pocket-sized printer turns your smartphone snaps into beautiful photos.",
 				"priceGBP": 100,
 				"compareAtPriceGBP": 130,
 				"datetime": "2024-06-15",

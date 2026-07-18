@@ -9,12 +9,12 @@ export const awards: IAward[] = [
 		category: "flagship",
 		group: "mentorship",
 		summary:
-			"Named in the ADPList100 for 2024 — 100 mentors selected from 32,000+ across 140+ countries — and listed again in 2026.",
+			"Named in the ADPList100 for 2024, a list of 100 mentors selected from 32,000+ across 140+ countries, and listed again in 2026.",
 		externalUrl: "https://adplist.org/adplist100/2026/mentor/john-adib",
 	},
 	{
 		slug: "uk-global-talent",
-		name: "UK Global Talent Visa — Tech Nation Endorsement",
+		name: "UK Global Talent Visa (Tech Nation Endorsement)",
 		issuer: "Tech Nation",
 		date: "2024-09",
 		category: "flagship",
@@ -43,7 +43,7 @@ export const awards: IAward[] = [
 		category: "flagship",
 		group: "competition",
 		summary:
-			"Silver Medal in IT Software Solutions for Business (2010), Medallion for Excellence (2007), and two national team camps for WorldSkills Calgary 2009 and London 2011 — later training medal-winning competitors (2010–2015).",
+			"Silver Medal in IT Software Solutions for Business (2010), Medallion for Excellence (2007), and two national team camps for WorldSkills Calgary 2009 and London 2011. He later trained medal winning competitors from 2010 to 2015.",
 	},
 	{
 		name: "Recognized as a National Elite",
@@ -72,7 +72,7 @@ export const awards: IAward[] = [
 		summary: "National web award at the 5th Iran Web Festival (2013).",
 	},
 	{
-		name: "Judge — 2025 CODiE Awards",
+		name: "Judge, 2025 CODiE Awards",
 		issuer: "CODiE Awards",
 		date: "2025-01",
 		category: "badge",
@@ -81,7 +81,7 @@ export const awards: IAward[] = [
 			"Served as a judge for the 2025 CODiE Awards, evaluating top global software products.",
 	},
 	{
-		name: "Startup Mentor — MassChallenge Switzerland & UK",
+		name: "Startup Mentor, MassChallenge Switzerland & UK",
 		issuer: "MassChallenge",
 		date: "2025-06",
 		category: "badge",
