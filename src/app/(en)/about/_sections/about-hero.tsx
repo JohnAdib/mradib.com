@@ -1,0 +1,53 @@
+import Image from "next/image";
+import { StatBand } from "@/components/stat-band";
+import { mentoringStats } from "@/data/mentoring-stats";
+import { experienceYears } from "@/data/profile";
+import portraitImage from "@/images/portrait.jpg";
+
+const stats = [
+	{ value: `${experienceYears}+`, label: "Years in software" },
+	{ value: "2", label: "Startups co-founded" },
+	{
+		value: `${mentoringStats.sessions}+`,
+		label: "Mentoring sessions",
+		href: "/mentor",
+	},
+	{ value: "2,000+", label: "Students taught" },
+];
+
+export function AboutHero() {
+	return (
+		<div className="grid grid-cols-1 items-center gap-y-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16">
+			<div className="max-w-2xl">
+				<p className="reveal-up text-sm font-medium tracking-wide text-accent-700 uppercase dark:text-accent-400">
+					John Adib
+				</p>
+				<h1 className="mt-4 text-5xl font-bold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
+					<span className="reveal-up reveal-delay-1 block">I build.</span>
+					<span className="reveal-up reveal-delay-2 block">I teach.</span>
+					<span className="reveal-up reveal-delay-3 block text-accent-700 dark:text-accent-400">
+						I mentor.
+					</span>
+				</h1>
+				<p className="reveal-up reveal-delay-4 mt-6 text-lg text-zinc-600 dark:text-zinc-400">
+					{experienceYears}+ years in software, and I still write code most
+					days. This is the long version: how a teenager who loved computers
+					ended up building products, teaching thousands, and mentoring
+					engineers around the world. It all traces back to one competition.
+				</p>
+			</div>
+			<div className="reveal-up reveal-delay-2 mx-auto max-w-xs lg:mx-0 lg:pt-2">
+				<Image
+					src={portraitImage}
+					alt="John Adib, engineering leader in London"
+					priority
+					sizes="(min-width: 1024px) 20rem, 16rem"
+					className="aspect-square w-64 rotate-3 rounded-2xl bg-zinc-100 object-cover sm:w-72 dark:bg-zinc-800"
+				/>
+			</div>
+			<div className="reveal-up reveal-delay-4 lg:col-span-2">
+				<StatBand stats={stats} />
+			</div>
+		</div>
+	);
+}

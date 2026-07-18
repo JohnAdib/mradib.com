@@ -32,3 +32,27 @@
 		animation: none;
 	}
 }
+
+/* Scroll-triggered entrance for the about story. JS adds .is-visible when the
+   element scrolls into view. See the Reveal component and the noscript
+   fallback in the about page for the no-JS path. */
+.reveal-on-scroll {
+	opacity: 0;
+	transform: translateY(16px);
+	transition:
+		opacity 0.7s ease-out,
+		transform 0.7s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal-on-scroll {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
