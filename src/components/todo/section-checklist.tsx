@@ -13,10 +13,12 @@ export function SectionChecklist({
 	storageKey,
 	items,
 	title = "چک لیست این بخش",
+	locale = "fa-IR",
 }: {
 	storageKey: string;
 	items: ITodo[];
 	title?: string;
+	locale?: string;
 }): JSX.Element | null {
 	const store = useChecklistStore(storageKey);
 
@@ -39,7 +41,7 @@ export function SectionChecklist({
 					<CheckCircleIcon className="ms-auto h-6 w-6 shrink-0 text-green-500" />
 				) : (
 					<span className="ms-auto inline-flex shrink-0 items-center rounded-full bg-accent-500/10 px-2.5 py-1 text-xs font-bold tabular-nums text-accent-700 dark:text-accent-300">
-						{`${checkedCount.toLocaleString("fa-IR")}/${total.toLocaleString("fa-IR")}`}
+						{`${checkedCount.toLocaleString(locale)}/${total.toLocaleString(locale)}`}
 					</span>
 				)}
 			</div>

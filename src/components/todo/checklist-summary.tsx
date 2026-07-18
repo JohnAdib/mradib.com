@@ -9,9 +9,13 @@ import { TodoList } from "./todo-list";
 export function ChecklistSummary({
 	storageKey,
 	groups,
+	locale = "fa-IR",
+	doneMessage = "تبریک! همه کارهایی که لیست کرده بودم رو انجام دادی!",
 }: {
 	storageKey: string;
 	groups: IChecklistGroup[];
+	locale?: string;
+	doneMessage?: string;
 }): JSX.Element {
 	const store = useChecklistStore(storageKey);
 
@@ -24,13 +28,11 @@ export function ChecklistSummary({
 	return (
 		<div className="select-none">
 			{isAllDone ? (
-				<Msg severity="success">
-					تبریک! همه کارهایی که لیست کرده بودم رو انجام دادی!
-				</Msg>
+				<Msg severity="success">{doneMessage}</Msg>
 			) : (
 				<div className="my-4">
 					<span className="text-sm">
-						{`${checkedCount.toLocaleString("fa-IR")}/${total.toLocaleString("fa-IR")}`}
+						{`${checkedCount.toLocaleString(locale)}/${total.toLocaleString(locale)}`}
 					</span>
 					<div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-700">
 						<div

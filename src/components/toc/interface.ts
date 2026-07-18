@@ -13,4 +13,6 @@ export interface IArticleTocProps {
 	variant: "sidebar" | "inline";
 	storageKey?: string;
 	checklistIdsBySection?: Record<string, string[]>;
+	label?: string;
+	locale?: string;
 }

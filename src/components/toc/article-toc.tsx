@@ -18,12 +18,14 @@ function ChecklistRows({
 	storageKey,
 	checklistIdsBySection,
 	showNumber,
+	locale,
 }: {
 	sections: ITocSection[];
 	activeId: string | null;
 	storageKey: string;
 	checklistIdsBySection: Record<string, string[]>;
 	showNumber: boolean;
+	locale: string;
 }): React.ReactNode {
 	const store = useChecklistStore(storageKey);
 
@@ -43,6 +45,7 @@ function ChecklistRows({
 					showNumber={showNumber}
 					active={activeId === section.id}
 					progress={progress}
+					locale={locale}
 				/>
 			</li>
 		);
@@ -54,6 +57,8 @@ export function ArticleToc({
 	variant,
 	storageKey,
 	checklistIdsBySection,
+	label = "فهرست مطالب",
+	locale = "fa-IR",
 }: IArticleTocProps): JSX.Element {
 	const activeId = useScrollSpy(sections.map((section) => section.id));
 	const showNumber = variant === "inline";
@@ -66,6 +71,7 @@ export function ArticleToc({
 				storageKey={storageKey}
 				checklistIdsBySection={checklistIdsBySection}
 				showNumber={showNumber}
+				locale={locale}
 			/>
 		) : (
 			sections.map((section, index) => (
@@ -76,20 +82,21 @@ export function ArticleToc({
 						index={index}
 						showNumber={showNumber}
 						active={activeId === section.id}
+						locale={locale}
 					/>
 				</li>
 			))
 		);
 
 	const list = (
-		<nav aria-label="فهرست مطالب" className="not-prose">
+		<nav aria-label={label} className="not-prose">
 			<ul className="m-0 flex list-none flex-col gap-0.5 ps-0">{rows}</ul>
 		</nav>
 	);
 
 	if (variant === "inline") {
 		return (
-			<Accordion title="فهرست مطالب" defaultOpen>
+			<Accordion title={label} defaultOpen>
 				{list}
 			</Accordion>
 		);

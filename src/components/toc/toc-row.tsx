@@ -21,6 +21,7 @@ export function TocRow({
 	active = false,
 	showNumber = true,
 	progress,
+	locale = "fa-IR",
 }: {
 	id: string;
 	title: string;
@@ -28,11 +29,12 @@ export function TocRow({
 	active?: boolean;
 	showNumber?: boolean;
 	progress?: ITocProgress;
+	locale?: string;
 }): JSX.Element {
 	const hasProgress = progress !== undefined && progress.total > 0;
 	const isComplete = hasProgress && progress.done === progress.total;
 	const counter = hasProgress
-		? `${progress.done.toLocaleString("fa-IR")}/${progress.total.toLocaleString("fa-IR")}`
+		? `${progress.done.toLocaleString(locale)}/${progress.total.toLocaleString(locale)}`
 		: null;
 
 	return (
@@ -49,7 +51,7 @@ export function TocRow({
 			<span className="flex min-w-0 items-baseline gap-2">
 				{showNumber && (
 					<span className="shrink-0 tabular-nums text-zinc-400 dark:text-zinc-500">
-						{(index + 1).toLocaleString("fa-IR")}.
+						{(index + 1).toLocaleString(locale)}.
 					</span>
 				)}
 				<span className="truncate">{title}</span>
