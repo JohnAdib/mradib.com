@@ -72,8 +72,15 @@ export const talks: ITalk[] = [
 		summary:
 			"Why the single responsibility principle becomes critical in AI-first architectures, and how to design systems that work seamlessly with AI tools.",
 		image: "/talks/covers/ai-first-architecture.png",
+		video: "https://aicodingsummit.com/berlin/video/hero-video.mp4",
 		slidesPdf:
 			"/talks/2025-10-23-ai-first-architecture-why-single-responsibility-matters-more-than-ever.pdf",
+		eventUrl: "https://gitnation.com/events/ai-coding-summit",
+		websiteUrl: "https://aicodingsummit.com/",
+		recordingUrl:
+			"https://gitnation.com/contents/ai-first-architecture-why-single-responsibility-matters-more-than-ever",
+		translationUrl:
+			"https://gitnation.com/contents/arquitectura-ai-first-por-que-la-responsabilidad-unica-importa-mas-que-nunca/es",
 		providerUrl: urlGitNation,
 		keywords: ["AI-First Architecture", "Single Responsibility", "AI Tools"],
 	},

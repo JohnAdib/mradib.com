@@ -4,6 +4,7 @@ export type TalkResourceKind =
 	| "slides"
 	| "event"
 	| "recording"
+	| "translation"
 	| "youtube"
 	| "website"
 	| "provider";
@@ -39,7 +40,7 @@ export interface ITalk {
 	logo?: string;
 	/** Representative cover photo, e.g. the deck's first slide. Path under /talks/covers. */
 	image?: string;
-	/** Ambient background video behind the hero header. Always muted and looped. Path under /talks. */
+	/** Ambient background video behind the hero header. Always muted and looped. Path under /talks, or a full URL. */
 	video?: string;
 	slidesPdf?: string;
 	/** The specific event page. */
@@ -49,6 +50,8 @@ export interface ITalk {
 	/** The talk's own website. */
 	websiteUrl?: string;
 	recordingUrl?: string;
+	/** A translated version of the talk content page, e.g. GitNation's Spanish page. */
+	translationUrl?: string;
 	youtubeUrl?: string;
 	keywords: string[];
 }

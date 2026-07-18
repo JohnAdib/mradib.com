@@ -24,6 +24,13 @@ export function getTalkResources(talk: ITalk): ITalkResource[] {
 			url: talk.recordingUrl,
 		});
 	}
+	if (talk.translationUrl) {
+		resources.push({
+			kind: "translation",
+			label: "Spanish translation",
+			url: talk.translationUrl,
+		});
+	}
 	if (talk.youtubeUrl) {
 		resources.push({
 			kind: "youtube",

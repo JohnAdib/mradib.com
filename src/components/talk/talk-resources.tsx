@@ -3,6 +3,7 @@ import {
 	CalendarDaysIcon,
 	GlobeAltIcon,
 	IdentificationIcon,
+	LanguageIcon,
 	PlayCircleIcon,
 	VideoCameraIcon,
 } from "@heroicons/react/24/outline";
@@ -17,6 +18,7 @@ const icons: Record<TalkResourceKind, ComponentType<{ className?: string }>> = {
 	slides: ArrowDownTrayIcon,
 	event: CalendarDaysIcon,
 	recording: VideoCameraIcon,
+	translation: LanguageIcon,
 	youtube: PlayCircleIcon,
 	website: GlobeAltIcon,
 	provider: IdentificationIcon,
