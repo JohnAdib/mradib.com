@@ -117,7 +117,7 @@ export function ArticleLayout({
 								>
 									{formatDateTime({ datetime: dateModified, locale: lang })}
 								</time>
-								<ArticleReadTime minutes={readTimeMinutes} />
+								<ArticleReadTime minutes={readTimeMinutes} lang={lang} />
 							</div>
 						</header>
 						<Prose>{children}</Prose>
