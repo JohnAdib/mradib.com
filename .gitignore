@@ -44,3 +44,4 @@ yarn-error.log*
 
 # jetbrain ide
 .idea
+.DS_Store

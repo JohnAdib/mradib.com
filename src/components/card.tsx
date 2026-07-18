@@ -116,7 +116,7 @@ Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
 	return (
 		<div
 			aria-hidden="true"
-			className="relative z-10 mt-4 flex gap-1 items-center text-sm font-medium text-teal-500"
+			className="relative z-10 mt-4 flex gap-1 items-center text-sm font-medium text-accent-700"
 		>
 			{children}
 			<ChevronRightIcon className="h-4 w-4 stroke-current" />
@@ -165,7 +165,7 @@ Card.Price = function CardPrice({
 	return (
 		<div
 			aria-hidden="true"
-			className="relative z-10 flex gap-1 items-center text-sm font-medium text-teal-500"
+			className="relative z-10 flex gap-1 items-center text-sm font-medium text-accent-700"
 			title={dateStr}
 		>
 			<CompareAtPrice />

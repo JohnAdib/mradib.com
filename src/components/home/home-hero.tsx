@@ -16,7 +16,7 @@ export function HomeHero() {
 						<span className="reveal-up reveal-delay-1 block">
 							2× startup co-founder.
 						</span>
-						<span className="reveal-up reveal-delay-2 block text-teal-600 dark:text-teal-400">
+						<span className="reveal-up reveal-delay-2 block text-accent-700 dark:text-accent-400">
 							Mentor to hundreds of engineers.
 						</span>
 					</h1>
@@ -41,7 +41,7 @@ export function HomeHero() {
 						</Button>
 						<Link
 							href="/about"
-							className="text-sm font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400"
+							className="text-sm font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 						>
 							More about me →
 						</Link>

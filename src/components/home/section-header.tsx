@@ -17,7 +17,7 @@ export function SectionHeader({
 			{href && linkText && (
 				<Link
 					href={href}
-					className="text-sm font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400"
+					className="text-sm font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 				>
 					{linkText} →
 				</Link>

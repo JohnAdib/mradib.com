@@ -79,7 +79,7 @@ export function ArticleLayout({
 									"text-3xl sm:text-4xl md:text-5xl",
 									"font-black",
 									"tracking-tight",
-									"text-[#003C43]",
+									"text-accent-950",
 									"dark:text-zinc-100",
 								)}
 							>
@@ -102,7 +102,7 @@ export function ArticleLayout({
 								<time
 									dateTime={datePublished}
 									title={`Published on ${datePublished}`}
-									className="flex items-center text-stone-500 dark:text-stone-400"
+									className="flex items-center text-zinc-500 dark:text-zinc-400"
 								>
 									<span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
 									<span className="mx-3">
@@ -112,7 +112,7 @@ export function ArticleLayout({
 								<time
 									dateTime={dateModified}
 									title={`Last modified on ${dateModified}`}
-									className="text-stone-500 dark:text-stone-400 hidden"
+									className="text-zinc-500 dark:text-zinc-400 hidden"
 								>
 									{formatDateTime({ datetime: dateModified, locale: lang })}
 								</time>

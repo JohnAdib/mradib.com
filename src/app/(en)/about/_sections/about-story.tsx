@@ -13,7 +13,7 @@ function H2({ id, children }: { id?: string; children: React.ReactNode }) {
 
 export function AboutStory() {
 	const linkClass =
-		"font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400";
+		"font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400";
 
 	return (
 		<div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">

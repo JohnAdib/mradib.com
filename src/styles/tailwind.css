@@ -7,6 +7,24 @@
 @config '../../tailwind.config.ts';
 
 /*
+  Brand accent tokens — one accent family for the whole site.
+  Aliased to Tailwind's teal scale; change these lines to rebrand.
+*/
+@theme inline {
+	--color-accent-50: var(--color-teal-50);
+	--color-accent-100: var(--color-teal-100);
+	--color-accent-200: var(--color-teal-200);
+	--color-accent-300: var(--color-teal-300);
+	--color-accent-400: var(--color-teal-400);
+	--color-accent-500: var(--color-teal-500);
+	--color-accent-600: var(--color-teal-600);
+	--color-accent-700: var(--color-teal-700);
+	--color-accent-800: var(--color-teal-800);
+	--color-accent-900: var(--color-teal-900);
+	--color-accent-950: var(--color-teal-950);
+}
+
+/*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
@@ -51,10 +69,10 @@ a:not([href^="/fa"]) {
 }
 
 ::selection {
-	@apply text-[#E3FEF7];
-	@apply bg-[#003C43];
-	@apply dark:bg-[#135D66];
-	@apply dark:text-[#E3FEF7];
+	@apply text-accent-50;
+	@apply bg-accent-950;
+	@apply dark:bg-accent-800;
+	@apply dark:text-accent-50;
 }
 
 kbd {

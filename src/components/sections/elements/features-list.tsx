@@ -18,7 +18,7 @@ function FeatureLinkEl({ href }: { href?: string }) {
 		<div className="mt-6">
 			<a
 				href={href}
-				className="text-sm font-semibold leading-6 text-indigo-400"
+				className="text-sm font-semibold leading-6 text-accent-400"
 			>
 				Learn more <span aria-hidden="true">→</span>
 			</a>
@@ -39,7 +39,7 @@ export function SectionFeaturesList({ features }: ISectionFeaturesList) {
 						<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
 							<feature.icon
 								aria-hidden={true}
-								className="h-5 w-5 flex-none text-indigo-600 dark:text-indigo-400"
+								className="h-5 w-5 flex-none text-accent-700 dark:text-accent-400"
 							/>
 							{feature.name}
 						</dt>

@@ -29,9 +29,9 @@ export function SocialLink({
 				"transition",
 				"p-2",
 				"text-zinc-800",
-				"hover:text-teal-500",
+				"hover:text-accent-600",
 				"dark:text-zinc-200",
-				"dark:hover:text-teal-500",
+				"dark:hover:text-accent-600",
 				className,
 			)}
 		>
@@ -41,7 +41,7 @@ export function SocialLink({
 					"flex-none",
 					"fill-zinc-500",
 					"transition",
-					"group-hover:fill-teal-500",
+					"group-hover:fill-accent-500",
 				)}
 			/>
 			{nameEl}

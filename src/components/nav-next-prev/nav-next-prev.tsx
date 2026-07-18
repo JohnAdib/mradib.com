@@ -12,8 +12,8 @@ function NextLink({ url, title }: { url?: string; title?: string }) {
 			href={url}
 			className={clsx(
 				"flex items-center gap-0.5 sm:gap-2 transition my-1",
-				"text-stone-500 hover:text-stone-700",
-				"dark:text-stone-400 dark:hover:text-stone-200",
+				"text-zinc-500 hover:text-zinc-700",
+				"dark:text-zinc-400 dark:hover:text-zinc-200",
 			)}
 		>
 			<span>{title}</span>
@@ -31,8 +31,8 @@ function PrevLink({ url, title }: { url?: string; title?: string }) {
 			href={url}
 			className={clsx(
 				"flex items-center gap-0.5 sm:gap-2 transition my-1",
-				"text-stone-500 hover:text-stone-700",
-				"dark:text-stone-400 dark:hover:text-stone-200",
+				"text-zinc-500 hover:text-zinc-700",
+				"dark:text-zinc-400 dark:hover:text-zinc-200",
 			)}
 		>
 			<ChevronRightIcon className="h-5 w-5 shrink-0" aria-hidden="true" />

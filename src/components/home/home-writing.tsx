@@ -29,7 +29,7 @@ export function HomeWriting() {
 					href={urlSocial.github}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400"
+					className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 				>
 					find my work on GitHub →
 				</a>

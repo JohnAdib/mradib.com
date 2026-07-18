@@ -29,7 +29,7 @@ export function MentorRecognition() {
 				spent 11 years teaching 2,000+ students before mentoring had an app.{" "}
 				<Link
 					href="/awards"
-					className="font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400"
+					className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 				>
 					All awards &amp; recognition →
 				</Link>

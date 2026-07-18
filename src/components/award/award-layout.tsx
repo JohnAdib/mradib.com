@@ -28,7 +28,7 @@ export function AwardLayout({
 			<BreadcrumbJsonLD list={breadcrumb} />
 			<div className="mx-auto max-w-2xl">
 				<header>
-					<p className="text-sm font-medium text-teal-600 dark:text-teal-400">
+					<p className="text-sm font-medium text-accent-700 dark:text-accent-400">
 						{award.issuer} · {award.date.slice(0, 4)}
 					</p>
 					<h1 className="mt-3 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
@@ -51,13 +51,13 @@ export function AwardLayout({
 				<footer className="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-zinc-100 pt-6 text-sm dark:border-zinc-700/40">
 					<Link
 						href="/awards"
-						className="font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400"
+						className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 					>
 						← All awards & recognition
 					</Link>
 					<Link
 						href="/mentor"
-						className="font-medium text-teal-600 transition hover:text-teal-500 dark:text-teal-400"
+						className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
 					>
 						Book a free mentorship session →
 					</Link>
