@@ -8,14 +8,14 @@ export interface IStat {
 
 function StatContent({ stat }: { stat: IStat }) {
 	return (
-		<>
-			<p className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
+		<div className="border-l-2 border-accent-500/70 pl-4">
+			<p className="text-3xl font-bold tracking-tight text-zinc-800 tabular-nums sm:text-4xl dark:text-zinc-100">
 				{stat.value}
 			</p>
-			<p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+			<p className="mt-1.5 text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
 				{stat.label}
 			</p>
-		</>
+		</div>
 	);
 }
 

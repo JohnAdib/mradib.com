@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ItemListJsonLd } from "@/components/json-ld/item-list-json-ld";
 import { SimpleLayout } from "@/components/simple-layout";
 import { TalkCard } from "@/components/talk/talk-card";
-import { urlGitNation } from "@/data/profile";
 import { podcastAppearances, talks } from "@/data/talks/talks";
 import { homepageUrl } from "@/lib/constants/url";
 import { TalksInvite } from "./_sections/talks-invite";
@@ -33,7 +32,7 @@ export default function TalksPage() {
 				))}
 			</div>
 			<TalksPodcast podcast={podcastAppearances[0]} />
-			<TalksInvite gitNationUrl={urlGitNation} />
+			<TalksInvite />
 		</SimpleLayout>
 	);
 }

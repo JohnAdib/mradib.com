@@ -1,4 +1,4 @@
-export function TalksInvite({ gitNationUrl }: { gitNationUrl: string }) {
+export function TalksInvite() {
 	const linkClass =
 		"font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400";
 
@@ -14,18 +14,9 @@ export function TalksInvite({ gitNationUrl }: { gitNationUrl: string }) {
 				talks, meetups, podcasts, and internal team sessions.
 			</p>
 			<p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-				The fastest way to reach me is email,{" "}
+				One email is all it takes:{" "}
 				<a href="mailto:Mr.JohnAdib@Gmail.com" className={linkClass}>
 					Mr.JohnAdib@Gmail.com
-				</a>
-				, or find me on{" "}
-				<a
-					href={gitNationUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					className={linkClass}
-				>
-					GitNation
 				</a>
 				. Based in London, happy to travel, and always up for a good developer
 				community.

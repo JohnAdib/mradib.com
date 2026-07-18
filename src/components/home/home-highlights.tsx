@@ -1,14 +1,48 @@
+import {
+	MicrophoneIcon,
+	MusicalNoteIcon,
+	TrophyIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { Card } from "@/components/card";
 import { Container } from "@/components/container";
 import { getAward } from "@/data/awards";
 import { getTalk } from "@/data/talks/get-talk";
 import { podcastAppearances } from "@/data/talks/talks";
+import { HighlightCard, type IHighlight } from "./highlight-card";
 import { SectionHeader } from "./section-header";
 
 const award = getAward("worlds-most-influential-mentor");
 const talk = getTalk("ai-first-architecture");
 const [podcast] = podcastAppearances;
+
+const highlights: IHighlight[] = [
+	{
+		icon: TrophyIcon,
+		eyebrow: "ADPList · 2024 and 2026",
+		title: award.name,
+		href: `/awards/${award.slug}`,
+		description:
+			"Selected from 32,000+ mentors across 140+ countries, and listed again in 2026.",
+		cta: "The story",
+	},
+	{
+		icon: MicrophoneIcon,
+		eyebrow: "AI Coding Summit · 2025",
+		title: talk.title,
+		href: talk.articlePath ?? "/talks",
+		description: talk.summary,
+		cta: "Slides and story",
+	},
+	{
+		icon: MusicalNoteIcon,
+		eyebrow: `Podcast · ${podcast?.show ?? ""}`,
+		title: podcast?.title ?? "",
+		href: podcast?.url ?? "/talks",
+		description: podcast?.summary ?? "",
+		cta: `Listen on Spotify (${podcast?.duration ?? ""})`,
+		external: true,
+	},
+];
 
 const hubLinks = [
 	{ label: "All awards", href: "/awards" },
@@ -20,32 +54,12 @@ export function HomeHighlights() {
 	return (
 		<Container className="mt-20 sm:mt-28">
 			<SectionHeader title="Selected highlights" />
-			<div className="mt-10 grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-				<Card as="article">
-					<Card.Eyebrow decorate>ADPList · 2024 and 2026</Card.Eyebrow>
-					<Card.Title href={`/awards/${award.slug}`}>{award.name}</Card.Title>
-					<Card.Description>
-						Selected from 32,000+ mentors across 140+ countries, and listed
-						again in 2026.
-					</Card.Description>
-					<Card.Cta>The story</Card.Cta>
-				</Card>
-				<Card as="article">
-					<Card.Eyebrow decorate>AI Coding Summit · 2025</Card.Eyebrow>
-					<Card.Title href={talk.articlePath}>{talk.title}</Card.Title>
-					<Card.Description>{talk.summary}</Card.Description>
-					<Card.Cta>Slides and story</Card.Cta>
-				</Card>
-				{podcast && (
-					<Card as="article">
-						<Card.Eyebrow decorate>Podcast · {podcast.show}</Card.Eyebrow>
-						<Card.Title href={podcast.url}>{podcast.title}</Card.Title>
-						<Card.Description>{podcast.summary}</Card.Description>
-						<Card.Cta>Listen on Spotify ({podcast.duration})</Card.Cta>
-					</Card>
-				)}
+			<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				{highlights.map((highlight) => (
+					<HighlightCard key={highlight.title} highlight={highlight} />
+				))}
 			</div>
-			<p className="mt-12 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+			<p className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm">
 				{hubLinks.map((link) => (
 					<Link
 						key={link.href}
