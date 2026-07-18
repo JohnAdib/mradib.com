@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import imgResumeExperienceAccomplishments from "./_img/resume-experience-accomplishments.png";
 

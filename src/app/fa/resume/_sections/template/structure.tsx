@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 import imgResumeFormatStructure from "./_img/resume-format-structure.png";
 import { StructureCompare } from "./structure-compare";

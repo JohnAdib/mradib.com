@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeContactExample1 from "./_img/resume-contact-example-1.png";
 import imgResumeContactExample2 from "./_img/resume-contact-example-2.png";
 import imgResumeContactExample3 from "./_img/resume-contact-example-3.png";

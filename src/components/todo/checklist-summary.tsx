@@ -1,5 +1,6 @@
 "use client";
 
+import type { JSX } from "react";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import { Msg } from "../msg/msg";
 import type { IChecklistGroup } from "./interface";

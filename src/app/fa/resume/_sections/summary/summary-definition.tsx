@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { Pre } from "@/components/syntax-highlighter/pre";
 
 export function SummaryDefinition(): JSX.Element {

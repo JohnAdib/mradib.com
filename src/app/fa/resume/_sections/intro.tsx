@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { SectionHeading } from "@/components/heading/section-heading";
 import { Msg } from "@/components/msg/msg";
 import { ArticleToc } from "@/components/toc/article-toc";

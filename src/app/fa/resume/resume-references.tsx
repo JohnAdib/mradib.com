@@ -1,8 +1,7 @@
 import Link from "next/link";
+import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import { SectionHeading } from "@/components/heading/section-heading";
-
-import type { JSX } from "react";
 
 const references = [
 	"https://novoresume.com/career-blog/how-to-write-a-resume-guide",

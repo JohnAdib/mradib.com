@@ -1,6 +1,8 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
+import type { JSX } from "react";
+
 interface IAccordionProps {
 	title: string;
 	children: React.ReactNode;

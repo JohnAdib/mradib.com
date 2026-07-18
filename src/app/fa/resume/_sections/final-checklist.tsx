@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { SectionHeading } from "@/components/heading/section-heading";
 import { ChecklistSummary } from "@/components/todo/checklist-summary";
 import imgResumeChecklist from "../_img/resume-checklist.png";

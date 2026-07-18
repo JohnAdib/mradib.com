@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeExperienceExample1 from "./_img/resume-experience-example-1.png";
 
 export function ExperienceWorkedExample(): JSX.Element {

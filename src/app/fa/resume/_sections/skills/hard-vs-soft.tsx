@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import imgResumeHardSkills from "./_img/resume-hard-skills.png";

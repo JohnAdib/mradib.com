@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 
 export function ExperienceBySeniority(): JSX.Element {

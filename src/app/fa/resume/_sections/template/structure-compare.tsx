@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeFormatStructureChronological from "./_img/resume-format-structure-chronological.jpg";
 import imgResumeFormatStructureCombination from "./_img/resume-format-structure-combination.jpg";
 import imgResumeFormatStructureFunctional from "./_img/resume-format-structure-functional.jpg";

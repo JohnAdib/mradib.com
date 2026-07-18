@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeOptionalHobbies from "./_img/resume-optional-hobbies.png";
 
 export function OptionalHobbies(): JSX.Element {
