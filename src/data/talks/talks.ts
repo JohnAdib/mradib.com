@@ -23,16 +23,18 @@ export const talks: ITalk[] = [
 	{
 		slug: "techlead-conf-adopting-ai",
 		path: "/adopting-ai-in-orgs-techlead-conf-london-2025",
-		title: "Adopting AI in Orgs",
+		title:
+			"Optimizing Tech Operations: Managing Technical Debt While Integrating AI",
 		format: "panel",
 		event: "TechLead Conf London 2025",
 		organizer: "TechLead Conf",
 		logo: "/talks/logos/techlead-conf.avif",
+		eventUrl: "https://techleadconf.com",
 		city: "London",
 		date: "2025-11-28",
 		summary:
-			"A panel on adopting AI across engineering organizations: what changes for teams, where adoption stalls, and how leaders drive it.",
-		keywords: ["AI Adoption", "Engineering Leadership"],
+			"A panel on managing technical debt while integrating AI: what tech debt really means, why teams accumulate it, and how AI helps pay it down without creating more.",
+		keywords: ["Technical Debt", "AI Adoption", "Engineering Leadership"],
 	},
 	{
 		slug: "ai-first-architecture",

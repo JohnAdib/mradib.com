@@ -2,7 +2,6 @@ import Image from "next/image";
 import { StatBand } from "@/components/stat-band";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { experienceYears } from "@/data/profile";
-import portraitImage from "@/images/portrait.jpg";
 
 const stats = [
 	{ value: `${experienceYears}+`, label: "Years in software" },
@@ -38,10 +37,11 @@ export function AboutHero() {
 			</div>
 			<div className="reveal-up reveal-delay-2 mx-auto max-w-xs lg:mx-0 lg:pt-2">
 				<Image
-					src={portraitImage}
+					src="/img/john-adib-avatar.jpg"
 					alt="John Adib, engineering leader in London"
+					width={1280}
+					height={1280}
 					priority
-					sizes="(min-width: 1024px) 20rem, 16rem"
 					className="aspect-square w-64 rotate-3 rounded-2xl bg-zinc-100 object-cover sm:w-72 dark:bg-zinc-800"
 				/>
 			</div>

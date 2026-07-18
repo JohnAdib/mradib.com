@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import avatarImage from "@/images/avatar.jpg";
 
 export function AvatarContainer({
 	className,
@@ -30,9 +29,10 @@ export function Avatar({
 			{...props}
 		>
 			<Image
-				src={avatarImage}
+				src="/img/john-adib-avatar.jpg"
 				alt="MrAdib"
-				sizes="2.25rem"
+				width={1280}
+				height={1280}
 				className="h-9 w-9 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
 				priority
 			/>

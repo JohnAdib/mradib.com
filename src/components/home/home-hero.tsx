@@ -4,7 +4,6 @@ import { Container } from "@/components/container";
 import { SocialMediaLinks } from "@/components/social-media-links";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { experienceYears } from "@/data/profile";
-import portraitImage from "@/images/portrait.jpg";
 
 export function HomeHero() {
 	return (
@@ -40,10 +39,11 @@ export function HomeHero() {
 				</div>
 				<div className="reveal-up reveal-delay-2 hidden lg:block lg:pt-2">
 					<Image
-						src={portraitImage}
+						src="/img/john-adib-hero.jpg"
 						alt="John Adib, Engineering Manager in London"
+						width={952}
+						height={952}
 						priority
-						sizes="18rem"
 						className="aspect-square w-72 rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
 					/>
 				</div>

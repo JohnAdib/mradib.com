@@ -13,9 +13,11 @@ import { TalkResources } from "./talk-resources";
 export function TalkLayout({
 	talk,
 	coverImage,
+	children,
 }: {
 	talk: ITalk;
 	coverImage?: StaticImageData;
+	children?: React.ReactNode;
 }) {
 	const extras = getTalkResources(talk).filter((r) => r.kind !== "slides");
 	const kind =
@@ -51,6 +53,8 @@ export function TalkLayout({
 				<p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
 					{talk.summary}
 				</p>
+
+				{children}
 
 				{coverImage && (
 					<Image
