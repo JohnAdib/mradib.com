@@ -1,31 +1,22 @@
-import { Button } from "@/components/button";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 export function TalksInvite() {
 	return (
-		<section
+		<a
 			id="invite"
-			className="max-w-3xl scroll-mt-24 rounded-3xl bg-accent-50/60 p-8 ring-1 ring-accent-100 sm:p-10 dark:bg-accent-400/5 dark:ring-accent-400/15"
+			href="mailto:Mr.JohnAdib@Gmail.com"
+			className="group flex scroll-mt-24 items-center gap-4 rounded-2xl border border-zinc-100 bg-white p-5 transition hover:border-zinc-200 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/50"
 		>
-			<h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-				Invite me to speak
-			</h2>
-			<p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-				I love sharing what actually works, and what didn't. Topics: AI-first
-				development and architecture, design systems at scale, engineering
-				leadership, and developer productivity. Formats: conference talks,
-				meetups, workshops, podcasts, and internal team sessions.
-			</p>
-			<p className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
-				Based in London, happy to travel, and always up for a good developer
-				community.
-			</p>
-			<Button
-				href="mailto:Mr.JohnAdib@Gmail.com"
-				variant="primary"
-				className="mt-6"
-			>
-				Mr.JohnAdib@Gmail.com
-			</Button>
-		</section>
+			<div className="min-w-0 flex-1">
+				<h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+					Want me to speak at your event?
+				</h2>
+				<p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+					Talks and workshops on AI-first development, design systems, and
+					engineering leadership. London based, happy to travel.
+				</p>
+			</div>
+			<ChevronRightIcon className="h-5 w-5 flex-none text-zinc-300 transition group-hover:translate-x-0.5 group-hover:text-accent-500 dark:text-zinc-600" />
+		</a>
 	);
 }

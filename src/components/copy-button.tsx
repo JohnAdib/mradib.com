@@ -9,6 +9,8 @@ interface ICopyButtonProps {
 	text: string;
 	label: string;
 	copiedLabel?: string;
+	/** Render just the icon; label becomes the tooltip and aria-label. */
+	iconOnly?: boolean;
 	className?: string;
 }
 
@@ -16,6 +18,7 @@ export function CopyButton({
 	text,
 	label,
 	copiedLabel = "Copied",
+	iconOnly = false,
 	className,
 }: ICopyButtonProps) {
 	const [copied, setCopied] = useState(false);
@@ -34,11 +37,13 @@ export function CopyButton({
 		<button
 			type="button"
 			onClick={() => void copy()}
-			aria-live="polite"
+			aria-label={iconOnly ? (copied ? copiedLabel : label) : undefined}
+			title={iconOnly ? label : undefined}
 			className={clsx(
-				"inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition",
-				"bg-zinc-50 text-zinc-700 hover:bg-zinc-100",
-				"dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800",
+				"inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition",
+				iconOnly ? "h-9 w-9" : "px-3 py-2",
+				"bg-zinc-50 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900",
+				"dark:bg-zinc-800/50 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100",
 				className,
 			)}
 		>
@@ -47,7 +52,7 @@ export function CopyButton({
 			) : (
 				<ClipboardDocumentIcon className="h-4 w-4" />
 			)}
-			{copied ? copiedLabel : label}
+			{!iconOnly && (copied ? copiedLabel : label)}
 		</button>
 	);
 }
