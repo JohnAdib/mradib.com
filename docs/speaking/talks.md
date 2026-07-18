@@ -12,6 +12,14 @@ Each talk has its own page at the root URL. Talks are separate from articles.
 - Topics: AI-assisted engineering, guardrails, developer productivity.
 - Talk page: /the-compound-effect-of-guardrails-in-the-era-of-ai
 
+### Building an Enterprise Dashboard with AI: From Architecture to Production
+
+- Event: United Hacks V6, hosted by Hack United, online, 18 January 2026. Given while helping run the hackathon.
+- Topics: AI-assisted architecture, enterprise dashboards, production readiness.
+- Talk page: /building-an-enterprise-dashboard-with-ai
+- Recording: https://www.youtube.com/watch?v=F0VBmJyeDDU
+- Source: https://www.hackunited.org/, https://unitedhacksv6.devpost.com/
+
 ## 2025
 
 ### AI-First Architecture: Why Single Responsibility Matters More Than Ever

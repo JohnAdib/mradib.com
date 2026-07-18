@@ -4,6 +4,26 @@ import type { IPodcastAppearance, ITalk } from "./talk-interface";
 // newest first, drives /talks, the talk pages, the sitemap, and llms.txt
 export const talks: ITalk[] = [
 	{
+		slug: "hack-united-enterprise-dashboard-ai",
+		path: "/building-an-enterprise-dashboard-with-ai",
+		title:
+			"Building an Enterprise Dashboard with AI: From Architecture to Production",
+		format: "workshop",
+		event: "United Hacks V6",
+		organizer: "Hack United",
+		logo: "/talks/logos/hack-united.png",
+		eventUrl: "https://unitedhacksv6.devpost.com/",
+		websiteUrl: "https://www.hackunited.org/",
+		city: "Online",
+		date: "2026-01-18",
+		summary:
+			"A session on architecting and shipping an enterprise dashboard with AI, from initial design to production, given during the United Hacks V6 hackathon.",
+		slidesPdf:
+			"/talks/2026-01-18-building-an-enterprise-dashboard-with-ai-from-architecture-to-production.pdf",
+		youtubeUrl: "https://www.youtube.com/watch?v=F0VBmJyeDDU",
+		keywords: ["AI", "Enterprise Dashboard", "Architecture", "Hackathon"],
+	},
+	{
 		slug: "compound-effect-guardrails",
 		path: "/the-compound-effect-of-guardrails-in-the-era-of-ai",
 		title: "The Compound Effect of Guardrails in the Era of AI",
