@@ -1,7 +1,7 @@
 import type { AwardGroup, IAward } from "@/data/awards";
 import { AwardCard } from "./award-card";
 
-const groupTitles: Record<AwardGroup, string> = {
+export const groupTitles: Record<AwardGroup, string> = {
 	mentorship: "Mentorship",
 	national: "National recognition & immigration",
 	competition: "Competition",
@@ -19,7 +19,7 @@ const groupOrder: AwardGroup[] = [
 
 export function AwardGroupList({ awards }: { awards: IAward[] }) {
 	return (
-		<div className="space-y-16">
+		<div className="mt-16 space-y-16">
 			{groupOrder.map((group) => {
 				const groupAwards = awards.filter((award) => award.group === group);
 				if (groupAwards.length === 0) {

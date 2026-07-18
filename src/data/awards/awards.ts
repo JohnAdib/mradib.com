@@ -2,17 +2,6 @@ import type { IAward } from "./award-interface";
 
 export const awards: IAward[] = [
 	{
-		slug: "worlds-most-influential-mentor",
-		name: "The World's Most Influential Mentor",
-		issuer: "ADPList",
-		date: "2025-02",
-		category: "flagship",
-		group: "mentorship",
-		summary:
-			"Named in the ADPList100 for 2024, a list of 100 mentors selected from 32,000+ across 140+ countries, and listed again in 2026.",
-		externalUrl: "https://adplist.org/adplist100/2026/mentor/john-adib",
-	},
-	{
 		slug: "uk-global-talent",
 		name: "UK Global Talent Visa (Tech Nation Endorsement)",
 		issuer: "Tech Nation",
@@ -24,6 +13,22 @@ export const awards: IAward[] = [
 		externalUrl: "https://www.gov.uk/global-talent",
 	},
 	{
+		slug: "worlds-most-influential-mentor",
+		name: "The World's Most Influential Mentor",
+		issuer: "ADPList",
+		date: "2025-02",
+		category: "flagship",
+		group: "mentorship",
+		summary:
+			"Named in the 2026 ADPList100 for 2025 contributions, a list of 100 mentors selected from 32,000+ across 140+ countries. First recognized in the inaugural 2024 list too.",
+		badgeImages: [
+			"/awards/worlds-most-influential-mentor-badge.jpg",
+			"/awards/worlds-most-influential-mentor-badge-2.png",
+			"/awards/worlds-most-influential-mentor-badge-3.gif",
+		],
+		externalUrl: "https://adplist.org/adplist100/2026/mentor/john-adib",
+	},
+	{
 		slug: "number-1-mentor-in-europe",
 		name: "#1 Mentor in Europe",
 		issuer: "ADPList",
@@ -32,6 +37,11 @@ export const awards: IAward[] = [
 		group: "mentorship",
 		summary:
 			"Ranked first among ADPList's top mentors in Europe in the 2024 ADPList Wrapped.",
+		badgeImages: [
+			"/awards/number-1-mentor-in-europe-badge.jpg",
+			"/awards/number-1-mentor-in-europe-badge-2.jpg",
+			"/awards/number-1-mentor-in-europe-badge-3.jpg",
+		],
 		externalUrl:
 			"https://blog.adplist.org/post/2024-adplist-wrapped-top-mentors-trends-and-topics",
 	},

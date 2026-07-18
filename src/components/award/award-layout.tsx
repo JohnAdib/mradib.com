@@ -1,8 +1,10 @@
+import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { AwardBadge } from "@/components/award/award-badge";
+import { AwardContent } from "@/components/award/award-content";
 import { BreadcrumbJsonLD } from "@/components/breadcrumb/breadcrumb-json-ld";
-import { Button } from "@/components/button";
 import { Container } from "@/components/container";
-import { Prose } from "@/components/prose";
+import { LightboxProvider } from "@/components/image-lightbox";
 import type { IAward } from "@/data/awards";
 
 export function AwardLayout({
@@ -22,47 +24,42 @@ export function AwardLayout({
 			current: true,
 		},
 	];
+	const hasImages = (award.badgeImages?.length ?? 0) > 0;
 
 	return (
 		<Container className="mt-16 sm:mt-24">
 			<BreadcrumbJsonLD list={breadcrumb} />
-			<div className="mx-auto max-w-2xl">
-				<header>
-					<p className="text-sm font-medium text-accent-700 dark:text-accent-400">
-						{award.issuer} · {award.date.slice(0, 4)}
-					</p>
-					<h1 className="mt-3 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
-						{award.name}
-					</h1>
-				</header>
-				<Prose className="mt-8">{children}</Prose>
-				{award.externalUrl && (
-					<div className="mt-10">
-						<Button
-							href={award.externalUrl}
-							variant="secondary"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Verify with {award.issuer} ↗
-						</Button>
-					</div>
-				)}
-				<footer className="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-zinc-100 pt-6 text-sm dark:border-zinc-700/40">
+			<LightboxProvider>
+				<div className={hasImages ? "mx-auto max-w-5xl" : "mx-auto max-w-2xl"}>
 					<Link
 						href="/awards"
-						className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
+						className="group inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition hover:text-accent-700 dark:text-zinc-400 dark:hover:text-accent-400"
 					>
-						← All awards & recognition
+						<ArrowLeftIcon className="h-4 w-4" />
+						Back to awards
 					</Link>
-					<Link
-						href="/mentor"
-						className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
+					<div
+						className={
+							hasImages
+								? "mt-8 lg:grid lg:grid-cols-[280px_1fr] lg:gap-12"
+								: "mt-8"
+						}
 					>
-						Book a mentorship session →
-					</Link>
-				</footer>
-			</div>
+						{hasImages && (
+							<div className="mx-auto max-w-sm lg:sticky lg:top-24 lg:mx-0 lg:max-w-none lg:self-start">
+								<AwardBadge award={award} />
+							</div>
+						)}
+						<div
+							className={
+								hasImages ? "mt-8 min-w-0 max-w-2xl lg:mt-0" : undefined
+							}
+						>
+							<AwardContent award={award}>{children}</AwardContent>
+						</div>
+					</div>
+				</div>
+			</LightboxProvider>
 		</Container>
 	);
 }

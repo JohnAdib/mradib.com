@@ -58,8 +58,8 @@ export function CtaOnDarkPanel({
 					/>
 					<defs>
 						<radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-							<stop stopColor="#7775D6" />
-							<stop offset={1} stopColor="#E935C1" />
+							<stop stopColor="#2dd4bf" />
+							<stop offset={1} stopColor="#0f766e" />
 						</radialGradient>
 					</defs>
 				</svg>

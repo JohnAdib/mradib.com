@@ -3,6 +3,7 @@
 @import "./star-animation.css" layer(components);
 @import "./page-404.css" layer(components);
 @import "./reveal.css" layer(components);
+@import "./image-lightbox.css" layer(components);
 
 @config "../../tailwind.config.ts";
 

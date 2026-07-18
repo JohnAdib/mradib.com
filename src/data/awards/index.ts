@@ -1,6 +1,13 @@
+import { adplistTop1AwardName } from "./adplist-timeline";
 import type { IAward } from "./award-interface";
 import { awards } from "./awards";
 
+export type {
+	AdplistBadgeKind,
+	IAdplistBadge,
+} from "./adplist-badge-interface";
+export { adplistBadges } from "./adplist-badges";
+export { adplistBadgeTimeline, top1MonthsLabel } from "./adplist-timeline";
 export type { AwardCategory, AwardGroup, IAward } from "./award-interface";
 export { awards } from "./awards";
 
@@ -8,18 +15,10 @@ export const flagshipAwards: IAward[] = awards.filter(
 	(award) => award.category === "flagship",
 );
 
-/** ADPList recognition collapsed into consistency evidence, never separate pages */
-export const adplistBadgeTimeline: string[] = [
-	"Top 1% Engineering Mentor, awarded 8+ months (2024 to 2026)",
-	"Super Mentor, Q2 to Q4 2025",
-	"Top 10 Mentor in Front-End, Q1 2025 and Q1 2026",
-	"Milestones: 100, 200 and 300+ sessions · 10,000+ mentoring minutes",
-];
-
 /** Award names for the sitewide Person JSON-LD `award` property */
 export const awardNames: string[] = [
 	...awards.map((award) => `${award.name} (${award.issuer})`),
-	"Top 1% Engineering Mentor, awarded 8+ months (ADPList, 2024 to 2026)",
+	adplistTop1AwardName,
 ];
 
 /** Find a flagship award by slug, throws at build time if data is missing */

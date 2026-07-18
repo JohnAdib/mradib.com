@@ -17,7 +17,8 @@ export interface IAward {
 	category: AwardCategory;
 	group: AwardGroup;
 	summary: string;
-	badgeImg?: string;
+	/** Certificate/badge images, root-relative paths. First is the primary, shown largest. */
+	badgeImages?: string[];
 	evidencePdf?: string;
 	externalUrl?: string;
 }
