@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import {
 	CommandLineIcon,
 	DocumentCheckIcon,
@@ -7,23 +5,27 @@ import {
 } from "@heroicons/react/20/solid";
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
+import { Container } from "@/components/container";
+import Faq from "@/components/faq/faq";
 import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
 import { FeatureWithFullWidthImage } from "@/components/sections/feature-with-full-width-image";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
+import { mentorFaq } from "./_sections/mentor-faq-data";
+import { MentorRecognition } from "./_sections/mentor-recognition";
+import { MentorStats } from "./_sections/mentor-stats";
+
+type IconType = ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
 
 interface ISectionFeature {
 	name: string;
 	description: string;
-	icon: ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+	icon: IconType;
 }
 
 export const metadata: Metadata = {
-	title: "Mentorship with MrAdib",
+	title: "Mentorship",
 	description:
-		"I offer limited FREE mentorship to help you level up your tech career. Book a 1:1 session today!",
-	twitter: {
-		card: "summary_large_image",
-	},
+		"John Adib has run 600+ free mentorship sessions on ADPList, where he was named the World's Most Influential Mentor of 2024 and #1 Mentor in Europe. Book a free 1:1 on engineering careers, resume reviews, or tech immigration.",
 };
 
 export default function Page() {
@@ -32,28 +34,19 @@ export default function Page() {
 			name: "Software Engineering",
 			description:
 				"Get guidance on best practices, coding techniques, and career growth in software engineering.",
-			icon: CommandLineIcon as ComponentType<{
-				className?: string;
-				"aria-hidden"?: boolean;
-			}>,
+			icon: CommandLineIcon as IconType,
 		},
 		{
 			name: "Resume Review",
 			description:
 				"Receive personalized feedback to improve your resume and stand out to employers.",
-			icon: DocumentCheckIcon as ComponentType<{
-				className?: string;
-				"aria-hidden"?: boolean;
-			}>,
+			icon: DocumentCheckIcon as IconType,
 		},
 		{
 			name: "Tech Immigration Success",
 			description:
 				"Navigate the complexities of tech immigration with tips and advice based on my own experience.",
-			icon: GlobeEuropeAfricaIcon as ComponentType<{
-				className?: string;
-				"aria-hidden"?: boolean;
-			}>,
+			icon: GlobeEuropeAfricaIcon as IconType,
 		},
 	];
 
@@ -70,6 +63,13 @@ export default function Page() {
 				enhance your coding skills, polish your resume, conquer job interviews,
 				or navigate tech immigration, I'm here to help. <b>FREE!</b>
 			</FeatureWithFullWidthImage>
+
+			<MentorStats />
+			<MentorRecognition />
+
+			<Container>
+				<Faq list={mentorFaq} />
+			</Container>
 
 			<BookMentorshipSession
 				subTitle="Ready to take the next step?"

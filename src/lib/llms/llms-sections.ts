@@ -49,6 +49,10 @@ export function sectionKeyFacts(): string {
 }
 
 export function sectionPages(): string {
+	const awardLines = flagshipAwards.map(
+		(award) =>
+			`- [${award.name}](${homepageUrl}/awards/${award.slug}): ${award.summary}`,
+	);
 	const articleLines = articlesMeta.map(
 		(article) =>
 			`- [${article.title}](${homepageUrl}${article.pagePath}): ${article.description}`,
@@ -58,6 +62,8 @@ export function sectionPages(): string {
 		"",
 		`- [Home](${homepageUrl}/)`,
 		`- [About John Adib](${homepageUrl}/about)`,
+		`- [Awards & Recognition](${homepageUrl}/awards): every award, with evidence and the story behind it.`,
+		...awardLines,
 		`- [Mentorship](${homepageUrl}/mentor): book a free session with John on ADPList.`,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,

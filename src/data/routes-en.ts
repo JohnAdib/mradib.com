@@ -4,6 +4,7 @@ export const routesEn: string[] = [
 	"/",
 	"/about",
 	"/articles",
+	"/awards",
 	"/contact",
 	"/gallery",
 	"/gallery/tools",

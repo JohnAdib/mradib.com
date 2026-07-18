@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articlesMeta } from "@/data/articles/articles-meta";
+import { flagshipAwards } from "@/data/awards";
 import { routesEn } from "@/data/routes-en";
 import { routesFa } from "@/data/routes-fa";
 import { homepageUrl } from "@/lib/constants/url";
@@ -15,10 +16,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		url: toUrl(path),
 	}));
 
+	const awardPages = flagshipAwards.map((award) => ({
+		url: toUrl(`/awards/${award.slug}`),
+	}));
+
 	const articles = articlesMeta.map((article) => ({
 		url: toUrl(article.pagePath),
 		lastModified: article.dateModified,
 	}));
 
-	return [...staticPages, ...articles];
+	return [...staticPages, ...awardPages, ...articles];
 }
