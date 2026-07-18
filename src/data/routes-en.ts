@@ -9,5 +9,7 @@ export const routesEn: string[] = [
 	"/gallery",
 	"/gallery/tools",
 	"/mentor",
+	"/now",
 	"/smileisgold",
+	"/talks",
 ];

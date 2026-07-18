@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { ArticleLayout } from "@/components/article/layout";
 import { Button } from "@/components/button";
+import { TalkMeta } from "@/components/talk/talk-meta";
 import { articleAiFirstArchitecture as article } from "@/data/articles/ai-first-architecture";
+import { getTalk } from "@/data/talks/get-talk";
 import imgCover from "./opengraph-image.png";
+
+const talk = getTalk("ai-first-architecture");
 
 export const metadata: Metadata = {
 	title: article.pageTitle,
@@ -28,6 +32,7 @@ export default function Page() {
 			keywords={article.keywords}
 			dateModified={article.dateModified}
 		>
+			<TalkMeta talk={talk} />
 			<Intro />
 			<PDFPreview />
 		</ArticleLayout>

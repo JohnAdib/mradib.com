@@ -65,8 +65,10 @@ export function sectionPages(): string {
 		`- [Awards & Recognition](${homepageUrl}/awards): every award, with evidence and the story behind it.`,
 		...awardLines,
 		`- [Mentorship](${homepageUrl}/mentor): book a free session with John on ADPList.`,
+		`- [Talks & Speaking](${homepageUrl}/talks): all talks with slides, the podcast, and how to invite John to speak.`,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,
+		`- [Now](${homepageUrl}/now): what John is doing right now, updated quarterly.`,
 		`- [Contact](${homepageUrl}/contact)`,
 	].join("\n");
 }

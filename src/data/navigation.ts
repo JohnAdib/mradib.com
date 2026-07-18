@@ -9,6 +9,7 @@ export interface INavItem {
 export const mainNav: INavItem[] = [
 	{ label: "About", href: "/about" },
 	{ label: "Awards", href: "/awards" },
+	{ label: "Talks", href: "/talks" },
 	{ label: "Articles", href: "/articles" },
 	{ label: "Mentorship", href: "/mentor" },
 	{ label: "فارسی", href: "/fa", lang: "fa", dir: "rtl" },
@@ -18,6 +19,7 @@ export const footerNav: INavItem[] = [
 	{ label: "Homepage", href: "/" },
 	...mainNav,
 	{ label: "Gallery", href: "/gallery" },
+	{ label: "Now", href: "/now" },
 	{ label: "Contact", href: "/contact" },
 	{ label: "Resume", href: "https://resume.mradib.com" },
 ];

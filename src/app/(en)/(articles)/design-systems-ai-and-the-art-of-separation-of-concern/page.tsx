@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { ArticleLayout } from "@/components/article/layout";
 import { Button } from "@/components/button";
+import { TalkMeta } from "@/components/talk/talk-meta";
 import { articleDesignSystemsAi as article } from "@/data/articles/design-systems-ai";
+import { getTalk } from "@/data/talks/get-talk";
 import imgCover from "./_img/cover.webp";
+
+const talk = getTalk("design-systems-ai-separation-of-concern");
 
 export const metadata: Metadata = {
 	title: article.pageTitle,
@@ -28,6 +32,7 @@ export default function Page() {
 			coverImage={imgCover}
 			dateModified={article.dateModified}
 		>
+			<TalkMeta talk={talk} />
 			<Intro />
 			<PDFPreview />
 		</ArticleLayout>
