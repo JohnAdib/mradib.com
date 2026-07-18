@@ -75,7 +75,14 @@ video {
 a[href^="/fa"] {
 	font-family: var(--font-fa);
 }
-a:not([href^="/fa"]) {
+/*
+  Same-page anchors (href="#...") carry the surrounding text, so they must
+  follow their `dir` context, not be forced to English. Excluding them here
+  lets them inherit Vazirmatn inside `[dir="rtl"]` (TOC rows, section headings,
+  checklist group links) and Inter inside `[dir="ltr"]`. All other non-Persian
+  links stay Inter.
+*/
+a:not([href^="/fa"]):not([href^="#"]) {
 	font-family: var(--font-en);
 }
 

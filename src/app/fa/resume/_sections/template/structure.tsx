@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Msg } from "@/components/msg/msg";
 import imgResumeFormatStructure from "./_img/resume-format-structure.png";
-import imgResumeFormatStructureChronological from "./_img/resume-format-structure-chronological.jpg";
-import imgResumeFormatStructureCombination from "./_img/resume-format-structure-combination.jpg";
-import imgResumeFormatStructureFunctional from "./_img/resume-format-structure-functional.jpg";
+import { StructureCompare } from "./structure-compare";
 
 export function StructureFormats(): JSX.Element {
 	return (
@@ -32,6 +30,8 @@ export function StructureFormats(): JSX.Element {
 				انتخاب ساختار رزومه خودتون تمرکز کنید.
 			</p>
 
+			<StructureCompare />
+
 			<h4 id="structure-chronological">
 				<abbr title="Chronological Resume Format">فرمت رزومه زمانی</abbr>
 			</h4>
@@ -40,16 +40,10 @@ export function StructureFormats(): JSX.Element {
 				زیادی دارن که به شغل درخواستی مرتبط است. آخرین شغل در ابتدا لیست میشه و
 				به ترتیب زمانی به عقب لیست می‌کنید.
 			</p>
-			<figure>
-				<Image
-					src={imgResumeFormatStructureChronological}
-					alt="فرمت رزومه در ساختار معکوس زمانی"
-				/>
-				<figcaption>
-					استخدام‌کنندگان با این فرمت کاملا آشنا هستند و می‌دانند کجا دنبال
-					اطلاعاتی که دنبالش هستند، بگردند.
-				</figcaption>
-			</figure>
+			<p>
+				استخدام‌کنندگان با این فرمت کاملا آشنا هستند و می‌دانند کجا دنبال اطلاعاتی
+				که دنبالش هستند، بگردند.
+			</p>
 
 			<p>
 				اگر سابقه کاری کمی دارید، پر کردن تقریبا نصف صفحه با بخش تجربه کاری سخت
@@ -66,16 +60,10 @@ export function StructureFormats(): JSX.Element {
 				فاصله زمانی وقفه طولانی در سابقه کاری داشته باشید یا مثلا بعد از چند سال
 				شغل جدیدی رو میخواید تجربه کنید.
 			</p>
-			<figure>
-				<Image
-					src={imgResumeFormatStructureFunctional}
-					alt="فرمت رزومه در ساختار کاربری یا مهارت محور"
-				/>
-				<figcaption>
-					در ساختار رزومه کاربردی، تاکید اصلی روی مهارت‌های شماست و تجربیات کاری
-					به‌صورت مختصر ذکر می‌شوند
-				</figcaption>
-			</figure>
+			<p>
+				در ساختار رزومه کاربردی، تاکید اصلی روی مهارت‌های شماست و تجربیات کاری
+				به‌صورت مختصر ذکر می‌شوند
+			</p>
 
 			<h4 id="structure-combination">
 				<abbr title="Combination Resume Format">فرمت رزومه ترکیبی</abbr>
@@ -85,16 +73,10 @@ export function StructureFormats(): JSX.Element {
 				برای شغلی میخواین درخواست بدین که به تخصص در چند زمینه نیاز داره میتونه
 				براتون مفید باشه.
 			</p>
-			<figure>
-				<Image
-					src={imgResumeFormatStructureCombination}
-					alt="فرمت رزومه در ساختار ترکیبی یا رزومه هایبرید"
-				/>
-				<figcaption>
-					ساختار رزومه ترکیبی یا هایبرید روی سابقه کاری و مهارت‌ها به‌صورت همزمان
-					تاکید دارد.
-				</figcaption>
-			</figure>
+			<p>
+				ساختار رزومه ترکیبی یا هایبرید روی سابقه کاری و مهارت‌ها به‌صورت همزمان
+				تاکید دارد.
+			</p>
 		</>
 	);
 }
