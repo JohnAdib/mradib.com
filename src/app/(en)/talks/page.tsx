@@ -22,7 +22,9 @@ export default function TalksPage() {
 				name="Talks by John Adib"
 				items={talks.map((talk) => ({
 					name: `${talk.title} (${talk.event})`,
-					url: `${homepageUrl}${talk.path}`,
+					url: talk.path
+						? `${homepageUrl}${talk.path}`
+						: `${homepageUrl}/talks`,
 				}))}
 			/>
 			<div className="lg:grid lg:grid-cols-3 lg:items-start lg:gap-10">
@@ -31,9 +33,9 @@ export default function TalksPage() {
 						Talks & Speaking
 					</h1>
 					<p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-						I talk and run workshops about building software with AI in the loop:
-						AI-first development, design systems, and engineering leadership.
-						Every deck is free to download.
+						I talk and run workshops about building software with AI in the
+						loop: AI-first development, design systems, and engineering
+						leadership. Every deck is free to download.
 					</p>
 				</header>
 				<aside className="mt-8 lg:col-start-3 lg:mt-0">

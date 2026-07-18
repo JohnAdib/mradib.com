@@ -18,7 +18,12 @@ export function TalkLayout({
 	coverImage?: StaticImageData;
 }) {
 	const extras = getTalkResources(talk).filter((r) => r.kind !== "slides");
-	const kind = talk.format === "workshop" ? "Workshop" : "Talk";
+	const kind =
+		talk.format === "workshop"
+			? "Workshop"
+			: talk.format === "panel"
+				? "Panel"
+				: "Talk";
 
 	return (
 		<Container className="mt-16 sm:mt-24">
@@ -32,7 +37,7 @@ export function TalkLayout({
 				</Link>
 
 				<header className="mt-8 flex items-start gap-4">
-					<TalkLogo talk={talk} className="h-16 w-16" />
+					<TalkLogo talk={talk} className="h-20 w-20" />
 					<div className="min-w-0">
 						<p className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
 							{kind} · {talk.event}

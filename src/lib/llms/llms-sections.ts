@@ -57,8 +57,10 @@ export function sectionPages(): string {
 		(article) =>
 			`- [${article.title}](${homepageUrl}${article.pagePath}): ${article.description}`,
 	);
-	const talkPageLines = talks.map(
-		(talk) => `- [${talk.title}](${homepageUrl}${talk.path}): ${talk.summary}`,
+	const talkPageLines = talks.flatMap((talk) =>
+		talk.path
+			? [`- [${talk.title}](${homepageUrl}${talk.path}): ${talk.summary}`]
+			: [],
 	);
 	return [
 		"## Pages",

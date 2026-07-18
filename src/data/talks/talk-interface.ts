@@ -1,4 +1,4 @@
-export type TalkFormat = "talk" | "workshop";
+export type TalkFormat = "talk" | "workshop" | "panel";
 
 export type TalkResourceKind =
 	| "slides"
@@ -18,8 +18,8 @@ export interface ITalkResource {
 export interface ITalk {
 	/** Short id, used for React keys and getTalk. Not the URL. */
 	slug: string;
-	/** Root URL of this talk's own page, e.g. "/turning-chaos-into-control-with-cloudflare". */
-	path: string;
+	/** Root URL of this talk's own page. Omit for an entry with no page, e.g. a panel. */
+	path?: string;
 	title: string;
 	/** Defaults to a talk when unset. */
 	format?: TalkFormat;

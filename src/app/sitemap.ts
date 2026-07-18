@@ -21,10 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		url: toUrl(`/awards/${award.slug}`),
 	}));
 
-	const talkPages = talks.map((talk) => ({
-		url: toUrl(talk.path),
-		lastModified: talk.date,
-	}));
+	const talkPages = talks.flatMap((talk) =>
+		talk.path ? [{ url: toUrl(talk.path), lastModified: talk.date }] : [],
+	);
 
 	const articles = articlesMeta.map((article) => ({
 		url: toUrl(article.pagePath),

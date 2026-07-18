@@ -9,8 +9,9 @@ export const talks: ITalk[] = [
 		title: "The Compound Effect of Guardrails in the Era of AI",
 		event: "JavaScript London",
 		organizer: "JavaScript London",
+		logo: "/talks/logos/js-london.png",
 		host: "NewDay",
-		venue: "King's Cross",
+		audience: "130+ attendees",
 		city: "London",
 		date: "2026-04-29",
 		summary:
@@ -20,15 +21,30 @@ export const talks: ITalk[] = [
 		keywords: ["AI", "Guardrails", "Engineering", "JavaScript"],
 	},
 	{
+		slug: "techlead-conf-adopting-ai",
+		path: "/adopting-ai-in-orgs-techlead-conf-london-2025",
+		title: "Adopting AI in Orgs",
+		format: "panel",
+		event: "TechLead Conf London 2025",
+		organizer: "TechLead Conf",
+		logo: "/talks/logos/techlead-conf.avif",
+		city: "London",
+		date: "2025-11-28",
+		summary:
+			"A panel on adopting AI across engineering organizations: what changes for teams, where adoption stalls, and how leaders drive it.",
+		keywords: ["AI Adoption", "Engineering Leadership"],
+	},
+	{
 		slug: "ai-first-architecture",
 		path: "/ai-first-architecture-why-single-responsibility-matters-more-than-ever",
 		title:
 			"AI-First Architecture - Why Single Responsibility Matters More Than Ever",
 		event: "AI Coding Summit 2025",
 		organizer: "GitNation",
+		logo: "/talks/logos/ai-coding-summit.avif",
 		city: "Online",
 		date: "2025-10-23",
-		audience: "5,000+ engineers",
+		audience: "5,000+ attendees",
 		summary:
 			"Why the single responsibility principle becomes critical in AI-first architectures, and how to design systems that work seamlessly with AI tools.",
 		slidesPdf:
@@ -40,8 +56,11 @@ export const talks: ITalk[] = [
 		slug: "turning-chaos-into-control-with-cloudflare",
 		path: "/turning-chaos-into-control-with-cloudflare",
 		title: "Turning Chaos into Control with Cloudflare",
-		event: "LNUG #110",
+		event: "LNUG",
 		organizer: "London Node User Group",
+		logo: "/talks/logos/lnug.png",
+		host: "Cloudflare",
+		audience: "90+ attendees",
 		city: "London",
 		date: "2025-09-24",
 		summary:
@@ -56,11 +75,12 @@ export const talks: ITalk[] = [
 		title: "Design Systems, AI, and the Art of Separation of Concern",
 		event: "React Advanced London",
 		organizer: "React Advanced",
+		logo: "/talks/logos/react-advanced.png",
 		host: "Figma",
 		venue: "Figma's London office",
 		city: "London",
 		date: "2025-07-03",
-		audience: "120+ engineers",
+		audience: "120+ attendees",
 		summary:
 			"Seven practical tips to build scalable, maintainable architectures that empower teams and AI tools alike.",
 		slidesPdf:

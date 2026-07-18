@@ -23,24 +23,19 @@ export function TalkLogo({
 	className?: string;
 }) {
 	const base = clsx(
-		"flex flex-none items-center justify-center overflow-hidden rounded-2xl ring-1",
+		"flex flex-none items-center justify-center overflow-hidden rounded-xl",
 		className,
 	);
 
 	if (talk.logo) {
 		return (
-			<span
-				className={clsx(
-					base,
-					"bg-white ring-zinc-100 dark:bg-zinc-800 dark:ring-zinc-700/50",
-				)}
-			>
+			<span className={base}>
 				<Image
 					src={talk.logo}
 					alt={`${talk.organizer} logo`}
-					width={64}
-					height={64}
-					className="h-full w-full object-contain p-2"
+					width={128}
+					height={128}
+					className="h-full w-full object-cover"
 				/>
 			</span>
 		);
@@ -49,10 +44,7 @@ export function TalkLogo({
 	return (
 		<span
 			aria-hidden="true"
-			className={clsx(
-				base,
-				"bg-accent-50 ring-accent-100 dark:bg-accent-400/10 dark:ring-accent-400/20",
-			)}
+			className={clsx(base, "bg-accent-50 dark:bg-accent-400/10")}
 		>
 			<span className="text-sm font-bold tracking-tight text-accent-700 dark:text-accent-400">
 				{monogram(talk.organizer)}
