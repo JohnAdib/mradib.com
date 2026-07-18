@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { getAllActionVerbs } from "./get-all-action-verbs";
 import type { IListActionVerbs } from "./interface";
 

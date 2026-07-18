@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import type { JSX } from "react";
 import { ArticleLayout } from "@/components/article/layout";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import { separator } from "@/lib/constants/en";

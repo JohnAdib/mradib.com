@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Accordion } from "@/components/accordion/accordion";
 import { SectionHeading } from "@/components/heading/section-heading";
 
+import type { JSX } from "react";
+
 const references = [
 	"https://novoresume.com/career-blog/how-to-write-a-resume-guide",
 	"https://novoresume.com/career-blog/how-long-should-a-resume-be",

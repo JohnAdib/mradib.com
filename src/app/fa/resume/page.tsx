@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { JSX } from "react";
 import { ArticleLayout } from "@/components/article/layout";
 import { ArticleToc } from "@/components/toc/article-toc";
 import { separator } from "@/lib/constants/en";

@@ -24,7 +24,7 @@ export const FaqJsonLD: React.FC<FAQProps> = ({ faqData, title }: FAQProps) => {
 	return (
 		<script
 			type="application/ld+json"
-			// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+			// biome-ignore lint/security/noDangerouslySetInnerHtml: static, build-time JSON-LD
 			dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 		/>
 	);

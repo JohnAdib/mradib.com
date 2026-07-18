@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import type { JSX } from "react";
 import { getMsgSeverityColor } from "./severity-colors";
 import { MsgSeverityIcon } from "./severity-icon";
 

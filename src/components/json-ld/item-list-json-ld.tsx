@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import type { ItemList, WithContext } from "schema-dts";
 
 interface IItemListJsonLd {
