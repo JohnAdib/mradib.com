@@ -17,5 +17,6 @@ export interface IArticleLayout {
 	breadcrumb?: IBreadcrumbItem[];
 	nextPrev?: INavNextPrev;
 	lang: LanguageLocale;
+	aside?: React.ReactNode;
 	children: React.ReactNode;
 }

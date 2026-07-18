@@ -9,7 +9,7 @@ export const breadcrumb: IBreadcrumbItem[] = [
 	},
 	{
 		position: 2,
-		current: false,
+		current: true,
 		item: "/fa/resume",
 		name: "رزومه",
 	},

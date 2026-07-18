@@ -1,0 +1,17 @@
+import Image from "next/image";
+import imgResumeExperienceExample1 from "./_img/resume-experience-example-1.png";
+
+export function ExperienceWorkedExample(): JSX.Element {
+	return (
+		<>
+			<h3>بررسی یک نمونه از تجربه کاری</h3>
+			<figure>
+				<Image
+					src={imgResumeExperienceExample1}
+					alt="تجربه کاری در رزومه - نمونه ۱"
+				/>
+				<figcaption>نمونه‌ای از نحوه نوشتن تجربه کاری در رزومه</figcaption>
+			</figure>
+		</>
+	);
+}
