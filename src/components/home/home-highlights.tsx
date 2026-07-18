@@ -29,7 +29,7 @@ const highlights: IHighlight[] = [
 		icon: MicrophoneIcon,
 		eyebrow: "AI Coding Summit · 2025",
 		title: talk.title,
-		href: talk.articlePath ?? "/talks",
+		href: talk.path,
 		description: talk.summary,
 		cta: "Slides and story",
 	},

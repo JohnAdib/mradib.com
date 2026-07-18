@@ -57,6 +57,9 @@ export function sectionPages(): string {
 		(article) =>
 			`- [${article.title}](${homepageUrl}${article.pagePath}): ${article.description}`,
 	);
+	const talkPageLines = talks.map(
+		(talk) => `- [${talk.title}](${homepageUrl}${talk.path}): ${talk.summary}`,
+	);
 	return [
 		"## Pages",
 		"",
@@ -66,6 +69,7 @@ export function sectionPages(): string {
 		...awardLines,
 		`- [Mentorship](${homepageUrl}/mentor): book a mentorship session with John.`,
 		`- [Talks & Speaking](${homepageUrl}/talks): all talks with slides, the podcast, and how to invite John to speak.`,
+		...talkPageLines,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,
 		`- [Now](${homepageUrl}/now): what John is doing right now, updated quarterly.`,

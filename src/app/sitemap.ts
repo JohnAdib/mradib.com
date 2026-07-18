@@ -3,6 +3,7 @@ import { articlesMeta } from "@/data/articles/articles-meta";
 import { flagshipAwards } from "@/data/awards";
 import { routesEn } from "@/data/routes-en";
 import { routesFa } from "@/data/routes-fa";
+import { talks } from "@/data/talks/talks";
 import { homepageUrl } from "@/lib/constants/url";
 
 export const dynamic = "force-static";
@@ -20,10 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		url: toUrl(`/awards/${award.slug}`),
 	}));
 
+	const talkPages = talks.map((talk) => ({
+		url: toUrl(talk.path),
+		lastModified: talk.date,
+	}));
+
 	const articles = articlesMeta.map((article) => ({
 		url: toUrl(article.pagePath),
 		lastModified: article.dateModified,
 	}));
 
-	return [...staticPages, ...awardPages, ...articles];
+	return [...staticPages, ...awardPages, ...talkPages, ...articles];
 }
