@@ -1,5 +1,6 @@
 "use client";
 
+import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { IArticleTocProps, ITocSection } from "./interface";

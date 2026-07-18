@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 
 export function ThingsToAvoid(): JSX.Element {

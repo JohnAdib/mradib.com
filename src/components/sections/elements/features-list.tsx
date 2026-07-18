@@ -9,15 +9,17 @@ export interface ISectionFeaturesList {
 	features?: ISectionFeature[];
 }
 
-function FeatureLinkEl({ href }: { href?: string }) {
+function FeatureLinkEl({ href, name }: { href?: string; name: string }) {
 	if (!href) {
 		return null;
 	}
 
 	return (
 		<div className="mt-6">
+			{/* biome-ignore lint/a11y/noAmbiguousAnchorText: descriptive context supplied via aria-label */}
 			<a
 				href={href}
+				aria-label={`Learn more about ${name}`}
 				className="text-sm font-semibold leading-6 text-accent-400"
 			>
 				Learn more <span aria-hidden="true">→</span>
@@ -45,7 +47,7 @@ export function SectionFeaturesList({ features }: ISectionFeaturesList) {
 						</dt>
 						<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
 							<p className="flex-auto">{feature.description}</p>
-							<FeatureLinkEl href={feature.href} />
+							<FeatureLinkEl href={feature.href} name={feature.name} />
 						</dd>
 					</div>
 				))}

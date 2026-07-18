@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 
 export function LayoutRules(): JSX.Element {

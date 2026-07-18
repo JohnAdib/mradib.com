@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import { SectionHeading } from "@/components/heading/section-heading";
 import { SectionChecklist } from "@/components/todo/section-checklist";

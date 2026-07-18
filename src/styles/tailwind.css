@@ -4,7 +4,7 @@
 @import "./page-404.css" layer(components);
 @import "./reveal.css" layer(components);
 
-@config '../../tailwind.config.ts';
+@config "../../tailwind.config.ts";
 
 /*
   Brand accent tokens, one accent family for the whole site.

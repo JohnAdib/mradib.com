@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 import imgResumeFormatStructureExample from "./_img/resume-format-structure-example.jpg";
 

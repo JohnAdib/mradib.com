@@ -17,8 +17,9 @@ function extractTextFromElement(element: ReactNode): string {
 		return element.map(extractTextFromElement).join("");
 	}
 	if (element && typeof element === "object" && "props" in element) {
-		// If the element is a React component, recursively extract text from its children
-		const { children } = element.props;
+		// If the element is a React component, recursively extract text from its children.
+		// React 19 types element.props as unknown, so narrow it here.
+		const { children } = element.props as { children?: ReactNode };
 		if (children) {
 			return extractTextFromElement(children);
 		}

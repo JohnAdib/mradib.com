@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import type { JSX } from "react";
 import type { ITocProgress } from "./interface";
 
 function CheckIcon(props: React.ComponentPropsWithoutRef<"svg">) {

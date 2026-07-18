@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.5.4/schema.json",
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
@@ -11,7 +11,9 @@
 			"**",
 			"!**/.next/**/*",
 			"!**/node_modules/**/*",
-			"!**/out/**/*"
+			"!**/out/**/*",
+			"!**/*.svg",
+			"!public/email"
 		]
 	},
 	"formatter": {
@@ -23,7 +25,7 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
+			"preset": "recommended",
 			"style": {
 				"noParameterAssign": "error",
 				"useAsConstAssertion": "error",
@@ -41,6 +43,11 @@
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "double"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
 		}
 	}
 }

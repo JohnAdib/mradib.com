@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import { SectionHeading } from "@/components/heading/section-heading";
 

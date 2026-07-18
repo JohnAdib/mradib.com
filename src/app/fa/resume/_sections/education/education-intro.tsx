@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeEducationCover from "./_img/resume-education-cover.jpg";
 
 export function EducationIntro(): JSX.Element {

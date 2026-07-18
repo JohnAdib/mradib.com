@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import type { Person, WithContext } from "schema-dts";
 import { awardNames } from "@/data/awards";
 import { profile } from "@/data/profile";

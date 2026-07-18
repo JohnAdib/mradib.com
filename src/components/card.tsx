@@ -109,6 +109,7 @@ Card.Properties = function CardProperties({
 };
 
 Card.Image = function CardImage({ src, alt }: { src: string; alt: string }) {
+	// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
 	return <img src={src} alt={alt} className="z-10 mt-4 w-32 rounded-lg" />;
 };
 

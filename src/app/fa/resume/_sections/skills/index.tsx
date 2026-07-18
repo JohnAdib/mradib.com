@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { SectionHeading } from "@/components/heading/section-heading";
 import { SectionChecklist } from "@/components/todo/section-checklist";
 import {

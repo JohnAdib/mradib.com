@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 import imgVerbMetricTask from "./_img/resume-action-verb-metric-task.jpg";
 import imgVerbTaskMetric from "./_img/resume-action-verb-task-metric.jpg";

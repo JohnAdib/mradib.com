@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import imgResumeDesignTraditionalVsCreative from "./_img/resume-design-traditional-vs-creative.jpg";
 import imgResumeFormatingInfographic from "./_img/resume-formating-infographic.jpg";

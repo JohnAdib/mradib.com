@@ -1,5 +1,6 @@
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import type { JSX } from "react";
 import type { ITodo } from "./interface";
 
 export function TodoList({

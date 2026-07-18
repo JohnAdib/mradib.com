@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import type { ProfilePage, WithContext } from "schema-dts";
 import { personId } from "@/components/json-ld/person-json-ld";
 import { profile } from "@/data/profile";

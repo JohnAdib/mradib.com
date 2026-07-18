@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeSummaryCover from "./_img/resume-summary-cover.png";
 
 export function SummaryIntro(): JSX.Element {

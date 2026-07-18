@@ -4,6 +4,7 @@ import {
 	CheckCircleIcon,
 	ClipboardDocumentCheckIcon,
 } from "@heroicons/react/24/solid";
+import type { JSX } from "react";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { ITodo } from "./interface";
 import { TodoList } from "./todo-list";

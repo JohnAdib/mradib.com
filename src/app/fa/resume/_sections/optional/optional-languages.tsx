@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 export function OptionalLanguages(): JSX.Element {
 	return (
 		<>

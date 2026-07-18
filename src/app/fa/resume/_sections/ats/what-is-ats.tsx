@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import imgResumeAts70pDisqualified from "./_img/resume-ats-70p-disqualified.png";
 import imgResumeAtsUsage from "./_img/resume-ats-usage.png";
 

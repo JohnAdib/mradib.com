@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 import imgResumeContactCover from "./_img/resume-contact-cover.jpg";
 

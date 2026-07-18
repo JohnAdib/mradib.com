@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import { Msg } from "@/components/msg/msg";
 import { Pre } from "@/components/syntax-highlighter/pre";

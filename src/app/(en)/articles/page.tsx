@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import type { Metadata } from "next";
 import { Card } from "@/components/card";
 import { SimpleLayout } from "@/components/simple-layout";
