@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgCard, ogCardImage } from "@/data/og";
 import {
 	defaultDescription,
 	defaultTitle,
@@ -40,6 +41,8 @@ export const rootMetadata: Metadata = {
 		siteName: `${myName} (${myTitle})`,
 		locale: "en_GB",
 		url: "./",
+		// Sitewide fallback card; pages with their own card override via ogMetadata.
+		images: [ogCardImage(getOgCard("/"))],
 	},
 	twitter: {
 		card: "summary_large_image",

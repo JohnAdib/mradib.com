@@ -6,11 +6,13 @@ import { HomeRecognition } from "@/components/home/home-recognition";
 import { HomeRise } from "@/components/home/home-rise";
 import { profile } from "@/data/profile";
 import { pageAlternates } from "@/lib/i18n/page-alternates";
+import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
 	title: { absolute: profile.titleTag },
 	description: profile.shortBio,
 	alternates: pageAlternates("/"),
+	...ogMetadata("/"),
 };
 
 export default function Home() {

@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 
 import { SimpleLayout } from "@/components/simple-layout";
+import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
-	title: "پاورپوینت",
-	description: "آموزش رایگان پاورپوینت بزودی در این صفحه قرار خواهد گرفت.",
+	title: "آموزش پاورپوینت",
+	description:
+		"آموزش رایگان پاورپوینت به زبان ساده فارسی، از ساخت اسلاید تا ارائه حرفه‌ای. بزودی در همین صفحه.",
+	...ogMetadata("/fa/powerpoint"),
 };
 
 export default function MyPage() {

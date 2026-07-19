@@ -1,6 +1,7 @@
 import { Card } from "@/components/card";
 import { Section } from "@/components/section";
 import { SimpleLayout } from "@/components/simple-layout";
+import { ogMetadata } from "@/lib/og-metadata";
 import tools from "./tools.json";
 
 function ToolsSection({
@@ -79,7 +80,9 @@ function Tool({
 
 export const metadata = {
 	title: "Photography Tools I Use",
-	description: "Software I use, gadgets I love, and other things I recommend.",
+	description:
+		"The exact kit behind John Adib's photography: Canon EOS R8, RF lenses, NEEWER studio lighting, and everything else he actually uses and recommends.",
+	...ogMetadata("/gallery/tools"),
 };
 
 export default function Uses() {

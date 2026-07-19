@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
+import { ogMetadata } from "@/lib/og-metadata";
 
 const award = getAward("worldskills");
 
 export const metadata: Metadata = {
 	title: "WorldSkills, National Medalist and Coach",
 	description:
-		"John Adib's WorldSkills arc: Medallion for Excellence in IT Software Applications (2007), national Silver Medal in IT Software Solutions for Business (2010), two national team camps, then five years training medal-winning competitors.",
+		"John Adib's WorldSkills arc: Medallion for Excellence 2007, national Silver Medal 2010, two national team camps, then five years coaching medal winners.",
+	...ogMetadata("/awards/worldskills"),
 };
 
 export default function Page() {

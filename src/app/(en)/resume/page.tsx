@@ -4,6 +4,7 @@ import { ArticleLayout } from "@/components/article/layout";
 import { ArticleToc } from "@/components/toc/article-toc";
 import { articleResume as article } from "@/data/articles/resume";
 import { pageAlternates } from "@/lib/i18n/page-alternates";
+import { ogMetadata } from "@/lib/og-metadata";
 import { SectionActionVerbs } from "./_sections/action-verbs";
 import { SectionAts } from "./_sections/ats";
 import { SectionContact } from "./_sections/contact";
@@ -18,8 +19,8 @@ import { SectionSkills } from "./_sections/skills";
 import { SectionSummary } from "./_sections/summary";
 import { SectionTemplate } from "./_sections/template";
 import { breadcrumb } from "./breadcrumb";
+import coverImg from "./cover.jpg";
 import { resumeTemplateFaq } from "./faq";
-import coverImg from "./opengraph-image.jpg";
 import {
 	checklistIdsBySection,
 	resumeChecklistStorageKey,
@@ -31,13 +32,7 @@ export const metadata: Metadata = {
 	title: article.pageTitle,
 	description: article.pageDesc,
 	alternates: pageAlternates("/resume"),
-	openGraph: {
-		type: "article",
-		publishedTime: article.datePublished,
-	},
-	twitter: {
-		card: "summary_large_image",
-	},
+	...ogMetadata(article.pagePath, { publishedTime: article.datePublished }),
 };
 
 function PageContent(): JSX.Element {

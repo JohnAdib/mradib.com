@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
+import { ogMetadata } from "@/lib/og-metadata";
 
 const award = getAward("uk-global-talent");
 
 export const metadata: Metadata = {
-	title: "UK Global Talent Visa, Tech Nation Endorsement (2024)",
+	title: "UK Global Talent, Endorsed by Tech Nation (2024)",
 	description:
-		"In September 2024, John Adib was endorsed by Tech Nation as an exceptional talent in technology under the UK Global Talent visa route. What the endorsement is, the work behind it, and honest advice for applicants.",
+		"In 2024 the UK government endorsed John Adib as an exceptional talent in technology, via Tech Nation. The work behind the visa, and advice for applicants.",
+	...ogMetadata("/awards/uk-global-talent"),
 };
 
 export default function Page() {

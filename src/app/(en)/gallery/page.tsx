@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SimpleLayout } from "@/components/simple-layout";
 import { urlSocial } from "@/lib/constants/url-social";
+import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
-	title: "Gallery",
+	title: "Photography Gallery",
 	description:
 		"Photography by John Adib, an off-hours passion, not a profession. Portraits and landscapes, mostly from London.",
+	...ogMetadata("/gallery"),
 };
 
 export default function Page() {

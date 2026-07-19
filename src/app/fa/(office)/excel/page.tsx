@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 
 import { SimpleLayout } from "@/components/simple-layout";
+import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
-	title: "اکسل",
-	description: "آموزش رایگان اکسل بزودی در این صفحه قرار خواهد گرفت.",
+	title: "آموزش اکسل",
+	description:
+		"آموزش رایگان اکسل به زبان ساده فارسی، از پایه تا حرفه‌ای. بزودی در همین صفحه.",
+	...ogMetadata("/fa/excel"),
 };
 
 export default function MyPage() {

@@ -7,6 +7,7 @@ import { Reveal } from "@/components/reveal/reveal";
 import { TalkTimeline } from "@/components/talk/talk-timeline";
 import { podcastAppearances, talks } from "@/data/talks/talks";
 import { homepageUrl } from "@/lib/constants/url";
+import { ogMetadata } from "@/lib/og-metadata";
 import { buildPreviousTalksText } from "@/lib/talks/build-previous-talks-text";
 import { TalksClosing } from "./_sections/talks-closing";
 import { talksFaq } from "./_sections/talks-faq-data";
@@ -17,7 +18,8 @@ import { TalksTopics } from "./_sections/talks-topics";
 export const metadata: Metadata = {
 	title: "Talks & Speaking",
 	description:
-		"John Adib speaks on founding companies, AI-first development, and engineering leadership, at conferences and meetups including JavaScript London, AI Coding Summit (GitNation), React Advanced London, and LNUG. Slides are free to download.",
+		"John Adib speaks on AI-first development and engineering leadership: AI Coding Summit (5,000+ engineers), React Advanced at Figma, JavaScript London.",
+	...ogMetadata("/talks"),
 };
 
 export default function TalksPage() {

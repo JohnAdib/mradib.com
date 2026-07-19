@@ -8,8 +8,9 @@ import { ArticleLayout } from "@/components/article/layout";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
+import { ogMetadata } from "@/lib/og-metadata";
 import { readingTime } from "@/lib/reading-time";
-import coverImg from "./opengraph-image.jpg";
+import coverImg from "./cover.jpg";
 import phpmyadminPrivilegesImg from "./phpmyadmin-privileges.png";
 
 const publishDate = "2021-03-25";
@@ -39,13 +40,7 @@ const keywords = [
 export const metadata: Metadata = {
 	title: pageTitle,
 	description: pageDesc + separator + myNameFa,
-	openGraph: {
-		type: "article",
-		publishedTime: datePublished,
-	},
-	twitter: {
-		card: "summary_large_image",
-	},
+	...ogMetadata("/fa/mysql-auto-backup", { publishedTime: datePublished }),
 };
 
 function PageContent(): JSX.Element {

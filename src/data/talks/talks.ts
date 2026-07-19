@@ -54,7 +54,7 @@ export const talks: ITalk[] = [
 		city: "London",
 		date: "2025-11-28",
 		summary:
-			"A panel on managing technical debt while integrating AI: what tech debt really means, why teams accumulate it, and how AI helps pay it down without creating more.",
+			"A panel on managing technical debt while integrating AI: what tech debt means, why teams accumulate it, and how AI helps pay it down without creating more.",
 		video: "/talks/techlead-conf-london-2025-intro.mp4",
 		keywords: ["Technical Debt", "AI Adoption", "Engineering Leadership"],
 	},

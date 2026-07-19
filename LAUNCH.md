@@ -34,7 +34,7 @@ The canonical line: **"Engineering Manager and 2× startup co-founder, pioneerin
 ## 4. Assets that upgrade pages when you have them
 
 - [ ] High-res award certificates/badges → drop into `public/awards/<slug>/` and set `badgeImg`/`evidencePdf` in `src/data/awards/awards.ts` (fields already exist)
-- [ ] Designed 1200×630 OG card → replace `src/app/opengraph-image.png` (currently reuses the mentoring image)
+- [x] Designed 1200×630 OG cards → every page now has a bespoke card in `public/og/`, generated from `src/data/og` via `npm run og:build` (2026-07-19)
 - [ ] Talk recording URLs (GitNation) → set `recordingUrl` in `src/data/talks/talks.ts`
 - [ ] 192/512 px app icons → add to `public/` and reference in `src/app/manifest.ts`
 - [ ] YOUR real photography → the old `src/images/photos/image-1..5.jpg` are Tailwind-template stock photos (astronaut, cockpit…), NOT yours, so the homepage strip and gallery grid were removed rather than show them. Drop real photos into `src/images/photos/` and re-add a grid to `src/app/(en)/gallery/page.tsx` (and optionally a small strip in `src/components/home/home-personal.tsx`)

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArticleSection } from "@/components/article/article-section";
 import { ArticleLayout } from "@/components/article/layout";
 import { articleGithubAutolink as article } from "@/data/articles/github-autolink";
+import { ogMetadata } from "@/lib/og-metadata";
 import imgCover from "./_img/cover.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
 import imgGithubAddNewAutoLinkReferencePreview from "./_img/github-add-new-autolink-reference-preview.png";
@@ -12,13 +13,7 @@ import { articleFaq } from "./faq";
 export const metadata: Metadata = {
 	title: article.pageTitle,
 	description: article.pageDesc,
-	openGraph: {
-		type: "article",
-		publishedTime: article.datePublished,
-	},
-	twitter: {
-		card: "summary_large_image",
-	},
+	...ogMetadata(article.pagePath, { publishedTime: article.datePublished }),
 };
 
 export default function Page() {

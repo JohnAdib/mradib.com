@@ -1,11 +1,13 @@
-// Per-page metadata guardrails: title, canonical, description, html lang/dir,
-// hreflang pairs, and noindex on redirect routes.
-import { readFileSync } from "node:fs";
+// Per-page metadata guardrails: title, canonical, description, og:image,
+// html lang/dir, hreflang pairs, and noindex on redirect routes.
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { redirectRoutes } from "../src/data/routes/redirect-routes.ts";
 import {
 	decodeEntities,
 	hasPersian,
 	hreflangSet,
+	ogImageUrl,
 	stripSvg,
 } from "./lib/html-meta.mjs";
 import { htmlPages } from "./lib/walk-out.mjs";
@@ -48,6 +50,16 @@ function checkPage(route, html) {
 			!title.includes("John Adib")
 		)
 			fail(route, "neither title nor description carries 'John Adib'");
+	}
+
+	// Never ship a page without an OG card (docs/advisor/playbooks/seo.md).
+	const og = ogImageUrl(html);
+	if (!og) {
+		fail(route, "missing og:image");
+	} else {
+		const pathname = og.startsWith("http") ? new URL(og).pathname : og;
+		if (!existsSync(join("out", decodeURIComponent(pathname))))
+			fail(route, `og:image file missing from out/: ${pathname}`);
 	}
 
 	const tag = html.match(/<html[^>]*>/)?.[0] ?? "";

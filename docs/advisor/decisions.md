@@ -347,6 +347,24 @@ The site is static on GitHub Pages, so OG images are generated locally and
 committed as static files in public/. No page ships without one. See
 playbooks/seo.md.
 
+## 2026-07-19, bespoke OG cards shipped for every page
+
+Every page now has a generated 1200x630 card in public/og: one dark brand
+frame (zinc-950, teal glows, starfield, Newsreader display, rotated artwork
+panel), unique headline and proof per page, English and Persian variants.
+Cards are data: src/data/og drives both the generator (npm run og:build,
+headless Chrome plus sharp) and each page's og:title, og:description, and
+og:image via src/lib/og-metadata.ts. Talk cards derive from talks data and
+always show the event logo panel, never the cover slide (slides crop badly
+and carry their own text). Award cards show evidence images; UK Global
+Talent stays typographic on purpose (no artifact exists). The old
+file-convention opengraph-image files, including the mentoring image with
+the "Principle Software Engineer, Loopla" typo, are gone; the three used as
+article covers were renamed to cover.jpg and kept as page art only.
+verify-metadata now fails any page missing og:image or whose og:image file
+is absent from out/. og:title is the social layer and may differ from the
+SEO title tag; both derive from the same facts.
+
 ## 2026-07-19, advisor lives as docs plus a routing skill
 
 Strategy lives in docs/advisor. A thin skill at .claude/skills/brand-advisor

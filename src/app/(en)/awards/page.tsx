@@ -9,12 +9,14 @@ import { Reveal } from "@/components/reveal/reveal";
 import { awards, flagshipAwards } from "@/data/awards";
 import { pageClosings } from "@/data/page-closings";
 import { homepageUrl } from "@/lib/constants/url";
+import { ogMetadata } from "@/lib/og-metadata";
 import { AwardsHero } from "./_sections/awards-hero";
 
 export const metadata: Metadata = {
 	title: "Awards & Recognition",
 	description:
-		"John Adib has been named ADPList's World's Most Influential Mentor (2024), #1 Mentor in Europe (2024), endorsed as a UK Global Talent by Tech Nation (2024), and is a WorldSkills national medalist. Every award, with evidence.",
+		"World's Most Influential Mentor. #1 Mentor in Europe. UK Global Talent. WorldSkills national medalist. Every award John Adib holds, with the evidence.",
+	...ogMetadata("/awards"),
 };
 
 const badgeAwards = awards.filter((award) => award.category === "badge");

@@ -4,13 +4,15 @@ import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel
 import { Reveal } from "@/components/reveal/reveal";
 import { articlesMeta } from "@/data/articles/articles-meta";
 import { pageClosings } from "@/data/page-closings";
+import { ogMetadata } from "@/lib/og-metadata";
 import { ArticleFeature } from "./_sections/article-feature";
 import { ArticlesHero } from "./_sections/articles-hero";
 
 export const metadata: Metadata = {
-	title: "Articles",
+	title: "Articles & Guides",
 	description:
-		"Two guides, each written to be the most complete answer to its question on the internet. The complete A to Z of building a resume that gets read, and the guide to GitHub Autolink references that wire your issues to Jira, Asana, and more.",
+		"Guides written to be the most complete answer on the internet: the A to Z of building a resume that gets read, and GitHub Autolink, by John Adib.",
+	...ogMetadata("/articles"),
 };
 
 export default function ArticlesIndex() {

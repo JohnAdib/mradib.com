@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArticleSection } from "@/components/article/article-section";
 import { ArticleLayout } from "@/components/article/layout";
+import { ogMetadata } from "@/lib/og-metadata";
 import type { IArticle } from "../i-article-interface";
 import imgCover from "./_img/cover.png";
 import imgGithubAddNewAutoLinkReference from "./_img/github-add-new-autolink-reference.png";
@@ -29,16 +30,11 @@ export const article: IArticle = {
 article.datePublished = `${article.publishDate}T${article.publishTime}.000Z`;
 article.dateModified = "2024-11-11" + "T" + "11:26:00" + ".000Z";
 
+// A new article also needs a card in src/data/og, then: npm run og:build
 export const metadata: Metadata = {
 	title: article.pageTitle,
 	description: article.pageDesc,
-	openGraph: {
-		type: "article",
-		publishedTime: article.datePublished,
-	},
-	twitter: {
-		card: "summary_large_image",
-	},
+	...ogMetadata(article.pagePath, { publishedTime: article.datePublished }),
 };
 
 export default function Page() {

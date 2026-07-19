@@ -10,6 +10,7 @@
 		"check:fix": "biome check --write",
 		"format": "biome format .",
 		"img:build": "node scripts/optimize-images.mjs",
+		"og:build": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/og/generate-og-images.mjs",
 		"format:fix": "biome format . --write",
 		"lint": "biome lint",
 		"lint:fix": "biome lint --fix",

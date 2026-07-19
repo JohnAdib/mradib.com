@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getOgCard, ogCardImage } from "@/data/og";
 import { defaultDescriptionFa, defaultTitleFa, myNameFa } from "./constants/fa";
 import { rootMetadata } from "./root-metadata";
 
@@ -17,5 +18,7 @@ export const rootMetadataFa: Metadata = {
 	openGraph: {
 		...rootMetadata.openGraph,
 		locale: "fa_IR",
+		// Persian fallback card; pages with their own card override via ogMetadata.
+		images: [ogCardImage(getOgCard("/fa"))],
 	},
 };

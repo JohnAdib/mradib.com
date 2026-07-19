@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { ProfilePageJsonLd } from "@/components/json-ld/profile-page-json-ld";
+import { ogMetadata } from "@/lib/og-metadata";
 import { AboutAiFirst } from "./_sections/about-ai-first";
 import { AboutChildhood } from "./_sections/about-childhood";
 import { AboutClosing } from "./_sections/about-closing";
@@ -21,9 +22,10 @@ import { AboutVideos } from "./_sections/about-videos";
 import { AboutWindows } from "./_sections/about-windows";
 
 export const metadata: Metadata = {
-	title: "About John Adib",
+	title: "About",
 	description:
-		"The story of John Adib: from a childhood spent building his first computer to a 2× startup co-founder and one of the world's most influential engineering mentors, now building AI-first in London.",
+		"The story of John Adib: from building his first computer as a kid to 2× startup co-founder and the World's Most Influential Mentor, building AI-first in London.",
+	...ogMetadata("/about"),
 };
 
 export default function About() {

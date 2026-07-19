@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { SimpleLayout } from "@/components/simple-layout";
 import { mentoringStats } from "@/data/mentoring-stats";
+import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
 	title: "Now",
 	description:
-		"What John Adib is doing now: leading a consumer engineering team at Zapp in London, pushing AI-first development, mentoring on ADPList, and preparing his next talks. Updated July 2026.",
+		"What John Adib is doing now: leading consumer engineering at Zapp in London, pushing AI-first development, mentoring on ADPList. Updated July 2026.",
+	...ogMetadata("/now"),
 };
 
 const nowItems = [

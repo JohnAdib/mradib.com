@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
+import { ogMetadata } from "@/lib/og-metadata";
 
 const award = getAward("number-1-mentor-in-europe");
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 	title: "#1 Mentor in Europe (2024)",
 	description:
 		"In December 2024, the 2024 ADPList Wrapped ranked John Adib the #1 mentor in Europe, seven months after his first session. The numbers behind the ranking.",
+	...ogMetadata("/awards/number-1-mentor-in-europe"),
 };
 
 export default function Page() {

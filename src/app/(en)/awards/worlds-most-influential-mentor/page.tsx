@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
+import { ogMetadata } from "@/lib/og-metadata";
 
 const award = getAward("worlds-most-influential-mentor");
 
 export const metadata: Metadata = {
 	title: "The World's Most Influential Mentor (2024 and 2026)",
 	description:
-		"In February 2025, ADPList named John Adib one of The World's Most Influential Mentors of 2024, the ADPList100, selected from 32,000+ mentors across 140+ countries, and listed him again in 2026.",
+		"ADPList named John Adib The World's Most Influential Mentor of 2024, selected from 32,000+ mentors across 140+ countries, then listed him again in 2026.",
+	...ogMetadata("/awards/worlds-most-influential-mentor"),
 };
 
 export default function Page() {

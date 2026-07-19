@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 
 import { SimpleLayout } from "@/components/simple-layout";
+import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
-	title: "کاورلتر",
-	description: "آموزش رایگان کاورلتر بزودی در این صفحه قرار خواهد گرفت.",
+	title: "آموزش کاورلتر",
+	description:
+		"آموزش رایگان نوشتن کاورلتر حرفه‌ای به زبان فارسی، قدم به قدم. بزودی در همین صفحه.",
+	...ogMetadata("/fa/cover-letter"),
 };
 
 export default function MyPage() {

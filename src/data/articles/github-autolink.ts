@@ -11,7 +11,7 @@ export const articleGithubAutolink: IArticle = {
 		"Boost Productivity with GitHub Autolink References: Seamlessly Link GitHub Issues to JIRA, Asana, and More",
 	pageTitle: "GitHub Autolink - Simplify Issue Linking and Workflow",
 	pageDesc:
-		"Automatically linkify references to GitHub issues, PRs, commits, and users.",
+		"Automatically link GitHub issues, PRs, and commits to Jira, Asana, and more with Autolink references. The complete setup guide by John Adib.",
 	pagePath: "/github-autolink",
 	keywords: ["GitHub", "autolink"],
 };
