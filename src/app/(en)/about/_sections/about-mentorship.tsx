@@ -5,7 +5,7 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutMentorship() {
 	return (
 		<Chapter
-			index="06"
+			index="11"
 			era="Now · Full circle"
 			title="Back where it started: helping others win"
 		>

@@ -3,23 +3,26 @@ import { Chapter } from "./chapter";
 export function AboutTeaching() {
 	return (
 		<Chapter
-			index="02"
-			era="2006 to 2015 · Giving it back"
-			title="Then I started teaching"
+			index="05"
+			era="2006 to 2018 · Teaching at scale"
+			title="Then the classrooms got bigger"
 		>
 			<p>
-				Winning was a rush. Helping someone else win turned out to be the real
-				thing. From 2010 to 2015 I crossed to the other side of the table as a
-				WorldSkills trainer and coached the next wave of competitors. Several of
-				them won medals of their own.
+				From 2006 I taught independently outside class hours, and published free
+				Persian video tutorials on web skills and Microsoft Office, a habit I
+				never stopped.
 			</p>
 			<p>
-				Around the same time I was teaching for real: eleven years as a
-				part-time computer lecturer across four universities and colleges, more
-				than 2,000 students, plus free Persian video tutorials I have been
-				publishing since 2006. Teaching first, titles later. That order shaped
-				everything.
+				I moved to Tehran to study, and later became an invited lecturer at
+				university sessions across the city: web technologies, Excel,
+				presenting, sometimes six hours at a stretch to rooms of 200+. More than
+				ten sessions over the years.
 			</p>
+			<p>
+				Alongside that, eleven years as a part time computer lecturer across
+				four universities and colleges, more than 2,000 students in total.
+			</p>
+			<p>Teaching first, titles later. That order shaped everything.</p>
 		</Chapter>
 	);
 }

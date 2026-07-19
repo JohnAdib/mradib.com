@@ -4,7 +4,7 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutAiFirst() {
 	return (
 		<Chapter
-			index="05"
+			index="10"
 			era="Now · How I build"
 			title="AI belongs in the work, not beside it"
 		>
@@ -15,13 +15,13 @@ export function AboutAiFirst() {
 			<p>
 				In practice that means AI reviewing every pull request, release cycles
 				measured in days instead of months, and architecture shaped deliberately
-				so that both people and machines can work on it safely. It is also what
-				I{" "}
+				so that both people and machines can work on it safely. Since 2025 it's
+				also what I{" "}
 				<Link href="/talks" className={chapterLinkClass}>
 					speak about
-				</Link>
-				: AI-first architecture, design systems, and the quiet art of separation
-				of concern.
+				</Link>{" "}
+				at London developer events, from a session at Figma's office to a talk
+				with Cloudflare.
 			</p>
 		</Chapter>
 	);

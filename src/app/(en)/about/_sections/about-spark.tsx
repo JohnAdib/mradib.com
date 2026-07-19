@@ -4,25 +4,35 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutSpark() {
 	return (
 		<Chapter
-			index="01"
-			era="2007 to 2010 · The spark"
+			index="04"
+			era="2007 to 2015 · The spark"
 			title="It started with a competition"
 		>
 			<p>
-				As a teenager I entered{" "}
+				I saw an ad for{" "}
 				<Link href="/awards/worldskills" className={chapterLinkClass}>
 					WorldSkills
 				</Link>
 				, the world's largest vocational skills competition, sometimes called
-				the skills olympics. Timed challenges, real software, complete and
-				working against the clock, judged on the details most users never see.
+				the skills olympics, and went to register. I was a day late.
+				Registration for the 7th national competition had already closed.
 			</p>
 			<p>
-				I competed nationally in IT software and came away a national medalist,
-				with a Medallion for Excellence along the way and two selections to the
-				national team training camps. That competition changed my life. It
-				taught me to build under pressure, and it set the direction for
-				everything that came after.
+				I came back the next year for the 8th: first in my city, first in my
+				state, then a Medallion for Excellence at the national level. That
+				earned a place at the national team training camp for WorldSkills
+				Calgary 2009, though I wasn't chosen to compete internationally.
+			</p>
+			<p>
+				Three years later, at the 10th national competition, I placed again:
+				first in my city, second in my state, a Silver Medal nationally. Another
+				camp selection followed, for WorldSkills London 2011, and again I wasn't
+				chosen to go.
+			</p>
+			<p>
+				From 2010 to 2015 I moved to the other side of the table, as an expert,
+				trainer, and judge, coaching the next wave of competitors. Several of
+				them went on to medal themselves.
 			</p>
 		</Chapter>
 	);

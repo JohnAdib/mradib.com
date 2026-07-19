@@ -30,9 +30,9 @@ export function AboutHero() {
 				</h1>
 				<p className="reveal-up reveal-delay-4 mt-6 text-lg text-zinc-600 dark:text-zinc-400">
 					{experienceYears}+ years in software, and I still write code most
-					days. This is the long version: how a teenager who loved computers
-					ended up building products, teaching thousands, and mentoring
-					engineers around the world. It all traces back to one competition.
+					days. This is the long version: from a kid putting together his first
+					computer, one part at a time, to building products, teaching
+					thousands, and mentoring engineers around the world.
 				</p>
 			</div>
 			<div className="reveal-up reveal-delay-2 mx-auto max-w-xs lg:mx-0 lg:pt-2">

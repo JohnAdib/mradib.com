@@ -11,6 +11,10 @@ export function AboutClosing() {
 				Say hello
 			</h2>
 			<p className="mt-4 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
+				I don't know what the next chapter looks like yet. None of the earlier
+				ones were planned either, and they turned out fine.
+			</p>
+			<p className="mt-4 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
 				Want the formal version?{" "}
 				<Link
 					href={urlSocial.resume}
