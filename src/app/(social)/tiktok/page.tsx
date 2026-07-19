@@ -1,6 +1,9 @@
-import { redirect } from "next/navigation";
+import { RedirectPage } from "@/components/redirect-page";
 import { urlSocial } from "@/lib/constants/url-social";
+import { redirectMetadata } from "@/lib/redirect-metadata";
 
-export default async function Home() {
-	redirect(urlSocial.tiktok);
+export const metadata = redirectMetadata(urlSocial.tiktok);
+
+export default function Home() {
+	return <RedirectPage target={urlSocial.tiktok} />;
 }

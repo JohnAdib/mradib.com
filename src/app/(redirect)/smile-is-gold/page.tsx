@@ -1,6 +1,9 @@
-import { redirect } from "next/navigation";
+import { RedirectPage } from "@/components/redirect-page";
 import { urlStatic } from "@/lib/constants/url-static";
+import { redirectMetadata } from "@/lib/redirect-metadata";
 
-export default async function Home() {
-	redirect(urlStatic.gallery);
+export const metadata = redirectMetadata(urlStatic.gallery);
+
+export default function Home() {
+	return <RedirectPage target={urlStatic.gallery} />;
 }

@@ -1,5 +1,10 @@
-import { redirect } from "next/navigation";
+import { RedirectPage } from "@/components/redirect-page";
+import { redirectMetadata } from "@/lib/redirect-metadata";
 
-export default async function Home() {
-	redirect("/fa/resume#skills");
+const target = "/fa/resume#skills";
+
+export const metadata = redirectMetadata(target);
+
+export default function Home() {
+	return <RedirectPage target={target} />;
 }
