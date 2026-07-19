@@ -4,6 +4,19 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, round 3 layout rejected, font decision decoupled
+
+Round 3 single-layout demos (inter, bricolage, fraunces on warm paper)
+missed again: John rejects the layout outright and wants the typeface
+chosen first, on its own, with more variance than three options. Inter is
+out as the display face. Fraunces was "not bad" but the 900 weight reads
+too bold. The brief for the display voice: luxurious, solid, fair,
+trustworthy, less black. Process fix: step 1 is a nine-face specimen page
+(docs/designer/mockups/round3/fonts.html) at moderated weights with
+per-face hero previews; step 2 is separate full-layout variants built in
+the winning face. The warm paper light background and dramatic dark mode
+keepers stand.
+
 ## 2026-07-19, Iran and Tehran are never named on the site
 
 Standing rule for every page, English and Persian alike. The country is

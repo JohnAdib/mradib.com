@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round 3 · Display Font Specimens</title>
+<script>
+  document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Marcellus&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="light"] {
+    --bg: #f7f3ec; --surface: #fdfbf6; --ink: #1c1917; --ink-2: #57534e; --ink-3: #a8a29e;
+    --line: rgba(28, 25, 23, .12); --line-soft: rgba(28, 25, 23, .07);
+    --accent: #0f766e; --shadow: 0 24px 48px -24px rgba(28, 25, 23, .25);
+    --overlay: rgba(247, 243, 236, .97);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0a0a0c; --surface: #131316; --ink: #fafafa; --ink-2: #a1a1aa; --ink-3: #71717a;
+    --line: rgba(255, 255, 255, .11); --line-soft: rgba(255, 255, 255, .06);
+    --accent: #2dd4bf; --shadow: 0 24px 48px -24px rgba(0, 0, 0, .6);
+    --overlay: rgba(10, 10, 12, .97);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    transition: background .35s ease, color .35s ease;
+    overflow-x: clip;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 44px); }
+
+  header.top { padding: clamp(56px, 10vh, 100px) 0 clamp(28px, 5vh, 44px); }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+  header.top h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+  header.top p { margin-top: 14px; max-width: 62ch; font-size: 15px; line-height: 1.7; color: var(--ink-2); }
+  header.top b { color: var(--ink); font-weight: 600; }
+
+  .toggle {
+    position: fixed; top: 18px; right: 18px; z-index: 60;
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink); background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 16px; cursor: pointer; transition: color .25s, border-color .25s;
+  }
+  .toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+  .grid { display: grid; gap: 16px; padding-bottom: 90px; }
+  @media (min-width: 700px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1080px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 22px;
+    padding: 26px 24px 24px; cursor: pointer; text-align: left; color: var(--ink);
+    display: flex; flex-direction: column; gap: 0;
+    transition: transform .3s cubic-bezier(.16, 1, .3, 1), box-shadow .3s ease, border-color .3s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--line); }
+  .card .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+  .card .name { font: 700 13px/1.2 "Inter", sans-serif; letter-spacing: .02em; }
+  .card .vibe { font: 500 10.5px/1.2 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); text-align: right; }
+  .card .sample { font-size: clamp(26px, 3vw, 31px); line-height: 1.18; letter-spacing: var(--ls, 0); font-weight: var(--w, 400); }
+  .card .sample .it { font-style: italic; color: var(--accent); }
+  .card .nums { margin-top: 14px; font-size: 19px; font-weight: var(--w, 400); letter-spacing: var(--ls, 0); font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .card .tap { margin-top: 16px; font: 500 11px/1 "Inter", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .card:hover .tap { color: var(--accent); }
+
+  /* per-font display settings */
+  .f-fraunces { font-family: "Fraunces", serif; --w: 560; --ls: -.015em; font-optical-sizing: auto; }
+  .f-playfair { font-family: "Playfair Display", serif; --w: 600; --ls: -.01em; }
+  .f-cormorant { font-family: "Cormorant Garamond", serif; --w: 700; --ls: 0; }
+  .f-garamond { font-family: "EB Garamond", serif; --w: 640; --ls: -.005em; }
+  .f-newsreader { font-family: "Newsreader", serif; --w: 540; --ls: -.015em; font-optical-sizing: auto; }
+  .f-instrument { font-family: "Instrument Serif", serif; --w: 400; --ls: 0; }
+  .f-sourceserif { font-family: "Source Serif 4", serif; --w: 620; --ls: -.01em; font-optical-sizing: auto; }
+  .f-marcellus { font-family: "Marcellus", serif; --w: 400; --ls: .01em; }
+  .f-bricolage { font-family: "Bricolage Grotesque", sans-serif; --w: 600; --ls: -.02em; font-optical-sizing: auto; }
+
+  /* ============ overlay hero preview ============ */
+  .overlay {
+    position: fixed; inset: 0; z-index: 100; background: var(--overlay);
+    backdrop-filter: blur(14px);
+    display: none; align-items: center; overflow-y: auto;
+  }
+  .overlay.open { display: flex; animation: ovin .35s ease; }
+  @keyframes ovin { from { opacity: 0; } to { opacity: 1; } }
+  .overlay .inner { width: 100%; max-width: 1100px; margin: 0 auto; padding: 90px clamp(20px, 5vw, 48px); }
+  .overlay .who { font: 600 12px/1 "Inter", sans-serif; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 26px; }
+  .overlay h2 {
+    font-weight: var(--w, 400); letter-spacing: var(--ls, 0);
+    font-size: clamp(38px, 7.4vw, 84px); line-height: 1.06;
+  }
+  .overlay h2 .soft { color: var(--ink-2); font-weight: 300; }
+  .overlay h2 .it { font-style: italic; color: var(--accent); }
+  .overlay .sub { margin-top: 30px; max-width: 580px; font: 400 clamp(15px, 2vw, 17px)/1.7 "Inter", sans-serif; color: var(--ink-2); }
+  .overlay .numsrow { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px 34px; }
+  .overlay .numsrow b { font-weight: var(--w, 400); letter-spacing: var(--ls, 0); font-size: clamp(26px, 3.6vw, 40px); font-variant-numeric: tabular-nums; display: block; }
+  .overlay .numsrow span { display: block; margin-top: 4px; font: 500 10.5px/1 "Inter", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); }
+  .overlay .fname {
+    margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line-soft);
+    font: 600 13px/1 "Inter", sans-serif; color: var(--ink-2);
+  }
+  .close {
+    position: fixed; top: 18px; right: 18px; z-index: 110;
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; padding: 10px 16px; cursor: pointer;
+  }
+  .close:hover { color: var(--accent); border-color: var(--accent); }
+  .navband { margin-top: 26px; display: flex; gap: 10px; }
+  .navband button {
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ink-2); background: none; border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 18px; cursor: pointer;
+  }
+  .navband button:hover { color: var(--accent); border-color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card, .overlay.open { animation: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<button class="toggle" id="toggle">Dark</button>
+
+<header class="top wrap">
+  <p class="eyebrow">Round 3 · Step 1 of 2 · The display voice</p>
+  <h1>Nine faces. Same words. Pick the one you trust.</h1>
+  <p>You are choosing the <b>display font</b> only: the voice of headlines and big numbers.
+  Body text stays a quiet neutral sans. Layout comes later, in step 2, as separate variants.
+  <b>Tap any card</b> to see that face at full hero scale. Theme button top right.</p>
+</header>
+
+<main class="grid wrap" id="grid"></main>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+  <button class="close" id="close">Close · Esc</button>
+  <div class="inner" id="inner">
+    <p class="who">John Adib · London</p>
+    <h2>
+      <span class="hl1">2x startup co-founder.</span><br>
+      <span class="soft">The world's most</span> <span class="it">influential mentor</span>.<br>
+      <span class="hl3">Pioneering AI-first engineering.</span>
+    </h2>
+    <p class="sub">
+      I raised $1M and reached a million users in a month, built a platform serving 1,200+
+      businesses, and was endorsed by the UK government as exceptional talent in technology.
+    </p>
+    <div class="numsrow">
+      <div><b>600+</b><span>Sessions</span></div>
+      <div><b>32,000+</b><span>Mentors</span></div>
+      <div><b>5,000+</b><span>On one stage</span></div>
+      <div><b>17+</b><span>Years</span></div>
+    </div>
+    <p class="fname" id="fname"></p>
+    <div class="navband">
+      <button id="prev">← Prev font</button>
+      <button id="next">Next font →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const FONTS = [
+    { cls: "f-sourceserif", name: "Source Serif 4", vibe: "Solid · Credible" },
+    { cls: "f-garamond", name: "EB Garamond", vibe: "Timeless · Trust" },
+    { cls: "f-fraunces", name: "Fraunces, lighter cut", vibe: "Luxury · Character" },
+    { cls: "f-playfair", name: "Playfair Display", vibe: "Classic luxury" },
+    { cls: "f-newsreader", name: "Newsreader", vibe: "Refined editorial" },
+    { cls: "f-cormorant", name: "Cormorant Garamond", vibe: "Fashion house" },
+    { cls: "f-instrument", name: "Instrument Serif", vibe: "Modern editorial" },
+    { cls: "f-marcellus", name: "Marcellus", vibe: "Engraved · Monumental" },
+    { cls: "f-bricolage", name: "Bricolage Grotesque", vibe: "The sans control" },
+  ];
+
+  const grid = document.getElementById("grid");
+  FONTS.forEach((f, i) => {
+    const el = document.createElement("button");
+    el.className = "card " + f.cls;
+    el.innerHTML = `
+      <span class="meta"><span class="name">${f.name}</span><span class="vibe">${f.vibe}</span></span>
+      <span class="sample">The world's most <span class="it">influential mentor</span>.</span>
+      <span class="nums">$1M · 600+ · 5,000+ · 2026</span>
+      <span class="tap">Tap for hero scale →</span>`;
+    el.addEventListener("click", () => openOverlay(i));
+    grid.appendChild(el);
+  });
+
+  const overlay = document.getElementById("overlay");
+  const inner = document.getElementById("inner");
+  const fname = document.getElementById("fname");
+  let current = 0;
+  function openOverlay(i) {
+    current = (i + FONTS.length) % FONTS.length;
+    const f = FONTS[current];
+    inner.querySelector("h2").className = "";
+    inner.querySelector("h2").classList.add(f.cls);
+    inner.querySelector(".numsrow").className = "numsrow " + f.cls;
+    fname.textContent = `${current + 1} / ${FONTS.length} · ${f.name}`;
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeOverlay() {
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("close").addEventListener("click", closeOverlay);
+  document.getElementById("prev").addEventListener("click", () => openOverlay(current - 1));
+  document.getElementById("next").addEventListener("click", () => openOverlay(current + 1));
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeOverlay(); });
+  addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeOverlay();
+    if (!overlay.classList.contains("open")) return;
+    if (e.key === "ArrowRight") openOverlay(current + 1);
+    if (e.key === "ArrowLeft") openOverlay(current - 1);
+  });
+
+  const toggle = document.getElementById("toggle");
+  const setLabel = () => { toggle.textContent = document.documentElement.dataset.theme === "dark" ? "Light" : "Dark"; };
+  setLabel();
+  toggle.addEventListener("click", () => {
+    const root = document.documentElement;
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    setLabel();
+  });
+</script>
+</body>
+</html>
