@@ -4,6 +4,18 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, the homepage paragraph is the canonical shareable intro
+
+John's call after considering the About hero: the About hero paragraph
+stays humanized and page-bound; the HOMEPAGE hero paragraph is the one
+polished self-intro he copies to introduce himself anywhere. It lives in
+src/data/intro-bio.ts (numbers interpolate from data, mentor title
+carries no year since he holds 2024 and 2026), renders via the
+click-to-copy HomeIntro component, and the clipboard gets the exact
+paragraph plus a tail "More: https://mradib.com" that never renders on
+the page. This was a John-directed content change; the homepage-parked
+rule (layout redesign) still stands.
+
 ## 2026-07-19, About round 4: the editorial sharpening pass
 
 From the external revision brief plus John's answers. The borrowed

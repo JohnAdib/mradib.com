@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/button";
 import { Container } from "@/components/container";
+import { HomeIntro } from "@/components/home/home-intro";
 import { SocialMediaLinks } from "@/components/social-media-links";
-import { mentoringStats } from "@/data/mentoring-stats";
-import { experienceYears } from "@/data/profile";
 
 export function HomeHero() {
 	return (
@@ -19,14 +18,9 @@ export function HomeHero() {
 							Mentor to hundreds of engineers.
 						</span>
 					</h1>
-					<p className="reveal-rise reveal-delay-3 mt-6 text-base text-zinc-600 dark:text-zinc-400">
-						I'm John Adib, an engineering leader in London. Over{" "}
-						{experienceYears}+ years I've co-founded two startups, taught 2,000+
-						students, and run {mentoringStats.sessions}+ mentorship sessions on
-						ADPList, where I was named the World's Most Influential Mentor of
-						2024. These days I'm focused on AI-first development: changing how
-						teams work, not just how fast they ship.
-					</p>
+					<div className="reveal-rise reveal-delay-3 mt-3">
+						<HomeIntro />
+					</div>
 					<div className="reveal-up reveal-delay-4 mt-8 flex flex-wrap items-center gap-4">
 						<Button href="/mentor">Explore mentorship</Button>
 						<Button href="/contact" variant="secondary">
