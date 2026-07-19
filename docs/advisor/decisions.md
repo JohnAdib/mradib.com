@@ -4,6 +4,17 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, the word government leaves OG card copy
+
+Ruling from John on the About card: no "government" keyword in the
+image; the endorsement is named by the visa instead. The About proof
+line is now "Entrepreneur, twice. The World's Most Influential Mentor.
+UK Global Talent.", matching the home card's phrasing. Extends the
+hero rule (institutions prove, they do not headline) to card copy:
+prefer the award's own name over the endorsing institution. The award
+page card keeps "UK Government" as its eyebrow for now, as issuer
+attribution on the award's own page, pending John's word.
+
 ## 2026-07-19, the intro paragraph stops repeating the name on the page
 
 With "John Adib" as the H1, the paragraph no longer opens "I'm John

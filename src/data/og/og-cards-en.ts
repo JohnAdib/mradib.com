@@ -21,7 +21,7 @@ export const ogCardsEn: IOgCard[] = [
 		eyebrow: "The Story",
 		headline: "From a first computer to the world stage.",
 		proof:
-			"2× co-founder. World's Most Influential Mentor. Endorsed by the UK government.",
+			"Entrepreneur, twice. The World's Most Influential Mentor. UK Global Talent.",
 		artwork: portrait,
 	},
 	{
