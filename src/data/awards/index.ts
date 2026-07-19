@@ -8,7 +8,12 @@ export type {
 } from "./adplist-badge-interface";
 export { adplistBadges } from "./adplist-badges";
 export { adplistBadgeTimeline, top1MonthsLabel } from "./adplist-timeline";
-export type { AwardCategory, AwardGroup, IAward } from "./award-interface";
+export type {
+	AwardCategory,
+	AwardGroup,
+	IAward,
+	IReference,
+} from "./award-interface";
 export { awards } from "./awards";
 
 export const flagshipAwards: IAward[] = awards.filter(

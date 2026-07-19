@@ -1,3 +1,8 @@
+export interface IReference {
+	label: string;
+	url: string;
+}
+
 export type AwardCategory = "flagship" | "badge";
 
 export type AwardGroup =
@@ -21,4 +26,6 @@ export interface IAward {
 	badgeImages?: string[];
 	evidencePdf?: string;
 	externalUrl?: string;
+	/** Extra reference links (articles, alternate edition pages) shown inside the evidence modal, beyond externalUrl. */
+	references?: IReference[];
 }

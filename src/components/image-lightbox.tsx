@@ -1,14 +1,16 @@
 "use client";
 
-import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import {
-	ChevronLeftIcon,
-	ChevronRightIcon,
-	XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Dialog, DialogBackdrop } from "@headlessui/react";
 import { createContext, useContext, useState } from "react";
+import { LightboxPanel } from "@/components/lightbox-panel";
+import { LightboxReferences } from "@/components/lightbox-references";
+import type { IReference } from "@/data/awards";
 
-type OpenImage = (images: string[], startIndex?: number) => void;
+type OpenImage = (
+	images: string[],
+	startIndex?: number,
+	references?: IReference[],
+) => void;
 
 const LightboxContext = createContext<OpenImage | null>(null);
 
@@ -24,10 +26,11 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
 	const [gallery, setGallery] = useState<{
 		images: string[];
 		index: number;
+		references: IReference[];
 	} | null>(null);
 
-	const openImage: OpenImage = (images, startIndex = 0) => {
-		setGallery({ images, index: startIndex });
+	const openImage: OpenImage = (images, startIndex = 0, references = []) => {
+		setGallery({ images, index: startIndex, references });
 	};
 	const step = (delta: number) => {
 		setGallery((current) => {
@@ -38,6 +41,7 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
 			return { ...current, index: (current.index + delta + total) % total };
 		});
 	};
+	const close = () => setGallery(null);
 
 	return (
 		<LightboxContext.Provider value={openImage}>
@@ -45,55 +49,24 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
 			<Dialog
 				transition
 				open={gallery !== null}
-				onClose={() => setGallery(null)}
+				onClose={close}
 				className="relative z-50"
 			>
 				<DialogBackdrop
 					transition
 					className="fixed inset-0 bg-black/80 duration-300 ease-out data-closed:opacity-0"
 				/>
-				<div className="fixed inset-0 flex items-center justify-center gap-4 p-4">
-					{gallery && gallery.images.length > 1 && (
-						<button
-							type="button"
-							onClick={() => step(-1)}
-							className="text-white/80 transition hover:text-white"
-						>
-							<ChevronLeftIcon className="h-8 w-8" />
-							<span className="sr-only">Previous image</span>
-						</button>
-					)}
-					<DialogPanel
-						transition
-						className="relative max-h-[85vh] max-w-3xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
-					>
-						<button
-							type="button"
-							onClick={() => setGallery(null)}
-							className="absolute -top-10 right-0 text-white/80 transition hover:text-white"
-						>
-							<XMarkIcon className="h-7 w-7" />
-							<span className="sr-only">Close</span>
-						</button>
-						{gallery && (
-							// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
-							<img
-								key={gallery.index}
-								src={gallery.images[gallery.index]}
-								alt="Certificate"
-								className="lightbox-morph max-h-[85vh] w-auto rounded-2xl"
+				<div className="fixed inset-0 flex flex-col items-center justify-center gap-5 p-4">
+					{gallery && (
+						<>
+							<LightboxPanel
+								images={gallery.images}
+								index={gallery.index}
+								onStep={step}
+								onClose={close}
 							/>
-						)}
-					</DialogPanel>
-					{gallery && gallery.images.length > 1 && (
-						<button
-							type="button"
-							onClick={() => step(1)}
-							className="text-white/80 transition hover:text-white"
-						>
-							<ChevronRightIcon className="h-8 w-8" />
-							<span className="sr-only">Next image</span>
-						</button>
+							<LightboxReferences references={gallery.references} />
+						</>
 					)}
 				</div>
 			</Dialog>

@@ -3,27 +3,24 @@
 import { PhotoIcon } from "@heroicons/react/24/outline";
 import { useLightbox } from "@/components/image-lightbox";
 import type { IAdplistBadge } from "@/data/awards";
-import { badgeImgPaths } from "@/lib/awards/adplist-badge-image";
+import { badgeImgPath } from "@/lib/awards/adplist-badge-image";
+import { badgeReference } from "@/lib/awards/adplist-badge-reference";
 
 export function AdplistBadgeChip({ badge }: { badge: IAdplistBadge }) {
 	const openImage = useLightbox();
-	const images = badgeImgPaths(badge);
-	const hasImage = images.length > 0;
+	const img = badgeImgPath(badge);
+	const reference = badgeReference(badge);
 
 	return (
 		<button
 			type="button"
-			onClick={() => hasImage && openImage(images, 0)}
-			disabled={!hasImage}
+			onClick={() => img && openImage([img], 0, reference ? [reference] : [])}
+			disabled={!img}
 			className="group flex flex-col overflow-hidden rounded-xl bg-white text-left ring-1 ring-zinc-100 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 disabled:pointer-events-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
 		>
-			{hasImage ? (
+			{img ? (
 				// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
-				<img
-					src={images[0]}
-					alt=""
-					className="aspect-square w-full object-cover"
-				/>
+				<img src={img} alt="" className="aspect-square w-full object-cover" />
 			) : (
 				<div className="flex aspect-square w-full items-center justify-center bg-accent-50 dark:bg-accent-400/10">
 					<PhotoIcon className="h-6 w-6 text-accent-400" />

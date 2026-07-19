@@ -6,6 +6,6 @@ export interface IAdplistBadge {
 	date: string;
 	/** Display label for the period, e.g. "July 2025", "Q4 2024". */
 	period: string;
-	/** How many certificate images exist at the paths badgeImgPaths() computes, 0 if none yet. */
-	imageCount?: number;
+	/** True once a certificate image exists at the path badgeImgPath() computes. */
+	hasImage?: boolean;
 }

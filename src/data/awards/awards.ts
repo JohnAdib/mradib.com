@@ -23,10 +23,12 @@ export const awards: IAward[] = [
 			"Named in the 2026 ADPList100 for 2025 contributions, a list of 100 mentors selected from 32,000+ across 140+ countries. First recognized in the inaugural 2024 list too.",
 		badgeImages: [
 			"/awards/worlds-most-influential-mentor-badge.jpg",
-			"/awards/worlds-most-influential-mentor-badge-2.png",
-			"/awards/worlds-most-influential-mentor-badge-3.gif",
+			"/awards/worlds-most-influential-mentor-badge-2.jpg",
 		],
 		externalUrl: "https://adplist.org/adplist100/2026/mentor/john-adib",
+		references: [
+			{ label: "2024 ADPList100", url: "https://adplist.org/adplist100/2024" },
+		],
 	},
 	{
 		slug: "number-1-mentor-in-europe",
@@ -37,11 +39,7 @@ export const awards: IAward[] = [
 		group: "mentorship",
 		summary:
 			"Ranked first among ADPList's top mentors in Europe in the 2024 ADPList Wrapped.",
-		badgeImages: [
-			"/awards/number-1-mentor-in-europe-badge.jpg",
-			"/awards/number-1-mentor-in-europe-badge-2.jpg",
-			"/awards/number-1-mentor-in-europe-badge-3.jpg",
-		],
+		badgeImages: ["/awards/number-1-mentor-in-europe-badge.jpg"],
 		externalUrl:
 			"https://blog.adplist.org/post/2024-adplist-wrapped-top-mentors-trends-and-topics",
 	},

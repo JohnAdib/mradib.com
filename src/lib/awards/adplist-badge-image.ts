@@ -6,11 +6,10 @@ const kindSlug: Record<IAdplistBadge["kind"], string> = {
 	top10Frontend: "top10-frontend",
 };
 
-/** Root-relative certificate image paths, public/awards/adplist/YYYY-MM-<kind>[-N].jpg. */
-export function badgeImgPaths(badge: IAdplistBadge): string[] {
-	const count = badge.imageCount ?? 0;
-	const base = `/awards/adplist/${badge.date}-${kindSlug[badge.kind]}`;
-	return Array.from({ length: count }, (_, i) =>
-		i === 0 ? `${base}.jpg` : `${base}-${i + 1}.jpg`,
-	);
+/** Root-relative certificate image path, public/awards/adplist/YYYY-MM-<kind>.jpg. */
+export function badgeImgPath(badge: IAdplistBadge): string | undefined {
+	if (!badge.hasImage) {
+		return undefined;
+	}
+	return `/awards/adplist/${badge.date}-${kindSlug[badge.kind]}.jpg`;
 }

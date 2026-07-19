@@ -6,6 +6,7 @@ import type { IAward } from "@/data/awards";
 export function AwardBadge({ award }: { award: IAward }) {
 	const openImage = useLightbox();
 	const images = award.badgeImages ?? [];
+	const references = award.references ?? [];
 
 	if (images.length === 0) {
 		return null;
@@ -15,7 +16,7 @@ export function AwardBadge({ award }: { award: IAward }) {
 		<div>
 			<button
 				type="button"
-				onClick={() => openImage(images, 0)}
+				onClick={() => openImage(images, 0, references)}
 				className="block w-full"
 			>
 				{/* biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional */}
@@ -31,7 +32,7 @@ export function AwardBadge({ award }: { award: IAward }) {
 						<button
 							key={src}
 							type="button"
-							onClick={() => openImage(images, i + 1)}
+							onClick={() => openImage(images, i + 1, references)}
 						>
 							{/* biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional */}
 							<img
