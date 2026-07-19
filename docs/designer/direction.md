@@ -13,11 +13,21 @@ Bold and unique: nobody else's personal site should look like this. If a
 choice could appear on a template, push further. One striking idea per page
 beats five decorations. Bold never means loud.
 
-## Candidate directions, round 2, John picks one
+## Candidate directions, round 2, also rejected
 
 Round 1 verdict (2026-07-19): Monograph rejected as old school, Signal
 rejected as too plain, Aurora v1 had an acceptable background but weak
-motion. The bar: dark, dramatic, and the animation itself must impress.
+motion. Round 2 verdict (2026-07-19): closer but still not the picture in
+John's head. Round 3 waits for reference sites from John.
+
+Confirmed keepers, binding on whatever direction wins:
+
+- Light mode background: the warm paper tone from Monograph (#f7f3ec
+  range), never pure white and no longer zinc-50. Only the color survives
+  from Monograph.
+- Titles: bold, heavy, oversized display type (the Kinetic register).
+- Dark mode stays dramatic; motion must impress but round 2's attempts
+  did not land it yet.
 
 Live hero prototypes exist in [mockups/](mockups/), same content in each
 so only the design differs. Open them in a browser; static screenshots

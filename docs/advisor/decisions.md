@@ -4,6 +4,16 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, visual direction round 2 rejected, keepers extracted
+
+Round 2 (kinetic, constellation, aurora2) also missed: "still nothing close
+to what I can think of." Confirmed keepers from the rounds, binding on the
+future direction: the warm paper background from Monograph (#f7f3ec range)
+becomes the LIGHT MODE background instead of pure white or zinc-50, and
+only that, nothing else from Monograph; Kinetic's bold heavy display
+titles are liked; motion stayed lukewarm. Next step: John supplies
+reference sites that match the picture in his head before any round 3.
+
 ## 2026-07-19, visual direction round 1 rejected, round 2 built
 
 John rejected Monograph (editorial serif, "old school"), Signal (current
