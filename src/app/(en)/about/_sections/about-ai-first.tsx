@@ -4,9 +4,10 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutAiFirst() {
 	return (
 		<Chapter
-			index="10"
+			index="11"
 			era="Now · How I build"
 			title="AI belongs in the work, not beside it"
+			slug="ai-first"
 		>
 			<p>
 				I believe AI belongs inside the way a team works: in code reviews, in

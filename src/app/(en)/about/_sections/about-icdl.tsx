@@ -6,6 +6,7 @@ export function AboutIcdl() {
 			index="03"
 			era="2005 · Teaching, take one"
 			title="Then I started teaching"
+			slug="icdl"
 		>
 			<p>
 				There was an exam called ICDL. A private institute in my city offered a

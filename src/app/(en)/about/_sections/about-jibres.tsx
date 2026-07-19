@@ -5,20 +5,22 @@ export function AboutJibres() {
 		<Chapter
 			index="07"
 			era="2019 to 2022 · Bootstrapped"
-			title="This time, no investor"
+			title="Bootstrapped, from day zero"
+			slug="jibres"
 		>
 			<p>
-				In 2019 I co-founded Jibres as CTO. This time, no outside investor, just
-				the product and the team.
+				In 2019 I co-founded Jibres as CTO, this time with no outside investor.
+				It started with one real customer, from day zero, and grew from there.
 			</p>
 			<p>
-				Jibres grew into a cloud commerce platform serving 1,200+ businesses,
-				with a firewall that blocked 99% of attacks and an app factory that
-				generated a native Android app in under ten minutes. It won a national
-				award at the Iran Web Festival in 2022.
+				Jibres grew into an integrated, omnichannel e-commerce platform,
+				unifying online and offline selling for more than 1,200 businesses
+				across the country. It won a national award at the Iran Web Festival in
+				2022.
 			</p>
 			<p>
-				Being CTO meant carrying a system, and building it without a safety net.
+				Being CTO meant carrying a system, this time built one real customer at
+				a time.
 			</p>
 		</Chapter>
 	);

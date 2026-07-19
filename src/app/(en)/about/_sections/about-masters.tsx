@@ -6,6 +6,7 @@ export function AboutMasters() {
 			index="08"
 			era="2015 to 2025 · A decade in the making"
 			title="I finish what I start. Eventually."
+			slug="masters"
 		>
 			<p>
 				The same year I dropped the plan for Germany, I enrolled in a masters in

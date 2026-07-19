@@ -5,6 +5,7 @@ import { AboutAiFirst } from "./_sections/about-ai-first";
 import { AboutChildhood } from "./_sections/about-childhood";
 import { AboutClosing } from "./_sections/about-closing";
 import { AboutFounder } from "./_sections/about-founder";
+import { AboutGlobalTalent } from "./_sections/about-global-talent";
 import { AboutHardwareStore } from "./_sections/about-hardware-store";
 import { AboutHero } from "./_sections/about-hero";
 import { AboutHuman } from "./_sections/about-human";
@@ -44,6 +45,7 @@ export default function About() {
 					<AboutJibres />
 					<AboutMasters />
 					<AboutLondon />
+					<AboutGlobalTalent />
 					<AboutAiFirst />
 					<AboutMentorship />
 					<AboutHuman />

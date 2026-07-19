@@ -6,6 +6,7 @@ export function AboutFounder() {
 			index="06"
 			era="2015 to 2017 · Angel backed"
 			title="A million dollars, then a million users"
+			slug="sarshomar"
 		>
 			<p>
 				I had a plan to study for a masters in Germany. Instead, in 2015, I

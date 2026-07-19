@@ -7,6 +7,7 @@ export function AboutSpark() {
 			index="04"
 			era="2007 to 2015 · The spark"
 			title="It started with a competition"
+			slug="worldskills"
 		>
 			<p>
 				I saw an ad for{" "}

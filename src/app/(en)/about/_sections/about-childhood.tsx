@@ -6,6 +6,7 @@ export function AboutChildhood() {
 			index="01"
 			era="Childhood · The first computer"
 			title="The keyboard came first"
+			slug="childhood"
 		>
 			<p>
 				My father brought the first piece home: a keyboard. Then, almost every

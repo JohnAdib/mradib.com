@@ -5,9 +5,10 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutMentorship() {
 	return (
 		<Chapter
-			index="11"
+			index="12"
 			era="Now · Full circle"
 			title="Back where it started: helping others win"
+			slug="mentorship"
 		>
 			<p>
 				The teenager who learned that helping others win beats winning alone

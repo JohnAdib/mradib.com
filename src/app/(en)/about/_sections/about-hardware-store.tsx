@@ -6,6 +6,7 @@ export function AboutHardwareStore() {
 			index="02"
 			era="Early 2000s · Two summers"
 			title="The summer I built a computer alone"
+			slug="hardware-store"
 		>
 			<p>
 				A friend of my father's ran a computer shop in my city, building and

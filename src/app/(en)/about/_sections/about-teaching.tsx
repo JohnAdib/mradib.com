@@ -6,6 +6,7 @@ export function AboutTeaching() {
 			index="05"
 			era="2006 to 2018 · Teaching at scale"
 			title="Then the classrooms got bigger"
+			slug="teaching"
 		>
 			<p>
 				From 2006 I taught independently outside class hours, and published free
