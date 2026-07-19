@@ -8,9 +8,10 @@ export const ogCardsEn: IOgCard[] = [
 		slug: "home",
 		route: "/",
 		lang: "en",
-		eyebrow: "Engineering Manager & 2× Founder",
-		headline: "Everything I build grows.",
-		proof: "Classrooms. Companies. Careers.",
+		eyebrow: "I build. I teach. I mentor.",
+		headline: "John Adib",
+		proof:
+			"Engineering Manager in London. Entrepreneur, twice. The World's Most Influential Mentor.",
 		artwork: portrait,
 	},
 	{

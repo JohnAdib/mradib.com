@@ -19,6 +19,7 @@ brand or design direction, log it in docs/advisor/decisions.md.
 - Single responsibility per component. Data lives in src/data, presentation in components, composition in pages.
 - Reuse primitives first: Container, Section, Card, Button, Prose, SimpleLayout.
 - Pages, JSON-LD, llms.txt, RSS, and the sitemap all derive from src/data. Never state a fact in two places.
+- Every new page needs an OG card: add its IOgCard to src/data/og, spread ogMetadata(route) into the page metadata, run npm run og:build locally, and commit the JPG it writes to public/og. Talk pages derive their cards from src/data/talks automatically. npm run verify:seo fails any page shipped without one; the design and copy rules live in docs/advisor/playbooks/seo.md.
 - TypeScript strict and Biome clean. Run npm run check:fix, npm run check-types, and npm run build before committing.
 
 ## Delivery

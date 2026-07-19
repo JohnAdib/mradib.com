@@ -16,7 +16,9 @@ function headlineSize(text, hasArt, lang) {
 	const n = [...text].length;
 	if (lang === "fa") return n <= 12 ? 92 : n <= 26 ? 74 : 58;
 	const size = n <= 30 ? 92 : n <= 48 ? 76 : n <= 62 ? 66 : 56;
-	return hasArt ? Math.min(size, 64) : size;
+	if (!hasArt) return size;
+	// The art column caps long headlines, but a short one (a name) stays big.
+	return n <= 20 ? 84 : Math.min(size, 64);
 }
 
 /** Escape for HTML, then upgrade straight apostrophes to typographic ones. */
@@ -82,7 +84,7 @@ ${art ? '<div class="art-glow"></div>' : ""}<div class="stars"></div>
 <h1 class="headline">${text(card.headline)}</h1>
 <p class="proof">${text(card.proof)}</p>
 </div>
-<div class="strip">${avatar}<span class="name">${fa ? "جان ادیب" : "John Adib"}</span><span class="dot"></span><span class="site">mradib.com</span></div>
+<div class="strip">${avatar}${card.headline.trim() === (fa ? "جان ادیب" : "John Adib") ? "" : `<span class="name">${fa ? "جان ادیب" : "John Adib"}</span><span class="dot"></span>`}<span class="site">mradib.com</span></div>
 </div>
 ${artHtml}
 </div></body></html>`;
