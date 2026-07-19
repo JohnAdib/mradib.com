@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction: Kinetic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #0a0a0c; color: #e4e4e7;
+    min-height: 100vh; overflow-x: hidden;
+  }
+  .ghost {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-size: clamp(120px, 26vw, 380px); font-weight: 900; letter-spacing: -.04em;
+    color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.05);
+    pointer-events: none; white-space: nowrap; user-select: none;
+    animation: ghostdrift 30s linear infinite alternate;
+  }
+  @keyframes ghostdrift { from { transform: translate(-56%, -50%); } to { transform: translate(-44%, -50%); } }
+  .wrap { position: relative; max-width: 1100px; margin: 0 auto; padding: clamp(24px, 6vw, 64px); }
+  .hero { padding-top: clamp(40px, 10vh, 110px); }
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: #2dd4bf; margin-bottom: 28px;
+  }
+  h1 {
+    font-size: clamp(40px, 7.8vw, 88px); font-weight: 900;
+    letter-spacing: -.04em; line-height: 1.02; color: #fafafa;
+  }
+  .line { display: block; overflow: hidden; }
+  .line > span {
+    display: block; transform: translateY(112%);
+    animation: rise 1s cubic-bezier(.16, 1, .3, 1) forwards;
+  }
+  .l1 > span { animation-delay: .1s; }
+  .l2 > span { animation-delay: .24s; }
+  .l3 > span { animation-delay: .38s; }
+  @keyframes rise { to { transform: translateY(0); } }
+  h1 .thin { font-weight: 200; color: #a1a1aa; }
+  h1 .accent { color: #2dd4bf; }
+  .word { transition: font-weight .3s ease, color .3s ease; font-variation-settings: inherit; }
+  .word:hover { font-weight: 200; color: #2dd4bf; cursor: default; }
+  .sub {
+    margin-top: 34px; font-size: clamp(15px, 2vw, 18px); line-height: 1.7;
+    color: #a1a1aa; max-width: 580px;
+    opacity: 0; animation: fade .8s ease-out .8s forwards;
+  }
+  .ctas { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap;
+    opacity: 0; animation: fade .8s ease-out 1s forwards; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 999px; font-size: 15px;
+    font-weight: 600; text-decoration: none; will-change: transform;
+    transition: background .25s, color .25s, box-shadow .25s;
+  }
+  .btn-primary { background: #fafafa; color: #0a0a0c; }
+  .btn-primary:hover { background: #2dd4bf; box-shadow: 0 10px 40px rgba(45,212,191,.3); }
+  .btn-secondary { color: #e4e4e7; box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+  .btn-secondary:hover { box-shadow: inset 0 0 0 1px #2dd4bf; color: #2dd4bf; }
+  @keyframes fade { to { opacity: 1; } }
+  .marquee {
+    margin-top: clamp(56px, 12vh, 110px); border-top: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08); overflow: hidden; white-space: nowrap;
+    padding: 18px 0; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .marquee-track { display: inline-block; animation: scroll 26s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+  .marquee b {
+    font-size: clamp(18px, 2.6vw, 26px); font-weight: 800; letter-spacing: -.02em;
+    color: #fafafa; margin: 0 18px;
+  }
+  .marquee i { font-style: normal; color: #2dd4bf; }
+  .stats {
+    margin-top: clamp(40px, 8vh, 72px);
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px 20px;
+    opacity: 0; animation: fade .8s ease-out 1.3s forwards;
+  }
+  @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat b {
+    display: block; font-size: clamp(30px, 3.6vw, 44px); font-weight: 900;
+    color: #fafafa; font-variant-numeric: tabular-nums; letter-spacing: -.03em;
+  }
+  .stat span {
+    display: block; margin-top: 6px; font-size: 11px; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: #71717a;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .line > span, .sub, .ctas, .stats, .ghost, .marquee-track { animation: none; }
+    .line > span { transform: none; } .sub, .ctas, .stats { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="ghost">BUILDER</div>
+<div class="wrap">
+  <div class="hero">
+    <p class="eyebrow">John Adib &middot; London</p>
+    <h1>
+      <span class="line l1"><span><span class="word">2x</span> <span class="word">startup</span> <span class="word">co-founder</span>.</span></span>
+      <span class="line l2"><span><span class="thin">The world's most</span> <span class="accent word">influential mentor</span>.</span></span>
+      <span class="line l3"><span><span class="word">Pioneering</span> <span class="word">AI-first</span> <span class="word">engineering</span>.</span></span>
+    </h1>
+    <p class="sub">
+      I raised $1M and reached a million users in a month, built a platform
+      serving 1,200+ businesses, and was endorsed by the UK government as
+      exceptional talent in technology. Today I lead engineering in London
+      and change how teams build with AI.
+    </p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#" data-magnet>Read the story</a>
+      <a class="btn btn-secondary" href="#" data-magnet>Invite me to speak</a>
+    </div>
+  </div>
+</div>
+<div class="marquee">
+  <div class="marquee-track">
+    <b>$1M raised <i>&middot;</i></b><b>1M users in a month <i>&middot;</i></b><b>#1 mentor in Europe <i>&middot;</i></b><b>UK Global Talent <i>&middot;</i></b><b>5,000+ engineers on stage <i>&middot;</i></b><b>1,200+ businesses served <i>&middot;</i></b><b>$1M raised <i>&middot;</i></b><b>1M users in a month <i>&middot;</i></b><b>#1 mentor in Europe <i>&middot;</i></b><b>UK Global Talent <i>&middot;</i></b><b>5,000+ engineers on stage <i>&middot;</i></b><b>1,200+ businesses served <i>&middot;</i></b>
+  </div>
+</div>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b data-count="2">0</b><span>Startups co-founded</span></div>
+    <div class="stat"><b data-count="600" data-suffix="+">0</b><span>Mentoring sessions</span></div>
+    <div class="stat"><b data-count="5000" data-suffix="+">0</b><span>Engineers on one stage</span></div>
+    <div class="stat"><b data-count="17" data-suffix="+">0</b><span>Years building</span></div>
+  </div>
+</div>
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("[data-count]").forEach(el => {
+    const target = +el.dataset.count, suffix = el.dataset.suffix || "";
+    if (reduced) { el.textContent = target.toLocaleString() + suffix; return; }
+    const t0 = performance.now(), dur = 1400;
+    (function tick(t) {
+      const p = Math.min((t - t0 - 1300) / dur, 1);
+      if (p < 0) return requestAnimationFrame(tick);
+      const eased = 1 - (1 - p) ** 3;
+      el.textContent = Math.round(target * eased).toLocaleString() + (p === 1 ? suffix : "");
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+  if (!reduced) document.querySelectorAll("[data-magnet]").forEach(btn => {
+    btn.addEventListener("mousemove", e => {
+      const r = btn.getBoundingClientRect();
+      btn.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px, ${(e.clientY - r.top - r.height / 2) * .35}px)`;
+    });
+    btn.addEventListener("mouseleave", () => { btn.style.transform = ""; });
+  });
+</script>
+</body>
+</html>

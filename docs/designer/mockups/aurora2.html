@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction: Aurora v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #03040a; color: #d4d4d8;
+    min-height: 100vh; overflow-x: hidden;
+  }
+  .sky { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(100px); mix-blend-mode: screen; }
+  .b1 {
+    width: 70vw; height: 70vw; top: -30vw; right: -20vw; opacity: .5;
+    background: radial-gradient(circle, #14b8a6, transparent 65%);
+    animation: drift1 16s ease-in-out infinite alternate, hue 24s linear infinite;
+  }
+  .b2 {
+    width: 55vw; height: 55vw; bottom: -25vw; left: -18vw; opacity: .42;
+    background: radial-gradient(circle, #7c3aed, transparent 65%);
+    animation: drift2 20s ease-in-out infinite alternate, hue 30s linear infinite reverse;
+  }
+  .b3 {
+    width: 40vw; height: 40vw; top: 30%; left: 55%; opacity: .3;
+    background: radial-gradient(circle, #0ea5e9, transparent 65%);
+    animation: drift3 14s ease-in-out infinite alternate, hue 20s linear infinite;
+  }
+  @keyframes drift1 { to { transform: translate(-14vw, 10vw) scale(1.15); } }
+  @keyframes drift2 { to { transform: translate(10vw, -8vw) scale(1.1); } }
+  @keyframes drift3 { to { transform: translate(-8vw, -10vw) scale(1.25); } }
+  @keyframes hue { to { filter: blur(100px) hue-rotate(360deg); } }
+  .spot {
+    position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 30%),
+      rgba(45,212,191,.09), transparent 70%);
+  }
+  .wrap { position: relative; max-width: 1080px; margin: 0 auto; padding: clamp(24px, 6vw, 64px); }
+  .hero { display: flex; flex-direction: column; gap: 44px; padding-top: clamp(36px, 9vh, 100px); }
+  @media (min-width: 900px) {
+    .hero { flex-direction: row; align-items: center; gap: 64px; }
+    .hero-text { flex: 1.4; }
+    .hero-img { flex: 1; }
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
+    color: #99f6e4; background: rgba(45,212,191,.08);
+    border: 1px solid rgba(45,212,191,.25); border-radius: 999px;
+    padding: 7px 14px; margin-bottom: 24px;
+  }
+  .eyebrow::before {
+    content: ""; width: 7px; height: 7px; border-radius: 50%; background: #2dd4bf;
+    animation: blink 2.4s ease-in-out infinite;
+  }
+  @keyframes blink { 50% { opacity: .3; } }
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(36px, 6.4vw, 62px); font-weight: 700;
+    letter-spacing: -.03em; line-height: 1.06; color: #fafafa;
+  }
+  h1 .grad {
+    background: linear-gradient(100deg, #2dd4bf 15%, #a78bfa 45%, #22d3ee 75%, #2dd4bf 100%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: sweep 5s linear infinite;
+  }
+  @keyframes sweep { to { background-position: -250% 0; } }
+  .sub {
+    margin-top: 24px; font-size: clamp(15px, 2vw, 18px); line-height: 1.7;
+    color: #a1a1aa; max-width: 560px;
+  }
+  .ctas { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 13px 26px; border-radius: 12px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    will-change: transform; transition: box-shadow .25s;
+  }
+  .btn-primary {
+    color: #03040a;
+    background: linear-gradient(92deg, #2dd4bf, #a78bfa, #2dd4bf);
+    background-size: 250% 100%; animation: sweep 6s linear infinite;
+  }
+  .btn-primary:hover { box-shadow: 0 12px 48px rgba(124,58,237,.45); }
+  .btn-secondary {
+    color: #e4e4e7; background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px);
+  }
+  .btn-secondary:hover { box-shadow: 0 0 0 1px rgba(45,212,191,.6) inset; }
+  .hero-img { display: flex; justify-content: center; perspective: 900px; }
+  .card3d { position: relative; width: min(320px, 66vw); will-change: transform; transition: transform .18s ease-out; }
+  .card3d::before {
+    content: ""; position: absolute; inset: -3px; border-radius: 28px;
+    background: linear-gradient(140deg, #2dd4bf, #7c3aed 60%, #22d3ee);
+    background-size: 300% 300%; animation: border 8s ease infinite;
+  }
+  @keyframes border { 50% { background-position: 100% 100%; } }
+  .portrait {
+    position: relative; width: 100%; aspect-ratio: 1; object-fit: cover;
+    border-radius: 26px; box-shadow: 0 30px 90px rgba(0,0,0,.65);
+  }
+  .stats {
+    margin-top: clamp(48px, 10vh, 92px);
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  }
+  @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat {
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09);
+    border-radius: 18px; padding: 22px 20px; backdrop-filter: blur(10px);
+    animation: bob 5s ease-in-out infinite;
+    transition: transform .25s, border-color .25s;
+  }
+  .stat:nth-child(2) { animation-delay: 1.2s; }
+  .stat:nth-child(3) { animation-delay: 2.4s; }
+  .stat:nth-child(4) { animation-delay: 3.6s; }
+  @keyframes bob { 50% { transform: translateY(-6px); } }
+  .stat:hover { border-color: rgba(45,212,191,.5); }
+  .stat b {
+    display: block; font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(26px, 3vw, 34px); font-weight: 700; color: #fafafa;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat span {
+    display: block; margin-top: 6px; font-size: 11px; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase; color: #71717a;
+  }
+  .reveal { opacity: 0; transform: translateY(16px); animation: up .7s cubic-bezier(.2,.7,.3,1) forwards; }
+  .d1 { animation-delay: .08s; } .d2 { animation-delay: .2s; } .d3 { animation-delay: .32s; }
+  .d4 { animation-delay: .44s; } .d5 { animation-delay: .56s; }
+  @keyframes up { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .blob, .grad, .btn-primary, .card3d::before, .stat, .eyebrow::before { animation: none; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sky"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="spot"></div>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <p class="eyebrow reveal d1">John Adib &middot; London</p>
+      <h1 class="reveal d2">
+        2x startup co-founder.<br>
+        The world's most <span class="grad">influential mentor</span>.<br>
+        Pioneering AI-first engineering.
+      </h1>
+      <p class="sub reveal d3">
+        I raised $1M and reached a million users in a month, built a platform
+        serving 1,200+ businesses, and was endorsed by the UK government as
+        exceptional talent in technology. Today I lead engineering in London
+        and change how teams build with AI.
+      </p>
+      <div class="ctas reveal d4">
+        <a class="btn btn-primary" href="#">Read the story</a>
+        <a class="btn btn-secondary" href="#">Invite me to speak</a>
+      </div>
+    </div>
+    <div class="hero-img reveal d3">
+      <div class="card3d" id="card">
+        <img class="portrait" src="../../../public/img/john-adib-hero.jpg" alt="John Adib">
+      </div>
+    </div>
+  </div>
+  <div class="stats reveal d5">
+    <div class="stat"><b data-count="2">0</b><span>Startups co-founded</span></div>
+    <div class="stat"><b data-count="600" data-suffix="+">0</b><span>Mentoring sessions</span></div>
+    <div class="stat"><b data-count="5000" data-suffix="+">0</b><span>Engineers on one stage</span></div>
+    <div class="stat"><b data-count="17" data-suffix="+">0</b><span>Years building</span></div>
+  </div>
+</div>
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduced) {
+    addEventListener("pointermove", e => {
+      document.querySelector(".spot").style.setProperty("--mx", e.clientX + "px");
+      document.querySelector(".spot").style.setProperty("--my", e.clientY + "px");
+    });
+    const card = document.getElementById("card");
+    card.addEventListener("pointermove", e => {
+      const r = card.getBoundingClientRect();
+      const rx = ((e.clientY - r.top) / r.height - .5) * -14;
+      const ry = ((e.clientX - r.left) / r.width - .5) * 14;
+      card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener("pointerleave", () => { card.style.transform = ""; });
+  }
+  document.querySelectorAll("[data-count]").forEach(el => {
+    const target = +el.dataset.count, suffix = el.dataset.suffix || "";
+    if (reduced) { el.textContent = target.toLocaleString() + suffix; return; }
+    const t0 = performance.now(), dur = 1400;
+    (function tick(t) {
+      const p = Math.min((t - t0 - 900) / dur, 1);
+      if (p < 0) return requestAnimationFrame(tick);
+      const eased = 1 - (1 - p) ** 3;
+      el.textContent = Math.round(target * eased).toLocaleString() + (p === 1 ? suffix : "");
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+</script>
+</body>
+</html>

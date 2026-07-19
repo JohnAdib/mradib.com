@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction: Constellation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #06070c; color: #d4d4d8;
+    min-height: 100vh; overflow-x: hidden;
+  }
+  canvas#net { position: fixed; inset: 0; width: 100%; height: 100%; }
+  .wrap { position: relative; max-width: 1080px; margin: 0 auto; padding: clamp(24px, 6vw, 64px); }
+  .hero {
+    display: flex; flex-direction: column; gap: 44px;
+    padding-top: clamp(36px, 9vh, 100px);
+  }
+  @media (min-width: 900px) {
+    .hero { flex-direction: row; align-items: center; gap: 64px; }
+    .hero-text { flex: 1.5; }
+    .hero-img { flex: 1; }
+  }
+  .eyebrow {
+    display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: .18em;
+    text-transform: uppercase; color: #99f6e4; margin-bottom: 24px;
+    padding: 7px 14px; border: 1px solid rgba(45,212,191,.3); border-radius: 999px;
+    background: rgba(6,7,12,.6); backdrop-filter: blur(6px);
+  }
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(36px, 6.4vw, 64px); font-weight: 700;
+    letter-spacing: -.03em; line-height: 1.06; color: #fafafa;
+    text-shadow: 0 2px 30px rgba(6,7,12,.9);
+  }
+  h1 .shimmer {
+    background: linear-gradient(100deg, #2dd4bf 20%, #a5f3fc 40%, #2dd4bf 60%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+  .sub {
+    margin-top: 24px; font-size: clamp(15px, 2vw, 18px); line-height: 1.7;
+    color: #a1a1aa; max-width: 560px; text-shadow: 0 1px 16px rgba(6,7,12,.9);
+  }
+  .ctas { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 13px 24px; border-radius: 12px; font-size: 15px;
+    font-weight: 600; text-decoration: none; transition: transform .2s, box-shadow .2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: #2dd4bf; color: #042f2e; }
+  .btn-primary:hover { box-shadow: 0 0 44px rgba(45,212,191,.5); }
+  .btn-secondary {
+    color: #e4e4e7; background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(8px);
+  }
+  .hero-img { display: flex; justify-content: center; }
+  .pulse { position: relative; width: min(300px, 62vw); }
+  .pulse::before, .pulse::after {
+    content: ""; position: absolute; inset: -14px; border-radius: 50%;
+    border: 1px solid rgba(45,212,191,.35);
+    animation: ripple 3.2s ease-out infinite;
+  }
+  .pulse::after { animation-delay: 1.6s; }
+  @keyframes ripple {
+    from { transform: scale(.92); opacity: 1; }
+    to { transform: scale(1.22); opacity: 0; }
+  }
+  .portrait {
+    position: relative; width: 100%; aspect-ratio: 1; object-fit: cover;
+    border-radius: 50%; border: 2px solid rgba(45,212,191,.5);
+    box-shadow: 0 24px 80px rgba(0,0,0,.6), 0 0 60px rgba(45,212,191,.15);
+  }
+  .stats {
+    position: relative; margin-top: clamp(48px, 10vh, 92px);
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  }
+  @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat {
+    background: rgba(10,12,20,.65); border: 1px solid rgba(255,255,255,.09);
+    border-radius: 18px; padding: 22px 20px; backdrop-filter: blur(10px);
+    transition: transform .25s, border-color .25s;
+  }
+  .stat:hover { transform: translateY(-4px); border-color: rgba(45,212,191,.5); }
+  .stat b {
+    display: block; font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(26px, 3vw, 34px); font-weight: 700; color: #fafafa;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat span {
+    display: block; margin-top: 6px; font-size: 11px; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase; color: #71717a;
+  }
+  .reveal { opacity: 0; transform: translateY(16px); animation: up .7s cubic-bezier(.2,.7,.3,1) forwards; }
+  .d1 { animation-delay: .08s; } .d2 { animation-delay: .2s; } .d3 { animation-delay: .32s; }
+  .d4 { animation-delay: .44s; } .d5 { animation-delay: .56s; }
+  @keyframes up { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .shimmer, .pulse::before, .pulse::after { animation: none; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<canvas id="net"></canvas>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <p class="eyebrow reveal d1">John Adib &middot; London</p>
+      <h1 class="reveal d2">
+        2x startup co-founder.<br>
+        The world's most <span class="shimmer">influential mentor</span>.<br>
+        Pioneering AI-first engineering.
+      </h1>
+      <p class="sub reveal d3">
+        I raised $1M and reached a million users in a month, built a platform
+        serving 1,200+ businesses, and was endorsed by the UK government as
+        exceptional talent in technology. Today I lead engineering in London
+        and change how teams build with AI.
+      </p>
+      <div class="ctas reveal d4">
+        <a class="btn btn-primary" href="#">Read the story</a>
+        <a class="btn btn-secondary" href="#">Invite me to speak</a>
+      </div>
+    </div>
+    <div class="hero-img reveal d3">
+      <div class="pulse">
+        <img class="portrait" src="../../../public/img/john-adib-hero.jpg" alt="John Adib">
+      </div>
+    </div>
+  </div>
+  <div class="stats reveal d5">
+    <div class="stat"><b data-count="2">0</b><span>Startups co-founded</span></div>
+    <div class="stat"><b data-count="600" data-suffix="+">0</b><span>Mentoring sessions</span></div>
+    <div class="stat"><b data-count="5000" data-suffix="+">0</b><span>Engineers on one stage</span></div>
+    <div class="stat"><b data-count="17" data-suffix="+">0</b><span>Years building</span></div>
+  </div>
+</div>
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cv = document.getElementById("net"), ctx = cv.getContext("2d");
+  let W, H, pts = [], mouse = { x: -9999, y: -9999 };
+  function resize() {
+    W = cv.width = innerWidth * devicePixelRatio;
+    H = cv.height = innerHeight * devicePixelRatio;
+    const n = Math.min(110, Math.floor(innerWidth / 14));
+    pts = Array.from({ length: n }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - .5) * .35 * devicePixelRatio,
+      vy: (Math.random() - .5) * .35 * devicePixelRatio,
+      r: (Math.random() * 1.4 + .6) * devicePixelRatio
+    }));
+  }
+  addEventListener("resize", resize); resize();
+  addEventListener("pointermove", e => {
+    mouse.x = e.clientX * devicePixelRatio; mouse.y = e.clientY * devicePixelRatio;
+  });
+  const LINK = 130 * devicePixelRatio, PULL = 200 * devicePixelRatio;
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of pts) {
+      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
+      if (d < PULL) { p.vx += dx / d * .02; p.vy += dy / d * .02; }
+      p.vx *= .995; p.vy *= .995;
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7);
+      ctx.fillStyle = "rgba(45,212,191,.7)"; ctx.fill();
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < LINK) {
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+        ctx.strokeStyle = `rgba(45,212,191,${.16 * (1 - d / LINK)})`;
+        ctx.lineWidth = devicePixelRatio; ctx.stroke();
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  if (!reduced) frame();
+  else { ctx.clearRect(0, 0, W, H); }
+  document.querySelectorAll("[data-count]").forEach(el => {
+    const target = +el.dataset.count, suffix = el.dataset.suffix || "";
+    if (reduced) { el.textContent = target.toLocaleString() + suffix; return; }
+    const t0 = performance.now(), dur = 1400;
+    (function tick(t) {
+      const p = Math.min((t - t0 - 900) / dur, 1);
+      if (p < 0) return requestAnimationFrame(tick);
+      const eased = 1 - (1 - p) ** 3;
+      el.textContent = Math.round(target * eased).toLocaleString() + (p === 1 ? suffix : "");
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+</script>
+</body>
+</html>

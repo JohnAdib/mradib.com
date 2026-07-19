@@ -13,39 +13,42 @@ Bold and unique: nobody else's personal site should look like this. If a
 choice could appear on a template, push further. One striking idea per page
 beats five decorations. Bold never means loud.
 
-## Candidate directions, John picks one in a future session
+## Candidate directions, round 2, John picks one
 
-Live hero prototypes for all three exist in [mockups/](mockups/), same
-content in each so only the design differs. Open them in a browser to see
-the motion. Log the pick in ../advisor/decisions.md, rewrite direction.md
-around the winner, then delete the mockups folder.
+Round 1 verdict (2026-07-19): Monograph rejected as old school, Signal
+rejected as too plain, Aurora v1 had an acceptable background but weak
+motion. The bar: dark, dramatic, and the animation itself must impress.
 
-### 1. Signal, evolve the current look
+Live hero prototypes exist in [mockups/](mockups/), same content in each
+so only the design differs. Open them in a browser; static screenshots
+cannot show the motion. Log the pick in ../advisor/decisions.md, rewrite
+direction.md around the winner, then delete the mockups folder.
 
-- Keeps: teal on zinc, Inter and Vazirmatn, all current signatures.
-- Changes: every signature sharpened, motion density up (scroll-driven
-  reveals everywhere, richer hero motion), more confident type scale jumps.
-- Feel: precise, engineered, quietly premium. Lowest risk, compounds the
-  look visitors already know.
+### 1. Kinetic, the type is the animation
 
-### 2. Monograph, editorial luxury
+- Massive kinetic typography: lines rise from masked containers, words
+  thin and recolor under the cursor (Inter variable weight axis), a giant
+  outline ghost word drifts behind, an infinite marquee of proof points,
+  magnetic CTAs that follow the cursor, stats count up.
+- Feel: awwwards-grade type-driven site. Distinctive without a single
+  image; motion is the identity.
 
-- Keeps: zinc neutrals, restrained color, the mobile-first grid.
-- Changes: magazine register. Oversized editorial headings in Fraunces (a
-  characterful display serif on Google Fonts, pairs well with Inter body
-  and coexists with Vazirmatn on the fa tree), high-contrast pull quotes,
-  scroll-driven storytelling built for the About arc.
-- Feel: a profile in a serious magazine. Strongest fit for "what an amazing
-  story" and the luxury feeling John asked about.
+### 2. Constellation, a living network
 
-### 3. Aurora, cinematic AI-first
+- A full-screen canvas particle network (hand-built, no library) that
+  drifts and reacts to the cursor; nodes and links read as the mentorship
+  network. Shimmering gradient headline, circular portrait with radar
+  pulse rings, glass stat chips, count-up stats.
+- Feel: alive and technical, the network IS the story of reach and scale.
 
-- Keeps: the accent system (one-point rebrand in src/styles/tailwind.css).
-- Changes: dark-first identity, aurora gradients evolving the teal into a
-  teal-to-violet range, deeper glows, Space Grotesk headings (a distinctive
-  modern grotesque) with Inter body, canvas particle moments on heroes.
-- Feel: the site of someone defining AI-first engineering. Highest wow,
-  highest risk, must stay tasteful on a phone in daylight.
+### 3. Aurora v2, cinematic depth
+
+- The round-1 aurora background rebuilt with real motion: three hue-drifting
+  blobs, a cursor spotlight layer, 3D tilt on the portrait with an animated
+  gradient border, bobbing glass stat chips, sweeping gradient text and CTA,
+  count-up stats.
+- Feel: the most cinematic and layered; every input from the visitor moves
+  something on the page.
 
 ## Responsive doctrine, non-negotiable in every direction
 

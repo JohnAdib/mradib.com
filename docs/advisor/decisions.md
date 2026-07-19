@@ -4,6 +4,16 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, visual direction round 1 rejected, round 2 built
+
+John rejected Monograph (editorial serif, "old school"), Signal (current
+look sharpened, "literally nothing"), and Aurora v1's weak motion (the
+background was acceptable). The bar he set: dark, dramatic, and the
+animation itself must impress; more examples wanted. Round 2 prototypes in
+docs/designer/mockups: kinetic (type-driven motion), constellation
+(interactive particle network), aurora2 (cinematic depth with cursor
+spotlight and 3D tilt). Light editorial looks are off the table.
+
 ## 2026-07-19, the Designer advisor is created
 
 Second seat on the board, at docs/designer, with the skill
@@ -15,6 +25,27 @@ visual direction pick (Signal, Monograph, or Aurora in
 docs/designer/direction.md) is deferred until John chooses; the current
 teal-on-zinc identity stays until then. John is open to replacing Inter
 for a more luxurious identity as part of that pick.
+
+## 2026-07-19, About page: the London restart is told in full
+
+John approved telling the hard part of the 2022 move: he closed Jibres, left
+everything behind, and restarted in London as a software engineer on a Skilled
+Worker visa. Framing rule: always an intentional, future-proofing decision,
+never a bet or gamble. No politics, no commentary on the home country. The
+salary tradeoff between cities stays off the site (offers were not final).
+This beat deliberately sets up the Global Talent chapter: sponsored arrival in
+2022, unsponsored endorsement in 2024.
+
+## 2026-07-19, chapter slugs are one word
+
+Every About chapter anchor is a single word (shop, talent, ai, windows), never
+hyphenated. Applies to any future chapter or section slug.
+
+## 2026-07-19, University of Tehran audience number
+
+Use 200+ attendees (all sessions exceeded 200, a couple reached 300+; keep it
+simple, do not mix numbers). The missing-photos story is published as an
+authentic beat, ending with an open ask for photos from attendees.
 
 ## 2026-07-19, the Brand Advisor is created and takes authority
 
