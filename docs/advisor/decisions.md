@@ -4,6 +4,17 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, the intro paragraph stops repeating the name on the page
+
+With "John Adib" as the H1, the paragraph no longer opens "I'm John
+Adib" on the page; it renders "An engineering leader in London. 17+
+years in, three verbs..." The CLIPBOARD copy still opens "I'm John
+Adib, an engineering leader in London" so the pasted handout carries
+the name and travels complete. One body string in src/data/intro-bio.ts
+feeds both; only the opener differs. This refines the canonical-intro
+decision below: copied text is now the name-prefixed rendition, not the
+literal on-page text.
+
 ## 2026-07-19, the homepage title is the name, the header goes quiet there
 
 Settled via the headline lab (docs/designer/mockups/headline-lab.html,

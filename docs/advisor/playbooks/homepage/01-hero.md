@@ -45,9 +45,12 @@ where the paragraph begins (engineering leader in London) and the words
 would double. Retired earlier rounds and their rulings: no credentials,
 counts, award names, government wording, "teenager", or growth claims
 in the title ("Everything I build grows" is factually wrong, John ended
-both startups himself). Below the H1, the intro paragraph renders
-verbatim via the click-to-copy HomeIntro component; a tap just copies,
-no tooltip, no instruction. Method note: five rounds of chat-text
+both startups himself). Below the H1, the intro paragraph renders via
+the click-to-copy HomeIntro component; a tap just copies, no tooltip,
+no instruction. Because the H1 carries the name, the on-page paragraph
+opens "An engineering leader in London." while the clipboard copy opens
+"I'm John Adib, an engineering leader in London." (one body string, two
+openers, src/data/intro-bio.ts). Method note: five rounds of chat-text
 options failed; rendering candidates in the real lockup
 (docs/designer/mockups/headline-lab.html) settled it in one pass.
 
