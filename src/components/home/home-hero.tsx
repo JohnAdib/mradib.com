@@ -11,15 +11,15 @@ export function HomeHero() {
 			<div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16">
 				<div className="max-w-2xl">
 					<h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-						<span className="reveal-up block">Engineering leader.</span>
-						<span className="reveal-up reveal-delay-1 block">
+						<span className="reveal-rise block">Engineering leader.</span>
+						<span className="reveal-rise reveal-delay-1 block">
 							2× startup co-founder.
 						</span>
-						<span className="reveal-up reveal-delay-2 mt-3 block text-2xl text-accent-700 sm:text-3xl dark:text-accent-400">
+						<span className="reveal-rise reveal-delay-2 mt-3 block text-2xl text-accent-700 sm:text-3xl dark:text-accent-400">
 							Mentor to hundreds of engineers.
 						</span>
 					</h1>
-					<p className="reveal-up reveal-delay-3 mt-6 text-base text-zinc-600 dark:text-zinc-400">
+					<p className="reveal-rise reveal-delay-3 mt-6 text-base text-zinc-600 dark:text-zinc-400">
 						I'm John Adib, an engineering leader in London. Over{" "}
 						{experienceYears}+ years I've co-founded two startups, taught 2,000+
 						students, and run {mentoringStats.sessions}+ mentorship sessions on
@@ -38,12 +38,13 @@ export function HomeHero() {
 					</div>
 				</div>
 				<div className="reveal-up reveal-delay-2 hidden lg:block lg:pt-2">
+					{/* Lazy images with no layout box are not fetched, so phones skip the download. */}
 					<Image
-						src="/img/john-adib-hero.jpg"
+						src="/img/john-adib-hero-576.jpg"
 						alt="John Adib, Engineering Manager in London"
-						width={952}
-						height={952}
-						priority
+						width={576}
+						height={576}
+						loading="lazy"
 						className="aspect-square w-72 rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
 					/>
 				</div>

@@ -28,21 +28,21 @@ const hostedAt = [
 export function TalksHero() {
 	return (
 		<div className="max-w-2xl">
-			<p className="reveal-up text-sm font-medium tracking-wide text-accent-700 uppercase dark:text-accent-400">
+			<p className="reveal-rise text-sm font-medium tracking-wide text-accent-700 uppercase dark:text-accent-400">
 				Talks & Speaking
 			</p>
 			<h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
-				<span className="reveal-up reveal-delay-1 block">
+				<span className="reveal-rise reveal-delay-1 block">
 					I've built two companies.
 				</span>
-				<span className="reveal-up reveal-delay-2 block">
+				<span className="reveal-rise reveal-delay-2 block">
 					I lead AI-first teams.
 				</span>
-				<span className="reveal-up reveal-delay-3 block text-accent-700 dark:text-accent-400">
+				<span className="reveal-rise reveal-delay-3 block text-accent-700 dark:text-accent-400">
 					I speak about both.
 				</span>
 			</h1>
-			<p className="reveal-up reveal-delay-4 mt-6 text-base text-zinc-600 dark:text-zinc-400">
+			<p className="reveal-rise reveal-delay-4 mt-6 text-base text-zinc-600 dark:text-zinc-400">
 				At conferences and meetups, I cover founding and growing companies,
 				software engineering, applied AI, and the leadership it takes to hold a
 				team together.

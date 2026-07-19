@@ -29,12 +29,11 @@ export function Avatar({
 			{...props}
 		>
 			<Image
-				src="/img/john-adib-avatar.jpg"
+				src="/img/john-adib-avatar-108.jpg"
 				alt="MrAdib"
-				width={1280}
-				height={1280}
+				width={108}
+				height={108}
 				className="h-9 w-9 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
-				priority
 			/>
 		</Link>
 	);

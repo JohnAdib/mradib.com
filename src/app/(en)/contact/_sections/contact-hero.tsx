@@ -7,16 +7,16 @@ export function ContactHero() {
 	return (
 		<Container className="mt-16 sm:mt-32">
 			<div className="max-w-3xl">
-				<p className="reveal-up text-sm font-medium tracking-wide text-accent-700 uppercase dark:text-accent-400">
+				<p className="reveal-rise text-sm font-medium tracking-wide text-accent-700 uppercase dark:text-accent-400">
 					Contact
 				</p>
 				<h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
-					<span className="reveal-up reveal-delay-1 block">One inbox.</span>
-					<span className="reveal-up reveal-delay-2 block text-accent-700 italic dark:text-accent-400">
+					<span className="reveal-rise reveal-delay-1 block">One inbox.</span>
+					<span className="reveal-rise reveal-delay-2 block text-accent-700 italic dark:text-accent-400">
 						Every door.
 					</span>
 				</h1>
-				<p className="reveal-up reveal-delay-3 mt-6 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
+				<p className="reveal-rise reveal-delay-3 mt-6 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
 					Mentorship, a stage, or a plain hello. Reach me directly, no forms and
 					no gatekeepers.
 				</p>

@@ -14,6 +14,21 @@
 	animation: reveal-up 0.6s ease-out both;
 }
 
+/* Text-only entrance: moves but never hides. Opacity stays at 1 so Chrome
+   counts above-fold text as painted, keeping LCP off the animation timeline. */
+@keyframes reveal-rise {
+	from {
+		transform: translateY(12px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.reveal-rise {
+	animation: reveal-rise 0.6s ease-out both;
+}
+
 .reveal-delay-1 {
 	animation-delay: 0.1s;
 }
@@ -28,7 +43,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.reveal-up {
+	.reveal-up,
+	.reveal-rise {
 		animation: none;
 	}
 }
