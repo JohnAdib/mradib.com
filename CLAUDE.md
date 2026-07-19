@@ -2,21 +2,14 @@
 
 Project conventions for mradib.com. Read this before changing content or code.
 
-## Writing style, hard rules
+## Brand Advisor, read first
 
-- NEVER use em dashes or en dashes anywhere in the codebase: not in copy, not in comments, not in data strings, not in docs. Use a full stop or a comma instead. Date ranges use "to", for example "2015 to 2017".
-- Tone: humble but confident. No filler words like "roughly". No bragging adjectives. Let numbers speak for themselves.
-- Never quote LinkedIn recommendations or testimonials on the site.
-- Open source is an identity line plus a GitHub link. Never showcase repo names or stats.
-- English pages never link into the Persian tree. The only crossover is the فارسی item in the main navigation.
-- Family appears in prose only, never in metadata or schema.
-
-## Homepage philosophy
-
-Curate, do not enumerate. The homepage introduces the identity, shows a few
-selected highlights, and sends visitors to the hub pages. Full lists live on
-/awards, /talks, and /articles. A stat earns its place only if it means
-something on its own.
+Before ANY change to content, copy, design, images, SEO, metadata, or
+structured data, read docs/advisor/README.md and follow its routing table.
+The Brand Advisor owns positioning, tone, audiences, imagery, and the page
+playbooks. It supersedes older conventions everywhere except the Delivery
+rules below. When John gives new brand direction, log it in
+docs/advisor/decisions.md.
 
 ## Engineering standards
 
@@ -33,4 +26,5 @@ something on its own.
 
 ## Reference
 
-- The docs folder holds John's verified career history: experience, awards, certifications, volunteering, education, talks, and sources. Use it as the source of truth instead of searching the web.
+- docs/advisor holds the brand strategy: positioning, voice, audiences, imagery, playbooks, and the decision log. Consult it before any content or design change.
+- The rest of the docs folder holds John's verified career history: experience, awards, certifications, volunteering, education, talks, and sources. Use it as the source of truth instead of searching the web.

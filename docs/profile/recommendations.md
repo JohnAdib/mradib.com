@@ -2,7 +2,8 @@
 
 Source: LinkedIn recommendations export (received tab), July 2026.
 
-IMPORTANT: reference only. John's rule: never quote these on the site.
+Quoting these on the site is allowed, selectively, with name and role. See
+docs/advisor/voice.md. Decision logged 2026-07-19 in docs/advisor/decisions.md.
 
 | From | Role | Date | Relationship | Quote highlights |
 |------|------|------|--------------|------------------|
