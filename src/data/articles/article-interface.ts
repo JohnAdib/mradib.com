@@ -12,5 +12,6 @@ export interface IArticle {
 	/** Persian counterpart path, when the article has one. Drives sitemap pairing and i18n alternates. */
 	faPath?: string;
 	keywords: string[];
+	inLanguage?: string;
 	pdfUrl?: string;
 }

@@ -37,6 +37,8 @@ export interface IProfile {
 	jobTitle: string;
 	company: IProfileCompany;
 	titleTag: string;
+	/** Root relative path of the canonical portrait, used by Person JSON-LD */
+	image: string;
 	oneLiner: string;
 	shortBio: string;
 	bio50: string;
@@ -56,6 +58,7 @@ export const profile: IProfile = {
 	jobTitle: "Engineering Manager",
 	company: { name: "Zapp", url: "https://www.justzapp.com" },
 	titleTag: "John Adib - Engineering Manager, Founder & Mentor | MrAdib",
+	image: "/img/john-adib.jpg",
 	oneLiner:
 		"Engineering Manager and 2× startup co-founder, pioneering AI-first development in London.",
 	shortBio:

@@ -1,13 +1,8 @@
-import { Inter, Newsreader, Vazirmatn } from "next/font/google";
-
-export const fontFa = Vazirmatn({
-	subsets: ["latin"],
-	display: "swap",
-	variable: "--font-fa",
-});
+import { Inter, Newsreader } from "next/font/google";
 
 export const fontEn = Inter({
 	subsets: ["latin"],
+	display: "swap",
 	variable: "--font-en",
 });
 

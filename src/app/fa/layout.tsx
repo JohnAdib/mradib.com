@@ -3,6 +3,7 @@ import { RootShell } from "@/components/root-shell";
 import { rootMetadataFa } from "@/lib/root-metadata-fa";
 import { rootViewport } from "@/lib/root-viewport";
 import "@/styles/tailwind.css";
+import { fontFa } from "./fonts";
 
 export const metadata = rootMetadataFa;
 export const viewport = rootViewport;
@@ -19,7 +20,7 @@ export default function RootLayout({
 			lang="fa"
 			suppressHydrationWarning
 		>
-			<RootShell>
+			<RootShell className={fontFa.variable}>
 				<div className="flex w-full">
 					<Layout>{children}</Layout>
 				</div>

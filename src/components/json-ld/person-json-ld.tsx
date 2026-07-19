@@ -16,7 +16,7 @@ export function PersonJsonLd(): JSX.Element {
 		jobTitle: profile.jobTitle,
 		description: profile.shortBio,
 		url: homepageUrl,
-		image: `${homepageUrl}/img/john-adib.jpg`,
+		image: `${homepageUrl}${profile.image}`,
 		worksFor: {
 			"@type": "Organization",
 			name: profile.company.name,

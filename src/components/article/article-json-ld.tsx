@@ -14,6 +14,7 @@ interface IArticleJSONLD {
 	keywords: string[];
 	datePublished: string;
 	dateModified: string;
+	inLanguage?: string;
 }
 
 export function ArticleJsonLD({
@@ -25,6 +26,7 @@ export function ArticleJsonLD({
 	keywords,
 	datePublished,
 	dateModified,
+	inLanguage,
 }: IArticleJSONLD): JSX.Element {
 	const articleImg = homepageUrl + coverImage?.src;
 	const articleUrl = homepageUrl + urlPath;
@@ -58,6 +60,7 @@ export function ArticleJsonLD({
 		},
 		url: articleUrl,
 		keywords: keywords,
+		inLanguage: inLanguage ?? "en-GB",
 	};
 
 	return (
