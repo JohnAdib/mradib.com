@@ -88,7 +88,9 @@ per beat,
 same facts as before, no new claims. The paragraph repeats the thesis
 deliberately because the copied text travels without the headline. Also
 ruled: the click-to-copy paragraph shows no tooltip and no instruction,
-a tap just copies (the Copied confirmation stays).
+a tap just copies. (Superseded later 2026-07-19: the "Copied"
+confirmation badge is removed too; the copy is fully silent, John's
+call.)
 
 ## 2026-07-19, hero H1 round two: no government, no teenager, entrepreneurship
 

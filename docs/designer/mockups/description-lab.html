@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Description Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: Inter, sans-serif; background: #f7f3ec; color: #27272a; transition: background .3s; }
+  body.dark { background: #000; color: #f4f4f5; }
+  .bar { position: sticky; top: 0; z-index: 9; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; backdrop-filter: blur(8px); background: rgba(247,243,236,.8); }
+  body.dark .bar { background: rgba(0,0,0,.7); }
+  .bar h1 { font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .bar button { font: inherit; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(39,39,42,.2); background: transparent; color: inherit; cursor: pointer; }
+  body.dark .bar button { border-color: rgba(244,244,245,.25); }
+  .cand { max-width: 720px; margin: 0 auto; padding: 56px 24px 52px; border-bottom: 1px solid rgba(39,39,42,.12); }
+  body.dark .cand { border-color: rgba(244,244,245,.12); }
+  .num { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .08em; padding: 4px 12px; border-radius: 999px; background: rgba(39,39,42,.08); color: #52525b; margin-bottom: 22px; }
+  body.dark .num { color: #a1a1aa; background: rgba(244,244,245,.08); }
+  .rec { background: rgba(15,118,110,.12); color: #0f766e; }
+  body.dark .rec { color: #2dd4bf; background: rgba(45,212,191,.12); }
+  .name { font-family: Newsreader, serif; font-weight: 620; letter-spacing: -.02em; font-size: clamp(40px, 7vw, 60px); line-height: 1.05; color: #27272a; }
+  body.dark .name { color: #fafafa; }
+  .tag { font-family: Newsreader, serif; font-weight: 600; letter-spacing: -.01em; font-size: clamp(21px, 3.4vw, 29px); margin-top: 12px; color: #0f766e; }
+  body.dark .tag { color: #2dd4bf; }
+  .para { margin-top: 20px; font-size: 16px; line-height: 1.7; color: #52525b; max-width: 640px; }
+  body.dark .para { color: #a1a1aa; }
+  .kind { margin-top: 14px; font-size: 12px; color: #a1a1aa; letter-spacing: .03em; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="bar"><h1>Description Lab · pick a number</h1><button onclick="document.body.classList.toggle('dark')">Toggle dark</button></div>
+<div id="list"></div>
+<script>
+const options = [
+  ["Short and magnetic", true, "on-page recommendation: two proofs, a forward line, the sections carry the rest",
+    "An engineering leader in London. Two startups, a million users, thousands taught, and named The World's Most Influential Mentor. Today I build AI-first, changing how teams work, not just how fast they ship."],
+  ["Curated flow", false, "comprehensive but smooth, no gimmick. strong clipboard candidate",
+    "An engineering leader in London. I've co-founded two startups, reached a million users, and served 1,200+ businesses. I've taught thousands and mentored engineers across the world. ADPList named me The World's Most Influential Mentor; the UK endorsed me as exceptional talent. Today I build AI-first, changing how teams work, not just how fast they ship."],
+  ["Momentum fragments", false, "staccato, confident, every fragment a proof",
+    "An engineering leader in London, seventeen years in and still building. Two startups. A million users. 1,200+ businesses. The World's Most Influential Mentor, endorsed by the UK. Now building AI-first."],
+  ["Warm and human", false, "voice-forward, opens on the why, not the numbers",
+    "An engineering leader in London, still chasing what I chased as a kid: build something that works, then make it bigger. Two startups, thousands of students, engineers mentored around the world. Today that means building AI-first, changing how teams work, not just how fast they ship."],
+  ["Current", false, "what is live now, for comparison",
+    "An engineering leader in London. 17+ years in, three verbs: I build, I teach, I mentor. Two startups, $1M raised, a million users in the first month, 1,200+ businesses served. 2,000+ students taught, 600+ mentorship sessions, and ADPList named me The World's Most Influential Mentor. The UK endorsed me as exceptional talent in technology. These days I build AI-first: changing how teams work, not just how fast they ship."],
+];
+document.getElementById("list").innerHTML = options.map(([label, rec, kind, para], i) =>
+  `<section class="cand"><span class="num ${rec ? "rec" : ""}">Option ${i + 1}${rec ? " · recommended" : ""}</span><div class="name">John Adib</div><div class="tag">Still building, every single day.</div><p class="para">${para}</p><p class="kind">${label}. ${kind}</p></section>`
+).join("");
+</script>
+</body>
+</html>
