@@ -1,5 +1,6 @@
 import { articlesMeta } from "@/data/articles/articles-meta";
 import { adplistBadgeTimeline, flagshipAwards } from "@/data/awards";
+import { career } from "@/data/career";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { profile, urlGitNation } from "@/data/profile";
 import { podcastAppearances, talks } from "@/data/talks/talks";
@@ -31,19 +32,22 @@ export function sectionKeyFacts(): string {
 		(pod) =>
 			`- Podcast: "${pod.title}" on ${pod.show} (Spotify, ${pod.duration}).`,
 	);
+	const careerLines = career.map((entry) => {
+		const org = entry.current
+			? `${entry.org} (${profile.company.url}), ${profile.location.city}`
+			: entry.org;
+		return `- ${entry.role} at ${org}, ${entry.period}: ${entry.facts.join(" ")}`;
+	});
 	return [
 		"## Key facts",
 		"",
-		`- Current role: ${profile.jobTitle} at ${profile.company.name} (${profile.company.url}), London. Joined as Senior Software Engineer in December 2024, Engineering Manager since April 2026.`,
-		"- AI-first leadership at Zapp: AI reviewers on every pull request, AI agents and skills woven through the workflow, app releases accelerated from monthly to weekly.",
-		"- 2× startup co-founder: Sarshomar (Co-Founder and CEO, 2015 to 2017: raised $1M and reached one million users in its first month) and Jibres (Co-Founder and CTO, 2019 to 2022: an e-commerce platform serving 1,200+ businesses).",
-		`- Mentoring: ${mentoringStats.sessions}+ mentorship sessions and ${mentoringStats.minutes.toLocaleString("en-GB")}+ mentoring minutes on ADPList since June 2024 (as of July 2026).`,
+		...careerLines,
+		`- Mentoring: ${mentoringStats.sessions}+ mentorship sessions and ${mentoringStats.minutes.toLocaleString("en-GB")}+ mentoring minutes on ADPList since June 2024 (as of ${mentoringStats.statsAsOf}).`,
 		...awardLines,
 		`- ADPList recognition: ${adplistBadgeTimeline.join("; ")}.`,
 		...talkLines,
 		...podcastLines,
 		`- Education: ${profile.education.degrees.join("; ")}, ${profile.education.school}.`,
-		"- Earlier career: Head of Engineering at Ermile (education platform, 500k+ students); IT lecturer at one of the country's biggest universities; taught 2,000+ students across 4 universities (2006 to 2017); volunteer CTO of the Khadija Society charity (2017 to 2022).",
 		`- Open-source contributor: ${urlSocial.github}`,
 	].join("\n");
 }

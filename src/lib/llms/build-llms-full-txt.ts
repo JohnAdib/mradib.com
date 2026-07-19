@@ -10,6 +10,7 @@ import {
 	sectionFullBiography,
 	sectionPersian,
 } from "@/lib/llms/llms-sections-extra";
+import { sectionSiteStructure } from "@/lib/llms/llms-sections-routes";
 
 export function buildLlmsFullTxt(): string {
 	return `${[
@@ -18,6 +19,7 @@ export function buildLlmsFullTxt(): string {
 		sectionKeyFacts(),
 		sectionAllRecognition(),
 		sectionPages(),
+		sectionSiteStructure(),
 		sectionProfiles(),
 		sectionEvidence(),
 		sectionPersian(),
