@@ -17,11 +17,12 @@ export function AboutIcdl() {
 			</p>
 			<p>
 				That summer I stood in front of my first ever class: a small group of
-				adults around computers, and the owner of the institute outside the
-				door, listening. Afterwards she told me she was impressed by how a
-				teenager ran a room. What she had actually watched was my style forming:
-				I never followed a syllabus, mine or anyone else's. I taught what
-				matters.
+				adults around computers, and the manager of the institute outside the
+				door, listening. Afterwards she told me she was impressed by how I ran
+				the room. What she had actually watched was my style forming: I never
+				followed a syllabus, mine or anyone else's. I taught what matters. It
+				worked, too: my students' results averaged above the other classes, and
+				my courses became some of the institute's most popular.
 			</p>
 			<p>
 				I taught there for two years, all while still in high school. One course

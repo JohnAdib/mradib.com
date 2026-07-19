@@ -19,10 +19,11 @@ export function AboutVideos() {
 				>
 					seventeen minutes on building a table of contents in Microsoft Word
 				</Link>
-				, in gloriously bad quality. It did not matter. Everyone was making them
-				by hand for a thesis or a book, page by painful page, and I showed the
-				automatic way. That one video collected 400 comments on my personal
-				website alone.
+				. It was years ago: the teaching held up, the audio did not. I went on
+				fighting audio quality for years, and it won most rounds. It did not
+				matter. Everyone was making tables of contents by hand for a thesis or a
+				book, page by painful page, and I showed the automatic way. That one
+				video collected 400 comments on my personal website alone.
 			</p>
 			<p>
 				Then came the boom: a full Excel course packed into a two-hour video in
