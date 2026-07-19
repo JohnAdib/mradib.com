@@ -91,25 +91,31 @@ video {
 	font-optical-sizing: auto;
 }
 
-[dir="rtl"] {
-	font-family: var(--font-fa);
-}
-[dir="ltr"] {
-	font-family: var(--font-en);
-}
-
-a[href^="/fa"] {
-	font-family: var(--font-fa);
-}
 /*
-  Same-page anchors (href="#...") carry the surrounding text, so they must
-  follow their `dir` context, not be forced to English. Excluding them here
-  lets them inherit Vazirmatn inside `[dir="rtl"]` (TOC rows, section headings,
-  checklist group links) and Inter inside `[dir="ltr"]`. All other non-Persian
-  links stay Inter.
+  Font-per-direction rules live in the base layer so font utilities
+  (font-display, font-en, font-fa) can always override them. Unlayered
+  rules would beat every utility regardless of specificity.
 */
-a:not([href^="/fa"]):not([href^="#"]) {
-	font-family: var(--font-en);
+@layer base {
+	[dir="rtl"] {
+		font-family: var(--font-fa);
+	}
+	[dir="ltr"] {
+		font-family: var(--font-en);
+	}
+
+	a[href^="/fa"] {
+		font-family: var(--font-fa);
+	}
+	/*
+	  Latin-label links inside Persian (RTL) pages render Inter, not
+	  Vazirmatn. Same-page anchors (href="#...") carry the surrounding
+	  text, so they follow their dir context. On LTR pages links simply
+	  inherit, which lets display-styled headings pass Newsreader down.
+	*/
+	[dir="rtl"] a:not([href^="/fa"]):not([href^="#"]) {
+		font-family: var(--font-en);
+	}
 }
 
 ::selection {
