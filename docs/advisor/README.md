@@ -25,7 +25,7 @@ serves that reaction.
 | You are about to... | Read first |
 |---|---|
 | Touch any copy, anywhere | voice.md |
-| Edit the homepage | positioning.md, audiences.md, playbooks/homepage.md |
+| Edit the homepage | positioning.md, audiences.md, playbooks/homepage/README.md |
 | Edit the About page | positioning.md, playbooks/about-page.md |
 | Add or edit a talk | playbooks/talks.md, playbooks/seo.md |
 | Add or edit an article | playbooks/articles.md, playbooks/seo.md |

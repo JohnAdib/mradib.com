@@ -4,6 +4,25 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, homepage content decided: one story in five sections
+
+The parked homepage conversation happened. The page tells one rising
+story: Hero (the whole arc compressed, the locked intro paragraph, CTAs
+"Read the story" to /about and "Get in touch" to /contact), Rise (past:
+medals, classrooms, two companies), Recognition (the UK endorsement, the
+world title, one short testimonial excerpt), Now (AI-first practice plus
+the stages), Invitation (one human sentence, then mentorship and
+speaking). The stat band and the highlights card grid die; numbers live
+inside the story, never in a naked grid. Full spec, one file per
+section: playbooks/homepage/. Supporting rulings from John: the employer
+name is cut from the canonical intro paragraph (src/data/intro-bio.ts
+now opens "an engineering leader in London"); video views are always
+framed "1.2M+ views on YouTube alone", because only YouTube is tracked
+and the real total is higher, so never state a total; homepage
+testimonials are short excerpts with no colleague photos, linking to the
+LinkedIn recommendations page. Design stays parked until section content
+is approved; open questions live inside the section files.
+
 ## 2026-07-19, consistent motion, named header, client-side links only
 
 Three standing rules from John's review. The header shows "John Adib"
