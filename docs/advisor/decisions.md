@@ -4,6 +4,17 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, stat labels darken, body font stops repainting LCP
+
+Lighthouse flagged the StatBand uppercase labels: zinc-500 fails WCAG on
+the warm paper background at 12px; they are zinc-600 now, dark mode
+unchanged. LCP fix: Inter (body text, the LCP element) loads with
+font-display optional, so the largest text paints once in its
+size-adjusted fallback and never repaints late on slow connections;
+Newsreader keeps swap, the display voice is worth the repaint. Verified
+on the production build under Slow 4G with 4x CPU: LCP 1.5s (was 4.1s in
+John's audit), accessibility 100.
+
 ## 2026-07-19, the homepage paragraph is the canonical shareable intro
 
 John's call after considering the About hero: the About hero paragraph

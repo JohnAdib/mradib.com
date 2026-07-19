@@ -12,7 +12,7 @@ function StatContent({ stat }: { stat: IStat }) {
 			<p className="text-3xl font-bold tracking-tight text-zinc-800 tabular-nums sm:text-4xl dark:text-zinc-100">
 				{stat.value}
 			</p>
-			<p className="mt-1.5 text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
+			<p className="mt-1.5 text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 				{stat.label}
 			</p>
 		</>
