@@ -4,6 +4,24 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, the mentor hero card is replaced, typo fixed
+
+The English mentor hero image (src/app/(en)/mentor/_img/mradib-mentoring)
+is swapped for a fresh ADPList "I'm mentoring on adplist.org" card John
+supplied. This retires the old card's known "Principle Software
+Engineer, Loopla" typo and its casual photo; the new one carries the
+professional studio headshot and "Engineering Manager, Zapp". John's
+source PNG was actually a 2732x2032 WebP with heavy black export
+padding; trimmed to the content bounds (balanced margins, 16:10 to match
+the old slot), resized to 1680x1050, and saved as WebP (49KB, down from
+the old 163KB PNG) since the hero loads it eagerly. Import updated to
+.webp. Brand note for future edits: this authentic ADPList card shows
+"Engineering Manager / Zapp" and ADPList blue, which differ from the
+site's "engineering leader" wording and teal accent; kept because it is
+ADPList's own card on the ADPList-context page and John chose it. The
+Persian mentor page (src/app/fa/mentor/_img/mradib-mentoring.png) still
+holds the old typo'd card as a separate file, not yet replaced.
+
 ## 2026-07-19, the word government leaves OG card copy
 
 Ruling from John on the About card: no "government" keyword in the
