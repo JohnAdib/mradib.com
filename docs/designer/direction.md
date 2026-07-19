@@ -15,8 +15,10 @@ beats five decorations. Bold never means loud.
 
 ## Candidate directions, John picks one in a future session
 
-Log the pick in ../advisor/decisions.md, then direction.md gets rewritten
-around the winner.
+Live hero prototypes for all three exist in [mockups/](mockups/), same
+content in each so only the design differs. Open them in a browser to see
+the motion. Log the pick in ../advisor/decisions.md, rewrite direction.md
+around the winner, then delete the mockups folder.
 
 ### 1. Signal, evolve the current look
 

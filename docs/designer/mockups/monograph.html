@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction 2: Monograph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #f7f3ec;
+    color: #191714;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: clamp(24px, 6vw, 64px); }
+  .masthead {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 18px; border-bottom: 1px solid #191714;
+    font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    color: #191714;
+  }
+  .hero { padding-top: clamp(40px, 9vh, 96px); }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(40px, 8.5vw, 92px);
+    font-weight: 400; letter-spacing: -.015em; line-height: 1.04;
+    max-width: 17ch;
+  }
+  h1 em { font-style: italic; font-weight: 400; color: #0f766e; }
+  .layout { display: flex; flex-direction: column; gap: 44px; margin-top: clamp(36px, 6vh, 64px); }
+  @media (min-width: 900px) {
+    .layout { flex-direction: row; align-items: flex-start; gap: 72px; }
+    .layout-text { flex: 1.3; }
+    .layout-img { flex: 1; }
+  }
+  .kicker {
+    font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    color: #7c766c; margin-bottom: 16px;
+  }
+  .sub {
+    font-size: clamp(16px, 2vw, 19px); line-height: 1.75; color: #3d3831; max-width: 54ch;
+  }
+  .sub strong { font-weight: 600; color: #191714; }
+  .ctas { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 13px 24px; font-size: 14px; font-weight: 600;
+    letter-spacing: .04em; text-decoration: none;
+    transition: transform .2s, background .2s, color .2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: #191714; color: #f7f3ec; }
+  .btn-primary:hover { background: #0f766e; }
+  .btn-secondary { color: #191714; box-shadow: inset 0 0 0 1px #191714; }
+  .btn-secondary:hover { background: #191714; color: #f7f3ec; }
+  .layout-img { display: flex; justify-content: center; }
+  .frame { position: relative; width: min(320px, 68vw); }
+  .frame::after {
+    content: ""; position: absolute; inset: 0; transform: translate(14px, 14px);
+    border: 1px solid #191714; z-index: 0;
+  }
+  .portrait {
+    position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+    filter: grayscale(35%) contrast(1.04);
+  }
+  .credit {
+    margin-top: 26px; font-family: "Fraunces", Georgia, serif; font-style: italic;
+    font-size: 15px; color: #7c766c;
+  }
+  .stats {
+    margin-top: clamp(52px, 10vh, 96px); border-top: 1px solid #191714;
+    display: grid; grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat { padding: 26px 18px 6px 0; }
+  .stat b {
+    display: block; font-family: "Fraunces", Georgia, serif; font-weight: 600;
+    font-size: clamp(30px, 3.6vw, 44px); letter-spacing: -.01em;
+  }
+  .stat span {
+    display: block; margin-top: 8px; font-size: 11px; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: #7c766c;
+  }
+  .reveal { opacity: 0; transform: translateY(12px); animation: up .7s ease-out forwards; }
+  .d1 { animation-delay: .08s; } .d2 { animation-delay: .2s; } .d3 { animation-delay: .32s; }
+  .d4 { animation-delay: .44s; } .d5 { animation-delay: .56s; }
+  @keyframes up { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .reveal { animation: none; opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead reveal d1">
+    <span>John Adib</span>
+    <span>London</span>
+  </header>
+  <div class="hero">
+    <h1 class="reveal d2">The builder they ranked <em>first in the world</em>.</h1>
+    <div class="layout">
+      <div class="layout-text">
+        <p class="kicker reveal d3">2x co-founder &middot; AI-first pioneer</p>
+        <p class="sub reveal d3">
+          I raised <strong>$1M</strong> and reached <strong>a million users in a
+          month</strong>, built a platform serving <strong>1,200+
+          businesses</strong>, and was endorsed by the UK government as
+          exceptional talent in technology. Today I lead engineering in London
+          and change how teams build with AI.
+        </p>
+        <div class="ctas reveal d4">
+          <a class="btn btn-primary" href="#">Read the story</a>
+          <a class="btn btn-secondary" href="#">Invite me to speak</a>
+        </div>
+      </div>
+      <div class="layout-img reveal d4">
+        <div>
+          <div class="frame">
+            <img class="portrait" src="../../../public/img/john-adib-hero.jpg" alt="John Adib">
+          </div>
+          <p class="credit">The World's Most Influential Mentor, ADPList 2024.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stats reveal d5">
+    <div class="stat"><b>2</b><span>Startups co-founded</span></div>
+    <div class="stat"><b>600+</b><span>Mentoring sessions</span></div>
+    <div class="stat"><b>5,000+</b><span>Engineers on one stage</span></div>
+    <div class="stat"><b>17+</b><span>Years building</span></div>
+  </div>
+</div>
+</body>
+</html>
