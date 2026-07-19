@@ -3,24 +3,27 @@ import { Chapter } from "./chapter";
 export function AboutTeaching() {
 	return (
 		<Chapter
-			index="06"
+			index="07"
 			era="2006 to 2018 · Teaching at scale"
-			title="Then the classrooms got bigger"
+			title="A voice they already knew"
 			slug="teaching"
 		>
 			<p>
-				Teaching never stopped. From 2006 I taught outside my own class hours
-				and published free Persian video tutorials on web skills and Microsoft
-				Office. Thousands of Persian speakers first met me as a voice explaining
-				what a spreadsheet could really do.
+				The classrooms kept growing. From a small city in the north, I made it
+				to one of the biggest universities in the country as an invited
+				lecturer: web technologies, Excel, presenting, sometimes six hours on
+				stage without a break, to audiences of 200+. Alongside that, eleven
+				years as a part time lecturer across four universities and colleges.
+				More than 2,000 students in total.
 			</p>
 			<p>
-				Then the rooms got serious. From a small city in the north, I made it to
-				one of the biggest universities in the country as an invited lecturer:
-				web technologies, Excel, presenting, sometimes six hours on stage
-				without a break, to audiences of 200+. More than ten of those sessions,
-				alongside eleven years as a part time lecturer across four universities
-				and colleges. More than 2,000 students in total.
+				One session I never forgot: three hundred people in the hall, six hours
+				on the schedule. At the first break a student walked up and said my
+				voice had felt familiar from the moment I started. She thought about it,
+				then placed it: years earlier, she had learned Word from my videos. She
+				knew my voice long before she knew my face. A country of 80 million, and
+				the person in front of me had already been my student. It happened again
+				over the years. The first time is the one I still feel.
 			</p>
 			<p>
 				Here is the part I find funny now. There was a photographer at those

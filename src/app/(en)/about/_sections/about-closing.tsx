@@ -23,7 +23,7 @@ export function AboutClosing() {
 						My resume
 					</Link>{" "}
 					is hand-coded in HTML and CSS, and yes, it exports itself to PDF with
-					a pure-JavaScript trick. Everywhere else you can find me is below.
+					a pure-JavaScript trick.
 				</p>
 			</Reveal>
 			<CtaOnDarkPanel {...pageClosings.about} />

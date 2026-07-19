@@ -4,6 +4,24 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, About round 2: honesty rules and new chapters
+
+John's line-by-line review set standing rules. Never publish a duration he
+cannot remember (no "years in front of the screen" claims). Windows version
+stays unnamed: 95, 98, and XP all play startup sounds, so the sound cannot
+identify the install. Teaching-era chapter dates from 2006 (Canon A640
+released September 2006; his first salary bought it). Silver year
+placements: first in city, first in state, national Silver. Global Talent
+evidence is the LAST FIVE YEARS, innovation category, never "sixteen years
+of evidence". London dates: the decision date (26 December 2021) may be
+exact; the landing stays month-level (December 2022, Heathrow, no day) for
+privacy. The co-founder conflict is never mentioned. Two new chapters:
+online videos (1.2M+ views on one platform, John-stated) and first English
+talks (from July 2025, Figma's office first). Open-source line removed from
+the site's human framing; the About CTA is "Get in touch" to /contact,
+never the awards page. Three privately trained WorldSkills national
+medalists and the Sao Paulo 2015 camp are John-stated facts.
+
 ## 2026-07-19, homepage parked: content strategy before design
 
 All four layout variants (cover, split, persona, ledger) rejected. The

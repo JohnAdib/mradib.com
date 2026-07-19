@@ -3,22 +3,31 @@ import { Chapter } from "./chapter";
 export function AboutLondon() {
 	return (
 		<Chapter
-			index="10"
-			era="2022 · The restart"
+			index="11"
+			era="2021 to 2022 · The restart"
 			title="Sometimes you leave good to reach great"
 			slug="london"
 		>
 			<p>
-				In late 2022 I made the most deliberate decision of my life. I closed
-				Jibres, a company more than 1,200 businesses relied on, said goodbye to
-				everything I had built and everyone who knew my name, and left.
+				On 26 December 2021 I made the most deliberate decision of my life: to
+				leave, and to build the next stage somewhere better. For me, for my
+				family, for the future my daughters get to grow up in. It was not a
+				gamble. It was future-proofing.
 			</p>
 			<p>
-				It was not a gamble. It was future-proofing: for me, for my family, for
-				the future my daughters get to grow up in. Three cities were on the
-				table: Amsterdam, Munich, London. London won. The city itself, the
-				weight of its tech scene, and one practical truth: I would rather master
-				one language than juggle two.
+				What followed was a year of dismantling one life to start another. I
+				began winding down Jibres, a company more than 1,200 businesses relied
+				on. When the national award arrived a few months into that process, it
+				changed nothing. The decision was made. I prepared the CV, took the
+				interviews, went through the visa, and weighed three cities: Amsterdam,
+				Munich, London. London won. The city itself, the weight of its tech
+				scene, and one practical truth: I would rather master one language than
+				juggle two.
+			</p>
+			<p>
+				Almost exactly a year later, in December 2022, my plane landed at
+				Heathrow. Eleven years after WorldSkills London 2011 went on without me,
+				I landed in London after all. Not for a competition this time. To stay.
 			</p>
 			<p>
 				I arrived on a Skilled Worker visa with a job offer, and started again

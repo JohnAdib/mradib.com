@@ -6,7 +6,7 @@ export function AboutSpark() {
 		<Chapter
 			index="05"
 			era="2007 to 2015 · The spark"
-			title="It started with a competition"
+			title="It started with a competition called WorldSkills"
 			slug="worldskills"
 		>
 			<p>
@@ -22,20 +22,24 @@ export function AboutSpark() {
 				So I waited a year, and I did not wait idly. At sixteen I entered the
 				8th national competition: first in my city, first in my state, then a
 				Medallion for Excellence at the national final. That earned a seat at
-				the national team camp for WorldSkills Calgary 2009. I was not chosen to
-				fly.
+				the national team camp for WorldSkills Calgary 2009, though I was not
+				chosen for the international final.
 			</p>
 			<p>
 				Three years later, at the 10th national competition, I went first in my
-				city, second in my state, and won the national Silver Medal. Another
-				camp followed, for WorldSkills London 2011. Again, the plane left
-				without me.
+				city, first in my state, and won the national Silver Medal. Then came
+				another national team camp, this time for WorldSkills London 2011:
+				months of training, and some of the most valuable preparation of my
+				life. I did not get to compete in London. Remember that city, though. It
+				comes back in this story.
 			</p>
 			<p>
-				So I changed sides of the table. From 2010 to 2015 I coached the next
-				wave of competitors as a WorldSkills expert and judge, and the people I
-				trained went on to win medals of their own. I never got the flight. I
-				built the ones who earned theirs, and that turned out to matter more.
+				So I changed sides of the table. As a WorldSkills expert and judge from
+				2010 to 2015, I privately trained three competitors, across different
+				years, and every one of them became a national medalist. Then I taught
+				at the national team camps myself, preparing the next generation,
+				including for WorldSkills São Paulo 2015. The kid who missed a deadline
+				by one day ended up building champions.
 			</p>
 		</Chapter>
 	);

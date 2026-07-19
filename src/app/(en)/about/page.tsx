@@ -15,7 +15,9 @@ import { AboutLondon } from "./_sections/about-london";
 import { AboutMasters } from "./_sections/about-masters";
 import { AboutMentorship } from "./_sections/about-mentorship";
 import { AboutSpark } from "./_sections/about-spark";
+import { AboutTalks } from "./_sections/about-talks";
 import { AboutTeaching } from "./_sections/about-teaching";
+import { AboutVideos } from "./_sections/about-videos";
 import { AboutWindows } from "./_sections/about-windows";
 
 export const metadata: Metadata = {
@@ -42,14 +44,16 @@ export default function About() {
 					<AboutHardwareStore />
 					<AboutIcdl />
 					<AboutSpark />
+					<AboutVideos />
 					<AboutTeaching />
 					<AboutFounder />
-					<AboutJibres />
 					<AboutMasters />
+					<AboutJibres />
 					<AboutLondon />
-					<AboutGlobalTalent />
-					<AboutAiFirst />
 					<AboutMentorship />
+					<AboutGlobalTalent />
+					<AboutTalks />
+					<AboutAiFirst />
 					<AboutHuman />
 					<AboutClosing />
 				</div>

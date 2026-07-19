@@ -1,10 +1,9 @@
-import Link from "next/link";
-import { Chapter, chapterLinkClass } from "./chapter";
+import { Chapter } from "./chapter";
 
 export function AboutAiFirst() {
 	return (
 		<Chapter
-			index="12"
+			index="15"
 			era="Now · How I build"
 			title="AI belongs in the work, not beside it"
 			slug="ai"
@@ -21,12 +20,8 @@ export function AboutAiFirst() {
 				do not live.
 			</p>
 			<p>
-				Since 2025 that is what I{" "}
-				<Link href="/talks" className={chapterLinkClass}>
-					speak about
-				</Link>{" "}
-				at London developer events, from a session at Figma's office to a talk
-				with Cloudflare, and to 5,000+ engineers at the AI Coding Summit.
+				That is what every talk I give starts from: a working practice, proven
+				in production, not slideware.
 			</p>
 		</Chapter>
 	);

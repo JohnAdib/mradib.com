@@ -12,11 +12,9 @@ export interface IPageClosing {
 export const pageClosings: Record<string, IPageClosing> = {
 	about: {
 		title: "The story continues.",
-		desc: "The proof lives on the awards page, and the next chapter is always in motion. Say hello.",
-		linkPrimaryText: "See the awards",
-		linkPrimaryLink: "/awards",
-		linkSecondaryText: "Get in touch",
-		linkSecondaryLink: "/contact",
+		desc: "None of the chapters were planned, and the next one is already in motion. If any part of this story sounds like a conversation you want to have, say hello.",
+		linkPrimaryText: "Get in touch",
+		linkPrimaryLink: "/contact",
 	},
 	awards: {
 		title: "See the work behind the awards.",

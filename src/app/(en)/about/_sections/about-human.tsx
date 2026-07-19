@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { urlSocial } from "@/lib/constants/url-social";
 import { Chapter, chapterLinkClass } from "./chapter";
 
 export function AboutHuman() {
 	return (
 		<Chapter
-			index="14"
+			index="16"
 			era="Off the clock"
 			title="When I close the laptop"
 			slug="human"
@@ -24,17 +23,8 @@ export function AboutHuman() {
 				.
 			</p>
 			<p>
-				I am a regular at this city's developer communities, and I keep an
-				open-source habit on{" "}
-				<Link
-					href={urlSocial.github}
-					target="_blank"
-					rel="noreferrer"
-					className={chapterLinkClass}
-				>
-					GitHub
-				</Link>
-				.
+				A line I try to live by: yesterday is history, tomorrow is a mystery,
+				today is a gift. That is why they call it the present.
 			</p>
 		</Chapter>
 	);

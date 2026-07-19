@@ -11,12 +11,13 @@ export function AboutWindows() {
 			<p>
 				One day my father came home with a different kind of part: a Windows
 				install disc. Nobody showed me what to do with it. I put it in and
-				installed it myself, first try.
+				installed it myself, first try. The first Windows install of my life. I
+				have done hundreds since.
 			</p>
 			<p>
 				The machine rebooted into a graphical screen, and the speaker played the
-				startup sound. After years of a dark, silent command line, the computer
-				talked back.
+				startup sound. After all that time in front of a dark, silent command
+				line, the computer talked back.
 			</p>
 			<p>
 				It lasted a few seconds. I have carried it for decades. Some people

@@ -1,18 +1,19 @@
 import Link from "next/link";
+import { adplistBadges } from "@/data/awards";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { Chapter, chapterLinkClass } from "./chapter";
 
 export function AboutMentorship() {
 	return (
 		<Chapter
-			index="13"
-			era="Now · Full circle"
+			index="12"
+			era="2024 to now · Full circle"
 			title="Back where it started: helping others win"
 			slug="mentorship"
 		>
 			<p>
 				The teenager who learned that helping others win beats winning alone
-				never really left. Today I{" "}
+				never really left. Since June 2024 I{" "}
 				<Link href="/mentor" className={chapterLinkClass}>
 					mentor on ADPList
 				</Link>
@@ -23,9 +24,14 @@ export function AboutMentorship() {
 			</p>
 			<p>
 				ADPList named me the World's Most Influential Mentor in 2024 and again
-				in 2026, and the number one mentor in Europe. I keep the titles in
-				perspective. What I actually chase is the moment something finally
-				clicks for someone.
+				in 2026, and the number one mentor in Europe, alongside{" "}
+				{adplistBadges.length} more monthly and quarterly awards, all catalogued
+				on the{" "}
+				<Link href="/awards" className={chapterLinkClass}>
+					awards page
+				</Link>
+				. I keep the titles in perspective. What I actually chase is the moment
+				something finally clicks for someone.
 			</p>
 			<p>
 				Competitor to coach, engineer to mentor, builder to team leader. It has

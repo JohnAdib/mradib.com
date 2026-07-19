@@ -22,8 +22,8 @@ export function AboutChildhood() {
 			</p>
 			<p>
 				I called it playing. It wasn't really play, and it wasn't really study.
-				It was years in front of a dark screen, and to me that screen was a
-				whole world.
+				I lost track of how long I spent in front of that dark screen. To me, it
+				was a whole world.
 			</p>
 		</Chapter>
 	);

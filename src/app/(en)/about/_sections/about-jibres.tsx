@@ -3,7 +3,7 @@ import { Chapter } from "./chapter";
 export function AboutJibres() {
 	return (
 		<Chapter
-			index="08"
+			index="10"
 			era="2019 to 2022 · Bootstrapped"
 			title="Bootstrapped, from day zero"
 			slug="jibres"
