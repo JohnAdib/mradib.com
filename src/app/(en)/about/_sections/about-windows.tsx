@@ -4,7 +4,7 @@ export function AboutWindows() {
 	return (
 		<Chapter
 			index="02"
-			era="Childhood · The first install"
+			era="90s · The first install"
 			title="The startup sound"
 			slug="windows"
 		>
