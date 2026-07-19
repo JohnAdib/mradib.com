@@ -6,6 +6,7 @@ export const awards: IAward[] = [
 		name: "UK Global Talent Visa (Tech Nation Endorsement)",
 		issuer: "Tech Nation",
 		date: "2024-09",
+		pageUpdated: "2026-07-18",
 		category: "flagship",
 		group: "national",
 		summary:
@@ -16,6 +17,7 @@ export const awards: IAward[] = [
 		name: "The World's Most Influential Mentor",
 		issuer: "ADPList",
 		date: "2025-02",
+		pageUpdated: "2026-07-19",
 		category: "flagship",
 		group: "mentorship",
 		summary:
@@ -35,6 +37,7 @@ export const awards: IAward[] = [
 		name: "#1 Mentor in Europe",
 		issuer: "ADPList",
 		date: "2024-12",
+		pageUpdated: "2026-07-18",
 		category: "flagship",
 		group: "mentorship",
 		summary:
@@ -48,6 +51,7 @@ export const awards: IAward[] = [
 		name: "WorldSkills National Medalist",
 		issuer: "WorldSkills",
 		date: "2010-09",
+		pageUpdated: "2026-07-18",
 		category: "flagship",
 		group: "competition",
 		summary:
@@ -58,6 +62,7 @@ export const awards: IAward[] = [
 		name: "Recognized as a National Elite",
 		issuer: "National Elites Foundation",
 		date: "2013-01",
+		pageUpdated: "2026-07-19",
 		category: "badge",
 		group: "national",
 		summary:
@@ -67,6 +72,7 @@ export const awards: IAward[] = [
 		name: "The Best Site Builder and Application Builder Service",
 		issuer: "14th IR Web Festival",
 		date: "2022-03",
+		pageUpdated: "2026-07-19",
 		category: "badge",
 		group: "product",
 		summary:
@@ -76,6 +82,7 @@ export const awards: IAward[] = [
 		name: "The Best Corporate & Tourism Website",
 		issuer: "5th IR Web Festival",
 		date: "2013-02",
+		pageUpdated: "2026-07-19",
 		category: "badge",
 		group: "product",
 		summary: "National web award at the 5th IR Web Festival (2013).",
@@ -84,6 +91,7 @@ export const awards: IAward[] = [
 		name: "Judge, 2025 CODiE Awards",
 		issuer: "CODiE Awards",
 		date: "2025-01",
+		pageUpdated: "2026-07-19",
 		category: "badge",
 		group: "service",
 		summary:
@@ -93,6 +101,7 @@ export const awards: IAward[] = [
 		name: "Startup Mentor, MassChallenge Switzerland & UK",
 		issuer: "MassChallenge",
 		date: "2025-06",
+		pageUpdated: "2026-07-19",
 		category: "badge",
 		group: "service",
 		summary:

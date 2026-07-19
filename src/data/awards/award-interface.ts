@@ -19,6 +19,8 @@ export interface IAward {
 	issuer: string;
 	/** ISO date (YYYY-MM) of when the award was issued */
 	date: string;
+	/** ISO date (YYYY-MM-DD) the award page last changed, distinct from the award date. */
+	pageUpdated: string;
 	category: AwardCategory;
 	group: AwardGroup;
 	summary: string;

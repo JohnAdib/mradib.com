@@ -9,6 +9,8 @@ export interface IArticle {
 	pageTitle: string;
 	pageDesc: string;
 	pagePath: string;
+	/** Persian counterpart path, when the article has one. Drives sitemap pairing and i18n alternates. */
+	faPath?: string;
 	keywords: string[];
 	pdfUrl?: string;
 }

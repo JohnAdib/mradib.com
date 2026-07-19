@@ -13,6 +13,7 @@ export const articleResume: IArticle = {
 	pageDesc:
 		"It is time to build your standout resume. The complete A to Z guide to resume writing.",
 	pagePath: "/resume",
+	faPath: "/fa/resume",
 	keywords: [
 		"resume",
 		"cv",

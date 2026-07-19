@@ -1,34 +1,10 @@
 import type { MetadataRoute } from "next";
-import { articlesMeta } from "@/data/articles/articles-meta";
-import { flagshipAwards } from "@/data/awards";
-import { routesEn } from "@/data/routes-en";
-import { routesFa } from "@/data/routes-fa";
-import { talks } from "@/data/talks/talks";
-import { homepageUrl } from "@/lib/constants/url";
+import { buildContentEntries } from "@/lib/sitemap/build-content-entries";
+import { buildStaticEntries } from "@/lib/sitemap/build-static-entries";
 
 export const dynamic = "force-static";
 
-function toUrl(path: string): string {
-	return path === "/" ? homepageUrl : `${homepageUrl}${path}`;
-}
-
+// priority and changeFrequency are deliberately omitted. Google ignores both.
 export default function sitemap(): MetadataRoute.Sitemap {
-	const staticPages = [...routesEn, ...routesFa].map((path) => ({
-		url: toUrl(path),
-	}));
-
-	const awardPages = flagshipAwards.map((award) => ({
-		url: toUrl(`/awards/${award.slug}`),
-	}));
-
-	const talkPages = talks.flatMap((talk) =>
-		talk.path ? [{ url: toUrl(talk.path), lastModified: talk.date }] : [],
-	);
-
-	const articles = articlesMeta.map((article) => ({
-		url: toUrl(article.pagePath),
-		lastModified: article.dateModified,
-	}));
-
-	return [...staticPages, ...awardPages, ...talkPages, ...articles];
+	return [...buildStaticEntries(), ...buildContentEntries()];
 }
