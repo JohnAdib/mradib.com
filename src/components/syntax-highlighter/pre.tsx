@@ -1,5 +1,7 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 
+import "@/styles/prism.css";
+
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 type HighlightLanguageType =

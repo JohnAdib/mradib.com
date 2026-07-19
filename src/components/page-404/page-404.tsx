@@ -1,3 +1,4 @@
+import "@/styles/page-404.css";
 import Page404Banner from "./page-404-banner";
 
 export function Page404() {

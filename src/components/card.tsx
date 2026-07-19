@@ -108,9 +108,27 @@ Card.Properties = function CardProperties({
 	);
 };
 
-Card.Image = function CardImage({ src, alt }: { src: string; alt: string }) {
-	// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
-	return <img src={src} alt={alt} className="z-10 mt-4 w-32 rounded-lg" />;
+Card.Image = function CardImage({
+	src,
+	alt,
+	width = 128,
+	height = 128,
+}: {
+	src: string;
+	alt: string;
+	width?: number;
+	height?: number;
+}) {
+	return (
+		// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
+		<img
+			src={src}
+			alt={alt}
+			width={width}
+			height={height}
+			className="z-10 mt-4 h-auto w-32 rounded-lg"
+		/>
+	);
 };
 
 Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {

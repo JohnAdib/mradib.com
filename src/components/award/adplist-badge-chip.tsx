@@ -29,7 +29,13 @@ export function AdplistBadgeChip({
 		>
 			{img ? (
 				// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
-				<img src={img} alt="" className={`${aspect} w-full object-cover`} />
+				<img
+					src={img}
+					alt=""
+					width={480}
+					height={wide ? 270 : 480}
+					className={`${aspect} w-full object-cover`}
+				/>
 			) : (
 				<div
 					className={`flex ${aspect} w-full items-center justify-center bg-accent-50 dark:bg-accent-400/10`}
