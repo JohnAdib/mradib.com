@@ -11,7 +11,7 @@ export const talksFaq: IFaqQA[] = [
 	{
 		id: "formats",
 		q: "What formats do you do?",
-		a: "Conference talks, hands-on workshops, and panels. I have spoken to rooms of 25 and to audiences of more than 5,000.",
+		a: "Conference talks, hands-on workshops, and panels. In person I have spoken to rooms of 200+ people, up to 300, and online to audiences of more than 5,000.",
 	},
 	{
 		id: "location",
@@ -21,11 +21,11 @@ export const talksFaq: IFaqQA[] = [
 	{
 		id: "slides",
 		q: "Are your slides available?",
-		a: "Yes, and they are free. The slide decks live on the talk pages, ready to download as PDFs.",
+		a: "Yes, and they are free. Every talk page on this site carries its slide deck as a PDF, and I am open to bringing any of those talks to your stage.",
 	},
 	{
 		id: "podcasts",
 		q: "Do you do podcasts?",
-		a: "Yes. I joined Joe's Room for a 41-minute conversation on AI, ownership, and the future of engineering, streaming on Spotify.",
+		a: "Yes. I enjoy podcast conversations about AI, engineering leadership, and founding companies. Invite me the same way you would for a talk.",
 	},
 ];
