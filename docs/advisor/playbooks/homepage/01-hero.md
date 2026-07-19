@@ -47,9 +47,15 @@ counts, award names, government wording, "teenager", or growth claims
 in the title ("Everything I build grows" is factually wrong, John ended
 both startups himself). Below the H1, the intro paragraph renders via
 the click-to-copy HomeIntro component; a tap just copies, no tooltip,
-no instruction. Because the H1 carries the name, the on-page paragraph
-opens "An engineering leader in London." while the clipboard copy opens
-"I'm John Adib, an engineering leader in London." (one body string, two
+no instruction. The paragraph is curated, not a full ledger, because the
+sections below already carry every count; it opens on the founder
+identity (pillar 1), not the day-job title. On-page: "A two-time founder
+and engineering leader in London. $1M raised, a million users in the
+first month, 1,200+ businesses served. I've taught thousands and
+mentored engineers around the world. ADPList named me The World's Most
+Influential Mentor; the UK endorsed me as exceptional talent. Today I
+build AI-first, changing how teams work, not just how fast they ship."
+The clipboard copy prefixes "I'm John Adib, a ..." (one body string, two
 openers, src/data/intro-bio.ts). Method note: five rounds of chat-text
 options failed; rendering candidates in the real lockup
 (docs/designer/mockups/headline-lab.html) settled it in one pass.

@@ -15,6 +15,24 @@ prefer the award's own name over the endorsing institution. The award
 page card keeps "UK Government" as its eyebrow for now, as issuer
 attribution on the award's own page, pending John's word.
 
+## 2026-07-19, the description is curated and founder-led
+
+The homepage description was rewritten fresh (settled via
+docs/designer/mockups/description-lab.html). Two rulings. First, it is
+curated, not a full stat ledger: the sections below already prove every
+count, so the paragraph carries a few undeniable proofs as prose and
+lets the page enumerate. Second, it opens on the founder identity, not
+the day-job title, because positioning.md ranks entrepreneur and builder
+first and the primary audience respects founder over manager. On-page
+text: "A two-time founder and engineering leader in London. $1M raised,
+a million users in the first month, 1,200+ businesses served. I've
+taught thousands and mentored engineers around the world. ADPList named
+me The World's Most Influential Mentor; the UK endorsed me as
+exceptional talent. Today I build AI-first, changing how teams work, not
+just how fast they ship." src/data/intro-bio.ts no longer interpolates
+live counts; the numbers here are frozen historical facts. Supersedes
+the opener wording in the entry below.
+
 ## 2026-07-19, the intro paragraph stops repeating the name on the page
 
 With "John Adib" as the H1, the paragraph no longer opens "I'm John
