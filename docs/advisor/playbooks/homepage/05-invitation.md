@@ -1,6 +1,6 @@
 # Homepage 05: Invitation
 
-Status: draft
+Status: approved
 
 ## Job
 
@@ -41,5 +41,5 @@ Parked.
 
 ## Open questions
 
-- The standalone personal section merges into this close as one
-  sentence. Confirm.
+- None. The standalone personal section merges into this close as one
+  sentence (decided 2026-07-19).

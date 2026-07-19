@@ -1,6 +1,6 @@
 # Homepage 02: Rise
 
-Status: draft
+Status: approved
 
 ## Job
 

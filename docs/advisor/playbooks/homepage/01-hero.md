@@ -1,6 +1,6 @@
 # Homepage 01: Hero
 
-Status: draft
+Status: approved
 
 ## Job
 
@@ -26,12 +26,10 @@ provable.
 
 ## Copy draft
 
-The H1 becomes one arc line, not today's three parallel identities. Two
-candidates, John picks:
+The H1 becomes one arc line, not today's three parallel identities.
+Decided 2026-07-19:
 
-- "From teenage medalist to The World's Most Influential Mentor."
-- "Two startups, a world title, a government endorsement. In that
-  order."
+"Two startups, a world title, a government endorsement. In that order."
 
 The phrase "in that order" is the device that turns a proof list into an
 arc. Below the H1, the intro paragraph renders verbatim via the
@@ -52,5 +50,4 @@ strongest image on the site, a stage shot or a portrait with presence
 
 ## Open questions
 
-- Which H1? The medal-to-mentor arc line, or the founder-led "In that
-  order." line?
+- None.

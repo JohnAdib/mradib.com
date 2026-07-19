@@ -1,6 +1,6 @@
 # Homepage 04: Now
 
-Status: draft
+Status: approved
 
 ## Job
 
@@ -47,5 +47,5 @@ Parked.
 
 ## Open questions
 
-- The podcast card leaves the homepage and lives on /talks only.
-  Confirm.
+- None. The podcast card leaves the homepage and lives on /talks only
+  (decided 2026-07-19).
