@@ -7,7 +7,8 @@ files instead of searching the web.
 
 ## Contents
 
-- [advisor/README.md](advisor/README.md), the Brand Advisor: positioning, voice, audiences, imagery, playbooks, and the decision log. Read it before any content or design change.
+- [advisor/README.md](advisor/README.md), the Brand Advisor: positioning, voice, audiences, imagery, playbooks, and the shared decision log. Read it before any content or design change.
+- [designer/README.md](designer/README.md), the Designer: visual direction, motion foundation, design language, design system registry, and the mandatory screenshot critique. Always consulted together with the Brand Advisor.
 - [profile/experience.md](profile/experience.md), every role with dates and impact bullets
 - [profile/awards.md](profile/awards.md), all 14 honors with exact names, issuers, and dates
 - [profile/certifications.md](profile/certifications.md), all 38 licenses and certifications

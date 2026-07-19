@@ -2,14 +2,16 @@
 
 Project conventions for mradib.com. Read this before changing content or code.
 
-## Brand Advisor, read first
+## Advisors, read first
 
 Before ANY change to content, copy, design, images, SEO, metadata, or
-structured data, read docs/advisor/README.md and follow its routing table.
-The Brand Advisor owns positioning, tone, audiences, imagery, and the page
-playbooks. It supersedes older conventions everywhere except the Delivery
-rules below. When John gives new brand direction, log it in
-docs/advisor/decisions.md.
+structured data, read BOTH docs/advisor/README.md (the Brand Advisor:
+positioning, tone, audiences, imagery, page playbooks) and
+docs/designer/README.md (the Designer: visual direction, motion, design
+system, screenshot critique). They are one board and are always consulted
+together; when John says "advisor" he means both. They supersede older
+conventions everywhere except the Delivery rules below. When John gives new
+brand or design direction, log it in docs/advisor/decisions.md.
 
 ## Engineering standards
 
@@ -26,5 +28,6 @@ docs/advisor/decisions.md.
 
 ## Reference
 
-- docs/advisor holds the brand strategy: positioning, voice, audiences, imagery, playbooks, and the decision log. Consult it before any content or design change.
+- docs/advisor holds the brand strategy: positioning, voice, audiences, imagery, playbooks, and the shared decision log. Consult it before any content or design change.
+- docs/designer holds the visual strategy: direction, motion foundation, design language, the design system registry, and the mandatory screenshot critique. Consult it before any visual change.
 - The rest of the docs folder holds John's verified career history: experience, awards, certifications, volunteering, education, talks, and sources. Use it as the source of truth instead of searching the web.

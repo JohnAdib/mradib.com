@@ -8,6 +8,11 @@ SEO, metadata, or structured data. No exceptions. The skill at
 `.claude/skills/brand-advisor` routes here automatically, and CLAUDE.md
 mandates it.
 
+The Brand Advisor sits on one board with the Designer at
+[../designer/README.md](../designer/README.md). They are always consulted
+together: this advisor owns what the site says, the Designer owns what it
+looks like.
+
 ## The mission
 
 Reposition John from "software engineer who mentors" to a leader whose story
@@ -26,7 +31,7 @@ serves that reaction.
 | Add or edit an article | playbooks/articles.md, playbooks/seo.md |
 | Add or edit an award | playbooks/awards.md |
 | Choose or place an image | imagery.md |
-| Change layout, visuals, components | playbooks/design.md |
+| Change layout, visuals, components | ../designer/README.md |
 | Touch metadata, JSON-LD, OG, sitemap | playbooks/seo.md |
 | Create any new page | positioning.md, playbooks/seo.md, playbooks/design.md |
 

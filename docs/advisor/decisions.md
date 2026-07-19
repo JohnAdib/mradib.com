@@ -1,7 +1,20 @@
-# Brand decisions log
+# Brand and design decisions log
 
-Append-only. Newest first. Date, decision, why. Log every new brand
-direction John gives in any session.
+Append-only. Newest first. Date, decision, why. The shared log for the
+whole advisory board: brand (docs/advisor) and design (docs/designer). Log
+every new direction John gives in any session.
+
+## 2026-07-19, the Designer advisor is created
+
+Second seat on the board, at docs/designer, with the skill
+.claude/skills/designer. Both advisors are always consulted together; the
+word "advisor" means both. Motion is a priority (hand-built, web-native,
+Lottie discouraged). Screenshot proof per docs/designer/critique.md is
+mandatory for every visual change, phone widths first (80% mobile). The
+visual direction pick (Signal, Monograph, or Aurora in
+docs/designer/direction.md) is deferred until John chooses; the current
+teal-on-zinc identity stays until then. John is open to replacing Inter
+for a more luxurious identity as part of that pick.
 
 ## 2026-07-19, the Brand Advisor is created and takes authority
 

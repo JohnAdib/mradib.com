@@ -19,6 +19,9 @@ conference speaker, and ADPList's World's Most Influential Mentor 2024.
   claim on the site.
 - `docs/advisor/` is the Brand Advisor: positioning, voice, audiences,
   imagery, and playbooks consulted before any content or design change.
+- `docs/designer/` is the Designer: visual direction, motion foundation,
+  design language, the design system registry, and the screenshot critique
+  required before any visual change ships.
 
 ## Development
 
