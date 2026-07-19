@@ -7,7 +7,11 @@ export type {
 	IAdplistBadge,
 } from "./adplist-badge-interface";
 export { adplistBadges } from "./adplist-badges";
-export { adplistBadgeTimeline, top1MonthsLabel } from "./adplist-timeline";
+export {
+	adplistBadgeTimeline,
+	mentoringAwardsCount,
+	top1MonthsLabel,
+} from "./adplist-timeline";
 export type {
 	AwardCategory,
 	AwardGroup,

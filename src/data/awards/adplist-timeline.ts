@@ -1,5 +1,6 @@
 import type { AdplistBadgeKind } from "./adplist-badge-interface";
 import { adplistBadges } from "./adplist-badges";
+import { awards } from "./awards";
 
 function byKind(kind: AdplistBadgeKind) {
 	return adplistBadges
@@ -35,3 +36,12 @@ export const adplistBadgeTimeline: string[] = [
 
 /** Single-string form for the sitewide Person JSON-LD `award` property. */
 export const adplistTop1AwardName = `Top 1% Engineering Mentor, awarded ${top1MonthsLabel} months (ADPList, ${top1Years})`;
+
+/**
+ * All ADPList recognition badges plus the flagship mentorship awards
+ * (World's Most Influential Mentor, #1 Mentor in Europe), so this never
+ * needs a manual correction as new badges or awards land.
+ */
+export const mentoringAwardsCount: number =
+	adplistBadges.length +
+	awards.filter((award) => award.group === "mentorship").length;

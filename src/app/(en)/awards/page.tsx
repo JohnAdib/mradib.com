@@ -6,7 +6,7 @@ import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel
 import { ItemListJsonLd } from "@/components/json-ld/item-list-json-ld";
 import { SimpleLayout } from "@/components/simple-layout";
 import { StatBand } from "@/components/stat-band";
-import { awards, flagshipAwards, top1MonthsLabel } from "@/data/awards";
+import { awards, flagshipAwards, mentoringAwardsCount } from "@/data/awards";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { homepageUrl } from "@/lib/constants/url";
 
@@ -27,7 +27,7 @@ const stats = [
 		label: "ADPList100, worldwide",
 		href: "/awards/worlds-most-influential-mentor",
 	},
-	{ value: top1MonthsLabel, label: "Top 1% months since 2024" },
+	{ value: `${mentoringAwardsCount}`, label: "awards for mentoring" },
 	{
 		value: `${mentoringStats.sessions}+`,
 		label: "mentorship sessions",

@@ -6,10 +6,17 @@ import type { IAdplistBadge } from "@/data/awards";
 import { badgeImgPath } from "@/lib/awards/adplist-badge-image";
 import { badgeReference } from "@/lib/awards/adplist-badge-reference";
 
-export function AdplistBadgeChip({ badge }: { badge: IAdplistBadge }) {
+export function AdplistBadgeChip({
+	badge,
+	wide,
+}: {
+	badge: IAdplistBadge;
+	wide?: boolean;
+}) {
 	const openImage = useLightbox();
 	const img = badgeImgPath(badge);
 	const reference = badgeReference(badge);
+	const aspect = wide ? "aspect-video" : "aspect-square";
 
 	return (
 		<button
@@ -20,9 +27,11 @@ export function AdplistBadgeChip({ badge }: { badge: IAdplistBadge }) {
 		>
 			{img ? (
 				// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
-				<img src={img} alt="" className="aspect-square w-full object-cover" />
+				<img src={img} alt="" className={`${aspect} w-full object-cover`} />
 			) : (
-				<div className="flex aspect-square w-full items-center justify-center bg-accent-50 dark:bg-accent-400/10">
+				<div
+					className={`flex ${aspect} w-full items-center justify-center bg-accent-50 dark:bg-accent-400/10`}
+				>
 					<PhotoIcon className="h-6 w-6 text-accent-400" />
 				</div>
 			)}
