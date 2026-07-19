@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout 4 · Ledger</title>
+<script>
+  document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.classList.add("js");
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="light"] {
+    --bg: #f7f3ec; --surface: #fdfbf6; --ink: #1c1917; --ink-2: #57534e; --ink-3: #a8a29e;
+    --line: rgba(28, 25, 23, .12); --line-soft: rgba(28, 25, 23, .07);
+    --accent: #0f766e; --glow: rgba(13, 148, 136, .13);
+    --btn-bg: #1c1917; --btn-ink: #f7f3ec;
+    --shadow: 0 24px 48px -24px rgba(28, 25, 23, .25);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0a0a0c; --surface: #131316; --ink: #fafafa; --ink-2: #a1a1aa; --ink-3: #71717a;
+    --line: rgba(255, 255, 255, .11); --line-soft: rgba(255, 255, 255, .06);
+    --accent: #2dd4bf; --glow: rgba(45, 212, 191, .1);
+    --btn-bg: #fafafa; --btn-ink: #0a0a0c;
+    --shadow: 0 24px 48px -24px rgba(0, 0, 0, .6);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+    overflow-x: clip; -webkit-font-smoothing: antialiased;
+    transition: background .35s ease, color .35s ease;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .04 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  :root[data-theme="dark"] body::before { opacity: .35; }
+  main { position: relative; z-index: 1; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  .it { font-style: italic; color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-left: clamp(20px, 5vw, 44px); padding-right: clamp(20px, 5vw, 44px); }
+
+  /* fixed chrome, identical across the four variants */
+  .toggle, .tag {
+    position: fixed; z-index: 60;
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink); background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: 999px;
+  }
+  .toggle { top: 18px; right: 18px; padding: 10px 16px; cursor: pointer; transition: color .25s, border-color .25s; }
+  .toggle:hover { color: var(--accent); border-color: var(--accent); }
+  .tag {
+    bottom: 16px; left: 16px; display: flex; flex-wrap: wrap; gap: 2px; align-items: center;
+    padding: 6px 8px; font-size: 10.5px; letter-spacing: .08em; max-width: calc(100vw - 32px);
+  }
+  .tag a { padding: 5px 8px; border-radius: 999px; color: var(--ink-3); transition: color .2s; white-space: nowrap; }
+  .tag a:hover { color: var(--accent); }
+  .tag a[aria-current] { background: var(--accent); color: var(--bg); }
+
+  /* reveal on scroll, gated behind js, disabled under reduced motion */
+  .js .r { opacity: 0; transform: translateY(22px); transition: opacity .72s ease, transform .72s cubic-bezier(.16, 1, .3, 1); }
+  .js .r.in { opacity: 1; transform: none; transition-delay: calc(var(--d, 0) * 60ms); }
+
+  /* ============ hero: a compact masthead, the ledger is the hero ============ */
+  .hero { padding-top: clamp(78px, 13vh, 130px); text-align: center; }
+  .hero .eyebrow {
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .hero-title {
+    margin-top: clamp(16px, 3vh, 22px);
+    font-family: "Newsreader", serif; font-optical-sizing: auto;
+    font-weight: 600; letter-spacing: -.02em;
+    font-size: clamp(37px, 8.6vw, 66px); line-height: 1.04;
+  }
+  .hero-title .it { font-weight: 600; }
+  .standfirst {
+    margin: clamp(16px, 3vh, 22px) auto 0; max-width: 46ch;
+    font-size: clamp(15px, 2.1vw, 18px); line-height: 1.6; color: var(--ink-2);
+  }
+  .standfirst .emph { color: var(--ink); font-weight: 500; }
+  .rule { margin-top: clamp(30px, 6vh, 50px); height: 1px; border: 0; background: var(--line); }
+
+  /* ============ the ledger ============ */
+  .ledger-wrap { padding-top: clamp(30px, 6vh, 50px); padding-bottom: clamp(56px, 10vh, 108px); }
+  .ledger-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0 clamp(6px, 2.5vw, 14px) 14px;
+    border-bottom: 1px solid var(--line);
+    font: 600 10.5px/1 "Inter", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-3);
+  }
+  .ledger { border-bottom: 1px solid var(--line); }
+
+  .row {
+    position: relative;
+    display: grid; grid-template-columns: 1fr; row-gap: 5px; align-items: baseline;
+    padding: clamp(16px, 4.6vw, 22px) clamp(6px, 2.5vw, 14px);
+    border-top: 1px solid var(--line-soft);
+  }
+  .row:first-child { border-top: 0; }
+  .row > * { position: relative; z-index: 1; }
+  .row::before {
+    content: ""; position: absolute; inset: 2px 0; border-radius: 16px; z-index: 0; pointer-events: none;
+    background: var(--surface); box-shadow: var(--shadow);
+    opacity: 0; transform: scale(.986);
+    transition: opacity .38s cubic-bezier(.16, 1, .3, 1), transform .38s cubic-bezier(.16, 1, .3, 1);
+  }
+  .row:hover::before { opacity: 1; transform: scale(1); }
+
+  .yr {
+    font: 500 clamp(12px, 1.4vw, 13.5px)/1.2 "Inter", sans-serif;
+    font-variant-numeric: tabular-nums; letter-spacing: .04em; color: var(--ink-3);
+  }
+  .claim {
+    font-family: "Newsreader", serif; font-optical-sizing: auto;
+    font-weight: 560; letter-spacing: -.012em;
+    font-size: clamp(21px, 3.2vw, 32px); line-height: 1.28; color: var(--ink);
+    transition: color .32s ease;
+  }
+  .row:hover .claim { color: var(--accent); }
+  .fig {
+    font-family: "Newsreader", serif; font-optical-sizing: auto;
+    font-weight: 620; letter-spacing: -.02em;
+    font-size: clamp(30px, 5vw, 52px); line-height: 1;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+    justify-self: end; text-align: right; margin-top: 3px;
+  }
+
+  @media (min-width: 720px) {
+    .row {
+      grid-template-columns: clamp(2.6rem, 5vw, 3.4rem) minmax(0, 1fr) auto;
+      column-gap: clamp(16px, 3vw, 48px); row-gap: 0;
+      padding: clamp(18px, 2.3vw, 27px) clamp(10px, 1.4vw, 18px);
+    }
+    .fig { margin-top: 0; }
+  }
+
+  /* ============ coda and closing moment ============ */
+  .coda { position: relative; padding-top: clamp(56px, 10vh, 108px); padding-bottom: clamp(124px, 17vh, 172px); text-align: center; }
+  .coda-line {
+    margin: 0 auto; max-width: 33ch;
+    font-family: "Newsreader", serif; font-optical-sizing: auto;
+    font-style: italic; font-weight: 500;
+    font-size: clamp(21px, 3.6vw, 32px); line-height: 1.42; color: var(--ink-2);
+  }
+  .cta { position: relative; margin-top: clamp(32px, 6vh, 50px); display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .cta-glow {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: min(560px, 86vw); height: 260px; pointer-events: none; z-index: 0;
+    background: radial-gradient(closest-side, var(--glow), transparent 72%); filter: blur(24px);
+  }
+  .btn {
+    position: relative; z-index: 1; display: inline-block; padding: 15px 28px; border-radius: 999px;
+    font: 600 15px/1.2 "Inter", sans-serif; will-change: transform;
+    transition: background .25s, color .25s, box-shadow .25s, transform .25s;
+  }
+  .btn-primary { background: var(--btn-bg); color: var(--btn-ink); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-ghost { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+  .btn-ghost:hover { color: var(--accent); box-shadow: inset 0 0 0 1.5px var(--accent); transform: translateY(-2px); }
+  .sign {
+    margin-top: clamp(30px, 6vh, 46px);
+    font: 500 11px/1.6 "Inter", sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .r { opacity: 1; transform: none; transition: none; }
+    .row::before { transition: none; }
+    .claim, .btn { transition: none; }
+    .btn:hover, .btn-primary:hover, .btn-ghost:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<button class="toggle" id="toggle">Dark</button>
+<nav class="tag" aria-label="Variants">
+  <a href="layout-1-cover.html">1 · Cover</a>
+  <a href="layout-2-split.html">2 · Split</a>
+  <a href="layout-3-persona.html">3 · Persona</a>
+  <a href="layout-4-ledger.html" aria-current="page">4 · Ledger</a>
+  <a href="font-final.html">Fonts</a>
+</nav>
+
+<main>
+  <!-- hero: the record speaks -->
+  <header class="hero wrap">
+    <p class="eyebrow r" style="--d:0">John Adib · London</p>
+    <h1 class="hero-title r" style="--d:1">The <span class="it">record</span> speaks.</h1>
+    <p class="standfirst r" style="--d:2">17+ years, 2 startups, <span class="emph">the world's most influential mentor</span>.</p>
+    <hr class="rule r" style="--d:3">
+  </header>
+
+  <!-- the ledger, 2008 to 2026 -->
+  <section class="ledger-wrap wrap" aria-label="The record, 2008 to 2026">
+    <div class="ledger-head r">
+      <span>The Record</span>
+      <span>2008 to 2026</span>
+    </div>
+    <div class="ledger">
+      <div class="row r" style="--d:0">
+        <span class="yr">2008</span>
+        <span class="claim">First professional line of code.</span>
+      </div>
+      <div class="row r" style="--d:1">
+        <span class="yr">2015</span>
+        <span class="claim">Sarshomar founded. $1M raised, a million users in month one.</span>
+        <span class="fig" data-count-to="1" data-prefix="$" data-suffix="M" data-decimals="1">$1M</span>
+      </div>
+      <div class="row r" style="--d:2">
+        <span class="yr">2017</span>
+        <span class="claim">2,000+ students across 4 universities.</span>
+        <span class="fig" data-count-to="2000" data-suffix="+">2,000+</span>
+      </div>
+      <div class="row r" style="--d:3">
+        <span class="yr">2019</span>
+        <span class="claim">Jibres founded. 1,200+ businesses served.</span>
+        <span class="fig" data-count-to="1200" data-suffix="+">1,200+</span>
+      </div>
+      <div class="row r" style="--d:4">
+        <span class="yr">2022</span>
+        <span class="claim">National award, IR Web Festival.</span>
+      </div>
+      <div class="row r" style="--d:0">
+        <span class="yr">2022</span>
+        <span class="claim">London. A restart, on purpose.</span>
+      </div>
+      <div class="row r" style="--d:1">
+        <span class="yr">2024</span>
+        <span class="claim">Endorsed by the UK government as exceptional talent.</span>
+      </div>
+      <div class="row r" style="--d:2">
+        <span class="yr">2024</span>
+        <span class="claim">The World's Most Influential Mentor, out of 32,000+.</span>
+        <span class="fig" data-count-to="32000" data-suffix="+">32,000+</span>
+      </div>
+      <div class="row r" style="--d:3">
+        <span class="yr">2025</span>
+        <span class="claim">5,000+ engineers, one stage, AI Coding Summit.</span>
+        <span class="fig" data-count-to="5000" data-suffix="+">5,000+</span>
+      </div>
+      <div class="row r" style="--d:4">
+        <span class="yr">2026</span>
+        <span class="claim">Named the world's most influential mentor. Again.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- coda and closing moment -->
+  <section class="coda wrap">
+    <p class="coda-line r" style="--d:0">Awards are lagging indicators. The <span class="it">leading</span> ones are the sessions, the students, and the shipped work.</p>
+    <div class="cta r" style="--d:1">
+      <span class="cta-glow" aria-hidden="true"></span>
+      <a class="btn btn-primary" href="#">Read the story</a>
+      <a class="btn btn-ghost" href="#">Invite me to speak</a>
+    </div>
+    <p class="sign r" style="--d:2">John Adib · Leads engineering in London · Pioneering AI-first engineering</p>
+  </section>
+</main>
+
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // theme toggle, label is the target theme
+  const toggle = document.getElementById("toggle");
+  const setLabel = () => { toggle.textContent = document.documentElement.dataset.theme === "dark" ? "Light" : "Dark"; };
+  setLabel();
+  toggle.addEventListener("click", () => {
+    const root = document.documentElement;
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    setLabel();
+  });
+
+  const reveals = document.querySelectorAll(".r");
+  const figs = document.querySelectorAll("[data-count-to]");
+
+  if (!("IntersectionObserver" in window)) {
+    reveals.forEach(el => el.classList.add("in"));
+  } else {
+    const rio = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); rio.unobserve(e.target); }
+    }, { threshold: .16, rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(el => rio.observe(el));
+
+    if (!reduced) {
+      const cio = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          cio.unobserve(e.target);
+          countUp(e.target);
+        }
+      }, { threshold: .55 });
+      figs.forEach(el => cio.observe(el));
+    }
+  }
+
+  function countUp(el) {
+    const target = parseFloat(el.dataset.countTo);
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    const decimals = parseInt(el.dataset.decimals || "0", 10);
+    const finalText = el.textContent;
+    const dur = 1200, t0 = performance.now();
+    const fmt = n => prefix + n.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
+    (function tick(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      const eased = 1 - (1 - p) ** 3;
+      if (p < 1) { el.textContent = fmt(target * eased); requestAnimationFrame(tick); }
+      else el.textContent = finalText;
+    })(t0);
+  }
+</script>
+</body>
+</html>

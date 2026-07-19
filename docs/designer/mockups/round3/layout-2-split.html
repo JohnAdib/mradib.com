@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout 2 · Split</title>
+<script>
+  (function () {
+    var r = document.documentElement;
+    r.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    r.classList.add("js");
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="light"] {
+    --bg: #f7f3ec; --surface: #fdfbf6; --ink: #1c1917; --ink-2: #57534e; --ink-3: #a8a29e;
+    --line: rgba(28, 25, 23, .12); --line-soft: rgba(28, 25, 23, .07);
+    --accent: #0f766e; --glow: rgba(13, 148, 136, .13);
+    --btn-bg: #1c1917; --btn-ink: #f7f3ec;
+    --shadow: 0 24px 48px -24px rgba(28, 25, 23, .25);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0a0a0c; --surface: #131316; --ink: #fafafa; --ink-2: #a1a1aa; --ink-3: #71717a;
+    --line: rgba(255, 255, 255, .11); --line-soft: rgba(255, 255, 255, .06);
+    --accent: #2dd4bf; --glow: rgba(45, 212, 191, .1);
+    --btn-bg: #fafafa; --btn-ink: #0a0a0c;
+    --shadow: 0 24px 48px -24px rgba(0, 0, 0, .6);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+    overflow-x: clip; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    transition: background .35s ease, color .35s ease;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .04 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  :root[data-theme="dark"] body::before { opacity: .35; }
+  ::selection { background: var(--accent); color: var(--bg); }
+  a { color: inherit; }
+
+  .serif { font-family: "Newsreader", serif; font-optical-sizing: auto; }
+  em { font-style: italic; color: var(--accent); }
+
+  /* ============ shell + split ============ */
+  .shell { position: relative; z-index: 1; }
+  @media (min-width: 980px) {
+    .shell { display: grid; grid-template-columns: 44vw 1fr; align-items: start; }
+  }
+
+  /* ---- left panel : mobile hero card ---- */
+  .panel {
+    position: relative; z-index: 1; overflow: hidden;
+    height: 56svh; min-height: 420px; border-radius: 0 0 26px 26px;
+  }
+  .glow { display: none; }
+  .pf { position: absolute; inset: 0; z-index: 0; }
+  .pimg { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; display: block; }
+  .js .pimg { animation: drift 22s ease-in-out infinite alternate; will-change: transform; }
+  @keyframes drift { from { transform: scale(1); } to { transform: scale(1.045); } }
+  .scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      linear-gradient(to top, rgba(0,0,0,.80) 0%, rgba(0,0,0,.32) 34%, rgba(0,0,0,0) 62%),
+      linear-gradient(to bottom, rgba(0,0,0,.30), rgba(0,0,0,0) 22%);
+  }
+  .pmeta { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: clamp(20px, 6vw, 30px); color: #fff; }
+  .pname { font-weight: 580; font-size: clamp(30px, 9vw, 44px); letter-spacing: -.02em; line-height: 1; color: #fff; }
+  .prole { margin-top: 8px; font-size: clamp(13.5px, 3.6vw, 15px); line-height: 1.4; color: rgba(255,255,255,.84); }
+  .plinks { margin-top: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; }
+  .plinks a { color: rgba(255,255,255,.9); text-decoration: none; transition: color .2s; }
+  .plinks a:hover { color: #fff; }
+  .plinks .sep { color: rgba(255,255,255,.42); }
+
+  /* ---- left panel : desktop sticky ---- */
+  @media (min-width: 980px) {
+    .panel {
+      position: sticky; top: 0; height: 100svh; min-height: 0; border-radius: 0; overflow: visible;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: clamp(22px, 2.6vw, 34px); padding: clamp(30px, 3vw, 56px);
+      background: color-mix(in srgb, var(--ink) 4%, var(--bg));
+    }
+    :root[data-theme="dark"] .panel {
+      background: radial-gradient(120% 90% at 50% 34%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%), var(--bg);
+    }
+    .glow {
+      display: block; position: absolute; z-index: 0; width: 64%; aspect-ratio: 1; left: 50%; top: 44%;
+      transform: translate(-50%, -50%); background: var(--accent); opacity: .16; filter: blur(80px);
+      border-radius: 50%; pointer-events: none;
+    }
+    :root[data-theme="dark"] .glow { opacity: .28; }
+    .pf {
+      position: relative; inset: auto; z-index: 1;
+      width: min(100%, clamp(340px, 32vw, 540px)); aspect-ratio: 4 / 5; max-height: 60svh;
+      border-radius: 28px; overflow: hidden; box-shadow: var(--shadow);
+    }
+    .pf::after { content: ""; position: absolute; inset: 0; border-radius: 28px; box-shadow: inset 0 0 0 1px var(--line-soft); pointer-events: none; }
+    .pimg { object-position: center 22%; }
+    .scrim { display: none; }
+    .pmeta { position: static; z-index: 1; padding: 0; text-align: center; color: var(--ink); }
+    .pname { color: var(--ink); font-size: clamp(30px, 2.5vw, 40px); }
+    .prole { color: var(--ink-2); }
+    .plinks { justify-content: center; }
+    .plinks a { color: var(--ink-2); }
+    .plinks a:hover { color: var(--accent); }
+    .plinks .sep { color: var(--ink-3); }
+  }
+
+  /* ============ right feed ============ */
+  .wrap { width: min(100%, 680px); margin-inline: auto; padding-inline: clamp(20px, 6vw, 44px); }
+  .beat { padding-block: clamp(56px, 11vh, 108px); }
+  .open { padding-top: clamp(48px, 12vw, 76px); }
+  .close { padding-bottom: clamp(72px, 14vh, 132px); }
+  @media (min-width: 980px) { .open { padding-top: clamp(100px, 18vh, 184px); } }
+
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+  .head { font-weight: 580; letter-spacing: -.02em; line-height: 1.08; font-size: clamp(1.95rem, 5.6vw, 2.95rem); }
+  .lede { font-size: clamp(15.5px, 2.1vw, 17.5px); line-height: 1.65; color: var(--ink-2); }
+
+  /* opening */
+  .hero { font-weight: 580; letter-spacing: -.022em; line-height: 1.03; font-size: clamp(2.6rem, 8.6vw, 5.2rem); }
+  .open .lede { margin-top: clamp(20px, 3.4vw, 28px); max-width: 46ch; }
+  .proof {
+    margin-top: clamp(22px, 4vw, 30px); display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: var(--ink-3);
+  }
+  .proof .sep { color: var(--line); }
+  .proof b { color: var(--ink-2); font-weight: 600; }
+
+  /* buttons */
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(24px, 4vw, 34px); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font: 600 15px/1 "Inter", sans-serif; letter-spacing: .005em; text-decoration: none;
+    padding: 15px 24px; border-radius: 13px; cursor: pointer; border: 1px solid transparent;
+    transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s, color .25s, border-color .25s, background .25s;
+  }
+  .btn.primary { background: var(--btn-bg); color: var(--btn-ink); box-shadow: var(--shadow); }
+  .btn.primary:hover { transform: translateY(-2px); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  @media (max-width: 430px) { .cta { flex-direction: column; align-items: stretch; } .btn { width: 100%; } }
+
+  /* ventures */
+  .ventures { margin-top: clamp(24px, 4vw, 34px); display: flex; flex-direction: column; gap: clamp(14px, 2.5vw, 18px); }
+  .vcard {
+    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 24px;
+    padding: clamp(22px, 4.6vw, 32px);
+    transition: transform .3s cubic-bezier(.16,1,.3,1), border-color .3s, box-shadow .3s;
+  }
+  .vcard:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); box-shadow: var(--shadow); }
+  .vhead { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .vname { font-weight: 580; letter-spacing: -.02em; font-size: clamp(1.5rem, 4.4vw, 2rem); }
+  .vrole {
+    font: 600 11px/1 "Inter", sans-serif; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap;
+    color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
+    padding: 6px 11px; border-radius: 999px;
+  }
+  .vdesc { margin-top: 13px; font-size: clamp(14.5px, 2vw, 16px); line-height: 1.6; color: var(--ink-2); max-width: 46ch; }
+  .vfigs { margin-top: clamp(18px, 3vw, 24px); display: flex; flex-wrap: wrap; gap: 16px clamp(22px, 5vw, 40px); }
+  .fig b { display: block; font-weight: 560; letter-spacing: -.01em; font-size: clamp(1.7rem, 4.6vw, 2.2rem); font-variant-numeric: tabular-nums; line-height: 1; }
+  .fig span { display: block; margin-top: 7px; font: 500 10.5px/1 "Inter", sans-serif; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3); }
+
+  /* stages */
+  .stages { margin-top: clamp(22px, 4vw, 32px); display: flex; flex-direction: column; gap: clamp(6px, 1.4vw, 10px); }
+  .stage-lede { margin-top: clamp(16px, 2.6vw, 22px); max-width: 44ch; }
+  .srow {
+    display: grid; grid-template-columns: auto 1fr; align-items: center; gap: clamp(16px, 4vw, 28px);
+    padding: clamp(14px, 3vw, 20px) clamp(12px, 3vw, 18px); border-radius: 18px;
+    transition: background .3s ease, transform .3s cubic-bezier(.16,1,.3,1);
+  }
+  .srow:hover { background: var(--surface); transform: translateX(2px); }
+  .snum { font-weight: 560; letter-spacing: -.01em; font-size: clamp(2.3rem, 8.6vw, 3.4rem); line-height: 1; font-variant-numeric: tabular-nums; transition: color .3s ease; }
+  .srow:hover .snum { color: var(--accent); }
+  .sname { font: 600 clamp(16px, 2.5vw, 19px)/1.2 "Inter", sans-serif; letter-spacing: -.005em; color: var(--ink); }
+  .sdetail { margin-top: 4px; font-size: 13.5px; line-height: 1.4; color: var(--ink-3); }
+  .snote { margin-top: clamp(22px, 4vw, 30px); font-size: 13.5px; line-height: 1.6; color: var(--ink-3); max-width: 48ch; }
+
+  /* closing */
+  .glowpanel {
+    position: relative; overflow: hidden; background: var(--surface);
+    border: 1px solid var(--line-soft); border-radius: 28px;
+    padding: clamp(30px, 6.2vw, 56px); box-shadow: var(--shadow);
+  }
+  .glowpanel::before {
+    content: ""; position: absolute; z-index: 0; width: 360px; height: 360px; top: -140px; right: -90px;
+    background: var(--accent); opacity: .16; filter: blur(90px); border-radius: 50%; pointer-events: none;
+  }
+  :root[data-theme="dark"] .glowpanel::before { opacity: .22; }
+  .glowpanel > * { position: relative; z-index: 1; }
+  .cq { margin-top: 16px; font-weight: 580; letter-spacing: -.02em; line-height: 1.14; font-size: clamp(1.9rem, 6.2vw, 3rem); }
+  .clede { margin-top: 16px; font-size: clamp(15px, 2vw, 17px); line-height: 1.6; color: var(--ink-2); max-width: 44ch; }
+  .glowpanel .cta { margin-top: clamp(26px, 4vw, 34px); }
+  .foot {
+    margin-top: clamp(40px, 8vh, 68px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 10px 16px; font-size: 12.5px; color: var(--ink-3);
+  }
+  .foot a { color: var(--ink-3); text-decoration: none; transition: color .2s; }
+  .foot a:hover { color: var(--accent); }
+  .foot .sep { color: var(--line); }
+
+  /* ============ fixed chrome ============ */
+  .toggle {
+    position: fixed; top: 18px; right: 18px; z-index: 60;
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink); background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 16px; cursor: pointer; transition: color .25s, border-color .25s;
+  }
+  .toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+  .switch {
+    position: fixed; left: 16px; bottom: 16px; z-index: 60; display: flex; align-items: center; gap: 2px;
+    max-width: calc(100vw - 32px);
+    background: color-mix(in srgb, var(--surface) 82%, transparent); backdrop-filter: blur(10px);
+    border: 1px solid var(--line); border-radius: 999px; padding: 5px;
+  }
+  .switch a {
+    display: inline-flex; align-items: center; white-space: nowrap; text-decoration: none;
+    font: 600 10.5px/1 "Inter", sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2);
+    padding: 8px 11px; border-radius: 999px; transition: color .2s, background .2s;
+  }
+  .switch a:hover { color: var(--accent); }
+  .switch a b { font-weight: 700; }
+  .switch a.cur { background: var(--accent); color: var(--bg); }
+  .switch a.cur:hover { color: var(--bg); }
+  @media (max-width: 560px) {
+    .switch a .nm { display: none; }
+    .switch a.cur .nm { display: inline; }
+    .switch a { padding: 8px 10px; }
+  }
+
+  /* ============ motion ============ */
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .reveal.d1 { transition-delay: .08s; }
+  .js .reveal.d2 { transition-delay: .16s; }
+  .js .reveal.d3 { transition-delay: .24s; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+    .js .pimg { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<button class="toggle" id="toggle">Dark</button>
+
+<nav class="switch" aria-label="Layout variants">
+  <a href="layout-1-cover.html"><b>1</b><span class="nm">&nbsp;·&nbsp;Cover</span></a>
+  <a class="cur" href="layout-2-split.html" aria-current="page"><b>2</b><span class="nm">&nbsp;·&nbsp;Split</span></a>
+  <a href="layout-3-persona.html"><b>3</b><span class="nm">&nbsp;·&nbsp;Persona</span></a>
+  <a href="layout-4-ledger.html"><b>4</b><span class="nm">&nbsp;·&nbsp;Ledger</span></a>
+  <a href="font-final.html"><b>Aa</b><span class="nm">&nbsp;·&nbsp;Fonts</span></a>
+</nav>
+
+<div class="shell">
+
+  <aside class="panel reveal">
+    <span class="glow" aria-hidden="true"></span>
+    <div class="pf">
+      <img class="pimg" src="../../../../public/img/john-adib-hero.jpg" width="952" height="952" alt="John Adib" decoding="async" fetchpriority="high">
+    </div>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="pmeta">
+      <p class="pname serif">John Adib</p>
+      <p class="prole">Engineering leader in London. 2x founder.</p>
+      <p class="plinks">
+        <a href="#">LinkedIn</a><span class="sep">·</span>
+        <a href="#">GitHub</a><span class="sep">·</span>
+        <a href="#">Email</a>
+      </p>
+    </div>
+  </aside>
+
+  <main class="feed">
+
+    <!-- 1 : opening statement -->
+    <section class="beat open">
+      <div class="wrap">
+        <h1 class="hero serif reveal">The world's most <em>influential mentor.</em></h1>
+        <p class="lede reveal d1">Selected from 32,000+ mentors across 140+ countries. Named The World's Most Influential Mentor by ADPList in 2024, and again in 2026.</p>
+        <div class="cta reveal d2">
+          <a class="btn primary" href="#">Read the story</a>
+          <a class="btn ghost" href="#">Invite me to speak</a>
+        </div>
+        <p class="proof reveal d3">
+          <b>#1 Mentor in Europe</b>, 2024 <span class="sep">·</span> 600+ sessions <span class="sep">·</span> UK Global Talent
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 : built twice -->
+    <section class="beat">
+      <div class="wrap">
+        <p class="eyebrow reveal">The founder</p>
+        <h2 class="head serif reveal d1" style="margin-top:14px;">Built twice, <em>from zero.</em></h2>
+        <div class="ventures">
+
+          <article class="vcard reveal d1">
+            <div class="vhead">
+              <h3 class="vname serif">Sarshomar</h3>
+              <span class="vrole">Co-founder &amp; CEO</span>
+            </div>
+            <p class="vdesc">Raised $1M and reached one million users in the first month, leading a 15-person team.</p>
+            <div class="vfigs">
+              <div class="fig"><b class="serif">$1M</b><span>Raised</span></div>
+              <div class="fig"><b class="serif">1M</b><span>Users, month one</span></div>
+              <div class="fig"><b class="serif">15</b><span>In the team</span></div>
+            </div>
+          </article>
+
+          <article class="vcard reveal d2">
+            <div class="vhead">
+              <h3 class="vname serif">Jibres</h3>
+              <span class="vrole">Co-founder &amp; CTO</span>
+            </div>
+            <p class="vdesc">Built cloud e-commerce serving 1,200+ businesses, and won a national award at the IR Web Festival 2022.</p>
+            <div class="vfigs">
+              <div class="fig"><b class="serif num" data-to="1200" data-suf="+">1,200+</b><span>Businesses</span></div>
+              <div class="fig"><b class="serif">2022</b><span>National award</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 : the rooms -->
+    <section class="beat">
+      <div class="wrap">
+        <p class="eyebrow reveal">On stage</p>
+        <h2 class="head serif reveal d1" style="margin-top:14px;">Rooms of 120 to <em>5,000 engineers.</em></h2>
+        <p class="lede stage-lede reveal d1">From a workshop floor to a summit main stage, I speak where engineers gather.</p>
+        <div class="stages">
+
+          <div class="srow reveal d1">
+            <span class="snum serif num" data-to="5000" data-suf="+">5,000+</span>
+            <span class="smeta">
+              <span class="sname">AI Coding Summit</span>
+              <span class="sdetail">Main stage, 2025</span>
+            </span>
+          </div>
+
+          <div class="srow reveal d2">
+            <span class="snum serif num" data-to="120" data-suf="+">120+</span>
+            <span class="smeta">
+              <span class="sname">React Advanced London</span>
+              <span class="sdetail">At Figma's office</span>
+            </span>
+          </div>
+
+          <div class="srow reveal d3">
+            <span class="snum serif num" data-to="2000" data-suf="+">2,000+</span>
+            <span class="smeta">
+              <span class="sname">Students taught</span>
+              <span class="sdetail">Across 4 universities</span>
+            </span>
+          </div>
+
+        </div>
+        <p class="snote reveal d3">Most recently on stage at JavaScript London, hosted by NewDay, 2026.</p>
+      </div>
+    </section>
+
+    <!-- 4 : closing -->
+    <section class="beat close">
+      <div class="wrap">
+        <div class="glowpanel reveal">
+          <p class="eyebrow">Let's talk</p>
+          <p class="cq serif"><em>Growing your career</em>, or <em>planning an event?</em></p>
+          <p class="clede">I mentor engineers into their next level and take the stage for teams and conferences. Tell me what you are building.</p>
+          <div class="cta">
+            <a class="btn primary" href="#">Book a session</a>
+            <a class="btn ghost" href="#">Invite me to speak</a>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>&copy; 2026 John Adib</span>
+          <span>
+            <a href="#">LinkedIn</a> <span class="sep">·</span>
+            <a href="#">GitHub</a> <span class="sep">·</span>
+            <a href="#">Email</a>
+          </span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var hasIO = "IntersectionObserver" in window;
+
+    /* scroll reveals */
+    var revs = document.querySelectorAll(".reveal");
+    if (!hasIO || reduce) {
+      revs.forEach(function (el) { el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
+      revs.forEach(function (el) { io.observe(el); });
+    }
+
+    /* count up (SSR values already final for no-JS and reduced motion) */
+    var nums = document.querySelectorAll(".num");
+    function fmt(n) { return n.toLocaleString("en-US"); }
+    function run(el) {
+      var to = parseFloat(el.getAttribute("data-to"));
+      var pre = el.getAttribute("data-pre") || "";
+      var suf = el.getAttribute("data-suf") || "";
+      var dur = 1400, start = null;
+      function step(t) {
+        if (start === null) start = t;
+        var p = Math.min((t - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + fmt(Math.round(to * eased)) + suf;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = pre + fmt(to) + suf;
+      }
+      requestAnimationFrame(step);
+    }
+    if (nums.length && hasIO && !reduce) {
+      var io2 = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { run(e.target); io2.unobserve(e.target); }
+        });
+      }, { threshold: .6 });
+      nums.forEach(function (el) { io2.observe(el); });
+    }
+
+    /* theme toggle : label is the target theme */
+    var toggle = document.getElementById("toggle");
+    function label() { toggle.textContent = root.dataset.theme === "dark" ? "Light" : "Dark"; }
+    label();
+    toggle.addEventListener("click", function () {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      label();
+    });
+  })();
+</script>
+</body>
+</html>
