@@ -11,7 +11,7 @@ const stats = [
 	},
 	{
 		value: "1 of 100",
-		label: "ADPList100, worldwide",
+		label: "most influential mentors, worldwide",
 		href: "/awards/worlds-most-influential-mentor",
 	},
 	{ value: `${mentoringAwardsCount}`, label: "awards for mentoring" },
@@ -23,7 +23,7 @@ const stats = [
 ];
 
 const intro =
-	"I've been named ADPList's World's Most Influential Mentor (2024), ranked #1 Mentor in Europe (2024), endorsed as a UK Global Talent by Tech Nation (2024), and medalled in national WorldSkills competitions. Here is all of it, with evidence and the stories behind it.";
+	"I've been named The World's Most Influential Mentor (2024), ranked #1 Mentor in Europe (2024), endorsed as a UK Global Talent by Tech Nation (2024), and medalled in national WorldSkills competitions. Here is all of it, with evidence and the stories behind it.";
 
 const kicker =
 	"Awards are lagging indicators. The leading ones are the sessions, the students, and the shipped work. That is the part I actually control.";

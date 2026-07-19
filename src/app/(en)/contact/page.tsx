@@ -17,10 +17,14 @@ export default function Page() {
 		<>
 			<ContactPageJsonLd />
 			<ContactHero />
-			<ContactChannels />
-			<Container>
-				<Faq list={contactFaq} showContactLink={false} />
-			</Container>
+			<section id="channels" className="scroll-mt-24">
+				<ContactChannels />
+			</section>
+			<section id="faq" className="scroll-mt-24">
+				<Container>
+					<Faq list={contactFaq} showContactLink={false} />
+				</Container>
+			</section>
 		</>
 	);
 }

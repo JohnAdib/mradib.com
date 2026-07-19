@@ -18,10 +18,18 @@ export default function Home() {
 	return (
 		<>
 			<HomeHero />
-			<HomeStats />
-			<HomeAiFirst />
-			<HomeHighlights />
-			<HomePersonal />
+			<section id="stats" className="scroll-mt-24">
+				<HomeStats />
+			</section>
+			<section id="ai" className="scroll-mt-24">
+				<HomeAiFirst />
+			</section>
+			<section id="highlights" className="scroll-mt-24">
+				<HomeHighlights />
+			</section>
+			<section id="personal" className="scroll-mt-24">
+				<HomePersonal />
+			</section>
 			<HomeClosing />
 		</>
 	);

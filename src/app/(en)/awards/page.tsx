@@ -30,9 +30,15 @@ export default function AwardsPage() {
 						url: `${homepageUrl}/awards/${award.slug}`,
 					}))}
 				/>
-				<AwardFlagshipShowcase awards={flagshipAwards} />
-				<AdplistStreak />
-				<AwardGroupList awards={badgeAwards} />
+				<section id="flagship" className="scroll-mt-24">
+					<AwardFlagshipShowcase awards={flagshipAwards} />
+				</section>
+				<section id="badges" className="scroll-mt-24">
+					<AdplistStreak />
+				</section>
+				<section id="ledger" className="scroll-mt-24">
+					<AwardGroupList awards={badgeAwards} />
+				</section>
 				<CtaOnDarkPanel {...pageClosings.awards} />
 			</Container>
 		</>

@@ -16,11 +16,11 @@ export default function ArticlesIndex() {
 	return (
 		<Container className="mt-16 sm:mt-32">
 			<ArticlesHero />
-			<div className="mt-16 sm:mt-20">
+			<section id="articles" className="mt-16 scroll-mt-24 sm:mt-20">
 				{articlesMeta.map((article) => (
 					<ArticleFeature key={article.pagePath} article={article} />
 				))}
-			</div>
+			</section>
 			<CtaOnDarkPanel {...pageClosings.articles} />
 		</Container>
 	);

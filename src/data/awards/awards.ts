@@ -21,7 +21,7 @@ export const awards: IAward[] = [
 		category: "flagship",
 		group: "mentorship",
 		summary:
-			"Named in the 2026 ADPList100 for 2025 contributions, a list of 100 mentors selected from 32,000+ across 140+ countries. First recognized in the inaugural 2024 list too.",
+			"Named to the 2026 class of the world's 100 most influential mentors, selected from 32,000+ across 140+ countries. First recognized in the inaugural 2024 list too.",
 		badgeImages: [
 			"/awards/2026-adplist100-worlds-most-influential-mentor.jpg",
 			"/awards/2024-adplist100-worlds-most-influential-mentor.jpg",
@@ -41,7 +41,7 @@ export const awards: IAward[] = [
 		category: "flagship",
 		group: "mentorship",
 		summary:
-			"Ranked first among ADPList's top mentors in Europe in the 2024 ADPList Wrapped.",
+			"Ranked first among Europe's top mentors in the platform's 2024 year in review.",
 		badgeImages: ["/awards/2024-adplist-wrapped-number-1-mentor-in-europe.jpg"],
 		externalUrl:
 			"https://blog.adplist.org/post/2024-adplist-wrapped-top-mentors-trends-and-topics",

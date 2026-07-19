@@ -39,9 +39,11 @@ export default function TalksPage() {
 				/>
 
 				<TalksHero />
-				<TalksTopics />
+				<section id="topics" className="scroll-mt-24">
+					<TalksTopics />
+				</section>
 
-				<div className="mt-16 max-w-3xl sm:mt-20">
+				<section id="talks" className="mt-16 max-w-3xl scroll-mt-24 sm:mt-20">
 					<div className="flex items-center justify-between gap-3">
 						<h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
 							Previous talks
@@ -56,12 +58,14 @@ export default function TalksPage() {
 					<Reveal className="mt-8">
 						<TalkTimeline talks={talks} />
 					</Reveal>
-					<div className="mt-12">
+					<div id="podcast" className="mt-12 scroll-mt-24">
 						<TalksPodcast podcast={podcastAppearances[0]} />
 					</div>
-				</div>
+				</section>
 
-				<Faq list={talksFaq} />
+				<section id="faq" className="scroll-mt-24">
+					<Faq list={talksFaq} />
+				</section>
 
 				<TalksClosing />
 			</Container>

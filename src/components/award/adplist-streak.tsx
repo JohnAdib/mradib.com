@@ -18,7 +18,7 @@ export function AdplistStreak() {
 		<LightboxProvider>
 			<section className="mt-16">
 				<h2 className="font-display text-2xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-					ADPList recognition, month after month
+					Mentoring recognition, month after month
 				</h2>
 				<div className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
 					<span className="font-display text-4xl font-semibold tracking-tight text-zinc-800 tabular-nums sm:text-5xl dark:text-zinc-100">

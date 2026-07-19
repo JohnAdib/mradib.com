@@ -4,6 +4,20 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, every page section is deep-linkable, ADPList named twice max
+
+Standing rule: every major section on every page carries a one-word id
+with scroll-mt-24 so it can be linked directly (home: stats, ai,
+highlights, personal; talks: topics, talks, podcast, faq; awards:
+flagship, badges, ledger; mentor: topics, stats, recognition, faq, book;
+articles: articles; contact: channels, faq; about and resume already had
+theirs). Brand rule: on the awards hub the ADPList name appears ONLY as
+the issuer attribution on the two flagship cards (was 8 mentions, now 2);
+prose says "The World's Most Influential Mentor", the stat label says
+"most influential mentors, worldwide", the streak header says "Mentoring
+recognition". Avoid repeating a platform name where the award name or an
+issuer chip already carries it.
+
 ## 2026-07-19, stat labels darken, body font stops repainting LCP
 
 Lighthouse flagged the StatBand uppercase labels: zinc-500 fails WCAG on

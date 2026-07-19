@@ -20,17 +20,23 @@ export default function Page() {
 	return (
 		<>
 			<MentorHero />
-			<MentorTopics />
-			<MentorStats />
-			<MentorRecognition />
+			<section id="topics" className="scroll-mt-24">
+				<MentorTopics />
+			</section>
+			<section id="stats" className="scroll-mt-24">
+				<MentorStats />
+			</section>
+			<section id="recognition" className="scroll-mt-24">
+				<MentorRecognition />
+			</section>
 
-			<section id="faq">
+			<section id="faq" className="scroll-mt-24">
 				<Container>
 					<Faq list={mentorFaq} />
 				</Container>
 			</section>
 
-			<section id="book">
+			<section id="book" className="scroll-mt-24">
 				<BookMentorshipSession
 					subTitle="Ready when you are."
 					title="Book a Mentorship Session"
