@@ -9,12 +9,12 @@ export function AboutTeaching() {
 			slug="teaching"
 		>
 			<p>
-				The classrooms kept growing. From a small city in the north, I made it
-				to one of the biggest universities in the country as an invited
-				lecturer: web technologies, Excel, presenting, sometimes six hours on
-				stage without a break, to audiences of 200+. Alongside that, eleven
-				years as a part time lecturer across four universities and colleges.
-				More than 2,000 students in total.
+				The classrooms kept growing. From a small city in the north, I became an
+				invited lecturer at multiple universities, most consistently at one of
+				the biggest in the country: web technologies, Excel, presenting,
+				sessions that filled six hours of a day, audiences of 200+. Alongside
+				that, eleven years as a part time lecturer across four universities and
+				colleges. More than 2,000 students in total.
 			</p>
 			<p>
 				One session I never forgot: three hundred people in the hall, six hours

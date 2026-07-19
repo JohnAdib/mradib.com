@@ -4,6 +4,25 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, About round 3: the deposit story goes in, plus new facts
+
+The advisor call John delegated: the London arrival hardship IS published,
+with dignity (a few hundred in his pocket, a friend lent the home deposit,
+"one asset survived the move: what I can do"). Struggle sells the arc.
+New John-stated facts now on the page: first video published 28 August
+2011 (17 minutes, table of contents in Word, 400 comments on his site,
+linked to evazzadeh.com); full Excel course video September 2013, C
+programming December 2013; Jibres was the country's FIRST omnichannel
+e-commerce platform, written line by line by John; settled status arrived
+December 2025, three years after landing; the restart is framed as "zero
+years old in this city". Phrasing rules: he never followed a syllabus
+(his or anyone's), never say he wrote one; "highest score they had seen"
+is the approved ICDL claim; teaching at the institute was two years flat,
+no "maybe"; entrepreneur-becoming-employee replaces CEO-then-CTO; "money
+that was not mine" is banned; sessions "filled six hours of a day", never
+"without a break"; "father of two lovely daughters"; startup chapters
+carry the company names in their titles.
+
 ## 2026-07-19, email policy: public but obfuscated, plus-tagged per surface
 
 The email stays the hero of /contact, but the static HTML never carries

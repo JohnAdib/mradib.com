@@ -6,7 +6,7 @@ export function AboutSpark() {
 		<Chapter
 			index="05"
 			era="2007 to 2015 · The spark"
-			title="It started with a competition called WorldSkills"
+			title="The WorldSkills years"
 			slug="worldskills"
 		>
 			<p>
@@ -22,8 +22,9 @@ export function AboutSpark() {
 				So I waited a year, and I did not wait idly. At sixteen I entered the
 				8th national competition: first in my city, first in my state, then a
 				Medallion for Excellence at the national final. That earned a seat at
-				the national team camp for WorldSkills Calgary 2009, though I was not
-				chosen for the international final.
+				the national team camp for WorldSkills Calgary 2009, months of training
+				with the country's best, though I was not chosen for the international
+				final.
 			</p>
 			<p>
 				Three years later, at the 10th national competition, I went first in my

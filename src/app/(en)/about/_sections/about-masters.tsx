@@ -4,8 +4,8 @@ export function AboutMasters() {
 	return (
 		<Chapter
 			index="09"
-			era="2015 to 2025 · A decade in the making"
-			title="The ten-year masters"
+			era="2015 to 2025 · Meanwhile, as a student"
+			title="The masters that took a decade"
 			slug="masters"
 		>
 			<p>
@@ -13,22 +13,23 @@ export function AboutMasters() {
 				at home. Nothing about it was convenient: the university was a two-hour
 				drive away in another city, and I was running Sarshomar as CEO at the
 				same time. I still cleared every class and every exam in that first
-				year, on a schedule that had no room for any of it.
+				year.
 			</p>
 			<p>
-				One night from those years stayed with me. A nine-hour teaching day had
-				ended late, and my own classes as a student started early the next
-				morning, a two-hour drive away. Going home in between made no sense, so
-				I decided to sleep in my car. That night brought the heaviest rain I can
-				remember, hammering the roof until sunrise. I did not sleep a minute. I
-				have never slept in a car since.
+				One night says it all. A nine-hour teaching day had ended late, and my
+				student self had classes early the next morning. Two hours home plus two
+				hours back, at midnight, for a handful of sleep? The math said no. So I
+				slept in my car, like the resourceful optimist I was. The sky answered
+				with the heaviest rain I can remember, drumming the roof until sunrise.
+				Total sleep: zero. That was the first and last night of my car-sleeping
+				career.
 			</p>
 			<p>
-				The coursework was the easy part. The thesis was not. I worked on it for
-				a few months at the start, then it stalled: no real progress for years,
-				always behind a company, then a second company, then a move across the
-				world. Late in 2024 I drew the line. That story was not going to end
-				unfinished. I defended in February 2025, a decade after I enrolled.
+				The coursework was the easy part. The thesis stalled: months of work at
+				the start, then years of nothing, always behind a company, then a second
+				company, then a move across the world. Late in 2024 I drew the line. In
+				February 2025 I defended, and a decade after enrolling, I finally held
+				my masters in IT management.
 			</p>
 		</Chapter>
 	);

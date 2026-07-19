@@ -10,7 +10,10 @@ export function AboutGlobalTalent() {
 			slug="talent"
 		>
 			<p>
-				In September 2024, the UK endorsed me as{" "}
+				Two years into the restart I made another deliberate choice. I wanted
+				freedom: my place in this country earned by my own work, tied to no
+				employer. Preparing the evidence took a long time. In September 2024,
+				the UK endorsed me as{" "}
 				<Link href="/awards/uk-global-talent" className={chapterLinkClass}>
 					exceptional talent
 				</Link>{" "}
@@ -23,8 +26,9 @@ export function AboutGlobalTalent() {
 				the work to back it, and the answer came back yes.
 			</p>
 			<p>
-				Two years earlier I had arrived needing a sponsor. Now the UK had looked
-				at what I built and said: stay, on your own merit. I hold this one the
+				Two years earlier I had arrived needing a sponsor. Now the UK said:
+				stay, on your own merit. In December 2025, three years after landing,
+				came settled status. This city is home now. I hold this endorsement the
 				closest.
 			</p>
 		</Chapter>

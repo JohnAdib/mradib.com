@@ -20,9 +20,10 @@ export function AboutLondon() {
 				on. When the national award arrived a few months into that process, it
 				changed nothing. The decision was made. I prepared the CV, took the
 				interviews, went through the visa, and weighed three cities: Amsterdam,
-				Munich, London. London won. The city itself, the weight of its tech
-				scene, and one practical truth: I would rather master one language than
-				juggle two.
+				Munich, London. London won my heart. A beautiful, generous city, one of
+				the best places in the world to live, with the weight of Europe's tech
+				scene inside it. And one practical truth: I would rather master one
+				language than juggle two.
 			</p>
 			<p>
 				Almost exactly a year later, in December 2022, my plane landed at
@@ -30,10 +31,16 @@ export function AboutLondon() {
 				I landed in London after all. Not for a competition this time. To stay.
 			</p>
 			<p>
-				I arrived on a Skilled Worker visa with a job offer, and started again
-				as a software engineer. A CEO, then a CTO, choosing to be an engineer
-				again in a new country. Some would call that a step back. I called it a
-				running start.
+				I arrived on a Skilled Worker visa with a job offer: an entrepreneur
+				becoming an employee again, a senior software engineer in someone else's
+				company. I landed with a few hundred in my pocket and my family beside
+				me. The deposit for our first home? A friend lent it to me. One asset
+				survived the move intact: what I can do.
+			</p>
+			<p>
+				Call it a restart, call it a rebirth. I was zero years old in this city,
+				starting from zero. Everything I had built stayed behind. Everything I
+				had learned came with me.
 			</p>
 		</Chapter>
 	);

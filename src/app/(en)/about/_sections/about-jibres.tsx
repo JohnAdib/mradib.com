@@ -4,19 +4,20 @@ export function AboutJibres() {
 	return (
 		<Chapter
 			index="10"
-			era="2019 to 2022 · Bootstrapped"
-			title="Bootstrapped, from day zero"
+			era="2019 to 2022 · Startup two, as CTO"
+			title="Jibres, bootstrapped from day zero"
 			slug="jibres"
 		>
 			<p>
 				In 2019 I went again, co-founding Jibres as CTO. No investor this time.
-				It started with one real customer on day zero, and the whole platform
-				was built from scratch around them.
+				One real customer on day zero, and a platform I wrote line by line,
+				myself. Unbelievable to say in the AI era, but every line.
 			</p>
 			<p>
-				Jibres grew into one of the country's biggest omnichannel e-commerce
-				platforms, unifying online and offline selling for more than 1,200
-				businesses. In 2022 it won a national award at the 14th IR Web Festival.
+				Jibres became the country's first omnichannel e-commerce platform, and
+				one of its biggest, unifying online and offline selling for more than
+				1,200 businesses. In 2022 it won a national award at the 14th IR Web
+				Festival.
 			</p>
 			<p>
 				Sarshomar taught me to carry a vision. Jibres taught me to carry a

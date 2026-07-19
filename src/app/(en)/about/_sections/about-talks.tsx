@@ -12,9 +12,9 @@ export function AboutTalks() {
 			<p>
 				In July 2025 I stepped on stage again, for the first time in English. A
 				new country, a new culture, new rules of the room, layered on top of the
-				same presence built over years of six-hour sessions. And I started big:
-				my first talk was at Figma's office in London, a company I have admired
-				for years, in front of 120+ engineers.
+				same presence built over years of teaching and years of presenting. And
+				I started big: my first talk was at Figma's office, a company I have
+				admired for years, in front of 120+ London engineers.
 			</p>
 			<p>
 				Walking off that stage I knew: if I can do this, I can do more. There
