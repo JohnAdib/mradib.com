@@ -72,7 +72,11 @@ body {
 	/* Horizontal overflow is a bug; clip it and break long words instead */
 	@apply overflow-x-clip;
 	overflow-wrap: break-word;
-	font-family: var(--font-en);
+	/*
+	  No font-family here: the html element owns it via the [dir] rules
+	  below, so the fa tree gets Vazirmatn and the en tree gets Inter.
+	  The variables live on each tree's html element.
+	*/
 }
 
 /* Embeds and media must never exceed their container */

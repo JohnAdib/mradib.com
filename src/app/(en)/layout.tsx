@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import { fontDisplay, fontEn } from "@/app/fonts";
 import { Layout } from "@/components/layout";
 import { RootShell } from "@/components/root-shell";
 import { rootMetadata } from "@/lib/root-metadata";
@@ -18,6 +20,7 @@ export default function RootLayout({
 			dir="ltr"
 			lang="en"
 			suppressHydrationWarning
+			className={clsx(fontEn.variable, fontDisplay.variable)}
 		>
 			<RootShell>
 				<div className="flex w-full">

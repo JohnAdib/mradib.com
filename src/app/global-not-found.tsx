@@ -1,4 +1,6 @@
+import clsx from "clsx";
 import type { Metadata } from "next";
+import { fontDisplay, fontEn } from "@/app/fonts";
 import { NotFoundView } from "@/components/page-404/not-found-view";
 import { RootShell } from "@/components/root-shell";
 import { rootViewport } from "@/lib/root-viewport";
@@ -22,6 +24,7 @@ export default function GlobalNotFound() {
 			dir="ltr"
 			lang="en"
 			suppressHydrationWarning
+			className={clsx(fontEn.variable, fontDisplay.variable)}
 		>
 			<RootShell>
 				<NotFoundView />

@@ -19,8 +19,9 @@ export default function RootLayout({
 			dir="rtl"
 			lang="fa"
 			suppressHydrationWarning
+			className={fontFa.variable}
 		>
-			<RootShell className={fontFa.variable}>
+			<RootShell>
 				<div className="flex w-full">
 					<Layout>{children}</Layout>
 				</div>
