@@ -302,10 +302,10 @@
   }
 
   function countUp(el) {
-    const target = parseFloat(el.dataset.countTo);
+    const target = Number.parseFloat(el.dataset.countTo);
     const prefix = el.dataset.prefix || "";
     const suffix = el.dataset.suffix || "";
-    const decimals = parseInt(el.dataset.decimals || "0", 10);
+    const decimals = Number.parseInt(el.dataset.decimals || "0", 10);
     const finalText = el.textContent;
     const dur = 1200, t0 = performance.now();
     const fmt = n => prefix + n.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;

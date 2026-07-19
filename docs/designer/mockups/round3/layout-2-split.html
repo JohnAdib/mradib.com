@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Layout 2 · Split</title>
 <script>
-  (function () {
+  (() => {
     var r = document.documentElement;
     r.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     r.classList.add("js");
@@ -129,10 +129,10 @@
   .hero { font-weight: 580; letter-spacing: -.022em; line-height: 1.03; font-size: clamp(2.6rem, 8.6vw, 5.2rem); }
   .open .lede { margin-top: clamp(20px, 3.4vw, 28px); max-width: 46ch; }
   .proof {
-    margin-top: clamp(22px, 4vw, 30px); display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px;
+    margin-top: clamp(22px, 4vw, 30px); line-height: 1.7;
     font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: var(--ink-3);
   }
-  .proof .sep { color: var(--line); }
+  .proof .sep { margin: 0 7px; opacity: .55; }
   .proof b { color: var(--ink-2); font-weight: 600; }
 
   /* buttons */
@@ -180,6 +180,7 @@
   .srow:hover { background: var(--surface); transform: translateX(2px); }
   .snum { font-weight: 560; letter-spacing: -.01em; font-size: clamp(2.3rem, 8.6vw, 3.4rem); line-height: 1; font-variant-numeric: tabular-nums; transition: color .3s ease; }
   .srow:hover .snum { color: var(--accent); }
+  .smeta { display: flex; flex-direction: column; }
   .sname { font: 600 clamp(16px, 2.5vw, 19px)/1.2 "Inter", sans-serif; letter-spacing: -.005em; color: var(--ink); }
   .sdetail { margin-top: 4px; font-size: 13.5px; line-height: 1.4; color: var(--ink-3); }
   .snote { margin-top: clamp(22px, 4vw, 30px); font-size: 13.5px; line-height: 1.6; color: var(--ink-3); max-width: 48ch; }
@@ -398,7 +399,7 @@
 </div>
 
 <script>
-  (function () {
+  (() => {
     var root = document.documentElement;
     var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     var hasIO = "IntersectionObserver" in window;
@@ -406,28 +407,28 @@
     /* scroll reveals */
     var revs = document.querySelectorAll(".reveal");
     if (!hasIO || reduce) {
-      revs.forEach(function (el) { el.classList.add("in"); });
+      revs.forEach((el) => { el.classList.add("in"); });
     } else {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
+      var io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
           if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
         });
       }, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
-      revs.forEach(function (el) { io.observe(el); });
+      revs.forEach((el) => { io.observe(el); });
     }
 
     /* count up (SSR values already final for no-JS and reduced motion) */
     var nums = document.querySelectorAll(".num");
     function fmt(n) { return n.toLocaleString("en-US"); }
     function run(el) {
-      var to = parseFloat(el.getAttribute("data-to"));
+      var to = Number.parseFloat(el.getAttribute("data-to"));
       var pre = el.getAttribute("data-pre") || "";
       var suf = el.getAttribute("data-suf") || "";
       var dur = 1400, start = null;
       function step(t) {
         if (start === null) start = t;
         var p = Math.min((t - start) / dur, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
+        var eased = 1 - (1 - p) ** 3;
         el.textContent = pre + fmt(Math.round(to * eased)) + suf;
         if (p < 1) requestAnimationFrame(step);
         else el.textContent = pre + fmt(to) + suf;
@@ -435,19 +436,19 @@
       requestAnimationFrame(step);
     }
     if (nums.length && hasIO && !reduce) {
-      var io2 = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
+      var io2 = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
           if (e.isIntersecting) { run(e.target); io2.unobserve(e.target); }
         });
       }, { threshold: .6 });
-      nums.forEach(function (el) { io2.observe(el); });
+      nums.forEach((el) => { io2.observe(el); });
     }
 
     /* theme toggle : label is the target theme */
     var toggle = document.getElementById("toggle");
     function label() { toggle.textContent = root.dataset.theme === "dark" ? "Light" : "Dark"; }
     label();
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener("click", () => {
       root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
       label();
     });

@@ -291,14 +291,14 @@
 </main>
 
 <script>
-(function () {
+(() => {
   var root = document.documentElement;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var toggle = document.getElementById("toggle");
   function label() { toggle.textContent = root.dataset.theme === "dark" ? "Light" : "Dark"; }
   label();
-  toggle.addEventListener("click", function () {
+  toggle.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     label();
   });
@@ -311,13 +311,13 @@
   function countUp(el) {
     if (el._done) return; el._done = true;
     if (reduce) return;
-    var to = parseFloat(el.getAttribute("data-to")) || 0;
+    var to = Number.parseFloat(el.getAttribute("data-to")) || 0;
     var dur = 1500, start = null;
     el.textContent = fmt(el, 0);
     function step(t) {
       if (!start) start = t;
       var p = Math.min((t - start) / dur, 1);
-      var e = 1 - Math.pow(1 - p, 3);
+      var e = 1 - (1 - p) ** 3;
       el.textContent = fmt(el, to * e);
       if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(el, to);
     }
@@ -326,21 +326,21 @@
 
   var items = [].slice.call(document.querySelectorAll("[data-reveal]"));
   if (reduce || !("IntersectionObserver" in window)) {
-    items.forEach(function (el) {
+    items.forEach((el) => {
       el.classList.add("is-visible");
       el.querySelectorAll("[data-count]").forEach(countUp);
     });
     return;
   }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
+  var io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
       if (!e.isIntersecting) return;
       e.target.classList.add("is-visible");
       e.target.querySelectorAll("[data-count]").forEach(countUp);
       io.unobserve(e.target);
     });
   }, { threshold: .2, rootMargin: "0px 0px -8% 0px" });
-  items.forEach(function (el) { io.observe(el); });
+  items.forEach((el) => { io.observe(el); });
 })();
 </script>
 </body>

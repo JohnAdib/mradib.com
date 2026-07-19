@@ -4,6 +4,26 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, homepage parked: content strategy before design
+
+All four layout variants (cover, split, persona, ledger) rejected. The
+reason is structural, not visual: a homepage that shows off multiple
+things at once is wrong for John. Standing rule: decide WHAT the
+homepage says first (one story, not a trophy shelf), then design it.
+The homepage redesign is parked until that content conversation
+happens. Work proceeds on the inner pages meanwhile, applying the
+locked decisions: Newsreader display voice, warm paper light mode,
+dramatic dark, Contact in the header, the Persian link in the footer.
+
+## 2026-07-19, DISPLAY FONT DECIDED: Newsreader
+
+John picked Newsreader over Instrument Serif on the head-to-head page
+(docs/designer/mockups/round3/font-final.html). The display voice for
+the whole site is Newsreader, weight around 560 to 620 for heroes with
+the full 200 to 800 range available, optical sizing on, italic accent
+words in the accent color. Inter remains the body sans, Vazirmatn stays
+for Persian. This decision is closed; next single decision is layout.
+
 ## 2026-07-19, font finalists: Instrument Serif vs Newsreader, one step at a time
 
 From the nine-face specimen John liked Instrument Serif and Newsreader
