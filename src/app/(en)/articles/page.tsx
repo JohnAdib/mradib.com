@@ -1,55 +1,27 @@
 import type { Metadata } from "next";
-import { Card } from "@/components/card";
-import { SimpleLayout } from "@/components/simple-layout";
-import type { IArticle } from "@/data/articles/article-interface";
+import { Container } from "@/components/container";
+import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel";
 import { articlesMeta } from "@/data/articles/articles-meta";
-import { formatDateTime } from "@/lib/datetime/format-date-time";
+import { pageClosings } from "@/data/page-closings";
+import { ArticleFeature } from "./_sections/article-feature";
+import { ArticlesHero } from "./_sections/articles-hero";
 
 export const metadata: Metadata = {
-	title: "A Collection of Insights and Ideas",
+	title: "Articles",
 	description:
-		"A mix of articles on whatever I find interesting from programming, leadership, design, to anything else I think could be useful for you or just me!",
+		"Two guides, each written to be the most complete answer to its question on the internet. The complete A to Z of building a resume that gets read, and the guide to GitHub Autolink references that wire your issues to Jira, Asana, and more.",
 };
 
-export default async function ArticlesIndex() {
+export default function ArticlesIndex() {
 	return (
-		<SimpleLayout
-			title={metadata.title as string}
-			intro={metadata.description as string}
-		>
-			<div className="max-w-3xl">
-				<div className="flex max-w-3xl flex-col space-y-16">
-					{articlesMeta.map((article) => (
-						<Article key={article.pagePath} article={article} />
-					))}
-				</div>
+		<Container className="mt-16 sm:mt-32">
+			<ArticlesHero />
+			<div className="mt-16 sm:mt-20">
+				{articlesMeta.map((article) => (
+					<ArticleFeature key={article.pagePath} article={article} />
+				))}
 			</div>
-		</SimpleLayout>
-	);
-}
-
-function Article({ article }: { article: IArticle }) {
-	return (
-		<article className="md:grid md:grid-cols-4 md:items-baseline">
-			<Card className="md:col-span-3">
-				<Card.Title href={`${article.pagePath}`}>{article.title}</Card.Title>
-				<Card.Eyebrow
-					as="time"
-					dateTime={article.datePublished}
-					className="md:hidden"
-				>
-					{formatDateTime({ datetime: article.datePublished })}
-				</Card.Eyebrow>
-				<Card.Description>{article.description}</Card.Description>
-				<Card.Cta>Read article</Card.Cta>
-			</Card>
-			<Card.Eyebrow
-				as="time"
-				dateTime={article.datePublished}
-				className="mt-1 hidden md:block"
-			>
-				{formatDateTime({ datetime: article.datePublished })}
-			</Card.Eyebrow>
-		</article>
+			<CtaOnDarkPanel {...pageClosings.articles} />
+		</Container>
 	);
 }
