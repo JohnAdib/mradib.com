@@ -4,6 +4,32 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, homepage section content approved, all five sections
+
+John resolved the open questions the same day. The hero H1 is "Two
+startups, a world title, a government endorsement. In that order."
+Recognition names the world title only; #1 Mentor in Europe stays on
+/awards, one name hits harder than two. The testimonial is attributed in
+full, "Qudrat Ullah, Senior Lead Software Engineer", per the voice.md
+rule. Both cuts confirmed: the standalone personal section merges into
+the Invitation close as one sentence, and the podcast card leaves the
+homepage (it stays featured on /talks). Every section file in
+playbooks/homepage/ is now Status: approved. Content is settled; the
+design and build phase may open, section by section.
+
+## 2026-07-19, gtag loads on first interaction, never near the paint
+
+Google's gtag.js is 158 KiB, 44% of the page's JavaScript. It now loads
+only on the first user interaction (pointer, key, scroll, touch) with a
+4 second post-load idle fallback so non-interacting visits still get
+counted (src/components/analytics.tsx). Verified: load event at 502ms,
+gtag request at 4,582ms. Implementation gotcha recorded: the gtag shim
+must push the Arguments object to dataLayer, never a plain array, or GA
+silently ignores the commands. Reminder: the mobile LCP John measured on
+the live site (3.8s) predates the committed font-display fix; the local
+production build measures 1.5s under harsher throttling, so the biggest
+win ships with the next push.
+
 ## 2026-07-19, homepage content decided: one story in five sections
 
 The parked homepage conversation happened. The page tells one rising
