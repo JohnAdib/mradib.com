@@ -20,7 +20,6 @@ export function HomeIntro() {
 		<button
 			type="button"
 			onClick={() => void copy()}
-			title="Tap to copy this intro"
 			className="relative -mx-3 block cursor-pointer rounded-xl px-3 py-2 text-left transition hover:bg-zinc-900/5 dark:hover:bg-zinc-800/40"
 		>
 			<span className="block text-base text-zinc-600 dark:text-zinc-400">

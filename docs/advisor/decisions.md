@@ -4,6 +4,22 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, hero round three: the H1 is a thesis, not a credentials list
+
+John rated the award-led H1 good but not best, and he is right. New
+standing principle for the homepage hero: institutions prove, they do
+not headline. The H1 is now the one thesis only John can claim,
+"Everything I build grows.", with the accent line "Classrooms.
+Companies. Careers." (the three domains, chronological). The canonical
+intro paragraph was rewritten to match: it opens with the pattern ("17+
+years in, one pattern: everything I build grows", the years interpolate
+from data), then proves it in ledger rhythm, short fragments, one number
+per beat,
+same facts as before, no new claims. The paragraph repeats the thesis
+deliberately because the copied text travels without the headline. Also
+ruled: the click-to-copy paragraph shows no tooltip and no instruction,
+a tap just copies (the Copied confirmation stays).
+
 ## 2026-07-19, hero H1 round two: no government, no teenager, entrepreneurship
 
 Three rulings from John after seeing the built page. The word
