@@ -24,7 +24,7 @@ export function AdplistBadgeGroup({
 			<p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase dark:text-zinc-500">
 				{kindLabel[kind]} · {badges.length}
 			</p>
-			<div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+			<div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-5">
 				{badges.map((badge) => (
 					<AdplistBadgeChip key={`${badge.kind}-${badge.date}`} badge={badge} />
 				))}
