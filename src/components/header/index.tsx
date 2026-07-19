@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Container } from "@/components/container";
 import { Avatar, AvatarContainer } from "./avatar";
 import { DesktopNavigation } from "./desktop-nav";
+import { HeaderName } from "./header-name";
 import { MobileNavigation } from "./mobile-nav";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -14,12 +14,7 @@ export function Header() {
 						<AvatarContainer className="pointer-events-auto">
 							<Avatar />
 						</AvatarContainer>
-						<Link
-							href="/"
-							className="pointer-events-auto text-sm font-semibold whitespace-nowrap text-zinc-800 dark:text-zinc-100"
-						>
-							John Adib
-						</Link>
+						<HeaderName />
 					</div>
 					<div className="flex flex-1 justify-end md:justify-center">
 						<MobileNavigation className="pointer-events-auto md:hidden" />

@@ -30,23 +30,26 @@ provable.
 
 ## Copy draft
 
-The H1 is John's manifesto, shared with the About hero. One identity,
-one line, both pages. Decided 2026-07-19, fourth round:
+The H1 is the name itself. Decided 2026-07-19, fifth round, John's own
+construction from the headline lab:
 
-"I build. I teach. I mentor." with the accent line "It started with a
-keyboard and no computer." (the childhood hook from About chapter 01,
-smaller size, accent color).
+"John Adib" with the accent line "Still building, every single day."
+(his About hero line, present tense, evergreen).
 
-Rationale: credentials, counts, and pattern claims all failed John's
-"is this me" test. The verbs are his approved manifesto; the keyboard
-line is a story hook no other engineer can open with, and it makes the
-5-second reader scroll. Retired after John's fact check: "Everything I
-build grows" (both startups were ended by John himself; never imply the
-companies still run or grow). The paragraph opens on the same verbs
-because the copied text travels without the headline. Below the H1, the
-intro paragraph renders verbatim via the click-to-copy HomeIntro
-component; a tap just copies, no tooltip, no instruction (John's
-ruling).
+Because the H1 carries the name, the site header hides its "John Adib"
+text on the homepage only (avatar stays; every other page keeps name
+plus avatar; see src/components/header/header-name.tsx). Reserved line,
+John-approved, for About or an OG card: "From a blinking cursor to
+leading engineering in London." It was not used here because it ends
+where the paragraph begins (engineering leader in London) and the words
+would double. Retired earlier rounds and their rulings: no credentials,
+counts, award names, government wording, "teenager", or growth claims
+in the title ("Everything I build grows" is factually wrong, John ended
+both startups himself). Below the H1, the intro paragraph renders
+verbatim via the click-to-copy HomeIntro component; a tap just copies,
+no tooltip, no instruction. Method note: five rounds of chat-text
+options failed; rendering candidates in the real lockup
+(docs/designer/mockups/headline-lab.html) settled it in one pass.
 
 ## Path deeper
 

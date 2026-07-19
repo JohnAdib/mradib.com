@@ -9,12 +9,10 @@ export function HomeHero() {
 		<Container className="mt-10 sm:mt-16">
 			<div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16">
 				<div className="max-w-2xl">
-					<h1 className="font-display text-4xl font-semibold tracking-tight text-balance text-zinc-800 sm:text-5xl dark:text-zinc-100">
-						<span className="reveal-rise block">
-							I build. I teach. I mentor.
-						</span>
+					<h1 className="font-display text-5xl font-semibold tracking-tight text-balance text-zinc-800 sm:text-6xl dark:text-zinc-100">
+						<span className="reveal-rise block">John Adib</span>
 						<span className="reveal-rise reveal-delay-1 mt-3 block text-2xl text-accent-700 sm:text-3xl dark:text-accent-400">
-							It started with a keyboard and no computer.
+							Still building, every single day.
 						</span>
 					</h1>
 					<div className="reveal-rise reveal-delay-2 mt-5">

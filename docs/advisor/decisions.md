@@ -4,6 +4,21 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, the homepage title is the name, the header goes quiet there
+
+Settled via the headline lab (docs/designer/mockups/headline-lab.html,
+12 candidates rendered in the real hero lockup) after five rounds of
+chat-text options failed. John's construction: the homepage H1 is "John
+Adib" with the teal line "Still building, every single day." (his About
+hero line). He approved two lines; the advisor chose this one because
+the other, "From a blinking cursor to leading engineering in London.",
+ends where the paragraph begins and the words would double; that line
+is reserved for About or an OG card. Because the H1 is the name, the
+header shows its "John Adib" text on every page EXCEPT the homepage
+(avatar always stays); the rule lives in
+src/components/header/header-name.tsx. Method rule for future copy
+stalemates: render the candidates in place, do not list them in chat.
+
 ## 2026-07-19, views were never on YouTube, and testimonials become a mosaic
 
 Fact correction from John: the 1.2M+ video views are NOT on YouTube.
