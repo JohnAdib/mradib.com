@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel";
+import { pageAlternates } from "@/lib/i18n/page-alternates";
+
+export const metadata: Metadata = {
+	alternates: pageAlternates("/fa"),
+};
 
 export default function Home() {
 	return (

@@ -4,6 +4,7 @@ import { ArticleLayout } from "@/components/article/layout";
 import { ArticleToc } from "@/components/toc/article-toc";
 import { separator } from "@/lib/constants/en";
 import { myNameFa } from "@/lib/constants/fa";
+import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { pageResumeSuffix } from "@/lib/suffix";
 import { SectionActionVerbs } from "./_sections/action-verbs";
 import { SectionAts } from "./_sections/ats";
@@ -59,6 +60,7 @@ const keywords = [
 export const metadata: Metadata = {
 	title: pageTitle,
 	description: pageDesc + separator + myNameFa,
+	alternates: pageAlternates("/fa/resume"),
 	openGraph: {
 		type: "article",
 		publishedTime: datePublished,

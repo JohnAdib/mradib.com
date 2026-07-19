@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import Faq from "@/components/faq/faq";
 import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
+import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { mentorFaq } from "./_sections/mentor-faq-data";
 import { MentorHero } from "./_sections/mentor-hero";
 import { MentorRecognition } from "./_sections/mentor-recognition";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 	title: "Mentorship",
 	description:
 		"John Adib has run 600+ mentorship sessions on ADPList, where he was named the World's Most Influential Mentor of 2024 and #1 Mentor in Europe. Book a 1:1 on engineering careers, resume reviews, or tech immigration.",
+	alternates: pageAlternates("/mentor"),
 };
 
 export default function Page() {

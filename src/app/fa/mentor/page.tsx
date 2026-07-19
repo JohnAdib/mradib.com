@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import type { ComponentType } from "react";
 import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
 import { FeatureWithFullWidthImage } from "@/components/sections/feature-with-full-width-image";
+import { pageAlternates } from "@/lib/i18n/page-alternates";
 import imgMradibMentoring from "./_img/mradib-mentoring.png";
 
 interface ISectionFeature {
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 	title: "منتورشیپ با آقای ادیب",
 	description:
 		"تعداد محدودی جلسه رایگان برای کمک به شما برای پیشرفت در حرفه تکنولوژی. همین امروز یک جلسه رزرو کن!",
+	alternates: pageAlternates("/fa/mentor"),
 	twitter: {
 		card: "summary_large_image",
 	},
