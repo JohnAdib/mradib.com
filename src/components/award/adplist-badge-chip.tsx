@@ -3,7 +3,10 @@
 import { PhotoIcon } from "@heroicons/react/24/outline";
 import { type ILightboxEntry, useLightbox } from "@/components/image-lightbox";
 import type { IAdplistBadge } from "@/data/awards";
-import { badgeImgPath } from "@/lib/awards/adplist-badge-image";
+import {
+	badgeChipImgPath,
+	badgeImgPath,
+} from "@/lib/awards/adplist-badge-image";
 
 export function AdplistBadgeChip({
 	badge,
@@ -18,6 +21,7 @@ export function AdplistBadgeChip({
 }) {
 	const openLightbox = useLightbox();
 	const img = badgeImgPath(badge);
+	const thumb = badgeChipImgPath(badge);
 	const aspect = wide ? "aspect-video" : "aspect-square";
 
 	return (
@@ -27,10 +31,10 @@ export function AdplistBadgeChip({
 			disabled={!img}
 			className="group flex flex-col overflow-hidden rounded-xl bg-surface text-left ring-1 ring-zinc-900/10 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 disabled:pointer-events-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
 		>
-			{img ? (
+			{thumb ? (
 				// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional
 				<img
-					src={img}
+					src={thumb}
 					alt=""
 					width={480}
 					height={wide ? 270 : 480}

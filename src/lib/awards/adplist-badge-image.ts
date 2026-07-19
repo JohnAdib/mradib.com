@@ -13,3 +13,12 @@ export function badgeImgPath(badge: IAdplistBadge): string | undefined {
 	}
 	return `/awards/${badge.date}-adplist-${kindSlug[badge.kind]}.jpg`;
 }
+
+/**
+ * 480px thumb for the ~250px badge chip, built by scripts/optimize-images.mjs.
+ * The full-size path (badgeImgPath) stays reserved for the lightbox.
+ */
+export function badgeChipImgPath(badge: IAdplistBadge): string | undefined {
+	const full = badgeImgPath(badge);
+	return full?.replace(/\.jpg$/, "-480.jpg");
+}
