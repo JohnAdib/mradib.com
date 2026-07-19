@@ -1,27 +1,29 @@
 "use client";
 
 import { PhotoIcon } from "@heroicons/react/24/outline";
-import { useLightbox } from "@/components/image-lightbox";
+import { type ILightboxEntry, useLightbox } from "@/components/image-lightbox";
 import type { IAdplistBadge } from "@/data/awards";
 import { badgeImgPath } from "@/lib/awards/adplist-badge-image";
-import { badgeReference } from "@/lib/awards/adplist-badge-reference";
 
 export function AdplistBadgeChip({
 	badge,
 	wide,
+	gallery,
+	galleryIndex,
 }: {
 	badge: IAdplistBadge;
 	wide?: boolean;
+	gallery: ILightboxEntry[];
+	galleryIndex: number;
 }) {
-	const openImage = useLightbox();
+	const openLightbox = useLightbox();
 	const img = badgeImgPath(badge);
-	const reference = badgeReference(badge);
 	const aspect = wide ? "aspect-video" : "aspect-square";
 
 	return (
 		<button
 			type="button"
-			onClick={() => img && openImage([img], 0, reference ? [reference] : [])}
+			onClick={() => img && openLightbox(gallery, galleryIndex)}
 			disabled={!img}
 			className="group flex flex-col overflow-hidden rounded-xl bg-surface text-left ring-1 ring-zinc-900/10 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 disabled:pointer-events-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
 		>

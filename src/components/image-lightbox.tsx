@@ -7,45 +7,45 @@ import { LightboxPanel } from "@/components/lightbox-panel";
 import { LightboxReferences } from "@/components/lightbox-references";
 import type { IReference } from "@/data/awards";
 
-type OpenImage = (
-	images: string[],
-	startIndex?: number,
-	references?: IReference[],
-) => void;
+export interface ILightboxEntry {
+	src: string;
+	references?: IReference[];
+}
 
-const LightboxContext = createContext<OpenImage | null>(null);
+type OpenLightbox = (entries: ILightboxEntry[], startIndex?: number) => void;
 
-export function useLightbox(): OpenImage {
-	const openImage = useContext(LightboxContext);
-	if (!openImage) {
+const LightboxContext = createContext<OpenLightbox | null>(null);
+
+export function useLightbox(): OpenLightbox {
+	const openLightbox = useContext(LightboxContext);
+	if (!openLightbox) {
 		throw new Error("useLightbox must be used within a LightboxProvider");
 	}
-	return openImage;
+	return openLightbox;
 }
 
 export function LightboxProvider({ children }: { children: React.ReactNode }) {
 	const [gallery, setGallery] = useState<{
-		images: string[];
+		entries: ILightboxEntry[];
 		index: number;
-		references: IReference[];
 	} | null>(null);
 
-	const openImage: OpenImage = (images, startIndex = 0, references = []) => {
-		setGallery({ images, index: startIndex, references });
+	const openLightbox: OpenLightbox = (entries, startIndex = 0) => {
+		setGallery({ entries, index: startIndex });
 	};
 	const step = (delta: number) => {
 		setGallery((current) => {
 			if (!current) {
 				return current;
 			}
-			const total = current.images.length;
+			const total = current.entries.length;
 			return { ...current, index: (current.index + delta + total) % total };
 		});
 	};
 	const close = () => setGallery(null);
 
 	const handleKeyDown = (event: React.KeyboardEvent) => {
-		if (!gallery || gallery.images.length < 2) {
+		if (!gallery || gallery.entries.length < 2) {
 			return;
 		}
 		if (event.key === "ArrowLeft") {
@@ -56,7 +56,7 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
 	};
 
 	return (
-		<LightboxContext.Provider value={openImage}>
+		<LightboxContext.Provider value={openLightbox}>
 			{children}
 			<Dialog
 				transition
@@ -84,11 +84,13 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
 								<span className="sr-only">Close</span>
 							</button>
 							<LightboxPanel
-								images={gallery.images}
+								images={gallery.entries.map((entry) => entry.src)}
 								index={gallery.index}
 								onStep={step}
 							/>
-							<LightboxReferences references={gallery.references} />
+							<LightboxReferences
+								references={gallery.entries[gallery.index]?.references ?? []}
+							/>
 						</DialogPanel>
 					)}
 				</div>

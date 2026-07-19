@@ -4,7 +4,7 @@ import { awardYear } from "@/lib/awards/award-date";
 
 export const groupTitles: Record<AwardGroup, string> = {
 	mentorship: "Mentorship",
-	national: "National recognition & immigration",
+	national: "National recognition",
 	competition: "Competition",
 	product: "Product & web",
 	service: "Service & judging",
