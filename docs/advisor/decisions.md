@@ -4,6 +4,39 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, views were never on YouTube, and testimonials become a mosaic
+
+Fact correction from John: the 1.2M+ video views are NOT on YouTube.
+One platform is tracked, the platform is never named on the site, and
+the About chapter 06 framing "on one platform alone" is the canonical
+wording everywhere. Every doc that said "YouTube alone" is corrected.
+Also cut from the homepage Rise beat: "across four institutions", the
+detail lives on /about. Testimonials change shape: instead of one long
+quote, the homepage Recognition section shows a mosaic of many short
+verbatim fragments pulled from all five LinkedIn recommendations
+(src/data/recommendations.ts), collective attribution "engineers,
+leads, and founders I worked with", one link to the LinkedIn
+recommendations page, no individual names rendered, no photos.
+voice.md's testimonial rule is amended to sanction the mosaic shape.
+
+## 2026-07-19, hero round four: the manifesto verbs, and a fact guard
+
+"Everything I build grows" is retired as factually wrong by John's own
+account: both startups ended because he ended them. STANDING FACT GUARD
+for every page: never claim or imply the companies still run or grow;
+growth numbers are point-in-time facts ($1M raised, one million users in
+the first month, 1,200+ businesses served), and the published framing
+for the endings is the deliberate London restart, never the word
+"failed". After credentials, counts, and pattern claims all failed
+John's "is this me" test, the homepage H1 is now his approved manifesto,
+shared with the About hero: "I build. I teach. I mentor." The accent
+line is the childhood hook from About chapter 01: "It started with a
+keyboard and no computer." The canonical intro paragraph opens on the
+same verbs ("17+ years in, three verbs: I build, I teach, I mentor"),
+ledger and AI-first closer unchanged. Direction chosen by John from
+explicit full-text options; the keyboard line was the advisor
+recommendation, accepted.
+
 ## 2026-07-19, hero round three: the H1 is a thesis, not a credentials list
 
 John rated the award-led H1 good but not best, and he is right. New
@@ -364,6 +397,15 @@ article covers were renamed to cover.jpg and kept as page art only.
 verify-metadata now fails any page missing og:image or whose og:image file
 is absent from out/. og:title is the social layer and may differ from the
 SEO title tag; both derive from the same facts.
+
+Round two rulings from John, same day: artwork frames use the site's
+rounded-2xl radius, talk logo panels are full bleed with no inner padding,
+and the homepage card leads with the name itself. Headline "John Adib",
+eyebrow carries the hero manifesto "I build. I teach. I mentor." (updated
+after the round-four fact guard retired the growth thesis), proof
+"Engineering Manager in London. Entrepreneur, twice. The World's Most
+Influential Mentor.", no employer and no government mention; the identity
+strip drops the duplicate name when the headline already is the name.
 
 ## 2026-07-19, advisor lives as docs plus a routing skill
 

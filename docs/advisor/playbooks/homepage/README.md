@@ -69,8 +69,10 @@ Order highlights by wow weight for the primary audience:
   src/data/intro-bio.ts and is never duplicated into these docs.
 - No employer name anywhere on the homepage, including the intro
   paragraph (decided 2026-07-19).
-- Video views are always framed "1.2M+ views on YouTube alone". Only
-  YouTube is tracked; never state a total (decided 2026-07-19).
+- Video views are always framed "1.2M+ views on one platform alone".
+  Never name the platform (it is NOT YouTube, John corrected
+  2026-07-19), and never state a total; other platforms and downloads
+  are untracked.
 
 ## Working in this folder
 

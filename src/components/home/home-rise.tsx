@@ -32,9 +32,9 @@ export function HomeRise() {
 				</Reveal>
 				<Reveal delay={200}>
 					<p>
-						<Strong>{students} students</Strong> across four institutions, and{" "}
-						<Strong>{videoViewsCompact}+ views</Strong> on YouTube alone for
-						free courses.
+						<Strong>{students} students</Strong>, and{" "}
+						<Strong>{videoViewsCompact}+ views</Strong> of free courses on one
+						platform alone.
 					</p>
 				</Reveal>
 				<Reveal delay={300}>

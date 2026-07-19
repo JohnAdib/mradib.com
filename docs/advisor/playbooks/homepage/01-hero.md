@@ -20,32 +20,33 @@ provable.
   Influential Mentor, the UK exceptional talent endorsement, the
   AI-first closing line. Source: src/data/intro-bio.ts (the canonical
   shareable intro, click-to-copy, never duplicated here).
-- H1 material: the growth thesis, provable across three domains.
-  Companies: two startups, $1M, 1M users, 1,200+ businesses
-  (docs/profile/experience.md). Classrooms: 2,000+ students, 1.2M+
-  YouTube views (src/data/teaching-stats.ts). Careers: 600+ sessions,
-  the world title, teams led (docs/profile/awards.md). Rulings
-  2026-07-19: no government wording in the title, no "teenager" anywhere
-  on the homepage, entrepreneurship preferred over startup or company
-  counts, and no award names in the H1, institutions prove, they do not
-  headline.
+- H1 material: the manifesto verbs (About hero, John-approved) and the
+  keyboard origin (About chapter 01: "Just a keyboard, with no computer
+  to plug it into"). Rulings 2026-07-19: no government wording in the
+  title, no "teenager" anywhere on the homepage, no award names in the
+  H1 (institutions prove, they do not headline), and never a growth or
+  permanence claim about the startups, John ended both himself. Growth
+  wording is allowed only for verified point-in-time numbers.
 
 ## Copy draft
 
-The H1 is a thesis in John's voice, not a credentials list. Decided
-2026-07-19, third round, after John rated award-led titles good but not
-best:
+The H1 is John's manifesto, shared with the About hero. One identity,
+one line, both pages. Decided 2026-07-19, fourth round:
 
-"Everything I build grows." with the accent line "Classrooms. Companies.
-Careers." (the three domains, true chronological order, smaller size).
+"I build. I teach. I mentor." with the accent line "It started with a
+keyboard and no computer." (the childhood hook from About chapter 01,
+smaller size, accent color).
 
-Rationale: award-led headlines are borrowed clothing, any site can open
-with an institution's words. The thesis is provable, unique to John, and
-the paragraph below delivers the proof inside the same 5 seconds. The
-paragraph repeats the thesis on purpose: it travels alone when copied,
-so it must carry the idea without the headline. Below the H1, the intro
-paragraph renders verbatim via the click-to-copy HomeIntro component; a
-tap just copies, no tooltip, no instruction (John's ruling).
+Rationale: credentials, counts, and pattern claims all failed John's
+"is this me" test. The verbs are his approved manifesto; the keyboard
+line is a story hook no other engineer can open with, and it makes the
+5-second reader scroll. Retired after John's fact check: "Everything I
+build grows" (both startups were ended by John himself; never imply the
+companies still run or grow). The paragraph opens on the same verbs
+because the copied text travels without the headline. Below the H1, the
+intro paragraph renders verbatim via the click-to-copy HomeIntro
+component; a tap just copies, no tooltip, no instruction (John's
+ruling).
 
 ## Path deeper
 

@@ -24,10 +24,13 @@ confident" rule. The new register: bold, cinematic, certain.
 
 ## Testimonials
 
-Allowed, selectively (decision logged 2026-07-19 in decisions.md). Use real
-quotes from docs/profile/recommendations.md where a third-party voice
-carries wow weight, always with name and role. One sharp quote beats five;
-never a wall of quotes.
+Allowed, selectively (decisions logged 2026-07-19 in decisions.md). Use
+real quotes from docs/profile/recommendations.md where a third-party
+voice carries wow weight. Two sanctioned shapes: a single short excerpt
+with name and role, or a MOSAIC of many short verbatim fragments with
+collective attribution and a link to the LinkedIn recommendations page
+(John's ruling for the homepage). Never a full recommendation paragraph,
+never photos of colleagues, and fragments are always verbatim.
 
 ## Mechanical hard rules, unchanged
 

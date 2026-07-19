@@ -8,7 +8,7 @@ import { homepageUrl } from "@/lib/constants/url";
   the homepage hero paragraph and copied verbatim to the clipboard, plus a
   link tail that never renders on the page.
 */
-export const introBio = `I'm John Adib, an engineering leader in London. ${experienceYears}+ years in, one pattern: everything I build grows. Two startups, $1M raised, a million users in the first month, 1,200+ businesses served. ${teachingStats.studentsTaught.toLocaleString("en-US")}+ students taught, ${mentoringStats.sessions}+ mentorship sessions, and ADPList named me The World's Most Influential Mentor. The UK endorsed me as exceptional talent in technology. These days I build AI-first: changing how teams work, not just how fast they ship.`;
+export const introBio = `I'm John Adib, an engineering leader in London. ${experienceYears}+ years in, three verbs: I build, I teach, I mentor. Two startups, $1M raised, a million users in the first month, 1,200+ businesses served. ${teachingStats.studentsTaught.toLocaleString("en-US")}+ students taught, ${mentoringStats.sessions}+ mentorship sessions, and ADPList named me The World's Most Influential Mentor. The UK endorsed me as exceptional talent in technology. These days I build AI-first: changing how teams work, not just how fast they ship.`;
 
 export const introBioClipboard = `${introBio}
 

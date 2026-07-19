@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal/reveal";
-
-const recommendationsUrl =
-	"https://www.linkedin.com/in/mradib/details/recommendations/";
+import {
+	recommendationQuotes,
+	recommendationsUrl,
+} from "@/data/recommendations";
 
 export function HomeRecognition() {
 	return (
@@ -24,21 +25,27 @@ export function HomeRecognition() {
 				</p>
 			</Reveal>
 			<Reveal delay={200}>
-				<figure className="mt-10 max-w-2xl">
-					<blockquote className="font-display text-2xl tracking-tight text-zinc-800 italic sm:text-3xl dark:text-zinc-100">
-						&ldquo;The best software engineer I have ever met.&rdquo;
-					</blockquote>
-					<figcaption className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
-						<a
-							href={recommendationsUrl}
-							target="_blank"
-							rel="noreferrer"
-							className="transition hover:text-accent-700 dark:hover:text-accent-400"
+				<div className="mt-10 flex max-w-3xl flex-wrap gap-3">
+					{recommendationQuotes.map((entry) => (
+						<span
+							key={entry.quote}
+							className="rounded-full bg-zinc-100/70 px-4 py-1.5 font-display text-base text-zinc-700 italic ring-1 ring-zinc-900/10 dark:bg-zinc-800/40 dark:text-zinc-300 dark:ring-zinc-700/50"
 						>
-							Qudrat Ullah, Senior Lead Software Engineer, on LinkedIn
-						</a>
-					</figcaption>
-				</figure>
+							&ldquo;{entry.quote}&rdquo;
+						</span>
+					))}
+				</div>
+				<p className="mt-4 max-w-2xl text-sm text-zinc-500 dark:text-zinc-400">
+					From engineers, leads, and founders I worked with.{" "}
+					<a
+						href={recommendationsUrl}
+						target="_blank"
+						rel="noreferrer"
+						className="font-medium text-accent-700 transition hover:text-accent-600 dark:text-accent-400"
+					>
+						All recommendations on LinkedIn →
+					</a>
+				</p>
 			</Reveal>
 			<Reveal delay={300}>
 				<Link

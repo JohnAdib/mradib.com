@@ -21,11 +21,13 @@ it in writing.
   Source: docs/profile/awards.md.
 - #1 Mentor in Europe stays OFF the homepage (decided 2026-07-19). One
   name hits harder than two; it lives on /awards, one click away.
-- Testimonial excerpt: "the best software engineer I have ever met".
-  Attributed in full, "Qudrat Ullah, Senior Lead Software Engineer"
-  (decided 2026-07-19, the voice.md rule). Source:
-  docs/profile/recommendations.md. Short excerpt only, never a full
-  paragraph. No photos of colleagues.
+- Testimonials: a MOSAIC of short quote fragments, not one long quote
+  (John's ruling 2026-07-19, second pass). Fragments pulled from all
+  five LinkedIn recommendations, verbatim, in src/data/recommendations.ts
+  (source docs/profile/recommendations.md). Collective attribution
+  ("engineers, leads, and founders I worked with") plus one link to the
+  LinkedIn recommendations page. Individual names stay in the data for
+  traceability, not rendered. No photos of colleagues, ever.
 
 ## Copy draft
 
