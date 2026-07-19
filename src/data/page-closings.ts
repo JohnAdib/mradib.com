@@ -12,7 +12,7 @@ export interface IPageClosing {
 export const pageClosings: Record<string, IPageClosing> = {
 	about: {
 		title: "The story continues.",
-		desc: "None of the chapters were planned, and the next one is already in motion. If any part of this story sounds like a conversation you want to have, say hello.",
+		desc: "If any part of this story sounds like a conversation you want to have, say hello.",
 		linkPrimaryText: "Get in touch",
 		linkPrimaryLink: "/contact",
 	},

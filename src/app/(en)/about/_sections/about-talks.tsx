@@ -24,6 +24,11 @@ export function AboutTalks() {
 					talks page
 				</Link>
 				. Giving back to the community stopped being a plan and became a habit.
+				Planning a stage of your own? The{" "}
+				<Link href="/contact" className={chapterLinkClass}>
+					door is open
+				</Link>
+				.
 			</p>
 		</Chapter>
 	);

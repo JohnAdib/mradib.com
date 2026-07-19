@@ -38,9 +38,8 @@ export function AboutLondon() {
 				survived the move intact: what I can do.
 			</p>
 			<p>
-				Call it a restart, call it a rebirth. I was zero years old in this city,
-				starting from zero. Everything I had built stayed behind. Everything I
-				had learned came with me.
+				I was zero years old in this city, starting from zero. Everything I had
+				built stayed behind. Everything I had learned came with me.
 			</p>
 		</Chapter>
 	);

@@ -10,8 +10,8 @@ export function AboutClosing() {
 		<div className="mt-20 border-t border-zinc-900/10 pt-12 dark:border-zinc-800">
 			<Reveal>
 				<p className="max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
-					I don't know what the next chapter looks like yet. None of the earlier
-					ones were planned either, and they turned out fine.
+					The next chapter is already in the works. I am not ready to name it
+					yet, but when I am, this page hears it first.
 				</p>
 				<p className="mt-4 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
 					Want the formal version?{" "}

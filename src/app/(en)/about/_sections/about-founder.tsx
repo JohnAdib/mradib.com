@@ -18,8 +18,8 @@ export function AboutFounder() {
 			<p>
 				I led Sarshomar as CEO. The flagship product reached one million users
 				in its first month. The team grew to fifteen. Vision, product, payroll,
-				real people counting on me, all of it in my twenties. Two years of
-				compressed learning that no degree could match.
+				real people counting on me, all of it in my twenties. Two years that
+				taught me more than the masters I had walked away from.
 			</p>
 		</Chapter>
 	);

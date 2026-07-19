@@ -3,6 +3,7 @@ import { StatBand } from "@/components/stat-band";
 import { TiltCard } from "@/components/tilt-card/tilt-card";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { experienceYears } from "@/data/profile";
+import { teachingStats, videoViewsCompact } from "@/data/teaching-stats";
 
 const stats = [
 	{ value: `${experienceYears}+`, label: "Years in software" },
@@ -12,7 +13,15 @@ const stats = [
 		label: "Mentoring sessions",
 		href: "/mentor",
 	},
-	{ value: "2,000+", label: "Students taught" },
+	{
+		value: `${teachingStats.studentsTaught.toLocaleString("en-US")}+`,
+		label: "Students taught",
+	},
+	{
+		value: `${videoViewsCompact}+`,
+		label: "Video course views",
+		href: "#videos",
+	},
 ];
 
 export function AboutHero() {

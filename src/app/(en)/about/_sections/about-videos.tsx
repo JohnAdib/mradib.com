@@ -26,11 +26,36 @@ export function AboutVideos() {
 				video collected 400 comments on my personal website alone.
 			</p>
 			<p>
-				Then came the boom: a full Excel course packed into a two-hour video in
-				September 2013, C programming that December, then Ubuntu, WordPress,
-				HTML, CSS, PHP, inspect element, and more. Free to download on my
-				personal website, shared across Persian social media, sitting on the
-				first page of Google for years.
+				Then came the boom:{" "}
+				<Link
+					href="https://evazzadeh.com/learning-video/chrikt-excel"
+					target="_blank"
+					rel="noreferrer"
+					className={chapterLinkClass}
+				>
+					a full Excel course packed into a two-hour video
+				</Link>{" "}
+				in September 2013, C programming that December, then Ubuntu, WordPress,{" "}
+				<Link
+					href="https://evazzadeh.com/learning-video/chrikt-htmlcss/"
+					target="_blank"
+					rel="noreferrer"
+					className={chapterLinkClass}
+				>
+					HTML, CSS
+				</Link>
+				,{" "}
+				<Link
+					href="https://evazzadeh.com/learning-video/chrikt-php/"
+					target="_blank"
+					rel="noreferrer"
+					className={chapterLinkClass}
+				>
+					PHP
+				</Link>
+				, inspect element, and more. Free to download on my personal website,
+				shared across Persian social media, sitting on the first page of Google
+				for years.
 			</p>
 			<p>
 				The numbers stopped being countable. More than 1.2 million views on one

@@ -18,9 +18,9 @@ export function AboutMentorship() {
 					mentor on ADPList
 				</Link>
 				, {mentoringStats.sessions}+ sessions and counting, on roadmaps,
-				architecture, careers, and the messy human parts nobody writes down.
-				Most weekends I go from one call to the next, meeting engineers from
-				countries I have never set foot in.
+				architecture, careers, and the resume, interview, and visa questions
+				underneath them. Most weekends I go from one call to the next, meeting
+				engineers from countries I have never set foot in.
 			</p>
 			<p>
 				ADPList named me the World's Most Influential Mentor in 2024 and again
@@ -33,10 +33,7 @@ export function AboutMentorship() {
 				. I keep the titles in perspective. What I actually chase is the moment
 				something finally clicks for someone.
 			</p>
-			<p>
-				Competitor to coach, engineer to mentor, builder to team leader. It has
-				been the same pattern the whole way through.
-			</p>
+			<p>Competitor to coach, engineer to mentor, builder to team leader.</p>
 		</Chapter>
 	);
 }

@@ -32,7 +32,7 @@ export function AboutTeaching() {
 				room, six hours of teaching, and not one frame to prove it. If you were
 				there and have a photo, please send it to me. I am completely serious.
 			</p>
-			<p>Teaching first, titles later. That order shaped everything.</p>
+			<p>Teaching first, titles later.</p>
 		</Chapter>
 	);
 }

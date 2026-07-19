@@ -9,6 +9,12 @@ export function AboutAiFirst() {
 			slug="ai"
 		>
 			<p>
+				For me the argument ended with an enterprise auth panel: the kind of
+				build that normally owns a quarter of a roadmap. With AI in the loop it
+				shipped in three days, production quality. After that, the question
+				stopped being whether AI belongs in the work.
+			</p>
+			<p>
 				I believe AI belongs inside the way a team works: in code reviews, in
 				agents, in the definition of done. Not bolted on as a faster keyboard.
 			</p>

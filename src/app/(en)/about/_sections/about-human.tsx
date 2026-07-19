@@ -23,8 +23,9 @@ export function AboutHuman() {
 				.
 			</p>
 			<p>
-				A line I try to live by: yesterday is history, tomorrow is a mystery,
-				today is a gift. That is why they call it the present.
+				People call tomorrow a mystery. I only half believe them: there is
+				uncertainty, and plans bend, but when you plan and put in the work,
+				tomorrow answers. I have seen it answer.
 			</p>
 		</Chapter>
 	);

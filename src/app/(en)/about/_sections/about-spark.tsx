@@ -43,8 +43,8 @@ export function AboutSpark() {
 				by one day ended up building champions.
 			</p>
 			<p>
-				That competition rewired me: learn a skill fast, apply it faster, hold
-				it to a professional bar. Everything since has run on that engine.
+				WorldSkills gave me the operating manual: learn a skill fast, apply it
+				faster, hold it to a professional bar.
 			</p>
 		</Chapter>
 	);
