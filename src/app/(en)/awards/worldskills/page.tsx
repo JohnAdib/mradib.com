@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
 
@@ -43,7 +44,7 @@ export default function Page() {
 			<p>
 				That switch, from winning to helping others win, quietly became the
 				pattern of my whole career: competitor to coach, engineer to mentor,
-				builder to <a href="/about">team leader</a>.
+				builder to <Link href="/about">team leader</Link>.
 			</p>
 
 			<h2>What it means to me</h2>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
 
@@ -23,20 +24,21 @@ export default function Page() {
 			<p>
 				The Global Talent visa is the UK's immigration route for leaders, and
 				potential leaders, in digital technology. Unlike a work visa, nobody
-				sponsors you: an endorsing body examines years of evidence of impact
-				inside and outside your day job and decides whether you qualify as
-				exceptional talent. It's less a form than a career audit.
+				sponsors you: an endorsing body examines your last five years of
+				evidence, impact inside and outside your day job, and decides whether
+				you qualify as exceptional talent. It's less a form than a career audit.
 			</p>
 
 			<h2>The work behind it</h2>
 			<p>
-				My evidence was sixteen years in the making: co-founding Sarshomar (a
-				survey platform that raised $1M and reached one million users in its
-				first month) and Jibres (an e-commerce platform serving 1,200+
-				businesses that won a national award), leading engineering teams,
-				teaching 2,000+ students, open-source work, and mentoring. Building two
-				companies in a challenging market, then starting again from zero in
-				London, turned out to be the story the evidence told on its own.
+				I applied in the innovation category, as a leader in the industry, and
+				the story behind the evidence ran deep: co-founding Sarshomar (a survey
+				platform that raised $1M and reached one million users in its first
+				month) and Jibres (an e-commerce platform serving 1,200+ businesses that
+				won a national award), leading engineering teams, teaching 2,000+
+				students, open-source work, and mentoring. Building two companies in a
+				challenging market, then starting again from zero in London, turned out
+				to be the story the evidence told on its own.
 			</p>
 
 			<h2>If you're applying, honest advice</h2>
@@ -63,7 +65,7 @@ export default function Page() {
 			</ul>
 			<p>
 				I regularly review Global Talent cases in{" "}
-				<a href="/mentor">mentoring sessions</a>. Bring yours.
+				<Link href="/mentor">mentoring sessions</Link>. Bring yours.
 			</p>
 
 			<h2>What it means to me</h2>

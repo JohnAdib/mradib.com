@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
 
@@ -44,9 +45,9 @@ export default function Page() {
 				Seven months from first session to first in Europe. Not because any
 				single session was heroic, but because the calendar never went quiet.
 				Consistency compounds. The same practice later led to the{" "}
-				<a href="/awards/worlds-most-influential-mentor">
+				<Link href="/awards/worlds-most-influential-mentor">
 					World's Most Influential Mentor
-				</a>{" "}
+				</Link>{" "}
 				recognition.
 			</p>
 
@@ -60,8 +61,8 @@ export default function Page() {
 
 			<h2>Want a session?</h2>
 			<p>
-				<a href="/mentor">Book a session</a>. European timezone friendly, but
-				the whole world is welcome.
+				<Link href="/mentor">Book a session</Link>. European timezone friendly,
+				but the whole world is welcome.
 			</p>
 		</AwardLayout>
 	);

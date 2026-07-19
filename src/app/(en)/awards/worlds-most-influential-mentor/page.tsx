@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AwardLayout } from "@/components/award/award-layout";
 import { getAward } from "@/data/awards";
 
@@ -44,8 +45,10 @@ export default function Page() {
 			</blockquote>
 			<p>
 				The same year, ADPList's data ranked me the{" "}
-				<a href="/awards/number-1-mentor-in-europe">#1 mentor in Europe</a>, a
-				separate story, told by the numbers.
+				<Link href="/awards/number-1-mentor-in-europe">
+					#1 mentor in Europe
+				</Link>
+				, a separate story, told by the numbers.
 			</p>
 
 			<h2>What it means to me</h2>
@@ -60,8 +63,8 @@ export default function Page() {
 
 			<h2>Want a session?</h2>
 			<p>
-				<a href="/mentor">Book a session</a> and bring a real problem: career,
-				code, resume, or visa.
+				<Link href="/mentor">Book a session</Link> and bring a real problem:
+				career, code, resume, or visa.
 			</p>
 		</AwardLayout>
 	);

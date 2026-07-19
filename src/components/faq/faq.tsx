@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { FaqLanguage, IFaqQA } from "./faq-interface";
 import { FaqJsonLD } from "./faq-json-ld";
 
@@ -41,9 +42,9 @@ export default function Faq({
 					{showContactLink && (
 						<p className="mt-4 text-base leading-7 text-slate-500 dark:text-slate-300">
 							{description}{" "}
-							<a href="/contact" className="font-semibold">
+							<Link href="/contact" className="font-semibold">
 								{contact}
-							</a>
+							</Link>
 							.
 						</p>
 					)}

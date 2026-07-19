@@ -32,17 +32,17 @@ export function AwardsHero() {
 	return (
 		<Container className="mt-16 sm:mt-32">
 			<header className="max-w-2xl">
-				<h1 className="font-display text-5xl font-semibold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
+				<h1 className="reveal-rise font-display text-5xl font-semibold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
 					Awards & Recognition
 				</h1>
-				<p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+				<p className="reveal-rise reveal-delay-1 mt-6 text-base text-zinc-600 dark:text-zinc-400">
 					{intro}
 				</p>
 			</header>
-			<div className="mt-12 sm:mt-16">
+			<div className="reveal-up reveal-delay-2 mt-12 sm:mt-16">
 				<StatBand stats={stats} />
 			</div>
-			<p className="mt-12 max-w-2xl font-display text-lg text-zinc-500 italic dark:text-zinc-400">
+			<p className="reveal-up reveal-delay-3 mt-12 max-w-2xl font-display text-lg text-zinc-500 italic dark:text-zinc-400">
 				{kicker}
 			</p>
 		</Container>

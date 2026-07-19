@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import Faq from "@/components/faq/faq";
+import { Reveal } from "@/components/reveal/reveal";
 import { BookMentorshipSession } from "@/components/sections/book-mentorship-session";
 import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { mentorFaq } from "./_sections/mentor-faq-data";
@@ -19,21 +20,33 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<>
+			{/* No-JS and pre-hydration fallback so scroll-revealed content is always visible. */}
+			<noscript>
+				<style>{".reveal-on-scroll{opacity:1;transform:none;}"}</style>
+			</noscript>
 			<MentorHero />
 			<section id="topics" className="scroll-mt-24">
-				<MentorTopics />
+				<Reveal>
+					<MentorTopics />
+				</Reveal>
 			</section>
 			<section id="stats" className="scroll-mt-24">
-				<MentorStats />
+				<Reveal>
+					<MentorStats />
+				</Reveal>
 			</section>
 			<section id="recognition" className="scroll-mt-24">
-				<MentorRecognition />
+				<Reveal>
+					<MentorRecognition />
+				</Reveal>
 			</section>
 
 			<section id="faq" className="scroll-mt-24">
-				<Container>
-					<Faq list={mentorFaq} />
-				</Container>
+				<Reveal>
+					<Container>
+						<Faq list={mentorFaq} />
+					</Container>
+				</Reveal>
 			</section>
 
 			<section id="book" className="scroll-mt-24">

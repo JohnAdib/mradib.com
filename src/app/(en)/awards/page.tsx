@@ -5,6 +5,7 @@ import { AwardGroupList } from "@/components/award/award-group-list";
 import { Container } from "@/components/container";
 import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel";
 import { ItemListJsonLd } from "@/components/json-ld/item-list-json-ld";
+import { Reveal } from "@/components/reveal/reveal";
 import { awards, flagshipAwards } from "@/data/awards";
 import { pageClosings } from "@/data/page-closings";
 import { homepageUrl } from "@/lib/constants/url";
@@ -21,6 +22,10 @@ const badgeAwards = awards.filter((award) => award.category === "badge");
 export default function AwardsPage() {
 	return (
 		<>
+			{/* No-JS and pre-hydration fallback so scroll-revealed content is always visible. */}
+			<noscript>
+				<style>{".reveal-on-scroll{opacity:1;transform:none;}"}</style>
+			</noscript>
 			<AwardsHero />
 			<Container className="mt-16 sm:mt-20">
 				<ItemListJsonLd
@@ -31,13 +36,19 @@ export default function AwardsPage() {
 					}))}
 				/>
 				<section id="flagship" className="scroll-mt-24">
-					<AwardFlagshipShowcase awards={flagshipAwards} />
+					<Reveal>
+						<AwardFlagshipShowcase awards={flagshipAwards} />
+					</Reveal>
 				</section>
 				<section id="badges" className="scroll-mt-24">
-					<AdplistStreak />
+					<Reveal>
+						<AdplistStreak />
+					</Reveal>
 				</section>
 				<section id="ledger" className="scroll-mt-24">
-					<AwardGroupList awards={badgeAwards} />
+					<Reveal>
+						<AwardGroupList awards={badgeAwards} />
+					</Reveal>
 				</section>
 				<CtaOnDarkPanel {...pageClosings.awards} />
 			</Container>

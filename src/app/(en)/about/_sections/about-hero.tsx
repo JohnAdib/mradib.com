@@ -58,7 +58,10 @@ export function AboutHero() {
 				</TiltCard>
 			</div>
 			<div className="reveal-up reveal-delay-4 lg:col-span-2">
-				<StatBand stats={stats} />
+				<StatBand
+					stats={stats}
+					gridClass="grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 max-sm:[&>*:last-child]:col-span-2"
+				/>
 			</div>
 		</div>
 	);

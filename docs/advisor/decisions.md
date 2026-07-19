@@ -4,6 +4,20 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, consistent motion, named header, client-side links only
+
+Three standing rules from John's review. The header shows "John Adib"
+next to the avatar on every page (one line, links home). Every page gets
+the same entrance motion language as About: reveal-rise on hero text,
+scroll Reveal on sections below, with the noscript fallback; awards,
+mentor, and the articles index were brought in line. Internal navigation
+always uses next/link, never a raw anchor: a raw <a> in the dark CTA
+panel caused full-page reloads (the "jumping" John felt); every internal
+<a> sitewide was converted. The About hero fits five stats on one line
+on desktop (2/3/5 responsive columns, last stat spans the row on
+phones). Also corrected on the Global Talent story page: evidence window
+is the last five years, innovation category, matching the About rule.
+
 ## 2026-07-19, every page section is deep-linkable, ADPList named twice max
 
 Standing rule: every major section on every page carries a one-word id
