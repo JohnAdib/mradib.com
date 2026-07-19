@@ -10,7 +10,6 @@ export const awards: IAward[] = [
 		group: "national",
 		summary:
 			"Endorsed as an exceptional talent in technology under the UK Global Talent visa route in September 2024.",
-		externalUrl: "https://www.gov.uk/global-talent",
 	},
 	{
 		slug: "worlds-most-influential-mentor",
@@ -22,9 +21,10 @@ export const awards: IAward[] = [
 		summary:
 			"Named in the 2026 ADPList100 for 2025 contributions, a list of 100 mentors selected from 32,000+ across 140+ countries. First recognized in the inaugural 2024 list too.",
 		badgeImages: [
-			"/awards/worlds-most-influential-mentor-badge.jpg",
-			"/awards/worlds-most-influential-mentor-badge-2.jpg",
+			"/awards/2026-adplist100-worlds-most-influential-mentor.jpg",
+			"/awards/2024-adplist100-worlds-most-influential-mentor.jpg",
 		],
+		badgeCaptions: ["Class of 2026", "Class of 2024"],
 		externalUrl: "https://adplist.org/adplist100/2026/mentor/john-adib",
 		references: [
 			{ label: "2024 ADPList100", url: "https://adplist.org/adplist100/2024" },
@@ -39,7 +39,7 @@ export const awards: IAward[] = [
 		group: "mentorship",
 		summary:
 			"Ranked first among ADPList's top mentors in Europe in the 2024 ADPList Wrapped.",
-		badgeImages: ["/awards/number-1-mentor-in-europe-badge.jpg"],
+		badgeImages: ["/awards/2024-adplist-wrapped-number-1-mentor-in-europe.jpg"],
 		externalUrl:
 			"https://blog.adplist.org/post/2024-adplist-wrapped-top-mentors-trends-and-topics",
 	},
@@ -52,6 +52,7 @@ export const awards: IAward[] = [
 		group: "competition",
 		summary:
 			"Silver Medal in IT Software Solutions for Business (2010), Medallion for Excellence (2007), and two national team camps for WorldSkills Calgary 2009 and London 2011. He later trained medal winning competitors from 2010 to 2015.",
+		badgeLogo: "/awards/worldskills-logo.png",
 	},
 	{
 		name: "Recognized as a National Elite",

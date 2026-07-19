@@ -2,6 +2,7 @@ import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { AwardBadge } from "@/components/award/award-badge";
 import { AwardContent } from "@/components/award/award-content";
+import { AwardLogo } from "@/components/award/award-logo";
 import { BreadcrumbJsonLD } from "@/components/breadcrumb/breadcrumb-json-ld";
 import { Container } from "@/components/container";
 import { LightboxProvider } from "@/components/image-lightbox";
@@ -24,7 +25,7 @@ export function AwardLayout({
 			current: true,
 		},
 	];
-	const hasImages = (award.badgeImages?.length ?? 0) > 0;
+	const hasImages = (award.badgeImages?.length ?? 0) > 0 || !!award.badgeLogo;
 
 	return (
 		<Container className="mt-16 sm:mt-24">
@@ -47,7 +48,11 @@ export function AwardLayout({
 					>
 						{hasImages && (
 							<div className="mx-auto max-w-sm lg:sticky lg:top-24 lg:mx-0 lg:max-w-none lg:self-start">
-								<AwardBadge award={award} />
+								{award.badgeLogo ? (
+									<AwardLogo src={award.badgeLogo} alt={award.issuer} />
+								) : (
+									<AwardBadge award={award} />
+								)}
 							</div>
 						)}
 						<div

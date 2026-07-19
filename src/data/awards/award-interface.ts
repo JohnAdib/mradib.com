@@ -24,6 +24,10 @@ export interface IAward {
 	summary: string;
 	/** Certificate/badge images, root-relative paths. First is the primary, shown largest. */
 	badgeImages?: string[];
+	/** Caption per badgeImages entry, same order. Use to disambiguate lookalike images. */
+	badgeCaptions?: string[];
+	/** Organization logo, root-relative path. Shown in a neutral card, not the lightbox. */
+	badgeLogo?: string;
 	evidencePdf?: string;
 	externalUrl?: string;
 	/** Extra reference links (articles, alternate edition pages) shown inside the evidence modal, beyond externalUrl. */
