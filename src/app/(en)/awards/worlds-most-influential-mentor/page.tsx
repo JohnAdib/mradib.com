@@ -5,7 +5,7 @@ import { getAward } from "@/data/awards";
 const award = getAward("worlds-most-influential-mentor");
 
 export const metadata: Metadata = {
-	title: "The World's Most Influential Mentor (2024)",
+	title: "The World's Most Influential Mentor (2024 and 2026)",
 	description:
 		"In February 2025, ADPList named John Adib one of The World's Most Influential Mentors of 2024, the ADPList100, selected from 32,000+ mentors across 140+ countries, and listed him again in 2026.",
 };

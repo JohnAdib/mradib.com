@@ -13,50 +13,53 @@ export function AwardBadge({ award }: { award: IAward }) {
 		return null;
 	}
 
+	if (images.length === 1) {
+		return (
+			<div>
+				<button
+					type="button"
+					onClick={() => openImage(images, 0, references)}
+					className="block w-full"
+				>
+					{/* biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional */}
+					<img
+						src={images[0]}
+						alt={`${award.name} certificate`}
+						className="w-full rounded-2xl ring-1 ring-zinc-100 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
+					/>
+				</button>
+				{captions[0] && (
+					<p className="mt-2 text-center text-xs text-zinc-500 dark:text-zinc-400">
+						{captions[0]}
+					</p>
+				)}
+			</div>
+		);
+	}
+
 	return (
-		<div>
-			<button
-				type="button"
-				onClick={() => openImage(images, 0, references)}
-				className="block w-full"
-			>
-				{/* biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional */}
-				<img
-					src={images[0]}
-					alt={`${award.name} certificate`}
-					className="w-full rounded-2xl ring-1 ring-zinc-100 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
-				/>
-			</button>
-			{captions[0] && (
-				<p className="mt-2 text-center text-xs text-zinc-500 dark:text-zinc-400">
-					{captions[0]}
-				</p>
-			)}
-			{images.length > 1 && (
-				<div className="mt-3 grid grid-cols-2 gap-2">
-					{images.slice(1).map((src, i) => (
-						<div key={src}>
-							<button
-								type="button"
-								onClick={() => openImage(images, i + 1, references)}
-								className="block w-full"
-							>
-								{/* biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional */}
-								<img
-									src={src}
-									alt=""
-									className="aspect-square w-full rounded-lg object-cover ring-1 ring-zinc-100 transition hover:opacity-80 dark:ring-zinc-700/50"
-								/>
-							</button>
-							{captions[i + 1] && (
-								<p className="mt-1 text-center text-xs text-zinc-500 dark:text-zinc-400">
-									{captions[i + 1]}
-								</p>
-							)}
-						</div>
-					))}
+		<div className="grid grid-cols-2 gap-3">
+			{images.map((src, i) => (
+				<div key={src}>
+					<button
+						type="button"
+						onClick={() => openImage(images, i, references)}
+						className="block w-full"
+					>
+						{/* biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional */}
+						<img
+							src={src}
+							alt={`${award.name} certificate${captions[i] ? `, ${captions[i]}` : ""}`}
+							className="aspect-[4/5] w-full rounded-2xl object-cover ring-1 ring-zinc-100 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
+						/>
+					</button>
+					{captions[i] && (
+						<p className="mt-2 text-center text-xs text-zinc-500 dark:text-zinc-400">
+							{captions[i]}
+						</p>
+					)}
 				</div>
-			)}
+			))}
 		</div>
 	);
 }
