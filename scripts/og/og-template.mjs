@@ -67,9 +67,9 @@ body { width: 1200px; height: 630px; overflow: hidden; }
 .name { color: #e4e4e7; font-size: 25px; font-weight: 600; }
 .dot { width: 5px; height: 5px; border-radius: 50%; background: #14b8a6; }
 .site { color: #71717a; font-size: 25px; }
-.art { position: absolute; top: 72px; inset-inline-end: 72px; width: 400px; height: 486px; border-radius: 28px; overflow: hidden; transform: rotate(${fa ? -3 : 3}deg); box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 44px 90px rgba(0,0,0,.55); }
+.art { position: absolute; top: 72px; inset-inline-end: 72px; width: 400px; height: 486px; border-radius: 16px; overflow: hidden; transform: rotate(${fa ? -3 : 3}deg); box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 44px 90px rgba(0,0,0,.55); }
 .art img { width: 100%; height: 100%; object-fit: cover; }
-.art.panel { top: 108px; height: 414px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 52px; }
+.art.panel { top: 115px; height: 400px; background: #fff; display: flex; align-items: center; justify-content: center; }
 .art.panel img { object-fit: contain; }
 </style></head>
 <body><div class="card">

@@ -9,9 +9,8 @@ export const ogCardsEn: IOgCard[] = [
 		route: "/",
 		lang: "en",
 		eyebrow: "Engineering Manager & 2× Founder",
-		headline: "Two startups, a world title, a government endorsement.",
-		proof:
-			"Engineering Manager at Zapp London. AI-first pioneer. 600+ mentorship sessions.",
+		headline: "Everything I build grows.",
+		proof: "Classrooms. Companies. Careers.",
 		artwork: portrait,
 	},
 	{
