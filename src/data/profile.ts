@@ -33,6 +33,7 @@ export interface IProfile {
 	name: string;
 	careerStart: string;
 	brand: string;
+	email: string;
 	jobTitle: string;
 	company: IProfileCompany;
 	titleTag: string;
@@ -51,6 +52,7 @@ export const profile: IProfile = {
 	name: "John Adib",
 	careerStart,
 	brand: "MrAdib",
+	email: "Mr.JohnAdib@Gmail.com",
 	jobTitle: "Engineering Manager",
 	company: { name: "Zapp", url: "https://www.justzapp.com" },
 	titleTag: "John Adib - Engineering Manager, Founder & Mentor | MrAdib",

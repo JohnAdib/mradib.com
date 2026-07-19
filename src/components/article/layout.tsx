@@ -53,7 +53,7 @@ export function ArticleLayout({
 								"group mb-4",
 								"flex items-center justify-center h-10 w-10",
 								"rounded-full",
-								"bg-white",
+								"bg-surface",
 								"transition",
 								"shadow-md shadow-zinc-800/5",
 								"ring-1 ring-zinc-900/5",

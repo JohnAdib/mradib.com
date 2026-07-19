@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { profile } from "@/data/profile";
 import {
 	GitHubIcon,
 	InstagramIcon,
@@ -12,11 +13,11 @@ import { SocialLink } from "./social-link";
 export function EmailLink() {
 	return (
 		<SocialLink
-			href="mailto:Mr.JohnAdib@Gmail.com"
+			href={`mailto:${profile.email}`}
 			ariaLabel="Send an email to MrAdib"
 			icon={MailIcon}
 			className={clsx(
-				"mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40",
+				"mt-8 border-t border-zinc-900/10 pt-8 dark:border-zinc-700/40",
 			)}
 		>
 			Email

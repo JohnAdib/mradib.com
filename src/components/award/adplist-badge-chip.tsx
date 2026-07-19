@@ -23,7 +23,7 @@ export function AdplistBadgeChip({
 			type="button"
 			onClick={() => img && openImage([img], 0, reference ? [reference] : [])}
 			disabled={!img}
-			className="group flex flex-col overflow-hidden rounded-xl bg-white text-left ring-1 ring-zinc-100 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 disabled:pointer-events-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
+			className="group flex flex-col overflow-hidden rounded-xl bg-surface text-left ring-1 ring-zinc-900/10 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 disabled:pointer-events-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
 		>
 			{img ? (
 				// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional

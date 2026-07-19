@@ -27,6 +27,7 @@ export default {
 			sans: ["var(--font-en)", "var(--font-fa)"],
 			en: ["var(--font-en)"],
 			fa: ["var(--font-fa)"],
+			display: ["var(--font-display)", "serif"],
 		},
 		typography: typographyStyles,
 	},

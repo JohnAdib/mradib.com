@@ -64,7 +64,7 @@ export default function AwardsPage() {
 					linkSecondaryLink="/talks"
 				/>
 			</div>
-			<p className="mt-16 max-w-2xl border-t border-zinc-100 pt-8 text-base text-zinc-600 italic dark:border-zinc-700/40 dark:text-zinc-400">
+			<p className="mt-16 max-w-2xl border-t border-zinc-900/10 pt-8 text-base text-zinc-600 italic dark:border-zinc-700/40 dark:text-zinc-400">
 				Awards are lagging indicators. The leading ones are the sessions, the
 				students, and the shipped work. That is the part I actually control.
 			</p>

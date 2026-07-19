@@ -10,7 +10,7 @@ export interface ILinkChip {
 }
 
 const chipClassName =
-	"group flex items-center gap-3 rounded-xl bg-white px-4 py-3 ring-1 ring-zinc-100 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70";
+	"group flex items-center gap-3 rounded-xl bg-surface px-4 py-3 ring-1 ring-zinc-900/10 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70";
 
 function ChipContent({ chip }: { chip: ILinkChip }) {
 	const Icon = chip.icon;

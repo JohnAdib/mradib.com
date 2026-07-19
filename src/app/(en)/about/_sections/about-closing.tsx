@@ -6,7 +6,7 @@ import { chapterLinkClass } from "./chapter";
 
 export function AboutClosing() {
 	return (
-		<Reveal className="mt-20 border-t border-zinc-100 pt-12 dark:border-zinc-800">
+		<Reveal className="mt-20 border-t border-zinc-900/10 pt-12 dark:border-zinc-800">
 			<h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
 				Say hello
 			</h2>

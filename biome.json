@@ -13,7 +13,8 @@
 			"!**/node_modules/**/*",
 			"!**/out/**/*",
 			"!**/*.svg",
-			"!public/email"
+			"!public/email",
+			"!docs/designer/mockups"
 		]
 	},
 	"formatter": {

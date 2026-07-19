@@ -18,7 +18,7 @@ const icons: Record<string, ComponentType<{ className?: string }>> = {
 export function TalksTopics() {
 	return (
 		<Reveal className="mt-16 sm:mt-20">
-			<div className="relative overflow-hidden rounded-3xl bg-zinc-50 px-8 py-12 ring-1 ring-zinc-100 sm:px-12 sm:py-14 dark:bg-zinc-900 dark:ring-zinc-700/60">
+			<div className="relative overflow-hidden rounded-3xl bg-zinc-900/5 px-8 py-12 ring-1 ring-zinc-900/10 sm:px-12 sm:py-14 dark:bg-zinc-900 dark:ring-zinc-700/60">
 				<div
 					aria-hidden="true"
 					className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-accent-500/10 blur-3xl dark:bg-accent-500/15"
@@ -43,7 +43,7 @@ export function TalksTopics() {
 							return (
 								<div
 									key={topic.slug}
-									className="min-w-0 rounded-2xl bg-white p-5 ring-1 ring-zinc-100 dark:bg-white/5 dark:ring-white/10"
+									className="min-w-0 rounded-2xl bg-surface p-5 ring-1 ring-zinc-900/10 dark:bg-white/5 dark:ring-white/10"
 								>
 									{Icon && (
 										<Icon className="h-6 w-6 text-accent-700 dark:text-accent-400" />

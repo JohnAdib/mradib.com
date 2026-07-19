@@ -47,7 +47,7 @@ export function AwardContent({
 			<div className="mt-10">
 				<AwardFacts award={award} />
 			</div>
-			<footer className="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-zinc-100 pt-6 text-sm dark:border-zinc-700/40">
+			<footer className="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-zinc-900/10 pt-6 text-sm dark:border-zinc-700/40">
 				<Link href="/talks" className={footerLinkClass}>
 					See the talks →
 				</Link>

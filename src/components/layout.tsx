@@ -11,8 +11,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 						className={clsx(
 							"w-full",
 							"ring-1",
-							"bg-white/60",
-							"ring-slate-100",
+							"bg-paper/80",
+							"ring-zinc-900/5",
 							"dark:bg-[#13141b]",
 							"backdrop-blur-xs",
 							"dark:ring-slate-300/20",

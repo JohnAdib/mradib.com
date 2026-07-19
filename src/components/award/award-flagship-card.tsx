@@ -15,7 +15,7 @@ export function AwardFlagshipCard({
 	return (
 		<Link
 			href={`/awards/${award.slug}`}
-			className="group flex min-w-0 flex-col rounded-3xl bg-white p-7 ring-1 ring-zinc-100 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
+			className="group flex min-w-0 flex-col rounded-3xl bg-surface p-7 ring-1 ring-zinc-900/10 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
 		>
 			{award.badgeImages?.[0] && featured ? (
 				// biome-ignore lint/performance/noImgElement: static export with images.unoptimized; plain img is intentional

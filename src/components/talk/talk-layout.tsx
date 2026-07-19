@@ -43,7 +43,7 @@ export function TalkLayout({
 						width={1600}
 						height={900}
 						priority
-						className="mt-8 h-auto w-full rounded-2xl ring-1 ring-zinc-100 dark:ring-zinc-700/50"
+						className="mt-8 h-auto w-full rounded-2xl ring-1 ring-zinc-900/10 dark:ring-zinc-700/50"
 					/>
 				)}
 

@@ -12,7 +12,7 @@ export const mainNav: INavItem[] = [
 	{ label: "Talks", href: "/talks" },
 	{ label: "Articles", href: "/articles" },
 	{ label: "Mentorship", href: "/mentor" },
-	{ label: "فارسی", href: "/fa", lang: "fa", dir: "rtl" },
+	{ label: "Contact", href: "/contact" },
 ];
 
 export const footerNav: INavItem[] = [
@@ -23,3 +23,11 @@ export const footerNav: INavItem[] = [
 	{ label: "Mentorship", href: "/mentor" },
 	{ label: "Contact", href: "/contact" },
 ];
+
+// The only crossover into the Persian tree, rendered in the footer
+export const faNav: INavItem = {
+	label: "فارسی",
+	href: "/fa",
+	lang: "fa",
+	dir: "rtl",
+};

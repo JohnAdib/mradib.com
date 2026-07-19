@@ -4,7 +4,7 @@ import { rootViewport } from "@/lib/root-viewport";
 import "@/styles/tailwind.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import clsx from "clsx";
-import { fontEn, fontFa } from "./fonts";
+import { fontDisplay, fontEn, fontFa } from "./fonts";
 import { Providers } from "./providers";
 
 export const metadata = rootMetadata;
@@ -23,7 +23,9 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning
 		>
-			<body className={clsx(fontEn.variable, fontFa.variable)}>
+			<body
+				className={clsx(fontEn.variable, fontFa.variable, fontDisplay.variable)}
+			>
 				<Providers>{children}</Providers>
 				<PersonJsonLd />
 				<GoogleAnalytics gaId="G-0T9SVDBER6" />

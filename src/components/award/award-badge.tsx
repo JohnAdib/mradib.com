@@ -25,7 +25,7 @@ export function AwardBadge({ award }: { award: IAward }) {
 					<img
 						src={images[0]}
 						alt={`${award.name} certificate`}
-						className="w-full rounded-2xl ring-1 ring-zinc-100 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
+						className="w-full rounded-2xl ring-1 ring-zinc-900/10 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
 					/>
 				</button>
 				{captions[0] && (
@@ -50,7 +50,7 @@ export function AwardBadge({ award }: { award: IAward }) {
 						<img
 							src={src}
 							alt={`${award.name} certificate${captions[i] ? `, ${captions[i]}` : ""}`}
-							className="aspect-[4/5] w-full rounded-2xl object-cover ring-1 ring-zinc-100 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
+							className="aspect-[4/5] w-full rounded-2xl object-cover ring-1 ring-zinc-900/10 shadow-sm transition hover:opacity-90 dark:ring-zinc-700/50"
 						/>
 					</button>
 					{captions[i] && (

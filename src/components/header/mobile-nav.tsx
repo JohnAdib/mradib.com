@@ -27,7 +27,7 @@ export function MobileNavigation(
 ) {
 	return (
 		<Popover {...props}>
-			<Popover.Button className="group flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+			<Popover.Button className="group flex items-center gap-3 rounded-full bg-surface/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
 				Menu
 				<ChevronDownIcon className="h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
 			</Popover.Button>
@@ -54,7 +54,7 @@ export function MobileNavigation(
 				>
 					<Popover.Panel
 						focus
-						className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+						className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-surface p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
 					>
 						<div className="flex flex-row-reverse items-center justify-between">
 							<Popover.Button aria-label="Close menu" className="-m-1 p-1">

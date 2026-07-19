@@ -1,4 +1,4 @@
-import { Inter, Vazirmatn } from "next/font/google";
+import { Inter, Newsreader, Vazirmatn } from "next/font/google";
 
 export const fontFa = Vazirmatn({
 	subsets: ["latin"],
@@ -9,4 +9,13 @@ export const fontFa = Vazirmatn({
 export const fontEn = Inter({
 	subsets: ["latin"],
 	variable: "--font-en",
+});
+
+// Display voice for headlines and big numbers, decided 2026-07-19
+export const fontDisplay = Newsreader({
+	subsets: ["latin"],
+	display: "swap",
+	style: ["normal", "italic"],
+	axes: ["opsz"],
+	variable: "--font-display",
 });

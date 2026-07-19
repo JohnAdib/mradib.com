@@ -28,7 +28,7 @@ export function Chapter({
 		>
 			<span
 				aria-hidden="true"
-				className="absolute top-1.5 -left-[7px] h-3.5 w-3.5 rounded-full border-2 border-accent-500 bg-zinc-50 dark:bg-black"
+				className="absolute top-1.5 -left-[7px] h-3.5 w-3.5 rounded-full border-2 border-accent-500 bg-paper dark:bg-black"
 			/>
 			<Reveal>
 				<div className="flex items-baseline gap-3">

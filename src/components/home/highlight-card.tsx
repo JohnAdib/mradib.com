@@ -19,7 +19,7 @@ export function HighlightCard({ highlight }: { highlight: IHighlight }) {
 			href={highlight.href}
 			target={highlight.external ? "_blank" : undefined}
 			rel={highlight.external ? "noopener noreferrer" : undefined}
-			className="group flex min-w-0 flex-col rounded-3xl bg-white p-7 ring-1 ring-zinc-100 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
+			className="group flex min-w-0 flex-col rounded-3xl bg-surface p-7 ring-1 ring-zinc-900/10 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
 		>
 			<span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-50 ring-1 ring-accent-100 dark:bg-accent-400/10 dark:ring-accent-400/20">
 				<Icon className="h-5 w-5 text-accent-700 dark:text-accent-400" />

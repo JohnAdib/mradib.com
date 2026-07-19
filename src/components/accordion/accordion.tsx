@@ -20,7 +20,7 @@ export function Accordion({
 		<details
 			open={defaultOpen}
 			className={clsx(
-				"group rounded-2xl border border-zinc-100 bg-white px-5",
+				"group rounded-2xl border border-zinc-900/10 bg-surface px-5",
 				"dark:border-zinc-700/40 dark:bg-zinc-900",
 				className,
 			)}

@@ -11,6 +11,26 @@
   Brand accent tokens, one accent family for the whole site.
   Aliased to Tailwind's teal scale; change these lines to rebrand.
 */
+/*
+  Warm paper world, decided 2026-07-19: light mode is never pure white
+  or zinc-50. paper = page bg, paper-deep = body gutters, surface =
+  raised cards.
+*/
+@theme {
+	--color-paper: #f7f3ec;
+	--color-paper-deep: #f1ebe0;
+	--color-surface: #fdfbf6;
+}
+
+/* Motion tokens, defined once, consumed by reveal.css and components */
+:root {
+	--duration-fast: 0.25s;
+	--duration-base: 0.6s;
+	--duration-slow: 1s;
+	--ease-rise: cubic-bezier(0.16, 1, 0.3, 1);
+	--stagger-step: 0.12s;
+}
+
 @theme inline {
 	--color-accent-50: var(--color-teal-50);
 	--color-accent-100: var(--color-teal-100);
@@ -50,7 +70,7 @@ html {
 body {
 	@apply antialiased;
 	@apply flex h-full;
-	@apply bg-zinc-50;
+	@apply bg-paper-deep;
 	@apply dark:bg-black;
 	/* Horizontal overflow is a bug; clip it and break long words instead */
 	@apply overflow-x-clip;
@@ -64,6 +84,11 @@ img,
 svg,
 video {
 	max-width: 100%;
+}
+
+/* The display face needs its optical size axis active at every scale */
+.font-display {
+	font-optical-sizing: auto;
 }
 
 [dir="rtl"] {

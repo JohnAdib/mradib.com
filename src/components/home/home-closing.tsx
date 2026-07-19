@@ -4,7 +4,7 @@ import { Container } from "@/components/container";
 export function HomeClosing() {
 	return (
 		<Container className="my-20 sm:my-28">
-			<div className="relative overflow-hidden rounded-3xl bg-zinc-100/70 px-8 py-12 text-center ring-1 ring-zinc-100 sm:py-14 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
+			<div className="relative overflow-hidden rounded-3xl bg-zinc-100/70 px-8 py-12 text-center ring-1 ring-zinc-900/10 sm:py-14 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
 				<div
 					aria-hidden="true"
 					className="absolute -top-24 -right-20 h-64 w-64 rounded-full bg-accent-500/10 blur-3xl"
