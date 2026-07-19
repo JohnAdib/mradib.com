@@ -25,6 +25,8 @@ jobs:
           cache: "npm"
       - run: npm ci --legacy-peer-deps
       - run: npm run build
+      - name: Verify SEO guardrails
+        run: npm run verify:seo
 
   test:
     strategy:

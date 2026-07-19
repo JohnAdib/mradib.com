@@ -15,7 +15,8 @@
 		"lint:fix": "biome lint --fix",
 		"lint:fix:unsafe": "biome lint --fix --unsafe",
 		"start": "next start",
-		"start:local": "npx serve@latest out"
+		"start:local": "npx serve@latest out",
+		"verify:seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-sitemap.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-metadata.mjs && node scripts/verify-constraints.mjs"
 	},
 	"browserslist": "defaults, not ie <= 11",
 	"dependencies": {
