@@ -1,6 +1,7 @@
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLD } from "@/components/breadcrumb/breadcrumb-json-ld";
 import { Container } from "@/components/container";
 import { TalkEventJsonLd } from "@/components/json-ld/talk-event-json-ld";
 import type { ITalk } from "@/data/talks/talk-interface";
@@ -18,8 +19,20 @@ export function TalkLayout({
 }) {
 	const extras = getTalkResources(talk).filter((r) => r.kind !== "slides");
 
+	const breadcrumb = [
+		{ position: 1, name: "Home", item: "/", current: false },
+		{ position: 2, name: "Talks", item: "/talks", current: false },
+		{
+			position: 3,
+			name: talk.title,
+			item: talk.path ?? "/talks",
+			current: true,
+		},
+	];
+
 	return (
 		<Container className="mt-16 sm:mt-24">
+			<BreadcrumbJsonLD list={breadcrumb} />
 			<div className="mx-auto max-w-2xl">
 				<Link
 					href="/talks"

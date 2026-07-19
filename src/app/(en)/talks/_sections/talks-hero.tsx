@@ -31,7 +31,7 @@ export function TalksHero() {
 			<p className="reveal-up text-sm font-medium tracking-wide text-accent-700 uppercase dark:text-accent-400">
 				Talks & Speaking
 			</p>
-			<h1 className="mt-4 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+			<h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
 				<span className="reveal-up reveal-delay-1 block">
 					I've built two companies.
 				</span>

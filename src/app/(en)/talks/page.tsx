@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { CopyButton } from "@/components/copy-button";
+import Faq from "@/components/faq/faq";
 import { ItemListJsonLd } from "@/components/json-ld/item-list-json-ld";
 import { Reveal } from "@/components/reveal/reveal";
 import { TalkTimeline } from "@/components/talk/talk-timeline";
@@ -8,6 +9,7 @@ import { podcastAppearances, talks } from "@/data/talks/talks";
 import { homepageUrl } from "@/lib/constants/url";
 import { buildPreviousTalksText } from "@/lib/talks/build-previous-talks-text";
 import { TalksClosing } from "./_sections/talks-closing";
+import { talksFaq } from "./_sections/talks-faq-data";
 import { TalksHero } from "./_sections/talks-hero";
 import { TalksPodcast } from "./_sections/talks-podcast";
 import { TalksTopics } from "./_sections/talks-topics";
@@ -58,6 +60,8 @@ export default function TalksPage() {
 						<TalksPodcast podcast={podcastAppearances[0]} />
 					</div>
 				</div>
+
+				<Faq list={talksFaq} />
 
 				<TalksClosing />
 			</Container>
