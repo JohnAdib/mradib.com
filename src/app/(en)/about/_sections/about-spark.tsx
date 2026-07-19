@@ -6,7 +6,7 @@ export function AboutSpark() {
 		<Chapter
 			index="05"
 			era="2007 to 2015 · The spark"
-			title="The WorldSkills years"
+			title="WorldSkills changed everything"
 			slug="worldskills"
 		>
 			<p>
@@ -41,6 +41,10 @@ export function AboutSpark() {
 				at the national team camps myself, preparing the next generation,
 				including for WorldSkills São Paulo 2015. The kid who missed a deadline
 				by one day ended up building champions.
+			</p>
+			<p>
+				That competition rewired me: learn a skill fast, apply it faster, hold
+				it to a professional bar. Everything since has run on that engine.
 			</p>
 		</Chapter>
 	);

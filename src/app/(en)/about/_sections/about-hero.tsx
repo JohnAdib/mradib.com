@@ -30,10 +30,10 @@ export function AboutHero() {
 					</span>
 				</h1>
 				<p className="reveal-up reveal-delay-4 mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-					{experienceYears}+ years in software, and I still write code most
-					days. This is the long version: it starts with a keyboard my father
-					brought home, and runs through two companies, thousands of students,
-					and mentoring engineers around the world.
+					{experienceYears}+ years in software, and I am still building every
+					single day. This is the long version: it starts with a keyboard my
+					father brought home, and runs through two co-founded startups,
+					thousands of students, and mentoring engineers around the world.
 				</p>
 			</div>
 			<div className="reveal-up reveal-delay-2 mx-auto max-w-xs lg:mx-0 lg:pt-2">
