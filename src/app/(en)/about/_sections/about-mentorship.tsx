@@ -5,7 +5,7 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutMentorship() {
 	return (
 		<Chapter
-			index="12"
+			index="13"
 			era="Now · Full circle"
 			title="Back where it started: helping others win"
 			slug="mentorship"
@@ -18,6 +18,8 @@ export function AboutMentorship() {
 				</Link>
 				, {mentoringStats.sessions}+ sessions and counting, on roadmaps,
 				architecture, careers, and the messy human parts nobody writes down.
+				Most weekends I go from one call to the next, meeting engineers from
+				countries I have never set foot in.
 			</p>
 			<p>
 				ADPList named me the World's Most Influential Mentor in 2024 and again

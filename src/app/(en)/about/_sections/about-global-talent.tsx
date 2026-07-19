@@ -4,10 +4,10 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutGlobalTalent() {
 	return (
 		<Chapter
-			index="10"
+			index="11"
 			era="September 2024 · Exceptional talent"
 			title="Sixteen years, one endorsement"
-			slug="global-talent"
+			slug="talent"
 		>
 			<p>
 				In September 2024, the UK endorsed me as{" "}
@@ -23,8 +23,9 @@ export function AboutGlobalTalent() {
 				everything in between.
 			</p>
 			<p>
-				It's the UK saying it looked at everything I'd built and wanted me here
-				anyway. I hold this one the closest.
+				Two years earlier I had arrived needing a sponsor. Now the UK had looked
+				at everything I built and said: stay, on your own merit. I hold this one
+				the closest.
 			</p>
 		</Chapter>
 	);

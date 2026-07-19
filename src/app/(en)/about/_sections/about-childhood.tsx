@@ -9,20 +9,21 @@ export function AboutChildhood() {
 			slug="childhood"
 		>
 			<p>
-				My father brought the first piece home: a keyboard. Then, almost every
-				month, another arrived: a mouse, a case, a motherboard. Each one was its
-				own event, long before the machine they belonged to ever turned on.
+				My father brought the first piece home: a keyboard. Just a keyboard,
+				with no computer to plug it into. Then, almost every month, another part
+				arrived: a mouse, a case, a motherboard. I was in primary school, and
+				every delivery was an event I counted the days to.
 			</p>
 			<p>
-				I had no idea what a CPU or a hard disk did. It didn't matter. Watching
-				the pieces become a working computer did. I spent long stretches in DOS,
-				in a plain command line, learning by poking around rather than being
-				taught.
+				I had no idea what a CPU or a hard disk did. It didn't matter. One day
+				the pieces on the shelf became a machine that switched on, and from then
+				on I came straight home from school to it. No manual, no teacher. Just
+				DOS, NC, and a blinking cursor.
 			</p>
 			<p>
-				Then my father brought home a Windows install disc. I put it in myself
-				and watched it boot for the first time. The startup sound and the first
-				graphical screen, after months of a dark, blank one, felt like magic.
+				I called it playing. It wasn't really play, and it wasn't really study.
+				It was years in front of a dark screen, and to me that screen was a
+				whole world.
 			</p>
 		</Chapter>
 	);

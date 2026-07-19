@@ -16,6 +16,7 @@ import { AboutMasters } from "./_sections/about-masters";
 import { AboutMentorship } from "./_sections/about-mentorship";
 import { AboutSpark } from "./_sections/about-spark";
 import { AboutTeaching } from "./_sections/about-teaching";
+import { AboutWindows } from "./_sections/about-windows";
 
 export const metadata: Metadata = {
 	title: "About John Adib",
@@ -37,6 +38,7 @@ export default function About() {
 			<Container className="mt-24 sm:mt-32">
 				<div className="mx-auto max-w-2xl lg:max-w-3xl">
 					<AboutChildhood />
+					<AboutWindows />
 					<AboutHardwareStore />
 					<AboutIcdl />
 					<AboutSpark />

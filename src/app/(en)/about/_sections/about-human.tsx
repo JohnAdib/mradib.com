@@ -5,14 +5,15 @@ import { Chapter, chapterLinkClass } from "./chapter";
 export function AboutHuman() {
 	return (
 		<Chapter
-			index="13"
+			index="14"
 			era="Off the clock"
 			title="When I close the laptop"
 			slug="human"
 		>
 			<p>Away from the terminal I am a father of two daughters.</p>
 			<p>
-				These days the camera is a Canon EOS R8 with a full studio setup, all{" "}
+				Remember the Canon A640 from my first teaching salary? It became a Nikon
+				D5300, which became a Canon EOS R8 with a full studio setup, all{" "}
 				<Link href="/gallery/tools" className={chapterLinkClass}>
 					listed here
 				</Link>

@@ -3,7 +3,7 @@ import { Chapter } from "./chapter";
 export function AboutMasters() {
 	return (
 		<Chapter
-			index="08"
+			index="09"
 			era="2015 to 2025 · A decade in the making"
 			title="I finish what I start. Eventually."
 			slug="masters"
