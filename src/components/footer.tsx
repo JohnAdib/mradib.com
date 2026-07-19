@@ -11,11 +11,13 @@ function NavLink({
 	href,
 	lang,
 	dir,
+	external,
 	children,
 }: {
 	href: string;
 	lang?: string;
 	dir?: "ltr" | "rtl";
+	external?: boolean;
 	children: React.ReactNode;
 }) {
 	return (
@@ -23,9 +25,12 @@ function NavLink({
 			href={href}
 			lang={lang}
 			dir={dir}
+			target={external ? "_blank" : undefined}
+			rel={external ? "noopener noreferrer" : undefined}
 			className="transition hover:text-accent-600 dark:hover:text-accent-400"
 		>
 			{children}
+			{external ? <span aria-hidden="true"> ↗</span> : null}
 		</Link>
 	);
 }
@@ -50,7 +55,11 @@ export function Footer() {
 							<div className="flex w-full flex-col items-center justify-between gap-6 sm:flex-row">
 								<div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-600 dark:text-zinc-400">
 									{footerNav.map((item) => (
-										<NavLink key={item.href} href={item.href}>
+										<NavLink
+											key={item.href}
+											href={item.href}
+											external={item.external}
+										>
 											{item.label}
 										</NavLink>
 									))}

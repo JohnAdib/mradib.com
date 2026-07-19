@@ -1,6 +1,7 @@
 import {
 	AcademicCapIcon,
 	ChatBubbleLeftRightIcon,
+	DocumentTextIcon,
 	MicrophoneIcon,
 } from "@heroicons/react/24/outline";
 import { Container } from "@/components/container";
@@ -27,6 +28,15 @@ const channels: IChannel[] = [
 		emailSubject: "Speaking invitation",
 	},
 	{
+		icon: DocumentTextIcon,
+		title: "My CV",
+		description:
+			"The formal version of the story, hand-coded in HTML and CSS. It even exports itself to PDF.",
+		cta: "View my CV",
+		href: urlSocial.resume,
+		external: true,
+	},
+	{
 		icon: ChatBubbleLeftRightIcon,
 		title: "Everything else",
 		description: "A question, an idea, or a plain hello. Say it on LinkedIn.",
@@ -39,7 +49,7 @@ const channels: IChannel[] = [
 export function ContactChannels() {
 	return (
 		<Container className="mt-16 sm:mt-20">
-			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
 				{channels.map((channel) => (
 					<ChannelTile key={channel.title} channel={channel} />
 				))}

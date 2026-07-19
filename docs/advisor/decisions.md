@@ -4,6 +4,29 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, About round 4: the editorial sharpening pass
+
+From the external revision brief plus John's answers. The borrowed
+"yesterday is history" proverb is out; the last chapter now ends on
+John's own philosophy (uncertainty exists, plans bend, but planned work
+makes tomorrow answer). "I don't know what the next chapter looks like"
+is retired as FALSE: the closing now says the next chapter is in the
+works and this page hears it first. Chapter 15 opens with the
+three-day enterprise auth panel as its scene (John approved; no
+invented dates or people). Aphorism closers trimmed where unearned
+(ch05 rewritten to the operating-manual line, ch07 keeps only
+"Teaching first, titles later.", ch11 loses "restart/rebirth", ch12
+keeps only the triplet); the ch10 vision/system closer stays. Vague
+phrases replaced with concrete ones (ch08 masters-comparison, ch12
+resume/interview/visa questions). Hero goes to five stats with "1.2M+
+video course views" from the new src/data/teaching-stats.ts. Three
+evazzadeh.com course links (Excel, HTML/CSS, PHP) woven inline into
+ch06 prose; no evidence strip, no per-course numbers. Chapters 08 to
+10 keep chronological order (the "Meanwhile" era label is the cue). A
+one-line speaking CTA closes ch14, prose-styled, linking /contact.
+Standing rule: unannounced projects stay off the site until John
+announces them; no page may hint at them.
+
 ## 2026-07-19, About round 3: the deposit story goes in, plus new facts
 
 The advisor call John delegated: the London arrival hardship IS published,
@@ -201,3 +224,13 @@ playbooks/seo.md.
 Strategy lives in docs/advisor. A thin skill at .claude/skills/brand-advisor
 triggers on content and design tasks and routes here. One source of truth,
 two entry points.
+
+## 2026-07-19, header slims to four items; CV gets placements
+
+The header nav is now About, Awards, Talks, Contact. Articles left because
+there are only two; Mentorship left because John is winding down active (free)
+mentoring and it should read as a chapter, not a destination. Both stay in
+the footer, and mentorship remains a channel tile on /contact. The CV at
+https://resume.mradib.com (urlSocial.resume) opens in a new tab from three
+places: the About closing (already existed), a footer "CV ↗" link, and a
+"My CV" tile on /contact. It never enters the header.
