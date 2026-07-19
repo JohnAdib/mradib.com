@@ -4,6 +4,28 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, email policy: public but obfuscated, plus-tagged per surface
+
+The email stays the hero of /contact, but the static HTML never carries
+the address: it assembles client side after hydration (components under
+src/components/email). Every surface uses a Gmail plus-tag so leaks are
+traceable and filterable: +site (contact hero link), +copy (copy
+button), +talk (speaking invitations), +footer (footer icon), +ai
+(llms.txt, deliberately plaintext for AI assistants). Person JSON-LD
+carries no email. Known limit, accepted: smart spammers strip plus-tags;
+this is tracing, not armor.
+
+## 2026-07-19, awards page round 2 from John's review
+
+The compressed badge strip was rejected: the kind-grouped, larger badge
+cards return (the new "19, month after month" header stays). Lightbox
+arrows now walk EVERY certificate in the collection, not just one
+badge's images, with per-image reference pills. The ledger group header
+never says immigration; it is "National recognition". The awards page
+closing now sends readers to the STORY (/about) first, talks second:
+someone who just read the proof is primed for the story, not for
+booking a session.
+
 ## 2026-07-19, About round 2: honesty rules and new chapters
 
 John's line-by-line review set standing rules. Never publish a duration he

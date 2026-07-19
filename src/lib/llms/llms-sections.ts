@@ -83,7 +83,7 @@ export function sectionProfiles(): string {
 	return [
 		"## Profiles",
 		"",
-		`- Email: ${profile.email}`,
+		`- Email: ${profile.email.replace("@", "+ai@")}`,
 		`- LinkedIn: ${urlSocial.linkedin}`,
 		`- GitHub: ${urlSocial.github}`,
 		`- ADPList (mentor profile): ${urlSocial.adpList}`,

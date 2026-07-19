@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 import { ContainerInner, ContainerOuter } from "@/components/container";
+import { EmailLink } from "@/components/email/email-link";
 import { MailIcon } from "@/components/icon/social-icons";
 import { SocialMediaLinks } from "@/components/social-media-links";
-import { SocialLink } from "@/components/social-media-links/social-link";
 import { faNav, footerNav } from "@/data/navigation";
 import { profile } from "@/data/profile";
 
@@ -39,13 +39,13 @@ export function Footer() {
 						<div className="flex flex-col items-center gap-8">
 							<div className="flex items-center gap-1">
 								<SocialMediaLinks />
-								<SocialLink
-									href={`mailto:${profile.email}`}
-									ariaLabel="Send an email to John Adib"
-									icon={MailIcon}
+								<EmailLink
+									tag="footer"
+									className="group flex gap-4 p-2 text-sm font-medium text-zinc-800 transition hover:text-accent-600 dark:text-zinc-200 dark:hover:text-accent-600"
 								>
-									Email
-								</SocialLink>
+									<MailIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-accent-500" />
+									<span className="sr-only">Send an email to John Adib</span>
+								</EmailLink>
 							</div>
 							<div className="flex w-full flex-col items-center justify-between gap-6 sm:flex-row">
 								<div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-600 dark:text-zinc-400">

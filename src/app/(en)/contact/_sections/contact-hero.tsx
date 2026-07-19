@@ -1,9 +1,7 @@
 import { Container } from "@/components/container";
-import { CopyButton } from "@/components/copy-button";
-import { profile } from "@/data/profile";
+import { CopyEmailButton } from "@/components/email/copy-email-button";
+import { EmailLink } from "@/components/email/email-link";
 import { urlSocial } from "@/lib/constants/url-social";
-
-const [emailLocal, emailDomain] = profile.email.split("@");
 
 export function ContactHero() {
 	return (
@@ -22,20 +20,12 @@ export function ContactHero() {
 					Mentorship, a stage, or a plain hello. Reach me directly, no forms and
 					no gatekeepers.
 				</p>
-				<div className="reveal-up reveal-delay-4 mt-8 flex flex-wrap items-center gap-x-4 gap-y-2">
-					<a
-						href={`mailto:${profile.email}`}
+				<div className="reveal-up reveal-delay-4 mt-8 flex min-h-12 flex-wrap items-center gap-x-4 gap-y-2">
+					<EmailLink
+						tag="site"
 						className="font-display text-4xl font-semibold tracking-tight break-words text-zinc-800 transition hover:text-accent-700 sm:text-5xl dark:text-zinc-100 dark:hover:text-accent-400"
-					>
-						{emailLocal}@<wbr />
-						{emailDomain}
-					</a>
-					<CopyButton
-						iconOnly
-						text={profile.email}
-						label="Copy email address"
-						copiedLabel="Copied"
 					/>
+					<CopyEmailButton iconOnly />
 				</div>
 				<p className="reveal-up reveal-delay-4 mt-6 text-base text-zinc-600 dark:text-zinc-400">
 					I read everything that lands here.{" "}

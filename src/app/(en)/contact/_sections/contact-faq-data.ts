@@ -1,12 +1,11 @@
 import type { IFaqQA } from "@/components/faq/faq-interface";
 import { mentoringStats } from "@/data/mentoring-stats";
-import { profile } from "@/data/profile";
 
 export const contactFaq: IFaqQA[] = [
 	{
 		id: "fastest-way",
 		q: "What is the fastest way to reach you?",
-		a: `Email, and it is public: ${profile.email}, right here on this page. No forms, no gatekeepers.`,
+		a: "Email. The address sits at the top of this page with a one tap copy. No forms, no gatekeepers.",
 	},
 	{
 		id: "mentorship-booking",
