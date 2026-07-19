@@ -29,7 +29,7 @@ export function HomeHero() {
 					</p>
 					<div className="reveal-up reveal-delay-4 mt-8 flex flex-wrap items-center gap-4">
 						<Button href="/mentor">Explore mentorship</Button>
-						<Button href="/talks#invite" variant="secondary">
+						<Button href="/contact" variant="secondary">
 							Invite me to speak
 						</Button>
 					</div>

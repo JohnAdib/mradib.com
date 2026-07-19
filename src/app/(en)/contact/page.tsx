@@ -1,47 +1,26 @@
 import type { Metadata } from "next";
-import { Card } from "@/components/card";
-import { SimpleLayout } from "@/components/simple-layout";
-import { mentoringStats } from "@/data/mentoring-stats";
-import { urlSocial } from "@/lib/constants/url-social";
+import { Container } from "@/components/container";
+import Faq from "@/components/faq/faq";
+import { ContactPageJsonLd } from "@/components/json-ld/contact-page-json-ld";
+import { profile } from "@/data/profile";
+import { ContactChannels } from "./_sections/contact-channels";
+import { contactFaq } from "./_sections/contact-faq-data";
+import { ContactHero } from "./_sections/contact-hero";
 
 export const metadata: Metadata = {
-	title: "Contact",
-	description:
-		"Contact John Adib. Book a mentorship session, invite him to speak, or reach out on LinkedIn.",
+	title: { absolute: "Contact John Adib" },
+	description: `Reach John Adib directly, no forms. One open inbox at ${profile.email}, plus two main channels: mentorship and speaking invitations.`,
 };
 
 export default function Page() {
 	return (
-		<SimpleLayout
-			title="Contact"
-			intro="The right door depends on what you need. All of them are open."
-		>
-			<div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3">
-				<Card as="article">
-					<Card.Title href={mentoringStats.profileUrl}>Mentorship</Card.Title>
-					<Card.Description>
-						1:1 sessions on engineering careers, resumes, interviews, and tech
-						immigration, booked through ADPList.
-					</Card.Description>
-					<Card.Cta>Book on ADPList</Card.Cta>
-				</Card>
-				<Card as="article">
-					<Card.Title href="/talks#invite">Speaking & podcasts</Card.Title>
-					<Card.Description>
-						Conference talks, meetups, podcasts, or an internal session for your
-						team: AI-first development, design systems, leadership.
-					</Card.Description>
-					<Card.Cta>Invite me to speak</Card.Cta>
-				</Card>
-				<Card as="article">
-					<Card.Title href={urlSocial.linkedin}>Everything else</Card.Title>
-					<Card.Description>
-						Say hello on LinkedIn, or email Mr.JohnAdib@Gmail.com. I read
-						everything.
-					</Card.Description>
-					<Card.Cta>Find me on LinkedIn</Card.Cta>
-				</Card>
-			</div>
-		</SimpleLayout>
+		<>
+			<ContactPageJsonLd />
+			<ContactHero />
+			<ContactChannels />
+			<Container>
+				<Faq list={contactFaq} showContactLink={false} />
+			</Container>
+		</>
 	);
 }

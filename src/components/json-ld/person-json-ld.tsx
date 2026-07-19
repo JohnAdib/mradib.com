@@ -13,6 +13,7 @@ export function PersonJsonLd(): JSX.Element {
 		"@id": personId,
 		name: profile.name,
 		alternateName: profile.alternateNames,
+		email: `mailto:${profile.email}`,
 		jobTitle: profile.jobTitle,
 		description: profile.shortBio,
 		url: homepageUrl,

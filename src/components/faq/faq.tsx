@@ -19,9 +19,11 @@ const faqText = {
 export default function Faq({
 	list,
 	language = "en",
+	showContactLink = true,
 }: {
 	list?: IFaqQA[];
 	language?: FaqLanguage;
+	showContactLink?: boolean;
 }) {
 	if (!list) {
 		return null;
@@ -33,16 +35,18 @@ export default function Faq({
 		<section className="faq mx-auto max-w-7xl py-16 lg:py-32">
 			<div className="lg:grid lg:grid-cols-12 lg:gap-8">
 				<div className="lg:col-span-5">
-					<h2 className="text-3xl font-bold leading-10 tracking-tight">
+					<h2 className="font-display text-4xl font-semibold leading-10 tracking-tight">
 						{title}
 					</h2>
-					<p className="mt-4 text-base leading-7 text-slate-500 dark:text-slate-300">
-						{description}{" "}
-						<a href="/contact" className="font-semibold">
-							{contact}
-						</a>
-						.
-					</p>
+					{showContactLink && (
+						<p className="mt-4 text-base leading-7 text-slate-500 dark:text-slate-300">
+							{description}{" "}
+							<a href="/contact" className="font-semibold">
+								{contact}
+							</a>
+							.
+						</p>
+					)}
 				</div>
 				<div className="mt-10 lg:col-span-7 lg:mt-0">
 					<div className="space-y-10">
