@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-font="news">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Font Final · Instrument Serif vs Newsreader</title>
+<script>
+  document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="light"] {
+    --bg: #f7f3ec; --surface: #fdfbf6; --ink: #1c1917; --ink-2: #57534e; --ink-3: #a8a29e;
+    --line: rgba(28, 25, 23, .12); --line-soft: rgba(28, 25, 23, .07);
+    --accent: #0f766e; --glow: rgba(13, 148, 136, .13);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0a0a0c; --surface: #131316; --ink: #fafafa; --ink-2: #a1a1aa; --ink-3: #71717a;
+    --line: rgba(255, 255, 255, .11); --line-soft: rgba(255, 255, 255, .06);
+    --accent: #2dd4bf; --glow: rgba(45, 212, 191, .1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+    overflow-x: clip; -webkit-font-smoothing: antialiased;
+    transition: background .35s ease, color .35s ease;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .04 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  :root[data-theme="dark"] body::before { opacity: .35; }
+  main { position: relative; z-index: 1; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 44px); }
+  .toggle {
+    position: fixed; top: 18px; right: 18px; z-index: 60;
+    font: 600 12px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink); background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 16px; cursor: pointer; transition: color .25s, border-color .25s;
+  }
+  .toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+  header.top { padding: clamp(56px, 9vh, 90px) 0 30px; text-align: center; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  header.top h1 { font-size: clamp(24px, 4.4vw, 38px); font-weight: 800; letter-spacing: -.03em; }
+  header.top p { margin: 12px auto 0; max-width: 56ch; font-size: 14.5px; line-height: 1.7; color: var(--ink-2); }
+
+  /* segmented control */
+  .seg {
+    margin: 30px auto 0; display: flex; width: fit-content; gap: 4px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px;
+  }
+  .seg button {
+    font: 600 13px/1 "Inter", sans-serif; letter-spacing: .02em; color: var(--ink-2);
+    background: none; border: 0; border-radius: 999px; padding: 11px 20px; cursor: pointer;
+    transition: color .2s, background .2s;
+  }
+  .seg button:hover { color: var(--accent); }
+  [data-font="ins"] .seg .b-ins, [data-font="news"] .seg .b-news { background: var(--accent); color: var(--bg); }
+
+  /* the one big specimen */
+  .stage { padding: clamp(36px, 7vh, 64px) 0 clamp(30px, 5vh, 48px); text-align: center; }
+  .fam { font-optical-sizing: auto; }
+  [data-font="news"] .fam { font-family: "Newsreader", serif; font-weight: 600; letter-spacing: -.015em; }
+  [data-font="ins"] .fam { font-family: "Instrument Serif", serif; font-weight: 400; letter-spacing: 0; }
+  .stage h2 { font-size: clamp(40px, 8.6vw, 96px); line-height: 1.05; max-width: 17ch; margin: 0 auto; }
+  .stage .soft { color: var(--ink-2); font-weight: 300; }
+  [data-font="ins"] .stage .soft { font-weight: 400; opacity: .75; }
+  .stage .it { font-style: italic; color: var(--accent); }
+  .stage.pop h2, .stage.pop .nums { animation: pop .45s cubic-bezier(.16, 1, .3, 1); }
+  @keyframes pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .sub { margin: 26px auto 0; max-width: 54ch; font-size: clamp(14.5px, 1.9vw, 16.5px); line-height: 1.75; color: var(--ink-2); }
+  .nums { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px 40px; justify-content: center; }
+  .nums b { display: block; font-size: clamp(30px, 4.6vw, 48px); font-weight: inherit; font-variant-numeric: tabular-nums; }
+  .nums span { display: block; margin-top: 4px; font: 500 10.5px/1 "Inter", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); }
+  .whoami { margin-top: 34px; font: 600 12px/1 "Inter", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .whoami b { color: var(--accent); }
+
+  /* side by side */
+  .duo { padding: clamp(40px, 7vh, 70px) 0 30px; border-top: 1px solid var(--line-soft); }
+  .duo .lede { text-align: center; font: 600 12px/1 "Inter", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 28px; }
+  .pair { display: grid; gap: 16px; }
+  @media (min-width: 800px) { .pair { grid-template-columns: 1fr 1fr; } }
+  .half {
+    background: var(--surface); border: 1px solid var(--line-soft); border-radius: 22px;
+    padding: clamp(22px, 3.6vw, 34px); cursor: pointer; text-align: left; color: var(--ink);
+    transition: transform .3s cubic-bezier(.16, 1, .3, 1), border-color .3s;
+  }
+  .half:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .half .name { display: flex; justify-content: space-between; gap: 10px; font: 700 12.5px/1.2 "Inter", sans-serif; margin-bottom: 16px; }
+  .half .name span { font-weight: 500; color: var(--ink-3); }
+  .half .line { font-size: clamp(23px, 3.4vw, 30px); line-height: 1.25; font-optical-sizing: auto; }
+  .half.h-news .line { font-family: "Newsreader", serif; font-weight: 600; letter-spacing: -.015em; }
+  .half.h-ins .line { font-family: "Instrument Serif", serif; font-weight: 400; }
+  .half .line .it { font-style: italic; color: var(--accent); }
+  .half .hint { margin-top: 14px; font: 500 10.5px/1 "Inter", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+  .half:hover .hint { color: var(--accent); }
+
+  .note { padding: 34px 0 90px; text-align: center; }
+  .note p { margin: 0 auto; max-width: 60ch; font-size: 13.5px; line-height: 1.7; color: var(--ink-3); }
+  .note b { color: var(--ink-2); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<button class="toggle" id="toggle">Dark</button>
+
+<main>
+  <header class="top wrap">
+    <p class="eyebrow">Round 3 · The font final · Two faces left</p>
+    <h1>Instrument Serif vs Newsreader.</h1>
+    <p>Same words, hero scale. Flip the switch and feel which voice is yours. Theme button top right. Nothing else is being decided on this page.</p>
+    <div class="seg" role="group" aria-label="Choose specimen font">
+      <button class="b-news" id="bNews">Newsreader</button>
+      <button class="b-ins" id="bIns">Instrument Serif</button>
+    </div>
+  </header>
+
+  <section class="stage wrap" id="stage">
+    <h2 class="fam">
+      2x startup co-founder.<br>
+      <span class="soft">The world's most</span> <span class="it">influential mentor</span>.<br>
+      Pioneering AI-first engineering.
+    </h2>
+    <p class="sub">
+      I raised $1M and reached a million users in a month, built a platform serving 1,200+
+      businesses, and was endorsed by the UK government as exceptional talent in technology.
+    </p>
+    <div class="nums fam">
+      <div><b>600+</b><span>Sessions</span></div>
+      <div><b>32,000+</b><span>Mentors</span></div>
+      <div><b>5,000+</b><span>On one stage</span></div>
+      <div><b>17+</b><span>Years</span></div>
+    </div>
+    <p class="whoami">Showing · <b id="who">Newsreader</b></p>
+  </section>
+
+  <section class="duo wrap">
+    <p class="lede">Or read them side by side · tap a card to send it up</p>
+    <div class="pair">
+      <button class="half h-news" data-pick="news">
+        <span class="name">Newsreader <span>Weight range 200 to 800</span></span>
+        <span class="line">The world's most <span class="it">influential mentor</span>. $1M raised, 1,200+ businesses, 5,000+ engineers.</span>
+        <span class="hint">Tap to view at hero scale ↑</span>
+      </button>
+      <button class="half h-ins" data-pick="ins">
+        <span class="name">Instrument Serif <span>Single weight + italic</span></span>
+        <span class="line">The world's most <span class="it">influential mentor</span>. $1M raised, 1,200+ businesses, 5,000+ engineers.</span>
+        <span class="hint">Tap to view at hero scale ↑</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="note wrap">
+    <p><b>The board's recommendation: Newsreader.</b> It keeps the luxury but brings a full
+    weight range, so heroes, headings, and numbers can each carry the right amount of voice.
+    Instrument Serif is beautiful but ships one weight for everything and is the most imitated
+    face of the moment. Your pick decides.</p>
+  </section>
+</main>
+
+<script>
+  const root = document.documentElement;
+  const stage = document.getElementById("stage");
+  const who = document.getElementById("who");
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function setFont(f) {
+    root.dataset.font = f;
+    who.textContent = f === "news" ? "Newsreader" : "Instrument Serif";
+    if (!reduced) {
+      stage.classList.remove("pop");
+      void stage.offsetWidth;
+      stage.classList.add("pop");
+    }
+  }
+  document.getElementById("bNews").addEventListener("click", () => setFont("news"));
+  document.getElementById("bIns").addEventListener("click", () => setFont("ins"));
+  document.querySelectorAll(".half").forEach(h => h.addEventListener("click", () => {
+    setFont(h.dataset.pick);
+    scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+  }));
+
+  const toggle = document.getElementById("toggle");
+  const setLabel = () => { toggle.textContent = root.dataset.theme === "dark" ? "Light" : "Dark"; };
+  setLabel();
+  toggle.addEventListener("click", () => {
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    setLabel();
+  });
+</script>
+</body>
+</html>

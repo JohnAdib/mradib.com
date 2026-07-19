@@ -4,6 +4,19 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, font finalists: Instrument Serif vs Newsreader, one step at a time
+
+From the nine-face specimen John liked Instrument Serif and Newsreader
+and rejected Marcellus and Cormorant Garamond. The board recommends
+Newsreader (200 to 800 weight range and optical sizing carry the solid,
+luxurious, trustworthy brief as a full system; Instrument Serif has a
+single weight and is over-imitated right now), but the final pick is
+John's, via a head-to-head page. Process rule John set: decisions land
+ONE AT A TIME, font fully closed before any layout exploration starts. A
+premature full-screen act-by-act layout demo (cinema style) was shown by
+mistake and disliked; it is withdrawn and does not count as a layout
+round. Inter stays as the quiet body sans regardless of the winner.
+
 ## 2026-07-19, round 3 layout rejected, font decision decoupled
 
 Round 3 single-layout demos (inter, bricolage, fraunces on warm paper)
