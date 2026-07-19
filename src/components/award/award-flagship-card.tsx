@@ -29,7 +29,7 @@ export function AwardFlagshipCard({
 					<Icon className="h-5 w-5 text-accent-700 dark:text-accent-400" />
 				</span>
 			)}
-			<p className="mt-5 text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
+			<p className="mt-5 text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 				{award.issuer} · {awardYear(award.date)}
 			</p>
 			<h3

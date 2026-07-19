@@ -51,7 +51,7 @@ export function TalksHero() {
 				<StatBand stats={stats} gridClass="grid-cols-2" />
 			</div>
 			<div className="reveal-up reveal-delay-4 mt-8">
-				<p className="text-xs font-medium tracking-wide text-zinc-400 uppercase dark:text-zinc-500">
+				<p className="text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 					Also on stage at
 				</p>
 				<div className="mt-2 flex flex-wrap gap-3">

@@ -7,7 +7,7 @@ export function ArticleFeature({ article }: { article: IArticle }) {
 		<article className="group border-t border-zinc-900/10 py-12 sm:py-16 dark:border-zinc-700/40">
 			<time
 				dateTime={article.datePublished}
-				className="text-sm font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400"
+				className="text-sm font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400"
 			>
 				{formatDateTime({ datetime: article.datePublished })}
 			</time>

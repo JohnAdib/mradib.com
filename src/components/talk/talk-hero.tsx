@@ -18,7 +18,7 @@ function PlainHeader({ talk }: { talk: ITalk }) {
 		<header className="mt-8 flex items-start gap-4">
 			<TalkLogo talk={talk} className="h-20 w-20" />
 			<div className="min-w-0">
-				<p className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
+				<p className="text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 					{kindOf(talk)} · {talk.event}
 				</p>
 				<h1 className="mt-2 text-3xl font-bold tracking-tight text-balance text-zinc-800 sm:text-4xl dark:text-zinc-100">

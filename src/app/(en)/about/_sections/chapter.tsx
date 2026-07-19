@@ -38,7 +38,7 @@ export function Chapter({
 					>
 						{index}
 					</a>
-					<span className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
+					<span className="text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 						{era}
 					</span>
 				</div>

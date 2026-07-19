@@ -28,7 +28,7 @@ export function AdplistBadgeGroup({
 
 	return (
 		<Reveal>
-			<p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase dark:text-zinc-500">
+			<p className="text-xs font-semibold tracking-widest text-zinc-600 uppercase dark:text-zinc-400">
 				{kindLabel[kind]} · {badges.length}
 			</p>
 			<div

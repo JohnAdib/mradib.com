@@ -24,7 +24,7 @@ export function HighlightCard({ highlight }: { highlight: IHighlight }) {
 			<span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-50 ring-1 ring-accent-100 dark:bg-accent-400/10 dark:ring-accent-400/20">
 				<Icon className="h-5 w-5 text-accent-700 dark:text-accent-400" />
 			</span>
-			<p className="mt-5 text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
+			<p className="mt-5 text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 				{highlight.eyebrow}
 			</p>
 			<h3 className="mt-2 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">

@@ -68,7 +68,7 @@ export function TalkLayout({
 
 				{extras.length > 0 && (
 					<div className="mt-8">
-						<h2 className="text-sm font-semibold tracking-wide text-zinc-400 uppercase dark:text-zinc-500">
+						<h2 className="text-sm font-semibold tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
 							Resources
 						</h2>
 						<div className="mt-4">
