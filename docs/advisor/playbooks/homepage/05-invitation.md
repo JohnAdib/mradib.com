@@ -1,6 +1,6 @@
 # Homepage 05: Invitation
 
-Status: approved
+Status: built
 
 ## Job
 

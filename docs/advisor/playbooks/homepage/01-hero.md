@@ -1,6 +1,6 @@
 # Homepage 01: Hero
 
-Status: approved
+Status: built
 
 ## Job
 

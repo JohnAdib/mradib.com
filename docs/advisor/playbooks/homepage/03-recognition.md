@@ -1,6 +1,6 @@
 # Homepage 03: Recognition
 
-Status: approved
+Status: built
 
 ## Job
 

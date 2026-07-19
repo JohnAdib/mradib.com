@@ -1,6 +1,6 @@
 # Homepage 04: Now
 
-Status: approved
+Status: built
 
 ## Job
 
