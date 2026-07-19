@@ -21,13 +21,13 @@ export function HomeRise() {
 					The rise
 				</p>
 				<h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
-					First medals. Then classrooms. Then companies.
+					First medals. Then classrooms. Then entrepreneurship.
 				</h2>
 			</Reveal>
 			<div className="mt-8 max-w-2xl space-y-5 text-lg text-zinc-600 dark:text-zinc-400">
 				<Reveal delay={100}>
 					<p>
-						<Strong>National medals</Strong> as a teenager.
+						<Strong>National medals</Strong> at WorldSkills.
 					</p>
 				</Reveal>
 				<Reveal delay={200}>

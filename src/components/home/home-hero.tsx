@@ -10,11 +10,9 @@ export function HomeHero() {
 			<div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16">
 				<div className="max-w-2xl">
 					<h1 className="font-display text-4xl font-semibold tracking-tight text-balance text-zinc-800 sm:text-5xl dark:text-zinc-100">
-						<span className="reveal-rise block">
-							Two startups, a world title,
-						</span>
+						<span className="reveal-rise block">Entrepreneur, twice.</span>
 						<span className="reveal-rise reveal-delay-1 block">
-							a government endorsement.
+							The World's Most Influential Mentor.
 						</span>
 						<span className="reveal-rise reveal-delay-2 block text-accent-700 dark:text-accent-400">
 							In that order.

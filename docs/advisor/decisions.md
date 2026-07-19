@@ -4,6 +4,22 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, hero H1 round two: no government, no teenager, entrepreneurship
+
+Three rulings from John after seeing the built page. The word
+"government" leaves the H1: institutions belong in the proof, not in the
+title of a personal site (the UK endorsement stays in the intro
+paragraph and Recognition). The word "teenager" and any age framing
+never appear on the homepage; age framing stays on /about and the
+WorldSkills award page, and the Rise beat becomes "National medals at
+WorldSkills", the competition name does the bragging. Entrepreneurship
+is the preferred word over startup or company counts in headlines. The
+H1 is now "Entrepreneur, twice. The World's Most Influential Mentor. In
+that order." (advisor recommendation, accepted), and the Rise headline
+ends "Then entrepreneurship." Standing note: John rates the page better
+but not best; the gap is the visual layer, design round three with live
+hero treatments is the open next step.
+
 ## 2026-07-19, homepage section content approved, all five sections
 
 John resolved the open questions the same day. The hero H1 is "Two

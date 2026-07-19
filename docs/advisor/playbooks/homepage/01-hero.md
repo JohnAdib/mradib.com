@@ -20,19 +20,22 @@ provable.
   Influential Mentor, the UK exceptional talent endorsement, the
   AI-first closing line. Source: src/data/intro-bio.ts (the canonical
   shareable intro, click-to-copy, never duplicated here).
-- H1 material: WorldSkills medals as a teenager, The World's Most
-  Influential Mentor, 2x co-founder, the UK endorsement. Sources:
-  docs/profile/awards.md, docs/profile/experience.md.
+- H1 material: the entrepreneur pillar plus the exact award name.
+  Sources: docs/profile/experience.md, docs/profile/awards.md. Rulings
+  2026-07-19: no government wording in the title, no "teenager" anywhere
+  on the homepage, entrepreneurship preferred over startup or company
+  counts.
 
 ## Copy draft
 
-The H1 becomes one arc line, not today's three parallel identities.
-Decided 2026-07-19:
+The H1 is the arc in three lines. Decided 2026-07-19, second round,
+advisor recommendation accepted:
 
-"Two startups, a world title, a government endorsement. In that order."
+"Entrepreneur, twice. The World's Most Influential Mentor. In that
+order."
 
-The phrase "in that order" is the device that turns a proof list into an
-arc. Below the H1, the intro paragraph renders verbatim via the
+The kicker "In that order." is the device that turns two claims into a
+story. Below the H1, the intro paragraph renders verbatim via the
 click-to-copy HomeIntro component.
 
 ## Path deeper
