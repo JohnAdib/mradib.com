@@ -43,7 +43,7 @@ export function sectionKeyFacts(): string {
 		...talkLines,
 		...podcastLines,
 		`- Education: ${profile.education.degrees.join("; ")}, ${profile.education.school}.`,
-		"- Earlier career: Head of Engineering at Ermile (education platform, 500k+ students); IT lecturer at the University of Tehran; taught 2,000+ students across 4 universities (2006 to 2017); volunteer CTO of the Khadija Society charity (2017 to 2022).",
+		"- Earlier career: Head of Engineering at Ermile (education platform, 500k+ students); IT lecturer at one of the country's biggest universities; taught 2,000+ students across 4 universities (2006 to 2017); volunteer CTO of the Khadija Society charity (2017 to 2022).",
 		`- Open-source contributor: ${urlSocial.github}`,
 	].join("\n");
 }

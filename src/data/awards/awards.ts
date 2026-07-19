@@ -65,20 +65,20 @@ export const awards: IAward[] = [
 	},
 	{
 		name: "The Best Site Builder and Application Builder Service",
-		issuer: "14th Iran Web Festival",
+		issuer: "14th IR Web Festival",
 		date: "2022-03",
 		category: "badge",
 		group: "product",
 		summary:
-			"National award won by Jibres, the e-commerce platform John co-founded as CTO, at the 14th Iran Web Festival (2022).",
+			"National award won by Jibres, the e-commerce platform John co-founded as CTO, at the 14th IR Web Festival (2022).",
 	},
 	{
 		name: "The Best Corporate & Tourism Website",
-		issuer: "5th Iran Web Festival",
+		issuer: "5th IR Web Festival",
 		date: "2013-02",
 		category: "badge",
 		group: "product",
-		summary: "National web award at the 5th Iran Web Festival (2013).",
+		summary: "National web award at the 5th IR Web Festival (2013).",
 	},
 	{
 		name: "Judge, 2025 CODiE Awards",

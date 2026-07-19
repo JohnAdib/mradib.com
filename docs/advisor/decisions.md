@@ -4,6 +4,16 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-19, Iran and Tehran are never named on the site
+
+Standing rule for every page, English and Persian alike. The country is
+"the country" in prose, or "IR" only where a proper noun demands it (the
+web festival is "IR Web Festival"). The people and audience are "Persian
+speakers", never Iranians. The University of Tehran is "one of the biggest
+universities in the country". Placeholder examples use neutral cities
+(London, UK). The private docs under docs/profile keep full real names;
+this rule governs published site content only.
+
 ## 2026-07-19, visual direction round 2 rejected, keepers extracted
 
 Round 2 (kinetic, constellation, aurora2) also missed: "still nothing close

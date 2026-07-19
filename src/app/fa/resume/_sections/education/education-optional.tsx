@@ -18,7 +18,7 @@ export function EducationOptional(): JSX.Element {
 			</p>
 			<Pre language="plaintext">GPA: 3.9</Pre>
 			<h4>محل دانشگاه</h4>
-			<Pre language="plaintext">Tehran, Iran</Pre>
+			<Pre language="plaintext">London, UK</Pre>
 			<h4>افتخارات</h4>
 			<Pre language="plaintext">One of the top students in the class</Pre>
 			<h4>دستاوردهای آکادمیک</h4>

@@ -11,17 +11,16 @@ export function AboutTeaching() {
 			<p>
 				Teaching never stopped. From 2006 I taught outside my own class hours
 				and published free Persian video tutorials on web skills and Microsoft
-				Office. Thousands of people across Iran first met me as a voice
-				explaining what a spreadsheet could really do.
+				Office. Thousands of Persian speakers first met me as a voice explaining
+				what a spreadsheet could really do.
 			</p>
 			<p>
-				Then the rooms got serious. I went from a small city in the north of
-				Iran to the University of Tehran, one of the biggest universities in the
-				country, as an invited lecturer: web technologies, Excel, presenting,
-				sometimes six hours on stage without a break, to audiences of 200+. More
-				than ten of those sessions, alongside eleven years as a part time
-				lecturer across four universities and colleges. More than 2,000 students
-				in total.
+				Then the rooms got serious. From a small city in the north, I made it to
+				one of the biggest universities in the country as an invited lecturer:
+				web technologies, Excel, presenting, sometimes six hours on stage
+				without a break, to audiences of 200+. More than ten of those sessions,
+				alongside eleven years as a part time lecturer across four universities
+				and colleges. More than 2,000 students in total.
 			</p>
 			<p>
 				Here is the part I find funny now. There was a photographer at those
