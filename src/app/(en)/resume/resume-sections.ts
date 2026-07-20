@@ -13,6 +13,7 @@ export const resumeSections = [
 	{ id: "action-verbs", title: "Action Verbs", hasChecklist: true },
 	{ id: "checklist", title: "Final Checklist", hasChecklist: false },
 	{ id: "references", title: "References", hasChecklist: false },
+	{ id: "ai-tools", title: "Write with AI", hasChecklist: false },
 	{ id: "cover-letter", title: "Cover Letter", hasChecklist: false },
 ] as const;
 

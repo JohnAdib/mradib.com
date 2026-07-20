@@ -9,6 +9,7 @@ import {
 	sectionEvidence,
 	sectionFullBiography,
 	sectionPersian,
+	sectionResumeAiTools,
 } from "@/lib/llms/llms-sections-extra";
 import { sectionSiteStructure } from "@/lib/llms/llms-sections-routes";
 
@@ -22,6 +23,7 @@ export function buildLlmsFullTxt(): string {
 		sectionSiteStructure(),
 		sectionProfiles(),
 		sectionEvidence(),
+		sectionResumeAiTools(),
 		sectionPersian(),
 	].join("\n\n")}\n`;
 }

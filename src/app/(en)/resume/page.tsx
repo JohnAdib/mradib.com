@@ -6,6 +6,7 @@ import { articleResume as article } from "@/data/articles/resume";
 import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 import { SectionActionVerbs } from "./_sections/action-verbs";
+import { SectionAiTools } from "./_sections/ai-tools";
 import { SectionAts } from "./_sections/ats";
 import { SectionContact } from "./_sections/contact";
 import { SectionEducation } from "./_sections/education";
@@ -51,6 +52,7 @@ function PageContent(): JSX.Element {
 			{SectionActionVerbs()}
 			{SectionFinalChecklist()}
 			<ResumeReferences />
+			{SectionAiTools()}
 			{SectionOutro()}
 		</section>
 	);

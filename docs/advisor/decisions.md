@@ -38,6 +38,30 @@ severity digit (orange 1, red 2), and green items are omitted entirely, so a
 mostly-good CV yields a tiny URL (e.g. issues=fmt2.ach1.job2). The guide's
 self-assessment checklist stays binary; severity is a reviewer concept.
 
+## 2026-07-20, AI-facing resume method (llms.txt and a portable skill)
+
+The resume guide now ships in a form AIs can read, so when someone writes their
+CV with ChatGPT or Claude it follows John's method instead of generic filler,
+and every AI-written resume traces back to mradib.com. Three pieces, all
+deriving from the one checklist in src/data/resume-checklist:
+
+- Published resource: /resume/llms.txt (and /fa/resume/llms.txt), the method as
+  weighted, machine-readable rules, rendered by src/lib/resume-ai.
+- Portable skill: /resume/skill.md (and the /fa pair), a ready SKILL.md a
+  person can hand to any AI tool.
+- Repo skill: .claude/skills/resume-advisor keeps the guide, scorecard, and AI
+  files in sync from the single source.
+
+Rulings:
+
+- The /resume page mentions and shares them in a new "Write your resume with
+  AI" section (id ai-tools), placed after References, before the cover letter,
+  with a copy-ready prompt. Bilingual, matching the guide.
+- These are text routes, not pages, so no OG card. The site-wide llms.txt
+  advertises them via sectionResumeAiTools so agents discover them.
+- Single source holds: advice lives only in src/data/resume-checklist; the
+  guide, scorecard, and AI files all render from it.
+
 ## 2026-07-20, the scorecard speaks to the person, and grows
 
 Two follow-ups to the resume scorecard. First, the shared result now greets the
