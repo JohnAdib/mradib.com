@@ -29,7 +29,7 @@ const howToSteps = groupsFor("fa-IR").flatMap((group) =>
 
 export default function Page() {
 	return (
-		<Container className="mt-16 pb-20 sm:mt-24">
+		<Container className="mt-10 pb-16 sm:mt-14">
 			<HowToJsonLd
 				name="چطور رزومه‌ات را بهتر کنی"
 				description="چک‌لیست بخش‌به‌بخش رزومه: چه چیزی را درست کنی و چطور، با امتیاز از ۱۰۰."

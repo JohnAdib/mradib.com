@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { decodeIssues } from "@/data/resume-checklist/share";
+import { decodeReview, type ReviewMap } from "@/data/resume-checklist/share";
 
 export interface IIssuesParam {
 	/** False until the client has read the URL after mount. */
 	ready: boolean;
 	/** True when an `issues` param is present (even if empty). */
 	hasParam: boolean;
-	/** Valid, known slugs from the param, in canonical order. */
-	flagged: string[];
+	/** Flagged items mapped to severity (orange 1, red 2); green omitted. */
+	review: ReviewMap;
 	/** The candidate's name from the `name` param, trimmed, or empty. */
 	name: string;
 }
@@ -24,7 +24,7 @@ export function useIssuesParam(): IIssuesParam {
 	const [state, setState] = useState<IIssuesParam>({
 		ready: false,
 		hasParam: false,
-		flagged: [],
+		review: {},
 		name: "",
 	});
 
@@ -34,7 +34,7 @@ export function useIssuesParam(): IIssuesParam {
 		setState({
 			ready: true,
 			hasParam: raw !== null,
-			flagged: decodeIssues(raw),
+			review: decodeReview(raw),
 			name: (params.get("name") ?? "").trim().slice(0, 40),
 		});
 	}, []);

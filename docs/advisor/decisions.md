@@ -4,6 +4,53 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the scorecard wears the site's premium idioms
+
+John's read: the compact scorecard had gone flat and old-school. Modernized it
+with the treatments the rest of the site already uses, so it reads as one product
+rather than a plain form. The result's first view (and the builder's score box)
+are now glow panels: a soft zinc surface with two blurred accent orbs, matching
+home-now and home-invitation. The score gauge blooms, an SVG feGaussianBlur halo
+in the arc's own colour, so it feels luminous instead of a flat ring, brightest in
+dark mode. Section tiles lift on hover with a soft shadow, issue cards carry a
+resting shadow that deepens on hover, and the result's sections fade up on scroll
+via the shared Reveal. Still compact, no extra height to speak of, and unchanged
+across both locales and themes.
+
+## 2026-07-20, five grades per item, crafted icons, N/A excluded
+
+John wanted more nuance than three states, and crafted icons over emoji (emoji
+render differently per device and read less premium). Each item now grades on a
+five-point scale with distinct vector icons: great (star), good (check, the calm
+default), needs work (amber circle, half points), problem (rose triangle, full
+points), and N/A (grey minus, excluded from the score entirely so it never counts
+against the person). Grading is a small inline tap-picker on each row, not a
+cycle, since most items stay good and the reviewer only touches a few. The score
+stays out of 100 (great adds nothing, since you cannot exceed 100); the result
+surfaces a "What's great" strengths row above "What to fix". Share links stay
+short: only non-good grades ride the URL as slug+digit (1-4), and codes 1/2 keep
+their meaning so earlier links still decode.
+
+## 2026-07-20, the scorecard is compact, like an installed app
+
+John's read: the scorecard felt like a nice web page but too tall, scrolling
+forever from the first view. Tightened it to feel like a native mobile app.
+Builder items are now single-line rows (icon plus title, the self-assessment
+question dropped from the reviewer view), which roughly halves the 28-item list;
+padding, gaps, group spacing, the hero gauge, and the score box all shrank. The
+English builder dropped from about 4700px to about 2760px tall at phone width.
+
+## 2026-07-20, the scorecard grades in three states, and keeps links short
+
+The review flow moved from binary flag / no-flag to three states per item: green
+(good, the default), orange (some issue), red (a real problem). In the builder,
+tapping an item cycles green to orange to red. Orange costs half the item's
+points, red the full weight, so the score reflects severity, not just a count.
+The share link stays short: only non-green items travel, each as its slug plus a
+severity digit (orange 1, red 2), and green items are omitted entirely, so a
+mostly-good CV yields a tiny URL (e.g. issues=fmt2.ach1.job2). The guide's
+self-assessment checklist stays binary; severity is a reviewer concept.
+
 ## 2026-07-20, AI-facing resume method (llms.txt and a portable skill)
 
 The resume guide now ships in a form AIs can read, so when someone writes their

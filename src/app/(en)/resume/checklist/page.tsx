@@ -25,7 +25,7 @@ const howToSteps = groupsFor("en-US").flatMap((group) =>
 
 export default function Page() {
 	return (
-		<Container className="mt-16 pb-20 sm:mt-24">
+		<Container className="mt-10 pb-16 sm:mt-14">
 			<HowToJsonLd
 				name="How to improve your resume"
 				description="A section by section resume checklist: what to fix and how, scored out of 100."

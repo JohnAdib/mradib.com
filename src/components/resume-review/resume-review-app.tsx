@@ -12,13 +12,13 @@ import { scorecardCopy } from "./scorecard-copy";
  * so crawlers and no-JS visitors get the full checklist content).
  */
 export function ResumeReviewApp({ locale }: { locale: LanguageLocale }) {
-	const { ready, hasParam, flagged, name } = useIssuesParam();
+	const { ready, hasParam, review, name } = useIssuesParam();
 	const copy = scorecardCopy(locale);
 
 	if (ready && hasParam) {
 		return (
 			<ResumeScorecard
-				flagged={flagged}
+				review={review}
 				name={name}
 				locale={locale}
 				copy={copy}

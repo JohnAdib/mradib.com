@@ -7,6 +7,12 @@ export interface IScorecardCopy {
 	builderTitle: string;
 	builderIntro: string;
 	namePlaceholder: string;
+	legendHint: string;
+	gradeGreat: string;
+	gradeGood: string;
+	gradeNeedsWork: string;
+	gradeProblem: string;
+	gradeNa: string;
 	projectedLabel: string;
 	copyLink: string;
 	copied: string;
@@ -19,6 +25,7 @@ export interface IScorecardCopy {
 	resultGreetingSub: string;
 	scoreCaptionNone: string;
 	scoreCaptionSome: (n: number) => string;
+	strengthsTitle: string;
 	sectionsTitle: string;
 	issuesTitle: string;
 	markFixed: string;
@@ -33,8 +40,14 @@ const en: IScorecardCopy = {
 	guideCta: "Read the full guide",
 	builderTitle: "Review a CV",
 	builderIntro:
-		"Flag the problems in someone's resume, then send them the link. They get a score and see how to fix each issue.",
+		"Tap any item to grade it, from great down to a real problem. Most can stay good. Then send them the link.",
 	namePlaceholder: "Whose CV is this? (optional)",
+	legendHint: "Tap an item to grade it",
+	gradeGreat: "Great",
+	gradeGood: "Good",
+	gradeNeedsWork: "Needs work",
+	gradeProblem: "Problem",
+	gradeNa: "N/A",
 	projectedLabel: "Their score",
 	copyLink: "Copy review link",
 	copied: "Link copied",
@@ -50,6 +63,7 @@ const en: IScorecardCopy = {
 		n === 1
 			? "One fix to raise your score."
 			: `${n} fixes to raise your score.`,
+	strengthsTitle: "What's great",
 	sectionsTitle: "By section",
 	issuesTitle: "What to fix",
 	markFixed: "Mark as fixed",
@@ -64,8 +78,14 @@ const fa: IScorecardCopy = {
 	guideCta: "راهنمای کامل رو بخون",
 	builderTitle: "بررسی رزومه",
 	builderIntro:
-		"مشکل‌های رزومه‌ی یک نفر رو علامت بزن و لینکش رو بفرست. اون یک امتیاز می‌بینه و یاد می‌گیره هر مشکل رو چطور درست کنه.",
+		"روی هر مورد بزن و نمره بده، از عالی تا مشکل جدی. بیشترشون می‌تونن خوب بمونن. بعد لینک رو بفرست.",
 	namePlaceholder: "رزومه‌ی کیه؟ (اختیاری)",
+	legendHint: "برای نمره دادن، روی هر مورد بزن",
+	gradeGreat: "عالی",
+	gradeGood: "خوب",
+	gradeNeedsWork: "نیاز به کار",
+	gradeProblem: "مشکل",
+	gradeNa: "نامرتبط",
 	projectedLabel: "امتیاز طرف",
 	copyLink: "کپی لینک بررسی",
 	copied: "لینک کپی شد",
@@ -79,6 +99,7 @@ const fa: IScorecardCopy = {
 	scoreCaptionNone: "هیچ مشکلی علامت نخورده. رزومه‌ت حسابی مرتبه.",
 	scoreCaptionSome: (n) =>
 		`${n.toLocaleString("fa-IR")} مورد برای بهتر شدن امتیازت مونده.`,
+	strengthsTitle: "نقاط قوت",
 	sectionsTitle: "بر اساس بخش",
 	issuesTitle: "چی رو درست کنیم",
 	markFixed: "درستش کردم",
