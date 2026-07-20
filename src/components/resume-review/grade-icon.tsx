@@ -3,10 +3,9 @@ import {
 	ExclamationCircleIcon,
 	ExclamationTriangleIcon,
 	MinusCircleIcon,
-	StarIcon,
 } from "@heroicons/react/24/solid";
 
-/** The crafted icon for each grade: great, needs work, problem, N/A, good. */
+/** The crafted icon for each grade: needs work, problem, N/A, good. */
 export function GradeIcon({
 	code,
 	className,
@@ -14,9 +13,6 @@ export function GradeIcon({
 	code: number;
 	className: string;
 }) {
-	if (code === 3) {
-		return <StarIcon className={className} />;
-	}
 	if (code === 1) {
 		return <ExclamationCircleIcon className={className} />;
 	}

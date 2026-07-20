@@ -10,6 +10,7 @@ import {
 import clsx from "clsx";
 import Link from "next/link";
 import type { IResolvedItem } from "@/data/resume-checklist";
+import { ItemHeader } from "./item-header";
 import type { IScorecardCopy } from "./scorecard-copy";
 
 function LeadIcon({
@@ -59,24 +60,12 @@ export function IssueCard({
 			)}
 		>
 			<summary className="flex cursor-pointer list-none items-start gap-2.5 px-3 py-2.5 [&::-webkit-details-marker]:hidden">
-				<LeadIcon severity={severity} resolved={resolved} />
-				<span className="min-w-0 flex-1">
-					<span
-						className={clsx(
-							"block text-sm font-semibold",
-							resolved
-								? "text-zinc-400 line-through dark:text-zinc-500"
-								: "text-zinc-800 dark:text-zinc-100",
-						)}
-					>
-						{item.title}
-					</span>
-					{!resolved && (
-						<span className="mt-0.5 block text-xs text-zinc-600 dark:text-zinc-400">
-							{item.problem}
-						</span>
-					)}
-				</span>
+				<ItemHeader
+					icon={<LeadIcon severity={severity} resolved={resolved} />}
+					title={item.title}
+					description={item.problem}
+					muted={resolved}
+				/>
 				<ChevronDownIcon className="mt-0.5 h-5 w-5 shrink-0 text-zinc-400 transition group-open:rotate-180" />
 			</summary>
 			<div className="pb-3 pe-3 ps-10">

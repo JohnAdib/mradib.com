@@ -5,11 +5,11 @@ import { useState } from "react";
 import { groupsFor } from "@/data/resume-checklist";
 import type { LanguageLocale } from "@/lib/languages/locale";
 import { shareUrl } from "@/lib/resume-review/share-url";
-import { CopyLinkButton } from "./copy-link-button";
+import { ConfirmDialog } from "./confirm-dialog";
 import { GradeLegend } from "./grade-legend";
 import { GradeRow } from "./grade-row";
 import { ResumeScorecard } from "./resume-scorecard";
-import { ScoreGauge } from "./score-gauge";
+import { ReviewScorePanel } from "./review-score-panel";
 import type { IScorecardCopy } from "./scorecard-copy";
 import { useReviewState } from "./use-review-state";
 
@@ -22,7 +22,7 @@ export function ReviewBuilder({
 	copy: IScorecardCopy;
 }) {
 	const [preview, setPreview] = useState(false);
-	const [openSlug, setOpenSlug] = useState<string | null>(null);
+	const [confirmClear, setConfirmClear] = useState(false);
 	const { name, setName, review, setGrade, clearAll, score, flaggedCount } =
 		useReviewState();
 
@@ -73,64 +73,17 @@ export function ReviewBuilder({
 				/>
 			</div>
 
-			<div className="relative mt-3 overflow-hidden rounded-2xl bg-zinc-100/70 p-4 ring-1 ring-zinc-900/10 sm:p-5 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
-				<div
-					aria-hidden="true"
-					className="absolute -top-16 -right-12 h-40 w-40 rounded-full bg-accent-500/10 blur-3xl"
-				/>
-				<div
-					aria-hidden="true"
-					className="absolute -bottom-20 -left-12 h-36 w-36 rounded-full bg-accent-400/10 blur-3xl"
-				/>
-				<div className="relative flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-					<div className="flex items-center gap-3">
-						<ScoreGauge
-							score={score}
-							locale={locale}
-							showLabel={false}
-							glow
-							className="h-16 w-16 shrink-0"
-						/>
-						<div className="text-start">
-							<p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-								{copy.projectedLabel}
-							</p>
-							<p className="text-sm text-zinc-500 dark:text-zinc-400">
-								{copy.flaggedCount(flaggedCount)}
-							</p>
-						</div>
-					</div>
-					<div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:items-end">
-						<CopyLinkButton
-							text={shareUrl(locale, review, name)}
-							label={copy.copyLink}
-							copiedLabel={copy.copied}
-							className="w-full sm:w-auto"
-						/>
-						<button
-							type="button"
-							onClick={() => setPreview(true)}
-							className="text-sm font-medium text-zinc-500 transition hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
-						>
-							{copy.previewCta}
-						</button>
-					</div>
-				</div>
-			</div>
+			<ReviewScorePanel
+				score={score}
+				flaggedCount={flaggedCount}
+				shareText={shareUrl(locale, review, name)}
+				locale={locale}
+				copy={copy}
+			/>
 
 			<GradeLegend copy={copy} />
 			<p className="mt-1 text-center text-xs text-zinc-400 dark:text-zinc-500">
-				{flaggedCount > 0 ? (
-					<button
-						type="button"
-						onClick={clearAll}
-						className="transition hover:text-zinc-600 dark:hover:text-zinc-300"
-					>
-						{copy.clear}
-					</button>
-				) : (
-					copy.legendHint
-				)}
+				{copy.legendHint}
 			</p>
 
 			<div className="mt-5 space-y-5">
@@ -139,20 +92,13 @@ export function ReviewBuilder({
 						<h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
 							{group.title}
 						</h2>
-						<div className="space-y-1.5">
+						<div className="space-y-2">
 							{group.items.map((item) => (
 								<GradeRow
 									key={item.slug}
 									item={item}
 									grade={review[item.slug] ?? 0}
-									isOpen={openSlug === item.slug}
-									onToggle={() =>
-										setOpenSlug(openSlug === item.slug ? null : item.slug)
-									}
-									onPick={(code) => {
-										setGrade(item.slug, code);
-										setOpenSlug(null);
-									}}
+									onPick={(code) => setGrade(item.slug, code)}
 									copy={copy}
 								/>
 							))}
@@ -160,6 +106,38 @@ export function ReviewBuilder({
 					</section>
 				))}
 			</div>
+
+			<div className="mt-6 flex items-center justify-center gap-4 text-sm">
+				<button
+					type="button"
+					onClick={() => setPreview(true)}
+					className="font-medium text-zinc-500 transition hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
+				>
+					{copy.previewCta}
+				</button>
+				{flaggedCount > 0 && (
+					<button
+						type="button"
+						onClick={() => setConfirmClear(true)}
+						className="font-medium text-zinc-400 transition hover:text-rose-600 dark:text-zinc-500 dark:hover:text-rose-400"
+					>
+						{copy.clear}
+					</button>
+				)}
+			</div>
+
+			<ConfirmDialog
+				open={confirmClear}
+				title={copy.clearTitle}
+				body={copy.clearBody}
+				confirmLabel={copy.clearConfirm}
+				cancelLabel={copy.clearCancel}
+				onConfirm={() => {
+					clearAll();
+					setConfirmClear(false);
+				}}
+				onClose={() => setConfirmClear(false)}
+			/>
 		</div>
 	);
 }

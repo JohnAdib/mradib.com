@@ -80,12 +80,21 @@ export const ogCardsEn: IOgCard[] = [
 			"AI Coding Summit, 5,000+ engineers. React Advanced at Figma. JavaScript London.",
 	},
 	{
+		slug: "resume-review",
+		route: "/resume/review",
+		lang: "en",
+		eyebrow: "Review a CV",
+		headline: "Score a CV out of 100.",
+		proof:
+			"Grade every section, flag each issue with its fix, and send the result as one link.",
+	},
+	{
 		slug: "resume-checklist",
 		route: "/resume/checklist",
 		lang: "en",
 		eyebrow: "Resume scorecard",
 		headline: "Your resume, scored out of 100.",
 		proof:
-			"17 checks across every section, each with the fix. Share the result in one link.",
+			"Every section scored, each issue with the fix to raise it. Shared in one link.",
 	},
 ];

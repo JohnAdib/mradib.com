@@ -18,6 +18,11 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/talks", lastModified: "2026-07-19" },
 	{ path: "/resume/action-verbs/list", lastModified: "2026-07-18" },
 	{
+		path: "/resume/review",
+		lastModified: "2026-07-20",
+		faPath: "/fa/resume/review",
+	},
+	{
 		path: "/resume/checklist",
 		lastModified: "2026-07-20",
 		faPath: "/fa/resume/checklist",

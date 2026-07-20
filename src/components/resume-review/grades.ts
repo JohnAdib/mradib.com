@@ -1,12 +1,16 @@
-/** Grade codes: 0 good (default), 1 needs work, 2 problem, 3 great, 4 N/A. */
-export const PICKER_CODES = [3, 0, 1, 2, 4];
+import type { IScorecardCopy } from "./scorecard-copy";
+
+/** Grade codes: 0 good (default), 1 needs work, 2 problem, 4 N/A. */
+export const PICKER_CODES = [0, 1, 2, 4];
+
+/** The three primary grades, shown as an inline segmented control. */
+export const SEGMENT_CODES = [0, 1, 2];
+
+/** N/A: excluded from the score, offered as a small secondary toggle. */
+export const NA_CODE = 4;
 
 export function isIssue(code: number): boolean {
 	return code === 1 || code === 2;
-}
-
-export function isStrength(code: number): boolean {
-	return code === 3;
 }
 
 export interface IGradeStyle {
@@ -18,14 +22,6 @@ export interface IGradeStyle {
 
 /** One place mapping a grade code to row / icon / chip classes. */
 export function gradeStyle(code: number): IGradeStyle {
-	if (code === 3) {
-		return {
-			row: "bg-emerald-500/10 ring-emerald-500/30",
-			icon: "text-emerald-500",
-			text: "text-emerald-600 dark:text-emerald-400",
-			chip: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300",
-		};
-	}
 	if (code === 1) {
 		return {
 			row: "bg-amber-500/10 ring-amber-500/30",
@@ -58,12 +54,7 @@ export function gradeStyle(code: number): IGradeStyle {
 	};
 }
 
-import type { IScorecardCopy } from "./scorecard-copy";
-
 export function gradeLabel(code: number, copy: IScorecardCopy): string {
-	if (code === 3) {
-		return copy.gradeGreat;
-	}
 	if (code === 1) {
 		return copy.gradeNeedsWork;
 	}

@@ -29,13 +29,12 @@ export const totalPoints = checklistItems.reduce(
 	0,
 );
 
-/** How much of an item's points each grade costs. Good/great 0, needs-work half,
+/** How much of an item's points each grade costs. Good 0, needs-work half,
  * problem all. N/A (code 4) is not here; it is excluded from the score entirely. */
 export const GRADE_WEIGHT: Record<number, number> = {
 	0: 0,
 	1: 0.5,
 	2: 1,
-	3: 0,
 };
 
 function copyFor(locale: LanguageLocale): {
