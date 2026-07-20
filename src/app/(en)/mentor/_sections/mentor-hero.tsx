@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/button";
 import { Container } from "@/components/container";
 import { mentoringStats } from "@/data/mentoring-stats";
-import imgMradibMentoring from "../_img/mradib-mentoring.png";
+import imgMradibMentoring from "../_img/mradib-mentoring.webp";
 
 export function MentorHero() {
 	return (
