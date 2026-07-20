@@ -21,10 +21,10 @@ export function FlagRow({
 			onClick={onToggle}
 			aria-pressed={flagged}
 			className={clsx(
-				"flex w-full items-start gap-3 rounded-xl p-3 text-start transition",
+				"flex w-full items-start gap-3 rounded-2xl p-4 text-start ring-1 transition",
 				flagged
-					? "bg-amber-500/10 ring-1 ring-amber-500/30"
-					: "hover:bg-zinc-900/5 dark:hover:bg-zinc-800/60",
+					? "bg-amber-500/10 ring-amber-500/30"
+					: "bg-surface ring-zinc-900/5 hover:-translate-y-0.5 hover:shadow-sm hover:shadow-zinc-900/5 dark:bg-zinc-800/30 dark:ring-zinc-800 dark:hover:bg-zinc-800/50",
 			)}
 		>
 			{flagged ? (
@@ -35,15 +35,15 @@ export function FlagRow({
 			<span className="min-w-0 flex-1">
 				<span
 					className={clsx(
-						"block text-sm font-medium",
+						"block text-sm font-semibold",
 						flagged
 							? "text-zinc-900 dark:text-zinc-100"
-							: "text-zinc-700 dark:text-zinc-300",
+							: "text-zinc-800 dark:text-zinc-100",
 					)}
 				>
 					{item.title}
 				</span>
-				<span className="mt-0.5 block text-xs text-zinc-500 dark:text-zinc-400">
+				<span className="mt-1 block text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
 					{item.question}
 				</span>
 			</span>
