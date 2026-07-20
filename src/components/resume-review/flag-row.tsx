@@ -26,8 +26,8 @@ function SeverityIcon({
 }
 
 /**
- * A builder row. Tapping cycles the item green (good) to orange (some issue) to
- * red (a problem) and back, so the reviewer grades each topic in place.
+ * A compact builder row. Tapping cycles the item green (good) to orange (some
+ * issue) to red (a problem) and back, so the reviewer grades each topic in place.
  */
 export function FlagRow({
 	item,
@@ -44,21 +44,16 @@ export function FlagRow({
 			type="button"
 			onClick={onCycle}
 			className={clsx(
-				"flex w-full items-start gap-3 rounded-2xl p-4 text-start ring-1 transition",
+				"flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-start ring-1 transition",
 				style.row,
 			)}
 		>
 			<SeverityIcon
 				severity={severity}
-				className={clsx("mt-0.5 h-5 w-5 shrink-0", style.icon)}
+				className={clsx("h-5 w-5 shrink-0", style.icon)}
 			/>
-			<span className="min-w-0 flex-1">
-				<span className="block text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-					{item.title}
-				</span>
-				<span className="mt-1 block text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
-					{item.question}
-				</span>
+			<span className="min-w-0 flex-1 text-sm font-medium text-zinc-800 dark:text-zinc-100">
+				{item.title}
 			</span>
 		</button>
 	);

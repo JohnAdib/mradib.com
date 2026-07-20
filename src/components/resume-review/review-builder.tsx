@@ -31,7 +31,7 @@ export function ReviewBuilder({
 				<button
 					type="button"
 					onClick={() => setPreview(false)}
-					className="mb-6 text-sm font-medium text-accent-600 transition hover:text-accent-700 dark:text-accent-400"
+					className="mb-5 text-sm font-medium text-accent-600 transition hover:text-accent-700 dark:text-accent-400"
 				>
 					{copy.backToEditing}
 				</button>
@@ -51,41 +51,41 @@ export function ReviewBuilder({
 				<h1
 					className={clsx(
 						locale === "fa-IR" ? "font-fa" : "font-display",
-						"text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100",
+						"text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100",
 					)}
 				>
 					{copy.builderTitle}
 				</h1>
-				<p className="mt-4 max-w-md text-zinc-600 dark:text-zinc-400">
+				<p className="mt-2 max-w-md text-sm text-zinc-600 dark:text-zinc-400">
 					{copy.builderIntro}
 				</p>
 			</div>
 
-			<div className="mt-8">
+			<div className="mt-5">
 				<input
 					type="text"
 					value={name}
 					onChange={(event) => setName(event.target.value)}
 					aria-label={copy.namePlaceholder}
 					placeholder={copy.namePlaceholder}
-					className="w-full rounded-2xl bg-surface px-4 py-3 text-center text-sm text-zinc-800 ring-1 ring-zinc-900/10 transition placeholder:text-zinc-400 focus:ring-2 focus:ring-accent-500 focus:outline-none dark:bg-zinc-800/40 dark:text-zinc-100 dark:ring-zinc-700/50"
+					className="w-full rounded-xl bg-surface px-4 py-2.5 text-center text-sm text-zinc-800 ring-1 ring-zinc-900/10 transition placeholder:text-zinc-400 focus:ring-2 focus:ring-accent-500 focus:outline-none dark:bg-zinc-800/40 dark:text-zinc-100 dark:ring-zinc-700/50"
 				/>
 			</div>
 
-			<div className="mt-4 rounded-3xl bg-surface p-6 ring-1 ring-zinc-900/10 sm:p-7 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
-				<div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-					<div className="flex items-center gap-4">
+			<div className="mt-3 rounded-2xl bg-surface p-4 ring-1 ring-zinc-900/10 sm:p-5 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
+				<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+					<div className="flex items-center gap-3">
 						<ScoreGauge
 							score={score}
 							locale={locale}
 							showLabel={false}
-							className="h-24 w-24 shrink-0"
+							className="h-16 w-16 shrink-0"
 						/>
 						<div className="text-start">
 							<p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
 								{copy.projectedLabel}
 							</p>
-							<p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+							<p className="text-sm text-zinc-500 dark:text-zinc-400">
 								{copy.flaggedCount(flaggedCount)}
 							</p>
 						</div>
@@ -123,13 +123,13 @@ export function ReviewBuilder({
 				)}
 			</p>
 
-			<div className="mt-8 space-y-10">
+			<div className="mt-5 space-y-5">
 				{groupsFor(locale).map((group) => (
 					<section key={group.id}>
-						<h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+						<h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
 							{group.title}
 						</h2>
-						<div className="space-y-3">
+						<div className="space-y-1.5">
 							{group.items.map((item) => (
 								<FlagRow
 									key={item.slug}

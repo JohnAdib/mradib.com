@@ -19,17 +19,17 @@ export function IssueGroups({
 	copy: IScorecardCopy;
 }) {
 	return (
-		<div className="space-y-8">
+		<div className="space-y-5">
 			{groups.map((group) => (
 				<section
 					key={group.id}
 					id={`group-${group.id}`}
-					className="scroll-mt-20"
+					className="scroll-mt-16"
 				>
-					<h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+					<h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
 						{group.title}
 					</h3>
-					<div className="space-y-3">
+					<div className="space-y-2">
 						{group.items.map((item) => (
 							<IssueCard
 								key={item.slug}

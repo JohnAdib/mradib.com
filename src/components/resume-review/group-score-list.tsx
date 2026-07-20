@@ -14,7 +14,7 @@ export function GroupScoreList({
 	locale: LanguageLocale;
 }) {
 	return (
-		<div className="grid gap-3 sm:grid-cols-2">
+		<div className="grid gap-2 sm:grid-cols-2">
 			{groups.map((group) => {
 				const score = scoreOfItems(group.items, review);
 				const colors = toneClasses(toneForScore(score));
@@ -25,11 +25,11 @@ export function GroupScoreList({
 					<a
 						key={group.id}
 						href={`#group-${group.id}`}
-						className="flex items-center gap-3 rounded-2xl bg-surface p-4 ring-1 ring-zinc-900/10 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
+						className="flex items-center gap-2.5 rounded-xl bg-surface p-3 ring-1 ring-zinc-900/10 transition hover:bg-zinc-50 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
 					>
 						<span
 							className={clsx(
-								"w-8 shrink-0 text-lg font-bold tabular-nums",
+								"w-7 shrink-0 text-base font-bold tabular-nums",
 								colors.text,
 							)}
 						>
@@ -39,7 +39,7 @@ export function GroupScoreList({
 							<span className="block truncate text-sm font-semibold text-zinc-800 dark:text-zinc-100">
 								{group.title}
 							</span>
-							<span className="mt-1.5 block h-1.5 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-700">
+							<span className="mt-1 block h-1.5 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-700">
 								<span
 									className={clsx("block h-full rounded-full", colors.bar)}
 									style={{ width: `${score}%` }}

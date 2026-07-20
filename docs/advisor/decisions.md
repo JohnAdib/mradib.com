@@ -4,6 +4,15 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the scorecard is compact, like an installed app
+
+John's read: the scorecard felt like a nice web page but too tall, scrolling
+forever from the first view. Tightened it to feel like a native mobile app.
+Builder items are now single-line rows (icon plus title, the self-assessment
+question dropped from the reviewer view), which roughly halves the 28-item list;
+padding, gaps, group spacing, the hero gauge, and the score box all shrank. The
+English builder dropped from about 4700px to about 2760px tall at phone width.
+
 ## 2026-07-20, the scorecard grades in three states, and keeps links short
 
 The review flow moved from binary flag / no-flag to three states per item: green

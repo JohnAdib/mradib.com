@@ -52,13 +52,13 @@ export function IssueCard({
 	return (
 		<details
 			className={clsx(
-				"group rounded-2xl ring-1 transition",
+				"group rounded-xl ring-1 transition",
 				resolved
 					? "bg-zinc-100/60 ring-zinc-900/5 dark:bg-zinc-800/20 dark:ring-zinc-800"
 					: "bg-surface ring-zinc-900/10 dark:bg-zinc-800/40 dark:ring-zinc-700/50",
 			)}
 		>
-			<summary className="flex cursor-pointer list-none items-start gap-3 p-4 [&::-webkit-details-marker]:hidden">
+			<summary className="flex cursor-pointer list-none items-start gap-2.5 px-3 py-2.5 [&::-webkit-details-marker]:hidden">
 				<LeadIcon severity={severity} resolved={resolved} />
 				<span className="min-w-0 flex-1">
 					<span
@@ -72,16 +72,16 @@ export function IssueCard({
 						{item.title}
 					</span>
 					{!resolved && (
-						<span className="mt-1 block text-sm text-zinc-600 dark:text-zinc-400">
+						<span className="mt-0.5 block text-xs text-zinc-600 dark:text-zinc-400">
 							{item.problem}
 						</span>
 					)}
 				</span>
 				<ChevronDownIcon className="mt-0.5 h-5 w-5 shrink-0 text-zinc-400 transition group-open:rotate-180" />
 			</summary>
-			<div className="pb-4 pe-4 ps-12">
+			<div className="pb-3 pe-3 ps-10">
 				<p className="text-sm text-zinc-700 dark:text-zinc-300">{item.fix}</p>
-				<div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+				<div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2">
 					<button
 						type="button"
 						onClick={onToggle}

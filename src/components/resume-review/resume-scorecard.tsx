@@ -70,12 +70,12 @@ export function ResumeScorecard({
 						<h1
 							className={clsx(
 								locale === "fa-IR" ? "font-fa" : "font-display",
-								"text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100",
+								"text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100",
 							)}
 						>
 							{copy.resultGreeting(name)}
 						</h1>
-						<p className="mt-1 text-zinc-600 dark:text-zinc-400">
+						<p className="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">
 							{copy.resultGreetingSub}
 						</p>
 					</div>
@@ -84,12 +84,12 @@ export function ResumeScorecard({
 						{copy.resultKicker}
 					</p>
 				)}
-				<ScoreGauge score={score} locale={locale} className="mt-6 h-44 w-44" />
-				<p className="mt-4 max-w-sm text-zinc-600 dark:text-zinc-400">
+				<ScoreGauge score={score} locale={locale} className="mt-4 h-32 w-32" />
+				<p className="mt-3 max-w-sm text-sm text-zinc-600 dark:text-zinc-400">
 					{caption}
 				</p>
 				{flaggedSlugs.length > 0 && (
-					<p className="mt-1 text-sm font-medium tabular-nums text-zinc-500 dark:text-zinc-400">
+					<p className="mt-0.5 text-xs font-medium tabular-nums text-zinc-500 dark:text-zinc-400">
 						{copy.fixedProgress(fixedCount, flaggedSlugs.length)}
 					</p>
 				)}
@@ -97,8 +97,8 @@ export function ResumeScorecard({
 
 			{issueGroups.length > 0 && (
 				<>
-					<div className="mt-10">
-						<h2 className="mb-3 text-sm font-bold text-zinc-800 dark:text-zinc-100">
+					<div className="mt-6">
+						<h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
 							{copy.sectionsTitle}
 						</h2>
 						<GroupScoreList
@@ -107,8 +107,8 @@ export function ResumeScorecard({
 							locale={locale}
 						/>
 					</div>
-					<div className="mt-10">
-						<h2 className="mb-4 text-sm font-bold text-zinc-800 dark:text-zinc-100">
+					<div className="mt-6">
+						<h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
 							{copy.issuesTitle}
 						</h2>
 						<IssueGroups
@@ -122,7 +122,7 @@ export function ResumeScorecard({
 				</>
 			)}
 
-			<div className="mt-12 text-center">
+			<div className="mt-8 text-center">
 				<Link
 					href={checklistPath(locale)}
 					className="text-sm font-medium text-accent-600 transition hover:text-accent-700 dark:text-accent-400"

@@ -28,7 +28,7 @@ export function severityStyle(severity: number): ISeverityStyle {
 		};
 	}
 	return {
-		row: "bg-surface ring-zinc-900/5 hover:-translate-y-0.5 hover:shadow-sm hover:shadow-zinc-900/5 dark:bg-zinc-800/30 dark:ring-zinc-800 dark:hover:bg-zinc-800/50",
+		row: "bg-surface ring-zinc-900/5 hover:bg-zinc-50 dark:bg-zinc-800/30 dark:ring-zinc-800 dark:hover:bg-zinc-800/50",
 		icon: "text-emerald-500",
 		chip: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
 		text: "text-emerald-600 dark:text-emerald-400",
