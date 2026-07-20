@@ -6,6 +6,7 @@ export interface IScorecardCopy {
 	guideCta: string;
 	builderTitle: string;
 	builderIntro: string;
+	namePlaceholder: string;
 	projectedLabel: string;
 	copyLink: string;
 	copied: string;
@@ -14,6 +15,8 @@ export interface IScorecardCopy {
 	clear: string;
 	flaggedCount: (n: number) => string;
 	resultKicker: string;
+	resultGreeting: (name: string) => string;
+	resultGreetingSub: string;
 	scoreCaptionNone: string;
 	scoreCaptionSome: (n: number) => string;
 	sectionsTitle: string;
@@ -30,7 +33,8 @@ const en: IScorecardCopy = {
 	guideCta: "Read the full guide",
 	builderTitle: "Review a CV",
 	builderIntro:
-		"Tap each problem you spot. Then copy the link and send it to them.",
+		"Flag the problems in someone's resume, then send them the link. They get a score and see how to fix each issue.",
+	namePlaceholder: "Whose CV is this? (optional)",
 	projectedLabel: "Their score",
 	copyLink: "Copy review link",
 	copied: "Link copied",
@@ -39,6 +43,8 @@ const en: IScorecardCopy = {
 	clear: "Clear all",
 	flaggedCount: (n) => (n === 1 ? "1 issue flagged" : `${n} issues flagged`),
 	resultKicker: "Resume scorecard",
+	resultGreeting: (name) => `Hi ${name},`,
+	resultGreetingSub: "here's your resume scorecard.",
 	scoreCaptionNone: "No issues flagged. This resume is looking sharp.",
 	scoreCaptionSome: (n) =>
 		n === 1
@@ -58,7 +64,8 @@ const fa: IScorecardCopy = {
 	guideCta: "راهنمای کامل رو بخون",
 	builderTitle: "بررسی رزومه",
 	builderIntro:
-		"هر مشکلی که تو رزومه می‌بینی رو بزن، بعد لینک رو کپی کن و براشون بفرست.",
+		"مشکل‌های رزومه‌ی یک نفر رو علامت بزن و لینکش رو بفرست. اون یک امتیاز می‌بینه و یاد می‌گیره هر مشکل رو چطور درست کنه.",
+	namePlaceholder: "رزومه‌ی کیه؟ (اختیاری)",
 	projectedLabel: "امتیاز طرف",
 	copyLink: "کپی لینک بررسی",
 	copied: "لینک کپی شد",
@@ -67,6 +74,8 @@ const fa: IScorecardCopy = {
 	clear: "پاک کردن همه",
 	flaggedCount: (n) => `${n.toLocaleString("fa-IR")} مورد علامت خورده`,
 	resultKicker: "کارنامه رزومه",
+	resultGreeting: (name) => `سلام ${name}،`,
+	resultGreetingSub: "این کارنامه‌ی رزومه‌ته.",
 	scoreCaptionNone: "هیچ مشکلی علامت نخورده. رزومه‌ت حسابی مرتبه.",
 	scoreCaptionSome: (n) =>
 		`${n.toLocaleString("fa-IR")} مورد برای بهتر شدن امتیازت مونده.`,

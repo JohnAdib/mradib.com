@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import Link from "next/link";
 import { groupsFor, scoreForAll } from "@/data/resume-checklist";
 import { encodeIssues } from "@/data/resume-checklist/share";
@@ -17,10 +18,12 @@ export function ResumeScorecard({
 	flagged,
 	locale,
 	copy,
+	name = "",
 }: {
 	flagged: string[];
 	locale: LanguageLocale;
 	copy: IScorecardCopy;
+	name?: string;
 }) {
 	const store = useChecklistStore(
 		`resume-review-resolved:${encodeIssues(flagged)}`,
@@ -55,10 +58,26 @@ export function ResumeScorecard({
 			<StickyScoreBar score={score} locale={locale} />
 
 			<div className="flex flex-col items-center text-center">
-				<p className="text-xs font-semibold uppercase tracking-wide text-accent-600 dark:text-accent-400">
-					{copy.resultKicker}
-				</p>
-				<ScoreGauge score={score} locale={locale} className="mt-4 h-44 w-44" />
+				{name ? (
+					<div>
+						<h1
+							className={clsx(
+								locale === "fa-IR" ? "font-fa" : "font-display",
+								"text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100",
+							)}
+						>
+							{copy.resultGreeting(name)}
+						</h1>
+						<p className="mt-1 text-zinc-600 dark:text-zinc-400">
+							{copy.resultGreetingSub}
+						</p>
+					</div>
+				) : (
+					<p className="text-xs font-semibold uppercase tracking-wide text-accent-600 dark:text-accent-400">
+						{copy.resultKicker}
+					</p>
+				)}
+				<ScoreGauge score={score} locale={locale} className="mt-6 h-44 w-44" />
 				<p className="mt-4 max-w-sm text-zinc-600 dark:text-zinc-400">
 					{caption}
 				</p>

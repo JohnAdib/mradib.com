@@ -10,11 +10,18 @@ export function checklistPath(locale: LanguageLocale): string {
 /**
  * Absolute share link for a set of flagged issues. Always carries the `issues`
  * param, even when empty, so the link opens the result view (a clean CV reads
- * as a full score) rather than the builder.
+ * as a full score). An optional name personalizes the recipient's first view.
  */
 export function shareUrl(
 	locale: LanguageLocale,
 	flagged: Iterable<string>,
+	name?: string,
 ): string {
-	return `${homepageUrl}${checklistPath(locale)}?issues=${encodeIssues(flagged)}`;
+	const params = new URLSearchParams();
+	params.set("issues", encodeIssues(flagged));
+	const trimmed = name?.trim();
+	if (trimmed) {
+		params.set("name", trimmed);
+	}
+	return `${homepageUrl}${checklistPath(locale)}?${params.toString()}`;
 }
