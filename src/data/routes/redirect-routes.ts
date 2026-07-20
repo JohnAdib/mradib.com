@@ -18,7 +18,6 @@ export const redirectRoutes: string[] = [
 	"/fa/contact",
 	"/fa/resume/action-verbs",
 	"/fa/resume/ats",
-	"/fa/resume/checklist",
 	"/fa/resume/contact",
 	"/fa/resume/education",
 	"/fa/resume/experience",

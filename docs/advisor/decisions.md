@@ -4,6 +4,31 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the resume scorecard, a shareable scored review
+
+New page at /resume/checklist and /fa/resume/checklist: an app-like tool that
+turns the resume checklist into a shareable CV review. The reviewer taps the
+problems they spot, copies one link, and the recipient opens a Lighthouse-style
+scorecard: the score out of 100 first, then a per-section breakdown, then each
+issue with its fix and a deep link into the resume guide. The recipient ticks
+issues as fixed and watches the score climb (progress in localStorage, keyed
+per link). Rulings:
+
+- A check means "a problem to fix". The score starts at 100 and each flagged
+  issue lowers it. John's call, matching the Lighthouse framing he asked for.
+- It is a new page, not part of the guide. The score-first, app-like layout is
+  a different animal from the long SEO guide, so it gets its own route. The old
+  /fa/resume/checklist redirect became the real page.
+- The checklist data moved to src/data/resume-checklist. Each item now carries
+  a short stable slug (share links use slugs, not long ids) and a point weight
+  that sums to 100. The guide's self-assessment widgets read the same data
+  through thin adapters, so nothing is stated twice.
+- Gauge colour is provisional and set for John's live review: teal for the
+  passing range (70 and up), amber for the middle band, rose for low. No
+  Lighthouse green, to keep the accent brand-true.
+- The share preview is one static brand card per locale in public/og. GitHub
+  Pages cannot render a per-score image, so score-tier cards are deferred.
+
 ## 2026-07-19, the word government leaves OG card copy
 
 Ruling from John on the About card: no "government" keyword in the

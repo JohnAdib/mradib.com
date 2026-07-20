@@ -31,6 +31,15 @@ export const ogCardsFa: IOgCard[] = [
 		proof: "وقتشه رزومه خفن خودت رو بسازی. کامل‌ترین راهنمای فارسی رزومه‌نویسی.",
 	},
 	{
+		slug: "fa-resume-checklist",
+		route: "/fa/resume/checklist",
+		lang: "fa",
+		eyebrow: "کارنامه رزومه",
+		headline: "به رزومه‌ت نمره بده",
+		proof:
+			"۱۷ بررسی در همه‌ی بخش‌ها، یک امتیاز از ۱۰۰، و راه‌حل هر مشکل. نتیجه رو با یک لینک بفرست.",
+	},
+	{
 		slug: "fa-excel",
 		route: "/fa/excel",
 		lang: "fa",

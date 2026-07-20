@@ -1,21 +1,4 @@
 import type { IChecklistGroup } from "@/components/todo/interface";
-import { checklistItemsBySection } from "./resume-checklist-data";
-import { resumeSections } from "./resume-sections";
+import { guideGroups } from "@/data/resume-checklist/guide";
 
-const checklistSections = resumeSections.filter(
-	(section) => section.hasChecklist,
-);
-
-export const resumeChecklistGroups: IChecklistGroup[] = [
-	...checklistSections.map((section) => ({
-		id: section.id,
-		title: section.title,
-		href: `#${section.id}`,
-		items: checklistItemsBySection(section.id),
-	})),
-	{
-		id: "review",
-		title: "Final Review",
-		items: checklistItemsBySection("review"),
-	},
-];
+export const resumeChecklistGroups: IChecklistGroup[] = guideGroups("en-US");

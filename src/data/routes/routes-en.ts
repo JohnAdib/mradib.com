@@ -17,4 +17,9 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/smileisgold", lastModified: "2026-07-19" },
 	{ path: "/talks", lastModified: "2026-07-19" },
 	{ path: "/resume/action-verbs/list", lastModified: "2026-07-18" },
+	{
+		path: "/resume/checklist",
+		lastModified: "2026-07-20",
+		faPath: "/fa/resume/checklist",
+	},
 ];

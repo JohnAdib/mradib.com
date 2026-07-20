@@ -79,4 +79,13 @@ export const ogCardsEn: IOgCard[] = [
 		proof:
 			"AI Coding Summit, 5,000+ engineers. React Advanced at Figma. JavaScript London.",
 	},
+	{
+		slug: "resume-checklist",
+		route: "/resume/checklist",
+		lang: "en",
+		eyebrow: "Resume scorecard",
+		headline: "Your resume, scored out of 100.",
+		proof:
+			"17 checks across every section, each with the fix. Share the result in one link.",
+	},
 ];

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { JSX } from "react";
+import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/heading/section-heading";
 import { ChecklistSummary } from "@/components/todo/checklist-summary";
 import imgResumeChecklist from "../_img/resume-checklist.png";
@@ -25,6 +26,13 @@ export function SectionFinalChecklist(): JSX.Element {
 				storageKey={resumeChecklistStorageKey}
 				groups={resumeChecklistGroups}
 			/>
+
+			<div className="not-prose mt-8 flex flex-wrap items-center gap-x-4 gap-y-3">
+				<Button href="/fa/resume/checklist">اسکورکارت رزومه رو باز کن</Button>
+				<span className="text-sm text-zinc-600 dark:text-zinc-400">
+					هر بخش رو امتیاز بده و نتیجه رو به‌شکل لینک به اشتراک بذار.
+				</span>
+			</div>
 		</section>
 	);
 }
