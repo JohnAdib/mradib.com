@@ -4,6 +4,25 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the reviewer is one tap, one page, and reads like the result
+
+John reviewed a real CV with the tool and it drove a round of simplification. Five
+grades were too many (good and great felt identical), so grading collapsed to three
+tap states, good, needs work, problem, plus a small N/A that stays out of the score;
+great is gone. Each item is now an always-visible segmented control, one tap, no
+expand step, and every row carries a one-line description (the same problem line the
+candidate sees) so the reviewer reads what an item means while grading. The reviewer
+and the candidate now live at separate URLs: /resume/review is where you build a
+review, /resume/checklist is the shared result, and visiting the result with no link
+shows a calm empty state that points back to the builder. The score box slimmed to
+the gauge plus one action, copy the link; preview and clear moved to a quiet footer
+row, and clear now asks first through a confirm dialog. The checklist itself grew
+from 28 to 30 items against a real review: added file size, font and colours, a
+headline title under the name, a GitHub-only-if-it-has-work check, and clear roles;
+reframed LinkedIn, expected sections, dates, education clutter, the page-count rule,
+gaps and overlaps, no references, pronouns, and coherent skills; dropped the two
+process items (ask a friend, self review). Points still sum to 100.
+
 ## 2026-07-20, the scorecard wears the site's premium idioms
 
 John's read: the compact scorecard had gone flat and old-school. Modernized it

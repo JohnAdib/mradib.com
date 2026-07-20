@@ -21,7 +21,8 @@ break the math. Change the advice here, once.
 
 - The human guide: `src/app/(en)/resume` and `src/app/fa/resume` (per-section
   copy in `_sections`, self-assessment checklists fed from the data).
-- The scorecard: `src/components/resume-review` and `/resume/checklist`.
+- The reviewer and scorecard: `src/components/resume-review`, the builder at
+  `/resume/review` and the shared result at `/resume/checklist`.
 - The AI-facing method: `src/lib/resume-ai/framework.ts` turns the checklist
   into ordered, weighted rules; `build-llms-txt.ts` and `build-skill.ts` render
   it as `/resume/llms.txt` and `/resume/skill.md` (and the `/fa` pair).

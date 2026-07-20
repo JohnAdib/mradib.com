@@ -34,9 +34,9 @@ export function SectionFinalChecklist(): JSX.Element {
 			/>
 
 			<div className="not-prose mt-8 flex flex-wrap items-center gap-x-4 gap-y-3">
-				<Button href="/resume/checklist">Open the resume scorecard</Button>
+				<Button href="/resume/review">Score a resume</Button>
 				<span className="text-sm text-zinc-600 dark:text-zinc-400">
-					Score each section and share the result as a link.
+					Grade each section and share the result as a link.
 				</span>
 			</div>
 		</section>

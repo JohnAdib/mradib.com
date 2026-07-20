@@ -3,23 +3,19 @@ import { Container } from "@/components/container";
 import { HowToJsonLd } from "@/components/json-ld/how-to-json-ld";
 import { ResumeReviewApp } from "@/components/resume-review/resume-review-app";
 import { groupsFor } from "@/data/resume-checklist";
-import { separator } from "@/lib/constants/en";
-import { myNameFa } from "@/lib/constants/fa";
 import { homepageUrl } from "@/lib/constants/url";
 import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
-const pageDesc =
-	"به رزومه هر کسی از ۱۰۰ نمره بده، مشکل هر بخش و راه‌حلش رو ببین، و نتیجه رو با یک لینک بفرست.";
-
 export const metadata: Metadata = {
-	title: "کارنامه رزومه",
-	description: pageDesc + separator + myNameFa,
-	alternates: pageAlternates("/fa/resume/checklist"),
-	...ogMetadata("/fa/resume/checklist"),
+	title: "Review a CV",
+	description:
+		"Grade any resume out of 100 across every section, flag each issue with its fix, and send the result as a single link.",
+	alternates: pageAlternates("/resume/review"),
+	...ogMetadata("/resume/review"),
 };
 
-const howToSteps = groupsFor("fa-IR").flatMap((group) =>
+const howToSteps = groupsFor("en-US").flatMap((group) =>
 	group.items.map((item) => ({
 		name: item.title,
 		text: item.fix,
@@ -31,12 +27,12 @@ export default function Page() {
 	return (
 		<Container className="mt-10 pb-16 sm:mt-14">
 			<HowToJsonLd
-				name="چطور رزومه‌ات را بهتر کنی"
-				description="چک‌لیست بخش‌به‌بخش رزومه: چه چیزی را درست کنی و چطور، با امتیاز از ۱۰۰."
+				name="How to improve your resume"
+				description="A section by section resume checklist: what to fix and how, scored out of 100."
 				steps={howToSteps}
 			/>
 			<div className="mx-auto max-w-2xl">
-				<ResumeReviewApp locale="fa-IR" mode="result" />
+				<ResumeReviewApp locale="en-US" mode="builder" />
 			</div>
 		</Container>
 	);

@@ -78,7 +78,7 @@ export function sectionPages(): string {
 		...talkPageLines,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,
-		`- [Resume Scorecard](${homepageUrl}/resume/checklist): score any resume out of 100 section by section, with the fix for each issue, and share the result as a link.`,
+		`- [Review a CV](${homepageUrl}/resume/review): score any resume out of 100 section by section, flag each issue with its fix, and share the result as a link.`,
 		`- [Now](${homepageUrl}/now): what John is doing right now, updated quarterly.`,
 		`- [Contact](${homepageUrl}/contact)`,
 	].join("\n");

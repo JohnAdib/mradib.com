@@ -32,7 +32,7 @@ export default function Page() {
 				steps={howToSteps}
 			/>
 			<div className="mx-auto max-w-2xl">
-				<ResumeReviewApp locale="en-US" />
+				<ResumeReviewApp locale="en-US" mode="result" />
 			</div>
 		</Container>
 	);

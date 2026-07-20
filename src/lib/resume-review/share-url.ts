@@ -2,14 +2,19 @@ import { encodeReview } from "@/data/resume-checklist/share";
 import { homepageUrl } from "@/lib/constants/url";
 import type { LanguageLocale } from "@/lib/languages/locale";
 
-/** Route of the scorecard page for a locale. Apex domain, so no basePath. */
+/** Route of the scorecard result page for a locale. Apex domain, so no basePath. */
 export function checklistPath(locale: LanguageLocale): string {
 	return locale === "fa-IR" ? "/fa/resume/checklist" : "/resume/checklist";
 }
 
+/** Route of the reviewer builder for a locale, where a review is put together. */
+export function reviewPath(locale: LanguageLocale): string {
+	return locale === "fa-IR" ? "/fa/resume/review" : "/resume/review";
+}
+
 /**
- * Absolute share link for a review. Only non-green items ride along (as
- * slug+severity), so a mostly-good CV yields a short link. The `issues` param is
+ * Absolute share link for a review. Only non-good items ride along (as
+ * slug+grade), so a mostly-good CV yields a short link. The `issues` param is
  * always present, even when empty, so the link opens the result view. An
  * optional name personalizes the recipient's first view.
  */

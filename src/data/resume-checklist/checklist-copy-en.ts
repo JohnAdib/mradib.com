@@ -42,11 +42,29 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		problem: "Fonts, bullet styles, and spacing change across the page.",
 		fix: "Use one font family and the same spacing and bullet style everywhere.",
 	},
+	filesize: {
+		question: "Is the file a reasonable size to email and open?",
+		title: "File size",
+		problem: "A heavy file is slow to send and slow to open.",
+		fix: "Keep the PDF under about a megabyte by compressing images.",
+	},
+	fontcolor: {
+		question: "Are the font and colours professional and restrained?",
+		title: "Font and colours",
+		problem: "Loud fonts or colours pull focus from the content.",
+		fix: "Use one clean font and at most one accent colour.",
+	},
 	cont: {
 		question: "Does the contact section include all the essential details?",
 		title: "Contact details",
 		problem: "Key contact details are missing or hard to find.",
-		fix: "Add full name, phone, professional email, city, and LinkedIn at the top.",
+		fix: "Add full name, phone, professional email, and city at the top.",
+	},
+	headline: {
+		question: "Is there a job title under your name at the top?",
+		title: "Headline title",
+		problem: "There is no target title under the name, so the aim is unclear.",
+		fix: "Add a short role title under your name that matches the job you want.",
 	},
 	email: {
 		question:
@@ -56,10 +74,16 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		fix: "Switch to a name based address such as name.family@gmail.com.",
 	},
 	links: {
-		question: "Did you add a LinkedIn or portfolio link?",
-		title: "Profile links",
-		problem: "There is no link to a profile or work sample.",
-		fix: "Add your LinkedIn URL, and a portfolio or GitHub link if relevant.",
+		question: "Did you add your LinkedIn link?",
+		title: "LinkedIn link",
+		problem: "There is no LinkedIn or portfolio link to follow.",
+		fix: "Add your LinkedIn URL, and a portfolio link if you have one.",
+	},
+	github: {
+		question: "Does your GitHub link show real work?",
+		title: "GitHub link",
+		problem: "A GitHub link with no real activity adds nothing.",
+		fix: "Link GitHub only when it shows real contributions, otherwise drop it.",
 	},
 	filename: {
 		question: "Is the file named professionally?",
@@ -92,6 +116,12 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		problem: "Bullets describe duties, not results, so impact is invisible.",
 		fix: "Rewrite each bullet as an achievement, with a number where you can.",
 	},
+	roleclarity: {
+		question: "Is every role clear about the company and your title?",
+		title: "Clear roles",
+		problem: "A role is vague about the company or the title you held.",
+		fix: "Name the company and your exact title for every role, with no vague entries.",
+	},
 	hist: {
 		question: "Did you include the right amount of work history?",
 		title: "Work history",
@@ -99,41 +129,40 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		fix: "Cover about the last ten years and focus on recent, relevant roles.",
 	},
 	firstperson: {
-		question: "Did you avoid first person pronouns in your bullets?",
-		title: "First person pronouns",
-		problem: "Bullets start with I or My, which reads informal.",
-		fix: "Drop the pronouns and lead each bullet with an action verb.",
+		question: "Did you keep pronouns out of your bullets?",
+		title: "Pronouns",
+		problem: "Bullets use I, my, or other pronouns, which reads informal.",
+		fix: "Drop all pronouns and lead each bullet with an action verb.",
 	},
 	dates: {
-		question: "Are the dates present and consistent?",
+		question: "Does every role show a start and end month and year?",
 		title: "Dates",
-		problem: "Roles are missing dates or the date format is inconsistent.",
-		fix: "Use a consistent Month Year to Month Year for every role.",
+		problem: "A role is missing a clear start or end month and year.",
+		fix: "Show Month Year to Month Year for every role, consistently.",
 	},
 	gaps: {
-		question: "Did you address any employment gaps?",
-		title: "Employment gaps",
-		problem: "There are unexplained gaps between roles.",
-		fix: "Briefly note breaks or reframe them as freelance, study, or caregiving.",
+		question: "Did you account for any gaps or overlaps between roles?",
+		title: "Gaps and overlaps",
+		problem: "There are unexplained gaps or overlapping dates between roles.",
+		fix: "Explain breaks briefly and make sure role dates do not overlap by mistake.",
 	},
 	skill: {
-		question:
-			"Did you list the skills that match the role you are applying for?",
+		question: "Are your skills relevant to the role and coherent together?",
 		title: "Relevant skills",
-		problem: "The skills listed do not match what the job asks for.",
-		fix: "Mirror the key skills from the posting that you genuinely have.",
+		problem: "The skills are off target or a scattered mix that lacks focus.",
+		fix: "List skills that match the role and belong together, and cut the outliers.",
 	},
 	edu: {
-		question: "Did you include your education in the resume?",
+		question: "Did you keep education to the degree and institution?",
 		title: "Education",
-		problem: "Education is missing or placed where it distracts.",
-		fix: "List your degree and institution, and keep it short once you have experience.",
+		problem: "Education is missing, or padded with rankings and coursework.",
+		fix: "List the degree and institution, and cut rankings and course lists.",
 	},
 	opt: {
-		question: "Did you add the other important sections to your resume?",
-		title: "Extra sections",
-		problem: "Helpful sections like projects, awards, or languages are absent.",
-		fix: "Add the optional sections that strengthen your case for this role.",
+		question: "Did you keep to the sections a recruiter expects?",
+		title: "Expected sections",
+		problem: "An unexpected or vanity section clutters the resume.",
+		fix: "Drop sections a recruiter does not expect and keep the standard ones.",
 	},
 	personal: {
 		question: "Did you remove personal details that do not belong?",
@@ -142,10 +171,10 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		fix: "Remove personal details and let your work speak.",
 	},
 	len: {
-		question: "Is your resume one to two pages long?",
+		question: "Is your resume the right number of pages for your experience?",
 		title: "Resume length",
-		problem: "The resume runs too long or too short for its content.",
-		fix: "Keep it to one page early on, and two pages at most later.",
+		problem: "The page count does not fit the years of experience.",
+		fix: "One page under ten years, two to three beyond, never more than three.",
 	},
 	dense: {
 		question: "Is there enough white space to skim it fast?",
@@ -166,12 +195,6 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		problem: "Bullets start weakly or repeat the same verb.",
 		fix: "Open each bullet with a strong, varied action verb.",
 	},
-	read: {
-		question: "Did you read through your whole resume yourself?",
-		title: "Self review",
-		problem: "The resume has not had a careful read through.",
-		fix: "Read it end to end out loud to catch flow and gaps.",
-	},
 	gram: {
 		question:
 			"Did you run the text through Grammarly to catch spelling and grammar mistakes?",
@@ -179,17 +202,11 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		problem: "Spelling or grammar mistakes slip through and cost credibility.",
 		fix: "Run the text through a grammar checker and fix every flag.",
 	},
-	peer: {
-		question:
-			"Did you share the resume with a few friends and ask for their feedback?",
-		title: "Peer feedback",
-		problem: "No one else has reviewed the resume yet.",
-		fix: "Ask a few trusted people to read it and act on their feedback.",
-	},
 	references: {
-		question: "Did you drop the references available on request line?",
-		title: "References line",
-		problem: "That line is outdated and wastes a row.",
-		fix: "Remove it; share references only when asked.",
+		question: "Did you leave references off the resume?",
+		title: "No references",
+		problem:
+			"A references section or an available on request line wastes space.",
+		fix: "Remove references entirely; share them only when asked.",
 	},
 };

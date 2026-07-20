@@ -10,13 +10,13 @@ import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
 const pageDesc =
-	"به رزومه هر کسی از ۱۰۰ نمره بده، مشکل هر بخش و راه‌حلش رو ببین، و نتیجه رو با یک لینک بفرست.";
+	"به رزومه هر کسی از ۱۰۰ نمره بده، مشکل هر بخش رو با راه‌حلش علامت بزن، و نتیجه رو با یک لینک بفرست.";
 
 export const metadata: Metadata = {
-	title: "کارنامه رزومه",
+	title: "بررسی رزومه",
 	description: pageDesc + separator + myNameFa,
-	alternates: pageAlternates("/fa/resume/checklist"),
-	...ogMetadata("/fa/resume/checklist"),
+	alternates: pageAlternates("/fa/resume/review"),
+	...ogMetadata("/fa/resume/review"),
 };
 
 const howToSteps = groupsFor("fa-IR").flatMap((group) =>
@@ -36,7 +36,7 @@ export default function Page() {
 				steps={howToSteps}
 			/>
 			<div className="mx-auto max-w-2xl">
-				<ResumeReviewApp locale="fa-IR" mode="result" />
+				<ResumeReviewApp locale="fa-IR" mode="builder" />
 			</div>
 		</Container>
 	);

@@ -28,7 +28,7 @@ export function SectionFinalChecklist(): JSX.Element {
 			/>
 
 			<div className="not-prose mt-8 flex flex-wrap items-center gap-x-4 gap-y-3">
-				<Button href="/fa/resume/checklist">اسکورکارت رزومه رو باز کن</Button>
+				<Button href="/fa/resume/review">به یک رزومه نمره بده</Button>
 				<span className="text-sm text-zinc-600 dark:text-zinc-400">
 					هر بخش رو امتیاز بده و نتیجه رو به‌شکل لینک به اشتراک بذار.
 				</span>
