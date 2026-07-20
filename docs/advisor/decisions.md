@@ -4,6 +4,17 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the scorecard grades in three states, and keeps links short
+
+The review flow moved from binary flag / no-flag to three states per item: green
+(good, the default), orange (some issue), red (a real problem). In the builder,
+tapping an item cycles green to orange to red. Orange costs half the item's
+points, red the full weight, so the score reflects severity, not just a count.
+The share link stays short: only non-green items travel, each as its slug plus a
+severity digit (orange 1, red 2), and green items are omitted entirely, so a
+mostly-good CV yields a tiny URL (e.g. issues=fmt2.ach1.job2). The guide's
+self-assessment checklist stays binary; severity is a reviewer concept.
+
 ## 2026-07-20, the scorecard speaks to the person, and grows
 
 Two follow-ups to the resume scorecard. First, the shared result now greets the

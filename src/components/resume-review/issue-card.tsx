@@ -1,21 +1,49 @@
 "use client";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { ArrowUpRightIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
+import {
+	ArrowUpRightIcon,
+	CheckCircleIcon,
+	ExclamationCircleIcon,
+	ExclamationTriangleIcon,
+} from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import Link from "next/link";
 import type { IResolvedItem } from "@/data/resume-checklist";
 import type { IScorecardCopy } from "./scorecard-copy";
 
+function LeadIcon({
+	severity,
+	resolved,
+}: {
+	severity: number;
+	resolved: boolean;
+}) {
+	const className = "mt-0.5 h-5 w-5 shrink-0";
+	if (resolved) {
+		return <CheckCircleIcon className={clsx(className, "text-accent-500")} />;
+	}
+	if (severity >= 2) {
+		return (
+			<ExclamationTriangleIcon className={clsx(className, "text-rose-500")} />
+		);
+	}
+	return (
+		<ExclamationCircleIcon className={clsx(className, "text-amber-500")} />
+	);
+}
+
 /** One flagged issue: tap to expand the fix, mark it done to lift the score. */
 export function IssueCard({
 	item,
+	severity,
 	guideHref,
 	resolved,
 	onToggle,
 	copy,
 }: {
 	item: IResolvedItem;
+	severity: number;
 	guideHref: string;
 	resolved: boolean;
 	onToggle: () => void;
@@ -31,12 +59,7 @@ export function IssueCard({
 			)}
 		>
 			<summary className="flex cursor-pointer list-none items-start gap-3 p-4 [&::-webkit-details-marker]:hidden">
-				<CheckCircleIcon
-					className={clsx(
-						"mt-0.5 h-5 w-5 shrink-0",
-						resolved ? "text-accent-500" : "text-zinc-300 dark:text-zinc-600",
-					)}
-				/>
+				<LeadIcon severity={severity} resolved={resolved} />
 				<span className="min-w-0 flex-1">
 					<span
 						className={clsx(

@@ -2,8 +2,8 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { groupsFor, scoreForAll } from "@/data/resume-checklist";
-import { encodeIssues } from "@/data/resume-checklist/share";
+import { groupsFor, scoreForReview } from "@/data/resume-checklist";
+import { encodeReview } from "@/data/resume-checklist/share";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { LanguageLocale } from "@/lib/languages/locale";
 import { checklistPath } from "@/lib/resume-review/share-url";
@@ -15,42 +15,49 @@ import { StickyScoreBar } from "./sticky-score-bar";
 
 /** The recipient view: score first, then section breakdown, then the fixes. */
 export function ResumeScorecard({
-	flagged,
+	review,
 	locale,
 	copy,
 	name = "",
 }: {
-	flagged: string[];
+	review: Record<string, number>;
 	locale: LanguageLocale;
 	copy: IScorecardCopy;
 	name?: string;
 }) {
 	const store = useChecklistStore(
-		`resume-review-resolved:${encodeIssues(flagged)}`,
+		`resume-review-resolved:${encodeReview(review)}`,
 	);
-	const flaggedSet = new Set(flagged);
+	const flaggedSlugs = Object.keys(review);
 
-	const open = new Set<string>();
-	for (const slug of flagged) {
-		if (!store.isChecked(slug)) {
-			open.add(slug);
+	// Resolved items drop to green so the score climbs as they get fixed.
+	const effective: Record<string, number> = {};
+	let openCount = 0;
+	for (const slug of flaggedSlugs) {
+		if (store.isChecked(slug)) {
+			effective[slug] = 0;
+		} else {
+			effective[slug] = review[slug];
+			openCount += 1;
 		}
 	}
-	const score = scoreForAll(open);
-	const fixedCount = flagged.length - open.size;
+	const score = scoreForReview(effective);
+	const fixedCount = flaggedSlugs.length - openCount;
 
 	const relevant = groupsFor(locale).filter((group) =>
-		group.items.some((item) => flaggedSet.has(item.slug)),
+		group.items.some((item) => (review[item.slug] ?? 0) > 0),
 	);
 	const issueGroups = relevant.map((group) => ({
 		...group,
-		items: group.items.filter((item) => flaggedSet.has(item.slug)),
+		items: group.items
+			.filter((item) => (review[item.slug] ?? 0) > 0)
+			.sort((a, b) => (review[b.slug] ?? 0) - (review[a.slug] ?? 0)),
 	}));
 
 	let caption = copy.scoreCaptionNone;
-	if (flagged.length > 0) {
+	if (flaggedSlugs.length > 0) {
 		caption =
-			open.size === 0 ? copy.allFixed : copy.scoreCaptionSome(open.size);
+			openCount === 0 ? copy.allFixed : copy.scoreCaptionSome(openCount);
 	}
 
 	return (
@@ -81,9 +88,9 @@ export function ResumeScorecard({
 				<p className="mt-4 max-w-sm text-zinc-600 dark:text-zinc-400">
 					{caption}
 				</p>
-				{flagged.length > 0 && (
+				{flaggedSlugs.length > 0 && (
 					<p className="mt-1 text-sm font-medium tabular-nums text-zinc-500 dark:text-zinc-400">
-						{copy.fixedProgress(fixedCount, flagged.length)}
+						{copy.fixedProgress(fixedCount, flaggedSlugs.length)}
 					</p>
 				)}
 			</div>
@@ -94,7 +101,11 @@ export function ResumeScorecard({
 						<h2 className="mb-3 text-sm font-bold text-zinc-800 dark:text-zinc-100">
 							{copy.sectionsTitle}
 						</h2>
-						<GroupScoreList groups={relevant} open={open} locale={locale} />
+						<GroupScoreList
+							groups={relevant}
+							review={effective}
+							locale={locale}
+						/>
 					</div>
 					<div className="mt-10">
 						<h2 className="mb-4 text-sm font-bold text-zinc-800 dark:text-zinc-100">
@@ -102,6 +113,7 @@ export function ResumeScorecard({
 						</h2>
 						<IssueGroups
 							groups={issueGroups}
+							review={review}
 							isResolved={(slug) => store.isChecked(slug)}
 							onToggle={store.toggle}
 							copy={copy}

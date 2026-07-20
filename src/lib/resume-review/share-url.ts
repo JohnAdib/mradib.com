@@ -1,4 +1,4 @@
-import { encodeIssues } from "@/data/resume-checklist/share";
+import { encodeReview } from "@/data/resume-checklist/share";
 import { homepageUrl } from "@/lib/constants/url";
 import type { LanguageLocale } from "@/lib/languages/locale";
 
@@ -8,17 +8,18 @@ export function checklistPath(locale: LanguageLocale): string {
 }
 
 /**
- * Absolute share link for a set of flagged issues. Always carries the `issues`
- * param, even when empty, so the link opens the result view (a clean CV reads
- * as a full score). An optional name personalizes the recipient's first view.
+ * Absolute share link for a review. Only non-green items ride along (as
+ * slug+severity), so a mostly-good CV yields a short link. The `issues` param is
+ * always present, even when empty, so the link opens the result view. An
+ * optional name personalizes the recipient's first view.
  */
 export function shareUrl(
 	locale: LanguageLocale,
-	flagged: Iterable<string>,
+	review: Record<string, number>,
 	name?: string,
 ): string {
 	const params = new URLSearchParams();
-	params.set("issues", encodeIssues(flagged));
+	params.set("issues", encodeReview(review));
 	const trimmed = name?.trim();
 	if (trimmed) {
 		params.set("name", trimmed);

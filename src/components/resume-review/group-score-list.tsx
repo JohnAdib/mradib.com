@@ -1,25 +1,25 @@
 import clsx from "clsx";
-import { type IResolvedGroup, scoreOf } from "@/data/resume-checklist";
+import { type IResolvedGroup, scoreOfItems } from "@/data/resume-checklist";
 import type { LanguageLocale } from "@/lib/languages/locale";
 import { toneClasses, toneForScore } from "./score-bands";
 
 /** Per section score tiles. Tapping one jumps to that section's issues. */
 export function GroupScoreList({
 	groups,
-	open,
+	review,
 	locale,
 }: {
 	groups: IResolvedGroup[];
-	open: Set<string>;
+	review: Record<string, number>;
 	locale: LanguageLocale;
 }) {
 	return (
 		<div className="grid gap-3 sm:grid-cols-2">
 			{groups.map((group) => {
-				const score = scoreOf(group.items, open);
+				const score = scoreOfItems(group.items, review);
 				const colors = toneClasses(toneForScore(score));
-				const openCount = group.items.filter((item) =>
-					open.has(item.slug),
+				const openCount = group.items.filter(
+					(item) => (review[item.slug] ?? 0) > 0,
 				).length;
 				return (
 					<a

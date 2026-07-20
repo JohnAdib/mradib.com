@@ -7,11 +7,13 @@ import type { IScorecardCopy } from "./scorecard-copy";
 /** The flagged issues, grouped by section, each with an anchor to jump to. */
 export function IssueGroups({
 	groups,
+	review,
 	isResolved,
 	onToggle,
 	copy,
 }: {
 	groups: IResolvedGroup[];
+	review: Record<string, number>;
 	isResolved: (slug: string) => boolean;
 	onToggle: (slug: string) => void;
 	copy: IScorecardCopy;
@@ -32,6 +34,7 @@ export function IssueGroups({
 							<IssueCard
 								key={item.slug}
 								item={item}
+								severity={review[item.slug] ?? 0}
 								guideHref={group.guideHref}
 								resolved={isResolved(item.slug)}
 								onToggle={() => onToggle(item.slug)}

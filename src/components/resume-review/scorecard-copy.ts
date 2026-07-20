@@ -7,6 +7,10 @@ export interface IScorecardCopy {
 	builderTitle: string;
 	builderIntro: string;
 	namePlaceholder: string;
+	legendHint: string;
+	legendGood: string;
+	legendSome: string;
+	legendProblem: string;
 	projectedLabel: string;
 	copyLink: string;
 	copied: string;
@@ -33,8 +37,12 @@ const en: IScorecardCopy = {
 	guideCta: "Read the full guide",
 	builderTitle: "Review a CV",
 	builderIntro:
-		"Flag the problems in someone's resume, then send them the link. They get a score and see how to fix each issue.",
+		"Tap each item to grade it, green for good, orange for a small issue, red for a real problem. Then send them the link.",
 	namePlaceholder: "Whose CV is this? (optional)",
+	legendHint: "Tap an item to cycle its state",
+	legendGood: "Good",
+	legendSome: "Some issue",
+	legendProblem: "Problem",
 	projectedLabel: "Their score",
 	copyLink: "Copy review link",
 	copied: "Link copied",
@@ -64,8 +72,12 @@ const fa: IScorecardCopy = {
 	guideCta: "راهنمای کامل رو بخون",
 	builderTitle: "بررسی رزومه",
 	builderIntro:
-		"مشکل‌های رزومه‌ی یک نفر رو علامت بزن و لینکش رو بفرست. اون یک امتیاز می‌بینه و یاد می‌گیره هر مشکل رو چطور درست کنه.",
+		"روی هر مورد بزن و نمره بده؛ سبز یعنی خوبه، نارنجی یعنی یه مشکل کوچیک، قرمز یعنی مشکل جدی. بعد لینک رو براشون بفرست.",
 	namePlaceholder: "رزومه‌ی کیه؟ (اختیاری)",
+	legendHint: "برای تغییر وضعیت، روی هر مورد بزن",
+	legendGood: "خوبه",
+	legendSome: "یه مشکل",
+	legendProblem: "مشکل جدی",
 	projectedLabel: "امتیاز طرف",
 	copyLink: "کپی لینک بررسی",
 	copied: "لینک کپی شد",

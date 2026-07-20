@@ -1,22 +1,19 @@
 "use client";
 
 import clsx from "clsx";
-import { useEffect, useState } from "react";
-import { groupsFor, scoreForAll } from "@/data/resume-checklist";
-import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
+import { useState } from "react";
+import { groupsFor } from "@/data/resume-checklist";
 import type { LanguageLocale } from "@/lib/languages/locale";
-import { checkedSlugs } from "@/lib/resume-review/checked-slugs";
 import { shareUrl } from "@/lib/resume-review/share-url";
 import { CopyLinkButton } from "./copy-link-button";
 import { FlagRow } from "./flag-row";
 import { ResumeScorecard } from "./resume-scorecard";
 import { ScoreGauge } from "./score-gauge";
 import type { IScorecardCopy } from "./scorecard-copy";
+import { SeverityLegend } from "./severity-legend";
+import { useReviewState } from "./use-review-state";
 
-const BUILDER_KEY = "resume-review-builder";
-const NAME_KEY = "resume-review-name";
-
-/** The reviewer view: flag problems, watch the score, copy the share link. */
+/** The reviewer view: grade each item, watch the score, copy the share link. */
 export function ReviewBuilder({
 	locale,
 	copy,
@@ -24,36 +21,9 @@ export function ReviewBuilder({
 	locale: LanguageLocale;
 	copy: IScorecardCopy;
 }) {
-	const store = useChecklistStore(BUILDER_KEY);
 	const [preview, setPreview] = useState(false);
-	const [name, setName] = useState("");
-
-	useEffect(() => {
-		try {
-			setName(localStorage.getItem(NAME_KEY) ?? "");
-		} catch {
-			// Private mode can throw on read; leave the name empty.
-		}
-	}, []);
-
-	function updateName(value: string) {
-		const next = value.slice(0, 40);
-		setName(next);
-		try {
-			localStorage.setItem(NAME_KEY, next);
-		} catch {
-			// Ignore quota / private-mode write failures.
-		}
-	}
-
-	const flagged = [...checkedSlugs(store.checked)];
-	const score = scoreForAll(new Set(flagged));
-
-	function clearAll() {
-		for (const slug of flagged) {
-			store.toggle(slug);
-		}
-	}
+	const { name, setName, review, cycle, clearAll, score, flaggedCount } =
+		useReviewState();
 
 	if (preview) {
 		return (
@@ -66,7 +36,7 @@ export function ReviewBuilder({
 					{copy.backToEditing}
 				</button>
 				<ResumeScorecard
-					flagged={flagged}
+					review={review}
 					name={name.trim()}
 					locale={locale}
 					copy={copy}
@@ -95,7 +65,7 @@ export function ReviewBuilder({
 				<input
 					type="text"
 					value={name}
-					onChange={(event) => updateName(event.target.value)}
+					onChange={(event) => setName(event.target.value)}
 					aria-label={copy.namePlaceholder}
 					placeholder={copy.namePlaceholder}
 					className="w-full rounded-2xl bg-surface px-4 py-3 text-center text-sm text-zinc-800 ring-1 ring-zinc-900/10 transition placeholder:text-zinc-400 focus:ring-2 focus:ring-accent-500 focus:outline-none dark:bg-zinc-800/40 dark:text-zinc-100 dark:ring-zinc-700/50"
@@ -116,13 +86,13 @@ export function ReviewBuilder({
 								{copy.projectedLabel}
 							</p>
 							<p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-								{copy.flaggedCount(flagged.length)}
+								{copy.flaggedCount(flaggedCount)}
 							</p>
 						</div>
 					</div>
 					<div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:items-end">
 						<CopyLinkButton
-							text={shareUrl(locale, flagged, name)}
+							text={shareUrl(locale, review, name)}
 							label={copy.copyLink}
 							copiedLabel={copy.copied}
 							className="w-full sm:w-auto"
@@ -138,19 +108,22 @@ export function ReviewBuilder({
 				</div>
 			</div>
 
-			{flagged.length > 0 && (
-				<div className="mt-4 text-center">
+			<SeverityLegend copy={copy} />
+			<p className="mt-1 text-center text-xs text-zinc-400 dark:text-zinc-500">
+				{flaggedCount > 0 ? (
 					<button
 						type="button"
 						onClick={clearAll}
-						className="text-sm text-zinc-500 transition hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+						className="transition hover:text-zinc-600 dark:hover:text-zinc-300"
 					>
 						{copy.clear}
 					</button>
-				</div>
-			)}
+				) : (
+					copy.legendHint
+				)}
+			</p>
 
-			<div className="mt-12 space-y-10">
+			<div className="mt-8 space-y-10">
 				{groupsFor(locale).map((group) => (
 					<section key={group.id}>
 						<h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
@@ -161,8 +134,8 @@ export function ReviewBuilder({
 								<FlagRow
 									key={item.slug}
 									item={item}
-									flagged={store.isChecked(item.slug)}
-									onToggle={() => store.toggle(item.slug)}
+									severity={review[item.slug] ?? 0}
+									onCycle={() => cycle(item.slug)}
 								/>
 							))}
 						</div>

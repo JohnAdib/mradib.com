@@ -29,6 +29,9 @@ export const totalPoints = checklistItems.reduce(
 	0,
 );
 
+/** How much of an item's points each severity costs. Green 0, orange half, red all. */
+export const SEVERITY_WEIGHT: Record<number, number> = { 0: 0, 1: 0.5, 2: 1 };
+
 function copyFor(locale: LanguageLocale): {
 	items: Record<string, IChecklistItemCopy>;
 	titles: Record<ChecklistGroupId, string>;
@@ -84,26 +87,25 @@ export function getItem(
 	};
 }
 
-/** Score as the share of live points not flagged. 100 means nothing flagged. */
-export function scoreForAll(flagged: Set<string>): number {
+/** Score as the share of live points not lost to severity. 100 = all green. */
+export function scoreForReview(review: Record<string, number>): number {
 	let lost = 0;
 	for (const item of checklistItems) {
-		if (flagged.has(item.slug)) {
-			lost += item.points;
-		}
+		lost += item.points * (SEVERITY_WEIGHT[review[item.slug] ?? 0] ?? 0);
 	}
 	return Math.round((100 * (totalPoints - lost)) / totalPoints);
 }
 
-/** Score for a single group's items given the flagged set. */
-export function scoreOf(items: IResolvedItem[], flagged: Set<string>): number {
+/** Score for a single group's items given the review map. */
+export function scoreOfItems(
+	items: IResolvedItem[],
+	review: Record<string, number>,
+): number {
 	let total = 0;
 	let lost = 0;
 	for (const item of items) {
 		total += item.points;
-		if (flagged.has(item.slug)) {
-			lost += item.points;
-		}
+		lost += item.points * (SEVERITY_WEIGHT[review[item.slug] ?? 0] ?? 0);
 	}
 	return total === 0 ? 100 : Math.round((100 * (total - lost)) / total);
 }

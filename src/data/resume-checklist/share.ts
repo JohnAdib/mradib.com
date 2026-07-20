@@ -1,34 +1,39 @@
 import { checklistItems } from "./checklist-items";
 
+export type IssueSeverity = 1 | 2;
+/** A review: each flagged item mapped to orange (1) or red (2). Green omitted. */
+export type ReviewMap = Record<string, IssueSeverity>;
+
 /**
- * Share codec for the flagged issues. The set of slugs travels in a single URL
- * param, dot joined, always in canonical item order so the same review yields
- * the same link. Unknown slugs (from a renamed or removed item) are dropped so
- * old links degrade to whatever still exists.
+ * Share codec for a review. Each non-green item travels as its slug followed by
+ * a severity digit (1 = some issue, 2 = a problem); green items are dropped so
+ * links stay short. Tokens are dot joined in canonical item order, so the same
+ * review always yields the same string. Slugs never end in a digit, so the last
+ * character is unambiguously the severity. Unknown slugs or bad digits are
+ * dropped, so old links degrade to whatever still exists.
  */
 const SEPARATOR = ".";
 const knownSlugs = new Set(checklistItems.map((item) => item.slug));
 
-export function encodeIssues(slugs: Iterable<string>): string {
-	const flagged = new Set(slugs);
+export function encodeReview(review: Record<string, number>): string {
 	return checklistItems
-		.filter((item) => flagged.has(item.slug))
-		.map((item) => item.slug)
+		.filter((item) => review[item.slug] === 1 || review[item.slug] === 2)
+		.map((item) => `${item.slug}${review[item.slug]}`)
 		.join(SEPARATOR);
 }
 
-export function decodeIssues(param: string | null | undefined): string[] {
+export function decodeReview(param: string | null | undefined): ReviewMap {
+	const out: ReviewMap = {};
 	if (!param) {
-		return [];
+		return out;
 	}
-	const seen = new Set<string>();
-	for (const raw of param.split(SEPARATOR)) {
-		const slug = raw.trim();
-		if (knownSlugs.has(slug)) {
-			seen.add(slug);
+	for (const token of param.split(SEPARATOR)) {
+		const trimmed = token.trim();
+		const digit = trimmed.slice(-1);
+		const slug = trimmed.slice(0, -1);
+		if (knownSlugs.has(slug) && (digit === "1" || digit === "2")) {
+			out[slug] = digit === "2" ? 2 : 1;
 		}
 	}
-	return checklistItems
-		.filter((item) => seen.has(item.slug))
-		.map((item) => item.slug);
+	return out;
 }
