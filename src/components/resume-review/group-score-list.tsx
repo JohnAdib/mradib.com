@@ -1,0 +1,64 @@
+import clsx from "clsx";
+import { type IResolvedGroup, scoreOf } from "@/data/resume-checklist";
+import type { LanguageLocale } from "@/lib/languages/locale";
+import { toneClasses, toneForScore } from "./score-bands";
+
+/** Per section score tiles. Tapping one jumps to that section's issues. */
+export function GroupScoreList({
+	groups,
+	open,
+	locale,
+}: {
+	groups: IResolvedGroup[];
+	open: Set<string>;
+	locale: LanguageLocale;
+}) {
+	return (
+		<div className="grid gap-3 sm:grid-cols-2">
+			{groups.map((group) => {
+				const score = scoreOf(group.items, open);
+				const colors = toneClasses(toneForScore(score));
+				const openCount = group.items.filter((item) =>
+					open.has(item.slug),
+				).length;
+				return (
+					<a
+						key={group.id}
+						href={`#group-${group.id}`}
+						className="flex items-center gap-3 rounded-2xl bg-surface p-4 ring-1 ring-zinc-900/10 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
+					>
+						<span
+							className={clsx(
+								"w-8 shrink-0 text-lg font-bold tabular-nums",
+								colors.text,
+							)}
+						>
+							{score.toLocaleString(locale)}
+						</span>
+						<span className="min-w-0 flex-1">
+							<span className="block truncate text-sm font-semibold text-zinc-800 dark:text-zinc-100">
+								{group.title}
+							</span>
+							<span className="mt-1.5 block h-1.5 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-700">
+								<span
+									className={clsx("block h-full rounded-full", colors.bar)}
+									style={{ width: `${score}%` }}
+								/>
+							</span>
+						</span>
+						{openCount > 0 ? (
+							<span
+								className={clsx(
+									"shrink-0 rounded-full px-2 py-0.5 text-xs font-bold tabular-nums",
+									colors.soft,
+								)}
+							>
+								{openCount.toLocaleString(locale)}
+							</span>
+						) : null}
+					</a>
+				);
+			})}
+		</div>
+	);
+}
