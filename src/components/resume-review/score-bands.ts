@@ -13,7 +13,7 @@ interface IScoreBand {
 // the two lower bands. Final palette is settled in the screenshot critique.
 const BANDS: IScoreBand[] = [
 	{ min: 95, tone: "great", en: "Excellent", fa: "عالیه" },
-	{ min: 85, tone: "good", en: "Strong", fa: "قویه" },
+	{ min: 85, tone: "good", en: "Strong", fa: "خیلی خوبه" },
 	{ min: 70, tone: "pass", en: "Solid", fa: "خوبه" },
 	{ min: 50, tone: "warn", en: "Getting there", fa: "در حال پیشرفت" },
 	{ min: 0, tone: "danger", en: "Needs work", fa: "نیاز به کار داره" },

@@ -1,12 +1,13 @@
 "use client";
 
+import clsx from "clsx";
 import { useState } from "react";
-import { CopyButton } from "@/components/copy-button";
 import { groupsFor, scoreForAll } from "@/data/resume-checklist";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { LanguageLocale } from "@/lib/languages/locale";
 import { checkedSlugs } from "@/lib/resume-review/checked-slugs";
 import { shareUrl } from "@/lib/resume-review/share-url";
+import { CopyLinkButton } from "./copy-link-button";
 import { FlagRow } from "./flag-row";
 import { ResumeScorecard } from "./resume-scorecard";
 import { ScoreGauge } from "./score-gauge";
@@ -52,40 +53,52 @@ export function ReviewBuilder({
 	return (
 		<div>
 			<div className="flex flex-col items-center text-center">
-				<h1 className="font-display text-3xl font-bold text-zinc-800 sm:text-4xl dark:text-zinc-100">
+				<h1
+					className={clsx(
+						locale === "fa-IR" ? "font-fa" : "font-display",
+						"text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100",
+					)}
+				>
 					{copy.builderTitle}
 				</h1>
-				<p className="mt-2 max-w-md text-zinc-600 dark:text-zinc-400">
+				<p className="mt-4 max-w-md text-zinc-600 dark:text-zinc-400">
 					{copy.builderIntro}
 				</p>
 			</div>
 
-			<div className="mt-8 flex flex-col items-center gap-4 rounded-3xl bg-surface p-6 ring-1 ring-zinc-900/10 sm:flex-row sm:justify-between dark:bg-zinc-800/40 dark:ring-zinc-700/50">
-				<div className="flex items-center gap-4">
-					<ScoreGauge score={score} locale={locale} className="h-20 w-20" />
-					<div className="text-start">
-						<p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-							{copy.projectedLabel}
-						</p>
-						<p className="text-sm text-zinc-600 dark:text-zinc-400">
-							{copy.flaggedCount(flagged.length)}
-						</p>
+			<div className="mt-10 rounded-3xl bg-surface p-6 ring-1 ring-zinc-900/10 sm:p-7 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
+				<div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+					<div className="flex items-center gap-4">
+						<ScoreGauge
+							score={score}
+							locale={locale}
+							showLabel={false}
+							className="h-24 w-24 shrink-0"
+						/>
+						<div className="text-start">
+							<p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
+								{copy.projectedLabel}
+							</p>
+							<p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+								{copy.flaggedCount(flagged.length)}
+							</p>
+						</div>
 					</div>
-				</div>
-				<div className="flex flex-wrap items-center justify-center gap-2">
-					<CopyButton
-						text={shareUrl(locale, flagged)}
-						label={copy.copyLink}
-						copiedLabel={copy.copied}
-						className="bg-accent-500/10 text-accent-700 hover:bg-accent-500/20 dark:bg-accent-400/10 dark:text-accent-300"
-					/>
-					<button
-						type="button"
-						onClick={() => setPreview(true)}
-						className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 transition hover:bg-zinc-900/5 dark:text-zinc-300 dark:hover:bg-zinc-800/60"
-					>
-						{copy.previewCta}
-					</button>
+					<div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:items-end">
+						<CopyLinkButton
+							text={shareUrl(locale, flagged)}
+							label={copy.copyLink}
+							copiedLabel={copy.copied}
+							className="w-full sm:w-auto"
+						/>
+						<button
+							type="button"
+							onClick={() => setPreview(true)}
+							className="text-sm font-medium text-zinc-500 transition hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
+						>
+							{copy.previewCta}
+						</button>
+					</div>
 				</div>
 			</div>
 
@@ -101,13 +114,13 @@ export function ReviewBuilder({
 				</div>
 			)}
 
-			<div className="mt-10 space-y-8">
+			<div className="mt-12 space-y-10">
 				{groupsFor(locale).map((group) => (
 					<section key={group.id}>
-						<h2 className="mb-2 text-sm font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+						<h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
 							{group.title}
 						</h2>
-						<div className="space-y-1">
+						<div className="space-y-3">
 							{group.items.map((item) => (
 								<FlagRow
 									key={item.slug}

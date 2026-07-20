@@ -9,18 +9,21 @@ const RADIUS = 52;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 /**
- * Circular score gauge. The arc draws in from empty on mount and animates
- * whenever the score changes; reduced motion snaps it. The number is always
- * the true score so no-JS and first paint read correctly.
+ * Circular score gauge. The number and band label live inside the SVG so they
+ * scale with the gauge at any size. The arc draws in from empty on mount and
+ * animates on score changes; reduced motion snaps it. The number is always the
+ * true score, so no-JS and first paint read correctly.
  */
 export function ScoreGauge({
 	score,
 	locale,
 	className,
+	showLabel = true,
 }: {
 	score: number;
 	locale: LanguageLocale;
 	className?: string;
+	showLabel?: boolean;
 }) {
 	const [shown, setShown] = useState(false);
 	useEffect(() => {
@@ -35,41 +38,57 @@ export function ScoreGauge({
 		<div className={clsx("relative", className)}>
 			<svg
 				viewBox="0 0 120 120"
-				className="h-full w-full -rotate-90"
+				className="h-full w-full"
 				role="img"
-				aria-label={`${score} out of 100`}
+				aria-label={`${score} / 100`}
 			>
 				<circle
 					cx="60"
 					cy="60"
 					r={RADIUS}
 					fill="none"
-					strokeWidth="9"
-					className="stroke-zinc-200 dark:stroke-zinc-700"
+					strokeWidth="8"
+					className="stroke-zinc-200 dark:stroke-zinc-700/60"
 				/>
 				<circle
 					cx="60"
 					cy="60"
 					r={RADIUS}
 					fill="none"
-					strokeWidth="9"
+					strokeWidth="8"
 					strokeLinecap="round"
 					strokeDasharray={CIRCUMFERENCE}
 					strokeDashoffset={offset}
+					transform="rotate(-90 60 60)"
 					className={clsx(
 						colors.stroke,
 						"transition-[stroke-dashoffset] duration-1000 ease-out motion-reduce:transition-none",
 					)}
 				/>
-			</svg>
-			<div className="absolute inset-0 flex flex-col items-center justify-center">
-				<span className={clsx("text-4xl font-bold tabular-nums", colors.text)}>
+				<text
+					x="60"
+					y={showLabel ? 54 : 60}
+					textAnchor="middle"
+					dominantBaseline="central"
+					fill="currentColor"
+					fontSize="30"
+					className={clsx("font-bold tabular-nums", colors.text)}
+				>
 					{score.toLocaleString(locale)}
-				</span>
-				<span className="text-[0.7rem] font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-					{bandLabel(score, locale)}
-				</span>
-			</div>
+				</text>
+				{showLabel && (
+					<text
+						x="60"
+						y="78"
+						textAnchor="middle"
+						dominantBaseline="central"
+						fontSize="10"
+						className="fill-zinc-500 font-semibold tracking-wide dark:fill-zinc-400"
+					>
+						{bandLabel(score, locale)}
+					</text>
+				)}
+			</svg>
 		</div>
 	);
 }
