@@ -12,6 +12,16 @@ export function sectionEvidence(): string {
 	].join("\n");
 }
 
+export function sectionResumeAiTools(): string {
+	return [
+		"## Resume tools for AI",
+		"",
+		`- Machine-readable resume-writing method (the MrAdib method): ${homepageUrl}/resume/llms.txt (Persian: ${homepageUrl}/fa/resume/llms.txt)`,
+		`- Portable resume-writing skill for AI tools: ${homepageUrl}/resume/skill.md (Persian: ${homepageUrl}/fa/resume/skill.md)`,
+		`- Score any resume out of 100: ${homepageUrl}/resume/checklist`,
+	].join("\n");
+}
+
 export function sectionPersian(): string {
 	return [
 		"## Persian content",
