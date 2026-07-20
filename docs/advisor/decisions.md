@@ -4,6 +4,20 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the scorecard speaks to the person, and grows
+
+Two follow-ups to the resume scorecard. First, the shared result now greets the
+candidate by name: the reviewer types a name in the builder, it rides the share
+link as a `name` param, and the recipient's first view opens with "Hi {name},"
+(Vazirmatn on the Persian page). The first view should feel like it is talking
+to that specific person, not a generic tool. Second, the checklist grew from 17
+to 28 items with real problems a reviewer actually flags: PDF export,
+inconsistent formatting, missing profile links, a careless file name, clichés
+and buzzwords, first-person bullets, missing or inconsistent dates, unexplained
+gaps, personal details that invite bias, dense walls of text, and the outdated
+references line. Points were rebalanced so the score stays out of 100, and the
+builder copy was rewritten to say plainly what the page does.
+
 ## 2026-07-20, the resume scorecard, a shareable scored review
 
 New page at /resume/checklist and /fa/resume/checklist: an app-like tool that

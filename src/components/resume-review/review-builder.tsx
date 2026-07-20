@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { groupsFor, scoreForAll } from "@/data/resume-checklist";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { LanguageLocale } from "@/lib/languages/locale";
@@ -14,6 +14,7 @@ import { ScoreGauge } from "./score-gauge";
 import type { IScorecardCopy } from "./scorecard-copy";
 
 const BUILDER_KEY = "resume-review-builder";
+const NAME_KEY = "resume-review-name";
 
 /** The reviewer view: flag problems, watch the score, copy the share link. */
 export function ReviewBuilder({
@@ -25,6 +26,25 @@ export function ReviewBuilder({
 }) {
 	const store = useChecklistStore(BUILDER_KEY);
 	const [preview, setPreview] = useState(false);
+	const [name, setName] = useState("");
+
+	useEffect(() => {
+		try {
+			setName(localStorage.getItem(NAME_KEY) ?? "");
+		} catch {
+			// Private mode can throw on read; leave the name empty.
+		}
+	}, []);
+
+	function updateName(value: string) {
+		const next = value.slice(0, 40);
+		setName(next);
+		try {
+			localStorage.setItem(NAME_KEY, next);
+		} catch {
+			// Ignore quota / private-mode write failures.
+		}
+	}
 
 	const flagged = [...checkedSlugs(store.checked)];
 	const score = scoreForAll(new Set(flagged));
@@ -45,7 +65,12 @@ export function ReviewBuilder({
 				>
 					{copy.backToEditing}
 				</button>
-				<ResumeScorecard flagged={flagged} locale={locale} copy={copy} />
+				<ResumeScorecard
+					flagged={flagged}
+					name={name.trim()}
+					locale={locale}
+					copy={copy}
+				/>
 			</div>
 		);
 	}
@@ -66,7 +91,18 @@ export function ReviewBuilder({
 				</p>
 			</div>
 
-			<div className="mt-10 rounded-3xl bg-surface p-6 ring-1 ring-zinc-900/10 sm:p-7 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
+			<div className="mt-8">
+				<input
+					type="text"
+					value={name}
+					onChange={(event) => updateName(event.target.value)}
+					aria-label={copy.namePlaceholder}
+					placeholder={copy.namePlaceholder}
+					className="w-full rounded-2xl bg-surface px-4 py-3 text-center text-sm text-zinc-800 ring-1 ring-zinc-900/10 transition placeholder:text-zinc-400 focus:ring-2 focus:ring-accent-500 focus:outline-none dark:bg-zinc-800/40 dark:text-zinc-100 dark:ring-zinc-700/50"
+				/>
+			</div>
+
+			<div className="mt-4 rounded-3xl bg-surface p-6 ring-1 ring-zinc-900/10 sm:p-7 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
 				<div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
 					<div className="flex items-center gap-4">
 						<ScoreGauge
@@ -86,7 +122,7 @@ export function ReviewBuilder({
 					</div>
 					<div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:items-end">
 						<CopyLinkButton
-							text={shareUrl(locale, flagged)}
+							text={shareUrl(locale, flagged, name)}
 							label={copy.copyLink}
 							copiedLabel={copy.copied}
 							className="w-full sm:w-auto"
