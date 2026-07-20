@@ -4,6 +4,19 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the scorecard wears the site's premium idioms
+
+John's read: the compact scorecard had gone flat and old-school. Modernized it
+with the treatments the rest of the site already uses, so it reads as one product
+rather than a plain form. The result's first view (and the builder's score box)
+are now glow panels: a soft zinc surface with two blurred accent orbs, matching
+home-now and home-invitation. The score gauge blooms, an SVG feGaussianBlur halo
+in the arc's own colour, so it feels luminous instead of a flat ring, brightest in
+dark mode. Section tiles lift on hover with a soft shadow, issue cards carry a
+resting shadow that deepens on hover, and the result's sections fade up on scroll
+via the shared Reveal. Still compact, no extra height to speak of, and unchanged
+across both locales and themes.
+
 ## 2026-07-20, five grades per item, crafted icons, N/A excluded
 
 John wanted more nuance than three states, and crafted icons over emoji (emoji

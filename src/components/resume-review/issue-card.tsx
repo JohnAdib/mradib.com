@@ -52,10 +52,10 @@ export function IssueCard({
 	return (
 		<details
 			className={clsx(
-				"group rounded-xl ring-1 transition",
+				"group rounded-xl ring-1 transition duration-200",
 				resolved
 					? "bg-zinc-100/60 ring-zinc-900/5 dark:bg-zinc-800/20 dark:ring-zinc-800"
-					: "bg-surface ring-zinc-900/10 dark:bg-zinc-800/40 dark:ring-zinc-700/50",
+					: "bg-surface shadow-sm shadow-zinc-900/5 ring-zinc-900/10 hover:shadow-md hover:shadow-zinc-900/[0.07] dark:bg-zinc-800/40 dark:shadow-none dark:ring-zinc-700/50",
 			)}
 		>
 			<summary className="flex cursor-pointer list-none items-start gap-2.5 px-3 py-2.5 [&::-webkit-details-marker]:hidden">

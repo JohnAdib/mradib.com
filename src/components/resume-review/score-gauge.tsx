@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import type { LanguageLocale } from "@/lib/languages/locale";
 import { bandLabel, toneClasses, toneForScore } from "./score-bands";
 
@@ -12,18 +12,21 @@ const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
  * Circular score gauge. The number and band label live inside the SVG so they
  * scale with the gauge at any size. The arc draws in from empty on mount and
  * animates on score changes; reduced motion snaps it. The number is always the
- * true score, so no-JS and first paint read correctly.
+ * true score, so no-JS and first paint read correctly. `glow` blooms the arc
+ * with a soft halo in its own colour for the hero gauge.
  */
 export function ScoreGauge({
 	score,
 	locale,
 	className,
 	showLabel = true,
+	glow = false,
 }: {
 	score: number;
 	locale: LanguageLocale;
 	className?: string;
 	showLabel?: boolean;
+	glow?: boolean;
 }) {
 	const [shown, setShown] = useState(false);
 	useEffect(() => {
@@ -31,6 +34,7 @@ export function ScoreGauge({
 		return () => cancelAnimationFrame(frame);
 	}, []);
 
+	const filterId = useId();
 	const colors = toneClasses(toneForScore(score));
 	const offset = CIRCUMFERENCE * (1 - (shown ? score : 0) / 100);
 
@@ -42,6 +46,17 @@ export function ScoreGauge({
 				role="img"
 				aria-label={`${score} / 100`}
 			>
+				{glow && (
+					<defs>
+						<filter id={filterId} x="-25%" y="-25%" width="150%" height="150%">
+							<feGaussianBlur stdDeviation="3.5" result="blur" />
+							<feMerge>
+								<feMergeNode in="blur" />
+								<feMergeNode in="SourceGraphic" />
+							</feMerge>
+						</filter>
+					</defs>
+				)}
 				<circle
 					cx="60"
 					cy="60"
@@ -60,6 +75,7 @@ export function ScoreGauge({
 					strokeDasharray={CIRCUMFERENCE}
 					strokeDashoffset={offset}
 					transform="rotate(-90 60 60)"
+					filter={glow ? `url(#${filterId})` : undefined}
 					className={clsx(
 						colors.stroke,
 						"transition-[stroke-dashoffset] duration-1000 ease-out motion-reduce:transition-none",

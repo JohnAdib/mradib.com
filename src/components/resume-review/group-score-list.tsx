@@ -26,7 +26,7 @@ export function GroupScoreList({
 					<a
 						key={group.id}
 						href={`#group-${group.id}`}
-						className="flex items-center gap-2.5 rounded-xl bg-surface p-3 ring-1 ring-zinc-900/10 transition hover:bg-zinc-50 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
+						className="flex items-center gap-2.5 rounded-xl bg-surface p-3 ring-1 ring-zinc-900/10 transition duration-200 hover:-translate-y-0.5 hover:bg-zinc-50 hover:shadow-md hover:shadow-zinc-900/5 dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70"
 					>
 						<span
 							className={clsx(
