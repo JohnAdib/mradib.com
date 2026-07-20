@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { type IResolvedGroup, scoreOfItems } from "@/data/resume-checklist";
 import type { LanguageLocale } from "@/lib/languages/locale";
+import { isIssue } from "./grades";
 import { toneClasses, toneForScore } from "./score-bands";
 
 /** Per section score tiles. Tapping one jumps to that section's issues. */
@@ -18,8 +19,8 @@ export function GroupScoreList({
 			{groups.map((group) => {
 				const score = scoreOfItems(group.items, review);
 				const colors = toneClasses(toneForScore(score));
-				const openCount = group.items.filter(
-					(item) => (review[item.slug] ?? 0) > 0,
+				const openCount = group.items.filter((item) =>
+					isIssue(review[item.slug] ?? 0),
 				).length;
 				return (
 					<a

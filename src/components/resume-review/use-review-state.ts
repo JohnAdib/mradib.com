@@ -5,13 +5,14 @@ import { scoreForReview } from "@/data/resume-checklist";
 
 const NAME_KEY = "resume-review-name";
 const REVIEW_KEY = "resume-review-severity";
+const CODES = new Set([1, 2, 3, 4]);
 
 function loadReview(): Record<string, number> {
 	try {
 		const parsed = JSON.parse(localStorage.getItem(REVIEW_KEY) ?? "{}");
 		const next: Record<string, number> = {};
 		for (const [slug, value] of Object.entries(parsed)) {
-			if (value === 1 || value === 2) {
+			if (typeof value === "number" && CODES.has(value)) {
 				next[slug] = value;
 			}
 		}
@@ -25,14 +26,15 @@ export interface IReviewState {
 	name: string;
 	setName: (value: string) => void;
 	review: Record<string, number>;
-	cycle: (slug: string) => void;
+	setGrade: (slug: string, code: number) => void;
 	clearAll: () => void;
 	score: number;
 	flaggedCount: number;
+	strengthCount: number;
 }
 
-/** The reviewer's working state: the candidate name and a per-item severity map,
- * both persisted to localStorage. Tapping an item cycles good, some issue, problem. */
+/** The reviewer's working state: candidate name and a per-item grade map, both
+ * persisted to localStorage. Grade 0 (good) is the default and never stored. */
 export function useReviewState(): IReviewState {
 	const [name, setNameState] = useState("");
 	const [review, setReview] = useState<Record<string, number>>({});
@@ -60,14 +62,13 @@ export function useReviewState(): IReviewState {
 		write(NAME_KEY, next);
 	}
 
-	function cycle(slug: string) {
+	function setGrade(slug: string, code: number) {
 		setReview((prev) => {
 			const next = { ...prev };
-			const stepped = ((next[slug] ?? 0) + 1) % 3;
-			if (stepped === 0) {
+			if (code === 0) {
 				delete next[slug];
 			} else {
-				next[slug] = stepped;
+				next[slug] = code;
 			}
 			write(REVIEW_KEY, JSON.stringify(next));
 			return next;
@@ -79,13 +80,15 @@ export function useReviewState(): IReviewState {
 		write(REVIEW_KEY, "{}");
 	}
 
+	const values = Object.values(review);
 	return {
 		name,
 		setName,
 		review,
-		cycle,
+		setGrade,
 		clearAll,
 		score: scoreForReview(review),
-		flaggedCount: Object.keys(review).length,
+		flaggedCount: values.filter((value) => value === 1 || value === 2).length,
+		strengthCount: values.filter((value) => value === 3).length,
 	};
 }

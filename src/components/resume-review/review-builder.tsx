@@ -6,11 +6,11 @@ import { groupsFor } from "@/data/resume-checklist";
 import type { LanguageLocale } from "@/lib/languages/locale";
 import { shareUrl } from "@/lib/resume-review/share-url";
 import { CopyLinkButton } from "./copy-link-button";
-import { FlagRow } from "./flag-row";
+import { GradeLegend } from "./grade-legend";
+import { GradeRow } from "./grade-row";
 import { ResumeScorecard } from "./resume-scorecard";
 import { ScoreGauge } from "./score-gauge";
 import type { IScorecardCopy } from "./scorecard-copy";
-import { SeverityLegend } from "./severity-legend";
 import { useReviewState } from "./use-review-state";
 
 /** The reviewer view: grade each item, watch the score, copy the share link. */
@@ -22,7 +22,8 @@ export function ReviewBuilder({
 	copy: IScorecardCopy;
 }) {
 	const [preview, setPreview] = useState(false);
-	const { name, setName, review, cycle, clearAll, score, flaggedCount } =
+	const [openSlug, setOpenSlug] = useState<string | null>(null);
+	const { name, setName, review, setGrade, clearAll, score, flaggedCount } =
 		useReviewState();
 
 	if (preview) {
@@ -108,7 +109,7 @@ export function ReviewBuilder({
 				</div>
 			</div>
 
-			<SeverityLegend copy={copy} />
+			<GradeLegend copy={copy} />
 			<p className="mt-1 text-center text-xs text-zinc-400 dark:text-zinc-500">
 				{flaggedCount > 0 ? (
 					<button
@@ -131,11 +132,19 @@ export function ReviewBuilder({
 						</h2>
 						<div className="space-y-1.5">
 							{group.items.map((item) => (
-								<FlagRow
+								<GradeRow
 									key={item.slug}
 									item={item}
-									severity={review[item.slug] ?? 0}
-									onCycle={() => cycle(item.slug)}
+									grade={review[item.slug] ?? 0}
+									isOpen={openSlug === item.slug}
+									onToggle={() =>
+										setOpenSlug(openSlug === item.slug ? null : item.slug)
+									}
+									onPick={(code) => {
+										setGrade(item.slug, code);
+										setOpenSlug(null);
+									}}
+									copy={copy}
 								/>
 							))}
 						</div>

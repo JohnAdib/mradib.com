@@ -4,6 +4,20 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, five grades per item, crafted icons, N/A excluded
+
+John wanted more nuance than three states, and crafted icons over emoji (emoji
+render differently per device and read less premium). Each item now grades on a
+five-point scale with distinct vector icons: great (star), good (check, the calm
+default), needs work (amber circle, half points), problem (rose triangle, full
+points), and N/A (grey minus, excluded from the score entirely so it never counts
+against the person). Grading is a small inline tap-picker on each row, not a
+cycle, since most items stay good and the reviewer only touches a few. The score
+stays out of 100 (great adds nothing, since you cannot exceed 100); the result
+surfaces a "What's great" strengths row above "What to fix". Share links stay
+short: only non-good grades ride the URL as slug+digit (1-4), and codes 1/2 keep
+their meaning so earlier links still decode.
+
 ## 2026-07-20, the scorecard is compact, like an installed app
 
 John's read: the scorecard felt like a nice web page but too tall, scrolling

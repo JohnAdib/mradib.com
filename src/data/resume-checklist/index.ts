@@ -29,8 +29,14 @@ export const totalPoints = checklistItems.reduce(
 	0,
 );
 
-/** How much of an item's points each severity costs. Green 0, orange half, red all. */
-export const SEVERITY_WEIGHT: Record<number, number> = { 0: 0, 1: 0.5, 2: 1 };
+/** How much of an item's points each grade costs. Good/great 0, needs-work half,
+ * problem all. N/A (code 4) is not here; it is excluded from the score entirely. */
+export const GRADE_WEIGHT: Record<number, number> = {
+	0: 0,
+	1: 0.5,
+	2: 1,
+	3: 0,
+};
 
 function copyFor(locale: LanguageLocale): {
 	items: Record<string, IChecklistItemCopy>;
@@ -87,25 +93,32 @@ export function getItem(
 	};
 }
 
-/** Score as the share of live points not lost to severity. 100 = all green. */
-export function scoreForReview(review: Record<string, number>): number {
-	let lost = 0;
-	for (const item of checklistItems) {
-		lost += item.points * (SEVERITY_WEIGHT[review[item.slug] ?? 0] ?? 0);
-	}
-	return Math.round((100 * (totalPoints - lost)) / totalPoints);
-}
-
-/** Score for a single group's items given the review map. */
-export function scoreOfItems(
-	items: IResolvedItem[],
+function scoreOver(
+	items: { slug: string; points: number }[],
 	review: Record<string, number>,
 ): number {
 	let total = 0;
 	let lost = 0;
 	for (const item of items) {
+		const code = review[item.slug] ?? 0;
+		if (code === 4) {
+			continue; // N/A: excluded from the score entirely.
+		}
 		total += item.points;
-		lost += item.points * (SEVERITY_WEIGHT[review[item.slug] ?? 0] ?? 0);
+		lost += item.points * (GRADE_WEIGHT[code] ?? 0);
 	}
 	return total === 0 ? 100 : Math.round((100 * (total - lost)) / total);
+}
+
+/** Overall score over the applicable items (N/A excluded), less each deduction. */
+export function scoreForReview(review: Record<string, number>): number {
+	return scoreOver(checklistItems, review);
+}
+
+/** Score for one group's items given the review map. */
+export function scoreOfItems(
+	items: IResolvedItem[],
+	review: Record<string, number>,
+): number {
+	return scoreOver(items, review);
 }
