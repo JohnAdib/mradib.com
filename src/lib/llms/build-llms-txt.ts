@@ -7,6 +7,7 @@ import {
 import {
 	sectionEvidence,
 	sectionPersian,
+	sectionResumeAiTools,
 } from "@/lib/llms/llms-sections-extra";
 
 export function buildLlmsTxt(): string {
@@ -16,6 +17,7 @@ export function buildLlmsTxt(): string {
 		sectionPages(),
 		sectionProfiles(),
 		sectionEvidence(),
+		sectionResumeAiTools(),
 		sectionPersian(),
 	].join("\n\n")}\n`;
 }
