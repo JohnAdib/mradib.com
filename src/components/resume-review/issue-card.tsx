@@ -1,15 +1,11 @@
 "use client";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import {
-	ArrowUpRightIcon,
-	CheckCircleIcon,
-	ExclamationCircleIcon,
-	ExclamationTriangleIcon,
-} from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import Link from "next/link";
 import type { IResolvedItem } from "@/data/resume-checklist";
+import { gradeEmoji } from "./grade-emoji";
 import { ItemHeader } from "./item-header";
 import type { IScorecardCopy } from "./scorecard-copy";
 
@@ -20,17 +16,10 @@ function LeadIcon({
 	severity: number;
 	resolved: boolean;
 }) {
-	const className = "mt-0.5 h-5 w-5 shrink-0";
-	if (resolved) {
-		return <CheckCircleIcon className={clsx(className, "text-accent-500")} />;
-	}
-	if (severity >= 2) {
-		return (
-			<ExclamationTriangleIcon className={clsx(className, "text-rose-500")} />
-		);
-	}
 	return (
-		<ExclamationCircleIcon className={clsx(className, "text-amber-500")} />
+		<span className="mt-0.5 shrink-0 text-lg leading-none" aria-hidden="true">
+			{resolved ? "✅" : gradeEmoji(severity)}
+		</span>
 	);
 }
 

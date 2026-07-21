@@ -5,9 +5,7 @@ export interface IScorecardCopy {
 	locale: LanguageLocale;
 	guideCta: string;
 	builderTitle: string;
-	builderIntro: string;
 	namePlaceholder: string;
-	legendHint: string;
 	gradeGood: string;
 	gradeNeedsWork: string;
 	gradeProblem: string;
@@ -44,10 +42,7 @@ const en: IScorecardCopy = {
 	locale: "en-US",
 	guideCta: "Read the full guide",
 	builderTitle: "Review a CV",
-	builderIntro:
-		"Grade each item good, needs work, or a problem. Most can stay good. Then send them the link.",
 	namePlaceholder: "Whose CV is this? (optional)",
-	legendHint: "Grade each item as you review it",
 	gradeGood: "Good",
 	gradeNeedsWork: "Needs work",
 	gradeProblem: "Problem",
@@ -55,7 +50,7 @@ const en: IScorecardCopy = {
 	projectedLabel: "Their score",
 	copyLink: "Copy review link",
 	copied: "Link copied",
-	previewCta: "Preview what they see",
+	previewCta: "Preview",
 	backToEditing: "Back to editing",
 	clear: "Clear all",
 	flaggedCount: (n) => (n === 1 ? "1 issue flagged" : `${n} issues flagged`),
@@ -88,10 +83,7 @@ const fa: IScorecardCopy = {
 	locale: "fa-IR",
 	guideCta: "راهنمای کامل رو بخون",
 	builderTitle: "بررسی رزومه",
-	builderIntro:
-		"هر مورد رو خوب، نیاز به کار یا مشکل بذار. بیشترشون می‌تونن خوب بمونن. بعد لینک رو بفرست.",
 	namePlaceholder: "رزومه‌ی کیه؟ (اختیاری)",
-	legendHint: "همین‌طور که بررسی می‌کنی، هر مورد رو نمره بده",
 	gradeGood: "خوب",
 	gradeNeedsWork: "نیاز به کار",
 	gradeProblem: "مشکل",
@@ -99,7 +91,7 @@ const fa: IScorecardCopy = {
 	projectedLabel: "امتیاز طرف",
 	copyLink: "کپی لینک بررسی",
 	copied: "لینک کپی شد",
-	previewCta: "ببین طرف چی می‌بینه",
+	previewCta: "پیش‌نمایش",
 	backToEditing: "برگرد به ویرایش",
 	clear: "پاک کردن همه",
 	flaggedCount: (n) => `${n.toLocaleString("fa-IR")} مورد علامت خورده`,

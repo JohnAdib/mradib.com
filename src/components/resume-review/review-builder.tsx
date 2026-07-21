@@ -8,6 +8,7 @@ import { shareUrl } from "@/lib/resume-review/share-url";
 import { ConfirmDialog } from "./confirm-dialog";
 import { GradeLegend } from "./grade-legend";
 import { GradeRow } from "./grade-row";
+import { nextGrade } from "./grades";
 import { ResumeScorecard } from "./resume-scorecard";
 import { ReviewScorePanel } from "./review-score-panel";
 import type { IScorecardCopy } from "./scorecard-copy";
@@ -57,9 +58,6 @@ export function ReviewBuilder({
 				>
 					{copy.builderTitle}
 				</h1>
-				<p className="mt-2 max-w-md text-sm text-zinc-600 dark:text-zinc-400">
-					{copy.builderIntro}
-				</p>
 			</div>
 
 			<div className="mt-5">
@@ -82,9 +80,6 @@ export function ReviewBuilder({
 			/>
 
 			<GradeLegend copy={copy} />
-			<p className="mt-1 text-center text-xs text-zinc-400 dark:text-zinc-500">
-				{copy.legendHint}
-			</p>
 
 			<div className="mt-5 space-y-5">
 				{groupsFor(locale).map((group) => (
@@ -98,7 +93,10 @@ export function ReviewBuilder({
 									key={item.slug}
 									item={item}
 									grade={review[item.slug] ?? 0}
-									onPick={(code) => setGrade(item.slug, code)}
+									guideHref={group.guideHref}
+									onCycle={() =>
+										setGrade(item.slug, nextGrade(review[item.slug] ?? 0))
+									}
 									copy={copy}
 								/>
 							))}
