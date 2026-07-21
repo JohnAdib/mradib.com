@@ -1,15 +1,16 @@
 "use client";
 
 import clsx from "clsx";
+import Link from "next/link";
 import { useState } from "react";
 import { groupsFor } from "@/data/resume-checklist";
 import type { LanguageLocale } from "@/lib/languages/locale";
-import { shareUrl } from "@/lib/resume-review/share-url";
+import { guidePath, previewUrl, shareUrl } from "@/lib/resume-review/share-url";
 import { ConfirmDialog } from "./confirm-dialog";
+import { CopyLinkButton } from "./copy-link-button";
 import { GradeLegend } from "./grade-legend";
 import { GradeRow } from "./grade-row";
 import { nextGrade } from "./grades";
-import { ResumeScorecard } from "./resume-scorecard";
 import { ReviewScorePanel } from "./review-score-panel";
 import type { IScorecardCopy } from "./scorecard-copy";
 import { useReviewState } from "./use-review-state";
@@ -22,30 +23,9 @@ export function ReviewBuilder({
 	locale: LanguageLocale;
 	copy: IScorecardCopy;
 }) {
-	const [preview, setPreview] = useState(false);
 	const [confirmClear, setConfirmClear] = useState(false);
 	const { name, setName, review, setGrade, clearAll, score, flaggedCount } =
 		useReviewState();
-
-	if (preview) {
-		return (
-			<div>
-				<button
-					type="button"
-					onClick={() => setPreview(false)}
-					className="mb-5 text-sm font-medium text-accent-600 transition hover:text-accent-700 dark:text-accent-400"
-				>
-					{copy.backToEditing}
-				</button>
-				<ResumeScorecard
-					review={review}
-					name={name.trim()}
-					locale={locale}
-					copy={copy}
-				/>
-			</div>
-		);
-	}
 
 	return (
 		<div>
@@ -74,10 +54,12 @@ export function ReviewBuilder({
 			<ReviewScorePanel
 				score={score}
 				flaggedCount={flaggedCount}
-				shareText={shareUrl(locale, review, name)}
 				locale={locale}
 				copy={copy}
 			/>
+			<p className="mx-auto mt-2 max-w-md text-center text-xs text-zinc-400 dark:text-zinc-500">
+				{copy.scoreNote}
+			</p>
 
 			<GradeLegend copy={copy} />
 
@@ -105,19 +87,37 @@ export function ReviewBuilder({
 				))}
 			</div>
 
-			<div className="mt-6 flex items-center justify-center gap-4 text-sm">
-				<button
-					type="button"
-					onClick={() => setPreview(true)}
-					className="font-medium text-zinc-500 transition hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
+			<div className="mt-6 rounded-2xl bg-surface p-3 ring-1 ring-zinc-900/10 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
+				<div className="flex flex-col gap-2 sm:flex-row">
+					<CopyLinkButton
+						text={shareUrl(locale, review, name)}
+						label={copy.copyLink}
+						copiedLabel={copy.copied}
+						className="flex-1"
+					/>
+					<a
+						href={previewUrl(locale, review, name)}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex flex-1 items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-900/15 transition hover:bg-zinc-900/5 dark:text-zinc-200 dark:ring-zinc-700 dark:hover:bg-zinc-800"
+					>
+						{copy.previewCta}
+					</a>
+				</div>
+			</div>
+
+			<div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium">
+				<Link
+					href={guidePath(locale)}
+					className="text-zinc-500 transition hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
 				>
-					{copy.previewCta}
-				</button>
+					{copy.backToGuide}
+				</Link>
 				{flaggedCount > 0 && (
 					<button
 						type="button"
 						onClick={() => setConfirmClear(true)}
-						className="font-medium text-zinc-400 transition hover:text-rose-600 dark:text-zinc-500 dark:hover:text-rose-400"
+						className="text-zinc-400 transition hover:text-rose-600 dark:text-zinc-500 dark:hover:text-rose-400"
 					>
 						{copy.clear}
 					</button>

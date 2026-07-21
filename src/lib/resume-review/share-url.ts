@@ -12,22 +12,40 @@ export function reviewPath(locale: LanguageLocale): string {
 	return locale === "fa-IR" ? "/fa/resume/review" : "/resume/review";
 }
 
-/**
- * Absolute share link for a review. Only non-good items ride along (as
- * slug+grade), so a mostly-good CV yields a short link. The `issues` param is
- * always present, even when empty, so the link opens the result view. An
- * optional name personalizes the recipient's first view.
- */
-export function shareUrl(
-	locale: LanguageLocale,
-	review: Record<string, number>,
-	name?: string,
-): string {
+/** Route of the human resume guide for a locale. */
+export function guidePath(locale: LanguageLocale): string {
+	return locale === "fa-IR" ? "/fa/resume" : "/resume";
+}
+
+function reviewParams(review: Record<string, number>, name?: string): string {
 	const params = new URLSearchParams();
 	params.set("issues", encodeReview(review));
 	const trimmed = name?.trim();
 	if (trimmed) {
 		params.set("name", trimmed);
 	}
-	return `${homepageUrl}${checklistPath(locale)}?${params.toString()}`;
+	return params.toString();
+}
+
+/**
+ * Absolute share link for a review. Each graded item rides along as slug+grade,
+ * so the link carries what was reviewed. The `issues` param is always present so
+ * the link opens the result view. An optional name personalizes the first view.
+ */
+export function shareUrl(
+	locale: LanguageLocale,
+	review: Record<string, number>,
+	name?: string,
+): string {
+	return `${homepageUrl}${checklistPath(locale)}?${reviewParams(review, name)}`;
+}
+
+/** Same target as the share link, but relative, for opening a preview in a new
+ * tab on the current origin. */
+export function previewUrl(
+	locale: LanguageLocale,
+	review: Record<string, number>,
+	name?: string,
+): string {
+	return `${checklistPath(locale)}?${reviewParams(review, name)}`;
 }

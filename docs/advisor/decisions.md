@@ -4,6 +4,22 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, review flow polish and a shared review that seeds the guide
+
+A round of fixes from John using the tool for real. The whole grade card is now
+tappable, not just the emoji, with the guide link a separate target on the end.
+Copy and Preview sit together in one box at the foot of the builder; Preview opens
+the result in a new tab instead of swapping the page in place. Both the builder and
+the result carry a back link to the resume guide, and a plain note that the score is
+only there to visualize, above 70 is good, and every item is a suggestion rather
+than a rule. When a candidate opens a shared review link, it seeds their guide
+self-assessment once, good items checked, issues left open, and never overwrites
+progress they have already made. On the guide: the AI-tools links to llms.txt and
+skill.md are plain anchors that open the raw file in a new tab (a Next link tried to
+client-route the .txt and 404d); the table-of-contents sidebar gained breathing room
+from the content; the dark-mode hover on checklist rows no longer turns white; and
+MrAdib reads as مستر ادیب in the Persian method text.
+
 ## 2026-07-20, the grade emojis are a traffic light
 
 John swapped the grade emojis to thumbs at the ends and a clearer middle: good is

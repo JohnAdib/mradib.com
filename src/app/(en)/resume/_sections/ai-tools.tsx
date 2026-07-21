@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { JSX } from "react";
 import { CopyButton } from "@/components/copy-button";
 import { SectionHeading } from "@/components/heading/section-heading";
@@ -23,12 +22,18 @@ export function SectionAiTools(): JSX.Element {
 			</p>
 			<ul>
 				<li>
-					<Link href="/resume/llms.txt">/resume/llms.txt</Link>: the full method
-					as weighted rules an AI can follow and score against.
+					<a href="/resume/llms.txt" target="_blank" rel="noopener noreferrer">
+						/resume/llms.txt
+					</a>
+					: the full method as weighted rules an AI can follow and score
+					against.
 				</li>
 				<li>
-					<Link href="/resume/skill.md">/resume/skill.md</Link>: a ready-made
-					skill you can hand to Claude or drop into your own AI tool.
+					<a href="/resume/skill.md" target="_blank" rel="noopener noreferrer">
+						/resume/skill.md
+					</a>
+					: a ready-made skill you can hand to Claude or drop into your own AI
+					tool.
 				</li>
 			</ul>
 			<p>

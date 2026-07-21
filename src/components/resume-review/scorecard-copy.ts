@@ -29,6 +29,8 @@ export interface IScorecardCopy {
 	fixedProgress: (done: number, total: number) => string;
 	allFixed: string;
 	startOwn: string;
+	backToGuide: string;
+	scoreNote: string;
 	clearTitle: string;
 	clearBody: string;
 	clearConfirm: string;
@@ -69,6 +71,9 @@ const en: IScorecardCopy = {
 	fixedProgress: (done, total) => `${done} of ${total} fixed`,
 	allFixed: "Every issue fixed. Nice work.",
 	startOwn: "Review a CV yourself",
+	backToGuide: "Read the resume guide",
+	scoreNote:
+		"The score is just to help you picture where you stand. Above 70 is good, and every item is a suggestion, not a rule.",
 	clearTitle: "Clear this review?",
 	clearBody: "This removes every grade you have set. It cannot be undone.",
 	clearConfirm: "Clear all",
@@ -109,6 +114,9 @@ const fa: IScorecardCopy = {
 		`${done.toLocaleString("fa-IR")} از ${total.toLocaleString("fa-IR")} درست شد`,
 	allFixed: "همه‌ی موارد درست شد. آفرین!",
 	startOwn: "خودت یک رزومه بررسی کن",
+	backToGuide: "راهنمای رزومه رو بخون",
+	scoreNote:
+		"این امتیاز فقط برای اینه که تصویری از وضعیتت داشته باشی. بالای ۷۰ خوبه، و هر مورد یک پیشنهاده، نه یک قانون.",
 	clearTitle: "این بررسی پاک بشه؟",
 	clearBody: "همه‌ی نمره‌هایی که دادی حذف می‌شه. این کار برگشت‌پذیر نیست.",
 	clearConfirm: "پاک کردن همه",

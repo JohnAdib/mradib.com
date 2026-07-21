@@ -26,7 +26,7 @@ export function TodoList({
 						onChange={() => onToggle(item.id)}
 					/>
 					<label
-						className="flex gap-2 items-center px-4 py-2 rounded-lg cursor-pointer transition hover:bg-gray-100"
+						className="flex gap-2 items-center px-4 py-2 rounded-lg cursor-pointer transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
 						htmlFor={`${idPrefix}_${item.id}`}
 					>
 						{checked[item.id] ? (

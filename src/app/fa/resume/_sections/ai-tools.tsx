@@ -1,10 +1,9 @@
-import Link from "next/link";
 import type { JSX } from "react";
 import { CopyButton } from "@/components/copy-button";
 import { SectionHeading } from "@/components/heading/section-heading";
 
 const aiPrompt =
-	"مثل یک متخصص رزومه عمل کن و روش MrAdib در آدرس https://mradib.com/fa/resume/llms.txt را دنبال کن. " +
+	"مثل یک متخصص رزومه عمل کن و روش مستر ادیب در آدرس https://mradib.com/fa/resume/llms.txt را دنبال کن. " +
 	"رزومه من را بخش به بخش بازبینی کن، هر آیتم تجربه کاری را به یک دستاورد با عدد بازنویسی کن، " +
 	"هر آیتم را با یک فعل اکشن قوی و متنوع شروع کن، واژه‌ها و کلیدواژه‌ها را با آگهی شغلی که می‌گذارم تطبیق بده، " +
 	"و در پایان نتیجه را از ۱۰۰ امتیاز بده و اصلاح‌ها را به ترتیب تاثیر فهرست کن.";
@@ -23,12 +22,24 @@ export function SectionAiTools(): JSX.Element {
 			</p>
 			<ul>
 				<li>
-					<Link href="/fa/resume/llms.txt">/fa/resume/llms.txt</Link>: کل روش به
-					شکل قوانین امتیازدار که هوش مصنوعی می‌تواند دنبال کند.
+					<a
+						href="/fa/resume/llms.txt"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						/fa/resume/llms.txt
+					</a>
+					: کل روش به شکل قوانین امتیازدار که هوش مصنوعی می‌تواند دنبال کند.
 				</li>
 				<li>
-					<Link href="/fa/resume/skill.md">/fa/resume/skill.md</Link>: یک اسکیل
-					آماده که می‌توانی به Claude بدهی یا در ابزار خودت بگذاری.
+					<a
+						href="/fa/resume/skill.md"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						/fa/resume/skill.md
+					</a>
+					: یک اسکیل آماده که می‌توانی به Claude بدهی یا در ابزار خودت بگذاری.
 				</li>
 			</ul>
 			<p>

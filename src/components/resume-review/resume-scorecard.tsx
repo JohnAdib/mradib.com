@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
 import { Reveal } from "@/components/reveal/reveal";
 import { groupsFor, scoreForReview } from "@/data/resume-checklist";
+import { guideStorageKey } from "@/data/resume-checklist/guide";
 import { encodeReview } from "@/data/resume-checklist/share";
+import { seedChecklistIfEmpty } from "@/lib/checklist/checklist-store";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { LanguageLocale } from "@/lib/languages/locale";
-import { reviewPath } from "@/lib/resume-review/share-url";
+import { guidePath, reviewPath } from "@/lib/resume-review/share-url";
 import { isIssue } from "./grades";
 import { GroupScoreList } from "./group-score-list";
 import { IssueGroups } from "./issue-groups";
@@ -30,6 +33,18 @@ export function ResumeScorecard({
 		`resume-review-resolved:${encodeReview(review)}`,
 	);
 	const allGroups = groupsFor(locale);
+
+	// Seed the candidate's guide checklist from this review once, if they have
+	// not started their own: good items become done, issues stay open.
+	useEffect(() => {
+		const items: Record<string, boolean> = {};
+		for (const [slug, code] of Object.entries(review)) {
+			items[slug] = code === 1;
+		}
+		if (Object.keys(items).length > 0) {
+			seedChecklistIfEmpty(guideStorageKey(locale), items);
+		}
+	}, [review, locale]);
 
 	// A resolved issue now counts as good; everything graded passes through.
 	const effective: Record<string, number> = {};
@@ -80,6 +95,10 @@ export function ResumeScorecard({
 				copy={copy}
 			/>
 
+			<p className="mx-auto mt-3 max-w-md text-center text-xs text-zinc-500 dark:text-zinc-400">
+				{copy.scoreNote}
+			</p>
+
 			{issueGroups.length > 0 && (
 				<>
 					<Reveal className="mt-6">
@@ -107,12 +126,18 @@ export function ResumeScorecard({
 				</>
 			)}
 
-			<div className="mt-8 text-center">
+			<div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium">
 				<Link
 					href={reviewPath(locale)}
-					className="text-sm font-medium text-accent-600 transition hover:text-accent-700 dark:text-accent-400"
+					className="text-accent-600 transition hover:text-accent-700 dark:text-accent-400"
 				>
 					{copy.startOwn}
+				</Link>
+				<Link
+					href={guidePath(locale)}
+					className="text-zinc-500 transition hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
+				>
+					{copy.backToGuide}
 				</Link>
 			</div>
 		</div>
