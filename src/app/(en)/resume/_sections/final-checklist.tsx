@@ -39,6 +39,10 @@ export function SectionFinalChecklist(): JSX.Element {
 					Grade each section and share the result as a link.
 				</span>
 			</div>
+			<p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
+				The score just helps you picture where you stand. Above 70 is good, and
+				every item is a suggestion, not a rule.
+			</p>
 		</section>
 	);
 }

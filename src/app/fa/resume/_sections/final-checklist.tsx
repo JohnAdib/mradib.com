@@ -33,6 +33,10 @@ export function SectionFinalChecklist(): JSX.Element {
 					هر بخش رو امتیاز بده و نتیجه رو به‌شکل لینک به اشتراک بذار.
 				</span>
 			</div>
+			<p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
+				امتیاز فقط کمک می‌کنه تصویری از وضعیتت داشته باشی. بالای ۷۰ خوبه و هر
+				مورد یک پیشنهاده، نه یک قانون.
+			</p>
 		</section>
 	);
 }

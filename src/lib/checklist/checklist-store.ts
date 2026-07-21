@@ -120,3 +120,26 @@ export function getChecklistStore(storageKey: string): IChecklistStore {
 	}
 	return store;
 }
+
+/**
+ * One-time cross-page seed. Writes the checklist state only when nothing is
+ * stored yet, so a shared review can prefill the guide the first time the
+ * candidate opens it, and never clobbers progress they have already made.
+ */
+export function seedChecklistIfEmpty(
+	storageKey: string,
+	items: Record<string, boolean>,
+): void {
+	if (typeof window === "undefined") {
+		return;
+	}
+	try {
+		if (window.localStorage.getItem(storageKey) != null) {
+			return;
+		}
+		const payload: IChecklistPersisted = { v: 1, items };
+		window.localStorage.setItem(storageKey, JSON.stringify(payload));
+	} catch {
+		// Private mode / quota: skip seeding.
+	}
+}

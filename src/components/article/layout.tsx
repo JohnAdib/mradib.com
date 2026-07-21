@@ -126,7 +126,7 @@ export function ArticleLayout({
 				</div>
 				{aside ? (
 					<aside className="hidden xl:block absolute inset-y-0 end-0 w-48">
-						<div className="sticky top-24 ps-6">{aside}</div>
+						<div className="sticky top-24 ps-12">{aside}</div>
 					</aside>
 				) : null}
 				<ArticleJsonLD
