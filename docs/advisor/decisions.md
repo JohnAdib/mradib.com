@@ -4,6 +4,14 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the grade emojis are a traffic light
+
+John swapped the grade emojis to thumbs at the ends and a clearer middle: good is
+a thumbs up, problem a thumbs down, and needs work an amber warning triangle, the
+caution light between them (unset stays a neutral dash). It reads as a green, amber,
+red traffic light, and the amber warning matches the needs-work colour used
+elsewhere. Only the glyphs changed; the codes, scoring, and cycle are the same.
+
 ## 2026-07-20, grading is one tappable emoji, unset by default
 
 John's next pass: the segmented control repeated the same three labels on every
