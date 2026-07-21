@@ -30,11 +30,12 @@ export const totalPoints = checklistItems.reduce(
 );
 
 /** How much of an item's points each grade costs. Good 0, needs-work half,
- * problem all. N/A (code 4) is not here; it is excluded from the score entirely. */
+ * problem all. Unset (code 0) is not here; an unreviewed item is excluded from
+ * the score entirely. */
 export const GRADE_WEIGHT: Record<number, number> = {
-	0: 0,
-	1: 0.5,
-	2: 1,
+	1: 0,
+	2: 0.5,
+	3: 1,
 };
 
 function copyFor(locale: LanguageLocale): {
@@ -100,8 +101,8 @@ function scoreOver(
 	let lost = 0;
 	for (const item of items) {
 		const code = review[item.slug] ?? 0;
-		if (code === 4) {
-			continue; // N/A: excluded from the score entirely.
+		if (code === 0) {
+			continue; // Unset: not reviewed, excluded from the score entirely.
 		}
 		total += item.points;
 		lost += item.points * (GRADE_WEIGHT[code] ?? 0);

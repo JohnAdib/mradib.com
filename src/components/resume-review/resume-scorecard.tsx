@@ -31,7 +31,7 @@ export function ResumeScorecard({
 	);
 	const allGroups = groupsFor(locale);
 
-	// A resolved issue counts as good; N/A passes through unchanged.
+	// A resolved issue now counts as good; everything graded passes through.
 	const effective: Record<string, number> = {};
 	let issueTotal = 0;
 	let openCount = 0;
@@ -39,6 +39,7 @@ export function ResumeScorecard({
 		if (isIssue(code)) {
 			issueTotal += 1;
 			if (store.isChecked(slug)) {
+				effective[slug] = 1; // resolved: counts as good
 				continue;
 			}
 			openCount += 1;

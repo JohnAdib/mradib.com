@@ -4,6 +4,21 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, grading is one tappable emoji, unset by default
+
+John's next pass: the segmented control repeated the same three labels on every
+row and ate space. It is now a single emoji on the title line that cycles on each
+tap, unset to good to needs work to problem and back: default is unset, shown as a
+neutral emoji and not scored, then good, needs work, problem. Emojis replace the
+crafted vector icons (John's call, reversing the earlier icons-over-emoji decision):
+neutral, slightly smiling, neutral face, slightly frowning. Every row also gains a
+small trailing link to its guide section, so the reviewer can jump to the source.
+Because unset is the default and is excluded from the score, the score now reflects
+only the items actually graded, not all thirty; share links carry every graded item
+(good included), which John accepted as the trade for the simpler default. The
+builder intro line and the legend hint were removed, and the footer link is just
+"Preview". The candidate result shows the same emoji on each issue.
+
 ## 2026-07-20, the reviewer is one tap, one page, and reads like the result
 
 John reviewed a real CV with the tool and it drove a round of simplification. Five

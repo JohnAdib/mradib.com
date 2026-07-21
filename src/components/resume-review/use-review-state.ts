@@ -5,7 +5,7 @@ import { scoreForReview } from "@/data/resume-checklist";
 
 const NAME_KEY = "resume-review-name";
 const REVIEW_KEY = "resume-review-severity";
-const CODES = new Set([1, 2, 4]);
+const CODES = new Set([1, 2, 3]);
 
 function loadReview(): Record<string, number> {
 	try {
@@ -87,6 +87,6 @@ export function useReviewState(): IReviewState {
 		setGrade,
 		clearAll,
 		score: scoreForReview(review),
-		flaggedCount: values.filter((value) => value === 1 || value === 2).length,
+		flaggedCount: values.filter((value) => value === 2 || value === 3).length,
 	};
 }

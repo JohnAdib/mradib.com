@@ -1,22 +1,23 @@
 import { checklistItems } from "./checklist-items";
 
 /**
- * A review: each graded item mapped to a grade code. 1 = needs work, 2 = problem,
- * 4 = N/A. Good (0) is the default and never stored.
+ * A review: each graded item mapped to a grade code. 1 = good, 2 = needs work,
+ * 3 = problem. Unset (0) is the default (not reviewed, not scored) and never
+ * stored.
  */
 export type ReviewMap = Record<string, number>;
 
 /**
- * Share codec for a review. Each non-good item travels as its slug followed by a
- * grade digit (1, 2, or 4); good items are dropped so links stay short. Tokens are
- * dot joined in canonical item order, so the same review always yields the same
- * string. Slugs never end in a digit, so the last character is unambiguously the
- * grade. Unknown slugs or bad digits are dropped, so old links degrade to
- * whatever still exists (1 and 2 keep their meaning from earlier links).
+ * Share codec for a review. Each graded item travels as its slug followed by a
+ * grade digit (1, 2, or 3); unset items are dropped, so the link carries only
+ * what was actually reviewed. Tokens are dot joined in canonical item order, so
+ * the same review always yields the same string. Slugs never end in a digit, so
+ * the last character is unambiguously the grade. Unknown slugs or bad digits are
+ * dropped.
  */
 const SEPARATOR = ".";
 const knownSlugs = new Set(checklistItems.map((item) => item.slug));
-const gradeCodes = new Set([1, 2, 4]);
+const gradeCodes = new Set([1, 2, 3]);
 
 export function encodeReview(review: Record<string, number>): string {
 	return checklistItems
