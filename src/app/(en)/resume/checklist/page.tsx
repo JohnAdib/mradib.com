@@ -8,9 +8,9 @@ import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
-	title: "Your CV review",
+	title: "Review a CV",
 	description:
-		"A review of your CV, scored out of 100 section by section, with the fix for each issue.",
+		"A quick tool to review any CV. Score it out of 100 section by section, flag each issue with its fix, and share the result as one link.",
 	alternates: pageAlternates("/resume/checklist"),
 	...ogMetadata("/resume/checklist"),
 };
@@ -32,7 +32,7 @@ export default function Page() {
 				steps={howToSteps}
 			/>
 			<div className="mx-auto max-w-2xl">
-				<ResumeReviewApp locale="en-US" mode="result" />
+				<ResumeReviewApp locale="en-US" mode="builder" />
 			</div>
 		</Container>
 	);

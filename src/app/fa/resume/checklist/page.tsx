@@ -10,10 +10,10 @@ import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
 const pageDesc =
-	"بررسی رزومه‌ی تو، بخش‌به‌بخش و با امتیاز از ۱۰۰، همراه با راه‌حل هر مشکل.";
+	"ابزار سریع بررسی رزومه. رزومه‌ی هر کسی رو از ۱۰۰ نمره بده، مشکل هر بخش رو با راه‌حلش علامت بزن، و نتیجه رو با یک لینک برای بقیه بفرست.";
 
 export const metadata: Metadata = {
-	title: "بررسی رزومه‌ی تو",
+	title: "بررسی رزومه",
 	description: pageDesc + separator + myNameFa,
 	alternates: pageAlternates("/fa/resume/checklist"),
 	...ogMetadata("/fa/resume/checklist"),
@@ -36,7 +36,7 @@ export default function Page() {
 				steps={howToSteps}
 			/>
 			<div className="mx-auto max-w-2xl">
-				<ResumeReviewApp locale="fa-IR" mode="result" />
+				<ResumeReviewApp locale="fa-IR" mode="builder" />
 			</div>
 		</Container>
 	);

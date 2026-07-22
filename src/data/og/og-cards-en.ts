@@ -83,17 +83,18 @@ export const ogCardsEn: IOgCard[] = [
 		slug: "resume-review",
 		route: "/resume/review",
 		lang: "en",
-		eyebrow: "Review a CV",
-		headline: "Score a CV out of 100.",
+		eyebrow: "Your CV review",
+		headline: "Your CV, reviewed.",
 		proof:
-			"Grade every section, flag each issue with its fix, and send the result as one link.",
+			"See your score out of 100, section by section, with the fix for every issue.",
 	},
 	{
 		slug: "resume-checklist",
 		route: "/resume/checklist",
 		lang: "en",
-		eyebrow: "CV review",
-		headline: "Your CV, reviewed.",
-		proof: "Scored out of 100 section by section, with the fix for each issue.",
+		eyebrow: "Review a CV",
+		headline: "Review a CV in minutes.",
+		proof:
+			"Score any CV out of 100 section by section, then share the result as one link.",
 	},
 ];

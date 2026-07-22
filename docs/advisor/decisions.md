@@ -4,6 +4,20 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-22, review and checklist URLs swapped to match their meaning
+
+John reads the two pages by their names: /resume/review is "the review you get",
+/resume/checklist is "the tool you use to review". The build had them the other way
+round, so the pages now match the names. /resume/review is the finished review a
+candidate receives, and every share and preview link points there; its title is
+"Your CV review" (Persian: بررسی رزومه‌ی تو) and its card reads "Your CV, reviewed" /
+رزومه‌ت بررسی شد, with a line that invites them to see the score. /resume/checklist is
+the reviewer's tool; its title is "Review a CV" (Persian: بررسی رزومه) and its card
+reads "Review a CV in minutes" / یک رزومه رو سریع بررسی کن, a quick way to score any
+CV and share the result with others. The guide CTA, llms.txt, and the empty state all
+follow. An older link that carried a review under the tool URL is forwarded to the
+result page so it still opens.
+
 ## 2026-07-20, the shared card reads as a finished review, OG fonts go local
 
 John shares the result after reviewing someone's CV, so the page and its social
