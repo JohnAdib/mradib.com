@@ -24,4 +24,8 @@ export interface IOgCard {
 	/** One proof line, also og:description. A superlative plus a number. */
 	proof: string;
 	artwork?: IOgArtwork;
+	/** A ready made image (repo relative path) used as the whole card, in place
+	 * of the generated template. Cropped to fill 1200x630. For pages that ship
+	 * with their own designed cover, like the Persian resume guide. */
+	image?: string;
 }

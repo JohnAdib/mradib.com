@@ -17,10 +17,8 @@ import { ogCards } from "../../src/data/og/index.ts";
 import { findChrome, screenshot } from "./chrome-screenshot.mjs";
 import { buildCardHtml } from "./og-template.mjs";
 
-const publicDir = join(
-	fileURLToPath(new URL("../../", import.meta.url)),
-	"public",
-);
+const repoRoot = fileURLToPath(new URL("../../", import.meta.url));
+const publicDir = join(repoRoot, "public");
 const outDir = join(publicDir, "og");
 const chrome = findChrome();
 
@@ -47,11 +45,22 @@ async function normalizedArtwork(card) {
 }
 
 for (const card of cards) {
+	const jpg = join(outDir, `${card.slug}.jpg`);
+	// A card can ship a ready-made cover image instead of the template.
+	if (card.image) {
+		await sharp(join(repoRoot, card.image))
+			.resize(1200, 630, { fit: "cover" })
+			.jpeg({ quality: 90, mozjpeg: true })
+			.toFile(jpg);
+		console.log(
+			`og/${card.slug}.jpg ${Math.round(statSync(jpg).size / 1024)}KB (cover)`,
+		);
+		continue;
+	}
 	const html = join(tmp, `${card.slug}.html`);
 	const png = join(tmp, `${card.slug}.png`);
 	writeFileSync(html, buildCardHtml(await normalizedArtwork(card), publicDir));
 	await screenshot(chrome, pathToFileURL(html).href, png);
-	const jpg = join(outDir, `${card.slug}.jpg`);
 	await sharp(png)
 		.resize(1200, 630)
 		.jpeg({ quality: 90, mozjpeg: true })

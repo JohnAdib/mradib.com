@@ -4,6 +4,15 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-22, Persian resume guide shares its cover as the social card
+
+The Persian resume guide opens with a designed cover, the yellow board that reads
+"how to write a resume" with the good and bad example side by side. Its social
+card is now that same image rather than the generated template, so the preview
+matches what a reader sees at the top of the article. English keeps its
+typographic card. An OG card can now point at a ready-made image through an
+optional field, cropped to fill the 1200x630 frame.
+
 ## 2026-07-22, OG cards render through Playwright so the frame fills edge to edge
 
 The white strip had a deeper cause. The raw Chrome screenshot flag settled the
