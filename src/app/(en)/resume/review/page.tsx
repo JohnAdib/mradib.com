@@ -10,9 +10,9 @@ import { ogMetadata } from "@/lib/og-metadata";
 export const metadata: Metadata = {
 	title: "Your CV review",
 	description:
-		"Someone reviewed your CV. See your score out of 100, section by section, with the fix for every issue.",
+		"Section by section, every part comes with a clear action you can take. Open it and make your CV stronger.",
 	alternates: pageAlternates("/resume/review"),
-	...ogMetadata("/resume/review"),
+	...ogMetadata("/resume/review", { title: "Your CV review is ready" }),
 };
 
 const howToSteps = groupsFor("en-US").flatMap((group) =>

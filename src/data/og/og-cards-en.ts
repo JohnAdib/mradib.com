@@ -86,7 +86,7 @@ export const ogCardsEn: IOgCard[] = [
 		eyebrow: "Your CV review",
 		headline: "Your CV, reviewed.",
 		proof:
-			"See your score out of 100, section by section, with the fix for every issue.",
+			"A full read of your CV, section by section, each with an action to take. Paired with the complete guide to building a stronger one.",
 	},
 	{
 		slug: "resume-checklist",

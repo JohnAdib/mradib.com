@@ -4,6 +4,21 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-22, resume review card: no white edge, MrAdib byline, layered copy
+
+Three fixes to the shared review card. The OG generator was leaving a white
+strip along the bottom of any card built with the current template: headless
+Chrome settles the layout a touch short of the frame, and the page base was
+white. The html and body now carry the same dark base as the card, so the frame
+is full bleed with no white edge. The Persian byline on every card now reads
+مستر ادیب, the brand handle that matches mradib.com, in place of the literal
+جان ادیب. And the received review no longer repeats itself across the preview:
+the link title, the link description, and the words inside the image now each
+say something different. og:title is a short hook (Your CV review is ready), the
+description speaks to the action (go section by section, with a clear step for
+each), and the image keeps the headline plus a fuller line that points to the
+complete resume guide, with no talk of a score. Same shape in Persian.
+
 ## 2026-07-22, review and checklist URLs swapped to match their meaning
 
 John reads the two pages by their names: /resume/review is "the review you get",

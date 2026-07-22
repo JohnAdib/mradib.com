@@ -73,7 +73,9 @@ export function buildCardHtml(card, publicDir) {
 <style>
 ${fontFaceCss()}
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { width: 1200px; height: 630px; overflow: hidden; }
+/* The card fills the frame, but headless Chrome can settle the layout a hair
+   short of the viewport; a matching dark base means no white edge ever shows. */
+html, body { width: 1200px; height: 630px; overflow: hidden; background: #09090b; }
 .card { position: relative; width: 1200px; height: 630px; background: #09090b; font-family: ${body}, sans-serif; overflow: hidden; }
 .glow, .art-glow { position: absolute; border-radius: 50%; filter: blur(44px); }
 .glow-a { width: 780px; height: 780px; left: -200px; bottom: -360px; background: radial-gradient(circle, rgba(20,184,166,.27), transparent 62%); }
@@ -107,7 +109,7 @@ ${art ? '<div class="art-glow"></div>' : ""}<div class="stars"></div>
 <h1 class="headline">${text(card.headline)}</h1>
 <p class="proof">${text(card.proof)}</p>
 </div>
-<div class="strip">${avatar}${card.headline.trim() === (fa ? "جان ادیب" : "John Adib") ? "" : `<span class="name">${fa ? "جان ادیب" : "John Adib"}</span><span class="dot"></span>`}<span class="site">mradib.com</span></div>
+<div class="strip">${avatar}${card.headline.trim() === (fa ? "مستر ادیب" : "John Adib") ? "" : `<span class="name">${fa ? "مستر ادیب" : "John Adib"}</span><span class="dot"></span>`}<span class="site">mradib.com</span></div>
 </div>
 ${artHtml}
 </div></body></html>`;

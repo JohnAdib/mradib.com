@@ -19,7 +19,7 @@ export const ogImagePath = (slug: string): string => `/og/${slug}.jpg`;
 
 /** Metadata image entry for a card, shared by the root fallback and pages. */
 export function ogCardImage(card: IOgCard) {
-	const name = card.lang === "fa" ? "جان ادیب" : "John Adib";
+	const name = card.lang === "fa" ? "مستر ادیب" : "John Adib";
 	return {
 		url: ogImagePath(card.slug),
 		width: 1200,
