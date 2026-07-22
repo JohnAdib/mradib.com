@@ -1,14 +1,15 @@
-// Headless Chrome screenshot for the OG generator. Completion is detected by
-// the screenshot file appearing, not by process exit: headless_shell can wedge
-// after writing the file (observed on macOS), so the browser is killed as soon
-// as the image is stable on disk.
-import { spawn } from "node:child_process";
-import { existsSync, readdirSync, statSync } from "node:fs";
+// Headless screenshot for the OG generator, driven through Playwright so the
+// 1200x630 frame is captured exactly. The raw `chrome --screenshot` flag settled
+// the card a hair short of the viewport, which left the byline floating and a
+// dead band along the bottom edge. Playwright honors the viewport and waits for
+// the fonts to load before it captures, so every card fills the frame.
+import { existsSync, readdirSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
+import { chromium } from "playwright-core";
 
-// Playwright's headless_shell is preferred: no updater, sub-second cold start.
-// Full Chrome works too but its first launch spawns the Keystone updater.
+// Prefer an explicit CHROME_BIN, then Playwright's headless shell from the local
+// cache. Full Chrome works too but its first launch spawns the Keystone updater.
 export function findChrome() {
 	if (process.env.CHROME_BIN) return process.env.CHROME_BIN;
 	const cache = join(homedir(), "Library/Caches/ms-playwright");
@@ -22,41 +23,20 @@ export function findChrome() {
 	return "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 }
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-export async function screenshot(chrome, htmlUrl, png, profileDir) {
-	const proc = spawn(
-		chrome,
-		[
-			"--headless",
-			"--disable-gpu",
-			"--no-first-run",
-			"--no-default-browser-check",
-			"--hide-scrollbars",
-			"--force-device-scale-factor=2",
-			"--window-size=1200,630",
-			`--user-data-dir=${profileDir}`,
-			"--virtual-time-budget=20000",
-			`--screenshot=${png}`,
-			htmlUrl,
-		],
-		{ stdio: "ignore" },
-	);
-	const deadline = Date.now() + 60_000;
+export async function screenshot(chrome, htmlUrl, png) {
+	const browser = await chromium.launch({
+		executablePath: chrome,
+		args: ["--no-sandbox"],
+	});
 	try {
-		while (!existsSync(png)) {
-			if (Date.now() > deadline)
-				throw new Error(`Chrome wrote no screenshot for ${htmlUrl}`);
-			await sleep(150);
-		}
-		let size = 0;
-		for (;;) {
-			const now = statSync(png).size;
-			if (now > 0 && now === size) return;
-			size = now;
-			await sleep(150);
-		}
+		const page = await browser.newPage({
+			viewport: { width: 1200, height: 630 },
+			deviceScaleFactor: 2,
+		});
+		await page.goto(htmlUrl, { waitUntil: "networkidle" });
+		await page.evaluate(() => document.fonts.ready);
+		await page.screenshot({ path: png });
 	} finally {
-		proc.kill("SIGKILL");
+		await browser.close();
 	}
 }

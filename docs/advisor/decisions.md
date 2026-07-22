@@ -4,6 +4,16 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-22, OG cards render through Playwright so the frame fills edge to edge
+
+The white strip had a deeper cause. The raw Chrome screenshot flag settled the
+card a touch short of the 1200x630 frame, so the byline and avatar floated with a
+dead band below them that read as a crop. The generator now drives the capture
+through Playwright, which honors the viewport and waits for the fonts, so every
+card fills the frame with the byline at its intended bottom margin. The dark base
+on html and body stays as a belt and braces guard. Added playwright-core as a dev
+dependency for the generator.
+
 ## 2026-07-22, resume review card: no white edge, MrAdib byline, layered copy
 
 Three fixes to the shared review card. The OG generator was leaving a white

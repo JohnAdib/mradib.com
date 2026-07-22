@@ -50,7 +50,7 @@ for (const card of cards) {
 	const html = join(tmp, `${card.slug}.html`);
 	const png = join(tmp, `${card.slug}.png`);
 	writeFileSync(html, buildCardHtml(await normalizedArtwork(card), publicDir));
-	await screenshot(chrome, pathToFileURL(html).href, png, join(tmp, "profile"));
+	await screenshot(chrome, pathToFileURL(html).href, png);
 	const jpg = join(outDir, `${card.slug}.jpg`);
 	await sharp(png)
 		.resize(1200, 630)
