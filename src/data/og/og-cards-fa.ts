@@ -29,6 +29,7 @@ export const ogCardsFa: IOgCard[] = [
 		eyebrow: "آموزش رایگان",
 		headline: "آموزش صفر تا صد ساخت رزومه",
 		proof: "وقتشه رزومه خفن خودت رو بسازی. کامل‌ترین راهنمای فارسی رزومه‌نویسی.",
+		image: "src/app/fa/resume/cover.jpg",
 	},
 	{
 		slug: "fa-resume-review",
