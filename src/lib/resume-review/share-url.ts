@@ -2,14 +2,15 @@ import { encodeReview } from "@/data/resume-checklist/share";
 import { homepageUrl } from "@/lib/constants/url";
 import type { LanguageLocale } from "@/lib/languages/locale";
 
-/** Route of the scorecard result page for a locale. Apex domain, so no basePath. */
-export function checklistPath(locale: LanguageLocale): string {
-	return locale === "fa-IR" ? "/fa/resume/checklist" : "/resume/checklist";
+/** Route of the review a candidate receives for a locale. Apex domain, so no
+ * basePath. This is where a share link opens the finished scorecard. */
+export function resultPath(locale: LanguageLocale): string {
+	return locale === "fa-IR" ? "/fa/resume/review" : "/resume/review";
 }
 
-/** Route of the reviewer builder for a locale, where a review is put together. */
-export function reviewPath(locale: LanguageLocale): string {
-	return locale === "fa-IR" ? "/fa/resume/review" : "/resume/review";
+/** Route of the reviewer tool for a locale, where a review is put together. */
+export function builderPath(locale: LanguageLocale): string {
+	return locale === "fa-IR" ? "/fa/resume/checklist" : "/resume/checklist";
 }
 
 /** Route of the human resume guide for a locale. */
@@ -37,7 +38,7 @@ export function shareUrl(
 	review: Record<string, number>,
 	name?: string,
 ): string {
-	return `${homepageUrl}${checklistPath(locale)}?${reviewParams(review, name)}`;
+	return `${homepageUrl}${resultPath(locale)}?${reviewParams(review, name)}`;
 }
 
 /** Same target as the share link, but relative, for opening a preview in a new
@@ -47,5 +48,5 @@ export function previewUrl(
 	review: Record<string, number>,
 	name?: string,
 ): string {
-	return `${checklistPath(locale)}?${reviewParams(review, name)}`;
+	return `${resultPath(locale)}?${reviewParams(review, name)}`;
 }

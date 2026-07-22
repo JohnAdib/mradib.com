@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Button } from "@/components/button";
 import type { LanguageLocale } from "@/lib/languages/locale";
-import { reviewPath } from "@/lib/resume-review/share-url";
+import { builderPath } from "@/lib/resume-review/share-url";
 import type { IScorecardCopy } from "./scorecard-copy";
 
 /** Shown at the result URL when there is no review link to render: a calm glow
@@ -36,7 +36,7 @@ export function ReviewEmptyState({
 					{copy.emptyBody}
 				</p>
 				<div className="mt-6">
-					<Button href={reviewPath(locale)}>{copy.emptyCta}</Button>
+					<Button href={builderPath(locale)}>{copy.emptyCta}</Button>
 				</div>
 			</div>
 		</div>

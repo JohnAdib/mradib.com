@@ -9,7 +9,7 @@ import { encodeReview } from "@/data/resume-checklist/share";
 import { seedChecklistIfEmpty } from "@/lib/checklist/checklist-store";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
 import type { LanguageLocale } from "@/lib/languages/locale";
-import { guidePath, reviewPath } from "@/lib/resume-review/share-url";
+import { builderPath, guidePath } from "@/lib/resume-review/share-url";
 import { isIssue } from "./grades";
 import { GroupScoreList } from "./group-score-list";
 import { IssueGroups } from "./issue-groups";
@@ -128,7 +128,7 @@ export function ResumeScorecard({
 
 			<div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium">
 				<Link
-					href={reviewPath(locale)}
+					href={builderPath(locale)}
 					className="text-accent-600 transition hover:text-accent-700 dark:text-accent-400"
 				>
 					{copy.startOwn}

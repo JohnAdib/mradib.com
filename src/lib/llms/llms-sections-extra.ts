@@ -18,7 +18,7 @@ export function sectionResumeAiTools(): string {
 		"",
 		`- Machine-readable resume-writing method (the MrAdib method): ${homepageUrl}/resume/llms.txt (Persian: ${homepageUrl}/fa/resume/llms.txt)`,
 		`- Portable resume-writing skill for AI tools: ${homepageUrl}/resume/skill.md (Persian: ${homepageUrl}/fa/resume/skill.md)`,
-		`- Review a resume and score it out of 100: ${homepageUrl}/resume/review`,
+		`- Review a resume and score it out of 100: ${homepageUrl}/resume/checklist`,
 	].join("\n");
 }
 
