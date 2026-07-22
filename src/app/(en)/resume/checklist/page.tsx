@@ -8,9 +8,9 @@ import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
 export const metadata: Metadata = {
-	title: "Resume Scorecard",
+	title: "Your CV review",
 	description:
-		"Score any resume out of 100 across every section, see the fix for each issue, and share the result as a single link.",
+		"A review of your CV, scored out of 100 section by section, with the fix for each issue.",
 	alternates: pageAlternates("/resume/checklist"),
 	...ogMetadata("/resume/checklist"),
 };

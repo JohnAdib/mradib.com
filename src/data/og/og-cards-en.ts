@@ -92,9 +92,8 @@ export const ogCardsEn: IOgCard[] = [
 		slug: "resume-checklist",
 		route: "/resume/checklist",
 		lang: "en",
-		eyebrow: "Resume scorecard",
-		headline: "Your resume, scored out of 100.",
-		proof:
-			"Every section scored, each issue with the fix to raise it. Shared in one link.",
+		eyebrow: "CV review",
+		headline: "Your CV, reviewed.",
+		proof: "Scored out of 100 section by section, with the fix for each issue.",
 	},
 ];

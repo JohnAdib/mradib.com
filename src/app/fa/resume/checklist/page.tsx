@@ -10,10 +10,10 @@ import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
 const pageDesc =
-	"به رزومه هر کسی از ۱۰۰ نمره بده، مشکل هر بخش و راه‌حلش رو ببین، و نتیجه رو با یک لینک بفرست.";
+	"بررسی رزومه‌ی تو، بخش‌به‌بخش و با امتیاز از ۱۰۰، همراه با راه‌حل هر مشکل.";
 
 export const metadata: Metadata = {
-	title: "کارنامه رزومه",
+	title: "بررسی رزومه‌ی تو",
 	description: pageDesc + separator + myNameFa,
 	alternates: pageAlternates("/fa/resume/checklist"),
 	...ogMetadata("/fa/resume/checklist"),
