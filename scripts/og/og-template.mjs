@@ -2,12 +2,35 @@
 // Visual language mirrors the site: zinc-950 base, teal accent glows, the
 // starfield, Newsreader display type, and the rotated portrait treatment.
 import { join } from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const FONTS = {
-	en: "family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600",
-	fa: "family=Vazirmatn:wght@400;500;700",
-};
+// Fonts are embedded from local @fontsource packages so the card renders the
+// same everywhere, with no dependency on a webfont CDN at generate time (the
+// CDN is unreachable in some build environments, which dropped Persian to a
+// fallback face). Vazirmatn ships Persian glyphs in its "arabic" subset.
+const FONT_DIR = join(
+	fileURLToPath(new URL("../../", import.meta.url)),
+	"node_modules",
+	"@fontsource",
+);
+const FONT_FACES = [
+	["Vazirmatn", "vazirmatn", "vazirmatn-arabic-400-normal.woff2", 400],
+	["Vazirmatn", "vazirmatn", "vazirmatn-arabic-500-normal.woff2", 500],
+	["Vazirmatn", "vazirmatn", "vazirmatn-arabic-600-normal.woff2", 600],
+	["Vazirmatn", "vazirmatn", "vazirmatn-arabic-700-normal.woff2", 700],
+	["Inter", "inter", "inter-latin-400-normal.woff2", 400],
+	["Inter", "inter", "inter-latin-500-normal.woff2", 500],
+	["Inter", "inter", "inter-latin-600-normal.woff2", 600],
+	["Newsreader", "newsreader", "newsreader-latin-500-normal.woff2", 500],
+	["Newsreader", "newsreader", "newsreader-latin-600-normal.woff2", 600],
+];
+
+function fontFaceCss() {
+	return FONT_FACES.map(([name, pkg, file, weight]) => {
+		const href = pathToFileURL(join(FONT_DIR, pkg, "files", file)).href;
+		return `@font-face{font-family:'${name}';font-style:normal;font-weight:${weight};font-display:block;src:url('${href}') format('woff2');}`;
+	}).join("\n");
+}
 
 const STARS =
 	"180px 88px #d4d4d8, 420px 44px #a1a1aa, 700px 120px #d4d4d8, 940px 60px #a1a1aa, 1080px 170px #d4d4d8, 300px 200px #71717a, 620px 240px #71717a, 1140px 320px #52525b, 90px 330px #52525b, 840px 300px #71717a";
@@ -47,8 +70,8 @@ export function buildCardHtml(card, publicDir) {
 	const pSize = [...card.proof].length > 100 ? 25 : 27;
 	return `<!doctype html>
 <html lang="${card.lang}" dir="${fa ? "rtl" : "ltr"}"><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?${FONTS[card.lang]}&display=block">
 <style>
+${fontFaceCss()}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { width: 1200px; height: 630px; overflow: hidden; }
 .card { position: relative; width: 1200px; height: 630px; background: #09090b; font-family: ${body}, sans-serif; overflow: hidden; }

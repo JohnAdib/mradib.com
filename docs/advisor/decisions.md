@@ -4,6 +4,18 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-20, the shared card reads as a finished review, OG fonts go local
+
+John shares the result after reviewing someone's CV, so the page and its social
+card should say the CV has been reviewed, not invite the recipient to score their
+own. The result page is now titled "Your CV review" (Persian: بررسی رزومه‌ی تو) and
+its card reads "Your CV, reviewed" / رزومه‌ت بررسی شد, scored out of 100 with the fix
+for each issue. Separately, the OG image generator no longer pulls webfonts from the
+Google Fonts CDN at render time: the CDN is unreachable in some build environments,
+which silently dropped Persian to a fallback face on the generated card. Fonts are
+now embedded from local @fontsource packages (Vazirmatn, Inter, Newsreader) so every
+card renders in the right face, Persian included, with no network at generate time.
+
 ## 2026-07-20, review flow polish and a shared review that seeds the guide
 
 A round of fixes from John using the tool for real. The whole grade card is now

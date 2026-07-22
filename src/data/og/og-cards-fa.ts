@@ -43,10 +43,9 @@ export const ogCardsFa: IOgCard[] = [
 		slug: "fa-resume-checklist",
 		route: "/fa/resume/checklist",
 		lang: "fa",
-		eyebrow: "کارنامه رزومه",
-		headline: "به رزومه‌ت نمره بده",
-		proof:
-			"امتیاز از ۱۰۰ برای هر بخش، با راه‌حل هر مشکل. نتیجه رو با یک لینک بگیر.",
+		eyebrow: "بررسی رزومه",
+		headline: "رزومه‌ت بررسی شد",
+		proof: "امتیاز از ۱۰۰ برای هر بخش، همراه با راه‌حل هر مشکل.",
 	},
 	{
 		slug: "fa-excel",
