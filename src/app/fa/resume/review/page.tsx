@@ -10,13 +10,13 @@ import { pageAlternates } from "@/lib/i18n/page-alternates";
 import { ogMetadata } from "@/lib/og-metadata";
 
 const pageDesc =
-	"یک نفر رزومه‌ت رو بررسی کرده. ببین از ۱۰۰ چه امتیازی گرفتی، بخش‌به‌بخش، همراه با راه‌حل هر مشکل.";
+	"بخش به بخش برو جلو. هر بخش یک کار مشخص داره تا خودت رزومه‌ت رو قوی‌تر کنی.";
 
 export const metadata: Metadata = {
 	title: "بررسی رزومه‌ی تو",
 	description: pageDesc + separator + myNameFa,
 	alternates: pageAlternates("/fa/resume/review"),
-	...ogMetadata("/fa/resume/review"),
+	...ogMetadata("/fa/resume/review", { title: "بررسی رزومه‌ت آماده‌ست" }),
 };
 
 const howToSteps = groupsFor("fa-IR").flatMap((group) =>
