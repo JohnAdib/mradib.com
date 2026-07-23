@@ -2,7 +2,14 @@ import type { JSX } from "react";
 export function EducationTips(): JSX.Element {
 	return (
 		<>
-			<h3 id="edu-tips">نکاتی در رابطه با بخش تحصیلات</h3>
+			<h3 id="edu-tips">
+				<a
+					href="#edu-tips"
+					className="no-underline text-inherit hover:underline"
+				>
+					نکاتی در رابطه با بخش تحصیلات
+				</a>
+			</h3>
 			<ul>
 				<li>
 					همیشه آخرین مدرک تحصیلی رو بالاتر قرار بدید و به‌ترتیب به عقب برگردید.

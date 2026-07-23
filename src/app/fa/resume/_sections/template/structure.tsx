@@ -10,7 +10,14 @@ export function StructureFormats(): JSX.Element {
 			<Msg severity="success">
 				ریکروتر قبل از اینکه محتوای رزومه شما رو بخونه، اون رو اسکن میکنه{" "}
 			</Msg>
-			<h3 id="structure">انواع ساختارهای رزومه</h3>
+			<h3 id="structure">
+				<a
+					href="#structure"
+					className="no-underline text-inherit hover:underline"
+				>
+					انواع ساختارهای رزومه
+				</a>
+			</h3>
 			<p>
 				سه نوع ساختار مختلف برای رزومه داریم که در شکل زیر اون‌ها رو میبینید.
 				تفاوت اون‌ها در تاکید روی بخش خاص و نحوه مرتب‌کردن بخش‌هاست. تفاوت در این
@@ -34,7 +41,12 @@ export function StructureFormats(): JSX.Element {
 			<StructureCompare />
 
 			<h4 id="chronological">
-				<abbr title="Chronological Resume Format">فرمت رزومه زمانی</abbr>
+				<a
+					href="#chronological"
+					className="no-underline text-inherit hover:underline"
+				>
+					<abbr title="Chronological Resume Format">فرمت رزومه زمانی</abbr>
+				</a>
 			</h4>
 			<p>
 				محبوب‌ترین فرمت رزومه کاری است و ایده‌آل برای کسانی است که تجربه کاری
@@ -53,7 +65,12 @@ export function StructureFormats(): JSX.Element {
 			</p>
 
 			<h4 id="functional">
-				<abbr title="Functional Resume Format">فرمت رزومه کاربردی</abbr>
+				<a
+					href="#functional"
+					className="no-underline text-inherit hover:underline"
+				>
+					<abbr title="Functional Resume Format">فرمت رزومه کاربردی</abbr>
+				</a>
 			</h4>
 			<p>
 				اگر دانشجو هستید یا تازه فارغ‌التحصیل شدید و تجربه کاری ندارید یا دنبال
@@ -67,7 +84,12 @@ export function StructureFormats(): JSX.Element {
 			</p>
 
 			<h4 id="combination">
-				<abbr title="Combination Resume Format">فرمت رزومه ترکیبی</abbr>
+				<a
+					href="#combination"
+					className="no-underline text-inherit hover:underline"
+				>
+					<abbr title="Combination Resume Format">فرمت رزومه ترکیبی</abbr>
+				</a>
 			</h4>
 			<p>
 				یک انتخاب خوب برای کسانی که مهارت‌های متنوعی دارن، مدل ترکیبی هست. اگه

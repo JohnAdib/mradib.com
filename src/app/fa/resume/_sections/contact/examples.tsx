@@ -9,7 +9,14 @@ import imgResumeContactExample5 from "./_img/resume-contact-example-5.png";
 export function ContactExamples(): JSX.Element {
 	return (
 		<>
-			<h3 id="examples">نمونه‌هایی از بخش تماس</h3>
+			<h3 id="examples">
+				<a
+					href="#examples"
+					className="no-underline text-inherit hover:underline"
+				>
+					نمونه‌هایی از بخش تماس
+				</a>
+			</h3>
 			<p>
 				یک نمونه موفق از بخش اطلاعات تماس، فارغ از دیزاین، میتونه شبیه به تصاویر
 				زیر باشه.

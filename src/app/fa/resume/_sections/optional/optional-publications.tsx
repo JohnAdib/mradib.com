@@ -2,7 +2,14 @@ import type { JSX } from "react";
 export function OptionalPublications(): JSX.Element {
 	return (
 		<>
-			<h3 id="publications">مقالات</h3>
+			<h3 id="publications">
+				<a
+					href="#publications"
+					className="no-underline text-inherit hover:underline"
+				>
+					مقالات
+				</a>
+			</h3>
 			<p>
 				آیا شما برخی اوقات برای سایت‌ها و مجلات می‌نویسید؟ یا سوابق علمی برجسته یا
 				مثلا مقاله ISI دارید؟
@@ -13,7 +20,14 @@ export function OptionalPublications(): JSX.Element {
 				به اون اثر ذکر کنید تا استخدام‌کننده بتونه یه چک حداقلی داشته باشه.
 			</p>
 
-			<h3 id="projects">پروژه‌ها</h3>
+			<h3 id="projects">
+				<a
+					href="#projects"
+					className="no-underline text-inherit hover:underline"
+				>
+					پروژه‌ها
+				</a>
+			</h3>
 			<p>
 				کار کردن روی پروژه‌های جانبی مرتبط می‌تونه اشتیاق شما رو به کارتون نشون
 				بده. مثلا یک پروژه‌ی کلاس دانشگاهی یا یه تجربه کارآفرینی پاره‌وقت یا کار

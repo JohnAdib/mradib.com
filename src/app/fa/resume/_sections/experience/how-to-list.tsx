@@ -16,7 +16,14 @@ export function ExperienceHowToList(): JSX.Element {
 				کلیات رو با هم مرور کنیم.
 			</p>
 
-			<h3 id="listing">نحوه فهرست کردن تجربیات کاری در رزومه</h3>
+			<h3 id="listing">
+				<a
+					href="#listing"
+					className="no-underline text-inherit hover:underline"
+				>
+					نحوه فهرست کردن تجربیات کاری در رزومه
+				</a>
+			</h3>
 			<Msg severity="info">
 				یادتون باشه شغل یعنی کاری که براش پول گرفتید و انجام دادید.
 			</Msg>
@@ -34,7 +41,11 @@ export function ExperienceHowToList(): JSX.Element {
 				<figcaption>خلاصه‌ای از اطلاعات مربوط به تجربه کاری در رزومه</figcaption>
 			</figure>
 
-			<h4 id="role">عنوان شغلی</h4>
+			<h4 id="role">
+				<a href="#role" className="no-underline text-inherit hover:underline">
+					عنوان شغلی
+				</a>
+			</h4>
 			<p>
 				همیشه عنوان شغلی رو اول بنویسید. وقتی استخدام‌کننده، رزومه شما رو با چشمش
 				اسکن میکنه، تو یک نگاه میخواد ببینه که آیا شما تجربه کاری مرتبط دارید.
@@ -45,7 +56,14 @@ export function ExperienceHowToList(): JSX.Element {
 				آگهی شغلی بوده بنویسید چون برای ATS هم می‌تونه مهم باشه.
 			</p>
 
-			<h4 id="company">اسم شرکت، توضیح و موقعیت</h4>
+			<h4 id="company">
+				<a
+					href="#company"
+					className="no-underline text-inherit hover:underline"
+				>
+					اسم شرکت، توضیح و موقعیت
+				</a>
+			</h4>
 			<p>
 				بعد باید اسم کارفرما و شرکت رو بیارید و خوبه که موقعیت یعنی کشور و شهرش
 				رو هم ذکر کنید. اگه شرکت معروفی نیست شاید بخواین به‌طور مختصر اون رو در
@@ -57,7 +75,11 @@ export function ExperienceHowToList(): JSX.Element {
 			</p>
 			<Pre language="plaintext">Full-time, Part-time, Contract, etc.</Pre>
 
-			<h4 id="dates">بازه زمانی فعالیت</h4>
+			<h4 id="dates">
+				<a href="#dates" className="no-underline text-inherit hover:underline">
+					بازه زمانی فعالیت
+				</a>
+			</h4>
 			<p>
 				بازه زمانی استخدام شما در شرکت. یعنی سال و ماه ورود و خروج از شرکت. برای
 				آخرین شغل بجای تاریخ می‌تونید عبارت present رو بنویسید یعنی تا همین الان.

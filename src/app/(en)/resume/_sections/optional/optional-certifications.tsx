@@ -2,7 +2,14 @@ import type { JSX } from "react";
 export function OptionalCertifications(): JSX.Element {
 	return (
 		<>
-			<h3 id="certifications">Certifications and awards</h3>
+			<h3 id="certifications">
+				<a
+					href="#certifications"
+					className="no-underline text-inherit hover:underline"
+				>
+					Certifications and awards
+				</a>
+			</h3>
 			<p>
 				Do you have an award that sets you apart in your field? Or a
 				certification that proves your expertise? If it is relevant to the job

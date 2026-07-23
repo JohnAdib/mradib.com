@@ -14,7 +14,14 @@ export function ActionVerbsIntro(): JSX.Element {
 				استفاده در رزومه قابل استفاده است.
 			</p>
 
-			<h3 id="writing">چگونه دستاوردهای خود را در رزومه بنویسیم؟</h3>
+			<h3 id="writing">
+				<a
+					href="#writing"
+					className="no-underline text-inherit hover:underline"
+				>
+					چگونه دستاوردهای خود را در رزومه بنویسیم؟
+				</a>
+			</h3>
 			<p>
 				ما میتونیم از دو مدل برای نوشتن هر بولت پوینت دستاورد در رزومه استفاده
 				کنیم.

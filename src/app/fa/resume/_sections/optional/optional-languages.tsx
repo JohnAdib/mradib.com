@@ -13,7 +13,14 @@ export function OptionalLanguages(): JSX.Element {
 				ارزشش رو داره به رزومه اضافه کنید و اگه ارزشش رو نداره ازش رد بشید.
 			</p>
 
-			<h3 id="languages">زبان</h3>
+			<h3 id="languages">
+				<a
+					href="#languages"
+					className="no-underline text-inherit hover:underline"
+				>
+					زبان
+				</a>
+			</h3>
 			<p>
 				آیا دو زبانه هستید؟ یا حتی بهتر! چند زبانه هستید؟ خوبه که بخش زبان رو به
 				رزومه خودتون اضافه کنید.
@@ -53,7 +60,14 @@ export function OptionalLanguages(): JSX.Element {
 				مادری اون شخص باشه!
 			</p>
 
-			<h3 id="volunteer">تجربه داوطلبانه</h3>
+			<h3 id="volunteer">
+				<a
+					href="#volunteer"
+					className="no-underline text-inherit hover:underline"
+				>
+					تجربه داوطلبانه
+				</a>
+			</h3>
 			<p>
 				اگه از اون دسته از افرادی هستید که تو اوقات فراغت خودتون به بقیه کمک
 				می‌کنید و درقبال اون هیچ انتظاری ندارید، احتمالش وجود داره که شما از اون

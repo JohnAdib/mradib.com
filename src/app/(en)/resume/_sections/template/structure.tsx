@@ -10,7 +10,14 @@ export function StructureFormats(): JSX.Element {
 			<Msg severity="success">
 				A recruiter scans your resume before they read a word of it{" "}
 			</Msg>
-			<h3 id="structure">Types of resume structure</h3>
+			<h3 id="structure">
+				<a
+					href="#structure"
+					className="no-underline text-inherit hover:underline"
+				>
+					Types of resume structure
+				</a>
+			</h3>
 			<p>
 				There are three different resume structures, and you can see them in the
 				figure below. They differ in which section they emphasize and how the
@@ -38,9 +45,14 @@ export function StructureFormats(): JSX.Element {
 			<StructureCompare />
 
 			<h4 id="chronological">
-				<abbr title="Chronological Resume Format">
-					Chronological resume format
-				</abbr>
+				<a
+					href="#chronological"
+					className="no-underline text-inherit hover:underline"
+				>
+					<abbr title="Chronological Resume Format">
+						Chronological resume format
+					</abbr>
+				</a>
 			</h4>
 			<p>
 				This is the most popular work resume format and it is ideal for people
@@ -60,7 +72,12 @@ export function StructureFormats(): JSX.Element {
 			</p>
 
 			<h4 id="functional">
-				<abbr title="Functional Resume Format">Functional resume format</abbr>
+				<a
+					href="#functional"
+					className="no-underline text-inherit hover:underline"
+				>
+					<abbr title="Functional Resume Format">Functional resume format</abbr>
+				</a>
 			</h4>
 			<p>
 				If you are a student, a recent graduate with no work experience, or you
@@ -74,7 +91,14 @@ export function StructureFormats(): JSX.Element {
 			</p>
 
 			<h4 id="combination">
-				<abbr title="Combination Resume Format">Combination resume format</abbr>
+				<a
+					href="#combination"
+					className="no-underline text-inherit hover:underline"
+				>
+					<abbr title="Combination Resume Format">
+						Combination resume format
+					</abbr>
+				</a>
 			</h4>
 			<p>
 				The combination format is a good choice for people with a diverse set of

@@ -2,7 +2,14 @@ import type { JSX } from "react";
 export function EducationTips(): JSX.Element {
 	return (
 		<>
-			<h3 id="edu-tips">A few tips about the education section</h3>
+			<h3 id="edu-tips">
+				<a
+					href="#edu-tips"
+					className="no-underline text-inherit hover:underline"
+				>
+					A few tips about the education section
+				</a>
+			</h3>
 			<ul>
 				<li>
 					Always put your most recent degree at the top and work backwards in

@@ -17,7 +17,14 @@ export function HardVsSoft(): JSX.Element {
 				نکته مهم، یادتون باشه مهارت‌های مرتبط با عنوان شغلی رو باید لیست کنید.
 			</Msg>
 
-			<h3 id="hard-skills">هارد اسکیل</h3>
+			<h3 id="hard-skills">
+				<a
+					href="#hard-skills"
+					className="no-underline text-inherit hover:underline"
+				>
+					هارد اسکیل
+				</a>
+			</h3>
 			<p>
 				هارد اسکیل قابل اندازه‌گیری است. میتونه هرچیزی باشه از زبان‌برنامه‌نویسی
 				مثل PHP تا یک کتابخونه مثل React تا حتی مهارت پخت قرمه‌سبزی!
@@ -52,7 +59,14 @@ export function HardVsSoft(): JSX.Element {
 			<Pre language="plaintext">Mathematics</Pre>
 			<Pre language="plaintext">Accounting & bookkeeping</Pre>
 
-			<h3 id="soft-skills">سافت اسکیل</h3>
+			<h3 id="soft-skills">
+				<a
+					href="#soft-skills"
+					className="no-underline text-inherit hover:underline"
+				>
+					سافت اسکیل
+				</a>
+			</h3>
 			<p>
 				مهارت‌های شخصی که میتونه ترکیبی از مهارت‌های اجتماعی، مهارت‌های ارتباطی،
 				ویژگی‌ها و صفات شخصی، ویژگی‌های شغلی و غیره باشه. مثلا میتونید مهارت‌هایی

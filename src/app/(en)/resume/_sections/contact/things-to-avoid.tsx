@@ -4,10 +4,21 @@ import { Msg } from "@/components/msg/msg";
 export function ThingsToAvoid(): JSX.Element {
 	return (
 		<>
-			<h3 id="avoid">What to avoid in the contact section</h3>
+			<h3 id="avoid">
+				<a href="#avoid" className="no-underline text-inherit hover:underline">
+					What to avoid in the contact section
+				</a>
+			</h3>
 			<p>Please make sure you have not put these items on your resume.</p>
 
-			<h4 id="birthdate">Date of birth</h4>
+			<h4 id="birthdate">
+				<a
+					href="#birthdate"
+					className="no-underline text-inherit hover:underline"
+				>
+					Date of birth
+				</a>
+			</h4>
 			<p>
 				A recruiter or HR does not need to know how old you are. Age is not
 				relevant to the decision. Worse, it can lead to age discrimination. If a
@@ -15,7 +26,14 @@ export function ThingsToAvoid(): JSX.Element {
 				not insist on putting it on your resume.
 			</p>
 
-			<h4 id="bad-email">Unprofessional email address</h4>
+			<h4 id="bad-email">
+				<a
+					href="#bad-email"
+					className="no-underline text-inherit hover:underline"
+				>
+					Unprofessional email address
+				</a>
+			</h4>
 			<p>
 				Use a simple email with your first and last name on a common provider
 				like Gmail so you never miss a message, for example{" "}
@@ -26,7 +44,11 @@ export function ThingsToAvoid(): JSX.Element {
 				Never use a work email from a previous job. It is highly unprofessional.
 			</Msg>
 
-			<h4 id="photo">Photo</h4>
+			<h4 id="photo">
+				<a href="#photo" className="no-underline text-inherit hover:underline">
+					Photo
+				</a>
+			</h4>
 			<p>
 				A recruiter does not need to know what you look like to evaluate your
 				resume, so do not add your photo. It invites a snap judgment. They will
@@ -43,13 +65,27 @@ export function ThingsToAvoid(): JSX.Element {
 				reject you.
 			</p>
 
-			<h4 id="address">Your home address!</h4>
+			<h4 id="address">
+				<a
+					href="#address"
+					className="no-underline text-inherit hover:underline"
+				>
+					Your home address!
+				</a>
+			</h4>
 			<p>
 				It is strange how often I see a full home address on some resumes. No
 				one is going to mail you a letter that they would need it for.
 			</p>
 
-			<h4 id="unprofessional">Other unprofessional details</h4>
+			<h4 id="unprofessional">
+				<a
+					href="#unprofessional"
+					className="no-underline text-inherit hover:underline"
+				>
+					Other unprofessional details
+				</a>
+			</h4>
 			<p>
 				If you have listed any of the following on your resume, please remove
 				them.

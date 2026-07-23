@@ -5,7 +5,14 @@ import imgResumeExperienceExample1 from "./_img/resume-experience-example-1.png"
 export function ExperienceWorkedExample(): JSX.Element {
 	return (
 		<>
-			<h3 id="example">بررسی یک نمونه از تجربه کاری</h3>
+			<h3 id="example">
+				<a
+					href="#example"
+					className="no-underline text-inherit hover:underline"
+				>
+					بررسی یک نمونه از تجربه کاری
+				</a>
+			</h3>
 			<figure>
 				<Image
 					src={imgResumeExperienceExample1}

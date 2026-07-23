@@ -7,7 +7,14 @@ import imgResumeFormatingInfographic from "./_img/resume-formating-infographic.j
 export function TraditionalVsCreative(): JSX.Element {
 	return (
 		<>
-			<h3 id="creative">قالب رزومه سنتی یا خلاقانه؟</h3>
+			<h3 id="creative">
+				<a
+					href="#creative"
+					className="no-underline text-inherit hover:underline"
+				>
+					قالب رزومه سنتی یا خلاقانه؟
+				</a>
+			</h3>
 			<p>
 				خب حالا که نکات اصلی رو گفتیم یه موردی هست که شاید لازم باشه درباره اون
 				صحبت کنیم و اون اینکه آیا از قالب‌های سنتی استفاده کنیم یا خلاقانه و

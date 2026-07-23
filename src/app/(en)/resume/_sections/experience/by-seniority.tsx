@@ -5,7 +5,12 @@ export function ExperienceBySeniority(): JSX.Element {
 	return (
 		<>
 			<h3 id="seniority">
-				How much work experience should you put on a resume?
+				<a
+					href="#seniority"
+					className="no-underline text-inherit hover:underline"
+				>
+					How much work experience should you put on a resume?
+				</a>
 			</h3>
 			<p>
 				If you have more than a decade of valuable work experience, you are
@@ -23,7 +28,14 @@ export function ExperienceBySeniority(): JSX.Element {
 				it is better to remove it from your resume.
 			</Msg>
 
-			<h4 id="no-experience">No work experience</h4>
+			<h4 id="no-experience">
+				<a
+					href="#no-experience"
+					className="no-underline text-inherit hover:underline"
+				>
+					No work experience
+				</a>
+			</h4>
 			<p>
 				If you have no experience, filling this section is definitely hard. You
 				can leave this section empty and focus on the other sections, or fill it
@@ -31,13 +43,31 @@ export function ExperienceBySeniority(): JSX.Element {
 				so on.
 			</p>
 
-			<h4 id="entry-level">Entry-level candidate</h4>
+			<h4 id="entry-level">
+				<a
+					href="#entry-level"
+					className="no-underline text-inherit hover:underline"
+				>
+					Entry-level candidate
+				</a>
+			</h4>
 			<p>List every job you have done so far.</p>
 
-			<h4 id="mid-level">Mid-level professional</h4>
+			<h4 id="mid-level">
+				<a
+					href="#mid-level"
+					className="no-underline text-inherit hover:underline"
+				>
+					Mid-level professional
+				</a>
+			</h4>
 			<p>Write only the work experience relevant to the job title.</p>
 
-			<h4 id="senior">Senior professionals</h4>
+			<h4 id="senior">
+				<a href="#senior" className="no-underline text-inherit hover:underline">
+					Senior professionals
+				</a>
+			</h4>
 			<p>
 				{" "}
 				List at most 15 years of work history. If your recent experience was as

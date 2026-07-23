@@ -5,7 +5,12 @@ export function SummaryDefinition(): JSX.Element {
 	return (
 		<>
 			<h3 id="definition">
-				What is a resume summary and when should you use it?
+				<a
+					href="#definition"
+					className="no-underline text-inherit hover:underline"
+				>
+					What is a resume summary and when should you use it?
+				</a>
 			</h3>
 			<p>
 				A summary is usually 2 to 3 sentences about your job. Using a resume
