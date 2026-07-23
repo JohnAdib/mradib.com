@@ -16,7 +16,7 @@ export function LayoutRules(): JSX.Element {
 				Does your resume shout read me, or does it say move on to the next one?
 			</Msg>
 
-			<h4 id="do-not">The do's of resume layout and design</h4>
+			<h4 id="dos">The do's of resume layout and design</h4>
 			<p>
 				Let's go over a few of the best practices for resume layout together.
 			</p>

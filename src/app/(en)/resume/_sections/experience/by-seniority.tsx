@@ -4,7 +4,9 @@ import { Msg } from "@/components/msg/msg";
 export function ExperienceBySeniority(): JSX.Element {
 	return (
 		<>
-			<h3>How much work experience should you put on a resume?</h3>
+			<h3 id="seniority">
+				How much work experience should you put on a resume?
+			</h3>
 			<p>
 				If you have more than a decade of valuable work experience, you are
 				probably confused about how much of it to put on your resume. If you
@@ -21,7 +23,7 @@ export function ExperienceBySeniority(): JSX.Element {
 				it is better to remove it from your resume.
 			</Msg>
 
-			<h4>No work experience</h4>
+			<h4 id="no-experience">No work experience</h4>
 			<p>
 				If you have no experience, filling this section is definitely hard. You
 				can leave this section empty and focus on the other sections, or fill it
@@ -29,13 +31,13 @@ export function ExperienceBySeniority(): JSX.Element {
 				so on.
 			</p>
 
-			<h4>Entry-level candidate</h4>
+			<h4 id="entry-level">Entry-level candidate</h4>
 			<p>List every job you have done so far.</p>
 
-			<h4>Mid-level professional</h4>
+			<h4 id="mid-level">Mid-level professional</h4>
 			<p>Write only the work experience relevant to the job title.</p>
 
-			<h4>Senior professionals</h4>
+			<h4 id="senior">Senior professionals</h4>
 			<p>
 				{" "}
 				List at most 15 years of work history. If your recent experience was as

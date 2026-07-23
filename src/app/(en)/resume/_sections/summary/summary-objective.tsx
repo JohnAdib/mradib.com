@@ -4,7 +4,7 @@ import { Pre } from "@/components/syntax-highlighter/pre";
 export function SummaryObjective(): JSX.Element {
 	return (
 		<>
-			<h3>The resume objective</h3>
+			<h3 id="objective">The resume objective</h3>
 			<p>
 				In some cases, this section is called the resume objective instead. It
 				refers to when you are planning to change your field of work, or you

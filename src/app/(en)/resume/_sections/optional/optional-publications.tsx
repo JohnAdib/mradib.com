@@ -2,7 +2,7 @@ import type { JSX } from "react";
 export function OptionalPublications(): JSX.Element {
 	return (
 		<>
-			<h3>Publications</h3>
+			<h3 id="publications">Publications</h3>
 			<p>
 				Do you sometimes write for websites and magazines? Or do you have
 				notable academic work, such as an ISI paper?
@@ -13,7 +13,7 @@ export function OptionalPublications(): JSX.Element {
 				the work so the recruiter can do a quick check.
 			</p>
 
-			<h3>Projects</h3>
+			<h3 id="projects">Projects</h3>
 			<p>
 				Working on relevant side projects can show your passion for your work.
 				For example, a university class project, a part time entrepreneurial

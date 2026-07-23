@@ -4,7 +4,7 @@ import { Pre } from "@/components/syntax-highlighter/pre";
 export function SummaryDefinition(): JSX.Element {
 	return (
 		<>
-			<h3>خلاصه رزومه چیست و چه زمانی باید استفاده شود؟</h3>
+			<h3 id="definition">خلاصه رزومه چیست و چه زمانی باید استفاده شود؟</h3>
 			<p>
 				خلاصه معمولا بین ۲ تا ۳ جمله درباره شغل شماست. توصیه میشه که از خلاصه
 				رزومه استفاده کنید هر چند اجباری نیست.

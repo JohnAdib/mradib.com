@@ -5,7 +5,7 @@ import imgResumeExperienceExample1 from "./_img/resume-experience-example-1.png"
 export function ExperienceWorkedExample(): JSX.Element {
 	return (
 		<>
-			<h3>Reviewing a work experience example</h3>
+			<h3 id="example">Reviewing a work experience example</h3>
 			<figure>
 				<Image
 					src={imgResumeExperienceExample1}

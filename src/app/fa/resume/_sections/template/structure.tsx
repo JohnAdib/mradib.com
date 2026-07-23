@@ -33,7 +33,7 @@ export function StructureFormats(): JSX.Element {
 
 			<StructureCompare />
 
-			<h4 id="structure-chronological">
+			<h4 id="chronological">
 				<abbr title="Chronological Resume Format">فرمت رزومه زمانی</abbr>
 			</h4>
 			<p>
@@ -52,7 +52,7 @@ export function StructureFormats(): JSX.Element {
 				کنید.
 			</p>
 
-			<h4 id="structure-functional">
+			<h4 id="functional">
 				<abbr title="Functional Resume Format">فرمت رزومه کاربردی</abbr>
 			</h4>
 			<p>
@@ -66,7 +66,7 @@ export function StructureFormats(): JSX.Element {
 				به‌صورت مختصر ذکر می‌شوند
 			</p>
 
-			<h4 id="structure-combination">
+			<h4 id="combination">
 				<abbr title="Combination Resume Format">فرمت رزومه ترکیبی</abbr>
 			</h4>
 			<p>

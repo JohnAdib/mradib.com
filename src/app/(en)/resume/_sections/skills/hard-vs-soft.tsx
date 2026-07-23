@@ -18,7 +18,7 @@ export function HardVsSoft(): JSX.Element {
 				job title.
 			</Msg>
 
-			<h3>Hard skills</h3>
+			<h3 id="hard-skills">Hard skills</h3>
 			<p>
 				A hard skill is measurable. It can be anything from a programming
 				language like PHP, to a library like React, to even knowing how to cook
@@ -55,7 +55,7 @@ export function HardVsSoft(): JSX.Element {
 			<Pre language="plaintext">Mathematics</Pre>
 			<Pre language="plaintext">Accounting & bookkeeping</Pre>
 
-			<h3>Soft skills</h3>
+			<h3 id="soft-skills">Soft skills</h3>
 			<p>
 				These are personal skills that can be a mix of social skills,
 				communication skills, personal traits and qualities, work-related

@@ -37,7 +37,7 @@ export function StructureFormats(): JSX.Element {
 
 			<StructureCompare />
 
-			<h4 id="structure-chronological">
+			<h4 id="chronological">
 				<abbr title="Chronological Resume Format">
 					Chronological resume format
 				</abbr>
@@ -59,7 +59,7 @@ export function StructureFormats(): JSX.Element {
 				the functional or combination formats.
 			</p>
 
-			<h4 id="structure-functional">
+			<h4 id="functional">
 				<abbr title="Functional Resume Format">Functional resume format</abbr>
 			</h4>
 			<p>
@@ -73,7 +73,7 @@ export function StructureFormats(): JSX.Element {
 				and work experience is mentioned briefly.
 			</p>
 
-			<h4 id="structure-combination">
+			<h4 id="combination">
 				<abbr title="Combination Resume Format">Combination resume format</abbr>
 			</h4>
 			<p>

@@ -12,7 +12,7 @@ export function OptionalLanguages(): JSX.Element {
 				a section is worth it, add it to your resume, and if it is not, skip it.
 			</p>
 
-			<h3>Languages</h3>
+			<h3 id="languages">Languages</h3>
 			<p>
 				Are you bilingual? Or, even better, multilingual? It is good to add a
 				languages section to your resume.
@@ -51,7 +51,7 @@ export function OptionalLanguages(): JSX.Element {
 				native speaker!
 			</p>
 
-			<h3>Volunteer experience</h3>
+			<h3 id="volunteer">Volunteer experience</h3>
 			<p>
 				If you are the kind of person who helps others in your free time without
 				expecting anything in return, there is a good chance you are the kind of

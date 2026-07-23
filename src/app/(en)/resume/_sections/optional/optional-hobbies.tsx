@@ -5,7 +5,7 @@ import imgResumeOptionalHobbies from "./_img/resume-optional-hobbies.png";
 export function OptionalHobbies(): JSX.Element {
 	return (
 		<>
-			<h3>Hobbies and interests</h3>
+			<h3 id="hobbies">Hobbies and interests</h3>
 			<p>
 				A little spice? This section may not be the most important one, but it
 				can still help you show a bit of your personality. Maybe the recruiter

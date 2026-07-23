@@ -12,13 +12,13 @@ export function EssentialInfo(): JSX.Element {
 				that effort for? Contact information is a vital part of your resume.
 			</p>
 
-			<h3>The essentials in the contact section</h3>
+			<h3 id="essentials">The essentials in the contact section</h3>
 			<figure>
 				<Image src={imgResumeContactCover} alt="Resume contact section" />
 				<figcaption>A summary of the contact details on a resume</figcaption>
 			</figure>
 
-			<h4>Full name</h4>
+			<h4 id="name">Full name</h4>
 			<p>It sounds simple!</p>
 			<Msg severity="warning">
 				{" "}
@@ -26,7 +26,7 @@ export function EssentialInfo(): JSX.Element {
 				your name.
 			</Msg>
 
-			<h4>Job title</h4>
+			<h4 id="headline">Job title</h4>
 			<p>
 				Your professional title can be your current role or the job you are
 				aiming for. For example, Full Stack Developer or Android Developer. One
@@ -38,13 +38,13 @@ export function EssentialInfo(): JSX.Element {
 				posting.
 			</Msg>
 
-			<h4>Email address</h4>
+			<h4 id="email">Email address</h4>
 			<p>Very important. Almost everything happens through this email.</p>
 
-			<h4>Phone number</h4>
+			<h4 id="phone">Phone number</h4>
 			<p>In rare cases they might call you directly.</p>
 
-			<h4>Location</h4>
+			<h4 id="location">Location</h4>
 			<p>
 				This means your current city and country, so the company can tell
 				whether you would need to relocate.

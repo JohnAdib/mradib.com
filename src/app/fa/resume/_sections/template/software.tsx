@@ -7,9 +7,7 @@ import imgResumeFormatStructureExample from "./_img/resume-format-structure-exam
 export function BuildingSoftware(): JSX.Element {
 	return (
 		<>
-			<h3 id="choose-software">
-				انتخاب نرم‌افزار یا سرویس مناسب برای ساخت رزومه
-			</h3>
+			<h3 id="software">انتخاب نرم‌افزار یا سرویس مناسب برای ساخت رزومه</h3>
 			<p>
 				بعد از انتخاب ساختار و قبل از اینکه بخواین شروع به نوشتن رزومه کنید،
 				باید تصمیم بگیرید که با چه ابزاری میخواین رزومه خودتون رو بسازید. روش‌های

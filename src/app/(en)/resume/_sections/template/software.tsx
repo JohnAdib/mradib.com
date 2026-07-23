@@ -7,7 +7,7 @@ import imgResumeFormatStructureExample from "./_img/resume-format-structure-exam
 export function BuildingSoftware(): JSX.Element {
 	return (
 		<>
-			<h3 id="choose-software">
+			<h3 id="software">
 				Choosing the right software or service to build your resume
 			</h3>
 			<p>
