@@ -1,6 +1,7 @@
 import type { IOgCard } from "./og-card-interface";
 import { ogCardsEn } from "./og-cards-en";
 import { ogCardsEnDetail } from "./og-cards-en-detail";
+import { ogCardsEnOffer } from "./og-cards-en-offer";
 import { ogCardsFa } from "./og-cards-fa";
 import { ogCardsTalks } from "./og-cards-talks";
 
@@ -10,6 +11,7 @@ export type { IOgArtwork, IOgCard } from "./og-card-interface";
 export const ogCards: IOgCard[] = [
 	...ogCardsEn,
 	...ogCardsEnDetail,
+	...ogCardsEnOffer,
 	...ogCardsTalks,
 	...ogCardsFa,
 ];

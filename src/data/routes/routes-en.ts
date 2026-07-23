@@ -8,6 +8,7 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/", lastModified: "2026-07-19", faPath: "/fa" },
 	{ path: "/about", lastModified: "2026-07-19" },
 	{ path: "/articles", lastModified: "2026-07-19" },
+	{ path: "/audit", lastModified: "2026-07-23" },
 	{ path: "/awards", lastModified: "2026-07-19" },
 	{ path: "/contact", lastModified: "2026-07-19" },
 	{ path: "/gallery", lastModified: "2026-07-19" },

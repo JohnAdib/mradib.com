@@ -45,6 +45,9 @@ John asks for them. Until then, tiers live only in this registry.
 | TiltCard | src/components/tilt-card/ | candidate |
 | Reveal | src/components/reveal/ | candidate |
 | HighlightCard | src/components/home/highlight-card.tsx | candidate |
+| YouTubeEmbed | src/components/video/youtube-embed.tsx | candidate |
+| TalkMedia | src/components/talk/talk-media.tsx | candidate |
+| PricingCard | src/components/pricing/pricing-card.tsx | candidate |
 
 Components not listed are feature components; add them here when they show
 reuse potential.
