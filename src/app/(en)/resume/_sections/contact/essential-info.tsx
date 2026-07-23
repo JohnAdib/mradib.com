@@ -12,13 +12,24 @@ export function EssentialInfo(): JSX.Element {
 				that effort for? Contact information is a vital part of your resume.
 			</p>
 
-			<h3>The essentials in the contact section</h3>
+			<h3 id="essentials">
+				<a
+					href="#essentials"
+					className="no-underline text-inherit hover:underline"
+				>
+					The essentials in the contact section
+				</a>
+			</h3>
 			<figure>
 				<Image src={imgResumeContactCover} alt="Resume contact section" />
 				<figcaption>A summary of the contact details on a resume</figcaption>
 			</figure>
 
-			<h4>Full name</h4>
+			<h4 id="name">
+				<a href="#name" className="no-underline text-inherit hover:underline">
+					Full name
+				</a>
+			</h4>
 			<p>It sounds simple!</p>
 			<Msg severity="warning">
 				{" "}
@@ -26,7 +37,14 @@ export function EssentialInfo(): JSX.Element {
 				your name.
 			</Msg>
 
-			<h4>Job title</h4>
+			<h4 id="headline">
+				<a
+					href="#headline"
+					className="no-underline text-inherit hover:underline"
+				>
+					Job title
+				</a>
+			</h4>
 			<p>
 				Your professional title can be your current role or the job you are
 				aiming for. For example, Full Stack Developer or Android Developer. One
@@ -38,13 +56,28 @@ export function EssentialInfo(): JSX.Element {
 				posting.
 			</Msg>
 
-			<h4>Email address</h4>
+			<h4 id="email">
+				<a href="#email" className="no-underline text-inherit hover:underline">
+					Email address
+				</a>
+			</h4>
 			<p>Very important. Almost everything happens through this email.</p>
 
-			<h4>Phone number</h4>
+			<h4 id="phone">
+				<a href="#phone" className="no-underline text-inherit hover:underline">
+					Phone number
+				</a>
+			</h4>
 			<p>In rare cases they might call you directly.</p>
 
-			<h4>Location</h4>
+			<h4 id="location">
+				<a
+					href="#location"
+					className="no-underline text-inherit hover:underline"
+				>
+					Location
+				</a>
+			</h4>
 			<p>
 				This means your current city and country, so the company can tell
 				whether you would need to relocate.

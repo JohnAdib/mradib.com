@@ -5,7 +5,11 @@ import { Msg } from "@/components/msg/msg";
 export function LayoutRules(): JSX.Element {
 	return (
 		<>
-			<h3 id="layout">What is the best layout for a resume?</h3>
+			<h3 id="layout">
+				<a href="#layout" className="no-underline text-inherit hover:underline">
+					What is the best layout for a resume?
+				</a>
+			</h3>
 			<p>
 				The first thing a recruiter notices is the resume's layout. Does it look
 				messy and cluttered, or organized and clean? Is it too short or too
@@ -16,7 +20,11 @@ export function LayoutRules(): JSX.Element {
 				Does your resume shout read me, or does it say move on to the next one?
 			</Msg>
 
-			<h4 id="do-not">The do's of resume layout and design</h4>
+			<h4 id="dos">
+				<a href="#dos" className="no-underline text-inherit hover:underline">
+					The do's of resume layout and design
+				</a>
+			</h4>
 			<p>
 				Let's go over a few of the best practices for resume layout together.
 			</p>

@@ -10,7 +10,14 @@ import imgResumeTopSkills from "./_img/resume-top-skills.png";
 export function SkillTailoring(): JSX.Element {
 	return (
 		<>
-			<h3>مهارت‌ها را متناسب با آگهی‌ شغلی مدنظرتون تنظیم کنید</h3>
+			<h3 id="tailoring">
+				<a
+					href="#tailoring"
+					className="no-underline text-inherit hover:underline"
+				>
+					مهارت‌ها را متناسب با آگهی‌ شغلی مدنظرتون تنظیم کنید
+				</a>
+			</h3>
 			<p>
 				ممکنه شما مهارت‌هایی عالی و کمیاب داشته باشید ولی این همیشه موثر نیست.
 				مثلا فرض کنید شما حسابداری بلد هستید اما میشه بگید یک برنامه‌نویس دقیقا
@@ -27,7 +34,14 @@ export function SkillTailoring(): JSX.Element {
 				مهارت‌هایی است و توی رشد شخصی خودتون سعی کنید به اون سمت برید.
 			</p>
 
-			<h3>مهارت‌های عمومی رو فراموش نکنید</h3>
+			<h3 id="general">
+				<a
+					href="#general"
+					className="no-underline text-inherit hover:underline"
+				>
+					مهارت‌های عمومی رو فراموش نکنید
+				</a>
+			</h3>
 			<p>
 				بعضی از مهارت‌ها مناسب طیف وسیعی از شغل‌ها هستن. برخی از سافت‌اسکیل‌ها مثل
 				کارتیمی، تفکر انتقادی، رهبری و برخی از هارداسکیل‌ها مثل اکسل، پاورپوینت،
@@ -89,7 +103,14 @@ export function SkillTailoring(): JSX.Element {
 				</figure>
 			</Accordion>
 
-			<h4>بیشترین درخواست سافت‌اسکیل برای عموم صنایع</h4>
+			<h4 id="requested">
+				<a
+					href="#requested"
+					className="no-underline text-inherit hover:underline"
+				>
+					بیشترین درخواست سافت‌اسکیل برای عموم صنایع
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Time management, Effective communication, Emotional intelligence,
 				Conflict management, Teamwork skills, Stress management, Productivity &

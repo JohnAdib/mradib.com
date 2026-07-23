@@ -5,7 +5,11 @@ import { Msg } from "@/components/msg/msg";
 export function LayoutRules(): JSX.Element {
 	return (
 		<>
-			<h3 id="layout">بهترین چیدمان برای رزومه چیست؟</h3>
+			<h3 id="layout">
+				<a href="#layout" className="no-underline text-inherit hover:underline">
+					بهترین چیدمان برای رزومه چیست؟
+				</a>
+			</h3>
 			<p>
 				اولین موردی که ریکروتر بهش توجه میکنه، چیدمان رزومه است. آیا شلخته و
 				درهم برهم به‌نظر میرسه یا سازماندهی‌شده و تمیزه؟ آیا خیلی کوتاهه یا خیلی
@@ -16,7 +20,11 @@ export function LayoutRules(): JSX.Element {
 				آیا رزومه شما فریاد میزنه من رو بخون؟ یا خودش داره میگه برو بعدی؟
 			</Msg>
 
-			<h4 id="do-not">بایدهای طرح‌بندی و چیدمان رزومه</h4>
+			<h4 id="dos">
+				<a href="#dos" className="no-underline text-inherit hover:underline">
+					بایدهای طرح‌بندی و چیدمان رزومه
+				</a>
+			</h4>
 			<p>
 				بزارید چند تا از بهترین روش‌ها در مورد چیدمان رزومه رو با هم مرور کنیم
 			</p>

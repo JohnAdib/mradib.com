@@ -4,6 +4,15 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-22, every guide heading is a deep link
+
+Every sub heading on the resume guide now carries a short id, the same id on the
+English and Persian pages, so any point in the guide can be linked to directly.
+Ids are one word where it reads cleanly, and they never repeat on the page. Each
+sub heading is also its own link, the same pattern the section titles use, so
+clicking it sets the URL to that heading, and a shared link lands the heading just
+below the sticky header rather than under it.
+
 ## 2026-07-22, Persian resume guide shares its cover as the social card
 
 The Persian resume guide opens with a designed cover, the yellow board that reads

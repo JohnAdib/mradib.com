@@ -6,7 +6,14 @@ import imgResumeExperienceAccomplishments from "./_img/resume-experience-accompl
 export function ExperienceAchievements(): JSX.Element {
 	return (
 		<>
-			<h4>Achievements or responsibilities</h4>
+			<h4 id="achievements">
+				<a
+					href="#achievements"
+					className="no-underline text-inherit hover:underline"
+				>
+					Achievements or responsibilities
+				</a>
+			</h4>
 			<p>
 				This part is the core of every work experience entry. Depending on your
 				field, you can list your achievements or your responsibilities, which we

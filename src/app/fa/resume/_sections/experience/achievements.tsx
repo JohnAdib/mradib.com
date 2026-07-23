@@ -6,7 +6,14 @@ import imgResumeExperienceAccomplishments from "./_img/resume-experience-accompl
 export function ExperienceAchievements(): JSX.Element {
 	return (
 		<>
-			<h4>دستاوردها یا مسئولیت‌ها</h4>
+			<h4 id="achievements">
+				<a
+					href="#achievements"
+					className="no-underline text-inherit hover:underline"
+				>
+					دستاوردها یا مسئولیت‌ها
+				</a>
+			</h4>
 			<p>
 				هسته اصلی هر تجربه کاری، این بخش هست. بسته به رشته، می‌تونید دستاوردها یا
 				مسئولیت‌های خودتون رو ذکر کنید که در ادامه دقیق‌تر بررسی خواهیم کرد.

@@ -7,8 +7,13 @@ import imgResumeFormatStructureExample from "./_img/resume-format-structure-exam
 export function BuildingSoftware(): JSX.Element {
 	return (
 		<>
-			<h3 id="choose-software">
-				Choosing the right software or service to build your resume
+			<h3 id="software">
+				<a
+					href="#software"
+					className="no-underline text-inherit hover:underline"
+				>
+					Choosing the right software or service to build your resume
+				</a>
 			</h3>
 			<p>
 				After choosing a structure and before you start writing your resume, you

@@ -9,7 +9,14 @@ import imgResumeContactExample5 from "./_img/resume-contact-example-5.png";
 export function ContactExamples(): JSX.Element {
 	return (
 		<>
-			<h3>Examples of the contact section</h3>
+			<h3 id="examples">
+				<a
+					href="#examples"
+					className="no-underline text-inherit hover:underline"
+				>
+					Examples of the contact section
+				</a>
+			</h3>
 			<p>
 				A successful contact section, design aside, can look like the images
 				below.

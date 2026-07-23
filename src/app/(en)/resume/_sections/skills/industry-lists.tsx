@@ -5,7 +5,14 @@ import { Pre } from "@/components/syntax-highlighter/pre";
 export function IndustryLists(): JSX.Element {
 	return (
 		<Accordion title="Skills by industry">
-			<h4>Marketing skills</h4>
+			<h4 id="marketing">
+				<a
+					href="#marketing"
+					className="no-underline text-inherit hover:underline"
+				>
+					Marketing skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Data analysis, Web analytics, SEO/SEM, HTML & CSS, Wordpress, Email
 				marketing, Web scraping, CRO and A/B Testing Data visualization &
@@ -16,7 +23,14 @@ export function IndustryLists(): JSX.Element {
 				Copywriting, Storytelling, Sales, CMS Tools
 			</Pre>
 
-			<h4>Management skills</h4>
+			<h4 id="management">
+				<a
+					href="#management"
+					className="no-underline text-inherit hover:underline"
+				>
+					Management skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Six Sigma techniques, The McKinsey 7s Framework, Porter’s Five Forces,
 				PESTEL, Emotional Intelligence,Dealing with work-related stress,
@@ -25,7 +39,11 @@ export function IndustryLists(): JSX.Element {
 				Proposal writing, Problem-solving, Innovation, Charisma
 			</Pre>
 
-			<h4>Sales skills</h4>
+			<h4 id="sales">
+				<a href="#sales" className="no-underline text-inherit hover:underline">
+					Sales skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Customer Relationship Management (CRM), Cold-calling, Negotiation,
 				Public speaking, Closing, Lead generation, Buyer-Responsive selling,
@@ -34,7 +52,11 @@ export function IndustryLists(): JSX.Element {
 				Time management
 			</Pre>
 
-			<h4>Design skills</h4>
+			<h4 id="design">
+				<a href="#design" className="no-underline text-inherit hover:underline">
+					Design skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Adobe Creative Suite: Illustrator, InDesign, Photoshop, Dreamweaver,
 				Infographics, HTML & CSS, Photo editing, Typography: spacing, line
@@ -45,7 +67,14 @@ export function IndustryLists(): JSX.Element {
 				Color sense & theory, Ad design, Active listening
 			</Pre>
 
-			<h4>Basic technical skills</h4>
+			<h4 id="technical">
+				<a
+					href="#technical"
+					className="no-underline text-inherit hover:underline"
+				>
+					Basic technical skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Microsoft Office Pack: Word, Excel, Access, Publisher, Outlook,
 				Powerpoint, Filing and paper management, Data entry, Bookkeeping through
@@ -54,7 +83,14 @@ export function IndustryLists(): JSX.Element {
 				sharing
 			</Pre>
 
-			<h4>Accounting and finance skills</h4>
+			<h4 id="finance">
+				<a
+					href="#finance"
+					className="no-underline text-inherit hover:underline"
+				>
+					Accounting and finance skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Microsoft Excel (Advanced), Enterprise Resource Planning, Big Data
 				Analysis & SQL, Know Your Customers (KYC), Cognos Analytics (IBM),
@@ -63,7 +99,14 @@ export function IndustryLists(): JSX.Element {
 				competence, Accuracy, Attention to detail
 			</Pre>
 
-			<h4>Teaching skills</h4>
+			<h4 id="teaching">
+				<a
+					href="#teaching"
+					className="no-underline text-inherit hover:underline"
+				>
+					Teaching skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Updated curriculum knowledge, Research & Data analysis, Communication,
 				Educational platforms (software like Elearn), Stress management,
@@ -71,7 +114,14 @@ export function IndustryLists(): JSX.Element {
 				Enthusiasm, Motivation
 			</Pre>
 
-			<h4>Web design skills</h4>
+			<h4 id="web-design">
+				<a
+					href="#web-design"
+					className="no-underline text-inherit hover:underline"
+				>
+					Web design skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				HTML/CSS, CSS preprocessors, Javascript, Wordpress, Graphic User
 				Interfaces (GUI), Git/Version control (Github, gitlab), Search Engine
@@ -80,7 +130,14 @@ export function IndustryLists(): JSX.Element {
 				Testing/Debugging, Responsive design principles
 			</Pre>
 
-			<h4>Business analysis skills</h4>
+			<h4 id="analysis">
+				<a
+					href="#analysis"
+					className="no-underline text-inherit hover:underline"
+				>
+					Business analysis skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				SQL (a must) and Hive (optional), Programming language (R, Python,
 				Scala, Matlab), STATA, SPSS, SAS, Data Mapping, Entity Relationship
@@ -89,7 +146,14 @@ export function IndustryLists(): JSX.Element {
 				Modeling, Technical and non-technical communication
 			</Pre>
 
-			<h4>Nursing and healthcare skills</h4>
+			<h4 id="healthcare">
+				<a
+					href="#healthcare"
+					className="no-underline text-inherit hover:underline"
+				>
+					Nursing and healthcare skills
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Mathematics, CPR, Patient care and assistance, Paperwork/record-keeping
 				abilities, Compassion, Advanced Cardiac, Life Support (ACLS), Telemetry,

@@ -7,8 +7,13 @@ import imgResumeFormatStructureExample from "./_img/resume-format-structure-exam
 export function BuildingSoftware(): JSX.Element {
 	return (
 		<>
-			<h3 id="choose-software">
-				انتخاب نرم‌افزار یا سرویس مناسب برای ساخت رزومه
+			<h3 id="software">
+				<a
+					href="#software"
+					className="no-underline text-inherit hover:underline"
+				>
+					انتخاب نرم‌افزار یا سرویس مناسب برای ساخت رزومه
+				</a>
 			</h3>
 			<p>
 				بعد از انتخاب ساختار و قبل از اینکه بخواین شروع به نوشتن رزومه کنید،

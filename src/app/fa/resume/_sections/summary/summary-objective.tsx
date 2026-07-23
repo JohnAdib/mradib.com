@@ -4,7 +4,14 @@ import { Pre } from "@/components/syntax-highlighter/pre";
 export function SummaryObjective(): JSX.Element {
 	return (
 		<>
-			<h3>هدف رزومه</h3>
+			<h3 id="objective">
+				<a
+					href="#objective"
+					className="no-underline text-inherit hover:underline"
+				>
+					هدف رزومه
+				</a>
+			</h3>
 			<p>
 				در بعضی از شرایط، این بخش به‌عنوان هدف رزومه هم نام‌گذاری میشه که اشاره به
 				حالتی که شما قصد تغییر زمینه کاری خودتون رو دارید یا تازه از دانشگاه

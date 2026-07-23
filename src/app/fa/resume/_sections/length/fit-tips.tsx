@@ -4,7 +4,11 @@ import { Msg } from "@/components/msg/msg";
 export function LengthFitTips(): JSX.Element {
 	return (
 		<>
-			<h3>چطور رزومه رو در یک صفحه جا بدم؟</h3>
+			<h3 id="fit">
+				<a href="#fit" className="no-underline text-inherit hover:underline">
+					چطور رزومه رو در یک صفحه جا بدم؟
+				</a>
+			</h3>
 			<Msg severity="warning">بزارید واقع‌بین باشیم. سخته.</Msg>
 			<p>
 				وقتی تازه‌کار هستید همه‌چیز رو سعی می‌کنید توی رزومه بزارید و بازم شاید یک
@@ -15,7 +19,14 @@ export function LengthFitTips(): JSX.Element {
 				بزارید یک سری تکنیک با هم چک کنیم که بتونیم رزومه رو یک صفحه‌ای کنیم.
 			</p>
 
-			<h4>روی اطلاعات مرتبط تمرکز کنید</h4>
+			<h4 id="relevant">
+				<a
+					href="#relevant"
+					className="no-underline text-inherit hover:underline"
+				>
+					روی اطلاعات مرتبط تمرکز کنید
+				</a>
+			</h4>
 			<p>
 				باید همیشه یادتون باشه که فقط اطلاعات مرتبط که توی آگهی شغلی ذکر شده و
 				کارفرما دنبال اون هست، مهم هستند. مثلا اگر به‌عنوان مهندس نرم‌افزار اپلای
@@ -24,7 +35,14 @@ export function LengthFitTips(): JSX.Element {
 				جا کم داشته باشید.
 			</p>
 
-			<h4>دستاورها بجای مسئولیت‌ها</h4>
+			<h4 id="results">
+				<a
+					href="#results"
+					className="no-underline text-inherit hover:underline"
+				>
+					دستاورها بجای مسئولیت‌ها
+				</a>
+			</h4>
 			<p>
 				لیست کردن مسئولیت‌ها هیچ فایده‌ای نداره، هم رزومه رو طولانی میکنه و هم
 				کارفرما رو خسته از خوندن و به‌هیچ عنوان شما رو متمایز نمی‌کنه. همین که
@@ -37,7 +55,14 @@ export function LengthFitTips(): JSX.Element {
 				مفید باشند.
 			</p>
 
-			<h4>سفارشی کردن حاشیه‌ها</h4>
+			<h4 id="margins">
+				<a
+					href="#margins"
+					className="no-underline text-inherit hover:underline"
+				>
+					سفارشی کردن حاشیه‌ها
+				</a>
+			</h4>
 			<p>
 				شما همیشه میتونید با کم کردن حاشیه‌های صفحه، فضای خالی و اضافه ایجاد
 				کنید. بجای ۲.۵ سانت می‌تونید ۱ سانت حاشیه درنظر بگیرید تا کلی فضای خالی
@@ -45,7 +70,11 @@ export function LengthFitTips(): JSX.Element {
 				بخش‌ها و ارتفاع خطوط میتونه کم‌تر بشه تا به فضای شما اضافه بشه.
 			</p>
 
-			<h4>فونت کوچک‌تر</h4>
+			<h4 id="font">
+				<a href="#font" className="no-underline text-inherit hover:underline">
+					فونت کوچک‌تر
+				</a>
+			</h4>
 			<p>
 				سایز فونت ۱۲ برای نوشته معمولی هست اما به این معنی نیست که شما باید توی
 				رزومه خودتون ازش پیروی کنید. می‌تونید ۱۱ یا ۱۱.۵ رو امتحان کنید تا کلی
@@ -53,7 +82,11 @@ export function LengthFitTips(): JSX.Element {
 				رزومه نباشه.
 			</p>
 
-			<h4>فضای غیرضروری هدر رو حذف کنید</h4>
+			<h4 id="header">
+				<a href="#header" className="no-underline text-inherit hover:underline">
+					فضای غیرضروری هدر رو حذف کنید
+				</a>
+			</h4>
 			<p>
 				اطلاعات تماس یا خلاصه رزومه بعضی به‌دلیل دیزاین فضای زیادی رو اشغال
 				می‌کنن. فضای هدر رو بهینه کنید.

@@ -4,19 +4,34 @@ import { Msg } from "@/components/msg/msg";
 export function OptionalInfo(): JSX.Element {
 	return (
 		<>
-			<h3>اطلاعات اختیاری در بخش تماس رزومه</h3>
+			<h3 id="extras">
+				<a href="#extras" className="no-underline text-inherit hover:underline">
+					اطلاعات اختیاری در بخش تماس رزومه
+				</a>
+			</h3>
 			<p>
 				با اضافه کردن بخش‌های اختیاری مطمئن بشید که ارزشی به رزومه خودتون اضافه
 				می‌کنید.
 			</p>
 
-			<h4>آدرس پروفایل لینکدین</h4>
+			<h4 id="linkedin">
+				<a
+					href="#linkedin"
+					className="no-underline text-inherit hover:underline"
+				>
+					آدرس پروفایل لینکدین
+				</a>
+			</h4>
 			<p>
 				اگر یک پروفایل آپدیت دارید که میتونه ارزش رزومه شما رو بالا ببره، ایده
 				خوبیه که اون رو اضافه کنید.
 			</p>
 
-			<h4>شبکه‌های اجتماعی</h4>
+			<h4 id="social">
+				<a href="#social" className="no-underline text-inherit hover:underline">
+					شبکه‌های اجتماعی
+				</a>
+			</h4>
 			<p>
 				یا نمونه کارهای خودتون رو آنلاین منتشر کردید؟ مثلا برای برنامه‌نویسان این
 				می‌تونه آدرس گیت‌هاب یا برای دیزاینرها میتونه دریبل یا برای نویسنده‌ها
@@ -31,7 +46,14 @@ export function OptionalInfo(): JSX.Element {
 				شخصی و مثلا به‌زبان فارسی هستند بدرد چی میخوره؟
 			</p>
 
-			<h4>وب‌سایت شخصی</h4>
+			<h4 id="website">
+				<a
+					href="#website"
+					className="no-underline text-inherit hover:underline"
+				>
+					وب‌سایت شخصی
+				</a>
+			</h4>
 			<p>
 				اگه وب‌سایت شخصی دارید یا وبلاگی که توش درباره تخصص خودتون نوشتید، خوبه
 				که اون رو به رزومه اضافه کنید. یا مثلا اگه کار گرافیکی میکنید و

@@ -4,7 +4,11 @@ import { Msg } from "@/components/msg/msg";
 export function SkillLeveling(): JSX.Element {
 	return (
 		<>
-			<h3>مهارت‌ها رو چطور لیست کنیم؟</h3>
+			<h3 id="levels">
+				<a href="#levels" className="no-underline text-inherit hover:underline">
+					مهارت‌ها رو چطور لیست کنیم؟
+				</a>
+			</h3>
 			<p>
 				اولین اقدام اینه که مهارت‌‌های سخت خودتون رو لیست کنید. مثلا وقتی
 				برنامه‌نویس هستید با یک فریم‌ورک کار کردید یا یک زبان بلد هستید. به‌عنوان
@@ -12,7 +16,14 @@ export function SkillLeveling(): JSX.Element {
 			</p>
 			<ul>
 				<li>
-					<h4>مبتدی</h4>
+					<h4 id="beginner">
+						<a
+							href="#beginner"
+							className="no-underline text-inherit hover:underline"
+						>
+							مبتدی
+						</a>
+					</h4>
 					<p>
 						شما کمی تجربه اولیه درباره این مهارت دارید که ممکنه از یک تمرین کلاس
 						آموزشی یا یک تفریح آخرهفته‌ای باشه. میشه گفت تنها با موضوع آشنا
@@ -20,14 +31,28 @@ export function SkillLeveling(): JSX.Element {
 					</p>
 				</li>
 				<li>
-					<h4>متوسط</h4>
+					<h4 id="intermediate">
+						<a
+							href="#intermediate"
+							className="no-underline text-inherit hover:underline"
+						>
+							متوسط
+						</a>
+					</h4>
 					<p>
 						شما از این مهارت در محیط کاری استفاده کردید و سطح درک خوبی ازش
 						دارید.
 					</p>
 				</li>
 				<li>
-					<h4>پیشرفته</h4>
+					<h4 id="advanced">
+						<a
+							href="#advanced"
+							className="no-underline text-inherit hover:underline"
+						>
+							پیشرفته
+						</a>
+					</h4>
 					<p>
 						شما کاملا در این زمینه در سطح بالایی تخصص دارید و حتی می‌تونید به
 						سایر همکاران خودتون آموزش بدید.

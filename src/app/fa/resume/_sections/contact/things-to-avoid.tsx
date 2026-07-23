@@ -4,10 +4,21 @@ import { Msg } from "@/components/msg/msg";
 export function ThingsToAvoid(): JSX.Element {
 	return (
 		<>
-			<h3>نبایدها در بخش تماس رزومه</h3>
+			<h3 id="avoid">
+				<a href="#avoid" className="no-underline text-inherit hover:underline">
+					نبایدها در بخش تماس رزومه
+				</a>
+			</h3>
 			<p>لطفا مطمئن بشید که این موراد رو تو رزومه خودتون قرار ندادید!</p>
 
-			<h4>تاریخ تولد</h4>
+			<h4 id="birthdate">
+				<a
+					href="#birthdate"
+					className="no-underline text-inherit hover:underline"
+				>
+					تاریخ تولد
+				</a>
+			</h4>
 			<p>
 				استخدام‌کننده یا منابع انسانی نیازی نداره که بدونه شما چند سالتونه! سن
 				برای تصمیم‌گیری مهم نیست. بدتر از اون ممکنه منجر به تبعیض بر اساس سن بشه.
@@ -15,7 +26,14 @@ export function ThingsToAvoid(): JSX.Element {
 				قرار دادنش توی رزومه نداشته باشید.
 			</p>
 
-			<h4>آدرس ایمیل غیرحرفه‌ای</h4>
+			<h4 id="bad-email">
+				<a
+					href="#bad-email"
+					className="no-underline text-inherit hover:underline"
+				>
+					آدرس ایمیل غیرحرفه‌ای
+				</a>
+			</h4>
 			<p>
 				یک ایمیل ساده با اسم و فامیلی خودتون روی یک سرویس دهنده عمومی مثل جیمیل
 				داشته باشید تا از دریافت ایمیل‌ها خاطرجمع باشید مثلا{" "}
@@ -26,7 +44,11 @@ export function ThingsToAvoid(): JSX.Element {
 				به‌هیچ عنوان از ایمیل کاری قبلی استفاده نکنید، به‌شدت غیرحرفه‌ای است.
 			</Msg>
 
-			<h4>تصویر</h4>
+			<h4 id="photo">
+				<a href="#photo" className="no-underline text-inherit hover:underline">
+					تصویر
+				</a>
+			</h4>
 			<p>
 				استخدام‌کننده برای ارزیابی رزومه شما نیازی نداره که بدونه شما چه شکلی
 				هستید. پس عکس خودتون رو قرار ندید. منجر به قضاوت اولیه میشه. تو مصاحبه
@@ -42,13 +64,27 @@ export function ThingsToAvoid(): JSX.Element {
 				رو ریجکت کنه.
 			</p>
 
-			<h4>آدرس خونه‌تون!</h4>
+			<h4 id="address">
+				<a
+					href="#address"
+					className="no-underline text-inherit hover:underline"
+				>
+					آدرس خونه‌تون!
+				</a>
+			</h4>
 			<p>
 				خیلی عجیبه که آدرس دقیق خونه رو تو بعضی از رزومه‌ها میبینم. کسی قرار نیست
 				برای شما نامه پست کنه که نیازی بهش داشته باشه
 			</p>
 
-			<h4>سایر اطلاعات غیرحرفه‌ای</h4>
+			<h4 id="unprofessional">
+				<a
+					href="#unprofessional"
+					className="no-underline text-inherit hover:underline"
+				>
+					سایر اطلاعات غیرحرفه‌ای
+				</a>
+			</h4>
 			<p>لطفا اگه موارد زیر رو توی رزومه ذکر کردید، حذف شون کنید.</p>
 			<ul>
 				<li>جنسیت</li>

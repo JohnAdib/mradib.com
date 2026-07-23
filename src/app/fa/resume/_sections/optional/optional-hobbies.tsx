@@ -5,7 +5,14 @@ import imgResumeOptionalHobbies from "./_img/resume-optional-hobbies.png";
 export function OptionalHobbies(): JSX.Element {
 	return (
 		<>
-			<h3>سرگرمی و علایق</h3>
+			<h3 id="hobbies">
+				<a
+					href="#hobbies"
+					className="no-underline text-inherit hover:underline"
+				>
+					سرگرمی و علایق
+				</a>
+			</h3>
 			<p>
 				ادویه دوست دارین؟ این بخش با اینکه نمی‌تونه خیلی خاص باشه ولی در عین حال
 				می‌تونه به شما کمک کنه که شخصیت خودتون رو نمایش بدید. شاید استخدام‌کننده

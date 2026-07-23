@@ -16,7 +16,14 @@ export function ExperienceHowToList(): JSX.Element {
 				work experience. Let us start by going over the basics together.
 			</p>
 
-			<h3>How to list your work experience on a resume</h3>
+			<h3 id="listing">
+				<a
+					href="#listing"
+					className="no-underline text-inherit hover:underline"
+				>
+					How to list your work experience on a resume
+				</a>
+			</h3>
 			<Msg severity="info">
 				Remember, a job means work you were paid to do and did.
 			</Msg>
@@ -41,7 +48,11 @@ export function ExperienceHowToList(): JSX.Element {
 				</figcaption>
 			</figure>
 
-			<h4>Job title</h4>
+			<h4 id="role">
+				<a href="#role" className="no-underline text-inherit hover:underline">
+					Job title
+				</a>
+			</h4>
 			<p>
 				Always write the job title first. When a recruiter scans your resume,
 				they want to see at a glance whether you have relevant experience, so
@@ -53,7 +64,14 @@ export function ExperienceHowToList(): JSX.Element {
 				the ATS.
 			</p>
 
-			<h4>Company name, description, and location</h4>
+			<h4 id="company">
+				<a
+					href="#company"
+					className="no-underline text-inherit hover:underline"
+				>
+					Company name, description, and location
+				</a>
+			</h4>
 			<p>
 				Next, give the employer and company name, and mention the location,
 				meaning the country and city. If the company is not well known,
@@ -65,7 +83,11 @@ export function ExperienceHowToList(): JSX.Element {
 			</p>
 			<Pre language="plaintext">Full-time, Part-time, Contract, etc.</Pre>
 
-			<h4>Dates of employment</h4>
+			<h4 id="dates">
+				<a href="#dates" className="no-underline text-inherit hover:underline">
+					Dates of employment
+				</a>
+			</h4>
 			<p>
 				The period you were employed at the company, meaning the year and month
 				you joined and left. For your most recent job, instead of a date you can

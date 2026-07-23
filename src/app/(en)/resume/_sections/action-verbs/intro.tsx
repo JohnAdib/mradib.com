@@ -14,7 +14,14 @@ export function ActionVerbsIntro(): JSX.Element {
 				to use in your resume.
 			</p>
 
-			<h3>How to write your achievements on a resume</h3>
+			<h3 id="writing">
+				<a
+					href="#writing"
+					className="no-underline text-inherit hover:underline"
+				>
+					How to write your achievements on a resume
+				</a>
+			</h3>
 			<p>
 				There are two patterns you can use to write each achievement bullet on
 				your resume.

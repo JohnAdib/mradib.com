@@ -10,7 +10,14 @@ import imgResumeTopSkills from "./_img/resume-top-skills.png";
 export function SkillTailoring(): JSX.Element {
 	return (
 		<>
-			<h3>Tailor your skills to the job posting you have in mind</h3>
+			<h3 id="tailoring">
+				<a
+					href="#tailoring"
+					className="no-underline text-inherit hover:underline"
+				>
+					Tailor your skills to the job posting you have in mind
+				</a>
+			</h3>
 			<p>
 				You might have excellent, rare skills, but that is not always useful.
 				For example, imagine you know accounting, but what exactly does a
@@ -27,7 +34,14 @@ export function SkillTailoring(): JSX.Element {
 				direction.
 			</p>
 
-			<h3>Do not forget general skills</h3>
+			<h3 id="general">
+				<a
+					href="#general"
+					className="no-underline text-inherit hover:underline"
+				>
+					Do not forget general skills
+				</a>
+			</h3>
 			<p>
 				Some skills suit a wide range of jobs. Some soft skills like teamwork,
 				critical thinking, and leadership, and some hard skills like Excel,
@@ -91,7 +105,14 @@ export function SkillTailoring(): JSX.Element {
 				</figure>
 			</Accordion>
 
-			<h4>Most requested soft skills across industries</h4>
+			<h4 id="requested">
+				<a
+					href="#requested"
+					className="no-underline text-inherit hover:underline"
+				>
+					Most requested soft skills across industries
+				</a>
+			</h4>
 			<Pre language="plaintext">
 				Time management, Effective communication, Emotional intelligence,
 				Conflict management, Teamwork skills, Stress management, Productivity &

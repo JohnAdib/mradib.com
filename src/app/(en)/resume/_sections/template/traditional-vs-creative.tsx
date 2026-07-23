@@ -7,8 +7,13 @@ import imgResumeFormatingInfographic from "./_img/resume-formating-infographic.j
 export function TraditionalVsCreative(): JSX.Element {
 	return (
 		<>
-			<h3 id="traditional-vs-creative">
-				Traditional or creative resume template?
+			<h3 id="creative">
+				<a
+					href="#creative"
+					className="no-underline text-inherit hover:underline"
+				>
+					Traditional or creative resume template?
+				</a>
 			</h3>
 			<p>
 				Now that we have covered the main points, there is one thing we may need
