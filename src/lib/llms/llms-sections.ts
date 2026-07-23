@@ -74,7 +74,6 @@ export function sectionPages(): string {
 		`- [Awards & Recognition](${homepageUrl}/awards): every award, with evidence and the story behind it.`,
 		...awardLines,
 		`- [Mentorship](${homepageUrl}/mentor): book a mentorship session with John.`,
-		`- [AI Engineering Readiness Audit](${homepageUrl}/audit): a fixed-price, two-week audit for CTOs and VPs of Engineering. A scored readiness assessment across 7 dimensions, the evidence behind it, and a 90-day roadmap.`,
 		`- [Talks & Speaking](${homepageUrl}/talks): all talks with slides, the podcast, and how to invite John to speak.`,
 		...talkPageLines,
 		`- [Articles](${homepageUrl}/articles)`,
