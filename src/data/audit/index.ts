@@ -16,7 +16,6 @@ export type {
 	IAuditPrice,
 	IAuditPricing,
 	IAuditProblem,
-	IAuditProduct,
 	IAuditProof,
 	IAuditSectionHeading,
 	IAuditStatSpec,

@@ -1,8 +1,8 @@
 import type { IAuditOffer } from "./audit-interface";
 
-// The one placeholder John fills before launch: the intro-call booking link,
-// Calendly or Cal.com. Every CTA on the page points here. No payment links.
-export const BOOKING_URL = "[BOOKING_URL]";
+// The intro-call booking link. Every CTA on the page points here, and there
+// are no payment links anywhere on the page.
+export const BOOKING_URL = "https://calendly.com/mradib/call";
 
 export const auditOffer: IAuditOffer = {
 	name: "AI Engineering Readiness Audit",
@@ -16,7 +16,7 @@ export const auditOffer: IAuditOffer = {
 		"A 60-minute executive readout, remote and recorded",
 	],
 	guarantee:
-		"The guarantee: if you reach the readout and don't believe the audit was worth the fee, tell me within 7 days and I'll refund it in full. I'd rather refund a fee than have a client who regrets hiring me.",
+		"The guarantee: if you reach the readout and don't believe the audit was worth the fee, tell me within 7 days and I'll refund it in full. I'd rather refund a fee than leave a team with a report they cannot use.",
 	paperworkLine:
 		"A mutual NDA and a one-page SOW, both e-signed. 50% on booking, 50% on delivery.",
 	addOnsLine:

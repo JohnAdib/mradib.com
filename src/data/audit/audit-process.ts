@@ -20,18 +20,14 @@ export const auditWeeks: IAuditWeek[] = [
 					"We agree scope, schedule the sessions, and send the survey out.",
 			},
 			{
-				title: "5 to 8 interviews",
-				detail: "One hour each with you, your EMs, and your senior ICs.",
+				title: "3 to 5 working sessions",
+				detail:
+					"One hour each with you, your EMs, and your senior ICs. Two to three of them are screen shares where your engineers drive: recent AI-assisted PRs, CI configuration, review practice, and the last incident.",
 			},
 			{
 				title: "Team survey",
 				detail:
 					"A short async survey to the wider engineering team. Minutes to answer, not hours.",
-			},
-			{
-				title: "2 to 3 screen-share sessions",
-				detail:
-					"Your engineers drive: recent AI-assisted PRs, CI configuration, review practice, and the last incident.",
 			},
 		],
 	},
@@ -60,9 +56,9 @@ export const auditWeeks: IAuditWeek[] = [
 export const auditFacts: IAuditFact[] = [
 	{
 		slug: "time",
-		title: "About 10 hours of your team's time",
+		title: "About 6 hours of your team's time",
 		description:
-			"The total cost across both weeks, spread over the interviews, the survey, and the screen shares.",
+			"The total cost across both weeks, spread over the kickoff, the working sessions, and a short survey.",
 	},
 	{
 		slug: "repo",
