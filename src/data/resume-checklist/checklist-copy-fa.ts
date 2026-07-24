@@ -87,8 +87,8 @@ export const itemCopyFa: Record<string, IChecklistItemCopy> = {
 	filename: {
 		question: "آیا اسم فایل حرفه‌ایه؟",
 		title: "نام فایل",
-		problem: "اسمی مثل resume-final-v3.pdf بی‌دقت به‌نظر می‌رسه.",
-		fix: "فایل رو به‌شکل Name-Family-Resume.pdf نام‌گذاری کن.",
+		problem: "اسمی مثل resume-final.pdf یا myresume.pdf بی‌دقت به‌نظر می‌رسه.",
+		fix: "فایل رو به‌شکل Name-Family-Resume.pdf نام‌گذاری کن. یک نسخه مثل v2 آخرش هم اشکالی نداره تا نسخه‌ی آخر رو بشناسی.",
 	},
 	summ: {
 		question: "آیا بخش خلاصه رزومه رو حداکثر تو ۲ تا ۳ خط نوشتی؟",
@@ -125,6 +125,12 @@ export const itemCopyFa: Record<string, IChecklistItemCopy> = {
 		title: "سابقه‌ی کاری",
 		problem: "سابقه بیش از حد بلنده یا برای سطح هدف خیلی کمه.",
 		fix: "حدود ده سال اخیر و نقش‌های مرتبط رو پررنگ کن.",
+	},
+	order: {
+		question: "شغل‌هات رو از جدید به قدیم چیدی؟",
+		title: "ترتیب",
+		problem: "ترتیب شغل‌ها درست نیست و جدیدترین شغل بالای رزومه نیست.",
+		fix: "همه‌ی شغل‌ها رو از جدید به قدیم بچین، تازه‌ترین شغل بالای همه.",
 	},
 	firstperson: {
 		question: "آیا ضمیرها رو از بولت‌ها بیرون گذاشتی؟",

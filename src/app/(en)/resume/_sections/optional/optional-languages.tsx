@@ -21,21 +21,21 @@ export function OptionalLanguages(): JSX.Element {
 				</a>
 			</h3>
 			<p>
-				Are you bilingual? Or, even better, multilingual? It is good to add a
-				languages section to your resume.
+				A languages section usually adds no value. Your CV is already written in
+				a language, so they assume you speak it. An English CV means you speak
+				English. A German CV means you speak German.
 			</p>
 			<p>
-				That said, for international roles you usually need to speak English
-				fluently, so beyond your native language you already know at least two.
-				If a job requires a specific language, say German, and you know it, then
-				listing it here is a must and there is no question about it. But when
-				the job is in English and the resume is in English, what does adding a
-				native language help with? What value does it add to your resume? If you
-				feel it does not matter, you can drop this section.
+				Listing your native language adds nothing. Persian on an English CV
+				tells them what they already assumed. Nobody is impressed by your mother
+				tongue.
 			</p>
 			<p>
-				Note that if you know, say, Azerbaijani, then you are trilingual, and I
-				think the situation changes and it is better to keep this section.
+				So if the only thing you would list is your native language, remove the
+				languages section entirely. Only list a language when it genuinely adds
+				value for the role, a real additional working language. If a job wants
+				German and you speak it, that belongs here. That is when the section
+				earns its space.
 			</p>
 			<p>
 				For the languages section, simply name the language and write your level

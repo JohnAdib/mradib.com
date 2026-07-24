@@ -88,8 +88,8 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 	filename: {
 		question: "Is the file named professionally?",
 		title: "File name",
-		problem: "A name like resume-final-v3.pdf looks careless.",
-		fix: "Name the file Firstname-Lastname-Resume.pdf.",
+		problem: "A name like resume-final.pdf or myresume.pdf looks careless.",
+		fix: "Name it Firstname-Lastname-Resume.pdf. A version like v2 at the end is fine to track the latest.",
 	},
 	summ: {
 		question: "Did you keep the summary to two or three lines at most?",
@@ -127,6 +127,12 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		title: "Work history",
 		problem: "The history runs too long or too thin for the target level.",
 		fix: "Cover about the last ten years and focus on recent, relevant roles.",
+	},
+	order: {
+		question: "Did you list your jobs newest first?",
+		title: "Order",
+		problem: "The roles are out of order, so the latest job is not on top.",
+		fix: "List every role from newest to oldest, the most recent one on top.",
 	},
 	firstperson: {
 		question: "Did you keep pronouns out of your bullets?",

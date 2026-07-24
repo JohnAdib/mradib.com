@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { JSX } from "react";
 import { Accordion } from "@/components/accordion/accordion";
 import { Msg } from "@/components/msg/msg";
@@ -71,9 +70,9 @@ export function SkillTailoring(): JSX.Element {
 				The skills section on your resume can help you get past the ATS.
 			</Msg>
 			<p>
-				<Link href="#ats">ATS</Link> works based on keywords, and your resume
-				needs to contain enough of those keywords. If there was no chance to
-				mention them elsewhere, you can point to them here.
+				<a href="#ats">ATS</a> works based on keywords, and your resume needs to
+				contain enough of those keywords. If there was no chance to mention them
+				elsewhere, you can point to them here.
 			</p>
 			<p>
 				For example, imagine there is a job posting for Java and your resume
@@ -118,6 +117,41 @@ export function SkillTailoring(): JSX.Element {
 				Conflict management, Teamwork skills, Stress management, Productivity &
 				organization, Critical thinking, Attention to detail, Adaptability
 			</Pre>
+			<h3 id="market">
+				<a href="#market" className="no-underline text-inherit hover:underline">
+					Research the market before you finalize your skills
+				</a>
+			</h3>
+			<p>
+				Most job titles share a common core of required skills. Missing those
+				skills has a real negative impact on your CV. So find them and make sure
+				they are on your resume.
+			</p>
+			<ol>
+				<li>
+					Go to LinkedIn and search for the job title you want to apply for.
+				</li>
+				<li>
+					Open 10 or more real job posts for that title, on LinkedIn or other
+					job sites.
+				</li>
+				<li>Note the skills those posts ask for again and again.</li>
+				<li>
+					For every skill you already have, make sure it is written on your
+					resume.
+				</li>
+				<li>
+					For every required skill that is missing from your resume, add it.
+				</li>
+				<li>
+					If you do not even know what a required skill is, go learn it. Spend
+					the time and genuinely improve.
+				</li>
+				<li>
+					Make sure the shared core skills that most of these posts want are all
+					present on your resume.
+				</li>
+			</ol>
 		</>
 	);
 }

@@ -37,13 +37,15 @@ export function SectionChecklist({
 				<h3 className="text-sm font-bold text-zinc-800 dark:text-zinc-100">
 					{title}
 				</h3>
-				{isAllDone ? (
-					<CheckCircleIcon className="ms-auto h-6 w-6 shrink-0 text-green-500" />
-				) : (
-					<span className="ms-auto inline-flex shrink-0 items-center rounded-full bg-accent-500/10 px-2.5 py-1 text-xs font-bold tabular-nums text-accent-700 dark:text-accent-300">
-						{`${checkedCount.toLocaleString(locale)}/${total.toLocaleString(locale)}`}
-					</span>
-				)}
+				<span className="ms-auto flex h-7 items-center">
+					{isAllDone ? (
+						<CheckCircleIcon className="h-6 w-6 shrink-0 text-green-500" />
+					) : (
+						<span className="inline-flex shrink-0 items-center rounded-full bg-accent-500/10 px-2.5 py-1 text-xs font-bold tabular-nums text-accent-700 dark:text-accent-300">
+							{`${checkedCount.toLocaleString(locale)}/${total.toLocaleString(locale)}`}
+						</span>
+					)}
+				</span>
 			</div>
 			<div className="mt-3">
 				<TodoList

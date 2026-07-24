@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 
@@ -37,7 +36,7 @@ export function LayoutRules(): JSX.Element {
 				شما نخواهند کرد. طبق آمار میگن ۶ ثانیه وقت دارید وگرنه رفته سراغ بعدی.
 			</p>
 			<p>
-				<Link href="#length">چرا میگی رزومه باید یک صفحه باشه؟</Link>
+				<a href="#length">چرا میگی رزومه باید یک صفحه باشه؟</a>
 			</p>
 
 			<h5 id="same-layout">از طرح یکسان استفاده کن</h5>

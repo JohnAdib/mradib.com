@@ -28,13 +28,15 @@ export function TraditionalVsCreative(): JSX.Element {
 				<figcaption>A traditional resume or a creative resume?</figcaption>
 			</figure>
 			<p>
-				If you are job hunting in more traditional industries such as law,
-				banking, and finance, the traditional style seems more suitable.
+				A creative or visually designed template can make sense when your work
+				is about design or visual craft. A designer may want to signal
+				creativity and innovation. A bold layout can do that. Even then it is
+				optional and up to you.
 			</p>
 			<p>
-				If you want to apply to technology companies, where innovation is
-				valued, you might go for a more creative style. Remember, more
-				creativity means more risk.
+				For most other fields, a clean traditional template is the safer choice.
+				This is a personal choice that depends on your field and the impression
+				you want, not a rule. Remember, more creativity means more risk.
 			</p>
 
 			<Accordion title="Infographic on resume layout rules">

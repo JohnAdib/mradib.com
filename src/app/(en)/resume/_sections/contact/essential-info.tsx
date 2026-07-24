@@ -31,11 +31,6 @@ export function EssentialInfo(): JSX.Element {
 				</a>
 			</h4>
 			<p>It sounds simple!</p>
-			<Msg severity="warning">
-				{" "}
-				Just so you know, even if you are a doctor, do not put Dr in front of
-				your name.
-			</Msg>
 
 			<h4 id="headline">
 				<a
@@ -47,7 +42,7 @@ export function EssentialInfo(): JSX.Element {
 			</h4>
 			<p>
 				Your professional title can be your current role or the job you are
-				aiming for. For example, Full Stack Developer or Android Developer. One
+				aiming for. For example, Senior Software Engineer or Data Analyst. One
 				important point here: skip strange titles like ninja or samurai. Try to
 				keep it under four words.
 			</p>
@@ -68,7 +63,11 @@ export function EssentialInfo(): JSX.Element {
 					Phone number
 				</a>
 			</h4>
-			<p>In rare cases they might call you directly.</p>
+			<p>
+				Recruiters and hiring managers call directly. Often before any message,
+				sometimes just from finding your CV. So your phone number genuinely
+				matters. Make sure it is correct and reachable.
+			</p>
 
 			<h4 id="location">
 				<a
@@ -81,6 +80,12 @@ export function EssentialInfo(): JSX.Element {
 			<p>
 				This means your current city and country, so the company can tell
 				whether you would need to relocate.
+			</p>
+			<p>
+				If you are applying in the same country you live in, the city matters,
+				so include it. If you are applying from another country and would
+				relocate, the city name means nothing to them, so mention just the
+				country, not the city.
 			</p>
 			<Msg severity="error">
 				There is no need at all to include address details like your street or

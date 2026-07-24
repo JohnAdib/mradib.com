@@ -10,8 +10,8 @@ const aiPrompt =
 
 export function SectionAiTools(): JSX.Element {
 	return (
-		<section id="ai-tools" className="scroll-mt-24">
-			<SectionHeading anchor="ai-tools">
+		<section id="ai" className="scroll-mt-24">
+			<SectionHeading anchor="ai">
 				رزومه‌ات را با هوش مصنوعی بنویس
 			</SectionHeading>
 			<p>

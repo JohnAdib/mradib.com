@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { Msg } from "@/components/msg/msg";
 import { Pre } from "@/components/syntax-highlighter/pre";
 
 export function EducationOptional(): JSX.Element {
@@ -12,10 +13,16 @@ export function EducationOptional(): JSX.Element {
 					Optional information about your education
 				</a>
 			</h3>
+			<Msg severity="warning">
+				For a work resume, optional details like GPA, honors, and coursework add
+				no value. Leave them out. They only make sense on an academic CV when
+				you apply for academic roles. If you are applying for a job, nobody
+				cares about your GPA.
+			</Msg>
 			<p>
-				When you do not have much work experience, you can use optional items to
-				fill out your resume. But as always, make sure this information adds
-				real value. For example, if your GPA was not strong, why mention it?
+				The one exception is early on. When you have little work experience,
+				these items can help fill the page. Even then, make sure each one adds
+				real value. If your GPA was not strong, why mention it?
 			</p>
 			<h4 id="gpa">
 				<a href="#gpa" className="no-underline text-inherit hover:underline">
@@ -23,7 +30,8 @@ export function EducationOptional(): JSX.Element {
 				</a>
 			</h4>
 			<p>
-				Only mention it if you were a strong student and your GPA was above 3.5.
+				On an academic CV, mention it only if you were a strong student with a
+				GPA above 3.5. On a work resume, skip it.
 			</p>
 			<Pre language="plaintext">GPA: 3.9</Pre>
 			<h4 id="campus">
@@ -58,8 +66,8 @@ export function EducationOptional(): JSX.Element {
 				</a>
 			</h4>
 			<p>
-				It is better not to list the courses you passed on your resume, unless
-				you are just starting out and your goal is to fill it out.
+				Do not list the courses you passed on a work resume. They belong on an
+				academic CV, or on your first resume when you need to fill space.
 			</p>
 			<Pre language="plaintext">
 				Software Engineering, Database Management, Algorithms

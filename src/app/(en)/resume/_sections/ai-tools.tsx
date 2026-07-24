@@ -10,10 +10,8 @@ const aiPrompt =
 
 export function SectionAiTools(): JSX.Element {
 	return (
-		<section id="ai-tools" className="scroll-mt-24">
-			<SectionHeading anchor="ai-tools">
-				Write your resume with AI
-			</SectionHeading>
+		<section id="ai" className="scroll-mt-24">
+			<SectionHeading anchor="ai">Write your resume with AI</SectionHeading>
 			<p>
 				Using ChatGPT, Claude, or any AI to write your resume? Point it at this
 				guide so it follows a proven method instead of generic filler. I turned

@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { CopyableVerb } from "@/components/action-verbs/copyable-verb";
 import { getAllActionVerbs } from "./get-all-action-verbs";
 import type { IListActionVerbs } from "./interface";
 
@@ -16,7 +17,7 @@ export function ListActionVerbs(): JSX.Element {
 						<p>{verbsGroup.description}</p>
 						<div className="grid gap-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:md:grid-cols-5">
 							{verbsGroup.list.map((verb) => (
-								<span key={verb}>{verb}</span>
+								<CopyableVerb key={verb} verb={verb} />
 							))}
 						</div>
 					</section>

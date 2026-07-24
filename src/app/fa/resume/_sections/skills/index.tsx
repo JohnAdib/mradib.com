@@ -7,7 +7,6 @@ import {
 } from "../../resume-checklist-data";
 import { HardVsSoft } from "./hard-vs-soft";
 import { IndustryLists } from "./industry-lists";
-import { SkillLeveling } from "./leveling";
 import { SkillTailoring } from "./tailoring";
 
 export function SectionSkills(): JSX.Element {
@@ -17,7 +16,6 @@ export function SectionSkills(): JSX.Element {
 				آموزش نوشتن مهارت‌ها در رزومه
 			</SectionHeading>
 			{HardVsSoft()}
-			{SkillLeveling()}
 			{SkillTailoring()}
 			{IndustryLists()}
 			<SectionChecklist
