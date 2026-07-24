@@ -5,15 +5,15 @@ export const resumeSections = [
 	{ id: "contact", title: "Contact Information", hasChecklist: true },
 	{ id: "summary", title: "Summary Section", hasChecklist: true },
 	{ id: "experience", title: "Work Experience", hasChecklist: true },
+	{ id: "action-verbs", title: "Action Verbs", hasChecklist: true },
 	{ id: "skills", title: "Skills", hasChecklist: true },
 	{ id: "education", title: "Education", hasChecklist: true },
 	{ id: "optional", title: "Optional Sections", hasChecklist: true },
 	{ id: "length", title: "Resume Length", hasChecklist: true },
 	{ id: "ats", title: "ATS Applicant Tracking System", hasChecklist: true },
-	{ id: "action-verbs", title: "Action Verbs", hasChecklist: true },
 	{ id: "checklist", title: "Final Checklist", hasChecklist: false },
 	{ id: "references", title: "References", hasChecklist: false },
-	{ id: "ai-tools", title: "Write with AI", hasChecklist: false },
+	{ id: "ai", title: "Write with AI", hasChecklist: false },
 	{ id: "cover-letter", title: "Cover Letter", hasChecklist: false },
 ] as const;
 

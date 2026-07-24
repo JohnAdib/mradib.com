@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { JSX } from "react";
 import { Msg } from "@/components/msg/msg";
 
@@ -38,7 +37,7 @@ export function LayoutRules(): JSX.Element {
 				next one.
 			</p>
 			<p>
-				<Link href="#length">Why do you say a resume should be one page?</Link>
+				<a href="#length">Why do you say a resume should be one page?</a>
 			</p>
 
 			<h5 id="same-layout">Use a consistent design</h5>

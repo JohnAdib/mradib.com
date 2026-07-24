@@ -44,12 +44,12 @@ function PageContent(): JSX.Element {
 			{SectionContact()}
 			{SectionSummary()}
 			{SectionExperience()}
+			{SectionActionVerbs()}
 			{SectionSkills()}
 			{SectionEducation()}
 			{SectionOptional()}
 			{SectionLength()}
 			{SectionAts()}
-			{SectionActionVerbs()}
 			{SectionFinalChecklist()}
 			<ResumeReferences />
 			{SectionAiTools()}

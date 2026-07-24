@@ -4,6 +4,32 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-24, resume guide review round from real use
+
+A large batch of fixes John gathered while reading the guide and reviewing CVs.
+Advice sharpened to match how hiring actually works. Jobs must be listed newest
+first (new checklist item). No social media links in a CV, only GitHub, Dribbble,
+or a real portfolio; Stack Overflow, Instagram, and Twitter are out. A phone
+number matters because recruiters call directly. Location gives the city only
+when you apply in the same country, otherwise just the country. The doctor alert
+was wrong and is gone. Skill levels do not belong on a CV, so the leveling
+section was removed; skills are just listed, with modern examples (TypeScript,
+Python, not PHP). Soft skills are shown through achievements, not self stated.
+Education extras like GPA are for academic CVs only. A languages section that
+only repeats the CV's own language adds nothing and should be dropped.
+Publications and side projects matter mainly early career; open source is always
+fine. Job title examples are common titles now. The creative template choice is
+about your field, not just technology. A new "research the market" step set tells
+you to mine real job posts for the skills you are missing. Structure: action
+verbs moved next to achievements and each verb copies on tap; long skill lists
+and the hard skills image sit in accordions; the AI section id is now "ai"; the
+cover letter outro lost its fluff. The file name rule now matches the guide (an
+optional version is fine), so the page and the AI files agree. The FAQ heading
+renders in Vazirmatn on Persian pages, and the "why one page" link and the ATS
+link scroll properly now that they are plain anchors, not Next links. The section
+checklist header no longer jumps when the last item is checked. All applied in
+English and Persian.
+
 ## 2026-07-24, the audit page sells a package, not John's time
 
 John reviewed the first build and reset the framing. The page sells a

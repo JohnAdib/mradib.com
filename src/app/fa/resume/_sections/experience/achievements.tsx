@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { JSX } from "react";
+import { Msg } from "@/components/msg/msg";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import imgResumeExperienceAccomplishments from "./_img/resume-experience-accomplishments.png";
 
@@ -57,6 +58,14 @@ export function ExperienceAchievements(): JSX.Element {
 				بشه بهشون اشاره کرد و پیدا کردن عدد و رقم واقعا سخت خواهد بود. در این
 				موارد عملا چاره‌ای نیست و ذکر کردن مسئولیت‌ها راه جایگزین هست.
 			</p>
+			<Msg severity="warning">
+				سافت‌اسکیل‌هایی مثل کارتیمی، رهبری یا مسئولیت‌پذیری رو توی بولت‌پوینت‌های
+				رزومه مستقیم درباره خودت ننویس. ادعا کردن این‌ها درباره خودت ضعیف به‌نظر
+				میاد. بذار دستاوردهات این‌ها رو نشون بدن، چون چیزی که ساختی، رهبری کردی
+				یا بهبود دادی خیلی بهتر از خود اون کلمه، مهارت رو ثابت می‌کنه. تنها
+				استثنا یک فرد خیلی تازه‌کاره که چیز زیادی برای نشون دادن نداره و میتونه
+				این‌ها رو مستقیم‌تر بنویسه.
+			</Msg>
 		</>
 	);
 }

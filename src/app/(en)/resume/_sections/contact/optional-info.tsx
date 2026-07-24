@@ -34,18 +34,17 @@ export function OptionalInfo(): JSX.Element {
 			</h4>
 			<p>
 				Do you publish your work online? For developers this could be a GitHub
-				address, for designers it could be Dribbble, and for writers it could be
-				Medium.
+				address, for designers it could be Dribbble.
 			</p>
 			<Msg severity="warning">
 				Keep in mind that when a link is not relevant and does not help, there
 				is no need to include it.
 			</Msg>
 			<p>
-				A Stack Overflow link can be a plus for a developer who is genuinely
-				active there, but what is the point when the account is inactive? And
-				what use is an Instagram or Twitter link when it is personal and, say,
-				in Persian?
+				Do not put social media links in a CV. No Instagram, no Twitter or X.
+				They add no value. The only links worth including are GitHub, Dribbble,
+				or a graphical portfolio website relevant to your work. This holds for
+				both Persian and English CVs.
 			</p>
 
 			<h4 id="website">
@@ -60,6 +59,11 @@ export function OptionalInfo(): JSX.Element {
 				If you have a personal website or a blog where you write about your
 				field, it is good to add it to your resume. Likewise, if you do graphic
 				work and have a portfolio, it is good to include the link.
+			</p>
+			<p>
+				The site must be high quality. Linking to a low quality or unfinished
+				site is a negative, not a positive. Only link it if it genuinely
+				showcases good work.
 			</p>
 		</>
 	);

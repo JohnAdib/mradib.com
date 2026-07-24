@@ -38,6 +38,7 @@ export const checklistItems: IChecklistItem[] = [
 	{ slug: "ach", groupId: "experience", points: 8 },
 	{ slug: "roleclarity", groupId: "experience", points: 5 },
 	{ slug: "hist", groupId: "experience", points: 2 },
+	{ slug: "order", groupId: "experience", points: 2 },
 	{ slug: "firstperson", groupId: "experience", points: 2 },
 	{ slug: "dates", groupId: "experience", points: 3 },
 	{ slug: "gaps", groupId: "experience", points: 2 },

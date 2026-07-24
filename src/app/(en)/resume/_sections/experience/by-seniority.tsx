@@ -27,6 +27,11 @@ export function ExperienceBySeniority(): JSX.Element {
 				Your work experience should be valuable to the recruiter. If it is not,
 				it is better to remove it from your resume.
 			</Msg>
+			<Msg severity="warning">
+				Think twice before adding unrelated jobs, skills, or languages just to
+				fill space. Unrelated content sends the wrong signal about your focus
+				and can hurt more than it helps.
+			</Msg>
 
 			<h4 id="no-experience">
 				<a

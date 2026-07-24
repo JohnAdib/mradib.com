@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { JSX } from "react";
+import { Accordion } from "@/components/accordion/accordion";
 import { Msg } from "@/components/msg/msg";
 import { Pre } from "@/components/syntax-highlighter/pre";
 import imgResumeHardSkills from "./_img/resume-hard-skills.png";
@@ -28,8 +29,8 @@ export function HardVsSoft(): JSX.Element {
 			</h3>
 			<p>
 				A hard skill is measurable. It can be anything from a programming
-				language like PHP, to a library like React, to even knowing how to cook
-				a great stew.
+				language like TypeScript, to a library like React, to even knowing how
+				to cook a great stew.
 			</p>
 			<p>
 				A hard skill usually refers to technical knowledge or training that you
@@ -37,30 +38,33 @@ export function HardVsSoft(): JSX.Element {
 				and essential so that you can meet the demands of that role. As an
 				example, the items below are hard skills depending on the job.
 			</p>
-			<figure>
-				<Image src={imgResumeHardSkills} alt="Hard skills for your resume" />
-				<figcaption>Hard skills for your resume</figcaption>
-			</figure>
+			<Accordion title="Examples of hard skills">
+				<figure>
+					<Image src={imgResumeHardSkills} alt="Hard skills for your resume" />
+					<figcaption>Hard skills for your resume</figcaption>
+				</figure>
 
-			<Pre language="plaintext">
-				Machinery skills - operating a road roller, operating a PoS,
-				pallet-stacker, forklift, etc.
-			</Pre>
-			<Pre language="plaintext">
-				Software skills - Adobe Creative Suite, Ableton Live Suite
-			</Pre>
-			<Pre language="plaintext">
-				Tools - SEM Marketing, Stethoscope, Google Analytics, Google Search
-				Console, ERP systems, CRMs
-			</Pre>
-			<Pre language="plaintext">
-				Coding Languages - JavaScript, PHP, Python, C++, C#, Java, Scala, R
-			</Pre>
-			<Pre language="plaintext">
-				Techniques - Frequency analysis, Crystallization
-			</Pre>
-			<Pre language="plaintext">Mathematics</Pre>
-			<Pre language="plaintext">Accounting & bookkeeping</Pre>
+				<Pre language="plaintext">
+					Machinery skills - operating a road roller, operating a PoS,
+					pallet-stacker, forklift, etc.
+				</Pre>
+				<Pre language="plaintext">
+					Software skills - Adobe Creative Suite, Ableton Live Suite
+				</Pre>
+				<Pre language="plaintext">
+					Tools - SEM Marketing, Stethoscope, Google Analytics, Google Search
+					Console, ERP systems, CRMs
+				</Pre>
+				<Pre language="plaintext">
+					Coding Languages - JavaScript, TypeScript, Python, C++, C#, Java,
+					Scala, R
+				</Pre>
+				<Pre language="plaintext">
+					Techniques - Frequency analysis, Crystallization
+				</Pre>
+				<Pre language="plaintext">Mathematics</Pre>
+				<Pre language="plaintext">Accounting & bookkeeping</Pre>
+			</Accordion>
 
 			<h3 id="soft-skills">
 				<a

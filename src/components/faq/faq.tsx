@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import type { FaqLanguage, IFaqQA } from "./faq-interface";
 import { FaqJsonLD } from "./faq-json-ld";
@@ -36,7 +37,12 @@ export default function Faq({
 		<section className="faq mx-auto max-w-7xl py-16 lg:py-32">
 			<div className="lg:grid lg:grid-cols-12 lg:gap-8">
 				<div className="lg:col-span-5">
-					<h2 className="font-display text-4xl font-semibold leading-10 tracking-tight">
+					<h2
+						className={clsx(
+							"text-4xl font-semibold leading-10 tracking-tight",
+							language === "fa" ? "font-fa" : "font-display",
+						)}
+					>
 						{title}
 					</h2>
 					{showContactLink && (
