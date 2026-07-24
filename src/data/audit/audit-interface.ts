@@ -58,20 +58,12 @@ export interface IAuditStatSpec {
 	label: string;
 }
 
-export interface IAuditProduct {
-	name: string;
-	url?: string;
-	description: string;
-}
-
 export interface IAuditProof {
 	heading: IAuditSectionHeading;
 	playbookLine: string;
 	stats: IAuditStatSpec[];
 	talksTitle: string;
 	talkSlugs: string[];
-	productsTitle: string;
-	products: IAuditProduct[];
 }
 
 export interface IAuditFitList {

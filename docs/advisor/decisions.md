@@ -4,6 +4,22 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-24, the audit page sells a package, not John's time
+
+John reviewed the first build and reset the framing. The page sells a
+productised package, so nothing on it may read as a person available for hire.
+That supersedes the 2026-07-23 entry on two points: the phrase "a London
+scale-up" is gone, and the weekend products CoolMate and Florin are removed
+entirely, names included, because the page must not surface other projects or
+tools he builds. Credibility now rests on the method and on institution-backed
+proof that already lives in src/data: years in engineering, ADPList
+recognition, and Jibres. The guarantee no longer mentions anyone hiring him.
+Scope also came down: the audit runs 3 to 5 one-hour working sessions rather
+than 5 to 8 interviews, the 2 to 3 screen shares are part of that count rather
+than additional, and the client time cost drops to about 6 hours. Talk proof
+links to the talk page rather than deep linking to a slides file or an external
+recording, so the page keeps the reader on the site.
+
 ## 2026-07-23, the audit offer page
 
 John productised a consulting offer and gave it one landing page at /audit: the

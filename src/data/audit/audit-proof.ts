@@ -2,13 +2,13 @@ import type { IAuditProof } from "./audit-interface";
 
 export const auditProof: IAuditProof = {
 	heading: {
-		eyebrow: "Why me",
-		title: "Audited by someone who runs it, not someone who read about it.",
+		eyebrow: "The method",
+		title: "Scored by someone who runs this, not someone who read about it.",
 		intro:
-			"I'm John Adib, an Engineering Manager in London. I run an agent-heavy engineering team at a London scale-up, and I ship my own products on weekends with the same AI-assisted workflows.",
+			"Every dimension in the scorecard is drawn from agent-heavy engineering in production: the guardrails that hold, the quality gates that catch things, and the review habits that keep code understood. The talks below set out the thinking.",
 	},
 	playbookLine:
-		"I run this playbook every day, at my day job and on my own products.",
+		"This playbook runs in production every day, not only inside the report.",
 	// Values for years and sessions are resolved from src/data at render time.
 	stats: [
 		{ slug: "years", label: "years in engineering" },
@@ -20,21 +20,8 @@ export const auditProof: IAuditProof = {
 			label: "businesses on Jibres, the platform I co-founded",
 		},
 	],
-	talksTitle: "The talks behind the method",
+	talksTitle: "The thinking behind the audit",
 	talkSlugs: ["compound-effect-guardrails", "ai-first-architecture"],
-	productsTitle: "Built with the workflows I audit",
-	products: [
-		{
-			name: "CoolMate",
-			url: "https://yocoolmate.com",
-			description:
-				"A live language-learning app, built and shipped on weekends with AI-assisted workflows.",
-		},
-		{
-			name: "Florin",
-			description: "A local-first point of sale, built the same way.",
-		},
-	],
 };
 
 /*

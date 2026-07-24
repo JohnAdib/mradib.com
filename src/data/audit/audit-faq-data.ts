@@ -16,12 +16,12 @@ export const auditFaq: IFaqQA[] = [
 	{
 		id: "who-conducts",
 		q: "Who conducts the audit?",
-		a: "I do, personally. Every interview, every screen share, every score. I run an agent-heavy engineering team at a London scale-up, so the audit is run by someone who does this daily, not a junior with a checklist.",
+		a: "I do, personally. Every session, every score, every page of the report. The method comes from running agent-heavy engineering in production, so you get a practitioner's read rather than a junior with a checklist.",
 	},
 	{
 		id: "team-time",
 		q: "How much of my team's time does it take?",
-		a: "About 10 hours in total across the two weeks. That covers 5 to 8 one-hour interviews, a short survey, and 2 to 3 screen-share sessions.",
+		a: "About 6 hours in total across the two weeks. That covers a kickoff call, 3 to 5 one-hour working sessions, and a short survey for the wider team. Two to three of those sessions are screen shares.",
 	},
 	{
 		id: "paperwork",
