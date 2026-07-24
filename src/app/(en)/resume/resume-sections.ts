@@ -12,6 +12,7 @@ export const resumeSections = [
 	{ id: "length", title: "Resume Length", hasChecklist: true },
 	{ id: "ats", title: "ATS Applicant Tracking System", hasChecklist: true },
 	{ id: "checklist", title: "Final Checklist", hasChecklist: false },
+	{ id: "score", title: "Score Your Resume", hasChecklist: false },
 	{ id: "references", title: "References", hasChecklist: false },
 	{ id: "ai", title: "Write with AI", hasChecklist: false },
 	{ id: "cover-letter", title: "Cover Letter", hasChecklist: false },

@@ -12,6 +12,7 @@ export const resumeSections = [
 	{ id: "length", title: "تعداد صفحات رزومه", hasChecklist: true },
 	{ id: "ats", title: "ATS سیستم ردیابی متقاضی", hasChecklist: true },
 	{ id: "checklist", title: "چک لیست نهایی", hasChecklist: false },
+	{ id: "score", title: "نمره رزومه", hasChecklist: false },
 	{ id: "references", title: "منابع", hasChecklist: false },
 	{ id: "ai", title: "نوشتن با هوش مصنوعی", hasChecklist: false },
 	{ id: "cover-letter", title: "کاورلتر", hasChecklist: false },

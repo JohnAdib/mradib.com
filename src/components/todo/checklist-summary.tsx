@@ -2,6 +2,7 @@
 
 import type { JSX } from "react";
 import { useChecklistStore } from "@/lib/checklist/use-checklist-store";
+import { Accordion } from "../accordion/accordion";
 import { Msg } from "../msg/msg";
 import type { IChecklistGroup } from "./interface";
 import { TodoList } from "./todo-list";
@@ -11,11 +12,13 @@ export function ChecklistSummary({
 	groups,
 	locale = "fa-IR",
 	doneMessage = "تبریک! همه کارهایی که لیست کرده بودم رو انجام دادی!",
+	detailsLabel = "دیدن چک‌لیست کامل",
 }: {
 	storageKey: string;
 	groups: IChecklistGroup[];
 	locale?: string;
 	doneMessage?: string;
+	detailsLabel?: string;
 }): JSX.Element {
 	const store = useChecklistStore(storageKey);
 
@@ -43,25 +46,27 @@ export function ChecklistSummary({
 				</div>
 			)}
 
-			{groups.map((group) => (
-				<div key={group.id} className="mt-4">
-					<h3 className="text-sm font-bold">
-						{group.href ? (
-							<a href={group.href} className="hover:underline">
-								{group.title}
-							</a>
-						) : (
-							group.title
-						)}
-					</h3>
-					<TodoList
-						items={group.items}
-						checked={store.checked}
-						onToggle={store.toggle}
-						idPrefix="summary"
-					/>
-				</div>
-			))}
+			<Accordion title={detailsLabel} className="mt-4">
+				{groups.map((group) => (
+					<div key={group.id} className="mt-4">
+						<h3 className="text-sm font-bold">
+							{group.href ? (
+								<a href={group.href} className="hover:underline">
+									{group.title}
+								</a>
+							) : (
+								group.title
+							)}
+						</h3>
+						<TodoList
+							items={group.items}
+							checked={store.checked}
+							onToggle={store.toggle}
+							idPrefix="summary"
+						/>
+					</div>
+				))}
+			</Accordion>
 		</div>
 	);
 }
