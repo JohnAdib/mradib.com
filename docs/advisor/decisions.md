@@ -4,6 +4,28 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-07-23, the audit offer page
+
+John productised a consulting offer and gave it one landing page at /audit: the
+AI Engineering Readiness Audit, a fixed-price, two-week, fully remote audit for
+CTOs and VPs of Engineering at companies with 20 to 150 engineers. New direction
+he set for this page, all binding. The employer is never named on it; the only
+permitted reference is "a London scale-up". Two weekend products are authorised
+as proof that he practises what he audits: CoolMate (yocoolmate.com, a live
+language-learning app) and Florin (a local-first point of sale); they live in
+src/data/audit and are not yet in docs/profile. An unconditional guarantee
+appears exactly twice, in the pricing card and one FAQ answer: full refund if
+the client says the audit was not worth it within 7 days of the readout, the
+client keeps the report, no badges or seals anywhere. Pricing is a founding
+cohort staircase driven by a single slots constant in src/data/audit; when the
+remaining slots reach 0 the founding copy disappears and the standard price
+stands alone. Never framed as a discount, no strikethrough prices, no urgency
+language; the slots line is the only scarcity and must always be true. Every
+booking CTA on the page points at one booking link constant, email in the
+global footer stays the only alternative route, and there is no payment on the
+page. The page's one bold element is the seven-dimension scorecard rendered as
+oversized display numerals; everything else stays quiet.
+
 ## 2026-07-22, every guide heading is a deep link
 
 Every sub heading on the resume guide now carries a short id, the same id on the

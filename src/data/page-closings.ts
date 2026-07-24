@@ -1,3 +1,5 @@
+import { BOOKING_URL } from "@/data/audit";
+
 export interface IPageClosing {
 	title: string;
 	desc: string;
@@ -31,6 +33,12 @@ export const pageClosings: Record<string, IPageClosing> = {
 		linkPrimaryLink: "/contact",
 		linkSecondaryText: "Book a mentorship session",
 		linkSecondaryLink: "/mentor",
+	},
+	audit: {
+		title: "Find out where you stand.",
+		desc: "A 20-minute call. Bring your questions, leave knowing whether the audit fits.",
+		linkPrimaryText: "Book a 20-minute intro call",
+		linkPrimaryLink: BOOKING_URL,
 	},
 	articles: {
 		title: "The thinking continues on stage.",
