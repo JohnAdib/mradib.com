@@ -6,28 +6,28 @@ import { TiltCard } from "@/components/tilt-card/tilt-card";
 
 export function HomeHero() {
 	return (
-		<Container className="mt-10 sm:mt-16">
+		<Container className="mt-6 sm:mt-16">
 			<div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-x-16 xl:grid-cols-[minmax(0,1fr)_17rem]">
 				<div className="max-w-2xl">
 					<h1 className="font-display text-5xl font-semibold tracking-tight text-balance text-zinc-800 sm:text-6xl dark:text-zinc-100">
 						<span className="reveal-rise block">John Adib</span>
-						<span className="reveal-rise reveal-delay-1 mt-3 block text-2xl text-accent-700 sm:text-3xl dark:text-accent-400">
+						<span className="reveal-rise reveal-delay-1 mt-2 block text-2xl text-accent-700 sm:mt-3 sm:text-3xl dark:text-accent-400">
 							Still building, every single day.
 						</span>
 					</h1>
-					<div className="reveal-rise reveal-delay-2 mt-5">
+					<div className="reveal-rise reveal-delay-2 mt-4 sm:mt-5">
 						<HomeIntro />
 					</div>
-					<div className="reveal-up reveal-delay-3 mt-8 flex flex-wrap items-center gap-4">
+					<div className="reveal-up reveal-delay-3 mt-6 flex flex-wrap items-center gap-4 sm:mt-8">
 						<Button href="/about">Read the story</Button>
 						<Button href="/contact" variant="secondary">
 							Get in touch
 						</Button>
 					</div>
-					<div className="reveal-up reveal-delay-4 mt-8">
+					<div className="reveal-up reveal-delay-4 mt-5 sm:mt-8">
 						<SocialMediaLinks />
 					</div>
-					<div className="reveal-up reveal-delay-4 mt-10 lg:hidden">
+					<div className="reveal-up reveal-delay-4 mt-6 sm:mt-10 lg:hidden">
 						<picture className="block">
 							{/* Keep the mobile landscape out of the desktop download path. */}
 							<source

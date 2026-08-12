@@ -15,7 +15,7 @@ const students = `${teachingStats.studentsTaught.toLocaleString("en-US")}+`;
 
 export function HomeRise() {
 	return (
-		<Container className="mt-20 sm:mt-28">
+		<Container className="mt-12 sm:mt-28">
 			<Reveal>
 				<p className="text-sm font-semibold tracking-wider text-accent-700 uppercase dark:text-accent-400">
 					The rise

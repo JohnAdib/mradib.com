@@ -28,12 +28,9 @@ export function Avatar({
 			{...props}
 		>
 			<picture className="block h-9 w-9">
-				<source
-					type="image/avif"
-					srcSet="/img/john-adib-london-avatar-108.avif"
-				/>
+				<source type="image/avif" srcSet="/img/john-adib-avatar-108.avif" />
 				<img
-					src="/img/john-adib-london-avatar-108.jpg"
+					src="/img/john-adib-avatar-108.jpg"
 					alt="John Adib"
 					width={108}
 					height={108}

@@ -33,6 +33,13 @@ const variants = [
 	},
 	{
 		srcName: "john-adib-avatar.jpg",
+		outName: "john-adib-avatar-108.avif",
+		width: 108,
+		height: 108,
+		quality: 55,
+	},
+	{
+		srcName: "john-adib-avatar.jpg",
 		outName: "john-adib-avatar-576.jpg",
 		width: 576,
 		height: 576,

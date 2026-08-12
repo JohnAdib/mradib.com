@@ -84,6 +84,12 @@ const assets = [
 		height: 108,
 		maxBytes: 8 * 1024,
 	},
+	{
+		path: "public/img/john-adib-avatar-108.avif",
+		width: 108,
+		height: 108,
+		maxBytes: 8 * 1024,
+	},
 ];
 
 const references = [
@@ -126,6 +132,35 @@ const references = [
 	{
 		path: "src/components/home/home-hero.tsx",
 		value: 'fetchPriority="high"',
+	},
+	{
+		path: "src/components/home/home-hero.tsx",
+		value: 'className="mt-6 sm:mt-16"',
+	},
+	{
+		path: "src/components/home/home-hero.tsx",
+		value: "mt-2 block text-2xl text-accent-700 sm:mt-3",
+	},
+	{
+		path: "src/components/home/home-hero.tsx",
+		value: "reveal-rise reveal-delay-2 mt-4 sm:mt-5",
+	},
+	{
+		path: "src/components/home/home-hero.tsx",
+		value:
+			"reveal-up reveal-delay-3 mt-6 flex flex-wrap items-center gap-4 sm:mt-8",
+	},
+	{
+		path: "src/components/home/home-hero.tsx",
+		value: "reveal-up reveal-delay-4 mt-5 sm:mt-8",
+	},
+	{
+		path: "src/components/home/home-hero.tsx",
+		value: "reveal-up reveal-delay-4 mt-6 sm:mt-10 lg:hidden",
+	},
+	{
+		path: "src/components/home/home-rise.tsx",
+		value: '<Container className="mt-12 sm:mt-28">',
 	},
 	{
 		path: "src/components/home/home-hero.tsx",
@@ -193,11 +228,11 @@ const references = [
 	},
 	{
 		path: "src/components/header/avatar.tsx",
-		value: "/img/john-adib-london-avatar-108.jpg",
+		value: "/img/john-adib-avatar-108.jpg",
 	},
 	{
 		path: "src/components/header/avatar.tsx",
-		value: "/img/john-adib-london-avatar-108.avif",
+		value: "/img/john-adib-avatar-108.avif",
 	},
 	{
 		path: "src/components/header/avatar.tsx",
