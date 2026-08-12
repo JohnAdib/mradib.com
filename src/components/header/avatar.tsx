@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Image from "next/image";
 import Link from "next/link";
 
 export function AvatarContainer({
@@ -28,13 +27,20 @@ export function Avatar({
 			className={clsx(className, "pointer-events-auto")}
 			{...props}
 		>
-			<Image
-				src="/img/john-adib-avatar-108.jpg"
-				alt="MrAdib"
-				width={108}
-				height={108}
-				className="h-9 w-9 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
-			/>
+			<picture className="block h-9 w-9">
+				<source
+					type="image/avif"
+					srcSet="/img/john-adib-london-avatar-108.avif"
+				/>
+				<img
+					src="/img/john-adib-london-avatar-108.jpg"
+					alt="John Adib"
+					width={108}
+					height={108}
+					decoding="async"
+					className="h-9 w-9 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
+				/>
+			</picture>
 		</Link>
 	);
 }

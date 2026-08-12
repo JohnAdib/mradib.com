@@ -17,16 +17,89 @@ const kb = (n) => (n / 1024).toFixed(1);
 
 // Encode by extension: webp/jpg are lossy (quality), png stays lossless.
 function encode(pipe, ext, quality) {
+	if (ext === ".avif") return pipe.avif({ quality, effort: 6 });
 	if (ext === ".webp") return pipe.webp({ quality });
 	if (ext === ".png") return pipe.png({ compressionLevel: 9 });
 	return pipe.jpeg({ quality });
 }
 
-// [srcName, outName, width] square cover-cropped avatar/hero variants (2x-3x).
+// Right-sized cover crops for places that load fixed-aspect imagery.
 const variants = [
-	["john-adib-avatar.jpg", "john-adib-avatar-108.jpg", 108],
-	["john-adib-avatar.jpg", "john-adib-avatar-576.jpg", 576],
-	["john-adib-hero.jpg", "john-adib-hero-576.jpg", 576],
+	{
+		srcName: "john-adib-avatar.jpg",
+		outName: "john-adib-avatar-108.jpg",
+		width: 108,
+		height: 108,
+	},
+	{
+		srcName: "john-adib-avatar.jpg",
+		outName: "john-adib-avatar-576.jpg",
+		width: 576,
+		height: 576,
+	},
+	{
+		srcName: "john-adib-hero.jpg",
+		outName: "john-adib-hero-576.jpg",
+		width: 576,
+		height: 576,
+	},
+	{
+		srcName: "john-adib-hero.jpg",
+		outName: "john-adib-hero-576.avif",
+		width: 576,
+		height: 576,
+		quality: 55,
+	},
+	{
+		srcName: "john-adib-london-landscape.jpg",
+		outName: "john-adib-london-landscape-1152.jpg",
+		width: 1152,
+		height: 768,
+	},
+	{
+		srcName: "john-adib-london-landscape.jpg",
+		outName: "john-adib-london-landscape-1152.avif",
+		width: 1152,
+		height: 768,
+		quality: 55,
+	},
+	{
+		srcName: "john-adib-london-landscape.jpg",
+		outName: "john-adib-london-landscape-768.jpg",
+		width: 768,
+		height: 512,
+	},
+	{
+		srcName: "john-adib-london-landscape.jpg",
+		outName: "john-adib-london-landscape-768.avif",
+		width: 768,
+		height: 512,
+		quality: 55,
+	},
+	{
+		srcName: "john-adib-london-portrait.jpg",
+		outName: "john-adib-london-portrait-720.jpg",
+		width: 720,
+	},
+	{
+		srcName: "john-adib-london-portrait.jpg",
+		outName: "john-adib-london-portrait-720.avif",
+		width: 720,
+		quality: 55,
+	},
+	{
+		srcName: "john-adib-london-avatar.jpg",
+		outName: "john-adib-london-avatar-108.jpg",
+		width: 108,
+		height: 108,
+	},
+	{
+		srcName: "john-adib-london-avatar.jpg",
+		outName: "john-adib-london-avatar-108.avif",
+		width: 108,
+		height: 108,
+		quality: 55,
+	},
 ];
 
 // Recurring ADPList certs shown as ~250px chips point at these -480 thumbs;
@@ -63,12 +136,20 @@ async function inPlace(file, maxWidth, quality) {
 }
 
 async function run() {
-	for (const [srcName, outName, width] of variants) {
+	for (const {
+		srcName,
+		outName,
+		width,
+		height,
+		position = "centre",
+		quality = 80,
+	} of variants) {
 		const out = img(outName);
-		await sharp(img(srcName))
-			.resize(width, width, { fit: "cover" })
-			.jpeg({ quality: 80 })
-			.toFile(out);
+		const ext = extname(outName).toLowerCase();
+		const resized = height
+			? sharp(img(srcName)).resize(width, height, { fit: "cover", position })
+			: sharp(img(srcName)).resize({ width, withoutEnlargement: true });
+		await encode(resized, ext, quality).toFile(out);
 		console.log(`variant  ${rel(out)}  ${kb((await stat(out)).size)} KB`);
 	}
 

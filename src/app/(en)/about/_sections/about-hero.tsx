@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { StatBand } from "@/components/stat-band";
 import { TiltCard } from "@/components/tilt-card/tilt-card";
 import { mentoringStats } from "@/data/mentoring-stats";
@@ -46,15 +45,25 @@ export function AboutHero() {
 				</p>
 			</div>
 			<div className="reveal-up reveal-delay-2 mx-auto max-w-xs lg:mx-0 lg:pt-2">
-				<TiltCard className="inline-block">
-					<Image
-						src="/img/john-adib-avatar-576.jpg"
-						alt="John Adib, engineering leader in London"
-						width={576}
-						height={576}
-						priority
-						className="aspect-square w-64 rotate-3 rounded-2xl bg-zinc-100 object-cover sm:w-72 dark:bg-zinc-800"
-					/>
+				<TiltCard
+					className="inline-block"
+					maxTilt={5}
+					restingRotate={2}
+					tracking="viewport"
+				>
+					<picture className="block">
+						<source type="image/avif" srcSet="/img/john-adib-hero-576.avif" />
+						<img
+							src="/img/john-adib-hero-576.jpg"
+							alt="John Adib, engineering leader in London"
+							width={576}
+							height={576}
+							loading="eager"
+							decoding="async"
+							fetchPriority="high"
+							className="h-auto w-64 rounded-2xl bg-zinc-100 shadow-sm shadow-zinc-900/10 sm:w-72 dark:bg-zinc-800"
+						/>
+					</picture>
 				</TiltCard>
 			</div>
 			<div className="reveal-up reveal-delay-4 lg:col-span-2">
