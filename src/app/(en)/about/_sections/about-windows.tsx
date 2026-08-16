@@ -1,4 +1,5 @@
 import { Chapter } from "./chapter";
+import { StoryVideo } from "./story-video";
 
 export function AboutWindows() {
 	return (
@@ -16,11 +17,20 @@ export function AboutWindows() {
 			</p>
 			<p>
 				The machine rebooted into a graphical screen, and the speaker played the
-				startup sound. After all that time in front of a dark, silent command
-				line, the computer talked back.
+				magical{" "}
+				<StoryVideo
+					ariaLabel="Play the Windows 98 startup sound"
+					aspect="classic"
+					captionsSrc="/about/windows-98-startup-sound.vtt"
+					label="Windows 98 startup sound"
+					src="/about/windows-98-startup-sound.mp4"
+					title="Windows 98 startup sound"
+				/>
+				. After all that time in front of a dark, silent command line, the
+				computer talked back.
 			</p>
 			<p>
-				It lasted a few seconds. I have carried it for decades. Some people
+				It lasted a few seconds, but I never forgot that moment. Some people
 				remember their first bicycle. I remember a chime through a cheap
 				speaker, and knowing exactly what I wanted to be near for the rest of my
 				life.

@@ -1,0 +1,36 @@
+.story-video-shimmer {
+	pointer-events: none;
+	color: transparent;
+	background-image: linear-gradient(
+		110deg,
+		transparent 25%,
+		rgba(255, 255, 255, 0.95) 50%,
+		transparent 75%
+	);
+	background-position: 150% 0;
+	background-repeat: no-repeat;
+	background-size: 200% 100%;
+	background-clip: text;
+	animation: story-video-shimmer 6s ease-in-out infinite;
+	-webkit-background-clip: text;
+}
+
+@keyframes story-video-shimmer {
+	0%,
+	75%,
+	100% {
+		background-position: 150% 0;
+	}
+
+	35%,
+	55% {
+		background-position: -150% 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.story-video-shimmer {
+		animation: none;
+		opacity: 0;
+	}
+}
