@@ -9,7 +9,7 @@ industry's biggest shift, and the stages prove people listen.
 
 ## Message
 
-Today I lead teams that build AI-first, and 5,000+ engineers came to
+Today I lead teams that build AI-first, and 800+ engineers came to
 hear how.
 
 ## Facts
@@ -18,7 +18,7 @@ hear how.
   docs/profile/experience.md.
 - Releases taken from monthly to weekly. Source:
   docs/profile/experience.md.
-- AI Coding Summit 2025: 5,000+ engineers, recording available. Source:
+- AI Coding Summit 2025: 800+ engineers, recording available. Source:
   docs/speaking/talks.md.
 - React Advanced London 2025, at Figma. Source: docs/speaking/talks.md.
 - Cut from today's panel: the 3-day auth build and the 90 design-system
@@ -33,7 +33,7 @@ Already shipped and voice-true.
 
 Gist: "I lead engineering in London with AI in the loop: three AI
 reviewers on every pull request, releases taken from monthly to weekly.
-I took the thesis to the AI Coding Summit, 5,000+ engineers, and to
+I took the thesis to the AI Coding Summit, 800+ engineers, and to
 React Advanced London at Figma."
 
 ## Path deeper

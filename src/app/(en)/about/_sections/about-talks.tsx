@@ -19,7 +19,7 @@ export function AboutTalks() {
 			<p>
 				Walking off that stage I knew: if I can do this, I can do more. There
 				has been at least one talk every quarter since, from Cloudflare to the
-				AI Coding Summit and its 5,000+ engineers, all listed on the{" "}
+				AI Coding Summit and its 800+ engineers, all listed on the{" "}
 				<Link href="/talks" className={chapterLinkClass}>
 					talks page
 				</Link>

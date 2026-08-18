@@ -68,7 +68,7 @@ export const talks: ITalk[] = [
 		logo: "/talks/logos/ai-coding-summit.avif",
 		city: "Online",
 		date: "2025-10-23",
-		audience: "5,000+ attendees",
+		audience: "800+ attendees",
 		summary:
 			"Why the single responsibility principle becomes critical in AI-first architectures, and how to design systems that work seamlessly with AI tools.",
 		image: "/talks/covers/ai-first-architecture.png",

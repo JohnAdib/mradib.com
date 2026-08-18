@@ -8,7 +8,7 @@ first. Serve the rest only when it costs the primary nothing.
 They heard the name, searched it, and landed here. They give the site 5
 seconds. In those 5 seconds they must feel: this guy is different, nothing
 is impossible for him, what a story. They respect evidence of scale ($1M
-raised, one million users, 5,000+ audiences), institutional recognition (UK
+raised, one million users, 800+ audiences), institutional recognition (UK
 government, ADPList100), and visible momentum. They are allergic to CV
 language and hedging.
 

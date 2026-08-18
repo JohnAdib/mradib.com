@@ -6,7 +6,7 @@ Talks are leadership evidence. A talk page must make an organizer think
 ## Framing rules
 
 - Lead with the stage: event name, venue prestige, audience size. "AI Coding
-  Summit, 5,000+ engineers" comes before any abstract.
+  Summit, 800+ engineers" comes before any abstract.
 - Recording first. If a recording exists, it is the hero of the page. If
   slides exist, link the PDF from public/talks/ with a clean URL.
 - Name the host when it adds prestige: hosted at Figma's London office,

@@ -35,7 +35,7 @@ export function HomeNow() {
 							releases taken from <Strong>monthly to weekly</Strong>.
 						</p>
 						<p className="mt-4 max-w-2xl text-lg text-zinc-300">
-							I took the thesis to the <Strong>AI Coding Summit</Strong>, 5,000+
+							I took the thesis to the <Strong>AI Coding Summit</Strong>, 800+
 							engineers, and to <Strong>React Advanced London</Strong> at Figma.
 						</p>
 						<Link

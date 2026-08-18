@@ -21,7 +21,7 @@ whose story arc reads inevitable:
 6. Named The World's Most Influential Mentor (ADPList100, selected from
    32,000+ mentors across 140+ countries) and #1 Mentor in Europe, 2024.
 7. On conference stages defining AI-first engineering: AI Coding Summit
-   (5,000+ engineers), React Advanced London at Figma's office, JavaScript
+   (800+ engineers), React Advanced London at Figma's office, JavaScript
    London.
 8. Leading engineering at Zapp in London while pioneering AI-first
    development: AI reviewers on every pull request, releases taken from

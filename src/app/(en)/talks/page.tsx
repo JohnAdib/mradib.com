@@ -18,7 +18,7 @@ import { TalksTopics } from "./_sections/talks-topics";
 export const metadata: Metadata = {
 	title: "Talks & Speaking",
 	description:
-		"John Adib speaks on AI-first development and engineering leadership: AI Coding Summit (5,000+ engineers), React Advanced at Figma, JavaScript London.",
+		"John Adib speaks on AI-first development and engineering leadership: AI Coding Summit (800+ engineers), React Advanced at Figma, JavaScript London.",
 	...ogMetadata("/talks"),
 };
 
