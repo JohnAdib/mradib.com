@@ -49,7 +49,7 @@ Order highlights by wow weight for the primary audience:
    businesses served.
 3. UK government endorsement: Global Talent, exceptional talent in
    technology.
-4. Stages: AI Coding Summit (5,000+ engineers), React Advanced London at
+4. Stages: AI Coding Summit (800+ engineers), React Advanced London at
    Figma.
 5. AI-first practice: releases taken from monthly to weekly, AI
    reviewers on every pull request.

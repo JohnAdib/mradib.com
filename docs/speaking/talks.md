@@ -25,7 +25,7 @@ Each talk has its own page at the root URL. Talks are separate from articles.
 ### AI-First Architecture: Why Single Responsibility Matters More Than Ever
 
 - Event: AI Coding Summit 2025 (GitNation), online, 23 October 2025.
-- Audience: 5,000+ engineers. An 18 minute recording exists on GitNation.
+- Audience: 800+ engineers (817 joined). An 18 minute recording exists on GitNation.
 - Talk page: /ai-first-architecture-why-single-responsibility-matters-more-than-ever
 - Speaker certificate: GitNation Foundation, Oct 2025, ID 31526.
 

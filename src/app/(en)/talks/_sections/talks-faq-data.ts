@@ -11,7 +11,7 @@ export const talksFaq: IFaqQA[] = [
 	{
 		id: "formats",
 		q: "What formats do you do?",
-		a: "Conference talks, hands-on workshops, and panels. In person I have spoken to rooms of 200+ people, up to 300, and online to audiences of more than 5,000.",
+		a: "Conference talks, hands-on workshops, and panels. In person I have spoken to rooms of 200+ people, up to 300, and online to audiences of 800+.",
 	},
 	{
 		id: "location",

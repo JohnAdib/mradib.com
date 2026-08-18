@@ -77,7 +77,7 @@ export const ogCardsEn: IOgCard[] = [
 		eyebrow: "Speaking",
 		headline: "Stages that define AI-first engineering.",
 		proof:
-			"AI Coding Summit, 5,000+ engineers. React Advanced at Figma. JavaScript London.",
+			"AI Coding Summit, 800+ engineers. React Advanced at Figma. JavaScript London.",
 	},
 	{
 		slug: "resume-review",

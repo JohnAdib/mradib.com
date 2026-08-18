@@ -4,6 +4,12 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-08-18, AI Coding Summit audience is 800+, not 5,000+
+
+The 5,000+ figure came from an early GitNation landing page and was not
+accurate. 817 people joined the event. Publish 800+. Source of truth is
+docs/speaking/talks.md, then src/data/talks/talks.ts.
+
 ## 2026-07-24, resume guide review round from real use
 
 A large batch of fixes John gathered while reading the guide and reviewing CVs.
