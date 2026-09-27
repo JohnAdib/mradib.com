@@ -1,7 +1,8 @@
-import type { IPitchSlide } from "./slide-interface";
+import type { IGuideStep } from "@/data/guides/guide-interface";
+import type { PitchSlideId } from "./slide-id";
 
 // Slides 9 to 12: the evidence, the economics, the people, and the ask.
-export const slidesClose: IPitchSlide[] = [
+export const slidesClose: IGuideStep<PitchSlideId>[] = [
 	{
 		id: "traction",
 		title: "Traction",

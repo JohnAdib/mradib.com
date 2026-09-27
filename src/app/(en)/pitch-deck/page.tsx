@@ -1,38 +1,41 @@
 import type { Metadata } from "next";
-import { articlePitchDeck as article } from "@/data/articles/pitch-deck";
+import { GuideAiPrompt } from "@/components/guide/ai/guide-ai-prompt";
+import { GuideClosing } from "@/components/guide/closing/guide-closing";
+import { GuideFaq } from "@/components/guide/faq/guide-faq";
+import { GuideHero } from "@/components/guide/hero/guide-hero";
+import { GuideOverview } from "@/components/guide/overview/guide-overview";
+import { GuideReferences } from "@/components/guide/references/guide-references";
+import { GuideRules } from "@/components/guide/rules/guide-rules";
+import { GuideJsonLd } from "@/components/guide/seo/guide-json-ld";
+import { RevealFallback } from "@/components/guide/shell/reveal-fallback";
+import { GuideSteps } from "@/components/guide/steps/guide-steps";
+import { pitchDeckGuide as guide } from "@/data/pitch-deck";
 import { ogMetadata } from "@/lib/og-metadata";
-import { DeckAiPrompt } from "./_sections/ai/deck-ai-prompt";
-import { DeckClosing } from "./_sections/closing/deck-closing";
-import { DeckFaq } from "./_sections/faq/deck-faq";
-import { DeckHero } from "./_sections/hero/deck-hero";
-import { DeckOrder } from "./_sections/order/deck-order";
-import { DeckOverview } from "./_sections/overview/deck-overview";
-import { DeckReferences } from "./_sections/references/deck-references";
-import { DeckJsonLd } from "./_sections/seo/deck-json-ld";
-import { DeckSlides } from "./_sections/slides/deck-slides";
-import { RevealFallback } from "./_shared/reveal-fallback";
 
 export const metadata: Metadata = {
-	title: article.pageTitle,
-	description: article.pageDesc,
-	...ogMetadata(article.pagePath, { publishedTime: article.datePublished }),
+	title: guide.article.pageTitle,
+	description: guide.article.pageDesc,
+	...ogMetadata(guide.article.pagePath, {
+		publishedTime: guide.article.datePublished,
+	}),
 };
 
-// Composition only. Each part owns its id, data, copy, and reveal, so the
-// page reads in order: move a line to reorder, delete a line to drop a part.
+// Composition only. Each part takes the guide and owns its anchor, copy, and
+// reveal, so the page reads in order: move a line to reorder, delete a line
+// to drop a part.
 export default function Page() {
 	return (
 		<>
 			<RevealFallback />
-			<DeckJsonLd />
-			<DeckHero />
-			<DeckOverview />
-			<DeckSlides />
-			<DeckOrder />
-			<DeckAiPrompt />
-			<DeckReferences />
-			<DeckFaq />
-			<DeckClosing />
+			<GuideJsonLd guide={guide} />
+			<GuideHero guide={guide} />
+			<GuideOverview guide={guide} />
+			<GuideSteps guide={guide} />
+			<GuideRules guide={guide} />
+			<GuideAiPrompt guide={guide} />
+			<GuideReferences guide={guide} />
+			<GuideFaq guide={guide} />
+			<GuideClosing guide={guide} />
 		</>
 	);
 }

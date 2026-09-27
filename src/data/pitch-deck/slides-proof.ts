@@ -1,7 +1,8 @@
-import type { IPitchSlide } from "./slide-interface";
+import type { IGuideStep } from "@/data/guides/guide-interface";
+import type { PitchSlideId } from "./slide-id";
 
 // Slides 5 to 8: the solution, the market, and how you win it.
-export const slidesProof: IPitchSlide[] = [
+export const slidesProof: IGuideStep<PitchSlideId>[] = [
 	{
 		id: "solution",
 		title: "Solution and why now",

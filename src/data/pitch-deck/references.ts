@@ -1,7 +1,7 @@
-import type { IPitchReference } from "./slide-interface";
+import type { IGuideReference } from "@/data/guides/guide-interface";
 
 // The investors and operators who see the most decks, in their own words.
-export const pitchReferences: IPitchReference[] = [
+export const pitchReferences: IGuideReference[] = [
 	{
 		source: "Sequoia Capital",
 		title: "Writing a Business Plan",
