@@ -57,7 +57,7 @@ export function ThingsToAvoid(): JSX.Element {
 			</p>
 			<Msg severity="warning">
 				In the United States and the United Kingdom in particular, because of
-				anti discrimination laws, you should not put your photo on your resume.
+				anti-discrimination laws, you should not put your photo on your resume.
 			</Msg>
 			<p>
 				This is part of your privacy. Of course, if you want to add a photo, no

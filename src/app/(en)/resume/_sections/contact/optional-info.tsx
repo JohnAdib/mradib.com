@@ -23,7 +23,7 @@ export function OptionalInfo(): JSX.Element {
 				</a>
 			</h4>
 			<p>
-				If you have an up to date profile that can raise the value of your
+				If you have an up-to-date profile that can raise the value of your
 				resume, it is a good idea to add it.
 			</p>
 
@@ -61,7 +61,7 @@ export function OptionalInfo(): JSX.Element {
 				work and have a portfolio, it is good to include the link.
 			</p>
 			<p>
-				The site must be high quality. Linking to a low quality or unfinished
+				The site must be high quality. Linking to a low-quality or unfinished
 				site is a negative, not a positive. Only link it if it genuinely
 				showcases good work.
 			</p>

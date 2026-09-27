@@ -37,7 +37,7 @@ export function KeywordTailoring(): JSX.Element {
 			</Pre>
 
 			<p>
-				Now, to tailor our resume to these requirements, all you need to do is
+				Now, to tailor your resume to these requirements, all you need to do is
 				add these points to your own resume. Of course, I mean something like
 				them, based on the achievements and qualifications you actually have.
 			</p>

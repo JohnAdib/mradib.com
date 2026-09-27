@@ -18,7 +18,7 @@ export function EssentialInfo(): JSX.Element {
 					href="#essentials"
 					className="no-underline text-inherit hover:underline"
 				>
-					اطلاعات اولیه در بخش تماس روزمه
+					اطلاعات اولیه در بخش تماس رزومه
 				</a>
 			</h3>
 			<figure>
@@ -31,7 +31,7 @@ export function EssentialInfo(): JSX.Element {
 					نام و نام خانوادگی
 				</a>
 			</h4>
-			<p>به‌نظر ساده میاد!</p>
+			<p>به‌نظر ساده می‌اد!</p>
 
 			<h4 id="headline">
 				<a
@@ -43,7 +43,7 @@ export function EssentialInfo(): JSX.Element {
 			</h4>
 			<p>
 				عنوان حرفه‌ای شما می‌تونه موقعیت فعلی یا شغل موردنظر شما باشه. مثلا Senior
-				Software Engineer یا Data Analyst. یه نکته مهم اینجا مطرح میشه که از
+				Software Engineer یا Data Analyst. یه نکته مهم اینجا مطرح می‌شه که از
 				عناوین عجیب و غریب مثل نینجا و سامورائی و … استفاده نکنید. سعی کنید
 				بیشتر از ۴ کلمه نشه.
 			</p>
@@ -56,7 +56,7 @@ export function EssentialInfo(): JSX.Element {
 					آدرس ایمیل
 				</a>
 			</h4>
-			<p>خیلی مهمه. تقریبا همه کارتون با این ایمیل انجام میشه.</p>
+			<p>خیلی مهمه. تقریبا همه کارتون با این ایمیل انجام می‌شه.</p>
 
 			<h4 id="phone">
 				<a href="#phone" className="no-underline text-inherit hover:underline">

@@ -32,11 +32,11 @@ export function EducationFields(): JSX.Element {
 			<Pre language="plaintext">2008 to 2012</Pre>
 			<p>
 				If your studies took longer than usual, or you would rather not share
-				the details, you can list just the graduation year. For example
+				the details, you can list just the graduation year. For example:
 			</p>
 			<Pre language="plaintext">2014</Pre>
 			<p>
-				When you have not graduated yet and expect to finish by a certain time.
+				When you have not graduated yet and expect to finish by a certain time,
 				For example
 			</p>
 			<Pre language="plaintext">Expected in 2025</Pre>

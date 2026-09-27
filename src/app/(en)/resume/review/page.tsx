@@ -28,7 +28,7 @@ export default function Page() {
 		<Container className="mt-10 pb-16 sm:mt-14">
 			<HowToJsonLd
 				name="How to improve your resume"
-				description="A section by section resume checklist: what to fix and how, scored out of 100."
+				description="A section-by-section resume checklist: what to fix and how, scored out of 100."
 				steps={howToSteps}
 			/>
 			<div className="mx-auto max-w-2xl">
