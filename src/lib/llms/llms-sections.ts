@@ -1,6 +1,8 @@
 import { articlesMeta } from "@/data/articles/articles-meta";
 import { adplistBadgeTimeline, flagshipAwards } from "@/data/awards";
 import { career } from "@/data/career";
+import { hubRoute } from "@/data/guides/fundraising-kit";
+import { hubCopy } from "@/data/guides/hub-copy";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { profile, urlGitNation } from "@/data/profile";
 import { podcastAppearances, talks } from "@/data/talks/talks";
@@ -76,6 +78,7 @@ export function sectionPages(): string {
 		`- [Mentorship](${homepageUrl}/mentor): book a mentorship session with John.`,
 		`- [Talks & Speaking](${homepageUrl}/talks): all talks with slides, the podcast, and how to invite John to speak.`,
 		...talkPageLines,
+		`- [${hubCopy.itemListName}](${homepageUrl}${hubRoute}): ${hubCopy.hero.thesis}`,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,
 		`- [Review a CV](${homepageUrl}/resume/checklist): score any resume out of 100 section by section, flag each issue with its fix, and share the result as a link.`,

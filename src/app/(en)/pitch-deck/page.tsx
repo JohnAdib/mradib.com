@@ -3,12 +3,14 @@ import { GuideAiPrompt } from "@/components/guide/ai/guide-ai-prompt";
 import { GuideClosing } from "@/components/guide/closing/guide-closing";
 import { GuideFaq } from "@/components/guide/faq/guide-faq";
 import { GuideHero } from "@/components/guide/hero/guide-hero";
+import { GuideKit } from "@/components/guide/kit/guide-kit";
 import { GuideOverview } from "@/components/guide/overview/guide-overview";
 import { GuideReferences } from "@/components/guide/references/guide-references";
 import { GuideRules } from "@/components/guide/rules/guide-rules";
 import { GuideJsonLd } from "@/components/guide/seo/guide-json-ld";
 import { RevealFallback } from "@/components/guide/shell/reveal-fallback";
 import { GuideSteps } from "@/components/guide/steps/guide-steps";
+import { kitCopy } from "@/data/guides/kit-copy";
 import { pitchDeckGuide as guide } from "@/data/pitch-deck";
 import { ogMetadata } from "@/lib/og-metadata";
 
@@ -35,6 +37,11 @@ export default function Page() {
 			<GuideAiPrompt guide={guide} />
 			<GuideReferences guide={guide} />
 			<GuideFaq guide={guide} />
+			<GuideKit
+				id={guide.anchors.kit}
+				heading={kitCopy.heading}
+				current={guide.article.pagePath}
+			/>
 			<GuideClosing guide={guide} />
 		</>
 	);

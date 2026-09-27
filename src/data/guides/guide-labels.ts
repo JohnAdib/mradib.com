@@ -12,7 +12,6 @@ export const guideAnchorDefaults: Omit<IGuideAnchors, "steps" | "rules"> = {
 };
 
 export const guideUiLabels = {
-	articles: "Articles",
 	read: "Read it",
 	copyPrompt: "Copy the prompt",
 	copied: "Copied",
@@ -22,6 +21,9 @@ export const guideUiLabels = {
 /** The fixed lines of llms.txt and the skill. Per-guide prose lives in aiText. */
 export const guideAiLabels = {
 	humanGuide: "Human guide",
+	humanHub: "Human hub",
+	framework: "Framework",
+	skill: "Skill",
 	skillFile: "Portable skill for AI tools",
 	how: "How to use this",
 	workflow: "Workflow",
