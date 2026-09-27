@@ -1,8 +1,11 @@
-import type { IDeckHeading } from "./slide-interface";
+import type { IGuideHeadings, IGuideHero } from "@/data/guides/guide-bundle";
+
+/** Short name for breadcrumbs and the kit. */
+export const deckName = "Pitch deck";
 
 // The page title is split so the hero can set the accent phrase in italic.
 // src/data/articles/pitch-deck.ts joins the same two parts for metadata.
-export const deckHero = {
+export const deckHero: IGuideHero = {
 	eyebrow: "Free guide",
 	titleLead: "Your pitch deck is",
 	titleAccent: "12 questions",
@@ -15,26 +18,23 @@ export const deckHero = {
 		"It starts the conversation",
 	],
 	ctaLabel: "Build it with AI",
-	ctaHref: "#ai",
+	ctaAnchor: "ai",
 };
 
-export const deckHeadings: Record<
-	"overview" | "slides" | "order" | "ai" | "references",
-	IDeckHeading
-> = {
+export const deckHeadings: IGuideHeadings = {
 	overview: {
 		eyebrow: "At a glance",
 		title: "Twelve slides, one story",
 		intro:
 			"In the order investors expect: cover, ambition, problem, customer, solution and why now, market, competition, distribution, evidence, economics, team, ask. Tap a slide to jump to it.",
 	},
-	slides: {
+	steps: {
 		eyebrow: "Slide by slide",
 		title: "What each slide must do",
 		intro:
 			"The question it answers, what to put on it, what to leave off, and a test to check it passes.",
 	},
-	order: {
+	rules: {
 		eyebrow: "Make it yours",
 		title: "When to change the order",
 		intro:

@@ -42,18 +42,10 @@ export const pageClosings: Record<string, IPageClosing> = {
 	},
 	articles: {
 		title: "The thinking continues on stage.",
-		desc: "Three guides down, more on the way. Six talks and a podcast carry the rest of the thinking.",
+		desc: "Eight guides down, more on the way. Six talks and a podcast carry the rest of the thinking.",
 		linkPrimaryText: "See the talks",
 		linkPrimaryLink: "/talks",
 		linkSecondaryText: "Get in touch",
 		linkSecondaryLink: "/contact",
-	},
-	pitchDeck: {
-		title: "The deck opens the door.",
-		desc: "Twelve answers get you the meeting. The story you tell in the room does the rest. Questions about your deck? Say hello.",
-		linkPrimaryText: "Get in touch",
-		linkPrimaryLink: "/contact",
-		linkSecondaryText: "Build a resume that gets read",
-		linkSecondaryLink: "/resume",
 	},
 };

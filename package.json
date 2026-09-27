@@ -18,9 +18,11 @@
 		"start": "next start",
 		"start:local": "npx serve@latest out",
 		"test:about-videos": "node --test tests/about-story-videos.test.mjs",
-		"test:pitch-deck": "node --test tests/pitch-deck.test.mjs",
+		"test:guides": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs --test tests/guides.test.mjs",
+		"test:guides-data": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs --test tests/guides-data.test.mjs",
 		"verify:photos": "node scripts/verify-profile-images.mjs",
-		"verify:seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-sitemap.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-metadata.mjs && node scripts/verify-constraints.mjs"
+		"verify:seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-sitemap.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-metadata.mjs && node scripts/verify-constraints.mjs",
+		"verify:links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/verify-links.mjs"
 	},
 	"browserslist": "defaults, not ie <= 11",
 	"dependencies": {

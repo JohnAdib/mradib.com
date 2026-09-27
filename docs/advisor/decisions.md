@@ -4,6 +4,60 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-09-27, the fundraising kit: five sibling guides and a hub
+
+The pitch deck gets its five siblings, the documents a founder prepares to
+raise or apply: one-pager, product demo, founder video, financial model and
+application answers. With the deck they are the fundraising kit, introduced
+by a hub at /fundraising. John's rulings, all binding:
+
+- One kit, one implementation. The deck's page parts became a shared kit:
+  types in src/data/guides, the AI-file builders in src/lib/guides, and
+  every page part in src/components/guide, where sections take the guide
+  and leaves take props. A guide is numbered steps (slides, blocks, beats,
+  sheets, answers) that each answer one question, with what goes in, what
+  stays out and a pass test, plus the cases that bend the default and the
+  optional extras. Every guide page is an ordered list of parts, and each
+  guide's data folder holds every string it renders.
+- The six link as a series. The order lives once in
+  src/data/guides/fundraising-kit.ts and drives the breadcrumbs (Fundraising
+  kit, then the guide), the position line beside the hero eyebrow, the kit
+  section near the end of every guide with the current one marked, the
+  closing panel's second button (the next guide, unless the closing names
+  its own), the article list, and the "Guides for AI" lines of llms.txt.
+- The hub at /fundraising is a top-level page, not an article: the six
+  cards, the method in four moves (write the facts once, tell the story in
+  the deck, cut it and show it, price it and apply), an AI part that lists
+  every framework and skill plus /fundraising/llms.txt as an index, and an
+  ItemList. Its breadcrumb is the kit alone. No hub FAQ: the guides carry
+  the FAQs.
+- Titles claim the artifact, as the deck does: the deck in 60 seconds, one
+  flow in three minutes, one minute one take, the plan in numbers, 10
+  straight answers. Slugs are top level and hyphenated where needed
+  (/one-pager, /product-demo, /founder-video, /financial-model,
+  /application-answers). Anchors are one word: blocks, beats, sheets,
+  answers for the steps; format, formats, cases for the rules.
+- Application answers model the questions Y Combinator, Antler and Techstars
+  ask, in programme-neutral wording, and each answer carries "Asked by"
+  chips naming the programmes that ask it. The chips follow the programmes'
+  published forms; John confirms them when a form changes.
+- Founders raising a round are a named audience of the guides, served after
+  the primary audience and never at its expense (audiences.md, section 5).
+- The presenter stage takes the shape of the artifact: a 16:9 slide, a
+  portrait page, a browser window, a viewfinder, a ruled sheet with
+  horizontal rows only, a form with two faint fields. Button renders hash
+  hrefs as plain anchors so hero CTAs stop copying its classes.
+- On the shipped deck: the breadcrumb reads Fundraising kit, the hero gains
+  the position line, the kit section sits before the closing, the optional
+  slides Product demo and Financial plan link to their guides, and the
+  closing's second button hands over to the one-pager instead of the resume
+  guide. Its llms.txt and skill.md are unchanged byte for byte.
+- Facts about John on these pages stay to the two the profile supports: a
+  two-time founder who raised $1M as a CEO, and a mentor to startup founders
+  through MassChallenge Switzerland and UK. Reference links could not be
+  verified from the build sandbox; npm run verify:links checks them where
+  the network is open, before launch.
+
 ## 2026-09-27, the pitch deck guide
 
 A third guide at /pitch-deck: the 12-slide pitch deck, slide by slide, as a

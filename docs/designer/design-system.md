@@ -48,6 +48,16 @@ John asks for them. Until then, tiers live only in this registry.
 | YouTubeEmbed | src/components/video/youtube-embed.tsx | candidate |
 | TalkMedia | src/components/talk/talk-media.tsx | candidate |
 | PricingCard | src/components/pricing/pricing-card.tsx | candidate |
+| SectionShell | src/components/guide/shell/section-shell.tsx | candidate |
+| GuideSectionHeading | src/components/guide/shell/section-heading.tsx | candidate |
+| RuleChips | src/components/guide/hero/rule-chips.tsx | candidate |
+| GuidePresenter | src/components/guide/presenter/ | candidate |
+| StepListCard | src/components/guide/steps/step-list-card.tsx | candidate |
+| RuleCard | src/components/guide/rules/rule-card.tsx | candidate |
+| AiFileCard | src/components/guide/ai/ai-file-card.tsx | candidate |
+| PromptPanel | src/components/guide/ai/prompt-panel.tsx | candidate |
+| ReferenceCard | src/components/guide/references/reference-card.tsx | candidate |
+| KitCard | src/components/guide/kit/kit-card.tsx | candidate |
 
 Components not listed are feature components; add them here when they show
 reuse potential.

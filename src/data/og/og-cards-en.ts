@@ -31,7 +31,7 @@ export const ogCardsEn: IOgCard[] = [
 		eyebrow: "Guides",
 		headline: "Written to be definitive.",
 		proof:
-			"The 12-slide pitch deck, the A to Z of resume building, and the complete guide to GitHub Autolink.",
+			"The fundraising kit from pitch deck to application, the A to Z of resume building, and the complete guide to GitHub Autolink.",
 	},
 	{
 		slug: "awards",

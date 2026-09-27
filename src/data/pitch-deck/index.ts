@@ -1,43 +1,48 @@
-import type { IPitchSlide, PitchSlideId } from "./slide-interface";
+import { articlePitchDeck } from "@/data/articles/pitch-deck";
+import type { IGuide } from "@/data/guides/guide-bundle";
+import { guideAnchorDefaults } from "@/data/guides/guide-labels";
+import { deckAi, deckAiText } from "./copy-ai";
+import { deckClosing } from "./copy-closing";
+import {
+	deckHeadings,
+	deckHero,
+	deckHowTo,
+	deckName,
+	deckOptionalTitle,
+} from "./copy-hero";
+import { presenterLabels, slideLabels } from "./copy-labels";
+import { deckFaqTitle, pitchDeckFaq } from "./faq";
+import { optionalSlides } from "./optional";
+import { pitchReferences } from "./references";
+import { reorderRules } from "./rules";
 import { slidesClose } from "./slides-close";
 import { slidesProof } from "./slides-proof";
 import { slidesStory } from "./slides-story";
 
 /** The twelve slides, in the standard order. Numbering derives from position. */
-export const pitchSlides: IPitchSlide[] = [
-	...slidesStory,
-	...slidesProof,
-	...slidesClose,
-];
+export const pitchSlides = [...slidesStory, ...slidesProof, ...slidesClose];
 
-/** The anchors in slide order, for scroll spy and deep links. */
-export const pitchSlideIds: PitchSlideId[] = pitchSlides.map(
-	(slide) => slide.id,
-);
-
-export { deckAi } from "./copy-ai";
-export {
-	deckHeadings,
-	deckHero,
-	deckHowTo,
-	deckOptionalTitle,
-} from "./copy-hero";
-export {
-	type IPresenterLabels,
-	type ISlideLabels,
+/** Everything the /pitch-deck page and its AI files render from. */
+export const pitchDeckGuide: IGuide = {
+	name: deckName,
+	frame: "slide",
+	article: articlePitchDeck,
+	anchors: { ...guideAnchorDefaults, steps: "slides", rules: "order" },
+	hero: deckHero,
+	headings: deckHeadings,
+	optionalTitle: deckOptionalTitle,
+	stepLabels: slideLabels,
 	presenterLabels,
-	slideLabels,
-} from "./copy-labels";
-export { deckFaqTitle, pitchDeckFaq } from "./faq";
-export { optionalSlides } from "./optional-slides";
-export { pitchReferences } from "./references";
-export { reorderRules } from "./reorder-rules";
-export type {
-	IDeckAiFile,
-	IDeckHeading,
-	IOptionalSlide,
-	IPitchReference,
-	IPitchSlide,
-	IReorderRule,
-	PitchSlideId,
-} from "./slide-interface";
+	steps: pitchSlides,
+	rules: reorderRules,
+	optional: optionalSlides,
+	ai: deckAi,
+	aiText: deckAiText,
+	faqTitle: deckFaqTitle,
+	faq: pitchDeckFaq,
+	references: pitchReferences,
+	howTo: deckHowTo,
+	closing: deckClosing,
+};
+
+export type { PitchSlideId } from "./slide-id";

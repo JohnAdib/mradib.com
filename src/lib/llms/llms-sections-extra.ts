@@ -1,4 +1,5 @@
 import { adplistBadgeTimeline, awards } from "@/data/awards";
+import { fundraisingKit, hubRoute } from "@/data/guides/fundraising-kit";
 import { profile, urlAdpList100, urlPodcastSpotify } from "@/data/profile";
 import { homepageUrl } from "@/lib/constants/url";
 
@@ -19,8 +20,15 @@ export function sectionAiTools(): string {
 		`- Machine-readable resume-writing method (the MrAdib method): ${homepageUrl}/resume/llms.txt (Persian: ${homepageUrl}/fa/resume/llms.txt)`,
 		`- Portable resume-writing skill for AI tools: ${homepageUrl}/resume/skill.md (Persian: ${homepageUrl}/fa/resume/skill.md)`,
 		`- Review a resume and score it out of 100: ${homepageUrl}/resume/checklist`,
-		`- Machine-readable 12-slide pitch deck framework: ${homepageUrl}/pitch-deck/llms.txt`,
-		`- Portable pitch deck skill for AI tools: ${homepageUrl}/pitch-deck/skill.md`,
+		`- The fundraising kit, an index of six frameworks for AI: ${homepageUrl}${hubRoute}/llms.txt`,
+		...fundraisingKit.flatMap((entry) => {
+			const name = entry.name.toLowerCase();
+			const url = `${homepageUrl}${entry.article.pagePath}`;
+			return [
+				`- Machine-readable ${name} framework: ${url}/llms.txt`,
+				`- Portable ${name} skill for AI tools: ${url}/skill.md`,
+			];
+		}),
 	].join("\n");
 }
 
