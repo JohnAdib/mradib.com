@@ -12,13 +12,15 @@ export function sectionEvidence(): string {
 	].join("\n");
 }
 
-export function sectionResumeAiTools(): string {
+export function sectionAiTools(): string {
 	return [
-		"## Resume tools for AI",
+		"## Guides for AI",
 		"",
 		`- Machine-readable resume-writing method (the MrAdib method): ${homepageUrl}/resume/llms.txt (Persian: ${homepageUrl}/fa/resume/llms.txt)`,
 		`- Portable resume-writing skill for AI tools: ${homepageUrl}/resume/skill.md (Persian: ${homepageUrl}/fa/resume/skill.md)`,
 		`- Review a resume and score it out of 100: ${homepageUrl}/resume/checklist`,
+		`- Machine-readable 12-slide pitch deck framework: ${homepageUrl}/pitch-deck/llms.txt`,
+		`- Portable pitch deck skill for AI tools: ${homepageUrl}/pitch-deck/skill.md`,
 	].join("\n");
 }
 

@@ -11,7 +11,7 @@ import { ArticlesHero } from "./_sections/articles-hero";
 export const metadata: Metadata = {
 	title: "Articles & Guides",
 	description:
-		"Guides written to be the most complete answer on the internet: the A to Z of building a resume that gets read, and GitHub Autolink, by John Adib.",
+		"The most complete guides on the internet: the 12-slide pitch deck, the A to Z of a resume that gets read, and GitHub Autolink, by John Adib.",
 	...ogMetadata("/articles"),
 };
 

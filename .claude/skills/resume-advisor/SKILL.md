@@ -27,7 +27,7 @@ break the math. Change the advice here, once.
   into ordered, weighted rules; `build-llms-txt.ts` and `build-skill.ts` render
   it as `/resume/llms.txt` and `/resume/skill.md` (and the `/fa` pair).
 - The site-wide `llms.txt` advertises those files via
-  `sectionResumeAiTools()` in `src/lib/llms/llms-sections-extra.ts`.
+  `sectionAiTools()` in `src/lib/llms/llms-sections-extra.ts`.
 
 ## Rules
 

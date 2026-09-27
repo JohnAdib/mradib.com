@@ -18,6 +18,7 @@
 		"start": "next start",
 		"start:local": "npx serve@latest out",
 		"test:about-videos": "node --test tests/about-story-videos.test.mjs",
+		"test:pitch-deck": "node --test tests/pitch-deck.test.mjs",
 		"verify:photos": "node scripts/verify-profile-images.mjs",
 		"verify:seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-sitemap.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-metadata.mjs && node scripts/verify-constraints.mjs"
 	},
