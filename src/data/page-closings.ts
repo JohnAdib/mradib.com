@@ -42,7 +42,7 @@ export const pageClosings: Record<string, IPageClosing> = {
 	},
 	articles: {
 		title: "The thinking continues on stage.",
-		desc: "Three guides down, more on the way. Six talks and a podcast carry the rest of the thinking.",
+		desc: "Eight guides down, more on the way. Six talks and a podcast carry the rest of the thinking.",
 		linkPrimaryText: "See the talks",
 		linkPrimaryLink: "/talks",
 		linkSecondaryText: "Get in touch",

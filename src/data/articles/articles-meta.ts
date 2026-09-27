@@ -1,11 +1,13 @@
+import { fundraisingKit } from "@/data/guides/fundraising-kit";
 import type { IArticle } from "./article-interface";
 import { articleGithubAutolink } from "./github-autolink";
-import { articlePitchDeck } from "./pitch-deck";
 import { articleResume } from "./resume";
 
-// newest first, drives /articles, the sitemap, the RSS feed, and llms.txt
+// Newest first, drives /articles, the sitemap, the RSS feed, and llms.txt.
+// The fundraising kit leads, in kit order; its article times descend so
+// newest-first and kit order agree.
 export const articlesMeta: IArticle[] = [
-	articlePitchDeck,
+	...fundraisingKit.map((entry) => entry.article),
 	articleGithubAutolink,
 	articleResume,
 ];

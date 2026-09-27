@@ -1,4 +1,4 @@
-/** A camera viewfinder: a recording dot and a soft frame corner. */
+/** A camera viewfinder: a recording dot and one soft frame corner. */
 export function FrameVideo() {
 	return (
 		<div aria-hidden="true" className="absolute inset-0 -z-10">
@@ -6,7 +6,6 @@ export function FrameVideo() {
 				<span className="h-2 w-2 rounded-full bg-rose-500" />
 			</span>
 			<span className="absolute right-5 bottom-5 h-6 w-6 rounded-br-lg border-r border-b border-white/25" />
-			<span className="absolute top-5 left-5 h-6 w-6 rounded-tl-lg border-t border-l border-white/25" />
 		</div>
 	);
 }

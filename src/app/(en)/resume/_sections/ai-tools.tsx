@@ -46,8 +46,9 @@ export function SectionAiTools(): JSX.Element {
 				copiedLabel="Copied"
 			/>
 			<p>
-				Raising money next? The same method exists for your{" "}
-				<Link href="/pitch-deck">12-slide pitch deck</Link>.
+				Raising money next? The same method covers the whole{" "}
+				<Link href="/fundraising">fundraising kit</Link>, from the pitch deck to
+				the application.
 			</p>
 		</section>
 	);
