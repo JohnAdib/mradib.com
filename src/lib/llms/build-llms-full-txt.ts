@@ -5,11 +5,11 @@ import {
 	sectionProfiles,
 } from "@/lib/llms/llms-sections";
 import {
+	sectionAiTools,
 	sectionAllRecognition,
 	sectionEvidence,
 	sectionFullBiography,
 	sectionPersian,
-	sectionResumeAiTools,
 } from "@/lib/llms/llms-sections-extra";
 import { sectionSiteStructure } from "@/lib/llms/llms-sections-routes";
 
@@ -23,7 +23,7 @@ export function buildLlmsFullTxt(): string {
 		sectionSiteStructure(),
 		sectionProfiles(),
 		sectionEvidence(),
-		sectionResumeAiTools(),
+		sectionAiTools(),
 		sectionPersian(),
 	].join("\n\n")}\n`;
 }

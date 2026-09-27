@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { JSX } from "react";
 import { CopyButton } from "@/components/copy-button";
 import { SectionHeading } from "@/components/heading/section-heading";
@@ -44,6 +45,10 @@ export function SectionAiTools(): JSX.Element {
 				label="Copy the prompt"
 				copiedLabel="Copied"
 			/>
+			<p>
+				Raising money next? The same method exists for your{" "}
+				<Link href="/pitch-deck">12-slide pitch deck</Link>.
+			</p>
 		</section>
 	);
 }

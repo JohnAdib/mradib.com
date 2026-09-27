@@ -4,6 +4,40 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-09-27, the pitch deck guide
+
+A third guide at /pitch-deck: the 12-slide pitch deck, slide by slide, as a
+standard founders can reuse from a £0 idea to a company with early traction.
+John's rulings, all binding:
+
+- The structure is his twelve slides and order, refined: Introduction becomes
+  Cover, Market Opportunity becomes Market, why now stays inside Solution.
+  Three reorder rules (Traction up when it is the strongest card, Team up at
+  the idea stage, why now standalone when timing is the story) and an
+  optional-slides strip make the standard flex without changing it.
+- Every slide carries one investor question, a plain definition, "Put on
+  it", "Leave off", and a one-sentence pass test. The framework lives once in
+  src/data/pitch-deck; the page, /pitch-deck/llms.txt and /pitch-deck/skill.md
+  all render from it (src/lib/pitch-deck), the same shape as the resume method.
+- The title is bold and about the pitch deck itself, never "early-stage":
+  "Your pitch deck is 12 questions". Early stage is the framing inside the
+  content, not in the title.
+- The AI prompt follows the resume pattern: a short copyable prompt that points
+  the AI at the llms.txt file, which carries the whole framework. The site-wide
+  llms.txt now advertises both guides' AI files under "Guides for AI".
+- Mobile is summary-first: the twelve slides as a tappable list, a tap scrolls
+  to the slide, and a presenter pill pinned to the bottom of the screen shows
+  "05 / 12 Solution" with previous and next. It sits at the bottom, in the
+  thumb zone, so nothing stacks under the sticky header. Desktop (xl) adds a
+  sticky slide stage beside the sections that tracks the reader by scroll.
+- Engineering: every part of the page is its own component under
+  src/app/(en)/pitch-deck/_sections, one folder per part, leaves take props
+  only, and page.tsx is an ordered list of parts so a part moves or drops by
+  editing one line. A guide may be composed without ArticleLayout when it
+  needs sticky UI; Prose clips sticky children.
+- References: a data-driven list of the sources (Sequoia, Y Combinator,
+  Antler, Paul Graham, Guy Kawasaki, DocSend), external links with nofollow.
+
 ## 2026-08-18, AI Coding Summit audience is 800+, not 5,000+
 
 The 5,000+ figure came from an early GitNation landing page and was not
