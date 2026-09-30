@@ -15,7 +15,7 @@ export function HardVsSoft(): JSX.Element {
 				both.
 			</p>
 			<Msg severity="info">
-				One important note, remember to list the skills that are relevant to the
+				One important note: remember to list the skills that are relevant to the
 				job title.
 			</Msg>
 
@@ -45,7 +45,7 @@ export function HardVsSoft(): JSX.Element {
 				</figure>
 
 				<Pre language="plaintext">
-					Machinery skills - operating a road roller, operating a PoS,
+					Machinery skills - operating a road roller, operating a POS,
 					pallet-stacker, forklift, etc.
 				</Pre>
 				<Pre language="plaintext">
@@ -56,7 +56,7 @@ export function HardVsSoft(): JSX.Element {
 					Console, ERP systems, CRMs
 				</Pre>
 				<Pre language="plaintext">
-					Coding Languages - JavaScript, TypeScript, Python, C++, C#, Java,
+					Coding languages - JavaScript, TypeScript, Python, C++, C#, Java,
 					Scala, R
 				</Pre>
 				<Pre language="plaintext">

@@ -42,7 +42,7 @@ export function SkillTailoring(): JSX.Element {
 				</a>
 			</h3>
 			<p>
-				Some skills suit a wide range of jobs. Some soft skills like teamwork,
+				Some skills suit a wide range of jobs: some soft skills like teamwork,
 				critical thinking, and leadership, and some hard skills like Excel,
 				PowerPoint, Photoshop, writing, and so on.
 			</p>

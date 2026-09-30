@@ -22,7 +22,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		question: "Did you use a suitable format for your resume?",
 		title: "Resume format",
 		problem: "The layout is hard to scan and may break in an ATS.",
-		fix: "Use a clean single column template with standard headings and export to PDF.",
+		fix: "Use a clean single-column template with standard headings and export to PDF.",
 	},
 	sect: {
 		question: "Did you include all the essential sections in your resume?",
@@ -71,7 +71,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 			"Are you using a professional email address, like name.family@gmail.com?",
 		title: "Professional email",
 		problem: "The email looks casual and undercuts a professional impression.",
-		fix: "Switch to a name based address such as name.family@gmail.com.",
+		fix: "Switch to a name-based address such as name.family@gmail.com.",
 	},
 	links: {
 		question: "Did you add your LinkedIn link?",

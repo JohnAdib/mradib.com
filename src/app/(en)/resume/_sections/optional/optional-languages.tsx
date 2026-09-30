@@ -54,7 +54,7 @@ export function OptionalLanguages(): JSX.Element {
 			</ul>
 			<p>
 				Keep in mind that you should never lie about your language skills. You
-				never know, your interviewer might be fluent in that language or even a
+				never know; your interviewer might be fluent in that language or even a
 				native speaker!
 			</p>
 
