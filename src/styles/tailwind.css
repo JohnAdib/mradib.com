@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./reveal.css" layer(components);
+@import "./disclosure.css" layer(components);
 @import "./artifact.css" layer(components);
 @import "./image-lightbox.css" layer(components);
 @import "./story-video.css" layer(components);

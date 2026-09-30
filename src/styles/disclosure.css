@@ -1,0 +1,16 @@
+/* Disclosure chevron. It turns with the open state and turns back the moment
+   a close starts: DetailsMotion keeps [open] until the panel has shut and
+   marks the run with [data-closing]. Timing comes from the motion tokens. */
+.disclosure-chevron {
+	transition: rotate var(--duration-base) var(--ease-rise);
+}
+
+details[open]:not([data-closing]) > summary .disclosure-chevron {
+	rotate: 180deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.disclosure-chevron {
+		transition: none;
+	}
+}

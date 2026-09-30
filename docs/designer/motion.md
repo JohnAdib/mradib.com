@@ -9,7 +9,11 @@ match the foundation" and know exactly what to build.
 
 - Every page carries purposeful motion; a static page is an unfinished page.
 - Animate transform and opacity only, 60fps. Never animate layout
-  properties (width, height, top, margin).
+  properties (width, height, top, margin). One sanctioned exception: a
+  disclosure's height, because an answer cannot open or close smoothly any
+  other way (decided 2026-09-30, see Disclosure motion below).
+- Anything that opens also closes with motion. An instant open or close is
+  a bug.
 - prefers-reduced-motion is always respected; content is SSR-visible with
   motion as enhancement (the existing Reveal pattern is the model).
 - Motion must feel equally good on a phone. Touch has no hover: hover-only
@@ -27,6 +31,17 @@ match the foundation" and know exactly what to build.
 - Parallax starfield: src/components/stars-animation/ with
   src/styles/star-animation.css.
 - Micro-interactions: hover lift (-translate-y-1) on cards and chips.
+- Disclosure motion: every <details> on the site (FAQs, Accordion,
+  scorecard issue cards) opens and closes with a height ease, a panel fade
+  and rise, and a chevron turn. DetailsMotion
+  (src/components/motion/details-motion.tsx) is mounted once in RootShell
+  and drives src/lib/motion/details-motion.ts, so any future <details>
+  gets it for free. Timing comes from --duration-base, --duration-fast and
+  --ease-rise; the chevron turns through .disclosure-chevron in
+  src/styles/disclosure.css. A click mid-run reverses from where the panel
+  is, and reduced motion keeps the native instant toggle.
+- Dialogs and the mobile menu open and close through Headless UI
+  transitions (fade plus scale), both directions.
 
 ## Target architecture, the refactor blueprint
 

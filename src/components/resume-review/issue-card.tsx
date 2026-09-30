@@ -55,7 +55,7 @@ export function IssueCard({
 					description={item.problem}
 					muted={resolved}
 				/>
-				<ChevronDownIcon className="mt-0.5 h-5 w-5 shrink-0 text-zinc-400 transition group-open:rotate-180" />
+				<ChevronDownIcon className="disclosure-chevron mt-0.5 h-5 w-5 shrink-0 text-zinc-400" />
 			</summary>
 			<div className="pb-3 pe-3 ps-10">
 				<p className="text-sm text-zinc-700 dark:text-zinc-300">{item.fix}</p>

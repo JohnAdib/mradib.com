@@ -4,6 +4,7 @@ import { Providers } from "@/app/providers";
 import { Analytics } from "@/components/analytics";
 import { PersonJsonLd } from "@/components/json-ld/person-json-ld";
 import { WebSiteJsonLd } from "@/components/json-ld/web-site-json-ld";
+import { DetailsMotion } from "@/components/motion/details-motion";
 
 /**
  * The shared body interior for both root layouts. The en and fa trees each
@@ -21,6 +22,7 @@ export function RootShell({
 	return (
 		<body className={clsx(fontEn.variable, fontDisplay.variable, className)}>
 			<Providers>{children}</Providers>
+			<DetailsMotion />
 			<PersonJsonLd />
 			<WebSiteJsonLd />
 			<Analytics />
