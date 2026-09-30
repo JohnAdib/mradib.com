@@ -29,7 +29,7 @@ export function SectionIntro(): JSX.Element {
 				بسازی و یه آفر توپ باهاش بگیری:)
 			</p>
 
-			<Msg severity="info">سعی می‌کنم این آموزش رو به روز نگه دارم</Msg>
+			<Msg severity="info">سعی می‌کنم این آموزش رو به‌روز نگه دارم</Msg>
 
 			<SectionHeading anchor="step-by-step" id="step-by-step">
 				آموزش گام به گام ساخت رزومه
@@ -40,7 +40,8 @@ export function SectionIntro(): JSX.Element {
 			</p>
 			<p>
 				در ادامه به‌ترتیب، بخش‌های مختلف رزومه رو بررسی می‌کنیم. توضیح می‌دیم که چی
-				بنویسید و چطور بنویسید تا برجسته شوید و به‌شغلی که لیاقتش رو دارید برسید.
+				بنویسید و چطور بنویسید تا برجسته بشید و به شغلی که لیاقتش رو دارید
+				برسید.
 			</p>
 
 			<div className="xl:hidden">

@@ -37,7 +37,7 @@ export function EducationFields(): JSX.Element {
 			<Pre language="plaintext">2014</Pre>
 			<p>
 				When you have not graduated yet and expect to finish by a certain time,
-				For example
+				for example:
 			</p>
 			<Pre language="plaintext">Expected in 2025</Pre>
 		</>

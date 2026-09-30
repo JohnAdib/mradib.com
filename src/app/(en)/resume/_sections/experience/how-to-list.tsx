@@ -25,7 +25,7 @@ export function ExperienceHowToList(): JSX.Element {
 				</a>
 			</h3>
 			<Msg severity="info">
-				Remember, a job means work you were paid to do and did.
+				Remember, a job means work you did and were paid for.
 			</Msg>
 
 			<p>
