@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { CtaOnDarkPanel } from "@/components/cta-on-dark-panel/cta-on-dark-panel";
 import { Reveal } from "@/components/reveal/reveal";
-import { articlesMeta } from "@/data/articles/articles-meta";
+import { articlesNewestFirst } from "@/data/articles/articles-meta";
 import { pageClosings } from "@/data/page-closings";
 import { ogMetadata } from "@/lib/og-metadata";
 import { ArticleFeature } from "./_sections/article-feature";
@@ -24,7 +24,7 @@ export default function ArticlesIndex() {
 			</noscript>
 			<ArticlesHero />
 			<section id="articles" className="mt-16 scroll-mt-24 sm:mt-20">
-				{articlesMeta.map((article) => (
+				{articlesNewestFirst.map((article) => (
 					<Reveal key={article.pagePath}>
 						<ArticleFeature article={article} />
 					</Reveal>

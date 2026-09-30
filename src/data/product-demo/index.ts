@@ -24,7 +24,7 @@ import { productDemoOptional, productDemoRules } from "./rules";
 /** The six beats, in running order. Numbering derives from position. */
 export const productDemoBeats = [...beatsOpen, ...beatsClose];
 
-/** Everything the /product-demo page and its AI files render from. */
+/** Everything the product demo page and its AI files render from. */
 export const productDemoGuide: IGuide = {
 	name: productDemoName,
 	frame: productDemoFrame,

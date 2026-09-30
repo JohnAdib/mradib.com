@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { GuideKit } from "@/components/guide/kit/guide-kit";
 import { RevealFallback } from "@/components/guide/shell/reveal-fallback";
-import { hubRoute } from "@/data/guides/fundraising-kit";
 import { hubCopy } from "@/data/guides/hub-copy";
+import { hubRoute } from "@/data/guides/hub-route";
 import { ogMetadata } from "@/lib/og-metadata";
 import { HubAi } from "./_sections/hub-ai";
 import { HubClosing } from "./_sections/hub-closing";

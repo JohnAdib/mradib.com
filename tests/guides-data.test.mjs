@@ -2,13 +2,16 @@
 // rules every guide must follow before a page is built from it.
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { applicationAnswersGuide } from "@/data/application-answers";
+import { acceleratorApplicationGuide } from "@/data/accelerator-application";
 import { financialModelGuide } from "@/data/financial-model";
 import { founderVideoGuide } from "@/data/founder-video";
 import { fundraisingKit } from "@/data/guides/fundraising-kit";
+import { hubRoute } from "@/data/guides/hub-route";
 import { onePagerGuide } from "@/data/one-pager";
 import { pitchDeckGuide } from "@/data/pitch-deck";
 import { productDemoGuide } from "@/data/product-demo";
+import { movedGuideRoutes } from "@/data/routes/moved-routes";
+import { redirectRoutes } from "@/data/routes/redirect-routes";
 
 const guides = [
 	pitchDeckGuide,
@@ -16,7 +19,7 @@ const guides = [
 	productDemoGuide,
 	founderVideoGuide,
 	financialModelGuide,
-	applicationAnswersGuide,
+	acceleratorApplicationGuide,
 ];
 const oneWord = /^[a-z]+$/;
 const banned = [
@@ -44,6 +47,27 @@ test("the kit lists six guides with distinct paths, in the order the pages use",
 	);
 	const skills = guides.map((guide) => guide.aiText.skillName);
 	assert.equal(new Set(skills).size, skills.length);
+});
+
+test("every guide lives under the hub with a lowercase, hyphenated slug", () => {
+	for (const guide of guides) {
+		const path = guide.article.pagePath;
+		assert.ok(path.startsWith(`${hubRoute}/`), path);
+		assert.match(path.slice(hubRoute.length + 1), /^[a-z]+(-[a-z]+)*$/);
+	}
+});
+
+test("every old guide path redirects to a guide and stays out of the sitemap", () => {
+	const paths = new Set(guides.map((guide) => guide.article.pagePath));
+	assert.equal(movedGuideRoutes.length, guides.length);
+	for (const route of movedGuideRoutes) {
+		assert.ok(paths.has(route.to), `${route.to} is not a guide`);
+		assert.ok(!paths.has(route.from), `${route.from} still serves a guide`);
+		assert.ok(
+			redirectRoutes.includes(route.from),
+			`${route.from} is missing from redirectRoutes`,
+		);
+	}
 });
 
 for (const guide of guides) {

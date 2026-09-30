@@ -1,5 +1,6 @@
 import { adplistBadgeTimeline, awards } from "@/data/awards";
-import { fundraisingKit, hubRoute } from "@/data/guides/fundraising-kit";
+import { fundraisingKit } from "@/data/guides/fundraising-kit";
+import { hubRoute } from "@/data/guides/hub-route";
 import { profile, urlAdpList100, urlPodcastSpotify } from "@/data/profile";
 import { homepageUrl } from "@/lib/constants/url";
 

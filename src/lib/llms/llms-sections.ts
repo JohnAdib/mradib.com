@@ -1,8 +1,8 @@
 import { articlesMeta } from "@/data/articles/articles-meta";
 import { adplistBadgeTimeline, flagshipAwards } from "@/data/awards";
 import { career } from "@/data/career";
-import { hubRoute } from "@/data/guides/fundraising-kit";
 import { hubCopy } from "@/data/guides/hub-copy";
+import { hubRoute } from "@/data/guides/hub-route";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { profile, urlGitNation } from "@/data/profile";
 import { podcastAppearances, talks } from "@/data/talks/talks";

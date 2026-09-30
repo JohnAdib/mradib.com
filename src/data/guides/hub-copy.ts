@@ -1,12 +1,13 @@
+import { articlePitchDeck } from "@/data/articles/pitch-deck";
 import type { IPageClosing } from "@/data/page-closings";
 import type { IGuideHeading } from "./guide-interface";
 
 // Everything the /fundraising hub renders. The six guides themselves come
-// from fundraising-kit.ts.
+// from fundraising-kit.ts; the hub hands the reader to the deck first.
 export const hubCopy = {
 	pageTitle: "The Fundraising Kit: Six Guides From Pitch Deck to Application",
 	pageDesc:
-		"Six free founder guides in one kit: pitch deck, one-pager, product demo, founder video, financial model and application answers, by John Adib.",
+		"Six free founder guides in one kit: pitch deck, one-pager, product demo, founder video, financial model and accelerator application, by John Adib.",
 	anchors: { guides: "guides", how: "how", ai: "ai" },
 	hero: {
 		eyebrow: "Free guides",
@@ -21,7 +22,7 @@ export const hubCopy = {
 			"Written by a two-time founder",
 		],
 		ctaLabel: "Start with the deck",
-		ctaHref: "/pitch-deck",
+		ctaHref: articlePitchDeck.pagePath,
 	},
 	/** The kit as a living artifact in the hero: "Guide 2 of 6". */
 	artifactLabels: { unit: "Guide", of: "of" },
@@ -60,7 +61,7 @@ export const hubCopy = {
 		},
 		{
 			title: "Price it, then apply",
-			text: "The financial model turns the ask into months of runway an investor can check. The application answers put the same facts into plain words, in the boxes the programme gives you.",
+			text: "The financial model turns the ask into months of runway an investor can check. The accelerator application puts the same facts into plain words, in the boxes the programme gives you.",
 		},
 	],
 	ai: {
@@ -72,14 +73,14 @@ export const hubCopy = {
 	aiText: {
 		title: "The fundraising kit: six MrAdib frameworks",
 		summary:
-			"An index of six machine-readable frameworks by John Adib (MrAdib), a two-time founder who raised $1M as a CEO: pitch deck, one-pager, product demo, founder video, financial model and application answers. Follow one link per document.",
+			"An index of six machine-readable frameworks by John Adib (MrAdib), a two-time founder who raised $1M as a CEO: pitch deck, one-pager, product demo, founder video, financial model and accelerator application. Follow one link per document.",
 	},
 	itemListName: "The fundraising kit",
 	closing: {
 		title: "Start with the deck.",
 		desc: "Twelve questions, one slide each. Once the story holds, the other five documents fall into place. Stuck on a piece? Say hello.",
 		linkPrimaryText: "Read the pitch deck guide",
-		linkPrimaryLink: "/pitch-deck",
+		linkPrimaryLink: articlePitchDeck.pagePath,
 		linkSecondaryText: "Get in touch",
 		linkSecondaryLink: "/contact",
 	} satisfies IPageClosing,

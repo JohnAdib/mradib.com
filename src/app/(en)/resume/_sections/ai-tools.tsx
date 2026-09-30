@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { JSX } from "react";
 import { CopyButton } from "@/components/copy-button";
 import { SectionHeading } from "@/components/heading/section-heading";
+import { hubRoute } from "@/data/guides/hub-route";
 
 const aiPrompt =
 	"Act as a resume expert and follow the MrAdib method at https://mradib.com/resume/llms.txt. " +
@@ -47,8 +48,8 @@ export function SectionAiTools(): JSX.Element {
 			/>
 			<p>
 				Raising money next? The same method covers the whole{" "}
-				<Link href="/fundraising">fundraising kit</Link>, from the pitch deck to
-				the application.
+				<Link href={hubRoute}>fundraising kit</Link>, from the pitch deck to the
+				application.
 			</p>
 		</section>
 	);

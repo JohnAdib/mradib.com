@@ -1,6 +1,7 @@
-import { fundraisingKit, hubRoute } from "@/data/guides/fundraising-kit";
+import { fundraisingKit } from "@/data/guides/fundraising-kit";
 import { guideAiLabels } from "@/data/guides/guide-labels";
 import { hubCopy } from "@/data/guides/hub-copy";
+import { hubRoute } from "@/data/guides/hub-route";
 import { homepageUrl } from "@/lib/constants/url";
 
 /** An index of the kit's frameworks, so one link hands an AI the whole kit. */

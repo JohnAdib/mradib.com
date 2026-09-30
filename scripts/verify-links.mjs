@@ -1,6 +1,6 @@
 // Checks every reference URL in the fundraising kit answers with a 2xx or 3xx.
 // Run where the network is open: npm run verify:links
-import { applicationAnswersGuide } from "@/data/application-answers";
+import { acceleratorApplicationGuide } from "@/data/accelerator-application";
 import { financialModelGuide } from "@/data/financial-model";
 import { founderVideoGuide } from "@/data/founder-video";
 import { onePagerGuide } from "@/data/one-pager";
@@ -13,7 +13,7 @@ const guides = [
 	productDemoGuide,
 	founderVideoGuide,
 	financialModelGuide,
-	applicationAnswersGuide,
+	acceleratorApplicationGuide,
 ];
 const headers = { "User-Agent": "Mozilla/5.0 (compatible; mradib-link-check)" };
 

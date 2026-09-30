@@ -22,7 +22,7 @@ import { onePagerOptional, onePagerRules } from "./rules";
 /** The nine blocks, in reading order. Numbering derives from position. */
 export const onePagerBlocks = [...blocksOpen, ...blocksCase, ...blocksClose];
 
-/** Everything the /one-pager page and its AI files render from. */
+/** Everything the one-pager page and its AI files render from. */
 export const onePagerGuide: IGuide = {
 	name: onePagerName,
 	frame: onePagerFrame,
