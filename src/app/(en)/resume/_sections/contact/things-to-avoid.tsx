@@ -75,7 +75,7 @@ export function ThingsToAvoid(): JSX.Element {
 			</h4>
 			<p>
 				It is strange how often I see a full home address on some resumes. No
-				one is going to mail you a letter that they would need it for.
+				one is going to mail you a letter, so no one needs it.
 			</p>
 
 			<h4 id="unprofessional">
