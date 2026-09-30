@@ -1,7 +1,14 @@
-import type { IGuideHeadings, IGuideHero } from "@/data/guides/guide-bundle";
+import type {
+	GuideFrame,
+	IGuideHeadings,
+	IGuideHero,
+} from "@/data/guides/guide-bundle";
 
 /** Short name for breadcrumbs and the kit. */
 export const founderVideoName = "Founder video";
+
+/** The shape of the artifact: the hero object, the tiles and the stage take it. */
+export const founderVideoFrame: GuideFrame = "video";
 
 // The page title is split so the hero can set the accent phrase in italic.
 // src/data/articles/founder-video.ts joins the same two parts for metadata.

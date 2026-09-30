@@ -23,6 +23,8 @@ export const hubCopy = {
 		ctaLabel: "Start with the deck",
 		ctaHref: "/pitch-deck",
 	},
+	/** The kit as a living artifact in the hero: "Guide 2 of 6". */
+	artifactLabels: { unit: "Guide", of: "of" },
 	headings: {
 		guides: {
 			eyebrow: "The kit",

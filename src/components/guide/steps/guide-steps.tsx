@@ -34,6 +34,7 @@ export function GuideSteps({ guide }: { guide: IGuide }) {
 							step={step}
 							number={stepNumber(index)}
 							total={steps.length}
+							frame={guide.frame}
 							rule={rules.find((rule) => rule.stepId === step.id)}
 							rulesHref={`#${anchors.rules}`}
 							labels={stepLabels}

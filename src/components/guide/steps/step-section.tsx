@@ -1,3 +1,4 @@
+import type { GuideFrame } from "@/data/guides/guide-bundle";
 import type {
 	IGuideRule,
 	IGuideStep,
@@ -14,6 +15,7 @@ interface IStepSectionProps {
 	step: IGuideStep;
 	number: string;
 	total: number;
+	frame: GuideFrame;
 	/** The rule that bends this step, when one does. */
 	rule?: IGuideRule;
 	/** Where the rules section lives, for the note's link. */
@@ -26,6 +28,7 @@ export function StepSection({
 	step,
 	number,
 	total,
+	frame,
 	rule,
 	rulesHref,
 	labels,
@@ -44,7 +47,7 @@ export function StepSection({
 			<StepDefinition text={step.definition} />
 			<StepDoDont include={step.include} avoid={step.avoid} labels={labels} />
 			<StepTest label={labels.test} text={step.test} />
-			<StepExample label={labels.example} text={step.example} />
+			<StepExample label={labels.example} text={step.example} frame={frame} />
 			<StepNote label={labels.note} rule={rule} href={rulesHref} />
 		</section>
 	);

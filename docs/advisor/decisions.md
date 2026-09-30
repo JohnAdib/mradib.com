@@ -4,6 +4,44 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-09-30, the fundraising guides get a living artifact
+
+John's verdict on the first build of the six guides: the UI should be much
+better, it is not number one in the world. The board's reading: the pages
+were clean but templated. Every part was a same-grey ring card, the hero was
+text only, and nothing on a phone said who built this. The fix follows
+direction.md: one striking idea per page, dark dramatic objects on warm
+paper, motion that impresses, sections that look designed. Rulings, all
+binding for the guide kit:
+
+- The one idea is the artifact itself, alive. Every guide is about a
+  document, so the page shows that document being built. The hero carries a
+  dark, glowing miniature of the artifact (a 16:9 slide, a portrait page, a
+  browser window, a viewfinder, a ruled sheet, a form) that cycles through
+  the guide's steps on its own, tilts toward the cursor on desktop, and
+  stacks under the words on phones. The cycle is CSS only
+  (src/styles/artifact.css), one window per step, paused on hover; reduced
+  motion shows the first step.
+- The overview is a slide sorter: every step is a tile in the shape of the
+  artifact with its numeral and title, and its question from the small
+  breakpoint up. Portrait pages sit three across even on phones, and the
+  grids are capped so a tile never grows past a thumbnail.
+- Each step has one dark punctuation mark: the pass test is a dark strip,
+  and an example is set on the artifact in the guide's own frame. Put in
+  reads as accent, leave out as rose, tinted panels instead of grey rings.
+- The kit is six objects: the kit section and the hub show each guide as
+  its own tile with a caption, and the hub hero cycles through the six
+  guides as one living artifact.
+- The AI prompt sits on a dark glow panel, the site's signature treatment,
+  with the copy button on it. Section rhythm and headings match the
+  homepage: mt-20 sm:mt-28 between parts, display headings at 3xl and 4xl.
+- Engineering: StageFrame takes a size (stage, tile, banner) and every
+  ornament scales to it; StageSlide is the one rendering of a step on the
+  artifact, shared by the hero, the presenter stage and the tiles; each
+  guide's frame lives once in its copy-hero and the kit entries carry it.
+  No guide copy changed, the tests' DOM contract is unchanged, and all
+  tests pass.
+
 ## 2026-09-27, the fundraising kit: five sibling guides and a hub
 
 The pitch deck gets its five siblings, the documents a founder prepares to

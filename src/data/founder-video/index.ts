@@ -6,6 +6,7 @@ import { beatsOpen } from "./beats-open";
 import { founderVideoAi, founderVideoAiText } from "./copy-ai";
 import { founderVideoClosing } from "./copy-closing";
 import {
+	founderVideoFrame,
 	founderVideoHeadings,
 	founderVideoHero,
 	founderVideoHowTo,
@@ -26,7 +27,7 @@ export const founderVideoBeats = [...beatsOpen, ...beatsClose];
 /** Everything the /founder-video page and its AI files render from. */
 export const founderVideoGuide: IGuide = {
 	name: founderVideoName,
-	frame: "video",
+	frame: founderVideoFrame,
 	article: articleFounderVideo,
 	anchors: { ...guideAnchorDefaults, steps: "beats", rules: "cases" },
 	hero: founderVideoHero,

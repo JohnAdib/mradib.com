@@ -1,7 +1,14 @@
-import type { IGuideHeadings, IGuideHero } from "@/data/guides/guide-bundle";
+import type {
+	GuideFrame,
+	IGuideHeadings,
+	IGuideHero,
+} from "@/data/guides/guide-bundle";
 
 /** Short name for breadcrumbs and the kit. */
 export const productDemoName = "Product demo";
+
+/** The shape of the artifact: the hero object, the tiles and the stage take it. */
+export const productDemoFrame: GuideFrame = "screen";
 
 // The page title is split so the hero can set the accent phrase in italic.
 // src/data/articles/product-demo.ts joins the same two parts for metadata.

@@ -7,6 +7,7 @@ import { blocksOpen } from "./blocks-open";
 import { onePagerAi, onePagerAiText } from "./copy-ai";
 import { onePagerClosing } from "./copy-closing";
 import {
+	onePagerFrame,
 	onePagerHeadings,
 	onePagerHero,
 	onePagerHowTo,
@@ -24,7 +25,7 @@ export const onePagerBlocks = [...blocksOpen, ...blocksCase, ...blocksClose];
 /** Everything the /one-pager page and its AI files render from. */
 export const onePagerGuide: IGuide = {
 	name: onePagerName,
-	frame: "page",
+	frame: onePagerFrame,
 	article: articleOnePager,
 	anchors: { ...guideAnchorDefaults, steps: "blocks", rules: "format" },
 	hero: onePagerHero,

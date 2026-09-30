@@ -4,6 +4,7 @@ import { guideAnchorDefaults } from "@/data/guides/guide-labels";
 import { deckAi, deckAiText } from "./copy-ai";
 import { deckClosing } from "./copy-closing";
 import {
+	deckFrame,
 	deckHeadings,
 	deckHero,
 	deckHowTo,
@@ -25,7 +26,7 @@ export const pitchSlides = [...slidesStory, ...slidesProof, ...slidesClose];
 /** Everything the /pitch-deck page and its AI files render from. */
 export const pitchDeckGuide: IGuide = {
 	name: deckName,
-	frame: "slide",
+	frame: deckFrame,
 	article: articlePitchDeck,
 	anchors: { ...guideAnchorDefaults, steps: "slides", rules: "order" },
 	hero: deckHero,
