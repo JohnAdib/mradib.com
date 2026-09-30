@@ -109,14 +109,7 @@ export function ArticleLayout({
 									<span className="mx-3">
 										{formatDateTime({ datetime: datePublished, locale: lang })}
 									</span>
-								</time>
-								<time
-									dateTime={dateModified}
-									title={`Last modified on ${dateModified}`}
-									className="text-zinc-500 dark:text-zinc-400 hidden"
-								>
-									{formatDateTime({ datetime: dateModified, locale: lang })}
-								</time>
+								</time>{" "}
 								<ArticleReadTime minutes={readTimeMinutes} lang={lang} />
 							</div>
 						</header>
