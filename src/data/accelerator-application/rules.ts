@@ -2,7 +2,7 @@ import type { IGuideOptional, IGuideRule } from "@/data/guides/guide-interface";
 import type { ApplicationAnswerId } from "./step-id";
 
 // The default answers fit a small team with a product and early users. Four cases change the rules.
-export const applicationAnswersRules: IGuideRule<ApplicationAnswerId>[] = [
+export const acceleratorApplicationRules: IGuideRule<ApplicationAnswerId>[] = [
 	{
 		stepId: "progress",
 		icon: "flag",
@@ -36,7 +36,7 @@ export const applicationAnswersRules: IGuideRule<ApplicationAnswerId>[] = [
 ];
 
 // Boxes that appear on some forms and earn an answer only when they do.
-export const applicationAnswersOptional: IGuideOptional[] = [
+export const acceleratorApplicationOptional: IGuideOptional[] = [
 	{
 		title: "The hack story",
 		when: "The form asks for a time you hacked a system to your advantage. Tell a true story with a result, in four lines.",

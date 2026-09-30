@@ -1,8 +1,8 @@
 import type { IFaqQA } from "@/components/faq/faq-interface";
 
-export const applicationAnswersFaqTitle = "Questions founders ask";
+export const acceleratorApplicationFaqTitle = "Questions founders ask";
 
-export const applicationAnswersFaq: IFaqQA[] = [
+export const acceleratorApplicationFaq: IFaqQA[] = [
 	{
 		id: "length",
 		q: "How long should each answer be?",

@@ -1,8 +1,9 @@
 import { AiFileCard } from "@/components/guide/ai/ai-file-card";
 import { GuideSectionHeading } from "@/components/guide/shell/section-heading";
 import { SectionShell } from "@/components/guide/shell/section-shell";
-import { fundraisingKit, hubRoute } from "@/data/guides/fundraising-kit";
+import { fundraisingKit } from "@/data/guides/fundraising-kit";
 import { hubCopy } from "@/data/guides/hub-copy";
+import { hubRoute } from "@/data/guides/hub-route";
 import { HubAiRow } from "./hub-ai-row";
 
 /** The kit index for AI, then every guide's framework and skill. */

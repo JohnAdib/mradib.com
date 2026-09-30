@@ -1,5 +1,5 @@
 import type { IArticle } from "@/data/articles/article-interface";
-import { articlesMeta } from "@/data/articles/articles-meta";
+import { articlesNewestFirst } from "@/data/articles/articles-meta";
 import { profile } from "@/data/profile";
 import { homepageUrl } from "@/lib/constants/url";
 
@@ -31,8 +31,8 @@ function buildItem(article: IArticle) {
 }
 
 export function buildRssXml(): string {
-	const items = articlesMeta.map(buildItem).join("");
-	const newestModified = articlesMeta.reduce((latest, article) => {
+	const items = articlesNewestFirst.map(buildItem).join("");
+	const newestModified = articlesNewestFirst.reduce((latest, article) => {
 		const modified = new Date(article.dateModified).getTime();
 		return modified > latest ? modified : latest;
 	}, 0);

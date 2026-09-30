@@ -23,7 +23,7 @@ import { slidesStory } from "./slides-story";
 /** The twelve slides, in the standard order. Numbering derives from position. */
 export const pitchSlides = [...slidesStory, ...slidesProof, ...slidesClose];
 
-/** Everything the /pitch-deck page and its AI files render from. */
+/** Everything the pitch deck page and its AI files render from. */
 export const pitchDeckGuide: IGuide = {
 	name: deckName,
 	frame: deckFrame,

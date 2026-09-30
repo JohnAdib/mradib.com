@@ -5,16 +5,16 @@ import type {
 } from "@/data/guides/guide-bundle";
 
 /** Short name for breadcrumbs and the kit. */
-export const applicationAnswersName = "Application answers";
+export const acceleratorApplicationName = "Accelerator application";
 
 /** The shape of the artifact: the hero object, the tiles and the stage take it. */
-export const applicationAnswersFrame: GuideFrame = "form";
+export const acceleratorApplicationFrame: GuideFrame = "form";
 
 // The page title is split so the hero can set the accent phrase in italic.
-// src/data/articles/application-answers.ts joins the same two parts for metadata.
-export const applicationAnswersHero: IGuideHero = {
+// src/data/articles/accelerator-application.ts joins the same two parts for metadata.
+export const acceleratorApplicationHero: IGuideHero = {
 	eyebrow: "Free guide",
-	titleLead: "Your application is",
+	titleLead: "Your accelerator application is",
 	titleAccent: "10 straight answers",
 	thesis:
 		"Reviewers read thousands of applications in a few days. Answer the question asked, in plain words, with the same facts as your deck. Ten answers cover Y Combinator, Antler, Techstars and most forms in between.",
@@ -28,7 +28,7 @@ export const applicationAnswersHero: IGuideHero = {
 	ctaAnchor: "ai",
 };
 
-export const applicationAnswersHeadings: IGuideHeadings = {
+export const acceleratorApplicationHeadings: IGuideHeadings = {
 	overview: {
 		eyebrow: "At a glance",
 		title: "Ten answers, one story",
@@ -61,9 +61,9 @@ export const applicationAnswersHeadings: IGuideHeadings = {
 	},
 };
 
-export const applicationAnswersOptionalTitle = "Optional answers";
+export const acceleratorApplicationOptionalTitle = "Optional answers";
 
-export const applicationAnswersHowTo = {
+export const acceleratorApplicationHowTo = {
 	name: "How to answer a startup accelerator application",
 	description:
 		"Ten answers, each meeting one question the big programmes ask: what to say, what to leave out, and the test it must pass.",

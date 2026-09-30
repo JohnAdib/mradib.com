@@ -14,8 +14,8 @@ export const onePagerFrame: GuideFrame = "page";
 // src/data/articles/one-pager.ts joins the same two parts for metadata.
 export const onePagerHero: IGuideHero = {
 	eyebrow: "Free guide",
-	titleLead: "Your one-pager is the deck in",
-	titleAccent: "60 seconds",
+	titleLead: "Your one-pager is",
+	titleAccent: "nine blocks on one page",
 	thesis:
 		"An investor gives a one-pager one minute, often on a phone, often before deciding whether to open the deck. Nine blocks, the same facts as your deck, and every line earns its place.",
 	rules: [

@@ -24,7 +24,7 @@ import { founderVideoOptional, founderVideoRules } from "./rules";
 /** The six beats, in speaking order. Numbering derives from position. */
 export const founderVideoBeats = [...beatsOpen, ...beatsClose];
 
-/** Everything the /founder-video page and its AI files render from. */
+/** Everything the founder video page and its AI files render from. */
 export const founderVideoGuide: IGuide = {
 	name: founderVideoName,
 	frame: founderVideoFrame,

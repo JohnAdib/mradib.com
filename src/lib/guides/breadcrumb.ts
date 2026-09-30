@@ -1,6 +1,6 @@
 import type { IBreadcrumbItem } from "@/components/breadcrumb/interface";
-import { hubRoute } from "@/data/guides/fundraising-kit";
 import type { IGuide } from "@/data/guides/guide-bundle";
+import { hubRoute } from "@/data/guides/hub-route";
 import { kitCopy } from "@/data/guides/kit-copy";
 
 const kitCrumb = { position: 1, item: hubRoute, name: kitCopy.name };

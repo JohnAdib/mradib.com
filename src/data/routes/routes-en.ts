@@ -1,3 +1,4 @@
+import { hubRoute } from "@/data/guides/hub-route";
 import type { ISiteRoute } from "./route-interface";
 
 // English pages that are not derived from data modules (articles, awards, talks).
@@ -11,7 +12,7 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/audit", lastModified: "2026-07-23" },
 	{ path: "/awards", lastModified: "2026-07-19" },
 	{ path: "/contact", lastModified: "2026-07-19" },
-	{ path: "/fundraising", lastModified: "2026-09-27" },
+	{ path: hubRoute, lastModified: "2026-09-30" },
 	{ path: "/gallery", lastModified: "2026-07-19" },
 	{ path: "/gallery/tools", lastModified: "2026-07-19" },
 	{ path: "/mentor", lastModified: "2026-07-19", faPath: "/fa/mentor" },

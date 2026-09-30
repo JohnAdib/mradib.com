@@ -4,7 +4,7 @@ import type {
 } from "@/data/guides/guide-interface";
 
 // Labels shared by every answer, the rule cards, and the AI files.
-export const applicationAnswersStepLabels: IGuideStepLabels = {
+export const acceleratorApplicationStepLabels: IGuideStepLabels = {
 	unit: "Answer",
 	plural: "Answers",
 	of: "of",
@@ -19,7 +19,7 @@ export const applicationAnswersStepLabels: IGuideStepLabels = {
 };
 
 // Labels for the presenter (stage and bar).
-export const applicationAnswersPresenterLabels: IGuidePresenterLabels = {
+export const acceleratorApplicationPresenterLabels: IGuidePresenterLabels = {
 	unit: "Answer",
 	of: "of",
 	previous: "Previous answer",

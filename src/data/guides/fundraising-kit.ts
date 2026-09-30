@@ -1,8 +1,8 @@
 import {
-	applicationAnswersFrame,
-	applicationAnswersName,
-} from "@/data/application-answers/copy-hero";
-import { articleApplicationAnswers } from "@/data/articles/application-answers";
+	acceleratorApplicationFrame,
+	acceleratorApplicationName,
+} from "@/data/accelerator-application/copy-hero";
+import { articleAcceleratorApplication } from "@/data/articles/accelerator-application";
 import type { IArticle } from "@/data/articles/article-interface";
 import { articleFinancialModel } from "@/data/articles/financial-model";
 import { articleFounderVideo } from "@/data/articles/founder-video";
@@ -24,9 +24,6 @@ import {
 	productDemoFrame,
 	productDemoName,
 } from "@/data/product-demo/copy-hero";
-
-/** The hub that introduces the kit. Not an article: it lives in routes-en.ts. */
-export const hubRoute = "/fundraising";
 
 export interface IKitEntry {
 	article: IArticle;
@@ -73,9 +70,9 @@ export const fundraisingKit: IKitEntry[] = [
 		short: "Nine sheets, every number traced to an input.",
 	},
 	{
-		article: articleApplicationAnswers,
-		name: applicationAnswersName,
-		frame: applicationAnswersFrame,
+		article: articleAcceleratorApplication,
+		name: acceleratorApplicationName,
+		frame: acceleratorApplicationFrame,
 		short: "Ten answers to the questions the big programmes ask.",
 	},
 ];

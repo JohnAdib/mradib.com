@@ -4,6 +4,39 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+## 2026-09-30, the kit moves under /fundraising: paths, titles, dates
+
+John's verdict on the first URLs: application-answers made no sense as a
+path, the others were not the best either, titles had to be understandable,
+and six guides could not all claim the same publish day. He left the parent
+path to the board, including whether to keep the word fundraising, then
+confirmed it over startup, funding and raise. Rulings, all binding:
+
+- Every guide lives under the hub: /fundraising/pitch-deck, one-pager,
+  product-demo, founder-video, financial-model and accelerator-application.
+  The URL now mirrors the breadcrumb, and the hub's llms.txt is the parent
+  of the six AI files. The deck moves with the rest: one scheme for six
+  siblings beats a flagship whose URL hides its family. Fundraising stays
+  because it names the job the documents do and is the kit's name; the head
+  search terms (startup pitch deck, startup financial model) belong in the
+  titles, not the folder.
+- The application guide is the accelerator application: that is the
+  document, and "application answers" only named its format. Its skill is
+  accelerator-application-writer.
+- Browser titles share one shape, the artifact then the promise, keyword
+  first: "Startup Pitch Deck Guide: 12 Slides, One Investor Question Each"
+  and so on. H1s keep the "Your X is Y" claim, but Y must stand without
+  context: the one-pager is nine blocks on one page, the accelerator
+  application is 10 straight answers.
+- Publish dates follow build order over four days, the deck on the 27th as
+  it really shipped, the accelerator application on the 30th; every guide's
+  modified date is this edit. The article index and the RSS feed run newest
+  first, so the dates read as a timeline.
+- Old paths keep working through data: src/data/routes/moved-routes.ts
+  drives one redirect stub per old URL (noindex, canonical on the new page)
+  and a one-line pointer at each old llms.txt and skill.md. The hub route
+  lives once, in src/data/guides/hub-route.ts, and every guide path, card
+  slug and link derives from it.
 ## 2026-09-30, every question opens and closes with motion
 
 John's direction: whenever a Q&A is clicked it must have an opening and a

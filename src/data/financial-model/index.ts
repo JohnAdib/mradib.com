@@ -29,7 +29,7 @@ export const financialModelSheets = [
 	...sheetsOutcome,
 ];
 
-/** Everything the /financial-model page and its AI files render from. */
+/** Everything the financial model page and its AI files render from. */
 export const financialModelGuide: IGuide = {
 	name: financialModelName,
 	frame: financialModelFrame,

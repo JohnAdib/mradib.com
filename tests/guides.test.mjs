@@ -6,14 +6,17 @@ import { spawn } from "node:child_process";
 import { after, before, test } from "node:test";
 import { setTimeout as delay } from "node:timers/promises";
 import { chromium } from "playwright-core";
-import { applicationAnswersGuide } from "@/data/application-answers";
+import { acceleratorApplicationGuide } from "@/data/accelerator-application";
 import { financialModelGuide } from "@/data/financial-model";
 import { founderVideoGuide } from "@/data/founder-video";
-import { fundraisingKit, hubRoute } from "@/data/guides/fundraising-kit";
+import { fundraisingKit } from "@/data/guides/fundraising-kit";
 import { guideUiLabels } from "@/data/guides/guide-labels";
+import { hubRoute } from "@/data/guides/hub-route";
 import { onePagerGuide } from "@/data/one-pager";
 import { pitchDeckGuide } from "@/data/pitch-deck";
 import { productDemoGuide } from "@/data/product-demo";
+import { movedGuideRoutes } from "@/data/routes/moved-routes";
+import { homepageUrl } from "@/lib/constants/url";
 
 const guides = [
 	pitchDeckGuide,
@@ -21,7 +24,7 @@ const guides = [
 	productDemoGuide,
 	founderVideoGuide,
 	financialModelGuide,
-	applicationAnswersGuide,
+	acceleratorApplicationGuide,
 ];
 const baseUrl = process.env.TEST_BASE_URL ?? "http://127.0.0.1:3118";
 const usesExternalServer = process.env.TEST_BASE_URL !== undefined;
@@ -166,16 +169,17 @@ for (const guide of guides) {
 	});
 }
 
-test("application answers show who asks each question", async () => {
+test("the accelerator application shows who asks each question", async () => {
 	const page = await browser.newPage({ viewport: phone });
-	await page.goto(`${baseUrl}${applicationAnswersGuide.article.pagePath}`, {
+	await page.goto(`${baseUrl}${acceleratorApplicationGuide.article.pagePath}`, {
 		timeout: 60_000,
 	});
-	const label = applicationAnswersGuide.stepLabels.tags;
+	const label = acceleratorApplicationGuide.stepLabels.tags;
 	const chips = await page.getByText(label, { exact: true }).count();
 	assert.equal(
 		chips,
-		applicationAnswersGuide.steps.filter((step) => step.tags?.length).length,
+		acceleratorApplicationGuide.steps.filter((step) => step.tags?.length)
+			.length,
 	);
 	await page.close();
 });
@@ -199,4 +203,19 @@ test("the hub lists the kit in order and serves its index for AI", async () => {
 	assert.equal(index.status, 200);
 	const body = await index.text();
 	assert.equal((body.match(/^## \d\. /gm) ?? []).length, fundraisingKit.length);
+});
+
+test("every old guide path lands on the new one and its AI files point there", async () => {
+	for (const route of movedGuideRoutes) {
+		const page = await browser.newPage({ viewport: phone });
+		await page.goto(`${baseUrl}${route.from}`, { timeout: 60_000 });
+		await page.waitForURL(`${baseUrl}${route.to}`, { timeout: 15_000 });
+		await page.close();
+		for (const file of ["llms.txt", "skill.md"]) {
+			const response = await fetch(`${baseUrl}${route.from}/${file}`);
+			assert.equal(response.status, 200, `${route.from}/${file}`);
+			const body = await response.text();
+			assert.ok(body.includes(`${homepageUrl}${route.to}/${file}`), body);
+		}
+	}
 });

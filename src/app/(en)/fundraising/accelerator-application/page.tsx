@@ -10,7 +10,7 @@ import { GuideRules } from "@/components/guide/rules/guide-rules";
 import { GuideJsonLd } from "@/components/guide/seo/guide-json-ld";
 import { RevealFallback } from "@/components/guide/shell/reveal-fallback";
 import { GuideSteps } from "@/components/guide/steps/guide-steps";
-import { applicationAnswersGuide as guide } from "@/data/application-answers";
+import { acceleratorApplicationGuide as guide } from "@/data/accelerator-application";
 import { kitCopy } from "@/data/guides/kit-copy";
 import { ogMetadata } from "@/lib/og-metadata";
 

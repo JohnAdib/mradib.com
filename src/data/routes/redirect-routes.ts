@@ -1,3 +1,5 @@
+import { movedGuideRoutes } from "./moved-routes";
+
 // Redirect-only stub routes. These are deliberately excluded from the sitemap and
 // consumed by the sitemap parity verifier to prove every page is accounted for.
 export const redirectRoutes: string[] = [
@@ -27,4 +29,6 @@ export const redirectRoutes: string[] = [
 	"/fa/resume/skills",
 	"/fa/resume/summary",
 	"/fa/resume/template",
+	// Moved guides, src/app/(en)/(redirect)/[guide]/
+	...movedGuideRoutes.map((route) => route.from),
 ];

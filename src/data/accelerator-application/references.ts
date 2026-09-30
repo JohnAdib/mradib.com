@@ -1,7 +1,7 @@
 import type { IGuideReference } from "@/data/guides/guide-interface";
 
 // The programmes themselves, on how to apply.
-export const applicationAnswersReferences: IGuideReference[] = [
+export const acceleratorApplicationReferences: IGuideReference[] = [
 	{
 		source: "Paul Graham",
 		title: "How to Apply to Y Combinator",
