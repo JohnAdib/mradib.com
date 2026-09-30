@@ -7,6 +7,7 @@ import { answersTeam } from "./answers-team";
 import { applicationAnswersAi, applicationAnswersAiText } from "./copy-ai";
 import { applicationAnswersClosing } from "./copy-closing";
 import {
+	applicationAnswersFrame,
 	applicationAnswersHeadings,
 	applicationAnswersHero,
 	applicationAnswersHowTo,
@@ -31,7 +32,7 @@ export const applicationAnswers = [
 /** Everything the /application-answers page and its AI files render from. */
 export const applicationAnswersGuide: IGuide = {
 	name: applicationAnswersName,
-	frame: "form",
+	frame: applicationAnswersFrame,
 	article: articleApplicationAnswers,
 	anchors: { ...guideAnchorDefaults, steps: "answers", rules: "cases" },
 	hero: applicationAnswersHero,

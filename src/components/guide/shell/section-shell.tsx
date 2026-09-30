@@ -19,7 +19,7 @@ export function SectionShell({
 	const body = reveal ? <Reveal>{children}</Reveal> : children;
 	return (
 		<section id={id} className="scroll-mt-24">
-			<Container className="mt-16 sm:mt-24">{body}</Container>
+			<Container className="mt-20 sm:mt-28">{body}</Container>
 		</section>
 	);
 }

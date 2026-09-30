@@ -8,7 +8,7 @@ export function GuideFaq({ guide }: { guide: IGuide }) {
 	const id = guide.anchors.faq;
 	return (
 		<SectionShell id={id}>
-			<h2 className="font-display text-2xl font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+			<h2 className="font-display text-3xl font-semibold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
 				<a href={`#${id}`} className="hover:underline">
 					{guide.faqTitle}
 				</a>

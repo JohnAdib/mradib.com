@@ -6,6 +6,7 @@ import { beatsOpen } from "./beats-open";
 import { productDemoAi, productDemoAiText } from "./copy-ai";
 import { productDemoClosing } from "./copy-closing";
 import {
+	productDemoFrame,
 	productDemoHeadings,
 	productDemoHero,
 	productDemoHowTo,
@@ -26,7 +27,7 @@ export const productDemoBeats = [...beatsOpen, ...beatsClose];
 /** Everything the /product-demo page and its AI files render from. */
 export const productDemoGuide: IGuide = {
 	name: productDemoName,
-	frame: "screen",
+	frame: productDemoFrame,
 	article: articleProductDemo,
 	anchors: { ...guideAnchorDefaults, steps: "beats", rules: "formats" },
 	hero: productDemoHero,

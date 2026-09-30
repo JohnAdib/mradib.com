@@ -4,6 +4,7 @@ import { guideAnchorDefaults } from "@/data/guides/guide-labels";
 import { financialModelAi, financialModelAiText } from "./copy-ai";
 import { financialModelClosing } from "./copy-closing";
 import {
+	financialModelFrame,
 	financialModelHeadings,
 	financialModelHero,
 	financialModelHowTo,
@@ -31,7 +32,7 @@ export const financialModelSheets = [
 /** Everything the /financial-model page and its AI files render from. */
 export const financialModelGuide: IGuide = {
 	name: financialModelName,
-	frame: "sheet",
+	frame: financialModelFrame,
 	article: articleFinancialModel,
 	anchors: { ...guideAnchorDefaults, steps: "sheets", rules: "cases" },
 	hero: financialModelHero,

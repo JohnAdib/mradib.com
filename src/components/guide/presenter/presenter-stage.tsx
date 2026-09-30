@@ -3,6 +3,7 @@ import type { IGuidePresenterLabels } from "@/data/guides/guide-interface";
 import { stepNumber } from "@/lib/guides/step-number";
 import { PresenterNavLink } from "./presenter-nav-link";
 import { StageFrame } from "./stage-frame";
+import { StageSlide } from "./stage-slide";
 import type { IActiveStep } from "./use-active-step";
 
 interface IPresenterStageProps {
@@ -13,7 +14,7 @@ interface IPresenterStageProps {
 	frame: GuideFrame;
 }
 
-/** The desktop presenter: the active step on a stage, progress, and arrows. */
+/** The desktop presenter: the active step on the artifact, progress, and arrows. */
 export function PresenterStage({
 	active,
 	total,
@@ -25,23 +26,15 @@ export function PresenterStage({
 	return (
 		<div>
 			<StageFrame frame={frame}>
-				<div
+				<StageSlide
 					key={step.id}
-					className="reveal-up flex h-full flex-col justify-between"
-				>
-					<span className="font-display text-5xl font-semibold leading-none tabular-nums text-white/30">
-						{stepNumber(index)}
-					</span>
-					<div>
-						<p className="text-xs font-medium tracking-wide text-accent-300 uppercase">
-							{labels.unit} {stepNumber(index)} {labels.of} {total}
-						</p>
-						<p className="mt-1 font-display text-2xl font-semibold tracking-tight">
-							{step.title}
-						</p>
-						<p className="mt-1 text-sm text-zinc-300">{step.question}</p>
-					</div>
-				</div>
+					className="reveal-up"
+					number={stepNumber(index)}
+					total={total}
+					labels={labels}
+					title={step.title}
+					question={step.question}
+				/>
 			</StageFrame>
 			<div className="mt-4 h-1 overflow-hidden rounded-full bg-zinc-900/10 dark:bg-white/10">
 				<div

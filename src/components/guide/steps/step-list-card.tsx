@@ -7,23 +7,35 @@ interface IStepListCardProps {
 	tone: "do" | "dont";
 }
 
+// Put in reads as accent, leave out as rose: the panel colour says it before the words.
 const tones = {
 	do: {
 		Icon: CheckIcon,
-		chip: "bg-accent-700/10 text-accent-700 dark:bg-accent-400/10 dark:text-accent-400",
+		panel:
+			"bg-accent-700/[0.07] ring-accent-700/15 dark:bg-accent-400/10 dark:ring-accent-400/20",
+		title: "text-accent-800 dark:text-accent-300",
+		chip: "bg-accent-700/15 text-accent-800 dark:bg-accent-400/20 dark:text-accent-300",
 	},
 	dont: {
 		Icon: XMarkIcon,
-		chip: "bg-rose-600/10 text-rose-600 dark:bg-rose-400/10 dark:text-rose-400",
+		panel:
+			"bg-rose-600/[0.06] ring-rose-600/15 dark:bg-rose-400/10 dark:ring-rose-400/20",
+		title: "text-rose-800 dark:text-rose-300",
+		chip: "bg-rose-600/15 text-rose-700 dark:bg-rose-400/20 dark:text-rose-300",
 	},
 };
 
-/** One list card: what goes into a step, or what stays out. */
+/** One list panel: what goes into a step, or what stays out. */
 export function StepListCard({ title, items, tone }: IStepListCardProps) {
-	const { Icon, chip } = tones[tone];
+	const { Icon, panel, title: titleClass, chip } = tones[tone];
 	return (
-		<div className="rounded-3xl bg-surface p-5 ring-1 ring-zinc-900/10 sm:p-6 dark:bg-zinc-800/40 dark:ring-zinc-700/50">
-			<h4 className="text-xs font-semibold tracking-wider text-zinc-600 uppercase dark:text-zinc-400">
+		<div className={clsx("rounded-3xl p-5 ring-1 sm:p-6", panel)}>
+			<h4
+				className={clsx(
+					"text-xs font-semibold tracking-wider uppercase",
+					titleClass,
+				)}
+			>
 				{title}
 			</h4>
 			<ul className="mt-4 space-y-3">

@@ -1,37 +1,39 @@
-import clsx from "clsx";
+import type { GuideFrame } from "@/data/guides/guide-bundle";
 import type { IGuideStepRef } from "@/data/guides/guide-interface";
+import { StageFrame } from "../presenter/stage-frame";
 
 interface IOverviewItemProps {
 	number: string;
 	step: IGuideStepRef;
+	frame: GuideFrame;
 }
 
-/** One step in the overview: a row on phones, a mini card from sm up. */
-export function OverviewItem({ number, step }: IOverviewItemProps) {
+/** One step as a miniature of the artifact. Tap it to jump to the step. */
+export function OverviewItem({ number, step, frame }: IOverviewItemProps) {
 	return (
 		<a
 			href={`#${step.id}`}
-			className={clsx(
-				"group flex h-full min-w-0 items-center gap-4 rounded-2xl bg-surface p-4 ring-1 ring-zinc-900/10 transition",
-				"hover:-translate-y-0.5 hover:shadow-lg hover:shadow-zinc-900/5 motion-reduce:transition-none",
-				"sm:min-h-44 sm:flex-col sm:items-start sm:justify-between sm:rounded-3xl sm:p-5",
-				"dark:bg-zinc-800/40 dark:ring-zinc-700/50 dark:hover:bg-zinc-800/70",
-			)}
+			className="group block h-full rounded-2xl transition hover:-translate-y-1 motion-reduce:transition-none"
 		>
-			<span
-				aria-hidden="true"
-				className="font-display text-3xl font-semibold leading-none tabular-nums text-zinc-300 sm:text-4xl dark:text-zinc-600"
+			<StageFrame
+				frame={frame}
+				size="tile"
+				className="h-full transition group-hover:shadow-lg group-hover:shadow-accent-500/20 group-hover:ring-accent-400/60 motion-reduce:transition-none"
 			>
-				{number}
-			</span>
-			<span className="min-w-0">
-				<span className="block text-base font-semibold text-zinc-800 transition-colors group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-400">
-					{step.title}
-				</span>
-				<span className="mt-0.5 block text-sm text-zinc-600 dark:text-zinc-400">
-					{step.question}
-				</span>
-			</span>
+				<div className="flex h-full flex-col justify-between gap-2">
+					<span className="font-display text-2xl font-semibold leading-none tabular-nums text-white/30 sm:text-3xl">
+						{number}
+					</span>
+					<span className="min-w-0">
+						<span className="block text-sm font-semibold leading-tight text-balance text-white transition-colors group-hover:text-accent-300 sm:text-base">
+							{step.title}
+						</span>
+						<span className="mt-1 hidden text-xs leading-5 text-zinc-400 sm:line-clamp-2">
+							{step.question}
+						</span>
+					</span>
+				</div>
+			</StageFrame>
 		</a>
 	);
 }

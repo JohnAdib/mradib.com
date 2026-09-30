@@ -52,6 +52,9 @@ John asks for them. Until then, tiers live only in this registry.
 | GuideSectionHeading | src/components/guide/shell/section-heading.tsx | candidate |
 | RuleChips | src/components/guide/hero/rule-chips.tsx | candidate |
 | GuidePresenter | src/components/guide/presenter/ | candidate |
+| StageFrame | src/components/guide/presenter/stage-frame.tsx | candidate |
+| StageSlide | src/components/guide/presenter/stage-slide.tsx | candidate |
+| ArtifactHero | src/components/guide/hero/artifact-hero.tsx | candidate |
 | StepListCard | src/components/guide/steps/step-list-card.tsx | candidate |
 | RuleCard | src/components/guide/rules/rule-card.tsx | candidate |
 | AiFileCard | src/components/guide/ai/ai-file-card.tsx | candidate |
