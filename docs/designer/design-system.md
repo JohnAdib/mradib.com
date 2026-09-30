@@ -44,6 +44,8 @@ John asks for them. Until then, tiers live only in this registry.
 | CtaOnDarkPanel | src/components/cta-on-dark-panel/ | candidate |
 | TiltCard | src/components/tilt-card/ | candidate |
 | Reveal | src/components/reveal/ | candidate |
+| DetailsMotion | src/components/motion/details-motion.tsx | candidate |
+| Accordion | src/components/accordion/accordion.tsx | candidate |
 | HighlightCard | src/components/home/highlight-card.tsx | candidate |
 | YouTubeEmbed | src/components/video/youtube-embed.tsx | candidate |
 | TalkMedia | src/components/talk/talk-media.tsx | candidate |
