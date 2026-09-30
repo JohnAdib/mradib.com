@@ -37,6 +37,29 @@ confirmed it over startup, funding and raise. Rulings, all binding:
   and a one-line pointer at each old llms.txt and skill.md. The hub route
   lives once, in src/data/guides/hub-route.ts, and every guide path, card
   slug and link derives from it.
+## 2026-09-30, every question opens and closes with motion
+
+John's direction: whenever a Q&A is clicked it must have an opening and a
+closing animation, a very nice and smooth one, on every page. An instant
+open or close is not acceptable. Rulings:
+
+- Every <details> on the site animates both ways: the height eases between
+  the question alone and the full answer, the answer fades and rises into
+  place, and the chevron turns. The close runs the same path backwards and
+  the element only shuts once the panel has, so nothing jumps. A click
+  mid-run reverses from wherever the panel is.
+- One mechanism, site wide: DetailsMotion is mounted once in RootShell, so
+  guide FAQs, the audit FAQ, the resume guide's expandable lists, the
+  inline table of contents, the full-checklist toggle, the scorecard's
+  issue cards and any future disclosure all move the same way.
+- The static FAQ lists (article pages, /contact, /mentor, /talks) become
+  the same accordions, so every Q&A on the site is clickable and animated.
+  FAQ structured data is unchanged.
+- Timing comes from the motion tokens: --duration-base with --ease-rise for
+  the height and the opening fade, --duration-fast for the closing fade.
+- A disclosure's height is the one sanctioned layout animation, recorded
+  as an exception in docs/designer/motion.md. Reduced motion keeps the
+  native instant toggle.
 
 ## 2026-09-30, the fundraising guides get a living artifact
 

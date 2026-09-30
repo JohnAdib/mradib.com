@@ -4,6 +4,7 @@ import clsx from "clsx";
 import type { JSX } from "react";
 
 interface IAccordionProps {
+	id?: string;
 	title: string;
 	children: React.ReactNode;
 	defaultOpen?: boolean;
@@ -11,6 +12,7 @@ interface IAccordionProps {
 }
 
 export function Accordion({
+	id,
 	title,
 	children,
 	defaultOpen,
@@ -18,6 +20,7 @@ export function Accordion({
 }: IAccordionProps): JSX.Element {
 	return (
 		<details
+			id={id}
 			open={defaultOpen}
 			className={clsx(
 				"group rounded-2xl border border-zinc-900/10 bg-surface px-5",
@@ -35,7 +38,7 @@ export function Accordion({
 				<span>{title}</span>
 				<ChevronDownIcon
 					aria-hidden="true"
-					className="h-5 w-5 flex-none text-zinc-500 transition-transform duration-200 group-open:rotate-180 dark:text-zinc-400"
+					className="disclosure-chevron h-5 w-5 flex-none text-zinc-500 dark:text-zinc-400"
 				/>
 			</summary>
 			<div className="pb-5 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
