@@ -4,6 +4,75 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+
+## 2026-10-04, the QA article gets joining context and its final route
+
+John approved "Beyond the QA Bottleneck" and requested a descriptive URL
+that follows the title. Use /beyond-the-qa-bottleneck. April 2026 is the
+confirmed joining month. Mark it on relevant histories with a labelled
+dashed line, without inventing a joining day or claiming causation. Keep
+the documented process changes from May distinct from this context.
+
+Breadcrumb arrows point right in English and left in Persian, following
+reading direction. Breadcrumb text is not selectable. Verify sharing
+images, sitemap, source coverage, privacy and all required checks before
+merging the article PR and checking the published page.
+
+## 2026-10-04, the QA article gets a short title and a deeper privacy check
+
+John requested a catchy title, a short page path and another check that the
+article exposes no employer or confidential business information. The
+article is titled "Beyond the QA Bottleneck" at /ai-qa. Search metadata
+also names AI adoption; the article registry drives its public links.
+
+Keep the authorised aggregate engineering measurements and general process
+lessons. Generalise internal release and test policy, configuration and
+current operational gaps. Check visible text, metadata, structured data,
+route payloads and directly loaded browser code for employer data.
+
+## 2026-10-04, the QA article shows the skills and improves chart motion
+
+John requested one chart per row, vertical bars for test-file and UI-flow
+histories, and chart animation as the reader reaches each figure. Add
+meaningful evidence views and the eight-skill workflow to make the case
+study more concrete. Retain the existing reading layout and both themes.
+
+Do not offer CSV downloads. Remove the download links, numeric export
+assets and generator; resources describe the approach and link to public
+technique documentation. Do not distribute internal skill files.
+
+## 2026-10-04, the QA article keeps its measurements
+
+John rejected the first article as too general. Anonymisation must remove
+identities and private resources while retaining useful aggregate numbers.
+The revision uses monthly merged PR and work-item counts, dated test and
+UI-flow inventories, recorded-error trends and concrete workflow details.
+The narrative is a measured case study of adopting AI in development.
+
+The visible exact-count disclosure duplicated the chart labels and adds
+no useful information. Remove it. Recreate historical charts from neutral
+data, with readable dates and units in both themes. Keep the boundaries of
+each measurement clear without replacing the results with general advice.
+
+## 2026-10-04, AI adoption article leads with confidence
+
+John requested a comprehensive article before a meetup presentation. The
+story starts with slow development, regressions, lengthy QA, low confidence
+and requests waiting, then explains positive process improvements through
+AI adoption. The talk title remains undecided.
+
+The article uses general engineering lessons and an explicitly illustrative
+settings example. Aggregate counts and timings may be discussed, but company
+identities, staff history, private resource links and original screenshots
+remain excluded. Charts are recreated as native, accessible components with
+clear measurement scope. Recorded error events do not imply a crash rate or
+prove that AI caused a reliability improvement.
+
+The new writing root layout uses a neutral author biography and schema. The
+existing site design and other profile pages retain their conventions.
+John explicitly requested a PR, authorising the separate article branch to
+be pushed for review. Main-branch publication remains separate.
+
 ## 2026-09-30, the kit moves under /fundraising: paths, titles, dates
 
 John's verdict on the first URLs: application-answers made no sense as a

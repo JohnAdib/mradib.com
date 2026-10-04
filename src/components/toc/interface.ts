@@ -15,4 +15,5 @@ export interface IArticleTocProps {
 	checklistIdsBySection?: Record<string, string[]>;
 	label?: string;
 	locale?: string;
+	defaultOpen?: boolean;
 }

@@ -5,6 +5,7 @@ import { ogCardsEnGuides } from "./og-cards-en-guides";
 import { ogCardsEnOffer } from "./og-cards-en-offer";
 import { ogCardsFa } from "./og-cards-fa";
 import { ogCardsTalks } from "./og-cards-talks";
+import { ogCardsWriting } from "./og-cards-writing";
 
 export type { IOgArtwork, IOgCard } from "./og-card-interface";
 
@@ -15,6 +16,7 @@ export const ogCards: IOgCard[] = [
 	...ogCardsEnGuides,
 	...ogCardsEnOffer,
 	...ogCardsTalks,
+	...ogCardsWriting,
 	...ogCardsFa,
 ];
 

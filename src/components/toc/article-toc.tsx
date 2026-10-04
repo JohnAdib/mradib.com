@@ -59,6 +59,7 @@ export function ArticleToc({
 	checklistIdsBySection,
 	label = "فهرست مطالب",
 	locale = "fa-IR",
+	defaultOpen = true,
 }: IArticleTocProps): JSX.Element {
 	const activeId = useScrollSpy(sections.map((section) => section.id));
 	const showNumber = variant === "inline";
@@ -96,7 +97,7 @@ export function ArticleToc({
 
 	if (variant === "inline") {
 		return (
-			<Accordion title={label} defaultOpen>
+			<Accordion title={label} defaultOpen={defaultOpen}>
 				{list}
 			</Accordion>
 		);

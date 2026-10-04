@@ -1,0 +1,91 @@
+.motion [data-chart-shape="bar"] {
+	transform-origin: bottom;
+}
+
+.motion [data-chart-shape="horizontal-bar"] {
+	transform-origin: left;
+}
+
+.motion[data-chart-motion="pending"] [data-chart-shape="bar"] {
+	transform: scaleY(0);
+}
+
+.motion[data-chart-motion="pending"] [data-chart-shape="horizontal-bar"] {
+	transform: scaleX(0);
+}
+
+.motion[data-chart-motion="entered"] [data-chart-shape="bar"] {
+	animation: grow-vertical var(--duration-base) var(--ease-rise) both;
+	animation-delay: calc(var(--chart-group, 0) * var(--stagger-step) / 3);
+}
+
+.motion[data-chart-motion="entered"] [data-chart-shape="horizontal-bar"] {
+	animation: grow-horizontal var(--duration-base) var(--ease-rise) both;
+	animation-delay: calc(var(--chart-group, 0) * var(--stagger-step) / 3);
+}
+
+.motion[data-chart-motion="pending"] [data-chart-shape="line"] {
+	opacity: 0;
+	transform: translateY(6px);
+}
+
+.motion[data-chart-motion="entered"] [data-chart-shape="line"] {
+	animation: reveal-line var(--duration-base) var(--ease-rise) both;
+}
+
+.value {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+@media (min-width: 640px) {
+	.value {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+@keyframes grow-vertical {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes grow-horizontal {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes reveal-line {
+	from {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+	.motion[data-chart-motion] [data-chart-shape] {
+		animation: none;
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media print {
+	.motion,
+	.figure {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+}
