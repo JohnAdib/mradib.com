@@ -6,13 +6,13 @@ export const articleAiAdoption: IArticle = {
 	publishTime: "09:00:00",
 	datePublished: "2026-10-04T08:00:00.000Z",
 	dateModified: "2026-10-04T08:00:00.000Z",
-	title: "AI Adoption Needs a Process You Can Trust",
+	title: "Beyond the QA Bottleneck",
 	description:
 		"How I used eight focused AI skills to bring tests, device evidence and review into React Native development, with monthly delivery data and production feedback.",
-	pageTitle: "AI Adoption Needs a Process You Can Trust",
+	pageTitle: "Beyond the QA Bottleneck: AI Adoption",
 	pageDesc:
 		"John Adib's React Native case study: eight AI skills, monthly PR counts, test and UI-flow growth, device evidence and production feedback.",
-	pagePath: "/building-confidence-in-ai-assisted-development",
+	pagePath: "/ai-qa",
 	inLanguage: "en-GB",
 	keywords: [
 		"AI adoption",

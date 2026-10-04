@@ -9,7 +9,7 @@ export const ogCardsWriting: IOgCard[] = [
 		route: articleAiAdoption.pagePath,
 		lang: "en",
 		eyebrow: "AI adoption / John Adib",
-		headline: "Confidence comes from evidence.",
+		headline: articleAiAdoption.title,
 		proof: `${aiDevelopmentSkills.length} focused skills. ${monthlyActivityData.observations[0].value} merged PRs in January 2026. ${monthlyActivityData.observations.at(-1)?.value} in August.`,
 	},
 ];

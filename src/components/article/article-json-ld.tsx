@@ -1,3 +1,5 @@
+import "server-only";
+
 import type { StaticImageData } from "next/image";
 import type { JSX } from "react";
 import type { Article, WithContext } from "schema-dts";

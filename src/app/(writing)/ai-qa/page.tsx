@@ -35,7 +35,7 @@ export default function Page() {
 				{ position: 2, name: "Articles", item: "/articles", current: false },
 				{
 					position: 3,
-					name: "AI adoption",
+					name: article.title,
 					item: article.pagePath,
 					current: true,
 				},

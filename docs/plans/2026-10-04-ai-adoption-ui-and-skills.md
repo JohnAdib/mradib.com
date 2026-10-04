@@ -28,3 +28,12 @@
 - Capture seven widths in both themes and inspect the phone layout first.
 - Verify old CSV URLs return 404 and no download links remain.
 - Review independently, commit the batch and update the existing PR branch.
+
+## Title, path and privacy follow-up
+
+- Use "Beyond the QA Bottleneck" at /ai-qa, with AI adoption in search metadata.
+- Regenerate the social card and check the heading on phone and desktop.
+- Keep the approved measurements, but generalise private policies and current
+  operational statuses. Keep employer data out of loaded browser code.
+- Verify the new route, canonical, article index, feed, sitemap and privacy
+  output before updating the same PR.

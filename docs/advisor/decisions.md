@@ -5,6 +5,18 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-04, the QA article gets a short title and a deeper privacy check
+
+John requested a catchy title, a short page path and another check that the
+article exposes no employer or confidential business information. The
+article is titled "Beyond the QA Bottleneck" at /ai-qa. Search metadata
+also names AI adoption; the article registry drives its public links.
+
+Keep the authorised aggregate engineering measurements and general process
+lessons. Generalise internal release and test policy, configuration and
+current operational gaps. Check visible text, metadata, structured data,
+route payloads and directly loaded browser code for employer data.
+
 ## 2026-10-04, the QA article shows the skills and improves chart motion
 
 John requested one chart per row, vertical bars for test-file and UI-flow
