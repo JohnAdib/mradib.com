@@ -8,7 +8,7 @@ export const articleAiAdoption: IArticle = {
 	dateModified: "2026-10-04T08:00:00.000Z",
 	title: "Beyond the QA Bottleneck",
 	description:
-		"How I used eight focused AI skills to bring tests, device evidence and review into React Native development, with monthly delivery data and production feedback.",
+		"How I used eight focused AI skills to bring tests, device evidence and review into React Native development, with monthly PR activity and production feedback.",
 	pageTitle: "Beyond the QA Bottleneck: AI Adoption",
 	pageDesc:
 		"John Adib's React Native case study: eight AI skills, monthly PR counts, test and UI-flow growth, device evidence and production feedback.",

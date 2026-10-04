@@ -5,6 +5,21 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-04, PR activity supports the product engineering story
+
+John requested a clearer distinction between visible development activity
+and meaningful feature delivery. PR counts show work moving through review;
+they are not a productivity target or equal units of effort. A day without
+merged PRs can contain substantial work, and more PRs need not mean more
+features, value or effort. Keep the monthly data and explain these limits.
+
+John reports faster feature development and delivery while a smaller
+engineering team took on broader product and web responsibilities. Describe
+the organisational direction as product engineering. Keep staffing general,
+without exact headcounts, reductions or details of departmental departures.
+Distinguish this first-hand experience from the chart measurements; do not
+derive feature lead-time, output per engineer or causal AI effects from PRs.
+
 ## 2026-10-04, the QA article gets joining context and its final route
 
 John approved "Beyond the QA Bottleneck" and requested a descriptive URL
