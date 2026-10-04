@@ -15,7 +15,7 @@ export const monthlyActivityData: ITimeSeriesData = {
 	caption:
 		"January to August 2026, one mobile application in the same repository.",
 	methodology:
-		"Merged PRs measure activity, not distinct features, effort or quality. September is excluded because the application moved and the later repository has a broader scope.",
+		"Merged PRs measure activity, not productivity, effort, quality, distinct features or turnaround. September is excluded because the application moved and the later repository has a broader scope.",
 };
 
 export const monthlyTicketData: ITimeSeriesData = {
