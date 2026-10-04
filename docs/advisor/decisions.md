@@ -5,6 +5,19 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-04, the QA article keeps its measurements
+
+John rejected the first article as too general. Anonymisation must remove
+identities and private resources while retaining useful aggregate numbers.
+The revision uses monthly merged PR and work-item counts, dated test and
+UI-flow inventories, recorded-error trends and concrete workflow details.
+The narrative is a measured case study of adopting AI in development.
+
+The visible exact-count disclosure duplicated the chart labels and adds
+no useful information. Remove it. Recreate historical charts from neutral
+data, with readable dates and units in both themes. Keep the boundaries of
+each measurement clear without replacing the results with general advice.
+
 ## 2026-10-04, AI adoption article leads with confidence
 
 John requested a comprehensive article before a meetup presentation. The

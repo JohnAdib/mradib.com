@@ -8,10 +8,10 @@ export const articleAiAdoption: IArticle = {
 	dateModified: "2026-10-04T08:00:00.000Z",
 	title: "AI Adoption Needs a Process You Can Trust",
 	description:
-		"How I brought tests, device evidence and production feedback into React Native development to build confidence in AI adoption and reduce repetitive QA.",
+		"My React Native case study: monthly delivery data, growing tests and UI flows, device evidence and production feedback behind a change in how I adopted AI.",
 	pageTitle: "AI Adoption Needs a Process You Can Trust",
 	pageDesc:
-		"John Adib on AI adoption in React Native: earlier testing, device evidence, repeatable builds and production feedback that make changes easier to trust.",
+		"John Adib's React Native case study: AI adoption, monthly PR counts, test and UI-flow growth, error trends and the workflow behind the measurements.",
 	pagePath: "/building-confidence-in-ai-assisted-development",
 	inLanguage: "en-GB",
 	keywords: [

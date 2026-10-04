@@ -1,50 +1,65 @@
+import { errorWindowSummary } from "./metrics";
 import type { ArticleSectionData } from "./types";
+
+const earlierErrors = errorWindowSummary[0];
+const laterErrors = errorWindowSummary[1];
 
 export const feedbackSections: ArticleSectionData[] = [
 	{
-		id: "shared-components-and-accessibility",
-		title: "Shared components make quality reusable",
-		tocTitle: "Shared components",
+		id: "review-and-test-builds",
+		title: "AI review became another pass over a concrete change",
+		tocTitle: "Review and builds",
 		paragraphs: [
-			"I also reduced the number of times the same UI decisions had to be made. Shared components give the agent an existing implementation to use, with states and behaviour that can be inspected before it writes a new screen. The component catalogue becomes context for implementation as well as a place to verify the UI.",
-			"Storybook gives those states a visible home. Unit and interaction tests exercise behaviour, visual regression review checks appearance, and on-device examples show how the component behaves in a native environment. A shared Button can carry work that would otherwise be repeated across screens: focus, disabled state, loading, labels and consistent spacing.",
-			"Accessibility belongs in that work. A control should expose a meaningful role, label and state. Tests that locate it through those semantics check something closer to the user's experience than an arbitrary identifier. An agent can help author the checks, while screen-reader use and human review still contribute important evidence.",
-			"Shared components also change the conversation during review. I can ask why a new screen bypasses an established component, or whether a change to a shared component needs broader verification. A fix can benefit multiple consumers, and a mistake can affect them too. Reuse becomes valuable when it carries clear responsibilities for testing and review alongside the implementation.",
+			"From 25 July, three AI reviewers read the development rules alongside human reviewers. In the source's sample of the last 30 merged PRs, they wrote 360 of 635 inline comments, about 57%. This is a sample from the broader repository, including work beyond the app. It measures review activity, not how many comments were correct, how many bugs were prevented or what share of implementation AI wrote.",
+			"The implementation agent evaluates each comment: inspect the code, reproduce the concern, change when justified and rerun the affected checks. A reviewer can reveal a missing failure case or misunderstand a deliberate choice. Replies need evidence; automatically accepting suggestions is not a quality gate.",
+			"The PR brings the requirement, implementation, test output, device captures and remaining limitations together. Two human approvals are required by the repository rules. This gives people a more concrete decision to make and a visible place to record it. The build workflow then extends assessment beyond the author: a Canary variant can install beside the main app, and TestFlight gives testers access on physical devices.",
+			"The Beta, Canary and Production workflows were established on 22 June, followed by weekday Beta delivery. The later setup produces an iOS Canary on merge and a fresh weekday Beta when the main branch has changed. Android test delivery has its own trigger and internal distribution path. These are inspectable builds for feedback; publishing a public store release remains a separate decision with its own steps.",
 		],
 	},
 	{
-		id: "review-and-test-builds",
-		title: "Review ends with a decision people can make",
-		tocTitle: "Review and builds",
+		id: "repeatable-release-delivery",
+		title:
+			"The release history accelerated, while go-live still had manual steps",
+		tocTitle: "Release mechanics",
 		paragraphs: [
-			"AI review adds another opportunity to inspect a change. Reviewers can check the same written standards used during implementation, question missing tests and identify edge cases. Multiple reviewers are useful when they provide independent reasoning, but their comments still need to be evaluated. An agent should investigate a suggestion before changing correct code to satisfy it.",
-			"The pull request should bring the evidence together: the intended behaviour, the implementation, relevant test results, device captures and remaining limitations. That gives a human reviewer a concrete decision to make. They can assess whether the change meets the requirement, whether the tests protect the right behaviour and whether the experience is acceptable.",
-			"Test builds extend that review beyond the engineer's environment. Automated build delivery to TestFlight makes an iOS change easier to try on a real device. A build for testers is a distinct step from publishing a public release. Store review, rollout choices and acceptance still need their own decisions.",
-			"This is where the process starts to support smaller, more frequent releases. The practical gain is earlier access to an inspectable change and less work assembling its evidence. Release frequency alone cannot establish quality. I want the path to a release to be understandable, with a clear account of what was verified and what still requires human attention.",
+			"The recorded release history contains eight entries between 24 August and 30 September, roughly five and a half weeks. That shows a much more active release line, but the evidence does not enumerate eight confirmed public-store go-live dates on both platforms. A tag, a production workflow run, a TestFlight submission and a public release are different events. I keep those distinctions visible rather than using the eight entries to claim multiple public releases every week.",
+			"On 11 and 12 September, I added the release tooling and runbooks that make the process more repeatable. The tag supplies the app version; build numbers live in EAS. A base version such as X.Y.0 selects native store builds, while a nonzero patch selects an over-the-air update under the compatible base runtime. Generated release notes derive from the PR titles. The version and mechanism rules have self-tests against the workflow configuration.",
+			"The production build path is configured to submit iOS to TestFlight and Android to an initial 10% production rollout. The configured release button checks the branch ancestry and refuses an existing tag. It was present but had no recorded runs at the snapshot; the four later release-history tags had been pushed manually. There were three recorded production-button runs in that later repository. Those records document workflow activity and the configured delivery path; downstream build and submission results need their own confirmation.",
+			"The over-the-air path also compares the proposed change with the production build's commit and rejects incompatible native changes. Its new production path had not yet been exercised after the repository move. iOS build attachment, store text, submission and public release still required App Store Connect steps. Android rollout increases and halts were manual too. The improvement was a repeatable build and submission path, with specific remaining work between a reviewed change and public availability.",
 		],
 	},
 	{
 		id: "production-feedback",
-		title: "Production feedback starts the next task",
-		tocTitle: "Production signals",
+		title: "The Sentry history became part of the development loop",
+		tocTitle: "Recorded errors",
 		kind: "errors",
 		paragraphs: [
-			"The loop continues after release. Automated tests exercise the cases we have specified; production exposes combinations of devices, data, timing and user behaviour that we have not fully anticipated. Monitoring becomes useful when an observation can turn into a task someone can investigate.",
-			"I made production feedback more actionable through regular triage and a connection between issues and development work. Release context and active feature flags help explain which implementation a user encountered. From there, the work is to reproduce the behaviour, decide whether it is a defect or an expected outcome, and establish a way to verify the correction.",
-			"The Sentry chart shows recorded error-event volume over time. Its decline needs a careful reading. The work included fixes, filtering and changes to sampling. The data cannot separate their effects. These counts are not normalised by sessions or usage, and they are not a crash-free rate. A lower count cannot establish how much more reliable the app became.",
-			"Repeated events and distinct problems are also different measures. One recurring condition can dominate the event volume. Expected outcomes may deserve product attention without being software defects. Sorting these signals makes the dashboard more useful, provided meaningful failures remain visible. Changes to instrumentation need scrutiny too: monitoring should help us understand the app without interfering with the user's action.",
-			"For a reproducible defect, I want the investigation to return to the development loop with a testable requirement. That creates the opportunity to preserve the fix rather than only close the issue. Production feedback then helps decide what we work on next. The chart is evidence of recorded activity; the durable value comes from the decisions and verification that activity leads to.",
+			"On 28 July, I made error cleanup systematic and connected Sentry issues to development tickets. A resurfacing problem could return to the backlog instead of being rediscovered in an unrelated chat. Release context and active feature flags accompany events, helping explain which implementation the user encountered. The work then becomes reproduce, classify, fix where appropriate and add a test that preserves the correction.",
+			"The daily chart shows all-environment error events from the retained history. Its completed days run from 7 July through 3 October. The 6 July boundary was missing its first hour, and 4 October was still in progress when the snapshot was taken. I exclude those incomplete endpoints from a completed-day trend. A very low count from a partially elapsed current day would otherwise make the apparent improvement look much larger than the evidence supports.",
+			`A reconstructed ${earlierErrors.label} window contains ${earlierErrors.value.toLocaleString("en-GB")} events, with that first hour missing. The 30 complete days from ${laterErrors.label} contain ${laterErrors.value.toLocaleString("en-GB")}, about ${Math.round((1 - laterErrors.value / earlierErrors.value) * 100)}% fewer recorded events. Fixes, reporting filters and sampling changes all contributed; the data cannot separate their effects. All environments are included, and there is no session or traffic denominator. These are recorded event counts, not a crash-free rate or a measure of bugs eliminated by AI.`,
+			"Recorded volume rose again during September before settling, something a two-point chart would hide. Distinct issues and repeated events tell different stories: one recurring condition can dominate the count. I use these signals to prioritise investigations. Reproducible defects return to the same test, device-evidence and review loop.",
 		],
 	},
 	{
-		id: "adopting-the-loop",
-		title: "Start with one change you can verify",
-		tocTitle: "Adopt the loop",
+		id: "performance-as-verification",
+		title: "Performance needed its own evidence and controls",
+		tocTitle: "Performance checks",
 		paragraphs: [
-			"The lesson I take from this work is that AI adoption needs a repeatable way to earn trust. That starts with a task people understand, rules the agent can follow and evidence a reviewer can inspect. The agent's speed becomes useful when the surrounding process can assess its output.",
-			"For a team beginning this work, I would choose one bounded change and make the whole path visible. Agree its acceptance criteria. Ask the agent to identify a meaningful test. Run the actual checks. Exercise the interface. Prepare the review evidence. Deliver a test build, and decide how to watch the relevant behaviour after release. Use that task to find the gaps in the process.",
-			"Then improve the loop where those gaps appear. Keep checks fast enough to use regularly, make failures understandable and give people room for judgment. An unreadable result or a brittle flow needs attention because it affects the evidence everyone relies on. Measure the cost of reaching an accepted change, alongside useful outcomes such as protected behaviour and actionable feedback.",
-			"I want each development task to leave the next one better supported. The useful result of AI adoption is code with a reason to trust it, a way to inspect it and a path to learn from what happens when people use it.",
+			"On 26 August, I added a performance harness that samples main-thread activity during repeated list flings on a Release simulator build. It performs ten 300-millisecond flings, so repeated runs have a defined workload. One finding was that Session Replay accounted for 48% to 73% of UI-update work in that measurement. That figure describes the sampled workload; it is not a claim that disabling Replay made the whole application that much faster.",
+			"I put runtime controls around the risky work. Replay and analytics have remote kill switches, active feature flags travel with error events, and the app keeps a mirror of the last effective flags if remote configuration fails. Performance changes can be introduced under flags, measured and then simplified. The source records 20 performance flags retired, including 14 on 22 September, once that temporary control was no longer needed.",
+			"I also added static checks for patterns that had already created avoidable work: timers, expensive blur and gradient effects, autoplay without pause handling, large shadows and unstable style objects. The linter blocks new occurrences of eight selected patterns while documenting older exceptions. This turns a profiling lesson into a check that the next agent encounters before it repeats the same approach.",
+			"The nightly performance workflow exposed an important limit. At the 4 October snapshot it was failing during simulator build, so it had not produced the intended trend data. I can describe the harness and the local finding, but I cannot claim the scheduled trend was protecting every release. Performance belongs in QA only when its workload, environment and results are visible enough to interpret.",
+		],
+	},
+	{
+		id: "limits-and-next-steps",
+		title: "A useful loop also reports what it did not verify",
+		tocTitle: "Gaps and lessons",
+		paragraphs: [
+			"The 232 Maestro files do not mean every path runs on every platform. Roughly a quarter of the suite was held out at the snapshot while test setup was being updated. Some controlled scenarios were available on only one platform, which helps explain the difference between 22 iOS jobs and nine Android jobs. A green subset needs to say which behaviours it actually exercised.",
+			"The scheduled test verdict had another problem: the mirror into GitHub was unreadable on 21 consecutive nights after 13 September, although the underlying cloud results remained available in EAS. Making those results consistently visible at review and release remained part of the work. Surfacing them reliably would let the scheduled checks become a dependable part of those decisions.",
+			"My next priorities were therefore specific: complete the test-setup updates, bring controlled scenarios to platform parity, repair result mirroring, fix the performance runner, connect verified results to review and release decisions, and exercise the new release entrypoints. Affected-only CI matters too, because the move from roughly five to fifteen minutes makes repeated verification more expensive. The process is easier to improve when each missing link has a known scope and an observable result.",
+			"What I take from these months is a practical way to adopt AI: define the work, give the agent clear rules, make it write and run meaningful tests, capture the interaction and put the evidence in front of a reviewer. The measured result was a more active app delivery record and a much larger verification inventory. The lasting benefit is that the next task starts with tests, shared components and production learning that the previous work left behind.",
 		],
 	},
 ];

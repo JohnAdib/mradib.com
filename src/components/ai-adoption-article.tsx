@@ -1,10 +1,9 @@
-import { DevelopmentLoop } from "@/components/ai-adoption/development-loop";
-import { ErrorVolumeChart } from "@/components/ai-adoption/error-volume-chart";
-import { TestGrowthChart } from "@/components/ai-adoption/test-growth-chart";
+import { Fragment } from "react";
 import { ArticleToc } from "@/components/toc/article-toc";
 import { articleResources } from "@/data/ai-adoption/resources";
 import { articleSections } from "@/data/ai-adoption/sections";
 import { AiAdoptionResources } from "./ai-adoption-resources";
+import { AiAdoptionSectionChart } from "./ai-adoption-section-chart";
 
 export const aiAdoptionToc = [
 	...articleSections.map(({ id, title, tocTitle }) => ({
@@ -28,8 +27,11 @@ export function AiAdoptionArticle() {
 			{articleSections.map((section) => (
 				<section key={section.id} id={section.id} className="scroll-mt-24">
 					<h2>{section.title}</h2>
-					{section.paragraphs.map((paragraph) => (
-						<p key={paragraph}>{paragraph}</p>
+					{section.paragraphs.map((paragraph, index) => (
+						<Fragment key={paragraph}>
+							<p>{paragraph}</p>
+							{index === 0 && <AiAdoptionSectionChart kind={section.kind} />}
+						</Fragment>
 					))}
 					{section.bullets && (
 						<ul>
@@ -38,9 +40,6 @@ export function AiAdoptionArticle() {
 							))}
 						</ul>
 					)}
-					{section.kind === "loop" && <DevelopmentLoop />}
-					{section.kind === "tests" && <TestGrowthChart />}
-					{section.kind === "errors" && <ErrorVolumeChart />}
 					{articleResources
 						.filter((resource) => resource.sectionId === section.id)
 						.map((resource) => (

@@ -4,5 +4,12 @@ export interface ArticleSectionData {
 	tocTitle?: string;
 	paragraphs: string[];
 	bullets?: string[];
-	kind?: "loop" | "example" | "tests" | "errors" | "adoption";
+	kind?:
+		| "loop"
+		| "example"
+		| "tests"
+		| "flows"
+		| "activity"
+		| "errors"
+		| "adoption";
 }

@@ -1,6 +1,11 @@
-import { errorVolumeData } from "@/data/ai-adoption/visuals";
-import { ComparisonChart } from "./comparison-chart";
+import { errorHistoryData } from "@/data/ai-adoption/metrics";
+import { ErrorWindowSummary } from "./error-window-summary";
+import { TimelineChart } from "./timeline-chart";
 
 export function ErrorVolumeChart() {
-	return <ComparisonChart data={errorVolumeData} />;
+	return (
+		<TimelineChart data={errorHistoryData}>
+			<ErrorWindowSummary />
+		</TimelineChart>
+	);
 }
