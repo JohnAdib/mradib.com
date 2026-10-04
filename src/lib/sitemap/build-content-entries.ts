@@ -21,7 +21,9 @@ function awardEntries(): SitemapEntry[] {
 
 function talkEntries(): SitemapEntry[] {
 	return talks.flatMap((talk) =>
-		talk.path ? [sitemapEntry(talk.path, talk.date)] : [],
+		talk.path
+			? [sitemapEntry(talk.path, talk.pageUpdated ?? talk.date ?? undefined)]
+			: [],
 	);
 }
 

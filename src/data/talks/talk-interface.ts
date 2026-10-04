@@ -24,16 +24,20 @@ export interface ITalk {
 	title: string;
 	/** Defaults to a talk when unset. */
 	format?: TalkFormat;
+	/** Upcoming talks are not counted as past appearances. */
+	status?: "upcoming" | "delivered";
+	/** Page update date, independent of the event date. */
+	pageUpdated?: string;
 	/** Event or series name, e.g. "AI Coding Summit 2025". */
-	event: string;
+	event: string | null;
 	/** Community or company that ran it. Drives the logo, e.g. "GitNation". */
-	organizer: string;
+	organizer: string | null;
 	/** Company that hosted the venue, e.g. "NewDay", "Figma". */
 	host?: string;
-	venue?: string;
-	city: string;
+	venue?: string | null;
+	city: string | null;
 	/** ISO date (YYYY-MM-DD) the talk was given. */
-	date: string;
+	date: string | null;
 	audience?: string;
 	summary: string;
 	/** Organizer logo under /talks/logos. Falls back to a monogram when unset. */

@@ -11,6 +11,8 @@ function monthYear(date: string): string {
 }
 
 function talkProof(talk: ITalk): string {
+	if (!talk.date)
+		return "Building confidence in React Native with AI. Event details TBC.";
 	const where = talk.host
 		? `hosted by ${talk.host}`
 		: talk.city === "Online"
@@ -35,7 +37,7 @@ export const ogCardsTalks: IOgCard[] = talks
 		slug: `talk-${talk.slug}`,
 		route: talk.path,
 		lang: "en",
-		eyebrow: talk.event,
+		eyebrow: talk.event ?? "Upcoming talk",
 		headline: talk.title,
 		proof: talkProof(talk),
 		artwork: talkArtwork(talk),
