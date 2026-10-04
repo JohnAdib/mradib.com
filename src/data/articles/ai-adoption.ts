@@ -5,7 +5,7 @@ export const articleAiAdoption: IArticle = {
 	publishDate: "2026-10-04",
 	publishTime: "09:00:00",
 	datePublished: "2026-10-04T08:00:00.000Z",
-	dateModified: "2026-10-04T08:00:00.000Z",
+	dateModified: "2026-10-04T22:31:40.000Z",
 	title: "Beyond the QA Bottleneck",
 	description:
 		"How I used eight focused AI skills to bring tests, device evidence and review into React Native development, with monthly PR activity and production feedback.",

@@ -19,6 +19,7 @@ export function CategoricalBarChart({ data }: { data: ICategoricalChartData }) {
 							</dt>
 							<dd className="text-sm font-semibold text-zinc-900 tabular-nums dark:text-zinc-100">
 								{point.value.toLocaleString("en-GB")}
+								{data.valueSuffix}
 							</dd>
 							<div
 								aria-hidden="true"
@@ -42,8 +43,11 @@ export function CategoricalBarChart({ data }: { data: ICategoricalChartData }) {
 					aria-hidden="true"
 					className="mt-3 flex justify-between text-xs text-zinc-600 tabular-nums dark:text-zinc-400"
 				>
-					<span>0</span>
-					<span>{data.maximum.toLocaleString("en-GB")}</span>
+					<span>0{data.valueSuffix}</span>
+					<span>
+						{data.maximum.toLocaleString("en-GB")}
+						{data.valueSuffix}
+					</span>
 				</p>
 			</ChartMotion>
 		</ChartFigure>

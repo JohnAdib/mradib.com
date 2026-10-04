@@ -1,11 +1,10 @@
 export { designVerificationData } from "./design-metrics";
 export {
-	ciOutcomesData,
+	ciCoverageData,
 	flowCompositionData,
 	platformJobsData,
 } from "./execution-metrics";
 export {
-	ciMedianMinutes,
 	designComponentTotal,
 	designDiffLimitPercent,
 	reviewSamplePrs,

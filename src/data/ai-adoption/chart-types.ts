@@ -27,5 +27,6 @@ export interface ITimeSeriesData extends IChartFigureData {
 }
 
 export interface ICategoricalChartData extends IChartFigureData {
+	valueSuffix?: string;
 	observations: { label: string; value: number }[];
 }

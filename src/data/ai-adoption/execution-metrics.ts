@@ -1,28 +1,27 @@
 import type { ICategoricalChartData } from "./chart-types";
-import { ciMedianMinutes, ciRecordedOn } from "./operational-snapshot";
-import { verificationCheckpoints } from "./verification-checkpoints";
 
-const ciOutcomes = [
-	{ label: "Successful", value: 70 },
-	{ label: "Superseded", value: 23 },
-	{ label: "Failed", value: 7 },
-];
-const totalRuns = ciOutcomes.reduce((sum, point) => sum + point.value, 0);
 const platformJobs = [
 	{ label: "iOS", value: 22 },
 	{ label: "Android", value: 9 },
 ];
 const totalJobs = platformJobs.reduce((sum, point) => sum + point.value, 0);
-const last = verificationCheckpoints[verificationCheckpoints.length - 1];
 
-export const ciOutcomesData: ICategoricalChartData = {
-	id: "ci-outcomes",
-	title: `What happened across ${totalRuns} app CI runs`,
-	unit: `Workflow runs, recorded ${ciRecordedOn}`,
-	maximum: totalRuns,
-	observations: ciOutcomes,
-	caption: `The most recent ${totalRuns} application CI runs at the snapshot. Superseded runs are a separate outcome from failures.`,
-	methodology: `These are application CI workflow outcomes, not native-device results or public releases. The recorded median workflow duration was ${ciMedianMinutes} minutes.`,
+export const ciCoverageData: ICategoricalChartData = {
+	id: "ci-coverage",
+	title: "What the September coverage run measured",
+	unit: "Code coverage (%)",
+	maximum: 100,
+	valueSuffix: "%",
+	observations: [
+		{ label: "Lines", value: 72 },
+		{ label: "Statements", value: 71.2 },
+		{ label: "Branches", value: 63.7 },
+		{ label: "Functions", value: 63.4 },
+	],
+	caption:
+		"The last main-branch coverage run in the original app repository during September ran 1,351 suites and 7,693 tests.",
+	methodology:
+		"This is one September run, not a month-end combined-repository report. Coverage measures code exercised, not assertion quality. The configured minimum threshold and the share of files with nearby tests are different measures, not earlier coverage baselines.",
 };
 
 export const platformJobsData: ICategoricalChartData = {
@@ -46,7 +45,8 @@ export const flowCompositionData: ICategoricalChartData = {
 		{ label: "Shared subflows", value: 53 },
 		{ label: "Suite aggregates", value: 37 },
 	],
-	caption: `The application inventory contained ${last.uiFlowFiles} YAML files. These three recorded roles explain how individual checks, shared setup and suite entrypoints work together.`,
+	caption:
+		"These separately recorded file-role counts explain how checks, shared setup and suite entrypoints work together. They are not a September month-end breakdown.",
 	methodology:
 		"The role counts are not an exhaustive, mutually exclusive partition of all YAML files. They do not measure independent journeys or coverage.",
 };
