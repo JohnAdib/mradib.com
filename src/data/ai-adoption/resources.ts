@@ -26,22 +26,3 @@ export const articleResources = [
 		description: "Session and user counts, crash rates and crash-free rates.",
 	},
 ];
-
-export const articleDataDownloads = [
-	{
-		title: "Full monthly merged-PR history, July 2024 to August 2026 (CSV)",
-		url: "/data/ai-development-merged-pr-history.csv",
-	},
-	{
-		title: "Monthly PR and recorded-ticket counts (CSV)",
-		url: "/data/ai-development-monthly-2026.csv",
-	},
-	{
-		title: "Dated test and UI-flow checkpoints (CSV)",
-		url: "/data/ai-development-verification-2026.csv",
-	},
-	{
-		title: "Daily recorded error events, all environments (CSV)",
-		url: "/data/ai-development-recorded-errors-2026.csv",
-	},
-];

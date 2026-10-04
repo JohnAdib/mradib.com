@@ -22,6 +22,7 @@ export function AiAdoptionArticle() {
 					variant="inline"
 					label="In this article"
 					locale="en-GB"
+					defaultOpen={false}
 				/>
 			</div>
 			{articleSections.map((section) => (
@@ -30,7 +31,10 @@ export function AiAdoptionArticle() {
 					{section.paragraphs.map((paragraph, index) => (
 						<Fragment key={paragraph}>
 							<p>{paragraph}</p>
-							{index === 0 && <AiAdoptionSectionChart kind={section.kind} />}
+							<AiAdoptionSectionChart
+								kind={section.kind}
+								paragraphIndex={index}
+							/>
 						</Fragment>
 					))}
 					{section.bullets && (

@@ -1,7 +1,4 @@
-import {
-	articleDataDownloads,
-	articleResources,
-} from "@/data/ai-adoption/resources";
+import { articleResources } from "@/data/ai-adoption/resources";
 
 export function AiAdoptionResources() {
 	return (
@@ -17,21 +14,6 @@ export function AiAdoptionResources() {
 					<li key={resource.url}>
 						<a href={resource.url}>{resource.title}</a>
 						<p>{resource.description}</p>
-					</li>
-				))}
-			</ul>
-			<h3>Explore the chart data</h3>
-			<p>
-				These CSV files contain the numeric series behind the charts. The error
-				export includes the incomplete first day with an explicit marker; the
-				plotted line uses complete days.
-			</p>
-			<ul>
-				{articleDataDownloads.map((resource) => (
-					<li key={resource.url}>
-						<a href={resource.url} download>
-							{resource.title}
-						</a>
 					</li>
 				))}
 			</ul>

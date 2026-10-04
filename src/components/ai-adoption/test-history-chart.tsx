@@ -1,6 +1,6 @@
 import { unitTestHistoryData } from "@/data/ai-adoption/metrics";
-import { TimelineChart } from "./timeline-chart";
+import { VerticalBarChart } from "./vertical-bar-chart";
 
 export function TestHistoryChart() {
-	return <TimelineChart data={unitTestHistoryData} />;
+	return <VerticalBarChart data={unitTestHistoryData} snapshotDates />;
 }

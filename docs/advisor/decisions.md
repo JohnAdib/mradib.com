@@ -5,6 +5,17 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-04, the QA article shows the skills and improves chart motion
+
+John requested one chart per row, vertical bars for test-file and UI-flow
+histories, and chart animation as the reader reaches each figure. Add
+meaningful evidence views and the eight-skill workflow to make the case
+study more concrete. Retain the existing reading layout and both themes.
+
+Do not offer CSV downloads. Remove the download links, numeric export
+assets and generator; resources describe the approach and link to public
+technique documentation. Do not distribute internal skill files.
+
 ## 2026-10-04, the QA article keeps its measurements
 
 John rejected the first article as too general. Anonymisation must remove

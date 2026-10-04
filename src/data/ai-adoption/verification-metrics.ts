@@ -27,7 +27,7 @@ export const unitTestHistoryData: ITimeSeriesData = {
 	labelDates: ["2026-01-31", "2026-04-30", "2026-08-31", "2026-10-02"],
 	caption: `The inventory grew from ${first.unitTestFiles} files at the January checkpoint to ${last.unitTestFiles.toLocaleString("en-GB")} on 2 October. The April checkpoint had ${april.unitTestFiles} files.`,
 	methodology:
-		"Points are actual snapshots, including 12 September and 2 October, across a repository move. Lines connect checkpoints, not daily estimates. File counts are not individual tests, coverage or test quality.",
+		"Bars show actual snapshots, including 12 September and 2 October, across a repository move. File counts are not individual tests, coverage or test quality.",
 };
 
 export const flowHistoryData: ITimeSeriesData = {
@@ -44,5 +44,5 @@ export const flowHistoryData: ITimeSeriesData = {
 	labelDates: ["2026-01-31", "2026-04-30", "2026-05-31", "2026-10-02"],
 	caption: `The first four checkpoints held at ${first.uiFlowFiles} files. The May snapshot had ${may.uiFlowFiles}, and the October snapshot had ${last.uiFlowFiles}.`,
 	methodology:
-		"This inventory includes leaf flows, shared subflows, suite aggregates and other YAML files. It is not a count of distinct journeys, runnable tests or coverage on every platform. Lines connect actual checkpoints.",
+		"Bars show actual checkpoints. This inventory includes leaf flows, shared subflows, suite aggregates and other YAML files. It is not a count of distinct journeys, runnable tests or coverage on every platform.",
 };

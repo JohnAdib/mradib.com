@@ -11,5 +11,11 @@ export interface ArticleSectionData {
 		| "flows"
 		| "activity"
 		| "errors"
-		| "adoption";
+		| "adoption"
+		| "skills"
+		| "review"
+		| "ci"
+		| "platforms"
+		| "flow-composition"
+		| "design";
 }

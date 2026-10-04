@@ -5,7 +5,7 @@ import {
 } from "@/components/ai-adoption-article";
 import { ArticleLayout } from "@/components/article/layout";
 import { ArticleToc } from "@/components/toc/article-toc";
-import { articleSections } from "@/data/ai-adoption/sections";
+import { articleWordCount } from "@/data/ai-adoption/reading-word-count";
 import { articleAiAdoption as article } from "@/data/articles/ai-adoption";
 import { ogMetadata } from "@/lib/og-metadata";
 import coverImage from "../../../../public/og/ai-adoption.jpg";
@@ -18,10 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-	const wordCount = articleSections
-		.flatMap((section) => [...section.paragraphs, ...(section.bullets ?? [])])
-		.join(" ")
-		.split(/\s+/).length;
 	return (
 		<ArticleLayout
 			neutralAuthor
@@ -32,7 +28,7 @@ export default function Page() {
 			coverImage={coverImage}
 			datePublished={article.datePublished}
 			dateModified={article.dateModified}
-			readTimeMinutes={Math.ceil(wordCount / 220)}
+			readTimeMinutes={Math.ceil(articleWordCount / 220)}
 			lang="en-US"
 			breadcrumb={[
 				{ position: 1, name: "Home", item: "/", current: false },

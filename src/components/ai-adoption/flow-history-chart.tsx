@@ -1,6 +1,6 @@
 import { flowHistoryData } from "@/data/ai-adoption/metrics";
-import { TimelineChart } from "./timeline-chart";
+import { VerticalBarChart } from "./vertical-bar-chart";
 
 export function FlowHistoryChart() {
-	return <TimelineChart data={flowHistoryData} />;
+	return <VerticalBarChart data={flowHistoryData} snapshotDates />;
 }

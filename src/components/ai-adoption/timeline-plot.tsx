@@ -28,6 +28,7 @@ export function TimelinePlot({ data }: { data: ITimeSeriesData }) {
 						/>
 					))}
 					<polyline
+						data-chart-shape="line"
 						points={coordinates.map(({ x, y }) => `${x},${y}`).join(" ")}
 						fill="none"
 						strokeWidth="2.5"

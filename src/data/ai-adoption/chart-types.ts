@@ -4,14 +4,21 @@ export interface IChartObservation {
 	value: number;
 }
 
-export interface ITimeSeriesData {
+export interface IChartFigureData {
 	id: string;
 	title: string;
 	unit: string;
 	maximum: number;
-	observations: IChartObservation[];
 	caption: string;
 	methodology: string;
+}
+
+export interface ITimeSeriesData extends IChartFigureData {
+	observations: IChartObservation[];
 	axisDates?: string[];
 	labelDates?: string[];
+}
+
+export interface ICategoricalChartData extends IChartFigureData {
+	observations: { label: string; value: number }[];
 }

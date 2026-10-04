@@ -1,16 +1,20 @@
 import { errorWindowSummary } from "./metrics";
+import { reviewActivityData, reviewSamplePrs } from "./operational-metrics";
 import type { ArticleSectionData } from "./types";
 
 const earlierErrors = errorWindowSummary[0];
 const laterErrors = errorWindowSummary[1];
+const [aiReviews, otherReviews] = reviewActivityData.observations;
+const reviewCommentCount = aiReviews.value + otherReviews.value;
 
 export const feedbackSections: ArticleSectionData[] = [
 	{
 		id: "review-and-test-builds",
 		title: "AI review became another pass over a concrete change",
 		tocTitle: "Review and builds",
+		kind: "review",
 		paragraphs: [
-			"From 25 July, three AI reviewers read the development rules alongside human reviewers. In the source's sample of the last 30 merged PRs, they wrote 360 of 635 inline comments, about 57%. This is a sample from the broader repository, including work beyond the app. It measures review activity, not how many comments were correct, how many bugs were prevented or what share of implementation AI wrote.",
+			`From 25 July, three AI reviewers read the development rules alongside human reviewers. In the recorded sample of the last ${reviewSamplePrs} merged PRs, they wrote ${aiReviews.value} of ${reviewCommentCount} inline comments, about ${Math.round((aiReviews.value / reviewCommentCount) * 100)}%. The remaining ${otherReviews.value} came from other reviewers. This sample covers the broader repository, including work beyond the app. It measures review activity, not comment correctness, bugs prevented or the share of implementation AI wrote.`,
 			"The implementation agent evaluates each comment: inspect the code, reproduce the concern, change when justified and rerun the affected checks. A reviewer can reveal a missing failure case or misunderstand a deliberate choice. Replies need evidence; automatically accepting suggestions is not a quality gate.",
 			"The PR brings the requirement, implementation, test output, device captures and remaining limitations together. Two human approvals are required by the repository rules. This gives people a more concrete decision to make and a visible place to record it. The build workflow then extends assessment beyond the author: a Canary variant can install beside the main app, and TestFlight gives testers access on physical devices.",
 			"The Beta, Canary and Production workflows were established on 22 June, followed by weekday Beta delivery. The later setup produces an iOS Canary on merge and a fresh weekday Beta when the main branch has changed. Android test delivery has its own trigger and internal distribution path. These are inspectable builds for feedback; publishing a public store release remains a separate decision with its own steps.",
