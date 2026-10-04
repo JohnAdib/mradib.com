@@ -7,7 +7,7 @@ import {
 	unitTestHistoryData,
 } from "./metrics";
 import {
-	ciOutcomesData,
+	ciCoverageData,
 	designVerificationData,
 	flowCompositionData,
 	platformJobsData,
@@ -25,7 +25,7 @@ const charts = [
 	unitTestHistoryData,
 	flowHistoryData,
 	errorHistoryData,
-	ciOutcomesData,
+	ciCoverageData,
 	flowCompositionData,
 	platformJobsData,
 	designVerificationData,

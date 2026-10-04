@@ -7,6 +7,5 @@ export const verificationCheckpoints = [
 	{ date: "2026-06-30", unitTestFiles: 250, uiFlowFiles: 135 },
 	{ date: "2026-07-31", unitTestFiles: 395, uiFlowFiles: 136 },
 	{ date: "2026-08-31", unitTestFiles: 1040, uiFlowFiles: 147 },
-	{ date: "2026-09-12", unitTestFiles: 1364, uiFlowFiles: 162 },
-	{ date: "2026-10-02", unitTestFiles: 1686, uiFlowFiles: 232 },
+	{ date: "2026-09-30", unitTestFiles: 1669, uiFlowFiles: 225 },
 ];

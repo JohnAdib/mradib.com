@@ -1,8 +1,7 @@
 import { deviceSuiteSections } from "./device-suite-sections";
 import { verificationCheckpoints } from "./metrics";
 import {
-	ciMedianMinutes,
-	ciOutcomesData,
+	ciCoverageData,
 	designComponentTotal,
 	designDiffLimitPercent,
 	designVerificationData,
@@ -16,11 +15,7 @@ const july = verificationCheckpoints[6];
 const august = verificationCheckpoints[7];
 const september = verificationCheckpoints[8];
 const last = verificationCheckpoints[verificationCheckpoints.length - 1];
-const [successful, superseded, failed] = ciOutcomesData.observations;
-const ciRunCount = ciOutcomesData.observations.reduce(
-	(sum, point) => sum + point.value,
-	0,
-);
+const [lines, statements, branches, functions] = ciCoverageData.observations;
 const [designVerified, otherComponents] = designVerificationData.observations;
 
 export const verificationSections: ArticleSectionData[] = [
@@ -35,21 +30,21 @@ export const verificationSections: ArticleSectionData[] = [
 				.map((point) => point.unitTestFiles)
 				.join(
 					", ",
-				)} files. The following month-end snapshots were ${may.unitTestFiles} in May, ${june.unitTestFiles} in June, ${july.unitTestFiles} in July and ${august.unitTestFiles.toLocaleString("en-GB")} in August. The app reached ${september.unitTestFiles.toLocaleString("en-GB")} files on 12 September and ${last.unitTestFiles.toLocaleString("en-GB")} on 2 October. Compared with April, that final snapshot contains ${(last.unitTestFiles - april.unitTestFiles).toLocaleString("en-GB")} additional test files, about ${(last.unitTestFiles / april.unitTestFiles).toFixed(1)} times the earlier inventory.`,
-			"These are test files, not individual assertions or a coverage percentage. The 2 October inventory also contained 7,609 it() blocks and 225 parameterised it.each tables. A file can contain many cases, and splitting a file changes the inventory without increasing protection. I include the timeline because it makes the sustained investment visible; it needs to be read alongside the behaviours the tests exercise and the results of actually running them.",
+				)} files. The following month-end snapshots were ${may.unitTestFiles} in May, ${june.unitTestFiles} in June, ${july.unitTestFiles} in July and ${august.unitTestFiles.toLocaleString("en-GB")} in August. The September month-end snapshot contains ${september.unitTestFiles.toLocaleString("en-GB")} files. Compared with April, that final snapshot contains ${(last.unitTestFiles - april.unitTestFiles).toLocaleString("en-GB")} additional test files, about ${(last.unitTestFiles / april.unitTestFiles).toFixed(1)} times the earlier inventory.`,
+			"These are test files, not individual assertions or a coverage percentage. A file can contain many cases, and splitting a file changes the inventory without increasing protection. I include the timeline because it makes the sustained investment visible; it needs to be read alongside the behaviours the tests exercise and the results of actually running them.",
 			"I made tests part of the implementation contract. The agent uses Jest with jest-expo and a shared render helper that supplies providers and routing. The test setup has 35 recorded MSW GraphQL handlers shared with 106 Storybook stories, so tests and visible states use the same controlled responses. Business decisions that do not need rendering live in pure helpers. That gives the agent a practical way to test a failure case without booting the entire interface.",
 			"For a regression, I ask for a test that fails before the fix and passes after it. I also temporarily revert the correction to confirm that the specification fails for the original reason. In one review, Qodo caught two defects that earlier passes had missed; both new specifications failed when their fixes were reverted. That establishes protection more clearly than a count or a test that follows the implementation.",
 		],
 	},
 	{
 		id: "deterministic-checks",
-		title: "CI checks the change, and its cost became visible",
-		tocTitle: "Checks and CI cost",
+		title: "CI checks the change and reports what was exercised",
+		tocTitle: "CI and coverage",
 		kind: "ci",
 		paragraphs: [
 			"The PR check chain includes Biome, TypeScript, unit tests, coverage, Expo export and prebuild, plus checks for the device flows and release tooling. AI agents write implementation and tests; these CI commands remain deterministic. The agent can run the chain, interpret a failure and correct the code, but its explanation cannot establish that a build passed. I want the actual output from the actual revision.",
 			"Coverage needs an explicit scope. File counts describe an inventory, while a coverage report describes code exercised during a particular test run. Expectations for changed production code and inherited project-wide checks concern different scopes. A green global result cannot establish complete application coverage or prove that every changed line met the task's expectations. I review the changed behaviour and its relevant test results together.",
-			`Consolidating the app and shared packages made more context available to agents and removed a separate publishing cycle for a component change. I observed CI time move from about five to fifteen minutes; the last ${ciRunCount} app CI runs recorded on 3 October had a median of ${ciMedianMinutes} minutes. The snapshot classified ${successful.value} as successful, ${superseded.value} as superseded and ${failed.value} as failed. A superseded run is neither a failure nor a completed successful verification. Longer CI was a real cost to the feedback loop, making affected-only checks the next prerequisite.`,
+			`The last main-branch coverage run recorded in the original app repository during September ran 1,351 suites and 7,693 tests. It measured ${lines.value}% line coverage, ${statements.value}% statement coverage, ${branches.value}% branch coverage and ${functions.value}% function coverage. This is one run during September, not a month-end combined-repository measurement. Coverage reporting and a minimum threshold arrived in May, but there is no measured pre-May coverage baseline. The configured floor and the share of source files with adjacent tests are different measures, so I do not use either as an earlier coverage percentage.`,
 			"I also separated dispatch success from test success. GitHub Actions triggers the native work in EAS; a dispatch job can finish in seconds while the build and flows continue elsewhere. Fresh scheduled device builds tie the run to a known commit. Their results need to be visible where someone makes the merge or release decision.",
 		],
 	},
@@ -59,7 +54,7 @@ export const verificationSections: ArticleSectionData[] = [
 		tocTitle: "Device-flow history",
 		kind: "flows",
 		paragraphs: [
-			`The Maestro inventory stayed at ${april.uiFlowFiles} YAML files from January through April, grew to ${may.uiFlowFiles} in May, then reached ${june.uiFlowFiles} in June, ${july.uiFlowFiles} in July and ${august.uiFlowFiles} in August. It stood at ${september.uiFlowFiles} on 12 September and ${last.uiFlowFiles} on 2 October. The checkpoints show investment in reusable device checks over time; ${last.uiFlowFiles} files include several roles rather than ${last.uiFlowFiles} independent journeys.`,
+			`The Maestro inventory stayed at ${april.uiFlowFiles} YAML files from January through April, grew to ${may.uiFlowFiles} in May, then reached ${june.uiFlowFiles} in June, ${july.uiFlowFiles} in July and ${august.uiFlowFiles} in August. It reached ${september.uiFlowFiles} at the end of September. The checkpoints show investment in reusable device checks over time; ${last.uiFlowFiles} files include several roles rather than ${last.uiFlowFiles} independent journeys.`,
 			"The first EAS device workflow landed in May. On 18 June, the flows moved into Maestro Cloud with PR smoke and nightly execution. That was the important change from the earlier dormant folder: a test could now run alongside development and return a result. Making that useful required deliberate suite entrypoints, controlled setup and jobs that could finish within the device service's limits.",
 		],
 	},

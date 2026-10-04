@@ -12,7 +12,7 @@ import {
 	monthlyTicketData,
 } from "@/data/ai-adoption/metrics";
 import {
-	ciOutcomesData,
+	ciCoverageData,
 	designVerificationData,
 	flowCompositionData,
 	platformJobsData,
@@ -38,7 +38,7 @@ export function AiAdoptionSectionChart({
 	if (kind === "flows") return <FlowHistoryChart />;
 	if (kind === "errors") return <ErrorVolumeChart />;
 	if (kind === "loop") return <DevelopmentLoop />;
-	if (kind === "ci") return <CategoricalBarChart data={ciOutcomesData} />;
+	if (kind === "ci") return <CategoricalBarChart data={ciCoverageData} />;
 	if (kind === "review")
 		return <CategoricalBarChart data={reviewActivityData} />;
 	if (kind === "platforms")

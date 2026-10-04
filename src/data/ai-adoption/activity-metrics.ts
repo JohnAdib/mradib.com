@@ -8,14 +8,14 @@ export const monthlyActivityData: ITimeSeriesData = {
 	monthMarker: joiningMonthMarker,
 	title: "Merged pull requests",
 	unit: "Pull requests per month, 2026",
-	maximum: 180,
+	maximum: 250,
 	observations: monthlyPrHistory.filter(
-		(point) => point.date >= "2026-01-01" && point.date <= "2026-08-01",
+		(point) => point.date >= "2026-01-01" && point.date <= "2026-09-01",
 	),
 	caption:
-		"January to August 2026, one mobile application in the same repository.",
+		"January to September 2026. App and design-system PRs across both repositories.",
 	methodology:
-		"Merged PRs measure activity, not productivity, effort, quality, distinct features or turnaround. September is excluded because the application moved and the later repository has a broader scope.",
+		"Merged PRs measure activity, not productivity, effort, quality, distinct features or turnaround. From May, the series includes PRs touching the app or its design system in the later repository, alongside the original app repository. Unrelated web and infrastructure PRs are excluded.",
 };
 
 export const monthlyTicketData: ITimeSeriesData = {
@@ -23,10 +23,10 @@ export const monthlyTicketData: ITimeSeriesData = {
 	monthMarker: joiningMonthMarker,
 	title: "Tracked work",
 	unit: "Distinct tickets per month, 2026",
-	maximum: 180,
+	maximum: 250,
 	observations: monthlyTickets,
 	caption:
-		"January to August 2026, the same application. Tickets provide another view of work moving through the development process.",
+		"January to September 2026, app and design-system work across both repositories. Tickets provide another view of work moving through the development process.",
 	methodology:
 		"A ticket can cover a fix, maintenance or feature work, and can appear in more than one month. Monthly counts are not features shipped or a cross-period distinct total.",
 };
