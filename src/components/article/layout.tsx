@@ -27,6 +27,7 @@ export function ArticleLayout({
 	datePublished,
 	dateModified,
 	readTimeMinutes,
+	neutralAuthor,
 	faq,
 	breadcrumb,
 	nextPrev,
@@ -105,8 +106,7 @@ export function ArticleLayout({
 									title={`Published on ${datePublished}`}
 									className="flex items-center text-zinc-500 dark:text-zinc-400"
 								>
-									<span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-									<span className="mx-3">
+									<span>
 										{formatDateTime({ datetime: datePublished, locale: lang })}
 									</span>
 								</time>{" "}
@@ -131,6 +131,7 @@ export function ArticleLayout({
 					keywords={keywords}
 					datePublished={datePublished}
 					dateModified={dateModified}
+					neutralAuthor={neutralAuthor}
 				/>
 			</div>
 			<Faq list={faq} language={myLanguage} />

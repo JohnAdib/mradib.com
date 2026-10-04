@@ -1,4 +1,5 @@
 import { fundraisingKit } from "@/data/guides/fundraising-kit";
+import { articleAiAdoption } from "./ai-adoption";
 import type { IArticle } from "./article-interface";
 import { articleGithubAutolink } from "./github-autolink";
 import { articleResume } from "./resume";
@@ -7,6 +8,7 @@ import { articleResume } from "./resume";
 // kit first in kit order, then the older guides. Drives the sitemap and the
 // page list in llms.txt.
 export const articlesMeta: IArticle[] = [
+	articleAiAdoption,
 	...fundraisingKit.map((entry) => entry.article),
 	articleGithubAutolink,
 	articleResume,

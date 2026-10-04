@@ -4,6 +4,26 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+
+## 2026-10-04, AI adoption article leads with confidence
+
+John requested a comprehensive article before a meetup presentation. The
+story starts with slow development, regressions, lengthy QA, low confidence
+and requests waiting, then explains positive process improvements through
+AI adoption. The talk title remains undecided.
+
+The article uses general engineering lessons and an explicitly illustrative
+settings example. Aggregate counts and timings may be discussed, but company
+identities, staff history, private resource links and original screenshots
+remain excluded. Charts are recreated as native, accessible components with
+clear measurement scope. Recorded error events do not imply a crash rate or
+prove that AI caused a reliability improvement.
+
+The new writing root layout uses a neutral author biography and schema. The
+existing site design and other profile pages retain their conventions.
+John explicitly requested a PR, authorising the separate article branch to
+be pushed for review. Main-branch publication remains separate.
+
 ## 2026-09-30, the kit moves under /fundraising: paths, titles, dates
 
 John's verdict on the first URLs: application-answers made no sense as a

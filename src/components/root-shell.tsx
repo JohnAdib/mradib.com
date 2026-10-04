@@ -15,15 +15,17 @@ import { DetailsMotion } from "@/components/motion/details-motion";
 export function RootShell({
 	children,
 	className,
+	neutralAuthor = false,
 }: {
 	children: React.ReactNode;
 	className?: string;
+	neutralAuthor?: boolean;
 }) {
 	return (
 		<body className={clsx(fontEn.variable, fontDisplay.variable, className)}>
 			<Providers>{children}</Providers>
 			<DetailsMotion />
-			<PersonJsonLd />
+			<PersonJsonLd neutralAuthor={neutralAuthor} />
 			<WebSiteJsonLd />
 			<Analytics />
 		</body>
