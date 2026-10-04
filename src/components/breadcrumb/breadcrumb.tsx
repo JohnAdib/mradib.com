@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, HomeIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon, HomeIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import Link from "next/link";
 import { BreadcrumbJsonLD } from "./breadcrumb-json-ld";
@@ -10,7 +10,7 @@ export function Breadcrumb({ list }: IBreadcrumb) {
 	}
 
 	return (
-		<nav className="flex" aria-label="Breadcrumb">
+		<nav className="flex select-none" aria-label="Breadcrumb">
 			<ol className="flex items-center gap-2 md:gap-4">
 				<li>
 					<div>
@@ -30,8 +30,8 @@ export function Breadcrumb({ list }: IBreadcrumb) {
 				{list?.map((page) => (
 					<li key={page.name}>
 						<div className="flex items-center gap-2 md:gap-4">
-							<ChevronLeftIcon
-								className="h-5 w-5 shrink-0 text-slate-400"
+							<ChevronRightIcon
+								className="h-5 w-5 shrink-0 text-slate-400 rtl:rotate-180"
 								aria-hidden="true"
 							/>
 							<Link

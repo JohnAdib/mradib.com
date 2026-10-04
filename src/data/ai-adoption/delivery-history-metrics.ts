@@ -1,8 +1,10 @@
+import { joiningMonthMarker } from "./chart-annotations";
 import type { ITimeSeriesData } from "./chart-types";
 import { monthlyPrHistory } from "./monthly-pr-history";
 
 export const deliveryHistoryData: ITimeSeriesData = {
 	id: "delivery-history",
+	monthMarker: joiningMonthMarker,
 	title: "The longer delivery record",
 	unit: "Merged pull requests per month, July 2024 to August 2026",
 	maximum: 180,

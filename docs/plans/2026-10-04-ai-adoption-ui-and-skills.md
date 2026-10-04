@@ -37,3 +37,24 @@
   operational statuses. Keep employer data out of loaded browser code.
 - Verify the new route, canonical, article index, feed, sitemap and privacy
   output before updating the same PR.
+
+## Final publication pass
+
+- Keep the approved title and use /beyond-the-qa-bottleneck.
+- Mark April 2026 on histories that include the confirmed joining month.
+  Treat it as month-level context and retain the May process-change timing.
+- Fix breadcrumb chevrons by reading direction and disable text selection.
+- Reconcile useful public source material, retaining aggregate evidence while
+  excluding private, duplicated and unrelated records.
+- Check social images, canonical, sitemap/feed, privacy, responsive layouts,
+  animation, types, tests and production output before merge and publication.
+
+Verified on 4 October 2026: formatting, TypeScript, the production build,
+SEO and privacy checks, and 15 focused tests passed. The export contains
+the final route in the article index, sitemap, feed and llms.txt. The
+1200 by 630 sharing card and both page images load. English and Persian
+breadcrumbs follow reading direction and have user-select disabled.
+All seven widths passed in both themes, including five April markers.
+Viewport motion, reduced motion, no JavaScript and print retain complete
+chart data. The source audit found no material gap in the public story;
+private details and ambiguous or duplicate measurements remain excluded.

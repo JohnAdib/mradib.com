@@ -11,6 +11,13 @@ export interface IChartFigureData {
 	maximum: number;
 	caption: string;
 	methodology: string;
+	monthMarker?: IChartMonthMarker;
+}
+
+export interface IChartMonthMarker {
+	month: `${number}-${number}`;
+	label: string;
+	description: string;
 }
 
 export interface ITimeSeriesData extends IChartFigureData {

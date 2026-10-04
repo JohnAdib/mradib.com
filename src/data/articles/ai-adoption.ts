@@ -12,7 +12,7 @@ export const articleAiAdoption: IArticle = {
 	pageTitle: "Beyond the QA Bottleneck: AI Adoption",
 	pageDesc:
 		"John Adib's React Native case study: eight AI skills, monthly PR counts, test and UI-flow growth, device evidence and production feedback.",
-	pagePath: "/ai-qa",
+	pagePath: "/beyond-the-qa-bottleneck",
 	inLanguage: "en-GB",
 	keywords: [
 		"AI adoption",

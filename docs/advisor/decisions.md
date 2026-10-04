@@ -5,6 +5,19 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-04, the QA article gets joining context and its final route
+
+John approved "Beyond the QA Bottleneck" and requested a descriptive URL
+that follows the title. Use /beyond-the-qa-bottleneck. April 2026 is the
+confirmed joining month. Mark it on relevant histories with a labelled
+dashed line, without inventing a joining day or claiming causation. Keep
+the documented process changes from May distinct from this context.
+
+Breadcrumb arrows point right in English and left in Persian, following
+reading direction. Breadcrumb text is not selectable. Verify sharing
+images, sitemap, source coverage, privacy and all required checks before
+merging the article PR and checking the published page.
+
 ## 2026-10-04, the QA article gets a short title and a deeper privacy check
 
 John requested a catchy title, a short page path and another check that the

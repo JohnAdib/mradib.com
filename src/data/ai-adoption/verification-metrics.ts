@@ -1,3 +1,4 @@
+import { joiningMonthMarker } from "./chart-annotations";
 import type { ITimeSeriesData } from "./chart-types";
 import { verificationCheckpoints } from "./verification-checkpoints";
 
@@ -15,6 +16,7 @@ const last = verificationCheckpoints[verificationCheckpoints.length - 1];
 
 export const unitTestHistoryData: ITimeSeriesData = {
 	id: "test-growth",
+	monthMarker: joiningMonthMarker,
 	title: "Unit test files, January to October 2026",
 	unit: "Files in the same mobile application",
 	maximum: 1800,
@@ -32,6 +34,7 @@ export const unitTestHistoryData: ITimeSeriesData = {
 
 export const flowHistoryData: ITimeSeriesData = {
 	id: "flow-growth",
+	monthMarker: joiningMonthMarker,
 	title: "UI flow files, January to October 2026",
 	unit: "Maestro YAML files in the same application",
 	maximum: 250,

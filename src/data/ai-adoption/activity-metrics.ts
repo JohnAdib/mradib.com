@@ -1,9 +1,11 @@
+import { joiningMonthMarker } from "./chart-annotations";
 import type { ITimeSeriesData } from "./chart-types";
 import { monthlyPrHistory } from "./monthly-pr-history";
 import { monthlyTickets } from "./monthly-tickets";
 
 export const monthlyActivityData: ITimeSeriesData = {
 	id: "monthly-activity",
+	monthMarker: joiningMonthMarker,
 	title: "Merged pull requests",
 	unit: "Pull requests per month, 2026",
 	maximum: 180,
@@ -18,6 +20,7 @@ export const monthlyActivityData: ITimeSeriesData = {
 
 export const monthlyTicketData: ITimeSeriesData = {
 	id: "monthly-tickets",
+	monthMarker: joiningMonthMarker,
 	title: "Tracked work",
 	unit: "Distinct tickets per month, 2026",
 	maximum: 180,

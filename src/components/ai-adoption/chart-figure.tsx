@@ -32,6 +32,11 @@ export function ChartFigure({
 				<p className="text-xs leading-5 text-zinc-600 dark:text-zinc-400">
 					{data.methodology}
 				</p>
+				{data.monthMarker && (
+					<p className="text-xs leading-5 text-zinc-600 dark:text-zinc-400">
+						{data.monthMarker.description}
+					</p>
+				)}
 			</figcaption>
 		</figure>
 	);

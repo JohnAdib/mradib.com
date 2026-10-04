@@ -43,6 +43,8 @@ const readingText = [
 		chart.unit,
 		chart.caption,
 		chart.methodology,
+		chart.monthMarker?.label ?? "",
+		chart.monthMarker?.description ?? "",
 	]),
 	...aiDevelopmentSkills.flatMap((skill) => [
 		skill.name,
