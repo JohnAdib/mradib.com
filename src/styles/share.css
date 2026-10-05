@@ -32,6 +32,21 @@ body:has(.share-page) {
 	min-height: 0;
 	width: 100%;
 	padding: 0;
+	background: #edf3f9;
+	color: #f6f7fa;
+}
+.share-backdrop {
+	position: fixed;
+	inset: -48px;
+	z-index: -1;
+	pointer-events: none;
+	transition: transform 450ms ease-out;
+}
+.share-backdrop::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	animation: share-background-drift 24s ease-in-out infinite alternate;
 	background:
 		radial-gradient(ellipse at 15% 15%, #dcecff 0, transparent 58%),
 		radial-gradient(ellipse at 90% 85%, #b9cfe6 0, transparent 62%), #edf3f9;
@@ -39,17 +54,17 @@ body:has(.share-page) {
 }
 .share-card {
 	position: relative;
-	/* CSS millimetres are stable across viewport sizes, not calibrated screen units. */
-	width: 53.98mm;
-	height: 85.6mm;
+	/* Fixed screen size with ISO ID-1 proportions; not a physical-screen measurement. */
+	width: 320px;
+	height: calc(320px * 85.6 / 53.98);
 	aspect-ratio: 53.98 / 85.6;
 	flex-shrink: 0;
 	min-height: 0;
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr);
-	padding: 20px 22px;
+	padding: 32px 34px;
 	border: 1px solid #ffffff3b;
-	border-radius: 14px;
+	border-radius: 22px;
 	background: linear-gradient(145deg, #263e59e8, #101e30ed);
 	-webkit-backdrop-filter: blur(28px) saturate(150%);
 	backdrop-filter: blur(28px) saturate(150%);
@@ -76,7 +91,7 @@ body:has(.share-page) {
 	text-align: center;
 }
 .share-portrait {
-	width: 68px;
+	width: 104px;
 	height: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;
@@ -87,14 +102,14 @@ body:has(.share-page) {
 	-webkit-user-drag: none;
 }
 .share-identity h1 {
-	font: 400 32px / 1.1 var(--font-display);
-	margin: 10px 0 0;
+	font: 400 46px / 1.1 var(--font-display);
+	margin: 14px 0 0;
 	letter-spacing: -0.025em;
 }
 .share-views {
 	display: grid;
 	min-height: 0;
-	margin-top: 10px;
+	margin-top: 16px;
 }
 .share-view {
 	grid-area: 1 / 1;
@@ -135,14 +150,14 @@ body:has(.share-page) {
 	align-items: center;
 	justify-content: center;
 	gap: 6px;
-	min-height: 32px;
+	min-height: 40px;
 	padding: 4px 8px;
 	border: 1px solid #ffffff24;
 	border-radius: 8px;
 	background: linear-gradient(145deg, #ffffff12, #ffffff04);
 	box-shadow: inset 0 1px 0 #ffffff10;
 	color: #e7ebf2;
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	font-weight: 500;
 }
 .share-social svg {
@@ -156,12 +171,12 @@ body:has(.share-page) {
 	display: flex;
 	justify-content: center;
 	gap: 6px;
-	margin: 10px -6px 0;
-	font-size: 0.6875rem;
+	margin: 16px -6px 0;
+	font-size: 0.8125rem;
 }
 .share-pages a {
 	display: grid;
-	min-height: 32px;
+	min-height: 40px;
 	padding: 0 6px;
 	place-items: center;
 	border-radius: 3px;
@@ -173,11 +188,12 @@ body:has(.share-page) {
 .share-email {
 	display: inline-block;
 	padding: 6px 0;
-	font-size: 0.625rem;
+	font-size: 0.75rem;
 	color: #aab6c7;
 }
 .share-trigger {
 	position: absolute;
+	z-index: 1;
 	top: max(16px, env(safe-area-inset-top));
 	right: max(20px, env(safe-area-inset-right));
 	display: grid;
@@ -199,7 +215,7 @@ body:has(.share-page) {
 	outline-offset: 4px;
 }
 .share-qr-image {
-	width: 96px;
+	width: 160px;
 	height: auto;
 	background: white;
 	border-radius: 10px;
@@ -210,7 +226,7 @@ body:has(.share-page) {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 32px;
+	min-height: 40px;
 	margin-top: 2px;
 	padding: 0 12px;
 	font-size: 0.8125rem;
@@ -219,14 +235,17 @@ body:has(.share-page) {
 	color: #f6f7fa;
 }
 .share-status {
-	min-height: 28px;
-	max-width: 172px;
-	font-size: 0.625rem;
-	line-height: 14px;
+	min-height: 32px;
+	max-width: 240px;
+	font-size: 0.75rem;
+	line-height: 16px;
 	text-align: center;
 	color: #c2d1e2;
 }
 .dark .share-page {
+	background: #0b1422;
+}
+.dark .share-backdrop::before {
 	background:
 		radial-gradient(ellipse at 20% 10%, #223f61 0, transparent 58%),
 		radial-gradient(ellipse at 95% 95%, #1e3854 0, transparent 62%), #0b1422;
@@ -258,8 +277,81 @@ body:has(.share-page) {
 		background-color: #ffffff12;
 	}
 }
+/* Preserve the fixed frame on short screens while keeping its controls visible. */
+@media (max-height: 560px) {
+	.share-card {
+		padding: 16px 34px;
+		grid-template-rows: auto auto;
+		align-content: start;
+	}
+	.share-portrait {
+		width: 68px;
+	}
+	.share-identity h1 {
+		font-size: 32px;
+		margin-top: 10px;
+	}
+	.share-views {
+		margin-top: 10px;
+	}
+	.share-social,
+	.share-pages a,
+	.share-address {
+		min-height: 32px;
+	}
+	.share-social {
+		font-size: 0.75rem;
+	}
+	.share-pages {
+		margin-top: 10px;
+		font-size: 0.6875rem;
+	}
+	.share-email,
+	.share-status {
+		font-size: 0.625rem;
+	}
+	.share-qr-image {
+		width: 96px;
+	}
+	.share-status {
+		min-height: 28px;
+		line-height: 14px;
+	}
+}
+@keyframes share-background-drift {
+	from {
+		transform: translate3d(-12px, -8px, 0) scale(1.03);
+	}
+	to {
+		transform: translate3d(12px, 10px, 0) scale(1.08);
+	}
+}
+.share-backdrop[data-sensor="true"]::before,
+.share-backdrop[data-paused="true"]::before {
+	animation-play-state: paused;
+}
+.share-motion {
+	width: max-content;
+	height: max-content;
+	transform: perspective(900px) rotateX(var(--sensor-x, 0deg))
+		rotateY(var(--sensor-y, 0deg));
+	transition: transform 450ms ease-out;
+}
+.share-motion[data-sharing="true"] {
+	transform: none;
+}
 @media (prefers-reduced-motion: reduce) {
-	.share-page * {
+	.share-backdrop::before {
+		animation: none;
+	}
+	.share-page .share-motion,
+	.share-page .share-backdrop,
+	.share-page .share-view,
+	.share-page :is(a, button) {
 		transition: none;
+	}
+	.share-motion,
+	.share-backdrop {
+		transform: none;
 	}
 }

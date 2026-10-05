@@ -5,6 +5,27 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Subtle background and phone motion
+
+John requested sensor-driven movement of the background and card, with ambient
+background movement as the fallback. Use a slow 24-second alternating gradient
+drift. On secure touch devices that allow orientation events without a permission
+prompt, move the background up to 14px and tilt the card up to two degrees from
+its starting position. Permission-gated or unavailable sensors keep ambient drift;
+no extra controls or prompts are introduced. Keep QR sharing still for scanning,
+respect reduced motion, pause hidden tabs and clean up all sensor listeners.
+
+## 2026-10-05: Enlarge the fixed profile card
+
+John requested an actual increase after finding the CSS-millimetre rendering too
+small. Use a fixed 320px portrait width and ISO ID-1 aspect ratio, about 57% larger
+than the previous 204px-wide rendering. Enlarge portrait and typography while
+preserving generous side padding and compact neutral social controls. Keep both
+views the same size, with no calibration or automatic frame shrinking. This is a
+larger screen rendering, not a verified physical-size match on every display.
+Short viewports retain the frame size and use compact content so controls remain
+visible while the bottom of the frame can extend past the viewport.
+
 ## 2026-10-05: Remove all visitor-facing card calibration
 
 John explicitly rejected the sizing feature. Remove its trigger, settings panel,

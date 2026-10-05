@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import { chromium } from "playwright-core";
+import { verifyShareMotion } from "./share-motion-check.mjs";
 import { verifyMobileScrollLock } from "./share-scroll-check.mjs";
 import { verifyTilt } from "./share-tilt-check.mjs";
 
@@ -80,10 +81,10 @@ for (const theme of ["light", "dark"]) {
 		if (Math.abs(cardBefore.width / cardBefore.height - expectedRatio) > 0.002)
 			throw new Error(`Card proportions changed at ${width}x${height}`);
 		if (
-			Math.abs(cardBefore.width - (53.98 * 96) / 25.4) > 0.05 ||
-			Math.abs(cardBefore.height - (85.6 * 96) / 25.4) > 0.05
+			Math.abs(cardBefore.width - 320) > 0.05 ||
+			Math.abs(cardBefore.height - (320 * 85.6) / 53.98) > 0.05
 		)
-			throw new Error(`Physical CSS dimensions changed at ${width}x${height}`);
+			throw new Error(`Fixed card dimensions changed at ${width}x${height}`);
 		const identityBefore = await page.locator(".share-identity").boundingBox();
 		await page
 			.getByRole("button", { name: "Share profile", exact: true })
@@ -174,6 +175,7 @@ if (
 await context.close();
 await verifyMobileScrollLock(browser, base);
 await verifyTilt(browser, base);
+await verifyShareMotion(browser, base);
 await browser.close();
 await fs.writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
 console.log(
