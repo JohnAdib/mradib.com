@@ -15,6 +15,8 @@ Discussion start times are references into the recording, not chapter ranges. Th
 
 ## Excerpts
 
+- Engineering management, 05:51 to 06:18: transcript says the move toward a product engineering mindset is "also reshaping the engineering manager role". Condensed excerpt: "Moving toward a product engineering mindset is also reshaping the engineering manager's role."
+
 - Product engineering, 20:39: "We need to think differently." Verbatim transcript excerpt.
 - Ownership, 22:02: transcript discusses "measuring the delivery, the success of the feature or bug, whatever you provide is your responsibility now". Wording supplied and approved by John: "As a product engineer, measuring the success of the feature you deliver is your responsibility now."
 - Hands-on leadership, 12:56: transcript discusses "as an EM, you should be able to understand what's going on" and reading "posts or updates" being insufficient. Edited for clarity on the page: "As an engineering manager, you should understand what is going on. Reading posts or updates is not enough."

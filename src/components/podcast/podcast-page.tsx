@@ -25,9 +25,6 @@ export function PodcastPage() {
 				]}
 			/>
 			<PodcastHero />
-			<p className="mt-10 max-w-3xl text-sm leading-7 text-zinc-500 dark:text-zinc-400">
-				{episode.readingNote}
-			</p>
 			<div
 				id="conversation"
 				className="mt-12 grid scroll-mt-24 gap-12 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-14"

@@ -1107,3 +1107,8 @@ John requested chronological topic order, a link from Joe Bignell's name to http
 ## 2026-10-05: Podcast card navigation
 
 John requested the entire podcast card on /talks link to its internal article. Use one accessible link around the card, with a visual call to action inside rather than a nested link. Spotify listening remains available from the article.
+
+
+## 2026-10-05: Podcast introduction and opening quote
+
+John requested a pull quote for the first, engineering-management topic, explicit June 2026 context, and a personal joke about hoping not to laugh at these predictions in a couple of years. Remove the explanatory paragraph describing the topic order and timestamps; he found it artificial.

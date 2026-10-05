@@ -9,6 +9,9 @@ export const leadershipChapters: PodcastChapter[] = [
 			"As engineers take on more product responsibility, the engineering manager's role changes with them. The familiar structure of a manager overseeing a group of software engineers does not answer every question about how to lead a team of product engineers. We are bringing responsibilities together that were often treated separately.",
 			"I see this as a learning process for managers, engineers, and the wider business. We have to understand where people need support, how decisions will be made, and what ownership means in practice. I spoke about this as a transition we are working through, rather than a finished model with every answer already in place.",
 		],
+		quote: {
+			text: "Moving toward a product engineering mindset is also reshaping the engineering manager's role.",
+		},
 	},
 	{
 		id: "hands-on",
