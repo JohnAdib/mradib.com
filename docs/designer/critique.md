@@ -158,3 +158,19 @@ sensor and pointer tilt for stable scanning. Desktop tilt and mobile scroll lock
 still pass. Build, types, Biome and SEO pass with existing unrelated warnings.
 Screenshots: `/tmp/atsign-motion-qa` and `/tmp/atsign-motion-matrix.png`.
 Real sensor hardware has not been tested on a physical phone.
+
+## 2026-10-05: Visible ambient movement and identity hierarchy
+
+Reviewed light and dark screenshots at 375, 430 and 1440px and the QR state.
+The larger portrait and name lead the card; links sit lower without changing
+card dimensions. All 24 viewport/theme cases pass, including short landscapes,
+sharing, focus, scroll lock, sensor fallback and reduced motion. The sensor
+regression check now asserts that ambient drift continues during sensor input.
+A controlled mobile render comparing animation times zero and four seconds
+measured mean background RGB-channel changes of 2.34 (light) and 3.31 (dark),
+versus 0.27 for the former light animation. Screenshots confirm visible lighting
+travel without a grain texture. Build, types, Biome and SEO checks pass with
+existing unrelated warnings. Evidence: `/tmp/atsign-visible-motion-qa`,
+`/tmp/atsign-visible-motion-matrix.png` and
+`/tmp/atsign-visible-motion-comparison.png`. Physical phone sensors remain
+unverified; sensor behavior is covered by browser simulation.

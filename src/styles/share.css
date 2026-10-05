@@ -37,7 +37,7 @@ body:has(.share-page) {
 }
 .share-backdrop {
 	position: fixed;
-	inset: -48px;
+	inset: -20%;
 	z-index: -1;
 	pointer-events: none;
 	transition: transform 450ms ease-out;
@@ -46,10 +46,11 @@ body:has(.share-page) {
 	content: "";
 	position: absolute;
 	inset: 0;
-	animation: share-background-drift 24s ease-in-out infinite alternate;
+	animation: share-background-drift 10s ease-in-out infinite alternate;
 	background:
-		radial-gradient(ellipse at 15% 15%, #dcecff 0, transparent 58%),
-		radial-gradient(ellipse at 90% 85%, #b9cfe6 0, transparent 62%), #edf3f9;
+		radial-gradient(ellipse 55% 45% at 15% 20%, #b8d5f5 0, transparent 75%),
+		radial-gradient(ellipse 55% 50% at 85% 75%, #8fafdb 0, transparent 75%),
+		#edf3f9;
 	color: #f6f7fa;
 }
 .share-card {
@@ -91,7 +92,7 @@ body:has(.share-page) {
 	text-align: center;
 }
 .share-portrait {
-	width: 104px;
+	width: 128px;
 	height: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;
@@ -102,7 +103,7 @@ body:has(.share-page) {
 	-webkit-user-drag: none;
 }
 .share-identity h1 {
-	font: 400 46px / 1.1 var(--font-display);
+	font: 400 50px / 1.1 var(--font-display);
 	margin: 14px 0 0;
 	letter-spacing: -0.025em;
 }
@@ -113,7 +114,7 @@ body:has(.share-page) {
 }
 .share-view {
 	grid-area: 1 / 1;
-	align-self: center;
+	align-self: end;
 	min-width: 0;
 	transition:
 		opacity 260ms ease,
@@ -215,7 +216,7 @@ body:has(.share-page) {
 	outline-offset: 4px;
 }
 .share-qr-image {
-	width: 160px;
+	width: 144px;
 	height: auto;
 	background: white;
 	border-radius: 10px;
@@ -247,8 +248,9 @@ body:has(.share-page) {
 }
 .dark .share-backdrop::before {
 	background:
-		radial-gradient(ellipse at 20% 10%, #223f61 0, transparent 58%),
-		radial-gradient(ellipse at 95% 95%, #1e3854 0, transparent 62%), #0b1422;
+		radial-gradient(ellipse 55% 45% at 15% 20%, #315d87 0, transparent 75%),
+		radial-gradient(ellipse 55% 50% at 85% 75%, #264968 0, transparent 75%),
+		#0b1422;
 }
 .dark .share-card {
 	background: linear-gradient(145deg, #314b6666, #15233899);
@@ -285,10 +287,10 @@ body:has(.share-page) {
 		align-content: start;
 	}
 	.share-portrait {
-		width: 68px;
+		width: 84px;
 	}
 	.share-identity h1 {
-		font-size: 32px;
+		font-size: 36px;
 		margin-top: 10px;
 	}
 	.share-views {
@@ -320,13 +322,12 @@ body:has(.share-page) {
 }
 @keyframes share-background-drift {
 	from {
-		transform: translate3d(-12px, -8px, 0) scale(1.03);
+		transform: translate3d(-7%, -5%, 0) scale(1.03);
 	}
 	to {
-		transform: translate3d(12px, 10px, 0) scale(1.08);
+		transform: translate3d(7%, 6%, 0) scale(1.08);
 	}
 }
-.share-backdrop[data-sensor="true"]::before,
 .share-backdrop[data-paused="true"]::before {
 	animation-play-state: paused;
 }
