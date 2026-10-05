@@ -66,6 +66,7 @@ export interface ITalk {
 }
 
 export interface IPodcastAppearance {
+	path?: string;
 	show: string;
 	title: string;
 	url: string;

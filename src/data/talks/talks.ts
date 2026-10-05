@@ -1,4 +1,5 @@
-import { urlGitNation, urlPodcastSpotify } from "@/data/profile";
+import { podcastEpisode } from "@/data/podcast/episode";
+import { urlGitNation } from "@/data/profile";
 import { qaBottleneckTalk } from "./qa-bottleneck-talk";
 import { talkDescriptions } from "./talk-descriptions";
 import type { IPodcastAppearance, ITalk } from "./talk-interface";
@@ -133,13 +134,4 @@ export const talks: ITalk[] = [
 	},
 ];
 
-export const podcastAppearances: IPodcastAppearance[] = [
-	{
-		show: "Joe's Room",
-		title: "AI, Ownership, and the Future of Engineering",
-		url: urlPodcastSpotify,
-		duration: "41 min",
-		summary:
-			"A conversation about AI's impact on engineering productivity, the ownership mindset, and how AI changes hiring and team culture.",
-	},
-];
+export const podcastAppearances: IPodcastAppearance[] = [podcastEpisode];
