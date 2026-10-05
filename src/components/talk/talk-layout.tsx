@@ -62,7 +62,11 @@ export function TalkLayout({
 
 				{talk.slidesPdf && (
 					<div className="mt-8">
-						<TalkPdfPreview href={talk.slidesPdf} previewImage={talk.image} />
+						<TalkPdfPreview
+							href={talk.slidesPdf}
+							previewImage={talk.image}
+							title={talk.title}
+						/>
 					</div>
 				)}
 

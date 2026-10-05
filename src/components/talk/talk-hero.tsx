@@ -54,7 +54,7 @@ function VideoHeader({ talk, videoSrc }: { talk: ITalk; videoSrc: string }) {
 	);
 }
 
-/** Header (plain or video-backed), then facts, then the summary. Facts sit before the summary so where/when reads first. */
+/** Header, then event facts, then the description or short summary. */
 export function TalkHero({ talk }: { talk: ITalk }) {
 	return (
 		<>
@@ -66,9 +66,13 @@ export function TalkHero({ talk }: { talk: ITalk }) {
 			<div className="mt-6">
 				<TalkFacts talk={talk} />
 			</div>
-			<p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-				{talk.summary}
-			</p>
+			<div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+				{(talk.description?.length ? talk.description : [talk.summary]).map(
+					(paragraph) => (
+						<p key={paragraph}>{paragraph}</p>
+					),
+				)}
+			</div>
 		</>
 	);
 }

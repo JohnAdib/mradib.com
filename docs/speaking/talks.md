@@ -60,3 +60,38 @@ Each talk has its own page at the root URL. Talks are separate from articles.
 - Public deck: /talks/beyond-the-qa-bottleneck.pdf
 - Editable source: resources/talks/beyond-the-qa-bottleneck.pptx, excluded from the static site.
 - Source: John’s reviewed 32-slide deck, revision 27, 5 October 2026.
+
+## Slide sources for page descriptions
+
+Reviewed 5 October 2026. Descriptions in src/data/talks/talk-descriptions.ts
+summarise the published PDFs, not a recording or transcript. Page numbers below
+refer to PDF pages. Keep the original decks and their public URLs intact.
+
+- Guardrails, 2026-04-29 PDF: pages 14 to 19 trace the Slack, Linear, agent,
+  review, and deployment workflow; pages 22 to 30 explain compounding patterns;
+  pages 31 to 56 cover instructions, context, types, lint, formatting, schemas,
+  and tests, with gradual Biome adoption and a rising test coverage floor.
+- Enterprise dashboard, 2026-01-18 PDF: pages 3 to 6 describe the three-day
+  build, AI workflow, shared rules, and 72 decision records; pages 7 to 17 cover
+  the monorepo, Next.js, Hono, Cloudflare, Better Auth, scoped permissions,
+  Drizzle, and deployment; pages 19 to 21 explain the lessons. Summaries avoid
+  internal operational categories and do not imply automated tests were already
+  implemented (page 17 explicitly says they were not).
+- AI-first architecture, 2025-10-23 PDF: pages 2 to 13 describe AI entering the
+  development workflow and amplifying existing structure; pages 15 to 20 cover
+  single responsibility and separation of concerns; pages 22 to 27 cover lint,
+  tests, naming, patterns, and documentation for humans and AI.
+- Cloudflare, 2025-09-24 PDF: pages 7 to 11 describe scattered deployments,
+  domains, and security gaps; pages 13 to 24 explain CDN, WAF, authentication,
+  authorisation, SSO, one domain, and Zero Trust; pages 26 to 30 describe login,
+  access costs, Cloud Run domain constraints, and end-to-end testing trade-offs.
+  Keep these framed as experiences from that implementation, not current vendor
+  pricing or support claims.
+- Design systems, 2025-05-03 PDF: pages 6 to 18 describe a shared design
+  language, visual design, interaction, behaviour, and ownership; pages 20 to 38
+  explain separation of concerns and seven practical tips, including the log
+  viewer example on pages 24 to 29. The PDF title slide confirms 3 July 2025;
+  the older filename is retained to preserve links.
+
+Preview images represent page 1 of each PDF. The design systems page previously
+used an event poster; replace its preview with the actual title slide.
