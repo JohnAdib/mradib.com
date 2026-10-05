@@ -22,18 +22,23 @@ export interface ITalk {
 	/** Root URL of this talk's own page. Omit for an entry with no page, e.g. a panel. */
 	path?: string;
 	title: string;
+	subtitle?: string;
 	/** Defaults to a talk when unset. */
 	format?: TalkFormat;
+	/** Upcoming talks are not counted as past appearances. */
+	status?: "upcoming" | "delivered";
+	/** Page update date, independent of the event date. */
+	pageUpdated?: string;
 	/** Event or series name, e.g. "AI Coding Summit 2025". */
-	event: string;
+	event: string | null;
 	/** Community or company that ran it. Drives the logo, e.g. "GitNation". */
-	organizer: string;
+	organizer: string | null;
 	/** Company that hosted the venue, e.g. "NewDay", "Figma". */
 	host?: string;
-	venue?: string;
-	city: string;
+	venue?: string | null;
+	city: string | null;
 	/** ISO date (YYYY-MM-DD) the talk was given. */
-	date: string;
+	date: string | null;
 	audience?: string;
 	summary: string;
 	/** Paragraphs for the talk page, grounded in the slides. Summary stays concise for metadata. */
@@ -45,6 +50,8 @@ export interface ITalk {
 	/** Ambient background video behind the hero header. Always muted and looped. Path under /talks, or a full URL. */
 	video?: string;
 	slidesPdf?: string;
+	/** Use the slide cover for social sharing, cropped to 1200 by 630. */
+	shareSlideCover?: boolean;
 	/** The specific event page. */
 	eventUrl?: string;
 	/** The provider's reference for the talk, e.g. a GitNation profile. */

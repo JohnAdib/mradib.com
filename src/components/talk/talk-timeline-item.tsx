@@ -16,7 +16,7 @@ function placeOf(talk: ITalk): string {
 	if (talk.venue && (!talk.host || !talk.venue.includes(talk.host))) {
 		return talk.venue;
 	}
-	return talk.city;
+	return talk.city ?? "Venue TBC";
 }
 
 export function TalkTimelineItem({
@@ -35,10 +35,10 @@ export function TalkTimelineItem({
 						{talk.event}
 					</p>
 					<time
-						dateTime={talk.date}
+						dateTime={talk.date ?? undefined}
 						className="flex-none text-xs text-zinc-400 dark:text-zinc-500"
 					>
-						{shortDate(talk.date)}
+						{talk.date ? shortDate(talk.date) : "Date TBC"}
 					</time>
 				</div>
 				<h3 className="mt-1 text-[15px] font-semibold text-zinc-800 transition group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-400">

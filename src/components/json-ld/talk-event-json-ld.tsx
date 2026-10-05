@@ -5,7 +5,9 @@ import { profile } from "@/data/profile";
 import type { ITalk } from "@/data/talks/talk-interface";
 import { homepageUrl } from "@/lib/constants/url";
 
-export function TalkEventJsonLd({ talk }: { talk: ITalk }): JSX.Element {
+export function TalkEventJsonLd({ talk }: { talk: ITalk }): JSX.Element | null {
+	// An undated draft is not a scheduled Event. Never invent event facts.
+	if (!talk.date || !talk.event || !talk.city) return null;
 	const isOnline = talk.city === "Online";
 
 	const jsonLd: WithContext<Event> = {

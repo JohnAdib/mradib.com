@@ -50,6 +50,17 @@ Each talk has its own page at the root URL. Talks are separate from articles.
 
 - GitNation: https://gitnation.com/person/mradib
 
+## Beyond the QA Bottleneck, upcoming
+
+- Title: Beyond the QA Bottleneck
+- Status: upcoming, slides remain a work in progress.
+- Event, organizer, venue, city and date: unconfirmed, stored as null.
+- Topic: John’s story of adopting AI in React Native engineering, from regressions and slow verification to reusable skills, tests, CI, device checks, AI review, Sentry feedback and delivery.
+- Page: /beyond-the-qa-bottleneck-talk
+- Public deck: /talks/beyond-the-qa-bottleneck.pdf
+- Editable source: resources/talks/beyond-the-qa-bottleneck.pptx, excluded from the static site.
+- Source: John’s reviewed 32-slide deck, revision 27, 5 October 2026.
+
 ## Slide sources for page descriptions
 
 Reviewed 5 October 2026. Descriptions in src/data/talks/talk-descriptions.ts

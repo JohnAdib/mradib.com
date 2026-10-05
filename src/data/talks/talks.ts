@@ -1,9 +1,11 @@
 import { urlGitNation, urlPodcastSpotify } from "@/data/profile";
+import { qaBottleneckTalk } from "./qa-bottleneck-talk";
 import { talkDescriptions } from "./talk-descriptions";
 import type { IPodcastAppearance, ITalk } from "./talk-interface";
 
 // newest first, drives /talks, the talk pages, the sitemap, and llms.txt
 export const talks: ITalk[] = [
+	qaBottleneckTalk,
 	{
 		slug: "compound-effect-guardrails",
 		description: talkDescriptions["compound-effect-guardrails"],

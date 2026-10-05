@@ -1082,3 +1082,11 @@ the footer, and mentorship remains a channel tile on /contact. The CV at
 https://resume.mradib.com (urlSocial.resume) opens in a new tab from three
 places: the About closing (already existed), a footer "CV ↗" link, and a
 "My CV" tile on /contact. It never enters the header.
+
+## 2026-10-05: Upcoming talk with unconfirmed event details
+
+John requested a directly accessible page for Beyond the QA Bottleneck before event details are finalized. Use an Upcoming talks section, keep unknown details null and display TBC. Retain the PPTX outside public assets and expose only the PDF download. Keep the existing article URL separate.
+
+## 2026-10-05: One visual for the QA talk cover
+
+John chose the dark social-card design with soft teal light for the opening slide as well. Use the slide cover for the page preview and social image, with a social crop. Keep the subtitle “Building confidence in React Native with AI”. No TBC wording in the artwork; uncertainty stays in the page details.

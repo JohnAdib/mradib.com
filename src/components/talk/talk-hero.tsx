@@ -19,7 +19,9 @@ function PlainHeader({ talk }: { talk: ITalk }) {
 			<TalkLogo talk={talk} className="h-20 w-20" />
 			<div className="min-w-0">
 				<p className="text-xs font-medium tracking-wide text-zinc-600 uppercase dark:text-zinc-400">
-					{kindOf(talk)} · {talk.event}
+					{talk.status === "upcoming"
+						? "Upcoming talk"
+						: `${kindOf(talk)} · ${talk.event}`}
 				</p>
 				<h1 className="mt-2 text-3xl font-bold tracking-tight text-balance text-zinc-800 sm:text-4xl dark:text-zinc-100">
 					{talk.title}
@@ -40,7 +42,9 @@ function VideoHeader({ talk, videoSrc }: { talk: ITalk; videoSrc: string }) {
 			<div className="relative">
 				<TalkLogo talk={talk} className="h-14 w-14 ring-2 ring-white/20" />
 				<p className="mt-4 text-xs font-medium tracking-wide text-white/70 uppercase">
-					{kindOf(talk)} · {talk.event}
+					{talk.status === "upcoming"
+						? "Upcoming talk"
+						: `${kindOf(talk)} · ${talk.event}`}
 				</p>
 				<h1 className="mt-2 text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
 					{talk.title}

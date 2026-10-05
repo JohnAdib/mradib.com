@@ -26,6 +26,8 @@ export function sectionKeyFacts(): string {
 			`- Award: ${award.name} (${award.issuer}, ${award.date}). ${award.summary}`,
 	);
 	const talkLines = talks.map((talk) => {
+		if (talk.status === "upcoming")
+			return `- Upcoming talk: "${talk.title}". Event, venue and date TBC. Slides are a work in progress.`;
 		const venue = talk.venue ? ` at ${talk.venue}` : "";
 		const audience = talk.audience ? `, ${talk.audience}` : "";
 		return `- Talk: "${talk.title}" at ${talk.event}${venue} on ${talk.date}${audience}.`;
