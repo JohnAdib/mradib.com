@@ -5,6 +5,12 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Plain text hover for card navigation
+
+John rejected the circular hover treatment on About, Talks and Website.
+Remove the pill background and use only a smooth text-colour change on hover.
+Keep the link hit areas and a clear, slightly rounded keyboard focus outline.
+
 ## 2026-10-05: Put identity ahead of social buttons on the at-sign card
 
 John requested smaller social buttons, wider card-side padding, a larger portrait

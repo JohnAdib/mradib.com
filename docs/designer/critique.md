@@ -116,3 +116,11 @@ Adjusted navigation gaps and QR sizing keep both panels within the same fixed
 frame. Calibration, persistence, sharing, scroll lock and tilt checks pass.
 Production build, TypeScript, Biome and SEO checks pass with existing unrelated
 warnings. Evidence: `/tmp/atsign-spacing-qa` and `/tmp/atsign-spacing-matrix.png`.
+
+## 2026-10-05: Remove navigation hover pills
+
+Verified About, Talks and Website at 375, 430 and 1440px in both themes. Hover
+backgrounds stay transparent and text transitions to white. The link hit areas
+remain unchanged, with a small corner radius only for keyboard focus. Production
+build, type checking, Biome and SEO checks passed with existing unrelated warnings.
+Screenshots reviewed: `/tmp/atsign-hover-qa` and `/tmp/atsign-hover-matrix.png`.
