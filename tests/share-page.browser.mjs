@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import { chromium } from "playwright-core";
+import { verifyShareBackground } from "./share-background-check.mjs";
 import { verifyShareMotion } from "./share-motion-check.mjs";
 import { verifyMobileScrollLock } from "./share-scroll-check.mjs";
 import { verifyTilt } from "./share-tilt-check.mjs";
@@ -176,6 +177,7 @@ await context.close();
 await verifyMobileScrollLock(browser, base);
 await verifyTilt(browser, base);
 await verifyShareMotion(browser, base);
+await verifyShareBackground(browser, base, output);
 await browser.close();
 await fs.writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
 console.log(

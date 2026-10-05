@@ -42,16 +42,26 @@ body:has(.share-page) {
 	pointer-events: none;
 	transition: transform 450ms ease-out;
 }
-.share-backdrop::before {
+.share-backdrop::before,
+.share-backdrop::after {
 	content: "";
 	position: absolute;
 	inset: 0;
-	animation: share-background-drift 10s ease-in-out infinite alternate;
-	background:
-		radial-gradient(ellipse 55% 45% at 15% 20%, #b8d5f5 0, transparent 75%),
-		radial-gradient(ellipse 55% 50% at 85% 75%, #8fafdb 0, transparent 75%),
-		#edf3f9;
-	color: #f6f7fa;
+	background: radial-gradient(
+		ellipse 38% 34% at 30% 30%,
+		#83b5e9 0,
+		transparent 75%
+	);
+	animation: share-background-drift 7s ease-in-out -2s infinite alternate;
+}
+.share-backdrop::after {
+	background: radial-gradient(
+		ellipse 42% 38% at 70% 70%,
+		#92a8da 0,
+		transparent 75%
+	);
+	animation: share-background-counter-drift 9s ease-in-out -3s infinite
+		alternate;
 }
 .share-card {
 	position: relative;
@@ -247,10 +257,18 @@ body:has(.share-page) {
 	background: #0b1422;
 }
 .dark .share-backdrop::before {
-	background:
-		radial-gradient(ellipse 55% 45% at 15% 20%, #315d87 0, transparent 75%),
-		radial-gradient(ellipse 55% 50% at 85% 75%, #264968 0, transparent 75%),
-		#0b1422;
+	background: radial-gradient(
+		ellipse 38% 34% at 30% 30%,
+		#467da8 0,
+		transparent 75%
+	);
+}
+.dark .share-backdrop::after {
+	background: radial-gradient(
+		ellipse 42% 38% at 70% 70%,
+		#415880 0,
+		transparent 75%
+	);
 }
 .dark .share-card {
 	background: linear-gradient(145deg, #314b6666, #15233899);
@@ -322,13 +340,22 @@ body:has(.share-page) {
 }
 @keyframes share-background-drift {
 	from {
-		transform: translate3d(-7%, -5%, 0) scale(1.03);
+		transform: translate3d(-12vw, -12vh, 0);
 	}
 	to {
-		transform: translate3d(7%, 6%, 0) scale(1.08);
+		transform: translate3d(36vw, 30vh, 0);
 	}
 }
-.share-backdrop[data-paused="true"]::before {
+@keyframes share-background-counter-drift {
+	from {
+		transform: translate3d(12vw, 10vh, 0);
+	}
+	to {
+		transform: translate3d(-36vw, -30vh, 0);
+	}
+}
+.share-backdrop[data-paused="true"]::before,
+.share-backdrop[data-paused="true"]::after {
 	animation-play-state: paused;
 }
 .share-motion {
@@ -342,7 +369,8 @@ body:has(.share-page) {
 	transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
-	.share-backdrop::before {
+	.share-backdrop::before,
+	.share-backdrop::after {
 		animation: none;
 	}
 	.share-page .share-motion,
