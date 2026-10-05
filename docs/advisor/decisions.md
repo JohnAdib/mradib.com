@@ -5,6 +5,14 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Put identity ahead of social buttons on the at-sign card
+
+John requested smaller social buttons, wider card-side padding, a larger portrait
+and name, and more balanced spacing. Increase the portrait to 68px and name to
+32px, with 22px side insets. Use compact 32px social buttons and a consistent
+neutral glass treatment, including LinkedIn. Rebalance navigation and QR spacing
+within the fixed card; preserve calibration and both sharing states.
+
 ## 2026-10-05: Keep the at-sign card at a fixed physical reference size
 
 John clarified that the card must keep both its dimensions and proportions,

@@ -106,3 +106,13 @@ spacing were compacted to preserve the card content. Device calibration is local
 retains proportions, survives reload and resize, and includes Reset and Done.
 Browser checks verify dimensions, calibration persistence, sharing, focus,
 scroll locking and reduced motion. Screenshots: `/tmp/atsign-fixed-qa`.
+
+## 2026-10-05: Refined card hierarchy and spacing
+
+Reviewed both themes and QR mode across the 24 viewport/theme checks. The portrait
+is now 68px, the name 32px, and side padding 22px. Social buttons use a compact
+32px height and consistent neutral glass styling, with no blue LinkedIn fill.
+Adjusted navigation gaps and QR sizing keep both panels within the same fixed
+frame. Calibration, persistence, sharing, scroll lock and tilt checks pass.
+Production build, TypeScript, Biome and SEO checks pass with existing unrelated
+warnings. Evidence: `/tmp/atsign-spacing-qa` and `/tmp/atsign-spacing-matrix.png`.
