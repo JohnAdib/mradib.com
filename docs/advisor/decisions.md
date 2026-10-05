@@ -1090,3 +1090,10 @@ John requested a directly accessible page for Beyond the QA Bottleneck before ev
 ## 2026-10-05: One visual for the QA talk cover
 
 John chose the dark social-card design with soft teal light for the opening slide as well. Use the slide cover for the page preview and social image, with a social crop. Keep the subtitle “Building confidence in React Native with AI”. No TBC wording in the artwork; uncertainty stays in the page details.
+
+
+## 2026-10-05: Podcast article direction
+
+John approved ten first-person topic summaries of the Joe's Room episode, with varied paragraph lengths and selected pull quotes. Keep the employer to one introductory mention; omit company operations, internal project names and company metrics. The page should centre John's engineering ideas.
+
+After reviewing the standalone draft, John requested the existing site header, footer and page frame, Spotify-only listening, clearer discussion timestamps, stronger ownership and leadership excerpts, and a chart for the interview segments. Use topic numbering because the agreed order is thematic. Mark lightly edited quotations explicitly. Show the discussed interview durations honestly: 45 minutes, a 20 to 30 minute range illustrated at 25, and about 5 minutes. Do not assign the remaining portion of the 90-minute interview without evidence.

@@ -4,6 +4,7 @@ import { ogCardsEnDetail } from "./og-cards-en-detail";
 import { ogCardsEnGuides } from "./og-cards-en-guides";
 import { ogCardsEnOffer } from "./og-cards-en-offer";
 import { ogCardsFa } from "./og-cards-fa";
+import { ogCardsPodcast } from "./og-cards-podcast";
 import { ogCardsTalks } from "./og-cards-talks";
 import { ogCardsWriting } from "./og-cards-writing";
 
@@ -16,6 +17,7 @@ export const ogCards: IOgCard[] = [
 	...ogCardsEnGuides,
 	...ogCardsEnOffer,
 	...ogCardsTalks,
+	...ogCardsPodcast,
 	...ogCardsWriting,
 	...ogCardsFa,
 ];

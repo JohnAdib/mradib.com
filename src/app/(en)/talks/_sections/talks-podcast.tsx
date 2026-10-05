@@ -29,8 +29,8 @@ export function TalksPodcast({ podcast }: { podcast?: IPodcastAppearance }) {
 						{podcast.title}
 					</p>
 				</div>
-				<Button href={podcast.url} className="flex-none">
-					Listen on Spotify
+				<Button href={podcast.path ?? podcast.url} className="flex-none">
+					{podcast.path ? "Explore the conversation" : "Listen on Spotify"}
 				</Button>
 			</div>
 		</section>
