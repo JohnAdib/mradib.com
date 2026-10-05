@@ -1091,6 +1091,29 @@ John requested a directly accessible page for Beyond the QA Bottleneck before ev
 
 John chose the dark social-card design with soft teal light for the opening slide as well. Use the slide cover for the page preview and social image, with a social crop. Keep the subtitle “Building confidence in React Native with AI”. No TBC wording in the artwork; uncertainty stays in the page details.
 
+
+## 2026-10-05: Podcast article direction
+
+John approved ten first-person topic summaries of the Joe's Room episode, with varied paragraph lengths and selected pull quotes. Keep the employer to one introductory mention; omit company operations, internal project names and company metrics. The page should centre John's engineering ideas.
+
+After reviewing the standalone draft, John requested the existing site header, footer and page frame, Spotify-only listening, clearer discussion timestamps, stronger ownership and leadership excerpts, and a chart for the interview segments. Use topic numbering because the agreed order is thematic. Mark lightly edited quotations explicitly. Show the discussed interview durations honestly: 45 minutes, a 20 to 30 minute range illustrated at 25, and about 5 minutes. Do not assign the remaining portion of the 90-minute interview without evidence.
+
+
+## 2026-10-05: Podcast chronology and attribution follow-up
+
+John requested chronological topic order, a link from Joe Bignell's name to https://www.linkedin.com/in/joebignell/, and quote captions containing only "John Adib", without editing labels or quote timestamps. Topic timestamps remain visible. He approved this ownership quote wording: "As a product engineer, measuring the success of the feature you deliver is your responsibility now." This supersedes the earlier thematic-order and visible-editing-label decisions. Keep source provenance in the editorial notes.
+
+
+## 2026-10-05: Podcast card navigation
+
+John requested the entire podcast card on /talks link to its internal article. Use one accessible link around the card, with a visual call to action inside rather than a nested link. Spotify listening remains available from the article.
+
+
+## 2026-10-05: Podcast introduction and opening quote
+
+John requested a pull quote for the first, engineering-management topic, explicit June 2026 context, and a personal joke about hoping not to laugh at these predictions in a couple of years. Remove the explanatory paragraph describing the topic order and timestamps; he found it artificial.
+
+
 ## 2026-10-05: Balanced talk slide layouts
 
 John requested equal top and bottom margins on every section slide, with bold emphasis instead of a larger active title. Centre body groups beneath their headings and above footers throughout the deck. Remove invisible navigation space from PDF exports. Expand slide 30 to cover the design system, monorepo and ways of working, product engineering, AI development, and an AI harness defined as context, skills, tools and checks around agents. Close with “Confidence in AI-assisted development”, mobile development in the subtitle, and a small takeaway and speaker footer. Publish the updated 32-slide PDF; retain the editable PPTX outside public assets.
