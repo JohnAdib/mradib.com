@@ -124,3 +124,13 @@ backgrounds stay transparent and text transitions to white. The link hit areas
 remain unchanged, with a small corner radius only for keyboard focus. Production
 build, type checking, Biome and SEO checks passed with existing unrelated warnings.
 Screenshots reviewed: `/tmp/atsign-hover-qa` and `/tmp/atsign-hover-matrix.png`.
+
+## 2026-10-05: Remove unrequested sizing controls
+
+Verified the settings trigger and panel are absent in light and dark mode at
+phone and desktop widths. Removed the scaling wrapper and all local-storage
+calibration code. The fixed CSS dimensions, content layout and QR state remain.
+24 viewport/theme checks, mobile scroll lock, tilt and sharing passed, along
+with build, types, Biome and SEO checks (existing unrelated warnings remain).
+These checks do not establish a real-world physical size on the user's phone.
+Screenshots: `/tmp/atsign-no-sizing-qa` and `/tmp/atsign-no-sizing-matrix.png`.
