@@ -3,6 +3,7 @@
 import { ShareIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useRef, useState } from "react";
 import { TiltCard } from "@/components/tilt-card/tilt-card";
+import { ShareMotion } from "./share-motion";
 import { ShareQr } from "./share-qr";
 
 export function ShareCard({
@@ -42,27 +43,34 @@ export function ShareCard({
 					<ShareIcon className="size-6" />
 				)}
 			</button>
-			<TiltCard className="share-card" maxTilt={5} tracking="viewport">
-				{identity}
-				<div className="share-views" data-sharing={sharing}>
-					<div
-						className="share-view share-links-view"
-						inert={sharing}
-						aria-hidden={sharing}
-					>
-						{children}
+			<ShareMotion sharing={sharing}>
+				<TiltCard
+					className="share-card"
+					maxTilt={5}
+					tracking="viewport"
+					disabled={sharing}
+				>
+					{identity}
+					<div className="share-views" data-sharing={sharing}>
+						<div
+							className="share-view share-links-view"
+							inert={sharing}
+							aria-hidden={sharing}
+						>
+							{children}
+						</div>
+						<section
+							id="share-qr-view"
+							className="share-view share-qr-view"
+							aria-label="QR code"
+							inert={!sharing}
+							aria-hidden={!sharing}
+						>
+							<ShareQr active={sharing} />
+						</section>
 					</div>
-					<section
-						id="share-qr-view"
-						className="share-view share-qr-view"
-						aria-label="QR code"
-						inert={!sharing}
-						aria-hidden={!sharing}
-					>
-						<ShareQr active={sharing} />
-					</section>
-				</div>
-			</TiltCard>
+				</TiltCard>
+			</ShareMotion>
 		</>
 	);
 }

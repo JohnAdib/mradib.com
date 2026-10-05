@@ -32,6 +32,21 @@ body:has(.share-page) {
 	min-height: 0;
 	width: 100%;
 	padding: 0;
+	background: #edf3f9;
+	color: #f6f7fa;
+}
+.share-backdrop {
+	position: fixed;
+	inset: -48px;
+	z-index: -1;
+	pointer-events: none;
+	transition: transform 450ms ease-out;
+}
+.share-backdrop::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	animation: share-background-drift 24s ease-in-out infinite alternate;
 	background:
 		radial-gradient(ellipse at 15% 15%, #dcecff 0, transparent 58%),
 		radial-gradient(ellipse at 90% 85%, #b9cfe6 0, transparent 62%), #edf3f9;
@@ -228,6 +243,9 @@ body:has(.share-page) {
 	color: #c2d1e2;
 }
 .dark .share-page {
+	background: #0b1422;
+}
+.dark .share-backdrop::before {
 	background:
 		radial-gradient(ellipse at 20% 10%, #223f61 0, transparent 58%),
 		radial-gradient(ellipse at 95% 95%, #1e3854 0, transparent 62%), #0b1422;
@@ -300,8 +318,40 @@ body:has(.share-page) {
 		line-height: 14px;
 	}
 }
+@keyframes share-background-drift {
+	from {
+		transform: translate3d(-12px, -8px, 0) scale(1.03);
+	}
+	to {
+		transform: translate3d(12px, 10px, 0) scale(1.08);
+	}
+}
+.share-backdrop[data-sensor="true"]::before,
+.share-backdrop[data-paused="true"]::before {
+	animation-play-state: paused;
+}
+.share-motion {
+	width: max-content;
+	height: max-content;
+	transform: perspective(900px) rotateX(var(--sensor-x, 0deg))
+		rotateY(var(--sensor-y, 0deg));
+	transition: transform 450ms ease-out;
+}
+.share-motion[data-sharing="true"] {
+	transform: none;
+}
 @media (prefers-reduced-motion: reduce) {
-	.share-page * {
+	.share-backdrop::before {
+		animation: none;
+	}
+	.share-page .share-motion,
+	.share-page .share-backdrop,
+	.share-page .share-view,
+	.share-page :is(a, button) {
 		transition: none;
+	}
+	.share-motion,
+	.share-backdrop {
+		transform: none;
 	}
 }

@@ -146,3 +146,15 @@ button is layered above the card so it remains clickable on narrow screens.
 sharing, tilt and reduced motion. Build, TypeScript, Biome and SEO checks pass
 with existing unrelated warnings. Evidence: `/tmp/atsign-larger-qa` and
 `/tmp/atsign-larger-matrix.png`. Physical size is not verified on a real phone.
+
+## 2026-10-05: Background drift and optional sensor parallax
+
+Reviewed light/dark phone and desktop screenshots and the existing 24-layout
+matrix. The clean gradients retain their palette while a slow 24-second drift
+adds ambient motion. Sensor simulation verifies a two-degree card tilt cap,
+14px background displacement, invalid/stale event fallback, reduced motion,
+hidden-tab pause and permission-gated fallback without prompts. QR view resets
+sensor and pointer tilt for stable scanning. Desktop tilt and mobile scroll lock
+still pass. Build, types, Biome and SEO pass with existing unrelated warnings.
+Screenshots: `/tmp/atsign-motion-qa` and `/tmp/atsign-motion-matrix.png`.
+Real sensor hardware has not been tested on a physical phone.
