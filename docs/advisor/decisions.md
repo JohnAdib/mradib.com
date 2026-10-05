@@ -5,6 +5,16 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Keep the at-sign card at a fixed physical reference size
+
+John clarified that the card must keep both its dimensions and proportions,
+regardless of viewport size. Replace responsive sizing and landscape rotation
+with a fixed portrait 53.98mm by 85.6mm reference. Compact the content to fit.
+Browser millimetres do not reliably correspond to physical screen measurements,
+so a discreet size adjustment stores a calibration locally on each device.
+The chosen size remains fixed across resize, reload and QR view. A viewport
+smaller than the chosen card necessarily crops its edges instead of shrinking it.
+
 ## 2026-10-05: Fixed bank-card proportions for the at-sign page
 
 John requested a taller card with identical proportions in links and QR mode.

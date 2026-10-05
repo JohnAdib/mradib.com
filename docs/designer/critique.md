@@ -94,3 +94,15 @@ that links, email and QR remain inside the card; the additional vertical space
 separates identity from actions. Touch/wheel locking, native sharing, clipboard,
 Escape focus restoration, desktop tilt and reduced-motion behavior pass.
 Evidence: `/tmp/atsign-ratio-qa` and `/tmp/atsign-ratio-matrix.png`.
+
+## 2026-10-05: Fixed-size card and local calibration
+
+Reviewed the compact fixed-size layout and QR state in light and dark across
+24 viewport/theme combinations. Both keep the same 53.98mm by 85.6mm CSS size,
+without responsive shrinking or rotation. A 320px-high viewport is shorter than
+the reference card, so its outer edge is cropped; controls remain visible. This
+is the intentional consequence of John's fixed-size requirement. Typography and
+spacing were compacted to preserve the card content. Device calibration is local,
+retains proportions, survives reload and resize, and includes Reset and Done.
+Browser checks verify dimensions, calibration persistence, sharing, focus,
+scroll locking and reduced motion. Screenshots: `/tmp/atsign-fixed-qa`.
