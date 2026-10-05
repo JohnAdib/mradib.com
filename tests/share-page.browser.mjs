@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import { chromium } from "playwright-core";
 import { verifyMobileScrollLock } from "./share-scroll-check.mjs";
+import { verifyCardSize } from "./share-size-check.mjs";
 import { verifyTilt } from "./share-tilt-check.mjs";
 
 const browser = await chromium.launch({ channel: "chrome", headless: true });
@@ -47,7 +48,7 @@ for (const theme of ["light", "dark"]) {
 			title: document.title,
 			clipped: [
 				...document.querySelectorAll(
-					".share-card, .share-trigger, .share-page a",
+					".share-trigger, .share-size-trigger, .share-page a",
 				),
 			].some((el) => {
 				const rect = el.getBoundingClientRect();
@@ -75,6 +76,15 @@ for (const theme of ["light", "dark"]) {
 		if (fit.width > width || fit.height > height)
 			throw new Error(JSON.stringify({ theme, width, height, ...fit }));
 		await page.screenshot({ path: `${output}/share-${theme}-${width}.png` });
+		const cardBefore = await page.locator(".share-card").boundingBox();
+		const expectedRatio = 53.98 / 85.6;
+		if (Math.abs(cardBefore.width / cardBefore.height - expectedRatio) > 0.002)
+			throw new Error(`Card proportions changed at ${width}x${height}`);
+		if (
+			Math.abs(cardBefore.width - (53.98 * 96) / 25.4) > 0.05 ||
+			Math.abs(cardBefore.height - (85.6 * 96) / 25.4) > 0.05
+		)
+			throw new Error(`Physical CSS dimensions changed at ${width}x${height}`);
 		const identityBefore = await page.locator(".share-identity").boundingBox();
 		await page
 			.getByRole("button", { name: "Share profile", exact: true })
@@ -85,6 +95,11 @@ for (const theme of ["light", "dark"]) {
 			JSON.stringify(identityBefore)
 		)
 			throw new Error("Identity moved when sharing");
+		if (
+			JSON.stringify(await page.locator(".share-card").boundingBox()) !==
+			JSON.stringify(cardBefore)
+		)
+			throw new Error("Card resized when sharing");
 		if (await page.getByRole("link", { name: /LinkedIn/ }).count())
 			throw new Error("Hidden links remain accessible");
 		const qrFit = await page
@@ -160,6 +175,7 @@ if (
 await context.close();
 await verifyMobileScrollLock(browser, base);
 await verifyTilt(browser, base);
+await verifyCardSize(browser, base);
 await browser.close();
 await fs.writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
 console.log(

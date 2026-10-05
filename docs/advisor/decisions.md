@@ -5,6 +5,38 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Plain text hover for card navigation
+
+John rejected the circular hover treatment on About, Talks and Website.
+Remove the pill background and use only a smooth text-colour change on hover.
+Keep the link hit areas and a clear, slightly rounded keyboard focus outline.
+
+## 2026-10-05: Put identity ahead of social buttons on the at-sign card
+
+John requested smaller social buttons, wider card-side padding, a larger portrait
+and name, and more balanced spacing. Increase the portrait to 68px and name to
+32px, with 22px side insets. Use compact 32px social buttons and a consistent
+neutral glass treatment, including LinkedIn. Rebalance navigation and QR spacing
+within the fixed card; preserve calibration and both sharing states.
+
+## 2026-10-05: Keep the at-sign card at a fixed physical reference size
+
+John clarified that the card must keep both its dimensions and proportions,
+regardless of viewport size. Replace responsive sizing and landscape rotation
+with a fixed portrait 53.98mm by 85.6mm reference. Compact the content to fit.
+Browser millimetres do not reliably correspond to physical screen measurements,
+so a discreet size adjustment stores a calibration locally on each device.
+The chosen size remains fixed across resize, reload and QR view. A viewport
+smaller than the chosen card necessarily crops its edges instead of shrinking it.
+
+## 2026-10-05: Fixed bank-card proportions for the at-sign page
+
+John requested a taller card with identical proportions in links and QR mode.
+Use portrait bank-card proportions (53.98:85.6), constrained by the available
+viewport. Rotate those proportions on short landscape screens to keep controls
+readable. Anchor identity above the shared panel and distribute the extra space
+within the card. Preserve glass styling, subtle tilt and mobile scroll locking.
+
 ## 2026-10-05: Clean glass and sharing inside the at-sign card
 
 John requested a clean background without grain, more polished buttons, subtle
