@@ -1,5 +1,4 @@
 import type { PodcastChapter } from "@/data/podcast/chapter";
-import { podcastTimestamp } from "./podcast-timestamp";
 
 export function PodcastQuote({
 	quote,
@@ -17,9 +16,8 @@ export function PodcastQuote({
 			<blockquote className="mt-2 font-display text-2xl leading-snug font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
 				{quote.text}
 			</blockquote>
-			<figcaption className="mt-6 flex flex-wrap justify-between gap-2 text-xs leading-5 text-zinc-500 dark:text-zinc-400">
-				<span>John Adib{quote.edited ? " · Edited for clarity" : ""}</span>
-				<span>At {podcastTimestamp(quote.seconds)} in the episode</span>
+			<figcaption className="mt-6 text-xs leading-5 text-zinc-500 dark:text-zinc-400">
+				John Adib
 			</figcaption>
 		</figure>
 	);

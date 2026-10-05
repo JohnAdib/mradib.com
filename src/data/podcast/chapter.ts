@@ -3,5 +3,5 @@ export interface PodcastChapter {
 	title: string;
 	seconds: number;
 	paragraphs: string[];
-	quote?: { text: string; seconds: number; edited?: boolean };
+	quote?: { text: string };
 }

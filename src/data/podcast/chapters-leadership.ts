@@ -20,8 +20,6 @@ export const leadershipChapters: PodcastChapter[] = [
 		],
 		quote: {
 			text: "As an engineering manager, you should understand what is going on. Reading posts or updates is not enough.",
-			seconds: 776,
-			edited: true,
 		},
 	},
 	{
@@ -36,7 +34,6 @@ export const leadershipChapters: PodcastChapter[] = [
 		],
 		quote: {
 			text: "Is this code doing the right things?",
-			seconds: 971.42,
 		},
 	},
 ];

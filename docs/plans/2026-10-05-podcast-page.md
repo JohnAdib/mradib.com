@@ -15,3 +15,7 @@
 ## Verification results
 
 The production build emits the podcast route. Type checking and SEO verification pass. Biome check:fix passes with one existing optional-chaining warning in the OG generator. Browser checks cover 14 viewport/theme combinations and 42 captures, confirm no audio elements or MP3 requests, Spotify destinations, topic navigation, discovery from talks, canonical metadata, and content without JavaScript. A separate 1280 by 600 check confirms the sidebar scrolls and anchor targets clear the shared header. Content review against the user-confirmed transcript found no grounding issues.
+
+## Follow-up revision
+
+At John's request, topics now sort chronologically, beginning at 05:51. Joe's name links to his supplied LinkedIn profile. Quote captions contain only John Adib; the ownership quote uses his approved product-engineer wording. The public editing labels and quote timestamps are removed. Topic start timestamps remain.

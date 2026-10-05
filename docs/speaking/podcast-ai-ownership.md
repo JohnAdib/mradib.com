@@ -11,14 +11,16 @@
 
 The publisher's episode was transcribed locally. John reviewed and confirmed the transcript in this conversation. The ten-topic structure and substantive summary came from that recording, with the business overview and company-specific examples removed at John's request. The source audio and full transcript stay outside the website repository. Playback is a link to Spotify only.
 
-Discussion start times are references into the recording, not chapter ranges. The article uses thematic order. The opening minutes primarily cover the guest introduction and business operations; the management discussion around 05:51 remains relevant to the leadership topic.
+Discussion start times are references into the recording, not chapter ranges. The article follows chronological topic order, starting with the management discussion at 05:51. The opening minutes primarily cover the guest introduction and business operations; the management discussion around 05:51 remains relevant to the leadership topic.
 
 ## Excerpts
 
 - Product engineering, 20:39: "We need to think differently." Verbatim transcript excerpt.
-- Ownership, 22:02: transcript discusses "measuring the delivery, the success of the feature or bug, whatever you provide is your responsibility now". Edited for clarity on the page: "Measuring the success of the feature or bug fix you deliver is your responsibility now."
+- Ownership, 22:02: transcript discusses "measuring the delivery, the success of the feature or bug, whatever you provide is your responsibility now". Wording supplied and approved by John: "As a product engineer, measuring the success of the feature you deliver is your responsibility now."
 - Hands-on leadership, 12:56: transcript discusses "as an EM, you should be able to understand what's going on" and reading "posts or updates" being insufficient. Edited for clarity on the page: "As an engineering manager, you should understand what is going on. Reading posts or updates is not enough."
 - Workflows, 16:11: "Is this code doing the right things?" Verbatim transcript excerpt.
+
+Quote captions show only John Adib, as requested by the speaker. Quote timestamps and editing provenance are retained here rather than in the public page. Joe’s name links to his LinkedIn profile supplied by John: https://www.linkedin.com/in/joebignell/.
 
 ## Interview chart
 

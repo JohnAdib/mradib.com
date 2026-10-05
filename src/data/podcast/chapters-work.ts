@@ -32,7 +32,6 @@ export const workChapters: PodcastChapter[] = [
 		],
 		quote: {
 			text: "We need to think differently.",
-			seconds: 1239.52,
 		},
 	},
 	{
@@ -44,9 +43,7 @@ export const workChapters: PodcastChapter[] = [
 			"Those answers should shape the next decision. Sometimes we need another iteration. Sometimes the first version has missed something. I see understanding what happens after release as part of the engineer's responsibility. It takes a different kind of attention from simply working through a queue of tasks.",
 		],
 		quote: {
-			text: "Measuring the success of the feature or bug fix you deliver is your responsibility now.",
-			seconds: 1322,
-			edited: true,
+			text: "As a product engineer, measuring the success of the feature you deliver is your responsibility now.",
 		},
 	},
 ];

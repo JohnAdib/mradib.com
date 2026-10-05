@@ -4,6 +4,8 @@ import { Button } from "@/components/button";
 import { podcastEpisode as episode } from "@/data/podcast/episode";
 import { formatDateTime } from "@/lib/datetime/format-date-time";
 
+import { PodcastHostLink } from "./podcast-host-link";
+
 export function PodcastHero() {
 	return (
 		<header className="reveal-rise max-w-3xl">
@@ -21,7 +23,7 @@ export function PodcastHero() {
 				{episode.title}
 			</h1>
 			<p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-				{episode.intro}
+				I joined <PodcastHostLink /> {episode.intro}
 			</p>
 			<div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-zinc-500 dark:text-zinc-400">
 				<time dateTime={episode.date}>

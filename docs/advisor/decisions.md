@@ -1097,3 +1097,8 @@ John chose the dark social-card design with soft teal light for the opening slid
 John approved ten first-person topic summaries of the Joe's Room episode, with varied paragraph lengths and selected pull quotes. Keep the employer to one introductory mention; omit company operations, internal project names and company metrics. The page should centre John's engineering ideas.
 
 After reviewing the standalone draft, John requested the existing site header, footer and page frame, Spotify-only listening, clearer discussion timestamps, stronger ownership and leadership excerpts, and a chart for the interview segments. Use topic numbering because the agreed order is thematic. Mark lightly edited quotations explicitly. Show the discussed interview durations honestly: 45 minutes, a 20 to 30 minute range illustrated at 25, and about 5 minutes. Do not assign the remaining portion of the 90-minute interview without evidence.
+
+
+## 2026-10-05: Podcast chronology and attribution follow-up
+
+John requested chronological topic order, a link from Joe Bignell's name to https://www.linkedin.com/in/joebignell/, and quote captions containing only "John Adib", without editing labels or quote timestamps. Topic timestamps remain visible. He approved this ownership quote wording: "As a product engineer, measuring the success of the feature you deliver is your responsibility now." This supersedes the earlier thematic-order and visible-editing-label decisions. Keep source provenance in the editorial notes.

@@ -5,6 +5,7 @@ import { podcastChapters } from "@/data/podcast/chapters";
 import { podcastEpisode as episode } from "@/data/podcast/episode";
 import { PodcastChapter } from "./podcast-chapter";
 import { PodcastHero } from "./podcast-hero";
+import { PodcastHostLink } from "./podcast-host-link";
 import { PodcastJsonLd } from "./podcast-json-ld";
 import { PodcastNavigation } from "./podcast-navigation";
 
@@ -48,7 +49,7 @@ export function PodcastPage() {
 					Hear the whole conversation.
 				</h2>
 				<p className="mt-4 max-w-xl text-sm leading-7 text-zinc-400">
-					Listen to the full episode with {episode.host}, including the
+					Listen to the full episode with <PodcastHostLink />, including the
 					questions and examples behind these ideas.
 				</p>
 				<div className="mt-6 flex flex-wrap gap-5">

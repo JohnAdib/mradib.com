@@ -6,4 +6,4 @@ export const podcastChapters = [
 	...workChapters,
 	...leadershipChapters,
 	...futureChapters,
-];
+].sort((a, b) => a.seconds - b.seconds);
