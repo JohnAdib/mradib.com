@@ -1184,3 +1184,8 @@ John requested equal top and bottom margins on every section slide, with bold em
 Revision 31 changes the final slide QR and printed address to `mradib.com/@`,
 matching the redesigned contact page in PR #156. Regenerate both the PDF and
 editable PPTX. Preserve the regular PDF chart labels and the existing slide layout.
+
+
+## 2026-10-05: Slides before talk descriptions
+
+John requested the slide preview and PDF download immediately after the event-facts card, before the descriptive paragraphs. Apply this order through the shared talk layout. Keep other Resources links at the bottom and preserve the existing PDF card styling.
