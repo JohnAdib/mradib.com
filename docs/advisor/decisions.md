@@ -5,6 +5,14 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Lock the at-sign page against mobile scrolling
+
+John requested that `/@` cannot move vertically on mobile, including browser
+overscroll. Fix its document and surface to the viewport, disable overscroll and
+allow pinch zoom without single-finger panning. Apply the same gesture policy to
+the QR dialog. Compact short phone and landscape layouts keep links visible.
+The lock is scoped to the at-sign page; ordinary website pages still scroll.
+
 ## 2026-10-05: Redesign the at-sign page and retire Instagram links
 
 John rejected the flat list design on `/@` and requested a more polished mobile

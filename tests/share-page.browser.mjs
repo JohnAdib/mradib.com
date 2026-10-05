@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import { chromium } from "playwright-core";
+import { verifyMobileScrollLock } from "./share-scroll-check.mjs";
 
 const browser = await chromium.launch({ channel: "chrome", headless: true });
 const output = process.env.SHARE_SCREENSHOTS || "/tmp/mradib-share-qa";
@@ -14,6 +15,8 @@ const sizes = [
 	[1920, 1080],
 	[2560, 1440],
 	[320, 568],
+	[320, 480],
+	[568, 320],
 	[667, 375],
 	[896, 414],
 ];
@@ -41,6 +44,19 @@ for (const theme of ["light", "dark"]) {
 			innerWidth,
 			innerHeight,
 			title: document.title,
+			clipped: [
+				...document.querySelectorAll(
+					".share-card, .share-trigger, .share-page a",
+				),
+			].some((el) => {
+				const rect = el.getBoundingClientRect();
+				return (
+					rect.top < 0 ||
+					rect.bottom > innerHeight ||
+					rect.left < 0 ||
+					rect.right > innerWidth
+				);
+			}),
 			selectable: [
 				...document.querySelectorAll(".share-page, .share-page *"),
 			].some((el) => getComputedStyle(el).userSelect !== "none"),
@@ -48,6 +64,8 @@ for (const theme of ["light", "dark"]) {
 				a.getAttribute("href"),
 			),
 		}));
+		if (fit.clipped)
+			throw new Error(`Clipped contact controls at ${width}x${height}`);
 		if (fit.selectable) throw new Error("At-sign page allows selection");
 		if (fit.links.some((href) => href?.includes("instagram")))
 			throw new Error("Instagram link on at-sign page");
@@ -126,6 +144,7 @@ if (
 )
 	throw new Error("Native share payload");
 await context.close();
+await verifyMobileScrollLock(browser, base);
 await browser.close();
 await fs.writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
 console.log(

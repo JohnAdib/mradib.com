@@ -68,3 +68,10 @@ GitHub/X tiles and compact navigation across 20 viewport/theme combinations.
 Phone, landscape and desktop layouts fit without scrolling. All page elements
 are non-selectable. QR morph, Escape, restored focus, native sharing and clipboard
 fallback pass. Instagram destinations are absent from the full exported site.
+
+## 2026-10-05: At-sign page viewport lock
+
+Expanded checks to 24 viewport/theme cases, including 320×480 phones and 568×320
+landscape. Links and the QR trigger stay fully in view. Emulated mobile swipes
+in both directions and wheel input leave the card and QR panel stationary.
+The Contact page remains scrollable. Pinch zoom remains enabled.

@@ -7,12 +7,32 @@
 	-webkit-user-select: none;
 	user-select: none;
 }
+/* Scope document locking to /@, including its portalled QR dialog. */
+html:has(.share-page),
+body:has(.share-page) {
+	height: 100%;
+	overflow: hidden;
+	overscroll-behavior: none;
+}
+body:has(.share-page) {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+}
+.share-page,
+.share-dialog {
+	overscroll-behavior: none;
+	touch-action: pinch-zoom;
+}
 .share-page {
-	position: relative;
+	position: fixed;
+	inset: 0;
+	height: 100dvh;
+	overflow: hidden;
 	isolation: isolate;
 	display: grid;
 	place-items: center;
-	min-height: 100svh;
+	min-height: 0;
 	width: 100%;
 	padding: max(76px, env(safe-area-inset-top))
 		max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
@@ -161,7 +181,7 @@
 	display: grid;
 	place-items: center;
 	padding: 16px;
-	overflow-y: auto;
+	overflow: hidden;
 }
 .share-qr-panel {
 	position: relative;
@@ -282,7 +302,7 @@
 		margin-top: 12px;
 	}
 }
-@media (max-height: 600px) and (min-width: 600px) {
+@media (max-height: 600px) and (min-width: 500px) {
 	.share-page {
 		padding-top: 72px;
 		padding-bottom: 16px;
@@ -325,6 +345,51 @@
 	.share-qr-image {
 		width: min(100%, 40svh);
 		margin-top: 4px;
+	}
+}
+@media (max-height: 560px) and (max-width: 499px) {
+	.share-card {
+		padding: 20px;
+	}
+	.share-portrait {
+		width: 48px;
+	}
+	.share-identity h1 {
+		font-size: 2.25rem;
+		margin-top: 10px;
+	}
+	.share-links {
+		margin-top: 16px;
+	}
+	.share-social {
+		min-height: 64px;
+		padding: 8px;
+		gap: 6px;
+	}
+	.share-social-linkedin {
+		min-height: 44px;
+	}
+	.share-pages {
+		margin-top: 6px;
+	}
+}
+@media (max-height: 360px) and (min-width: 500px) {
+	.share-page {
+		padding-top: 64px;
+		padding-bottom: 8px;
+	}
+	.share-card {
+		padding: 16px;
+	}
+	.share-social {
+		min-height: 56px;
+		padding: 8px;
+	}
+	.share-social-linkedin {
+		min-height: 44px;
+	}
+	.share-pages {
+		margin: 0 -8px;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
