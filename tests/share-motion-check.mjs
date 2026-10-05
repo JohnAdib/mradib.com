@@ -85,7 +85,7 @@ export async function verifyShareMotion(browser, base) {
 		await backdrop.evaluate(
 			(el) => getComputedStyle(el, "::before").animationPlayState,
 		),
-		"paused",
+		"running",
 	);
 	await page
 		.getByRole("button", { name: "Share profile", exact: true })

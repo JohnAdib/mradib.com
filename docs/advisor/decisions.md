@@ -5,6 +5,18 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Visible background movement and stronger identity
+
+John could not see mobile background movement and asked for a larger portrait
+and name, with the remaining details lower in the card. Increase clean gradient
+travel and contrast with a 10-second alternating drift, and keep it running
+alongside sensor parallax so a stationary phone does not freeze the background.
+Use a 128px portrait and 50px name in the normal layout, anchoring the lower
+panel to the bottom. Compact short screens use an 84px portrait and 36px name.
+Preserve fixed card dimensions, stable identity in QR view, reduced motion and
+hidden-tab pausing. Do not add controls or sensor permission prompts.
+
+
 ## 2026-10-05: Subtle background and phone motion
 
 John requested sensor-driven movement of the background and card, with ambient
