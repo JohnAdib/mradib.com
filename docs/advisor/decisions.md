@@ -5,6 +5,15 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Remove all visitor-facing card calibration
+
+John explicitly rejected the sizing feature. Remove its trigger, settings panel,
+local-storage scaling and supporting component. Keep the existing card content
+and fixed portrait proportions. ISO ID-1 dimensions are 85.60 by 53.98mm, but
+CSS millimetres are not reliable physical screen measurements. Do not claim a
+universal life-size match; device-specific sizing remains unresolved until the
+phone model and display behavior can be verified.
+
 ## 2026-10-05: Plain text hover for card navigation
 
 John rejected the circular hover treatment on About, Talks and Website.
