@@ -1,10 +1,13 @@
 import { urlGitNation, urlPodcastSpotify } from "@/data/profile";
+import { talkDescriptions } from "./talk-descriptions";
 import type { IPodcastAppearance, ITalk } from "./talk-interface";
 
 // newest first, drives /talks, the talk pages, the sitemap, and llms.txt
 export const talks: ITalk[] = [
 	{
 		slug: "compound-effect-guardrails",
+		description: talkDescriptions["compound-effect-guardrails"],
+		image: "/talks/covers/compound-effect-guardrails.webp",
 		path: "/the-compound-effect-of-guardrails-in-the-era-of-ai",
 		title: "The Compound Effect of Guardrails in the Era of AI",
 		event: "JavaScript London",
@@ -22,6 +25,8 @@ export const talks: ITalk[] = [
 	},
 	{
 		slug: "hack-united-enterprise-dashboard-ai",
+		description: talkDescriptions["hack-united-enterprise-dashboard-ai"],
+		image: "/talks/covers/hack-united-enterprise-dashboard-ai.webp",
 		path: "/building-an-enterprise-dashboard-with-ai",
 		title:
 			"Building an Enterprise Dashboard with AI: From Architecture to Production",
@@ -60,6 +65,7 @@ export const talks: ITalk[] = [
 	},
 	{
 		slug: "ai-first-architecture",
+		description: talkDescriptions["ai-first-architecture"],
 		path: "/ai-first-architecture-why-single-responsibility-matters-more-than-ever",
 		title:
 			"AI-First Architecture - Why Single Responsibility Matters More Than Ever",
@@ -72,7 +78,6 @@ export const talks: ITalk[] = [
 		summary:
 			"Why the single responsibility principle becomes critical in AI-first architectures, and how to design systems that work seamlessly with AI tools.",
 		image: "/talks/covers/ai-first-architecture.png",
-		video: "https://aicodingsummit.com/berlin/video/hero-video.mp4",
 		slidesPdf:
 			"/talks/2025-10-23-ai-first-architecture-why-single-responsibility-matters-more-than-ever.pdf",
 		eventUrl: "https://gitnation.com/events/ai-coding-summit",
@@ -86,6 +91,7 @@ export const talks: ITalk[] = [
 	},
 	{
 		slug: "turning-chaos-into-control-with-cloudflare",
+		description: talkDescriptions["turning-chaos-into-control-with-cloudflare"],
 		path: "/turning-chaos-into-control-with-cloudflare",
 		title: "Turning Chaos into Control with Cloudflare",
 		event: "LNUG",
@@ -104,6 +110,7 @@ export const talks: ITalk[] = [
 	},
 	{
 		slug: "design-systems-ai-separation-of-concern",
+		description: talkDescriptions["design-systems-ai-separation-of-concern"],
 		path: "/design-systems-ai-and-the-art-of-separation-of-concern",
 		title: "Design Systems, AI, and the Art of Separation of Concern",
 		event: "React Advanced London",

@@ -36,6 +36,8 @@ export interface ITalk {
 	date: string;
 	audience?: string;
 	summary: string;
+	/** Paragraphs for the talk page, grounded in the slides. Summary stays concise for metadata. */
+	description?: string[];
 	/** Organizer logo under /talks/logos. Falls back to a monogram when unset. */
 	logo?: string;
 	/** Representative cover photo, e.g. the deck's first slide. Path under /talks/covers. */
