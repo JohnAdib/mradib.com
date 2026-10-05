@@ -75,3 +75,11 @@ Expanded checks to 24 viewport/theme cases, including 320×480 phones and 568×3
 landscape. Links and the QR trigger stay fully in view. Emulated mobile swipes
 in both directions and wheel input leave the card and QR panel stationary.
 The Contact page remains scrollable. Pinch zoom remains enabled.
+
+## 2026-10-05: In-card QR sharing and clean glass
+
+Reviewed 24 screen/theme combinations after removing the grain and refining the
+glass surface and buttons. GitHub/X are text-only. Opening QR preserves identity
+geometry exactly and hides the inactive links from accessibility and keyboard
+navigation. Sharing, Escape, mobile scroll lock and viewport fit pass. Desktop
+tilt stays within 2.5 degrees, eases back over 700ms and respects reduced motion.

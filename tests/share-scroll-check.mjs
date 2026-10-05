@@ -62,10 +62,12 @@ export async function verifyMobileScrollLock(browser, base) {
 	await page
 		.getByRole("button", { name: "Share profile", exact: true })
 		.click();
-	await page.getByRole("dialog").waitFor();
-	await swipe(".share-qr-panel");
+	await page.getByRole("region", { name: "QR code" }).waitFor();
+	await swipe(".share-card");
 	await page.getByRole("button", { name: "Close QR code" }).click();
-	await page.getByRole("dialog").waitFor({ state: "hidden" });
+	await page
+		.getByRole("region", { name: "QR code" })
+		.waitFor({ state: "hidden" });
 	await page.goto(`${base}/contact`);
 	assert.notEqual(
 		await page.evaluate(() => getComputedStyle(document.body).position),

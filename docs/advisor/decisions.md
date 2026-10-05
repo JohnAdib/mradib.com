@@ -5,6 +5,16 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Clean glass and sharing inside the at-sign card
+
+John requested a clean background without grain, more polished buttons, subtle
+3D movement and QR sharing inside the existing card. Keep the avatar and name
+in place while the lower panel crossfades between links and QR. Use translucent
+glass surfaces with smooth background lighting. GitHub and X are text-only;
+LinkedIn retains its blue treatment. Reuse TiltCard with viewport tracking capped
+at 2.5 degrees, smooth pointer-leave return and reduced-motion support. Preserve
+the mobile scroll lock, personal email, QR destination and native sharing.
+
 ## 2026-10-05: Lock the at-sign page against mobile scrolling
 
 John requested that `/@` cannot move vertically on mobile, including browser

@@ -1,13 +1,11 @@
 /* A quiet, single-screen contact card, separate from the article chrome. */
 /* The contact card is a focused, non-selectable event surface. */
 .share-page,
-.share-page *,
-.share-dialog,
-.share-dialog * {
+.share-page * {
 	-webkit-user-select: none;
 	user-select: none;
 }
-/* Scope document locking to /@, including its portalled QR dialog. */
+/* Scope document locking to /@, including its in-card QR view. */
 html:has(.share-page),
 body:has(.share-page) {
 	height: 100%;
@@ -19,8 +17,7 @@ body:has(.share-page) {
 	inset: 0;
 	width: 100%;
 }
-.share-page,
-.share-dialog {
+.share-page {
 	overscroll-behavior: none;
 	touch-action: pinch-zoom;
 }
@@ -38,29 +35,37 @@ body:has(.share-page) {
 		max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
 		max(20px, env(safe-area-inset-left));
 	background:
-		radial-gradient(ellipse at 20% 10%, #e4eaf3 0, transparent 58%),
-		radial-gradient(ellipse at 90% 90%, #e6dccd 0, transparent 60%), #f4f0e9;
+		radial-gradient(ellipse at 15% 15%, #dcecff 0, transparent 58%),
+		radial-gradient(ellipse at 90% 85%, #b9cfe6 0, transparent 62%), #edf3f9;
 	color: #f6f7fa;
 }
-.share-page::before {
+.share-card {
+	position: relative;
+	width: min(100%, 400px);
+	padding: 32px;
+	border: 1px solid #ffffff3b;
+	border-radius: 32px;
+	background: linear-gradient(145deg, #263e59e8, #101e30ed);
+	-webkit-backdrop-filter: blur(28px) saturate(150%);
+	backdrop-filter: blur(28px) saturate(150%);
+	box-shadow:
+		0 20px 60px -28px #19365d66,
+		inset 0 1px 0 #ffffff30,
+		inset 0 -1px 0 #ffffff08;
+}
+.share-card::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	z-index: -1;
+	border-radius: inherit;
 	pointer-events: none;
-	opacity: 0.15;
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.35' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
-}
-.share-card {
-	width: min(100%, 400px);
-	padding: 32px;
-	border: 1px solid #ffffff1c;
-	border-radius: 32px;
-	background:
-		radial-gradient(ellipse at 50% -25%, #314967 0, transparent 60%), #151b25;
-	box-shadow:
-		0 28px 80px -30px #15253f66,
-		inset 0 1px 0 #ffffff12;
+	background: linear-gradient(
+		120deg,
+		#ffffff0b,
+		transparent 38%,
+		transparent 70%,
+		#ffffff04
+	);
 }
 .share-identity {
 	text-align: center;
@@ -81,9 +86,38 @@ body:has(.share-page) {
 	margin: 18px 0 0;
 	letter-spacing: -0.025em;
 }
-.share-links {
-	margin-top: 28px;
+.share-views {
+	display: grid;
+	margin-top: 24px;
 }
+.share-view {
+	grid-area: 1 / 1;
+	align-self: center;
+	min-width: 0;
+	transition:
+		opacity 260ms ease,
+		transform 440ms cubic-bezier(0.22, 1, 0.36, 1),
+		visibility 440ms;
+}
+.share-qr-view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px) scale(0.97);
+}
+.share-views[data-sharing="true"] .share-links-view {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px) scale(0.97);
+}
+.share-views[data-sharing="true"] .share-qr-view {
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+}
+
 .share-socials {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -91,15 +125,16 @@ body:has(.share-page) {
 }
 .share-social {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-	min-height: 86px;
+	min-height: 56px;
 	padding: 16px;
-	border: 1px solid #ffffff12;
-	border-radius: 18px;
-	background: #ffffff06;
+	border: 1px solid #ffffff24;
+	border-radius: 16px;
+	background: linear-gradient(145deg, #ffffff12, #ffffff04);
+	box-shadow: inset 0 1px 0 #ffffff10;
 	color: #e7ebf2;
 	font-size: 0.9375rem;
 	font-weight: 500;
@@ -113,7 +148,7 @@ body:has(.share-page) {
 	flex-direction: row;
 	min-height: 56px;
 	gap: 12px;
-	background: #0a66c2;
+	background: linear-gradient(160deg, #1479da, #095fb5);
 	border-color: #3787d7;
 	color: white;
 }
@@ -153,96 +188,54 @@ body:has(.share-page) {
 	border-radius: 50%;
 	color: #26364d;
 }
-.share-page :is(a, button),
-.share-dialog button {
+.share-page :is(a, button) {
 	transition:
 		color 180ms ease,
 		background-color 180ms ease,
 		border-color 180ms ease;
 }
-.share-page :is(a, button):focus-visible,
-.share-dialog button:focus-visible {
+.share-page :is(a, button):focus-visible {
 	outline: 2px solid #70b5f9;
 	outline-offset: 4px;
 }
-.share-dialog {
-	position: fixed;
-	inset: 0;
-	z-index: 100;
-}
-.share-backdrop {
-	position: fixed;
-	inset: 0;
-	background: rgb(0 0 0 / 0.5);
-}
-.share-dialog-position {
-	position: fixed;
-	inset: 0;
-	display: grid;
-	place-items: center;
-	padding: 16px;
-	overflow: hidden;
-}
-.share-qr-panel {
-	position: relative;
-	width: min(100%, 380px);
-	color: #18181b;
-	text-align: center;
-}
-.share-qr-surface {
-	position: absolute;
-	inset: 0;
+.share-qr-image {
+	width: clamp(132px, 25svh, 200px);
+	height: auto;
 	background: white;
-	border-radius: 24px;
-	transform-origin: top left;
-}
-.share-qr-content {
-	position: relative;
-	padding: 44px 24px 16px;
-}
-.share-qr-panel h2 {
-	font: 400 2rem / 1.1 var(--font-display);
+	border-radius: 16px;
+	-webkit-user-drag: none;
+	box-shadow: 0 6px 24px #00000014;
 }
 .share-address {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	min-height: 44px;
+	margin-top: 8px;
 	padding: 0 12px;
-	font-size: 1rem;
+	font-size: 0.9375rem;
 	cursor: pointer;
-	border-radius: 8px;
-}
-.share-qr-close {
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	width: 44px;
-	height: 44px;
-	display: grid;
-	place-items: center;
-	cursor: pointer;
-	border-radius: 50%;
-}
-.share-qr-image {
-	width: min(100%, 320px, 48svh);
-	height: auto;
-	margin: 12px auto 0;
+	border-radius: 12px;
+	color: #f6f7fa;
 }
 .share-status {
 	min-height: 18px;
+	max-width: 240px;
 	font-size: 0.75rem;
-	color: #52525b;
-	margin-top: 2px;
+	line-height: 18px;
+	text-align: center;
+	color: #c2d1e2;
 }
 .dark .share-page {
 	background:
-		radial-gradient(ellipse at 10% 0, #172941 0, transparent 55%),
-		radial-gradient(ellipse at 95% 100%, #182432 0, transparent 60%), #0b1019;
+		radial-gradient(ellipse at 20% 10%, #223f61 0, transparent 58%),
+		radial-gradient(ellipse at 95% 95%, #1e3854 0, transparent 62%), #0b1422;
 }
 .dark .share-card {
+	background: linear-gradient(145deg, #314b6666, #15233899);
 	box-shadow:
-		0 32px 90px -24px #00000088,
-		inset 0 1px 0 #ffffff12;
+		0 20px 64px -28px #00000070,
+		inset 0 1px 0 #ffffff24;
 }
 .dark .share-trigger {
 	color: #d8e0eb;
@@ -266,9 +259,8 @@ body:has(.share-page) {
 	.share-trigger:hover {
 		background-color: #7f7f7f14;
 	}
-	.share-address:hover,
-	.share-qr-close:hover {
-		background-color: #f4f4f5;
+	.share-address:hover {
+		background-color: #ffffff12;
 	}
 }
 @media (max-height: 680px) and (max-width: 599px) {
@@ -287,11 +279,11 @@ body:has(.share-page) {
 		margin-top: 14px;
 		font-size: 2.5rem;
 	}
-	.share-links {
+	.share-views {
 		margin-top: 22px;
 	}
 	.share-social {
-		min-height: 76px;
+		min-height: 52px;
 		padding: 12px;
 		gap: 8px;
 	}
@@ -315,7 +307,7 @@ body:has(.share-page) {
 		gap: 32px;
 		align-items: center;
 	}
-	.share-links {
+	.share-views {
 		margin-top: 0;
 	}
 	.share-portrait {
@@ -325,7 +317,7 @@ body:has(.share-page) {
 		font-size: 2.5rem;
 	}
 	.share-social {
-		min-height: 64px;
+		min-height: 48px;
 		padding: 10px;
 		gap: 6px;
 	}
@@ -338,13 +330,8 @@ body:has(.share-page) {
 	.share-email {
 		padding-top: 4px;
 	}
-	.share-qr-content {
-		padding-top: 40px;
-		padding-bottom: 8px;
-	}
 	.share-qr-image {
-		width: min(100%, 40svh);
-		margin-top: 4px;
+		width: clamp(104px, 34svh, 168px);
 	}
 }
 @media (max-height: 560px) and (max-width: 499px) {
@@ -358,11 +345,11 @@ body:has(.share-page) {
 		font-size: 2.25rem;
 		margin-top: 10px;
 	}
-	.share-links {
+	.share-views {
 		margin-top: 16px;
 	}
 	.share-social {
-		min-height: 64px;
+		min-height: 48px;
 		padding: 8px;
 		gap: 6px;
 	}
@@ -393,8 +380,7 @@ body:has(.share-page) {
 	}
 }
 @media (prefers-reduced-motion: reduce) {
-	.share-page *,
-	.share-dialog * {
+	.share-page * {
 		transition: none;
 	}
 }
