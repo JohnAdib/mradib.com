@@ -54,7 +54,7 @@ function VideoHeader({ talk, videoSrc }: { talk: ITalk; videoSrc: string }) {
 	);
 }
 
-/** Header, then event facts, then the description or short summary. */
+/** Talk title and event facts. Content order is owned by TalkLayout. */
 export function TalkHero({ talk }: { talk: ITalk }) {
 	return (
 		<>
@@ -65,13 +65,6 @@ export function TalkHero({ talk }: { talk: ITalk }) {
 			)}
 			<div className="mt-6">
 				<TalkFacts talk={talk} />
-			</div>
-			<div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-				{(talk.description?.length ? talk.description : [talk.summary]).map(
-					(paragraph) => (
-						<p key={paragraph}>{paragraph}</p>
-					),
-				)}
 			</div>
 		</>
 	);
