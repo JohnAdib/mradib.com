@@ -5,6 +5,17 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05, presentation pages explain the talk and show its first slide
+
+John requested one to two paragraphs about the actual content of every talk
+with a PDF, based on reading that deck. Use two paragraphs in the existing
+content column and give every PDF the same first-slide preview and existing
+download treatment. Preserve the current visual style. The podcast page and
+transcription are a separate follow-up after this presentation pass is reviewed.
+All five PDF pages use the plain title header. The AI-first architecture page's
+decorative event video was removed because its slide poster overlapped the page
+title. The actual talk recording remains linked in Resources.
+
 ## 2026-10-04, PR activity supports the product engineering story
 
 John requested a clearer distinction between visible development activity
