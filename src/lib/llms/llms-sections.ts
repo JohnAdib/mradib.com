@@ -81,6 +81,11 @@ export function sectionPages(): string {
 		`- [Mentorship](${homepageUrl}/mentor): book a mentorship session with John.`,
 		`- [Talks & Speaking](${homepageUrl}/talks): all talks with slides, the podcast, and how to invite John to speak.`,
 		...talkPageLines,
+		...podcastAppearances.flatMap((pod) =>
+			pod.path
+				? [`- [${pod.title}](${homepageUrl}${pod.path}): ${pod.summary}`]
+				: [],
+		),
 		`- [${hubCopy.itemListName}](${homepageUrl}${hubRoute}): ${hubCopy.hero.thesis}`,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,
