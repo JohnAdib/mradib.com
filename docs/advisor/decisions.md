@@ -5,6 +5,18 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Background motion must be immediately perceptible
+
+John still could not see background movement and accepted the rest of the card.
+Replace the single broad gradient drift with two separate soft light pools that
+travel in opposite directions on seven- and nine-second paths. Start partway
+through each path so movement does not begin with a long easing pause. Preserve
+the clean blue palette, fixed card, portrait, name and lower links exactly.
+Both light layers respect reduced motion and hidden-tab pausing; optional sensor
+parallax remains additive. Validate rendered background change, not only active
+CSS keyframes.
+
+
 ## 2026-10-05: Visible background movement and stronger identity
 
 John could not see mobile background movement and asked for a larger portrait

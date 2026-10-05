@@ -174,3 +174,18 @@ existing unrelated warnings. Evidence: `/tmp/atsign-visible-motion-qa`,
 `/tmp/atsign-visible-motion-matrix.png` and
 `/tmp/atsign-visible-motion-comparison.png`. Physical phone sensors remain
 unverified; sensor behavior is covered by browser simulation.
+
+## 2026-10-05: Two travelling background lights
+
+John still found the broad gradient effectively static. Replaced it with two
+independently moving soft light pools, preserving all card geometry and content.
+Reviewed light/dark screenshots at 375, 430 and 1440px, plus sampled motion
+frames. Captured a nine-second animated preview at `/tmp/atsign-background-motion.gif`.
+The new rendered-background test failed against the previous effect (mean RGB
+change 4.30 in three seconds) and passed with the new effect (16.02 light,
+21.65 dark). This checks exposed background pixels, excluding the card itself.
+All 24 viewport/theme and sharing checks pass, including sensor fallback,
+reduced motion, scroll lock and QR stability. Production build, TypeScript,
+Biome and SEO passed with existing unrelated warnings. Evidence:
+`/tmp/atsign-clear-motion-qa` and `/tmp/atsign-clear-motion-matrix.png`.
+Phone behavior is simulated; physical hardware was not tested.
