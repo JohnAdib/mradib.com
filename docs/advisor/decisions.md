@@ -1102,3 +1102,8 @@ After reviewing the standalone draft, John requested the existing site header, f
 ## 2026-10-05: Podcast chronology and attribution follow-up
 
 John requested chronological topic order, a link from Joe Bignell's name to https://www.linkedin.com/in/joebignell/, and quote captions containing only "John Adib", without editing labels or quote timestamps. Topic timestamps remain visible. He approved this ownership quote wording: "As a product engineer, measuring the success of the feature you deliver is your responsibility now." This supersedes the earlier thematic-order and visible-editing-label decisions. Keep source provenance in the editorial notes.
+
+
+## 2026-10-05: Podcast card navigation
+
+John requested the entire podcast card on /talks link to its internal article. Use one accessible link around the card, with a visual call to action inside rather than a nested link. Spotify listening remains available from the article.
