@@ -1,67 +1,171 @@
 /* A quiet, single-screen contact card, separate from the article chrome. */
+/* The contact card is a focused, non-selectable event surface. */
+.share-page,
+.share-page * {
+	-webkit-user-select: none;
+	user-select: none;
+}
+/* Scope document locking to /@, including its in-card QR view. */
+html:has(.share-page),
+body:has(.share-page) {
+	height: 100%;
+	overflow: hidden;
+	overscroll-behavior: none;
+}
+body:has(.share-page) {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+}
 .share-page {
+	overscroll-behavior: none;
+	touch-action: pinch-zoom;
+}
+.share-page {
+	position: fixed;
+	inset: 0;
+	height: 100dvh;
+	overflow: hidden;
+	isolation: isolate;
 	display: grid;
 	place-items: center;
-	min-height: 100svh;
+	min-height: 0;
 	width: 100%;
-	padding: max(64px, env(safe-area-inset-top))
-		max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
-		max(24px, env(safe-area-inset-left));
-	color: var(--color-zinc-900);
+	padding: max(76px, env(safe-area-inset-top))
+		max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
+		max(20px, env(safe-area-inset-left));
+	background:
+		radial-gradient(ellipse at 15% 15%, #dcecff 0, transparent 58%),
+		radial-gradient(ellipse at 90% 85%, #b9cfe6 0, transparent 62%), #edf3f9;
+	color: #f6f7fa;
 }
 .share-card {
-	width: min(100%, 340px);
+	position: relative;
+	width: min(100%, 400px);
+	padding: 32px;
+	border: 1px solid #ffffff3b;
+	border-radius: 32px;
+	background: linear-gradient(145deg, #263e59e8, #101e30ed);
+	-webkit-backdrop-filter: blur(28px) saturate(150%);
+	backdrop-filter: blur(28px) saturate(150%);
+	box-shadow:
+		0 20px 60px -28px #19365d66,
+		inset 0 1px 0 #ffffff30,
+		inset 0 -1px 0 #ffffff08;
+}
+.share-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
+	background: linear-gradient(
+		120deg,
+		#ffffff0b,
+		transparent 38%,
+		transparent 70%,
+		#ffffff04
+	);
 }
 .share-identity {
 	text-align: center;
 }
 .share-portrait {
-	width: clamp(72px, 13svh, 112px);
+	width: clamp(80px, 12svh, 100px);
 	height: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	object-fit: cover;
 	margin: 0 auto;
+	border: 4px solid #ffffff0a;
+	box-shadow: 0 0 0 1px #ffffff2b;
+	-webkit-user-drag: none;
 }
 .share-identity h1 {
-	font: 400 clamp(2.5rem, 6svh, 3.5rem) / 1.1 var(--font-display);
-	margin: 20px 0 0;
+	font: 400 clamp(2.5rem, 6svh, 3.25rem) / 1.1 var(--font-display);
+	margin: 18px 0 0;
 	letter-spacing: -0.025em;
 }
-.share-links {
-	margin-top: clamp(24px, 4svh, 36px);
+.share-views {
+	display: grid;
+	margin-top: 24px;
 }
+.share-view {
+	grid-area: 1 / 1;
+	align-self: center;
+	min-width: 0;
+	transition:
+		opacity 260ms ease,
+		transform 440ms cubic-bezier(0.22, 1, 0.36, 1),
+		visibility 440ms;
+}
+.share-qr-view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px) scale(0.97);
+}
+.share-views[data-sharing="true"] .share-links-view {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px) scale(0.97);
+}
+.share-views[data-sharing="true"] .share-qr-view {
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+}
+
 .share-socials {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
 }
 .share-social {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	gap: 12px;
-	min-height: 54px;
-	padding: 12px 16px;
-	border-bottom: 1px solid var(--color-zinc-200);
+	gap: 10px;
+	min-height: 56px;
+	padding: 16px;
+	border: 1px solid #ffffff24;
+	border-radius: 16px;
+	background: linear-gradient(145deg, #ffffff12, #ffffff04);
+	box-shadow: inset 0 1px 0 #ffffff10;
+	color: #e7ebf2;
 	font-size: 0.9375rem;
-	transition:
-		color 180ms ease,
-		background-color 180ms ease;
+	font-weight: 500;
 }
-.share-social:first-child {
-	color: #0a66c2;
-	border-top: 1px solid var(--color-zinc-200);
+.share-social svg {
+	width: 22px;
+	height: 22px;
+}
+.share-social-linkedin {
+	grid-column: 1 / -1;
+	flex-direction: row;
+	min-height: 56px;
+	gap: 12px;
+	background: linear-gradient(160deg, #1479da, #095fb5);
+	border-color: #3787d7;
+	color: white;
 }
 .share-pages {
 	display: flex;
 	justify-content: center;
-	gap: 28px;
-	margin: 16px 0 12px;
-	font-size: 0.875rem;
+	gap: 6px;
+	margin: 20px -8px 8px;
+	font-size: 0.8125rem;
 }
 .share-pages a {
 	display: grid;
 	min-height: 44px;
+	padding: 0 16px;
 	place-items: center;
+	border-radius: 999px;
+	color: #d8e0eb;
 }
 .share-contact {
 	text-align: center;
@@ -69,8 +173,8 @@
 .share-email {
 	display: inline-block;
 	padding: 8px 0;
-	font-size: 0.8125rem;
-	color: var(--color-zinc-500);
+	font-size: 0.75rem;
+	color: #aab6c7;
 }
 .share-trigger {
 	position: absolute;
@@ -82,170 +186,201 @@
 	height: 48px;
 	cursor: pointer;
 	border-radius: 50%;
+	color: #26364d;
 }
-.share-page :is(a, button),
-.share-dialog button {
+.share-page :is(a, button) {
 	transition:
 		color 180ms ease,
-		background-color 180ms ease;
+		background-color 180ms ease,
+		border-color 180ms ease;
 }
-.share-page :is(a, button):focus-visible,
-.share-dialog button:focus-visible {
-	outline: 2px solid #0a66c2;
+.share-page :is(a, button):focus-visible {
+	outline: 2px solid #70b5f9;
 	outline-offset: 4px;
 }
-.share-dialog {
-	position: fixed;
-	inset: 0;
-	z-index: 100;
-}
-.share-backdrop {
-	position: fixed;
-	inset: 0;
-	background: rgb(0 0 0 / 0.5);
-}
-.share-dialog-position {
-	position: fixed;
-	inset: 0;
-	display: grid;
-	place-items: center;
-	padding: 16px;
-	overflow-y: auto;
-}
-.share-qr-panel {
-	position: relative;
-	width: min(100%, 380px);
-	color: #18181b;
-	text-align: center;
-}
-.share-qr-surface {
-	position: absolute;
-	inset: 0;
+.share-qr-image {
+	width: clamp(132px, 25svh, 200px);
+	height: auto;
 	background: white;
-	border-radius: 24px;
-	transform-origin: top left;
-}
-.share-qr-content {
-	position: relative;
-	padding: 44px 24px 16px;
-}
-.share-qr-panel h2 {
-	font: 400 2rem / 1.1 var(--font-display);
+	border-radius: 16px;
+	-webkit-user-drag: none;
+	box-shadow: 0 6px 24px #00000014;
 }
 .share-address {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	min-height: 44px;
+	margin-top: 8px;
 	padding: 0 12px;
-	font-size: 1rem;
+	font-size: 0.9375rem;
 	cursor: pointer;
-	border-radius: 8px;
-}
-.share-qr-close {
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	width: 44px;
-	height: 44px;
-	display: grid;
-	place-items: center;
-	cursor: pointer;
-	border-radius: 50%;
-}
-.share-qr-image {
-	width: min(100%, 320px, 48svh);
-	height: auto;
-	margin: 12px auto 0;
+	border-radius: 12px;
+	color: #f6f7fa;
 }
 .share-status {
 	min-height: 18px;
+	max-width: 240px;
 	font-size: 0.75rem;
-	color: #52525b;
-	margin-top: 2px;
+	line-height: 18px;
+	text-align: center;
+	color: #c2d1e2;
 }
 .dark .share-page {
-	color: var(--color-zinc-100);
+	background:
+		radial-gradient(ellipse at 20% 10%, #223f61 0, transparent 58%),
+		radial-gradient(ellipse at 95% 95%, #1e3854 0, transparent 62%), #0b1422;
 }
-.dark .share-social {
-	border-color: var(--color-zinc-800);
+.dark .share-card {
+	background: linear-gradient(145deg, #314b6666, #15233899);
+	box-shadow:
+		0 20px 64px -28px #00000070,
+		inset 0 1px 0 #ffffff24;
 }
-.dark .share-social:first-child {
-	color: #70b5f9;
-}
-.dark .share-email {
-	color: var(--color-zinc-400);
+.dark .share-trigger {
+	color: #d8e0eb;
 }
 @media (hover: hover) {
-	.share-social:hover,
-	.share-trigger:hover {
-		background-color: rgb(127 127 127 / 0.08);
+	.share-social:hover {
+		background-color: #ffffff10;
+		border-color: #ffffff30;
 	}
-	.share-pages a:hover,
+	.share-social-linkedin:hover {
+		background-color: #0758aa;
+		border-color: #70b5f9;
+	}
+	.share-pages a:hover {
+		background-color: #ffffff0d;
+		color: white;
+	}
 	.share-email:hover {
-		color: #0a66c2;
+		color: white;
 	}
-	.share-address:hover,
-	.share-qr-close:hover {
-		background-color: #f4f4f5;
+	.share-trigger:hover {
+		background-color: #7f7f7f14;
+	}
+	.share-address:hover {
+		background-color: #ffffff12;
 	}
 }
-@media (max-height: 600px) and (min-width: 600px) {
+@media (max-height: 680px) and (max-width: 599px) {
+	.share-page {
+		padding-top: 64px;
+		padding-bottom: 16px;
+	}
+	.share-card {
+		padding: 24px;
+		border-radius: 28px;
+	}
+	.share-portrait {
+		width: 72px;
+	}
+	.share-identity h1 {
+		margin-top: 14px;
+		font-size: 2.5rem;
+	}
+	.share-views {
+		margin-top: 22px;
+	}
+	.share-social {
+		min-height: 52px;
+		padding: 12px;
+		gap: 8px;
+	}
+	.share-social-linkedin {
+		min-height: 52px;
+	}
+	.share-pages {
+		margin-top: 12px;
+	}
+}
+@media (max-height: 600px) and (min-width: 500px) {
 	.share-page {
 		padding-top: 72px;
+		padding-bottom: 16px;
 	}
 	.share-card {
 		width: min(100%, 720px);
+		padding: 24px;
 		display: grid;
 		grid-template-columns: 1fr 1.2fr;
-		gap: 36px;
+		gap: 32px;
 		align-items: center;
 	}
-	.share-links {
+	.share-views {
 		margin-top: 0;
 	}
 	.share-portrait {
-		width: 90px;
+		width: 80px;
 	}
 	.share-identity h1 {
 		font-size: 2.5rem;
 	}
 	.share-social {
-		min-height: 44px;
-		padding-block: 8px;
+		min-height: 48px;
+		padding: 10px;
+		gap: 6px;
+	}
+	.share-social-linkedin {
+		min-height: 46px;
 	}
 	.share-pages {
-		margin-block: 6px;
+		margin-block: 8px 0;
 	}
-	.share-qr-content {
-		padding-top: 40px;
-		padding-bottom: 8px;
+	.share-email {
+		padding-top: 4px;
 	}
 	.share-qr-image {
-		width: min(100%, 40svh);
-		margin-top: 4px;
+		width: clamp(104px, 34svh, 168px);
 	}
 }
-@media (max-height: 640px) and (max-width: 599px) {
+@media (max-height: 560px) and (max-width: 499px) {
+	.share-card {
+		padding: 20px;
+	}
 	.share-portrait {
-		width: 64px;
+		width: 48px;
 	}
 	.share-identity h1 {
-		margin-top: 12px;
+		font-size: 2.25rem;
+		margin-top: 10px;
 	}
-	.share-links {
-		margin-top: 20px;
+	.share-views {
+		margin-top: 16px;
 	}
 	.share-social {
-		min-height: 46px;
-		padding-block: 8px;
+		min-height: 48px;
+		padding: 8px;
+		gap: 6px;
+	}
+	.share-social-linkedin {
+		min-height: 44px;
 	}
 	.share-pages {
-		margin-block: 8px;
+		margin-top: 6px;
+	}
+}
+@media (max-height: 360px) and (min-width: 500px) {
+	.share-page {
+		padding-top: 64px;
+		padding-bottom: 8px;
+	}
+	.share-card {
+		padding: 16px;
+	}
+	.share-social {
+		min-height: 56px;
+		padding: 8px;
+	}
+	.share-social-linkedin {
+		min-height: 44px;
+	}
+	.share-pages {
+		margin: 0 -8px;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
-	.share-page *,
-	.share-dialog * {
+	.share-page * {
 		transition: none;
 	}
 }

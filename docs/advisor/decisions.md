@@ -5,6 +5,37 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Clean glass and sharing inside the at-sign card
+
+John requested a clean background without grain, more polished buttons, subtle
+3D movement and QR sharing inside the existing card. Keep the avatar and name
+in place while the lower panel crossfades between links and QR. Use translucent
+glass surfaces with smooth background lighting. GitHub and X are text-only;
+LinkedIn retains its blue treatment. Reuse TiltCard with viewport tracking capped
+at 2.5 degrees, smooth pointer-leave return and reduced-motion support. Preserve
+the mobile scroll lock, personal email, QR destination and native sharing.
+
+## 2026-10-05: Lock the at-sign page against mobile scrolling
+
+John requested that `/@` cannot move vertically on mobile, including browser
+overscroll. Fix its document and surface to the viewport, disable overscroll and
+allow pinch zoom without single-finger panning. Apply the same gesture policy to
+the QR dialog. Compact short phone and landscape layouts keep links visible.
+The lock is scoped to the at-sign page; ordinary website pages still scroll.
+
+## 2026-10-05: Redesign the at-sign page and retire Instagram links
+
+John rejected the flat list design on `/@` and requested a more polished mobile
+UI, a richer background, different link shapes and no selectable content.
+Use a compact ink-coloured card on a textured, theme-aware background, a blue
+LinkedIn button, paired GitHub and X tiles and pill-shaped site navigation.
+Keep the About portrait, personal email at the bottom and the top-right morphing
+QR panel. This changes the at-sign page, not the existing Contact page.
+
+Remove Instagram links throughout the website, including shared navigation,
+photography pages, the email signature and the AI-readable social index.
+Retain `/instagram` as a legacy redirect to `/@`, with no external destination.
+
 ## 2026-10-05, presentation pages explain the talk and show its first slide
 
 John requested one to two paragraphs about the actual content of every talk

@@ -1,5 +1,7 @@
 import fs from "node:fs/promises";
 import { chromium } from "playwright-core";
+import { verifyMobileScrollLock } from "./share-scroll-check.mjs";
+import { verifyTilt } from "./share-tilt-check.mjs";
 
 const browser = await chromium.launch({ channel: "chrome", headless: true });
 const output = process.env.SHARE_SCREENSHOTS || "/tmp/mradib-share-qa";
@@ -14,6 +16,8 @@ const sizes = [
 	[1920, 1080],
 	[2560, 1440],
 	[320, 568],
+	[320, 480],
+	[568, 320],
 	[667, 375],
 	[896, 414],
 ];
@@ -41,26 +45,60 @@ for (const theme of ["light", "dark"]) {
 			innerWidth,
 			innerHeight,
 			title: document.title,
+			clipped: [
+				...document.querySelectorAll(
+					".share-card, .share-trigger, .share-page a",
+				),
+			].some((el) => {
+				const rect = el.getBoundingClientRect();
+				return (
+					rect.top < 0 ||
+					rect.bottom > innerHeight ||
+					rect.left < 0 ||
+					rect.right > innerWidth
+				);
+			}),
+			selectable: [
+				...document.querySelectorAll(".share-page, .share-page *"),
+			].some((el) => getComputedStyle(el).userSelect !== "none"),
 			links: [...document.querySelectorAll("main a")].map((a) =>
 				a.getAttribute("href"),
 			),
 		}));
+		if (fit.clipped)
+			throw new Error(`Clipped contact controls at ${width}x${height}`);
+		if (fit.selectable) throw new Error("At-sign page allows selection");
+		if (fit.links.some((href) => href?.includes("instagram")))
+			throw new Error("Instagram link on at-sign page");
 		if (fit.links.some((href) => href?.includes("justzapp")))
 			throw new Error("Work email exposed");
 		if (fit.width > width || fit.height > height)
 			throw new Error(JSON.stringify({ theme, width, height, ...fit }));
 		await page.screenshot({ path: `${output}/share-${theme}-${width}.png` });
+		const identityBefore = await page.locator(".share-identity").boundingBox();
 		await page
 			.getByRole("button", { name: "Share profile", exact: true })
 			.click();
-		await page.getByRole("dialog").waitFor();
-		const qrFit = await page.getByRole("dialog").locator("img").boundingBox();
+		await page.getByRole("region", { name: "QR code" }).waitFor();
+		if (
+			JSON.stringify(await page.locator(".share-identity").boundingBox()) !==
+			JSON.stringify(identityBefore)
+		)
+			throw new Error("Identity moved when sharing");
+		if (await page.getByRole("link", { name: /LinkedIn/ }).count())
+			throw new Error("Hidden links remain accessible");
+		const qrFit = await page
+			.getByRole("region", { name: "QR code" })
+			.locator("img")
+			.boundingBox();
 		if (qrFit.x < 0 || qrFit.y < 0 || qrFit.y + qrFit.height > height)
 			throw new Error("QR outside viewport");
 		if (width === 375)
 			await page.screenshot({ path: `${output}/qr-${theme}.png` });
 		await page.keyboard.press("Escape");
-		await page.getByRole("dialog").waitFor({ state: "hidden" });
+		await page
+			.getByRole("region", { name: "QR code" })
+			.waitFor({ state: "hidden" });
 		if (
 			!(await page
 				.getByRole("button", { name: "Share profile", exact: true })
@@ -79,16 +117,16 @@ const page = await context.newPage();
 await page.goto(`${base}/@`);
 await page.locator(".share-email[href]").waitFor();
 await page.getByRole("button", { name: "Share profile", exact: true }).click();
-await page.getByRole("dialog").waitFor();
+await page.getByRole("region", { name: "QR code" }).waitFor();
 const morphFrames = await page
-	.locator(".share-qr-surface")
+	.locator(".share-qr-view")
 	.evaluate((element) =>
 		element
 			.getAnimations()
 			.flatMap((animation) => animation.effect.getKeyframes()),
 	);
 if (!morphFrames.some((frame) => frame.transform?.includes("scale(")))
-	throw new Error("Missing trigger-to-panel morph");
+	throw new Error("Missing in-card QR transition");
 await page.evaluate(() =>
 	Object.defineProperty(navigator, "share", {
 		value: undefined,
@@ -120,6 +158,8 @@ if (
 )
 	throw new Error("Native share payload");
 await context.close();
+await verifyMobileScrollLock(browser, base);
+await verifyTilt(browser, base);
 await browser.close();
 await fs.writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
 console.log(

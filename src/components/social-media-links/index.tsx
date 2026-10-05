@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import {
 	GitHubIcon,
-	InstagramIcon,
 	LinkedInIcon,
 	TelegramIcon,
 	XIcon,
@@ -57,15 +56,6 @@ export function SocialMediaLinks({
 				isShowName={isShowName}
 			>
 				GitHub
-			</SocialLink>
-
-			<SocialLink
-				href="/instagram"
-				ariaLabel="See MrAdib photos on Instagram"
-				icon={InstagramIcon}
-				isShowName={isShowName}
-			>
-				Instagram
 			</SocialLink>
 		</nav>
 	);

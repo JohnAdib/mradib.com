@@ -8,7 +8,6 @@ export const shareProfile = {
 	socials: [
 		{ label: "LinkedIn", href: urlSocial.linkedin, icon: "linkedin" },
 		{ label: "GitHub", href: urlSocial.github, icon: "github" },
-		{ label: "Instagram", href: urlSocial.instagram, icon: "instagram" },
 		{ label: "X", href: urlSocial.twitter, icon: "x" },
 	],
 	pages: [

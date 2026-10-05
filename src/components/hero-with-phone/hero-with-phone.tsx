@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 import imgInstagramPageScreenshot from "./instagram-page-screenshot.jpg";
@@ -45,26 +44,6 @@ export function HeroWithPhone() {
 			</svg>
 			<div className="mx-auto py-12 sm:py-16 lg:flex lg:items-center lg:gap-x-10 lg:py-20">
 				<div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-					<div className="flex select-none">
-						<div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm transition leading-6 text-stone-600 dark:text-stone-300 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
-							<span className="font-semibold text-sky-700 dark:text-sky-300">
-								Follow me on
-							</span>
-							<span className="h-4 w-px bg-stone-900/10" aria-hidden="true" />
-							<Link
-								href="https://mradib.com/instagram"
-								className="flex items-center gap-x-1"
-								target="_blank"
-							>
-								<span className="absolute inset-0" aria-hidden="true" />
-								Instagram
-								<ChevronRightIcon
-									className="-mr-2 h-5 w-5 text-gray-400"
-									aria-hidden="true"
-								/>
-							</Link>
-						</div>
-					</div>
 					<h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight sm:text-6xl">
 						Smile is Gold
 					</h1>

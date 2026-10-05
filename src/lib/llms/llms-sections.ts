@@ -106,7 +106,6 @@ export function sectionProfiles(): string {
 		`- GitNation (speaker profile): ${urlGitNation}`,
 		`- X/Twitter: ${urlSocial.twitter}`,
 		`- YouTube: ${urlSocial.youtube}`,
-		`- Instagram: ${urlSocial.instagram}`,
 		`- Telegram: ${urlSocial.telegram}`,
 		`- Resume: ${urlSocial.resume}`,
 	].join("\n");
