@@ -39,3 +39,15 @@ visual work.
 
 If a capture fails the checklist, the change does not ship. Fix it or raise
 it with John; never commit a known visual defect silently.
+
+
+## 2026-10-05: Event sharing page
+
+Reviewed light and dark layouts at 375, 430, 768, 1024, 1440, 1920 and 2560px,
+plus 320px phones and two landscape sizes. The card fits without scrolling;
+landscape places identity beside links. A quiet portrait and Newsreader name
+establish identity, with LinkedIn first and equal-weight secondary links.
+QR popup keeps a clean white background in both themes. Verified QR decoding,
+Escape, restored focus, native share payload and clipboard fallback. Reduced
+motion removes entry and dialog transitions. Browser checks are repeatable via
+`npm run test:share-browser` with optional `SHARE_BASE_URL` and `SHARE_SCREENSHOTS`.

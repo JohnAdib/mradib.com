@@ -5,6 +5,15 @@ const portrait = { src: "/img/john-adib-hero.jpg", fit: "cover" } as const;
 // Social cards for the English hub and identity pages.
 export const ogCardsEn: IOgCard[] = [
 	{
+		slug: "share",
+		route: "/share",
+		lang: "en",
+		eyebrow: "MrAdib.com",
+		headline: "John Adib",
+		proof: "Social profiles, talks and contact details.",
+		artwork: portrait,
+	},
+	{
 		slug: "home",
 		route: "/",
 		lang: "en",

@@ -1090,3 +1090,20 @@ John requested a directly accessible page for Beyond the QA Bottleneck before ev
 ## 2026-10-05: One visual for the QA talk cover
 
 John chose the dark social-card design with soft teal light for the opening slide as well. Use the slide cover for the page preview and social image, with a social crop. Keep the subtitle “Building confidence in React Native with AI”. No TBC wording in the artwork; uncertainty stays in the page details.
+
+
+## 2026-10-05: A contact card for events
+
+John requested a compact, mobile page he can share at events, with social links,
+About, Talks, Website, his explicitly supplied work email, and a QR display.
+Use `/share`, a memorable spoken URL. Keep the page free of marketing copy and
+site navigation, with a dedicated root layout. Use the existing portrait,
+Newsreader/Inter typography and teal accent. LinkedIn is the primary social link.
+Native sharing falls back to copying the address. The QR dialog keeps a white
+quiet zone, traps focus, dismisses with Escape and restores focus to its trigger.
+
+The page fits standard phone and landscape viewports without scrolling. Content
+remains reachable at exceptional text zoom rather than being clipped. Generate
+both QR assets from `src/data/share.ts` with `npm run qr:build` and verify they
+decode to the canonical URL with `npm run test:share`. The final talk slide uses
+the same QR, so it can stay visible during questions.

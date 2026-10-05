@@ -22,7 +22,10 @@
 		"test:guides-data": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs --test tests/guides-data.test.mjs",
 		"verify:photos": "node scripts/verify-profile-images.mjs",
 		"verify:seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/verify-sitemap.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/verify-metadata.mjs && node scripts/verify-constraints.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/verify-article-privacy.mjs",
-		"verify:links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/verify-links.mjs"
+		"verify:links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/verify-links.mjs",
+		"qr:build": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs scripts/generate-share-qr.mjs",
+		"test:share": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --import ./scripts/lib/register-ts-alias.mjs --test tests/share-qr.test.mjs",
+		"test:share-browser": "node tests/share-page.browser.mjs"
 	},
 	"browserslist": "defaults, not ie <= 11",
 	"dependencies": {
@@ -50,7 +53,9 @@
 		"@types/react-dom": "^19.2.3",
 		"@types/react-syntax-highlighter": "^15.5.13",
 		"globals": "17.7.0",
+		"jsqr": "^1.4.0",
 		"playwright-core": "^1.56.1",
+		"qrcode": "^1.5.4",
 		"sharp": "0.35.3",
 		"typescript": "^6.0.3"
 	}
