@@ -74,6 +74,7 @@ export function sectionPages(): string {
 		"## Pages",
 		"",
 		`- [Home](${homepageUrl}/)`,
+		`- [Links & contact](${homepageUrl}/@): social profiles, email and a QR code for sharing.`,
 		`- [About John Adib](${homepageUrl}/about)`,
 		`- [Awards & Recognition](${homepageUrl}/awards): every award, with evidence and the story behind it.`,
 		...awardLines,

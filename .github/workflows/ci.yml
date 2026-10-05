@@ -61,3 +61,6 @@ jobs:
 
       - name: Type checking
         run: npm run check-types
+
+      - name: Verify sharing QR assets
+        run: npm run test:share

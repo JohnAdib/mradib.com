@@ -1087,6 +1087,36 @@ places: the About closing (already existed), a footer "CV ↗" link, and a
 
 John requested a directly accessible page for Beyond the QA Bottleneck before event details are finalized. Use an Upcoming talks section, keep unknown details null and display TBC. Retain the PPTX outside public assets and expose only the PDF download. Keep the existing article URL separate.
 
+## 2026-10-05: Refine the event contact card
+
+John changed the canonical page to `/@`. Use the About hero portrait and the
+Contact page's shared EmailLink component at the bottom. Remove the separate
+work-email field. Identity is only the portrait and name. Social links are flat
+rows without arrows or hover movement, with LinkedIn blue. A plain top-right
+share icon morphs into the QR panel. Tapping the address invokes native sharing,
+with clipboard fallback. Reduced motion skips the spatial animation.
+
+The shared dynamic root route generates `@` and existing moved-guide redirects;
+its root layout omits site chrome only for the contact card. Decode the route
+parameter because Next encodes `@` in the page render. QR assets and the final
+presentation slide use `https://mradib.com/@`.
+
+## 2026-10-05: A contact card for events
+
+John requested a compact, mobile page he can share at events, with social links,
+About, Talks, Website, his explicitly supplied work email, and a QR display.
+Use `/share`, a memorable spoken URL. Keep the page free of marketing copy and
+site navigation, with a dedicated root layout. Use the existing portrait,
+Newsreader/Inter typography and teal accent. LinkedIn is the primary social link.
+Native sharing falls back to copying the address. The QR dialog keeps a white
+quiet zone, traps focus, dismisses with Escape and restores focus to its trigger.
+
+The page fits standard phone and landscape viewports without scrolling. Content
+remains reachable at exceptional text zoom rather than being clipped. Generate
+both QR assets from `src/data/share.ts` with `npm run qr:build` and verify they
+decode to the canonical URL with `npm run test:share`. The final talk slide uses
+the same QR, so it can stay visible during questions.
+
 ## 2026-10-05: One visual for the QA talk cover
 
 John chose the dark social-card design with soft teal light for the opening slide as well. Use the slide cover for the page preview and social image, with a social crop. Keep the subtitle “Building confidence in React Native with AI”. No TBC wording in the artwork; uncertainty stays in the page details.

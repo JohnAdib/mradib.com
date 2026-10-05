@@ -1,0 +1,251 @@
+/* A quiet, single-screen contact card, separate from the article chrome. */
+.share-page {
+	display: grid;
+	place-items: center;
+	min-height: 100svh;
+	width: 100%;
+	padding: max(64px, env(safe-area-inset-top))
+		max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
+		max(24px, env(safe-area-inset-left));
+	color: var(--color-zinc-900);
+}
+.share-card {
+	width: min(100%, 340px);
+}
+.share-identity {
+	text-align: center;
+}
+.share-portrait {
+	width: clamp(72px, 13svh, 112px);
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 0 auto;
+}
+.share-identity h1 {
+	font: 400 clamp(2.5rem, 6svh, 3.5rem) / 1.1 var(--font-display);
+	margin: 20px 0 0;
+	letter-spacing: -0.025em;
+}
+.share-links {
+	margin-top: clamp(24px, 4svh, 36px);
+}
+.share-socials {
+	display: grid;
+}
+.share-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	min-height: 54px;
+	padding: 12px 16px;
+	border-bottom: 1px solid var(--color-zinc-200);
+	font-size: 0.9375rem;
+	transition:
+		color 180ms ease,
+		background-color 180ms ease;
+}
+.share-social:first-child {
+	color: #0a66c2;
+	border-top: 1px solid var(--color-zinc-200);
+}
+.share-pages {
+	display: flex;
+	justify-content: center;
+	gap: 28px;
+	margin: 16px 0 12px;
+	font-size: 0.875rem;
+}
+.share-pages a {
+	display: grid;
+	min-height: 44px;
+	place-items: center;
+}
+.share-contact {
+	text-align: center;
+}
+.share-email {
+	display: inline-block;
+	padding: 8px 0;
+	font-size: 0.8125rem;
+	color: var(--color-zinc-500);
+}
+.share-trigger {
+	position: absolute;
+	top: max(16px, env(safe-area-inset-top));
+	right: max(20px, env(safe-area-inset-right));
+	display: grid;
+	place-items: center;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.share-page :is(a, button),
+.share-dialog button {
+	transition:
+		color 180ms ease,
+		background-color 180ms ease;
+}
+.share-page :is(a, button):focus-visible,
+.share-dialog button:focus-visible {
+	outline: 2px solid #0a66c2;
+	outline-offset: 4px;
+}
+.share-dialog {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+}
+.share-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgb(0 0 0 / 0.5);
+}
+.share-dialog-position {
+	position: fixed;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	padding: 16px;
+	overflow-y: auto;
+}
+.share-qr-panel {
+	position: relative;
+	width: min(100%, 380px);
+	color: #18181b;
+	text-align: center;
+}
+.share-qr-surface {
+	position: absolute;
+	inset: 0;
+	background: white;
+	border-radius: 24px;
+	transform-origin: top left;
+}
+.share-qr-content {
+	position: relative;
+	padding: 44px 24px 16px;
+}
+.share-qr-panel h2 {
+	font: 400 2rem / 1.1 var(--font-display);
+}
+.share-address {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 0 12px;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 8px;
+}
+.share-qr-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 44px;
+	height: 44px;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.share-qr-image {
+	width: min(100%, 320px, 48svh);
+	height: auto;
+	margin: 12px auto 0;
+}
+.share-status {
+	min-height: 18px;
+	font-size: 0.75rem;
+	color: #52525b;
+	margin-top: 2px;
+}
+.dark .share-page {
+	color: var(--color-zinc-100);
+}
+.dark .share-social {
+	border-color: var(--color-zinc-800);
+}
+.dark .share-social:first-child {
+	color: #70b5f9;
+}
+.dark .share-email {
+	color: var(--color-zinc-400);
+}
+@media (hover: hover) {
+	.share-social:hover,
+	.share-trigger:hover {
+		background-color: rgb(127 127 127 / 0.08);
+	}
+	.share-pages a:hover,
+	.share-email:hover {
+		color: #0a66c2;
+	}
+	.share-address:hover,
+	.share-qr-close:hover {
+		background-color: #f4f4f5;
+	}
+}
+@media (max-height: 600px) and (min-width: 600px) {
+	.share-page {
+		padding-top: 72px;
+	}
+	.share-card {
+		width: min(100%, 720px);
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+		gap: 36px;
+		align-items: center;
+	}
+	.share-links {
+		margin-top: 0;
+	}
+	.share-portrait {
+		width: 90px;
+	}
+	.share-identity h1 {
+		font-size: 2.5rem;
+	}
+	.share-social {
+		min-height: 44px;
+		padding-block: 8px;
+	}
+	.share-pages {
+		margin-block: 6px;
+	}
+	.share-qr-content {
+		padding-top: 40px;
+		padding-bottom: 8px;
+	}
+	.share-qr-image {
+		width: min(100%, 40svh);
+		margin-top: 4px;
+	}
+}
+@media (max-height: 640px) and (max-width: 599px) {
+	.share-portrait {
+		width: 64px;
+	}
+	.share-identity h1 {
+		margin-top: 12px;
+	}
+	.share-links {
+		margin-top: 20px;
+	}
+	.share-social {
+		min-height: 46px;
+		padding-block: 8px;
+	}
+	.share-pages {
+		margin-block: 8px;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.share-page *,
+	.share-dialog * {
+		transition: none;
+	}
+}
