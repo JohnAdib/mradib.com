@@ -11,8 +11,7 @@ function monthYear(date: string): string {
 }
 
 function talkProof(talk: ITalk): string {
-	if (!talk.date)
-		return "Building confidence in React Native with AI. Event details TBC.";
+	if (!talk.date) return talk.subtitle ?? talk.summary;
 	const where = talk.host
 		? `hosted by ${talk.host}`
 		: talk.city === "Online"
@@ -23,7 +22,7 @@ function talkProof(talk: ITalk): string {
 	return sentence.charAt(0).toUpperCase() + sentence.slice(1);
 }
 
-// Always the event logo, never the cover slide: slides carry their own text
+// Default to an event logo in the artwork panel: slides carry their own text
 // and crop badly at 400x486, while logo panels stay consistent across talks.
 function talkArtwork(talk: ITalk): IOgCard["artwork"] {
 	if (talk.logo) return { src: talk.logo, fit: "contain" };
@@ -41,4 +40,6 @@ export const ogCardsTalks: IOgCard[] = talks
 		headline: talk.title,
 		proof: talkProof(talk),
 		artwork: talkArtwork(talk),
+		image:
+			talk.shareSlideCover && talk.image ? `public${talk.image}` : undefined,
 	}));

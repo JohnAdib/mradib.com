@@ -22,6 +22,7 @@ export interface ITalk {
 	/** Root URL of this talk's own page. Omit for an entry with no page, e.g. a panel. */
 	path?: string;
 	title: string;
+	subtitle?: string;
 	/** Defaults to a talk when unset. */
 	format?: TalkFormat;
 	/** Upcoming talks are not counted as past appearances. */
@@ -47,6 +48,8 @@ export interface ITalk {
 	/** Ambient background video behind the hero header. Always muted and looped. Path under /talks, or a full URL. */
 	video?: string;
 	slidesPdf?: string;
+	/** Use the slide cover for social sharing, cropped to 1200 by 630. */
+	shareSlideCover?: boolean;
 	/** The specific event page. */
 	eventUrl?: string;
 	/** The provider's reference for the talk, e.g. a GitNation profile. */
