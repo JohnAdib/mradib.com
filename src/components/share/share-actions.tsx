@@ -6,13 +6,14 @@ import {
 	DialogPanel,
 	DialogTitle,
 } from "@headlessui/react";
-import { QrCodeIcon, ShareIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ShareIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState } from "react";
 import { shareProfile } from "@/data/share";
+import { useShareMorph } from "./use-share-morph";
 
 export function ShareActions() {
-	const [open, setOpen] = useState(false);
+	const morph = useShareMorph();
 	const [status, setStatus] = useState("");
 	async function share() {
 		setStatus("");
@@ -28,48 +29,58 @@ export function ShareActions() {
 			}
 		} catch (error) {
 			if (error instanceof Error && error.name === "AbortError") return;
-			setStatus(
-				"Unable to share. Use the QR code or copy the address from your browser.",
-			);
+			setStatus("Unable to share. You can scan the QR code instead.");
 		}
 	}
 	return (
 		<>
-			<div className="share-actions">
-				<button type="button" onClick={() => setOpen(true)}>
-					<QrCodeIcon className="size-5" />
-					QR code
-				</button>
-				<button type="button" onClick={share}>
-					<ShareIcon className="size-5" />
-					Share
-				</button>
-			</div>
-			<p className="share-status" role="status">
-				{status}
-			</p>
-			<Dialog open={open} onClose={setOpen} className="share-dialog">
-				<DialogBackdrop transition className="share-backdrop" />
+			<button
+				ref={morph.trigger}
+				type="button"
+				className="share-trigger"
+				aria-label="Share profile"
+				onClick={() => {
+					setStatus("");
+					morph.show();
+				}}
+			>
+				<ShareIcon className="size-6" />
+			</button>
+			<Dialog open={morph.open} onClose={morph.close} className="share-dialog">
+				<DialogBackdrop className="share-backdrop" />
 				<div className="share-dialog-position">
-					<DialogPanel transition className="share-qr-panel">
-						<button
-							type="button"
-							className="share-qr-close"
-							aria-label="Close QR code"
-							onClick={() => setOpen(false)}
-						>
-							<XMarkIcon className="size-6" />
-						</button>
-						<DialogTitle>{shareProfile.name}</DialogTitle>
-						<Image
-							src={shareProfile.qr}
-							alt="QR code linking to mradib.com/share"
-							width={320}
-							height={320}
-							unoptimized
-							className="share-qr-image"
-						/>
-						<a href={shareProfile.url}>mradib.com/share</a>
+					<DialogPanel ref={morph.panel} className="share-qr-panel">
+						<div className="share-qr-surface" aria-hidden="true" />
+						<div className="share-qr-content">
+							<button
+								type="button"
+								className="share-qr-close"
+								aria-label="Close QR code"
+								onClick={morph.close}
+							>
+								<XMarkIcon className="size-6" />
+							</button>
+							<DialogTitle>{shareProfile.name}</DialogTitle>
+							<Image
+								src={shareProfile.qr}
+								alt="QR code linking to mradib.com/@"
+								width={320}
+								height={320}
+								unoptimized
+								className="share-qr-image"
+							/>
+							<button
+								type="button"
+								className="share-address"
+								onClick={share}
+								aria-label="Share mradib.com/@"
+							>
+								mradib.com/@
+							</button>
+							<p className="share-status" role="status">
+								{status}
+							</p>
+						</div>
 					</DialogPanel>
 				</div>
 			</Dialog>

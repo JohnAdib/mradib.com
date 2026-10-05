@@ -1087,6 +1087,20 @@ places: the About closing (already existed), a footer "CV ↗" link, and a
 
 John requested a directly accessible page for Beyond the QA Bottleneck before event details are finalized. Use an Upcoming talks section, keep unknown details null and display TBC. Retain the PPTX outside public assets and expose only the PDF download. Keep the existing article URL separate.
 
+## 2026-10-05: Refine the event contact card
+
+John changed the canonical page to `/@`. Use the About hero portrait and the
+Contact page's shared EmailLink component at the bottom. Remove the separate
+work-email field. Identity is only the portrait and name. Social links are flat
+rows without arrows or hover movement, with LinkedIn blue. A plain top-right
+share icon morphs into the QR panel. Tapping the address invokes native sharing,
+with clipboard fallback. Reduced motion skips the spatial animation.
+
+The shared dynamic root route generates `@` and existing moved-guide redirects;
+its root layout omits site chrome only for the contact card. Decode the route
+parameter because Next encodes `@` in the page render. QR assets and the final
+presentation slide use `https://mradib.com/@`.
+
 ## 2026-10-05: A contact card for events
 
 John requested a compact, mobile page he can share at events, with social links,

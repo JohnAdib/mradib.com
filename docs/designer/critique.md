@@ -51,3 +51,12 @@ QR popup keeps a clean white background in both themes. Verified QR decoding,
 Escape, restored focus, native share payload and clipboard fallback. Reduced
 motion removes entry and dialog transitions. Browser checks are repeatable via
 `npm run test:share-browser` with optional `SHARE_BASE_URL` and `SHARE_SCREENSHOTS`.
+
+## 2026-10-05: Contact card refinement
+
+The `/@` redesign uses the About portrait, flat social rows, LinkedIn blue and
+the Contact email component below navigation. Removed arrows and hover movement.
+The top-right icon expands into the white QR panel; its address invokes sharing.
+Reviewed both themes across the full 20-case viewport matrix with no page scroll,
+and checked QR fit, focus restoration, Escape, clipboard and native share payload.
+Reduced motion skips the morph. Both slide exports decode to the new URL.

@@ -6,7 +6,7 @@ const portrait = { src: "/img/john-adib-hero.jpg", fit: "cover" } as const;
 export const ogCardsEn: IOgCard[] = [
 	{
 		slug: "share",
-		route: "/share",
+		route: "/@",
 		lang: "en",
 		eyebrow: "MrAdib.com",
 		headline: "John Adib",

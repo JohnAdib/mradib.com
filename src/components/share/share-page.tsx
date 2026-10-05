@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { EmailLink } from "@/components/email/email-link";
 import {
 	GitHubIcon,
 	InstagramIcon,
@@ -10,12 +11,12 @@ import { ShareActions } from "@/components/share/share-actions";
 import { shareProfile } from "@/data/share";
 import { ogMetadata } from "@/lib/og-metadata";
 
-export const metadata: Metadata = {
+export const shareMetadata: Metadata = {
 	title: "Links & contact",
 	description:
 		"John Adib's social profiles, email, talks and website, all in one place.",
-	alternates: { canonical: "/share" },
-	...ogMetadata("/share"),
+	alternates: { canonical: "/@" },
+	...ogMetadata("/@"),
 };
 const icons = {
 	linkedin: LinkedInIcon,
@@ -27,6 +28,7 @@ const icons = {
 export default function SharePage() {
 	return (
 		<main className="share-page">
+			<ShareActions />
 			<div className="share-card">
 				<header className="share-identity">
 					<Image
@@ -38,9 +40,6 @@ export default function SharePage() {
 						className="share-portrait"
 					/>
 					<h1>{shareProfile.name}</h1>
-					<a className="share-email" href={`mailto:${shareProfile.email}`}>
-						{shareProfile.email}
-					</a>
 				</header>
 				<div className="share-links">
 					<nav className="share-socials" aria-label="Social profiles">
@@ -56,9 +55,7 @@ export default function SharePage() {
 								>
 									<Icon className="size-5 fill-current" />
 									<span>{label}</span>
-									<span aria-hidden="true" className="share-arrow">
-										↗
-									</span>
+
 									<span className="sr-only"> (opens in a new tab)</span>
 								</a>
 							);
@@ -71,7 +68,9 @@ export default function SharePage() {
 							</a>
 						))}
 					</nav>
-					<ShareActions />
+					<footer className="share-contact">
+						<EmailLink tag="site" className="share-email" />
+					</footer>
 				</div>
 			</div>
 		</main>

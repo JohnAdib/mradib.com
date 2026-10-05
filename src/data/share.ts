@@ -2,9 +2,8 @@ import { urlSocial } from "@/lib/constants/url-social";
 
 export const shareProfile = {
 	name: "John Adib",
-	url: "https://mradib.com/share",
-	email: "johnad@justzapp.com",
-	portrait: "/img/john-adib-avatar-576.jpg",
+	url: "https://mradib.com/@",
+	portrait: "/img/john-adib-hero-576.jpg",
 	qr: "/share/qr.svg",
 	socials: [
 		{ label: "LinkedIn", href: urlSocial.linkedin, icon: "linkedin" },
