@@ -5,6 +5,14 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Fixed bank-card proportions for the at-sign page
+
+John requested a taller card with identical proportions in links and QR mode.
+Use portrait bank-card proportions (53.98:85.6), constrained by the available
+viewport. Rotate those proportions on short landscape screens to keep controls
+readable. Anchor identity above the shared panel and distribute the extra space
+within the card. Preserve glass styling, subtle tilt and mobile scroll locking.
+
 ## 2026-10-05: Clean glass and sharing inside the at-sign card
 
 John requested a clean background without grain, more polished buttons, subtle

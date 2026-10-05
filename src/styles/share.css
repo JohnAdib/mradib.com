@@ -22,6 +22,9 @@ body:has(.share-page) {
 	touch-action: pinch-zoom;
 }
 .share-page {
+	--card-ratio: 53.98 / 85.6;
+	--page-top: max(76px, env(safe-area-inset-top));
+	--page-bottom: max(28px, env(safe-area-inset-bottom));
 	position: fixed;
 	inset: 0;
 	height: 100dvh;
@@ -31,9 +34,8 @@ body:has(.share-page) {
 	place-items: center;
 	min-height: 0;
 	width: 100%;
-	padding: max(76px, env(safe-area-inset-top))
-		max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
-		max(20px, env(safe-area-inset-left));
+	padding: var(--page-top) max(20px, env(safe-area-inset-right))
+		var(--page-bottom) max(20px, env(safe-area-inset-left));
 	background:
 		radial-gradient(ellipse at 15% 15%, #dcecff 0, transparent 58%),
 		radial-gradient(ellipse at 90% 85%, #b9cfe6 0, transparent 62%), #edf3f9;
@@ -41,7 +43,15 @@ body:has(.share-page) {
 }
 .share-card {
 	position: relative;
-	width: min(100%, 400px);
+	width: min(
+		100%,
+		400px,
+		calc((100dvh - var(--page-top) - var(--page-bottom)) * var(--card-ratio))
+	);
+	aspect-ratio: var(--card-ratio);
+	min-height: 0;
+	display: grid;
+	grid-template-rows: auto minmax(0, 1fr);
 	padding: 32px;
 	border: 1px solid #ffffff3b;
 	border-radius: 32px;
@@ -88,6 +98,7 @@ body:has(.share-page) {
 }
 .share-views {
 	display: grid;
+	min-height: 0;
 	margin-top: 24px;
 }
 .share-view {
@@ -265,8 +276,8 @@ body:has(.share-page) {
 }
 @media (max-height: 680px) and (max-width: 599px) {
 	.share-page {
-		padding-top: 64px;
-		padding-bottom: 16px;
+		--page-top: max(64px, env(safe-area-inset-top));
+		--page-bottom: max(16px, env(safe-area-inset-bottom));
 	}
 	.share-card {
 		padding: 24px;
@@ -294,17 +305,23 @@ body:has(.share-page) {
 		margin-top: 12px;
 	}
 }
+/* Rotate the same bank-card proportions on short landscape screens. */
 @media (max-height: 600px) and (min-width: 500px) {
 	.share-page {
-		padding-top: 72px;
-		padding-bottom: 16px;
+		--card-ratio: 85.6 / 53.98;
+		--page-top: max(72px, env(safe-area-inset-top));
+		--page-bottom: max(16px, env(safe-area-inset-bottom));
 	}
 	.share-card {
-		width: min(100%, 720px);
-		padding: 24px;
-		display: grid;
-		grid-template-columns: 1fr 1.2fr;
-		gap: 32px;
+		width: min(
+			100%,
+			720px,
+			calc((100dvh - var(--page-top) - var(--page-bottom)) * var(--card-ratio))
+		);
+		padding: 16px;
+		grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+		grid-template-rows: minmax(0, 1fr);
+		gap: 16px;
 		align-items: center;
 	}
 	.share-views {
@@ -314,18 +331,23 @@ body:has(.share-page) {
 		width: 80px;
 	}
 	.share-identity h1 {
-		font-size: 2.5rem;
+		font-size: 1.875rem;
 	}
-	.share-social {
-		min-height: 48px;
-		padding: 10px;
+	.share-social,
+	.share-social-linkedin {
+		min-height: 44px;
+		padding: 8px;
 		gap: 6px;
 	}
-	.share-social-linkedin {
-		min-height: 46px;
+	.share-socials {
+		gap: 8px;
 	}
 	.share-pages {
-		margin-block: 8px 0;
+		margin: 8px -8px 0;
+		gap: 0;
+	}
+	.share-pages a {
+		padding-inline: 8px;
 	}
 	.share-email {
 		padding-top: 4px;
@@ -358,25 +380,16 @@ body:has(.share-page) {
 	}
 	.share-pages {
 		margin-top: 6px;
+		gap: 0;
+	}
+	.share-pages a {
+		padding-inline: 8px;
 	}
 }
 @media (max-height: 360px) and (min-width: 500px) {
 	.share-page {
-		padding-top: 64px;
-		padding-bottom: 8px;
-	}
-	.share-card {
-		padding: 16px;
-	}
-	.share-social {
-		min-height: 56px;
-		padding: 8px;
-	}
-	.share-social-linkedin {
-		min-height: 44px;
-	}
-	.share-pages {
-		margin: 0 -8px;
+		--page-top: max(64px, env(safe-area-inset-top));
+		--page-bottom: max(8px, env(safe-area-inset-bottom));
 	}
 }
 @media (prefers-reduced-motion: reduce) {

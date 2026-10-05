@@ -75,6 +75,11 @@ for (const theme of ["light", "dark"]) {
 		if (fit.width > width || fit.height > height)
 			throw new Error(JSON.stringify({ theme, width, height, ...fit }));
 		await page.screenshot({ path: `${output}/share-${theme}-${width}.png` });
+		const cardBefore = await page.locator(".share-card").boundingBox();
+		const expectedRatio =
+			height <= 600 && width >= 500 ? 85.6 / 53.98 : 53.98 / 85.6;
+		if (Math.abs(cardBefore.width / cardBefore.height - expectedRatio) > 0.002)
+			throw new Error(`Card proportions changed at ${width}x${height}`);
 		const identityBefore = await page.locator(".share-identity").boundingBox();
 		await page
 			.getByRole("button", { name: "Share profile", exact: true })
@@ -85,6 +90,11 @@ for (const theme of ["light", "dark"]) {
 			JSON.stringify(identityBefore)
 		)
 			throw new Error("Identity moved when sharing");
+		if (
+			JSON.stringify(await page.locator(".share-card").boundingBox()) !==
+			JSON.stringify(cardBefore)
+		)
+			throw new Error("Card resized when sharing");
 		if (await page.getByRole("link", { name: /LinkedIn/ }).count())
 			throw new Error("Hidden links remain accessible");
 		const qrFit = await page

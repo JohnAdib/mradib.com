@@ -83,3 +83,14 @@ glass surface and buttons. GitHub/X are text-only. Opening QR preserves identity
 geometry exactly and hides the inactive links from accessibility and keyboard
 navigation. Sharing, Escape, mobile scroll lock and viewport fit pass. Desktop
 tilt stays within 2.5 degrees, eases back over 700ms and respects reduced motion.
+
+## 2026-10-05: Fixed card proportions
+
+Reviewed the taller portrait card and matching QR view in light and dark mode.
+All 24 viewport/theme checks pass, including 320x480 and short landscape phones.
+The card follows 53.98:85.6 proportions, rotated in landscape, and retains exactly
+the same bounds and identity position when sharing opens. Screenshots verified
+that links, email and QR remain inside the card; the additional vertical space
+separates identity from actions. Touch/wheel locking, native sharing, clipboard,
+Escape focus restoration, desktop tilt and reduced-motion behavior pass.
+Evidence: `/tmp/atsign-ratio-qa` and `/tmp/atsign-ratio-matrix.png`.
