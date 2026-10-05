@@ -59,7 +59,7 @@ Each talk has its own page at the root URL. Talks are separate from articles.
 - Page: /beyond-the-qa-bottleneck-talk
 - Public deck: /talks/beyond-the-qa-bottleneck.pdf
 - Editable source: resources/talks/beyond-the-qa-bottleneck.pptx, excluded from the static site.
-- Source: John’s reviewed 32-slide deck, revision 27, 5 October 2026.
+- Source: John’s reviewed 32-slide deck, revision 29, 5 October 2026.
 
 ## Slide sources for page descriptions
 

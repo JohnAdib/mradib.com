@@ -1142,3 +1142,14 @@ John requested the entire podcast card on /talks link to its internal article. U
 ## 2026-10-05: Podcast introduction and opening quote
 
 John requested a pull quote for the first, engineering-management topic, explicit June 2026 context, and a personal joke about hoping not to laugh at these predictions in a couple of years. Remove the explanatory paragraph describing the topic order and timestamps; he found it artificial.
+
+
+## 2026-10-05: Balanced talk slide layouts
+
+John requested equal top and bottom margins on every section slide, with bold emphasis instead of a larger active title. Centre body groups beneath their headings and above footers throughout the deck. Remove invisible navigation space from PDF exports. Expand slide 30 to cover the design system, monorepo and ways of working, product engineering, AI development, and an AI harness defined as context, skills, tools and checks around agents. Close with “Confidence in AI-assisted development”, mobile development in the subtitle, and a small takeaway and speaker footer. Publish the updated 32-slide PDF; retain the editable PPTX outside public assets.
+
+## 2026-10-05: Use the short contact URL in the talk
+
+Revision 31 changes the final slide QR and printed address to `mradib.com/@`,
+matching the redesigned contact page in PR #156. Regenerate both the PDF and
+editable PPTX. Preserve the regular PDF chart labels and the existing slide layout.
