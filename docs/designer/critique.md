@@ -134,3 +134,15 @@ calibration code. The fixed CSS dimensions, content layout and QR state remain.
 with build, types, Biome and SEO checks (existing unrelated warnings remain).
 These checks do not establish a real-world physical size on the user's phone.
 Screenshots: `/tmp/atsign-no-sizing-qa` and `/tmp/atsign-no-sizing-matrix.png`.
+
+## 2026-10-05: Larger fixed card rendering
+
+Reviewed both themes at the full viewport matrix. The 320px-wide frame is about
+57% larger than the prior CSS-millimetre rendering and retains ISO ID-1 portrait
+proportions. Portrait, name and spacing were enlarged. Short screens retain the
+same frame, with compact content and intentional frame cropping. The share
+button is layered above the card so it remains clickable on narrow screens.
+24 viewport/theme checks pass, including normal/QR dimensions, scroll locking,
+sharing, tilt and reduced motion. Build, TypeScript, Biome and SEO checks pass
+with existing unrelated warnings. Evidence: `/tmp/atsign-larger-qa` and
+`/tmp/atsign-larger-matrix.png`. Physical size is not verified on a real phone.

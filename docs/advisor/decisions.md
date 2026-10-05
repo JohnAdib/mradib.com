@@ -5,6 +5,17 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Enlarge the fixed profile card
+
+John requested an actual increase after finding the CSS-millimetre rendering too
+small. Use a fixed 320px portrait width and ISO ID-1 aspect ratio, about 57% larger
+than the previous 204px-wide rendering. Enlarge portrait and typography while
+preserving generous side padding and compact neutral social controls. Keep both
+views the same size, with no calibration or automatic frame shrinking. This is a
+larger screen rendering, not a verified physical-size match on every display.
+Short viewports retain the frame size and use compact content so controls remain
+visible while the bottom of the frame can extend past the viewport.
+
 ## 2026-10-05: Remove all visitor-facing card calibration
 
 John explicitly rejected the sizing feature. Remove its trigger, settings panel,

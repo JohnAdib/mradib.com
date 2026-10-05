@@ -39,17 +39,17 @@ body:has(.share-page) {
 }
 .share-card {
 	position: relative;
-	/* CSS millimetres are stable across viewport sizes, not calibrated screen units. */
-	width: 53.98mm;
-	height: 85.6mm;
+	/* Fixed screen size with ISO ID-1 proportions; not a physical-screen measurement. */
+	width: 320px;
+	height: calc(320px * 85.6 / 53.98);
 	aspect-ratio: 53.98 / 85.6;
 	flex-shrink: 0;
 	min-height: 0;
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr);
-	padding: 20px 22px;
+	padding: 32px 34px;
 	border: 1px solid #ffffff3b;
-	border-radius: 14px;
+	border-radius: 22px;
 	background: linear-gradient(145deg, #263e59e8, #101e30ed);
 	-webkit-backdrop-filter: blur(28px) saturate(150%);
 	backdrop-filter: blur(28px) saturate(150%);
@@ -76,7 +76,7 @@ body:has(.share-page) {
 	text-align: center;
 }
 .share-portrait {
-	width: 68px;
+	width: 104px;
 	height: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;
@@ -87,14 +87,14 @@ body:has(.share-page) {
 	-webkit-user-drag: none;
 }
 .share-identity h1 {
-	font: 400 32px / 1.1 var(--font-display);
-	margin: 10px 0 0;
+	font: 400 46px / 1.1 var(--font-display);
+	margin: 14px 0 0;
 	letter-spacing: -0.025em;
 }
 .share-views {
 	display: grid;
 	min-height: 0;
-	margin-top: 10px;
+	margin-top: 16px;
 }
 .share-view {
 	grid-area: 1 / 1;
@@ -135,14 +135,14 @@ body:has(.share-page) {
 	align-items: center;
 	justify-content: center;
 	gap: 6px;
-	min-height: 32px;
+	min-height: 40px;
 	padding: 4px 8px;
 	border: 1px solid #ffffff24;
 	border-radius: 8px;
 	background: linear-gradient(145deg, #ffffff12, #ffffff04);
 	box-shadow: inset 0 1px 0 #ffffff10;
 	color: #e7ebf2;
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	font-weight: 500;
 }
 .share-social svg {
@@ -156,12 +156,12 @@ body:has(.share-page) {
 	display: flex;
 	justify-content: center;
 	gap: 6px;
-	margin: 10px -6px 0;
-	font-size: 0.6875rem;
+	margin: 16px -6px 0;
+	font-size: 0.8125rem;
 }
 .share-pages a {
 	display: grid;
-	min-height: 32px;
+	min-height: 40px;
 	padding: 0 6px;
 	place-items: center;
 	border-radius: 3px;
@@ -173,11 +173,12 @@ body:has(.share-page) {
 .share-email {
 	display: inline-block;
 	padding: 6px 0;
-	font-size: 0.625rem;
+	font-size: 0.75rem;
 	color: #aab6c7;
 }
 .share-trigger {
 	position: absolute;
+	z-index: 1;
 	top: max(16px, env(safe-area-inset-top));
 	right: max(20px, env(safe-area-inset-right));
 	display: grid;
@@ -199,7 +200,7 @@ body:has(.share-page) {
 	outline-offset: 4px;
 }
 .share-qr-image {
-	width: 96px;
+	width: 160px;
 	height: auto;
 	background: white;
 	border-radius: 10px;
@@ -210,7 +211,7 @@ body:has(.share-page) {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 32px;
+	min-height: 40px;
 	margin-top: 2px;
 	padding: 0 12px;
 	font-size: 0.8125rem;
@@ -219,10 +220,10 @@ body:has(.share-page) {
 	color: #f6f7fa;
 }
 .share-status {
-	min-height: 28px;
-	max-width: 172px;
-	font-size: 0.625rem;
-	line-height: 14px;
+	min-height: 32px;
+	max-width: 240px;
+	font-size: 0.75rem;
+	line-height: 16px;
 	text-align: center;
 	color: #c2d1e2;
 }
@@ -256,6 +257,47 @@ body:has(.share-page) {
 	}
 	.share-address:hover {
 		background-color: #ffffff12;
+	}
+}
+/* Preserve the fixed frame on short screens while keeping its controls visible. */
+@media (max-height: 560px) {
+	.share-card {
+		padding: 16px 34px;
+		grid-template-rows: auto auto;
+		align-content: start;
+	}
+	.share-portrait {
+		width: 68px;
+	}
+	.share-identity h1 {
+		font-size: 32px;
+		margin-top: 10px;
+	}
+	.share-views {
+		margin-top: 10px;
+	}
+	.share-social,
+	.share-pages a,
+	.share-address {
+		min-height: 32px;
+	}
+	.share-social {
+		font-size: 0.75rem;
+	}
+	.share-pages {
+		margin-top: 10px;
+		font-size: 0.6875rem;
+	}
+	.share-email,
+	.share-status {
+		font-size: 0.625rem;
+	}
+	.share-qr-image {
+		width: 96px;
+	}
+	.share-status {
+		min-height: 28px;
+		line-height: 14px;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
