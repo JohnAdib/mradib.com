@@ -46,7 +46,11 @@ export function ShareActions() {
 			>
 				<ShareIcon className="size-6" />
 			</button>
-			<Dialog open={morph.open} onClose={morph.close} className="share-dialog">
+			<Dialog
+				open={morph.open}
+				onClose={morph.close}
+				className="share-dialog select-none"
+			>
 				<DialogBackdrop className="share-backdrop" />
 				<div className="share-dialog-position">
 					<DialogPanel ref={morph.panel} className="share-qr-panel">

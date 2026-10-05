@@ -1,67 +1,116 @@
 /* A quiet, single-screen contact card, separate from the article chrome. */
+/* The contact card is a focused, non-selectable event surface. */
+.share-page,
+.share-page *,
+.share-dialog,
+.share-dialog * {
+	-webkit-user-select: none;
+	user-select: none;
+}
 .share-page {
+	position: relative;
+	isolation: isolate;
 	display: grid;
 	place-items: center;
 	min-height: 100svh;
 	width: 100%;
-	padding: max(64px, env(safe-area-inset-top))
-		max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
-		max(24px, env(safe-area-inset-left));
-	color: var(--color-zinc-900);
+	padding: max(76px, env(safe-area-inset-top))
+		max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
+		max(20px, env(safe-area-inset-left));
+	background:
+		radial-gradient(ellipse at 20% 10%, #e4eaf3 0, transparent 58%),
+		radial-gradient(ellipse at 90% 90%, #e6dccd 0, transparent 60%), #f4f0e9;
+	color: #f6f7fa;
+}
+.share-page::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	opacity: 0.15;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.35' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
 }
 .share-card {
-	width: min(100%, 340px);
+	width: min(100%, 400px);
+	padding: 32px;
+	border: 1px solid #ffffff1c;
+	border-radius: 32px;
+	background:
+		radial-gradient(ellipse at 50% -25%, #314967 0, transparent 60%), #151b25;
+	box-shadow:
+		0 28px 80px -30px #15253f66,
+		inset 0 1px 0 #ffffff12;
 }
 .share-identity {
 	text-align: center;
 }
 .share-portrait {
-	width: clamp(72px, 13svh, 112px);
+	width: clamp(80px, 12svh, 100px);
 	height: auto;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	object-fit: cover;
 	margin: 0 auto;
+	border: 4px solid #ffffff0a;
+	box-shadow: 0 0 0 1px #ffffff2b;
+	-webkit-user-drag: none;
 }
 .share-identity h1 {
-	font: 400 clamp(2.5rem, 6svh, 3.5rem) / 1.1 var(--font-display);
-	margin: 20px 0 0;
+	font: 400 clamp(2.5rem, 6svh, 3.25rem) / 1.1 var(--font-display);
+	margin: 18px 0 0;
 	letter-spacing: -0.025em;
 }
 .share-links {
-	margin-top: clamp(24px, 4svh, 36px);
+	margin-top: 28px;
 }
 .share-socials {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
 }
 .share-social {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 12px;
-	min-height: 54px;
-	padding: 12px 16px;
-	border-bottom: 1px solid var(--color-zinc-200);
+	gap: 10px;
+	min-height: 86px;
+	padding: 16px;
+	border: 1px solid #ffffff12;
+	border-radius: 18px;
+	background: #ffffff06;
+	color: #e7ebf2;
 	font-size: 0.9375rem;
-	transition:
-		color 180ms ease,
-		background-color 180ms ease;
+	font-weight: 500;
 }
-.share-social:first-child {
-	color: #0a66c2;
-	border-top: 1px solid var(--color-zinc-200);
+.share-social svg {
+	width: 22px;
+	height: 22px;
+}
+.share-social-linkedin {
+	grid-column: 1 / -1;
+	flex-direction: row;
+	min-height: 56px;
+	gap: 12px;
+	background: #0a66c2;
+	border-color: #3787d7;
+	color: white;
 }
 .share-pages {
 	display: flex;
 	justify-content: center;
-	gap: 28px;
-	margin: 16px 0 12px;
-	font-size: 0.875rem;
+	gap: 6px;
+	margin: 20px -8px 8px;
+	font-size: 0.8125rem;
 }
 .share-pages a {
 	display: grid;
 	min-height: 44px;
+	padding: 0 16px;
 	place-items: center;
+	border-radius: 999px;
+	color: #d8e0eb;
 }
 .share-contact {
 	text-align: center;
@@ -69,8 +118,8 @@
 .share-email {
 	display: inline-block;
 	padding: 8px 0;
-	font-size: 0.8125rem;
-	color: var(--color-zinc-500);
+	font-size: 0.75rem;
+	color: #aab6c7;
 }
 .share-trigger {
 	position: absolute;
@@ -82,16 +131,18 @@
 	height: 48px;
 	cursor: pointer;
 	border-radius: 50%;
+	color: #26364d;
 }
 .share-page :is(a, button),
 .share-dialog button {
 	transition:
 		color 180ms ease,
-		background-color 180ms ease;
+		background-color 180ms ease,
+		border-color 180ms ease;
 }
 .share-page :is(a, button):focus-visible,
 .share-dialog button:focus-visible {
-	outline: 2px solid #0a66c2;
+	outline: 2px solid #70b5f9;
 	outline-offset: 4px;
 }
 .share-dialog {
@@ -164,57 +215,108 @@
 	margin-top: 2px;
 }
 .dark .share-page {
-	color: var(--color-zinc-100);
+	background:
+		radial-gradient(ellipse at 10% 0, #172941 0, transparent 55%),
+		radial-gradient(ellipse at 95% 100%, #182432 0, transparent 60%), #0b1019;
 }
-.dark .share-social {
-	border-color: var(--color-zinc-800);
+.dark .share-card {
+	box-shadow:
+		0 32px 90px -24px #00000088,
+		inset 0 1px 0 #ffffff12;
 }
-.dark .share-social:first-child {
-	color: #70b5f9;
-}
-.dark .share-email {
-	color: var(--color-zinc-400);
+.dark .share-trigger {
+	color: #d8e0eb;
 }
 @media (hover: hover) {
-	.share-social:hover,
-	.share-trigger:hover {
-		background-color: rgb(127 127 127 / 0.08);
+	.share-social:hover {
+		background-color: #ffffff10;
+		border-color: #ffffff30;
 	}
-	.share-pages a:hover,
+	.share-social-linkedin:hover {
+		background-color: #0758aa;
+		border-color: #70b5f9;
+	}
+	.share-pages a:hover {
+		background-color: #ffffff0d;
+		color: white;
+	}
 	.share-email:hover {
-		color: #0a66c2;
+		color: white;
+	}
+	.share-trigger:hover {
+		background-color: #7f7f7f14;
 	}
 	.share-address:hover,
 	.share-qr-close:hover {
 		background-color: #f4f4f5;
 	}
 }
+@media (max-height: 680px) and (max-width: 599px) {
+	.share-page {
+		padding-top: 64px;
+		padding-bottom: 16px;
+	}
+	.share-card {
+		padding: 24px;
+		border-radius: 28px;
+	}
+	.share-portrait {
+		width: 72px;
+	}
+	.share-identity h1 {
+		margin-top: 14px;
+		font-size: 2.5rem;
+	}
+	.share-links {
+		margin-top: 22px;
+	}
+	.share-social {
+		min-height: 76px;
+		padding: 12px;
+		gap: 8px;
+	}
+	.share-social-linkedin {
+		min-height: 52px;
+	}
+	.share-pages {
+		margin-top: 12px;
+	}
+}
 @media (max-height: 600px) and (min-width: 600px) {
 	.share-page {
 		padding-top: 72px;
+		padding-bottom: 16px;
 	}
 	.share-card {
 		width: min(100%, 720px);
+		padding: 24px;
 		display: grid;
 		grid-template-columns: 1fr 1.2fr;
-		gap: 36px;
+		gap: 32px;
 		align-items: center;
 	}
 	.share-links {
 		margin-top: 0;
 	}
 	.share-portrait {
-		width: 90px;
+		width: 80px;
 	}
 	.share-identity h1 {
 		font-size: 2.5rem;
 	}
 	.share-social {
-		min-height: 44px;
-		padding-block: 8px;
+		min-height: 64px;
+		padding: 10px;
+		gap: 6px;
+	}
+	.share-social-linkedin {
+		min-height: 46px;
 	}
 	.share-pages {
-		margin-block: 6px;
+		margin-block: 8px 0;
+	}
+	.share-email {
+		padding-top: 4px;
 	}
 	.share-qr-content {
 		padding-top: 40px;
@@ -223,24 +325,6 @@
 	.share-qr-image {
 		width: min(100%, 40svh);
 		margin-top: 4px;
-	}
-}
-@media (max-height: 640px) and (max-width: 599px) {
-	.share-portrait {
-		width: 64px;
-	}
-	.share-identity h1 {
-		margin-top: 12px;
-	}
-	.share-links {
-		margin-top: 20px;
-	}
-	.share-social {
-		min-height: 46px;
-		padding-block: 8px;
-	}
-	.share-pages {
-		margin-block: 8px;
 	}
 }
 @media (prefers-reduced-motion: reduce) {

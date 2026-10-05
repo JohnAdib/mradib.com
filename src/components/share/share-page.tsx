@@ -3,7 +3,6 @@ import Image from "next/image";
 import { EmailLink } from "@/components/email/email-link";
 import {
 	GitHubIcon,
-	InstagramIcon,
 	LinkedInIcon,
 	XIcon,
 } from "@/components/icon/social-icons";
@@ -21,13 +20,12 @@ export const shareMetadata: Metadata = {
 const icons = {
 	linkedin: LinkedInIcon,
 	github: GitHubIcon,
-	instagram: InstagramIcon,
 	x: XIcon,
 };
 
 export default function SharePage() {
 	return (
-		<main className="share-page">
+		<main className="share-page select-none">
 			<ShareActions />
 			<div className="share-card">
 				<header className="share-identity">
@@ -38,6 +36,7 @@ export default function SharePage() {
 						height={112}
 						priority
 						className="share-portrait"
+						draggable={false}
 					/>
 					<h1>{shareProfile.name}</h1>
 				</header>
@@ -51,7 +50,7 @@ export default function SharePage() {
 									href={href}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="share-social"
+									className={`share-social share-social-${icon}`}
 								>
 									<Icon className="size-5 fill-current" />
 									<span>{label}</span>

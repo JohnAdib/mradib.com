@@ -60,3 +60,11 @@ The top-right icon expands into the white QR panel; its address invokes sharing.
 Reviewed both themes across the full 20-case viewport matrix with no page scroll,
 and checked QR fit, focus restoration, Escape, clipboard and native share payload.
 Reduced motion skips the morph. Both slide exports decode to the new URL.
+
+## 2026-10-05: At-sign page business card redesign
+
+Reviewed the new ink card, textured backgrounds, blue LinkedIn button, paired
+GitHub/X tiles and compact navigation across 20 viewport/theme combinations.
+Phone, landscape and desktop layouts fit without scrolling. All page elements
+are non-selectable. QR morph, Escape, restored focus, native sharing and clipboard
+fallback pass. Instagram destinations are absent from the full exported site.

@@ -41,10 +41,16 @@ for (const theme of ["light", "dark"]) {
 			innerWidth,
 			innerHeight,
 			title: document.title,
+			selectable: [
+				...document.querySelectorAll(".share-page, .share-page *"),
+			].some((el) => getComputedStyle(el).userSelect !== "none"),
 			links: [...document.querySelectorAll("main a")].map((a) =>
 				a.getAttribute("href"),
 			),
 		}));
+		if (fit.selectable) throw new Error("At-sign page allows selection");
+		if (fit.links.some((href) => href?.includes("instagram")))
+			throw new Error("Instagram link on at-sign page");
 		if (fit.links.some((href) => href?.includes("justzapp")))
 			throw new Error("Work email exposed");
 		if (fit.width > width || fit.height > height)

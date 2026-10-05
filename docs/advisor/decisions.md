@@ -5,6 +5,19 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-05: Redesign the at-sign page and retire Instagram links
+
+John rejected the flat list design on `/@` and requested a more polished mobile
+UI, a richer background, different link shapes and no selectable content.
+Use a compact ink-coloured card on a textured, theme-aware background, a blue
+LinkedIn button, paired GitHub and X tiles and pill-shaped site navigation.
+Keep the About portrait, personal email at the bottom and the top-right morphing
+QR panel. This changes the at-sign page, not the existing Contact page.
+
+Remove Instagram links throughout the website, including shared navigation,
+photography pages, the email signature and the AI-readable social index.
+Retain `/instagram` as a legacy redirect to `/@`, with no external destination.
+
 ## 2026-10-05, presentation pages explain the talk and show its first slide
 
 John requested one to two paragraphs about the actual content of every talk
