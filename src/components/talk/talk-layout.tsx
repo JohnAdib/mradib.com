@@ -6,6 +6,7 @@ import { Container } from "@/components/container";
 import { TalkEventJsonLd } from "@/components/json-ld/talk-event-json-ld";
 import type { ITalk } from "@/data/talks/talk-interface";
 import { getTalkResources } from "@/lib/talks/get-talk-resources";
+import { TalkDescription } from "./talk-description";
 import { TalkHero } from "./talk-hero";
 import { TalkPdfPreview } from "./talk-pdf-preview";
 import { TalkResources } from "./talk-resources";
@@ -44,9 +45,21 @@ export function TalkLayout({
 
 				<TalkHero talk={talk} />
 
+				{talk.slidesPdf && (
+					<div className="mt-8">
+						<TalkPdfPreview
+							href={talk.slidesPdf}
+							previewImage={talk.image}
+							title={talk.title}
+						/>
+					</div>
+				)}
+
+				<TalkDescription talk={talk} />
+
 				{children}
 
-				{/* The slides preview below already shows talk.image, so skip this
+				{/* The slides preview above already shows talk.image, so skip this
 				    standalone cover when both are set, the same photo twice reads
 				    as a mistake, not a feature. */}
 				{talk.image && !talk.slidesPdf && (
@@ -58,16 +71,6 @@ export function TalkLayout({
 						priority
 						className="mt-8 h-auto w-full rounded-2xl ring-1 ring-zinc-900/10 dark:ring-zinc-700/50"
 					/>
-				)}
-
-				{talk.slidesPdf && (
-					<div className="mt-8">
-						<TalkPdfPreview
-							href={talk.slidesPdf}
-							previewImage={talk.image}
-							title={talk.title}
-						/>
-					</div>
 				)}
 
 				{extras.length > 0 && (
