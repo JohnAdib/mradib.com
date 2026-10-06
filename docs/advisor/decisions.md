@@ -1285,3 +1285,23 @@ editable PPTX. Preserve the regular PDF chart labels and the existing slide layo
 ## 2026-10-05: Slides before talk descriptions
 
 John requested the slide preview and PDF download immediately after the event-facts card, before the descriptive paragraphs. Apply this order through the shared talk layout. Keep other Resources links at the bottom and preserve the existing PDF card styling.
+
+## 2026-10-06: Lead with AI-first software development
+
+John requested that public descriptions lead with pioneering AI-first software
+development and approved a separate website PR. The homepage and About opening
+define the workflow through agents, testing, code review and delivery. Shared
+profile biographies, search descriptions, JSON-LD and social previews follow
+the same positioning. The actual job title remains Engineering Manager.
+
+The existing homepage AI panel follows the hero. It groups three dated sources:
+the published QA workflow case study, the guardrails talk and the AI-first
+architecture talk. About exposes the same links near its introduction while
+preserving the chronological chapters. Generated biographies use those sources
+too, including the independently hosted architecture recording and transcript.
+
+This is an evidence-backed description of John's practice, without claims of
+an industry-first invention or a formal pioneer award. Do not turn observational
+case-study metrics into causal AI productivity claims. External professional
+profile updates and reindexing follow publication. No new AI-specific markup or
+hidden instructions are needed to express the positioning.

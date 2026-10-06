@@ -193,3 +193,17 @@ Phone behavior is simulated; physical hardware was not tested.
 ## 2026-10-06: A Coach for Every Learner article
 
 The standalone article uses the existing article layout, a clean presentation cover and one PDF download card. The original 12-slide design is preserved, with the private context removed from the cover and all speaker notes removed from the public PowerPoint. The PDF embeds Raleway fonts. All 12 rendered slides were inspected, and the page passed horizontal overflow and download checks at seven widths in both themes. The page is listed under Articles rather than presented as an organisation-affiliated event.
+
+## 2026-10-07: AI-first positioning and published evidence
+
+Reviewed homepage and About at 375, 430 and 1440px in both themes: 12 cases,
+24 hero/evidence captures, with no text clipping or horizontal scroll. The
+homepage AI panel now follows the hero; About adds the same three dated sources
+near its introduction while preserving its chapter order. Recaptured all 12
+evidence regions after aligning dates with the existing English formatter.
+Six pointer and six keyboard activations reach the intended pages, with visible
+focus outlines and correct canonicals. Four no-JavaScript and four reduced-motion
+checks pass; native scrolling resolved the About automation stability wait.
+Click and Enter copy the same updated intro and website link. Both regenerated
+1200×630 home/About social images were visually reviewed without clipping.
+Screenshots and the compact report: `/private/tmp/mradib-ai-positioning-qa`.

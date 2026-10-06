@@ -4,13 +4,13 @@ Status: built
 
 ## Job
 
-Land the present chapter. The credibility is being spent on the
-industry's biggest shift, and the stages prove people listen.
+Support the opening AI-first positioning with production practice and three
+dated examples. This section now follows the hero, before the career story.
 
 ## Message
 
-Today I lead teams that build AI-first, and 800+ engineers came to
-hear how.
+Today I lead teams that build AI-first. The published case study and talks
+show the workflow, architecture and guardrails behind that practice.
 
 ## Facts
 
@@ -38,8 +38,10 @@ React Advanced London at Figma."
 
 ## Path deeper
 
-"The thesis" to the AI-First Architecture talk page
-(/ai-first-architecture-why-single-responsibility-matters-more-than-ever).
+Three dated sources, derived from src/data/ai-evidence.ts: Beyond the QA
+Bottleneck, The Compound Effect of Guardrails in the Era of AI, and AI-First
+Architecture. The latter's GitNation recording and transcript also appear
+in the generated biographies. Upcoming talks are not evidence of delivered work.
 
 ## Design notes (later phase)
 

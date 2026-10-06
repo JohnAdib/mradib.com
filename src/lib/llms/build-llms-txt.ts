@@ -5,6 +5,7 @@ import {
 	sectionProfiles,
 } from "@/lib/llms/llms-sections";
 import {
+	sectionAiDevelopment,
 	sectionAiTools,
 	sectionEvidence,
 	sectionPersian,
@@ -13,6 +14,7 @@ import {
 export function buildLlmsTxt(): string {
 	return `${[
 		sectionIdentity(),
+		sectionAiDevelopment(),
 		sectionKeyFacts(),
 		sectionPages(),
 		sectionProfiles(),

@@ -23,14 +23,14 @@ export default function Home() {
 				<style>{".reveal-on-scroll{opacity:1;transform:none;}"}</style>
 			</noscript>
 			<HomeHero />
+			<section id="now" className="scroll-mt-24">
+				<HomeNow />
+			</section>
 			<section id="rise" className="scroll-mt-24">
 				<HomeRise />
 			</section>
 			<section id="recognition" className="scroll-mt-24">
 				<HomeRecognition />
-			</section>
-			<section id="now" className="scroll-mt-24">
-				<HomeNow />
 			</section>
 			<section id="invitation" className="scroll-mt-24">
 				<HomeInvitation />

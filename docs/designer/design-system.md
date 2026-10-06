@@ -40,6 +40,7 @@ John asks for them. Until then, tiers live only in this registry.
 | Prose | src/components/prose.tsx | candidate |
 | SimpleLayout | src/components/simple-layout.tsx | candidate |
 | StatBand | src/components/stat-band.tsx | candidate |
+| AiEvidenceLinks | src/components/ai-evidence-links.tsx | candidate |
 | LinkChipGrid | src/components/link-chip-grid.tsx | candidate |
 | CtaOnDarkPanel | src/components/cta-on-dark-panel/ | candidate |
 | TiltCard | src/components/tilt-card/ | candidate |

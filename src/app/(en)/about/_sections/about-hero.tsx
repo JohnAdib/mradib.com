@@ -1,5 +1,7 @@
+import { AiEvidenceLinks } from "@/components/ai-evidence-links";
 import { StatBand } from "@/components/stat-band";
 import { TiltCard } from "@/components/tilt-card/tilt-card";
+import { aiPositioning } from "@/data/ai-positioning";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { experienceYears } from "@/data/profile";
 import { teachingStats, videoViewsCompact } from "@/data/teaching-stats";
@@ -38,6 +40,9 @@ export function AboutHero() {
 					</span>
 				</h1>
 				<p className="reveal-rise reveal-delay-4 mt-6 text-lg text-zinc-600 dark:text-zinc-400">
+					{aiPositioning.summary}
+				</p>
+				<p className="reveal-rise reveal-delay-4 mt-4 text-lg text-zinc-600 dark:text-zinc-400">
 					{experienceYears}+ years in software, and I am still building every
 					single day. This is the long version: it starts with a keyboard my
 					father brought home, and runs through two co-founded startups,
@@ -71,6 +76,7 @@ export function AboutHero() {
 					stats={stats}
 					gridClass="grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 max-sm:[&>*:last-child]:col-span-2"
 				/>
+				<AiEvidenceLinks />
 			</div>
 		</div>
 	);
