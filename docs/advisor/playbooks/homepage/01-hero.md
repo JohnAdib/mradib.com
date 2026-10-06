@@ -9,17 +9,16 @@ proofs they cannot argue with, and a reason to scroll.
 
 ## Message
 
-One rising story, from teenage medals to world recognition, every step
-provable.
+An engineering leader pioneering AI-first software development, with the
+practical workflow defined before the supporting founder and mentor credentials.
 
 ## Facts
 
-- The intro paragraph carries the stacked proofs: 17+ years, two
-  startups, $1M raised, one million users in the first month, 1,200+
-  businesses, 2,000+ students, 600+ sessions, The World's Most
-  Influential Mentor, the UK exceptional talent endorsement, the
-  AI-first closing line. Source: src/data/intro-bio.ts (the canonical
-  shareable intro, click-to-copy, never duplicated here).
+- The intro leads with AI-first development and a continuous workflow of
+  agents, testing, code review and delivery. Founder scale, teaching,
+  mentorship and the UK endorsement support that identity. Shared wording
+  lives in src/data/ai-positioning.ts; src/data/intro-bio.ts derives the
+  on-page and clipboard introductions.
 - H1 material: the manifesto verbs (About hero, John-approved) and the
   keyboard origin (About chapter 01: "Just a keyboard, with no computer
   to plug it into"). Rulings 2026-07-19: no government wording in the
@@ -47,15 +46,11 @@ counts, award names, government wording, "teenager", or growth claims
 in the title ("Everything I build grows" is factually wrong, John ended
 both startups himself). Below the H1, the intro paragraph renders via
 the click-to-copy HomeIntro component; a tap just copies, no tooltip,
-no instruction. The paragraph is curated, not a full ledger, because the
-sections below already carry every count; it opens on the founder
-identity (pillar 1), not the day-job title. On-page: "A two-time founder
-and engineering leader in London. $1M raised, a million users in the
-first month, 1,200+ businesses served. I've taught thousands and
-mentored engineers around the world. ADPList named me The World's Most
-Influential Mentor; the UK endorsed me as exceptional talent. Today I
-build AI-first, changing how teams work, not just how fast they ship."
-The clipboard copy prefixes "I'm John Adib, a ..." (one body string, two
+no instruction. The paragraph is curated because the sections below carry
+the detailed evidence. John's direction of 6 October 2026 moves AI-first
+development to the opening sentence and explains the workflow immediately
+after it. The exact current copy lives in src/data/ai-positioning.ts.
+The clipboard copy prefixes "I'm John Adib, an ..." (one body string, two
 openers, src/data/intro-bio.ts). Method note: five rounds of chat-text
 options failed; rendering candidates in the real lockup
 (docs/designer/mockups/headline-lab.html) settled it in one pass.

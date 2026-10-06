@@ -1,3 +1,4 @@
+import { aiEvidence } from "@/data/ai-evidence";
 import { adplistBadgeTimeline, awards } from "@/data/awards";
 import { fundraisingKit } from "@/data/guides/fundraising-kit";
 import { hubRoute } from "@/data/guides/hub-route";
@@ -11,6 +12,20 @@ export function sectionEvidence(): string {
 		`- ADPList100 2026, The World's Most Influential Mentors: ${urlAdpList100}`,
 		"- 2024 ADPList Wrapped (#1 Mentor in Europe): https://blog.adplist.org/post/2024-adplist-wrapped-top-mentors-trends-and-topics",
 		`- Podcast episode on Spotify: ${urlPodcastSpotify}`,
+	].join("\n");
+}
+
+export function sectionAiDevelopment(): string {
+	return [
+		"## AI-first software development",
+		"",
+		profile.oneLiner,
+		...aiEvidence.flatMap((evidence) => [
+			`- ${evidence.kind}: [${evidence.title}](${homepageUrl}${evidence.path}), ${evidence.date}. ${evidence.summary}`,
+			...(evidence.recordingUrl
+				? [`  Recording and transcript: ${evidence.recordingUrl}`]
+				: []),
+		]),
 	].join("\n");
 }
 

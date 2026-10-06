@@ -1,3 +1,4 @@
+import { aiPositioning } from "@/data/ai-positioning";
 import { urlSocial } from "@/lib/constants/url-social";
 import { yearsSince } from "@/lib/datetime/years-since";
 
@@ -57,14 +58,12 @@ export const profile: IProfile = {
 	email: "Mr.JohnAdib@Gmail.com",
 	jobTitle: "Engineering Manager",
 	company: { name: "Zapp", url: "https://www.justzapp.com" },
-	titleTag: "John Adib - Engineering Manager, Founder & Mentor | MrAdib",
+	titleTag: `John Adib - ${aiPositioning.focusTitle} | MrAdib`,
 	image: "/img/john-adib-london-avatar.jpg",
-	oneLiner:
-		"Engineering Manager and 2× startup co-founder, pioneering AI-first development in London.",
-	shortBio:
-		"John Adib (MrAdib): Engineering Manager at Zapp in London, 2× startup co-founder, World's Most Influential Mentor (ADPList), speaker, AI-first pioneer.",
-	bio50: `John Adib (MrAdib) is an Engineering Manager at Zapp in London and a two-time startup co-founder. Named ADPList's World's Most Influential Mentor (2024) and #1 Mentor in Europe (2024), he has spent ${experienceYears}+ years building products and teams, and now pioneers AI-first development, mentoring engineers through 600+ sessions.`,
-	bio150: `John Adib is an Engineering Manager at Zapp in London, where he leads teams pioneering AI-first development: AI reviewers on every pull request, releases accelerated from monthly to weekly, and AI agents woven through the whole workflow. Over ${experienceYears}+ years he has co-founded two startups: Sarshomar, which raised $1M and reached one million users in its first month, and Jibres, an e-commerce platform serving 1,200+ businesses that won a national award at the IR Web Festival 2022. A mentor at heart, John has run 600+ sessions on ADPList, where he was named the World's Most Influential Mentor of 2024 and #1 Mentor in Europe. He holds a UK Global Talent endorsement from Tech Nation, speaks at conferences including AI Coding Summit and React Advanced London, contributes to open source, previously taught 2,000+ students, and is a proud father of two daughters.`,
+	oneLiner: `Engineering leader in London ${aiPositioning.focus}.`,
+	shortBio: `John Adib, engineering leader in London ${aiPositioning.focus}. ${aiPositioning.activities}.`,
+	bio50: `John Adib is an engineering leader in London ${aiPositioning.focus}. He brings ${aiPositioning.activities} into one continuous workflow. A two-time founder and Engineering Manager at Zapp, he was named ADPList's World's Most Influential Mentor and has led 600+ mentoring sessions.`,
+	bio150: `${aiPositioning.summary} At Zapp, he is an Engineering Manager whose production practice includes AI reviewers on pull requests and a move from monthly to weekly app releases. Across ${experienceYears}+ years building products and teams, he has co-founded two startups, raised $1M, reached one million users in the first month and served 1,200+ businesses. He has taught 2,000+ students and led 600+ mentoring sessions on ADPList, where he was named the World's Most Influential Mentor of 2024 and #1 Mentor in Europe. John holds a UK Global Talent endorsement from Tech Nation, speaks at conferences including AI Coding Summit and React Advanced London, and contributes to open source. His published case study and talks explain the architecture, guardrails and verification behind his AI-first approach.`,
 	location: { city: "London", country: "United Kingdom", countryCode: "GB" },
 	alternateNames: ["MrAdib", "جان ادیب"],
 	knowsAbout: [
