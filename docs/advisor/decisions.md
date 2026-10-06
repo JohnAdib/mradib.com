@@ -5,6 +5,16 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-06: Publish the coaching method as a standalone article
+
+John requested a public presentation and write-up about three coaching moves.
+Use A Coach for Every Learner as a standalone article, listed under Articles.
+Keep the teaching methods and examples. Publish only a sanitised deck with a
+generic title and author, without organisation references, private session
+context, event date or speaker notes. The original private file stays outside
+the repository. Provide a PDF download and keep the clean PPTX in resources.
+
+
 ## 2026-10-05: Background motion must be immediately perceptible
 
 John still could not see background movement and accepted the rest of the card.

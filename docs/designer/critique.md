@@ -189,3 +189,7 @@ reduced motion, scroll lock and QR stability. Production build, TypeScript,
 Biome and SEO passed with existing unrelated warnings. Evidence:
 `/tmp/atsign-clear-motion-qa` and `/tmp/atsign-clear-motion-matrix.png`.
 Phone behavior is simulated; physical hardware was not tested.
+
+## 2026-10-06: A Coach for Every Learner article
+
+The standalone article uses the existing article layout, a clean presentation cover and one PDF download card. The original 12-slide design is preserved, with the private context removed from the cover and all speaker notes removed from the public PowerPoint. The PDF embeds Raleway fonts. All 12 rendered slides were inspected, and the page passed horizontal overflow and download checks at seven widths in both themes. The page is listed under Articles rather than presented as an organisation-affiliated event.
