@@ -28,4 +28,5 @@ export const monthlyPrHistory: IChartObservation[] = [
 	{ date: "2026-07-01", label: "Jul", value: 158 },
 	{ date: "2026-08-01", label: "Aug", value: 194 },
 	{ date: "2026-09-01", label: "Sept", value: 188 },
+	{ date: "2026-10-01", label: "Oct*", value: 126 },
 ];

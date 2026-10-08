@@ -18,10 +18,15 @@ test("an undated talk never becomes a previous speaking appearance", () => {
 	);
 });
 
-test("unconfirmed details remain null instead of fabricated event facts", () => {
-	for (const field of ["event", "organizer", "venue", "city", "date"]) {
-		assert.equal(qaBottleneckTalk[field], null, field);
-	}
+test("confirmed event facts stay consistent with the scheduled meetup", () => {
+	assert.equal(qaBottleneckTalk.event, "React Native London Meetup");
+	assert.equal(qaBottleneckTalk.date, "2026-10-22");
+	assert.equal(qaBottleneckTalk.host, "Funding Circle");
+	assert.equal(
+		qaBottleneckTalk.venue,
+		"Funding Circle, 71 Queen Victoria Street",
+	);
+	assert.equal(qaBottleneckTalk.city, "London");
 	const card = ogCardsTalks.find(
 		(card) => card.route === qaBottleneckTalk.path,
 	);
@@ -33,7 +38,9 @@ test("unconfirmed details remain null instead of fabricated event facts", () => 
 test("the PDF is the only downloadable deck resource", () => {
 	const resources = getTalkResources(qaBottleneckTalk);
 	assert.deepEqual(
-		resources.map((resource) => resource.url),
+		resources
+			.filter((resource) => resource.kind === "slides")
+			.map((resource) => resource.url),
 		[qaBottleneckTalk.slidesPdf],
 	);
 	assert.ok(existsSync(`public${qaBottleneckTalk.slidesPdf}`));

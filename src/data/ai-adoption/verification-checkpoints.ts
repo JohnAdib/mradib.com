@@ -8,4 +8,5 @@ export const verificationCheckpoints = [
 	{ date: "2026-07-31", unitTestFiles: 395, uiFlowFiles: 136 },
 	{ date: "2026-08-31", unitTestFiles: 1040, uiFlowFiles: 147 },
 	{ date: "2026-09-30", unitTestFiles: 1669, uiFlowFiles: 225 },
+	{ date: "2026-10-08", unitTestFiles: 2257, uiFlowFiles: 404 },
 ];

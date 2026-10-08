@@ -54,12 +54,15 @@ Each talk has its own page at the root URL. Talks are separate from articles.
 
 - Title: Beyond the QA Bottleneck
 - Status: upcoming, slides remain a work in progress.
-- Event, organizer, venue, city and date: unconfirmed, stored as null.
+- Event: React Native London Meetup, 22 October 2026.
+- Organizer: React Native London. Host: Funding Circle.
+- Venue: Funding Circle, 71 Queen Victoria Street, London EC4V 4AY.
+- Event link: https://luma.com/gxz3g6se
 - Topic: John’s story of adopting AI in React Native engineering, from regressions and slow verification to reusable skills, tests, CI, device checks, AI review, Sentry feedback and delivery.
 - Page: /beyond-the-qa-bottleneck-talk
 - Public deck: /talks/beyond-the-qa-bottleneck.pdf
 - Editable source: resources/talks/beyond-the-qa-bottleneck.pptx, excluded from the static site.
-- Source: John’s reviewed 32-slide deck, revision 29, 5 October 2026.
+- Source: John’s reviewed 32-slide deck, revision 32, refreshed on 9 October with the 8 October evidence checkpoint.
 
 ## Slide sources for page descriptions
 
