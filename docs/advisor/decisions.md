@@ -5,6 +5,18 @@ whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
 
+## 2026-10-09: October QA evidence and confirmed London meetup
+
+Refresh the article and the reviewed 32-slide presentation together. Use the
+8 October checkpoint: 2,257 unit test files, 404 Maestro YAML files, 33 nightly
+jobs and 99.26% measured line coverage. Explain the changed coverage scope and
+distinguish the 28.3% CI route reach from complete inventory route reach.
+October activity is partial, not a complete month or a productivity measure.
+The talk is confirmed for React Native London Meetup on 22 October 2026,
+hosted at Funding Circle, 71 Queen Victoria Street, London. Keep the article
+anonymous and the PDF as the only website deck download. Preserve the slide
+story, fonts and layout, with short keyword notes.
+
 ## 2026-10-06: Publish the coaching method as a standalone article
 
 John requested a public presentation and write-up about three coaching moves.

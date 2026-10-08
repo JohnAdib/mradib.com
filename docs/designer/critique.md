@@ -207,3 +207,20 @@ checks pass; native scrolling resolved the About automation stability wait.
 Click and Enter copy the same updated intro and website link. Both regenerated
 1200×630 home/About social images were visually reviewed without clipping.
 Screenshots and the compact report: `/private/tmp/mradib-ai-positioning-qa`.
+
+## 2026-10-09: October QA evidence and confirmed meetup
+
+Kept the reviewed 32-slide story, Newsreader titles, dark problem slides and
+progressive section maps. Updated inventory charts to ten checkpoints, with
+October labelled as an 8 October snapshot, and kept chart labels at normal
+weight. Coverage shows 99.26% with the scope change on the slide and in keyword
+notes. The cover now places the meetup/date and venue on two lines.
+
+Inspected PDF and native PPTX overviews, changed slide renders and the 1200 by
+630 sharing image. Both decks retain 32 pages/slides; the four PPTX charts
+remain editable and their data match the article. Reviewed article and talk
+page captures at 375, 430 and 1440 pixels in both themes, including 30 chart
+detail captures, with no horizontal overflow. The article remains anonymous;
+the previously approved speaker role remains on the talk cover. Evidence:
+`/tmp/qa-october-page-qa`, `/tmp/qa-october-pdf-sheet.png`,
+`/tmp/qa-october-pptx-sheet.png` and the private `qa-october` build directory.
