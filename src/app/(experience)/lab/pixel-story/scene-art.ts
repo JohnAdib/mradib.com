@@ -2,10 +2,12 @@ import type { GameState } from "./game-state";
 import { block, type Context } from "./pixel-draw";
 import {
 	drawElizabethTower,
+	drawLondonEye,
 	drawTowerBridge,
+	drawWestminster,
 	type ScenePalette,
 } from "./scene-landmarks";
-import { drawPerson, drawPoundCoin } from "./scene-sprites";
+import { drawDollarCoin, drawPerson } from "./scene-sprites";
 
 const palettes: ScenePalette[] = [
 	{
@@ -53,6 +55,11 @@ export interface Coin {
 	seed: number;
 }
 
+export interface CoinPickup {
+	x: number;
+	y: number;
+}
+
 export function sceneMetrics(width: number, height: number, player: GameState) {
 	const ground =
 		height - (width < 160 ? 42 : Math.max(33, Math.round(height * 0.13)));
@@ -71,7 +78,10 @@ export function newCoins(
 	personScale: number,
 ): Coin[] {
 	return Array.from({ length: 6 }, (_, seed) => ({
-		x: seed === 0 ? width / 2 : 22 + ((seed * 89) % Math.max(30, width - 44)),
+		x:
+			seed === 0
+				? width / 2 + Math.min(width * 0.2, 28 * personScale)
+				: 22 + ((seed * 89) % Math.max(30, width - 44)),
 		y: seed === 0 ? ground - 82 * personScale - 25 : -seed * 55,
 		speed: 26 + (seed % 3) * 8,
 		phase: seed * 1.7,
@@ -87,8 +97,8 @@ export function advanceCoins(
 	playerY: number,
 	personScale: number,
 	seconds: number,
-) {
-	let caught = 0;
+): CoinPickup[] {
+	const caught: CoinPickup[] = [];
 	for (const coin of coins) {
 		coin.y += coin.speed * seconds;
 		coin.phase += seconds * 5.5;
@@ -97,7 +107,7 @@ export function advanceCoins(
 			coin.y > ground + playerY - 72 * personScale &&
 			coin.y < ground + playerY - 3 * personScale;
 		if (touching || coin.y > ground + 12) {
-			if (touching) caught++;
+			if (touching) caught.push({ x: coin.x, y: coin.y });
 			coin.seed += 6;
 			coin.x = 18 + ((coin.seed * 89) % Math.max(30, width - 36));
 			coin.y = -20 - (coin.seed % 4) * 36;
@@ -120,6 +130,21 @@ export function drawScene(ctx: Context, frame: SceneFrame) {
 	ctx.imageSmoothingEnabled = false;
 	block(ctx, 0, 0, width, height, color.sky);
 	block(ctx, 0, Math.round(height * 0.62), width, height, color.haze);
+	ctx.globalAlpha = 0.18;
+	for (const [index, proportion] of [0.16, 0.47, 0.83].entries()) {
+		const cloudX = Math.round(width * proportion - camera * 0.06);
+		const cloudY = Math.round(height * (0.17 + (index % 2) * 0.13));
+		block(ctx, cloudX - 20, cloudY, 40, 4, color.far);
+		block(ctx, cloudX - 12, cloudY - 5, 31, 5, color.far);
+		block(ctx, cloudX - 4, cloudY - 8, 19, 3, color.far);
+		block(ctx, cloudX + 17, cloudY + 4, 18, 2, color.far);
+	}
+	ctx.globalAlpha = 0.1;
+	for (let i = 0; i < Math.ceil(width / 120) + 1; i++) {
+		const motifX = 32 + i * 120 - camera * 0.08;
+		const motifY = 30 + ((i * 61) % Math.max(60, ground * 0.4));
+		drawDollarCoin(ctx, motifX, motifY, Math.max(0.75, scale * 0.43), 0);
+	}
 	ctx.globalAlpha = 0.13;
 	for (let y = 0; y < ground; y += 4)
 		for (let x = (y / 4) % 2; x < width; x += 4)
@@ -130,6 +155,10 @@ export function drawScene(ctx: Context, frame: SceneFrame) {
 		const roof = ground - 30 - ((i * 13 + 500) % 35);
 		block(ctx, x, roof, 6, ground - roof, color.far);
 		if (i % 3 === 0) block(ctx, x + 2, roof - 3, 2, 3, color.far);
+		if (i % 9 === 0) {
+			block(ctx, x + 1, roof - 7, 4, 4, color.far);
+			block(ctx, x + 2, roof - 11, 2, 4, color.far);
+		}
 		for (let wy = roof + 6; wy < ground - 4; wy += 7)
 			block(ctx, x + 2, wy, 1, 2, color.sky);
 	}
@@ -138,6 +167,10 @@ export function drawScene(ctx: Context, frame: SceneFrame) {
 		const x = Math.round(i * 15 - ((camera * 0.24) % 15));
 		const roof = ground - 22 - ((i * 19 + 300) % 25);
 		block(ctx, x, roof, 12, ground - roof, color.far);
+		if (i % 5 === 0) {
+			block(ctx, x + 2, roof - 3, 8, 3, color.far);
+			block(ctx, x + 4, roof - 5, 4, 2, color.far);
+		}
 		for (let wy = roof + 5; wy < ground - 3; wy += 7)
 			for (let wx = x + 3; wx < x + 11; wx += 5)
 				block(ctx, wx, wy, 1, 2, color.gold);
@@ -147,6 +180,20 @@ export function drawScene(ctx: Context, frame: SceneFrame) {
 	for (let x = -20; x < width + 20; x += 27) {
 		block(ctx, x - ((camera * 0.3) % 27), ground - 8, 14, 2, color.haze);
 	}
+	drawWestminster(
+		ctx,
+		width * 0.77 - camera * 0.27,
+		ground - 14,
+		scale * 0.9,
+		color,
+	);
+	drawLondonEye(
+		ctx,
+		width * 0.55 - camera * 0.28,
+		ground - 17,
+		scale * 0.8,
+		color,
+	);
 	drawTowerBridge(ctx, width * 0.1 - camera * 0.45, ground - 13, scale, color);
 	drawElizabethTower(
 		ctx,
@@ -161,7 +208,7 @@ export function drawScene(ctx: Context, frame: SceneFrame) {
 	}
 	drawPerson(ctx, playerX, ground, personScale, player, time, reducedMotion);
 	for (const coin of coins)
-		drawPoundCoin(
+		drawDollarCoin(
 			ctx,
 			coin.x,
 			coin.y,

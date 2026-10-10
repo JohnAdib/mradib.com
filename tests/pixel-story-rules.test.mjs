@@ -5,11 +5,11 @@ import {
 	POINTS_PER_LEVEL,
 } from "../src/app/(experience)/lab/pixel-story/game-rules.ts";
 
-test("the next level unlocks only after five collected coins", () => {
-	assert.equal(POINTS_PER_LEVEL, 5);
+test("the next level unlocks only after fifteen collected coins", () => {
+	assert.equal(POINTS_PER_LEVEL, 15);
 	assert.equal(levelForScore(0), 1);
-	assert.equal(levelForScore(4), 1);
-	assert.equal(levelForScore(5), 2);
-	assert.equal(levelForScore(9), 2);
-	assert.equal(levelForScore(10), 3);
+	assert.equal(levelForScore(14), 1);
+	assert.equal(levelForScore(15), 2);
+	assert.equal(levelForScore(29), 2);
+	assert.equal(levelForScore(30), 3);
 });

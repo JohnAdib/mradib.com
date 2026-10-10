@@ -1,7 +1,7 @@
 import type { GameState } from "./game-state";
 import { block, type Context } from "./pixel-draw";
 
-export function drawPoundCoin(
+export function drawDollarCoin(
 	ctx: Context,
 	x: number,
 	y: number,
@@ -30,10 +30,12 @@ export function drawPoundCoin(
 	}
 	block(ctx, -3, -6, 6, 1, "#fff3bb");
 	if (Math.abs(face) > 0.36) {
-		block(ctx, -1, -4, 2, 7, "#9a542c");
+		block(ctx, -1, -5, 2, 11, "#9a542c");
+		block(ctx, -3, -4, 6, 1, "#9a542c");
+		block(ctx, -3, -3, 1, 3, "#9a542c");
 		block(ctx, -3, -1, 6, 2, "#9a542c");
-		block(ctx, -3, -4, 5, 1, "#9a542c");
-		block(ctx, -3, 2, 6, 1, "#9a542c");
+		block(ctx, 2, 1, 1, 3, "#9a542c");
+		block(ctx, -3, 4, 6, 1, "#9a542c");
 	}
 	ctx.restore();
 }

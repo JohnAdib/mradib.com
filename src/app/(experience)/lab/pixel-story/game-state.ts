@@ -25,7 +25,7 @@ export function stepGame(state: GameState, input: GameInput, seconds: number) {
 	const step = Math.min(seconds, 0.05);
 	const direction = Number(input.right) - Number(input.left);
 	if (input.jump && state.y === 0) state.velocityY = -190;
-	state.x = Math.max(-700, Math.min(700, state.x + direction * 105 * step));
+	state.x = Math.max(-700, Math.min(700, state.x + direction * 160 * step));
 	state.velocityY += 520 * step;
 	state.y = Math.min(0, state.y + state.velocityY * step);
 	if (state.y === 0) state.velocityY = 0;

@@ -55,9 +55,15 @@ test("pixel story starts as a coin-catching game without chapter controls", asyn
 		0,
 	);
 	assert.equal(await page.locator(".pixel-story-hint").count(), 0);
+	assert.equal(await page.locator(".pixel-story-kicker").count(), 0);
+	assert.equal(await page.locator(".pixel-story-status").count(), 0);
 	assert.match(await page.locator("[data-score]").innerText(), /0/);
+	assert.match(await page.locator(".pixel-story-progress").innerText(), /15/);
 	assert.match(await page.locator("[data-level]").innerText(), /LEVEL 1/i);
-	assert.equal(await page.locator("canvas[aria-label]").count(), 1);
+	assert.match(
+		await page.locator("canvas[aria-label]").getAttribute("aria-label"),
+		/dollar coins/i,
+	);
 	await page.close();
 });
 
@@ -81,7 +87,42 @@ test("reduced motion keeps the story usable", async () => {
 
 test("a foreground coin can be caught for a point", async () => {
 	const page = await browser.newPage({ viewport: { width: 900, height: 700 } });
+	await page.addInitScript(() => {
+		window.__coinNotes = [];
+		class FakeAudioContext {
+			state = "running";
+			currentTime = 0;
+			destination = {};
+			resume() {
+				return Promise.resolve();
+			}
+			createOscillator() {
+				return {
+					frequency: {
+						setValueAtTime: (value) => window.__coinNotes.push(value),
+					},
+					connect() {},
+					start() {},
+					stop() {},
+				};
+			}
+			createGain() {
+				return {
+					gain: { setValueAtTime() {}, exponentialRampToValueAtTime() {} },
+					connect() {},
+				};
+			}
+		}
+		Object.defineProperty(window, "AudioContext", { value: FakeAudioContext });
+	});
 	await page.goto(`${baseUrl}/lab/pixel-story`);
+	await page.locator("canvas[data-player-x]").waitFor();
+	await page.keyboard.down("ArrowRight");
+	await page.waitForFunction(
+		() => Number(document.querySelector("canvas")?.dataset.playerX) >= 65,
+	);
+	await page.keyboard.up("ArrowRight");
+	await page.locator("[data-coin-burst]").waitFor({ timeout: 8000 });
 	await page.waitForFunction(
 		() =>
 			Number(
@@ -92,6 +133,15 @@ test("a foreground coin can be caught for a point", async () => {
 	);
 	assert.match(await page.locator("[data-score]").innerText(), /01/);
 	assert.match(await page.locator("[data-level]").innerText(), /LEVEL 1/);
+	assert.ok((await page.evaluate(() => window.__coinNotes)).length >= 2);
+	await page.close();
+});
+
+test("coins do not score while the player stands idle", async () => {
+	const page = await browser.newPage({ viewport: { width: 900, height: 700 } });
+	await page.goto(`${baseUrl}/lab/pixel-story`);
+	await page.waitForTimeout(3300);
+	assert.match(await page.locator("[data-score]").innerText(), /00/);
 	await page.close();
 });
 
@@ -115,6 +165,26 @@ test("the scene fills the viewport without the site chrome", async () => {
 	}
 });
 
+test("desktop has no footer control hint while touch devices retain controls", async () => {
+	const desktop = await browser.newPage({
+		viewport: { width: 1440, height: 900 },
+	});
+	await desktop.goto(`${baseUrl}/lab/pixel-story`);
+	assert.equal(await desktop.locator(".pixel-story-bottom").isVisible(), false);
+	await desktop.close();
+	const phone = await browser.newPage({
+		hasTouch: true,
+		isMobile: true,
+		viewport: { width: 375, height: 812 },
+	});
+	await phone.goto(`${baseUrl}/lab/pixel-story`);
+	assert.equal(
+		await phone.getByRole("button", { name: "Move right" }).isVisible(),
+		true,
+	);
+	await phone.close();
+});
+
 test("arrow keys move, jump and crouch the character with parallax", async () => {
 	const page = await browser.newPage({ viewport: { width: 900, height: 700 } });
 	await page.goto(`${baseUrl}/lab/pixel-story`);
@@ -128,11 +198,11 @@ test("arrow keys move, jump and crouch the character with parallax", async () =>
 	assert.ok(Number(await canvas.getAttribute("data-player-x")) > firstX);
 	assert.ok(Number(await canvas.getAttribute("data-camera-x")) > firstCamera);
 	await page.keyboard.down("ArrowUp");
-	await page.getByTestId("player-pose-jumping").waitFor();
+	await page.locator('canvas[data-pose="jumping"]').waitFor();
 	await page.keyboard.up("ArrowUp");
 	await page.waitForTimeout(700);
 	await page.keyboard.down("ArrowDown");
-	await page.getByTestId("player-pose-crouching").waitFor();
+	await page.locator('canvas[data-pose="crouching"]').waitFor();
 	await page.keyboard.up("ArrowDown");
 	const movedX = Number(await canvas.getAttribute("data-player-x"));
 	await page.keyboard.down("ArrowLeft");
@@ -157,11 +227,11 @@ test("touch controls move and jump", async () => {
 	await right.dispatchEvent("pointerup", { pointerId: 1 });
 	assert.ok(Number(await canvas.getAttribute("data-player-x")) > firstX);
 	await page.getByRole("button", { name: "Jump" }).click();
-	await page.getByTestId("player-pose-jumping").waitFor();
-	await page.getByTestId("player-pose-standing").waitFor();
+	await page.locator('canvas[data-pose="jumping"]').waitFor();
+	await page.locator('canvas[data-pose="standing"]').waitFor();
 	const crouch = page.getByRole("button", { name: "Crouch" });
 	await crouch.dispatchEvent("pointerdown", { pointerId: 2 });
-	await page.getByTestId("player-pose-crouching").waitFor();
+	await page.locator('canvas[data-pose="crouching"]').waitFor();
 	await crouch.dispatchEvent("pointerup", { pointerId: 2 });
 	await page.close();
 });
