@@ -810,7 +810,15 @@ places: the About closing (already existed), a footer "CV ↗" link, and a
 An unlisted /lab/pixel-story page explores the 8-bit inspired pixel art
 language in the Tetris film. It uses an original low-resolution canvas scene
 of London, a central figure, and falling coins. Three manually controlled
-chapters change the palette and caption. The experiment uses the site's
-existing chrome and needs no animation dependency. Reduced-motion visitors
+chapters change the palette and caption. The first version used the site's
+existing chrome and needed no animation dependency. Reduced-motion visitors
 get a still scene with working chapter controls. This is a trial, not a new
 site-wide visual direction.
+
+Follow-up: the experiment now fills the viewport in a separate page shell,
+without the site header or footer. Pound signs make the falling coins clear.
+Tower Bridge and Elizabeth Tower have more detailed pixel silhouettes. Arrow
+keys and touch controls move the character, jump, and crouch; the scenery
+shifts at a slower rate while the character walks. A full-screen button lets
+desktop browsers enter browser full-screen mode. The three chapters and
+reduced-motion behavior remain.

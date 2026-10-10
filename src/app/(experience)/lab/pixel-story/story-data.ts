@@ -8,7 +8,7 @@ export const chapters = [
 	{
 		number: "02",
 		label: "POSSIBILITY",
-		caption: "Every falling coin is a possibility.",
+		caption: "Every falling pound coin is a possibility.",
 		color: "gold",
 	},
 	{
