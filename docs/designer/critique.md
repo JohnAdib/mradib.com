@@ -242,3 +242,12 @@ composition. Mobile stacks image and copy; desktop places them side by side.
 No horizontal overflow. Guest LinkedIn links stay separate from video links;
 channel and community website links appear above the cards. Evidence:
 /tmp/conversations-banner-qa.
+
+### Portrait-free cards and per-session communities
+
+Reviewed 375, 430 and 1440px in both themes with no horizontal overflow.
+Removed all guest banners. Community identity and two quieter links live in
+each card, alongside a right-aligned View on YouTube action. Upcoming sessions
+appear first, with the recording last. All external links use safe new-tab
+attributes; guest links announce the destination. Evidence:
+/tmp/conversations-refined-qa.

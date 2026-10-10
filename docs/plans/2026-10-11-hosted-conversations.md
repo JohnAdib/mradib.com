@@ -1,3 +1,3 @@
 # Hosted conversations
 
-Display the three sessions directly after Podcast on /talks. Use compressed original YouTube banners and direct YouTube links. No separate conversations page. Credit John as host, link each guest to LinkedIn, and link Tech Immigrants to its channel and website. Remove public Luma links. Keep upcoming labels, dates and concise summaries.
+Display three portrait-free cards directly after Podcast on /talks. No separate page or public Luma links. Credit John as host, link guests to LinkedIn in new tabs, and keep each session's community/channel/website inside its card. Show upcoming sessions first chronologically and recordings below. Use a right-aligned View on YouTube action and short summaries.

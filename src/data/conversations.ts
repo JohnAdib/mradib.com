@@ -1,4 +1,4 @@
-export const conversationCommunity = {
+const techImmigrants = {
 	name: "Tech Immigrants",
 	youtube: "https://www.youtube.com/@TechImmigrants",
 	website: "https://techimmigrants.com/",
@@ -6,11 +6,11 @@ export const conversationCommunity = {
 
 export const conversations = [
 	{
+		community: techImmigrants,
 		id: "getting-hired-in-tech",
 		title: "Can you still get hired in tech?",
 		guest: "Joe Bignell",
 		guestLinkedin: "https://www.linkedin.com/in/joebignell/",
-		banner: "/conversations/getting-hired-in-tech.webp",
 		guestRole: "Recruitment and international hiring specialist",
 		date: "2026-10-02",
 		status: "recorded",
@@ -19,11 +19,11 @@ export const conversations = [
 			"A recruiter and a hiring manager bring two perspectives to today's tech job market.",
 	},
 	{
+		community: techImmigrants,
 		id: "uk-startup-hiring",
 		title: "How to get hired by a UK startup?",
 		guest: "Sam Baldwin",
 		guestLinkedin: "https://www.linkedin.com/in/sambaldwin000/",
-		banner: "/conversations/uk-startup-hiring.webp",
 		guestRole: "JavaScript recruiter for UK startups and scale-ups",
 		date: "2026-10-16",
 		status: "upcoming",
@@ -32,11 +32,11 @@ export const conversations = [
 			"Strong technical skills are only part of the story. What else do startup teams look for?",
 	},
 	{
+		community: techImmigrants,
 		id: "engineering-rejections",
 		title: "Why do good engineers get rejected?",
 		guest: "Sam Barcia",
 		guestLinkedin: "https://www.linkedin.com/in/sam-barcia-wave/",
-		banner: "/conversations/engineering-rejections.webp",
 		guestRole:
 			"Managing Consultant at Wave Talent and JavaScript London co-organiser",
 		date: "2026-10-21",
@@ -55,3 +55,10 @@ export const conversationDate = (date: string) =>
 		year: "numeric",
 		timeZone: "Europe/London",
 	}).format(new Date(`${date}T12:00:00Z`));
+
+export const orderedConversations = [...conversations].sort((a, b) => {
+	if (a.status !== b.status) return a.status === "upcoming" ? -1 : 1;
+	return a.status === "upcoming"
+		? a.date.localeCompare(b.date)
+		: b.date.localeCompare(a.date);
+});

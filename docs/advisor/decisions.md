@@ -1337,3 +1337,7 @@ John approved a host section after Podcast and a shared conversations page. Dist
 ### Revised direction
 
 John requested direct banner cards on Talks, no separate conversations page and no public Luma links. Add guest LinkedIn links and Tech Immigrants channel/website links. YouTube banners are compressed locally.
+
+### Conversation cards without portraits
+
+John found guest portraits too prominent on his personal site. Removed banners, moved community name/channel/website links into each card and placed a neutral YouTube action at the right. Upcoming conversations appear first in date order; recordings follow. Guest LinkedIn and other external links open in new tabs. Community data belongs to each session so future hosts can differ.
