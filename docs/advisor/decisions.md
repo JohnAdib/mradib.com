@@ -1341,3 +1341,7 @@ John requested direct banner cards on Talks, no separate conversations page and 
 ### Conversation cards without portraits
 
 John found guest portraits too prominent on his personal site. Removed banners, moved community name/channel/website links into each card and placed a neutral YouTube action at the right. Upcoming conversations appear first in date order; recordings follow. Guest LinkedIn and other external links open in new tabs. Community data belongs to each session so future hosts can differ.
+
+### Compact cards and runtime dates
+
+John requested smaller cards and automatic upcoming status. Reduced padding, title size and gaps; removed the summary paragraph from cards. The visitor's clock determines status and order after hydration, refreshed every minute and on tab visibility changes. Verified event end times retain Upcoming during the session. Past session does not imply a verified recording.

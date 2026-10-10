@@ -13,7 +13,8 @@ export const conversations = [
 		guestLinkedin: "https://www.linkedin.com/in/joebignell/",
 		guestRole: "Recruitment and international hiring specialist",
 		date: "2026-10-02",
-		status: "recorded",
+		recordingAvailable: true,
+		endsAt: "2026-10-02T12:00:00Z",
 		youtube: "https://www.youtube.com/watch?v=zHnhGOTUwyQ",
 		summary:
 			"A recruiter and a hiring manager bring two perspectives to today's tech job market.",
@@ -26,7 +27,8 @@ export const conversations = [
 		guestLinkedin: "https://www.linkedin.com/in/sambaldwin000/",
 		guestRole: "JavaScript recruiter for UK startups and scale-ups",
 		date: "2026-10-16",
-		status: "upcoming",
+		recordingAvailable: false,
+		endsAt: "2026-10-16T11:30:00Z",
 		youtube: "https://www.youtube.com/watch?v=9tEpHryZLE8",
 		summary:
 			"Strong technical skills are only part of the story. What else do startup teams look for?",
@@ -40,7 +42,8 @@ export const conversations = [
 		guestRole:
 			"Managing Consultant at Wave Talent and JavaScript London co-organiser",
 		date: "2026-10-21",
-		status: "upcoming",
+		recordingAvailable: false,
+		endsAt: "2026-10-21T12:30:00Z",
 		youtube: "https://www.youtube.com/watch?v=GnZ_dYrQ2NU",
 		summary:
 			"A look at the recruiter's side of an application and why strong engineers can still miss out.",
@@ -55,10 +58,3 @@ export const conversationDate = (date: string) =>
 		year: "numeric",
 		timeZone: "Europe/London",
 	}).format(new Date(`${date}T12:00:00Z`));
-
-export const orderedConversations = [...conversations].sort((a, b) => {
-	if (a.status !== b.status) return a.status === "upcoming" ? -1 : 1;
-	return a.status === "upcoming"
-		? a.date.localeCompare(b.date)
-		: b.date.localeCompare(a.date);
-});

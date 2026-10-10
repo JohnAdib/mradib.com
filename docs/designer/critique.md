@@ -251,3 +251,12 @@ each card, alongside a right-aligned View on YouTube action. Upcoming sessions
 appear first, with the recording last. All external links use safe new-tab
 attributes; guest links announce the destination. Evidence:
 /tmp/conversations-refined-qa.
+
+### Compact cards with a runtime clock
+
+Reviewed 375, 430 and 1440px in both themes with no overflow. Cards now measure
+216px high on tested phones and 224px on desktop. Removed summary paragraphs,
+reduced padding, heading size and gaps while preserving guest/community links
+and the right-side video action. Status is calculated after hydration and
+refreshed every minute and on visibility changes; scheduled end boundaries and
+upcoming/past ordering have focused tests. Evidence: /tmp/conversations-compact-qa.
