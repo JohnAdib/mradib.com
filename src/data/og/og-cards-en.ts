@@ -1,3 +1,4 @@
+import { aiPositioning } from "@/data/ai-positioning";
 import type { IOgCard } from "./og-card-interface";
 
 const portrait = { src: "/img/john-adib-hero.jpg", fit: "cover" } as const;
@@ -5,23 +6,31 @@ const portrait = { src: "/img/john-adib-hero.jpg", fit: "cover" } as const;
 // Social cards for the English hub and identity pages.
 export const ogCardsEn: IOgCard[] = [
 	{
+		slug: "share",
+		route: "/@",
+		lang: "en",
+		eyebrow: "MrAdib.com",
+		headline: "John Adib",
+		proof: "Social profiles, talks and contact details.",
+		artwork: portrait,
+	},
+	{
 		slug: "home",
 		route: "/",
 		lang: "en",
-		eyebrow: "I build. I teach. I mentor.",
+		eyebrow: aiPositioning.focusTitle,
 		headline: "John Adib",
-		proof:
-			"Engineering Manager in London. Entrepreneur, twice. The World's Most Influential Mentor.",
+		proof: `Engineering leader in London. ${aiPositioning.activities} in one workflow.`,
 		artwork: portrait,
 	},
 	{
 		slug: "about",
 		route: "/about",
 		lang: "en",
-		eyebrow: "The Story",
-		headline: "From a first computer to the world stage.",
+		eyebrow: "John Adib / The story",
+		headline: aiPositioning.focusTitle,
 		proof:
-			"Entrepreneur, twice. The World's Most Influential Mentor. UK Global Talent.",
+			"Engineering leader in London. Two-time founder. 600+ mentoring sessions.",
 		artwork: portrait,
 	},
 	{
@@ -31,7 +40,7 @@ export const ogCardsEn: IOgCard[] = [
 		eyebrow: "Guides",
 		headline: "Written to be definitive.",
 		proof:
-			"The A to Z of resume building, and the complete guide to GitHub Autolink references.",
+			"The fundraising kit from pitch deck to application, the A to Z of resume building, and the complete guide to GitHub Autolink.",
 	},
 	{
 		slug: "awards",

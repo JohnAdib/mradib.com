@@ -7,9 +7,15 @@ export function TalkFacts({ talk }: { talk: ITalk }) {
 
 	return (
 		<dl className="grid gap-3 rounded-2xl bg-zinc-900/5 p-5 dark:bg-zinc-800/40">
-			<FactRow label="When" value={formatDateTime({ datetime: talk.date })} />
-			<FactRow label="Where" value={location} />
-			<FactRow label="Organizer" value={talk.organizer} />
+			{talk.status === "upcoming" && (
+				<FactRow label="Event" value={talk.event ?? "TBC"} />
+			)}
+			<FactRow
+				label="When"
+				value={talk.date ? formatDateTime({ datetime: talk.date }) : "TBC"}
+			/>
+			<FactRow label="Where" value={location || "TBC"} />
+			<FactRow label="Organizer" value={talk.organizer ?? "TBC"} />
 			<FactRow label="Host" value={talk.host} />
 			<FactRow label="Audience" value={talk.audience} />
 		</dl>

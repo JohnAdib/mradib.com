@@ -27,18 +27,23 @@ whose story arc reads inevitable:
    development: AI reviewers on every pull request, releases taken from
    monthly to weekly.
 
-The arc is the product. Titles are footnotes; momentum is the message.
+Lead with his current AI-first software development practice, backed by the
+published case study and talks. The wider arc gives that work its context.
+Titles are supporting credentials; methods and evidence carry the message.
 
 ## Identity pillars, priority order
 
-1. Entrepreneur and builder. Co-founder twice, once as CEO, once as CTO. $1M
-   raised, one million users in a month, 1,200+ businesses served. Lead with
-   this.
-2. Recognized leader. A government endorsed him. A global community of
+1. Pioneering AI-first software development. An engineering leader in
+   London bringing AI agents, testing, code review and delivery into one
+   continuous workflow. Lead with this, then link to the published case
+   study, guardrails methods and AI-first architecture talks. "Pioneering"
+   describes his applied practice, not an industry-first invention or a
+   formal accolade. Observational metrics never establish AI causality.
+2. Entrepreneur and builder. Co-founder twice, once as CEO, once as CTO. $1M
+   raised, one million users in a month, 1,200+ businesses served.
+3. Recognized leader. A government endorsed him. A global community of
    32,000+ mentors ranked him first. Recognition comes from institutions,
    never from self-claims.
-3. The voice of AI-first engineering. Talks, articles, and real production
-   practice back the claim.
 4. Mentor at scale. 600+ sessions. Proof of generosity and reach, framed as
    leadership, never as a hobby.
 
@@ -51,13 +56,15 @@ like a story that was always going one direction: up.
 
 ## One-liner shapes per context
 
-- Homepage or hero: the arc compressed. Builder, government endorsed leader,
-  world's most influential mentor, AI-first pioneer.
-- About: the full story, chapter by chapter, each chapter ending stronger.
+- Homepage or hero: AI-first development and the continuous workflow first,
+  followed by concise founder and mentor credentials.
+- About: a concise AI-first opening with evidence links, then the full
+  story, chapter by chapter, each chapter ending stronger.
 - Talk bios: speaker first. Stages and audience numbers, then the day job.
-- OG and meta descriptions: one verified superlative plus one number.
-  Example shape: "2x founder. World's Most Influential Mentor. Pioneering
-  AI-first engineering in London."
+- OG and meta descriptions: AI-first development and London leadership
+  first. Add one relevant verified proof when space allows.
 
-Exact strings live in src/data/profile.ts. When positioning changes, change
-them there once; everything derives from it.
+Shared AI positioning lives in src/data/ai-positioning.ts. Profile and bio
+strings live in src/data/profile.ts; the homepage intro derives from the
+shared positioning through src/data/intro-bio.ts. Update these sources so
+visible copy, metadata and structured data remain consistent.

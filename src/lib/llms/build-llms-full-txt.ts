@@ -5,17 +5,19 @@ import {
 	sectionProfiles,
 } from "@/lib/llms/llms-sections";
 import {
+	sectionAiDevelopment,
+	sectionAiTools,
 	sectionAllRecognition,
 	sectionEvidence,
 	sectionFullBiography,
 	sectionPersian,
-	sectionResumeAiTools,
 } from "@/lib/llms/llms-sections-extra";
 import { sectionSiteStructure } from "@/lib/llms/llms-sections-routes";
 
 export function buildLlmsFullTxt(): string {
 	return `${[
 		sectionIdentity(),
+		sectionAiDevelopment(),
 		sectionFullBiography(),
 		sectionKeyFacts(),
 		sectionAllRecognition(),
@@ -23,7 +25,7 @@ export function buildLlmsFullTxt(): string {
 		sectionSiteStructure(),
 		sectionProfiles(),
 		sectionEvidence(),
-		sectionResumeAiTools(),
+		sectionAiTools(),
 		sectionPersian(),
 	].join("\n\n")}\n`;
 }

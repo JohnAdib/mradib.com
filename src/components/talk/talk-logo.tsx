@@ -47,7 +47,7 @@ export function TalkLogo({
 			className={clsx(base, "bg-accent-50 dark:bg-accent-400/10")}
 		>
 			<span className="text-sm font-bold tracking-tight text-accent-700 dark:text-accent-400">
-				{monogram(talk.organizer)}
+				{monogram(talk.organizer ?? "John Adib")}
 			</span>
 		</span>
 	);

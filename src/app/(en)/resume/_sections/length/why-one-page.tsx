@@ -23,10 +23,10 @@ export function LengthWhyOnePage(): JSX.Element {
 
 			<p>
 				Think about it. When something is not going to be read, why should it be
-				there at all.
+				there at all?
 			</p>
 			<Msg severity="error">
-				If you decide to have a two page resume, make sure the second page is
+				If you decide to have a two-page resume, make sure the second page is
 				worth it.
 			</Msg>
 			<p>

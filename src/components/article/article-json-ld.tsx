@@ -1,3 +1,5 @@
+import "server-only";
+
 import type { StaticImageData } from "next/image";
 import type { JSX } from "react";
 import type { Article, WithContext } from "schema-dts";
@@ -15,6 +17,7 @@ interface IArticleJSONLD {
 	datePublished: string;
 	dateModified: string;
 	inLanguage?: string;
+	neutralAuthor?: boolean;
 }
 
 export function ArticleJsonLD({
@@ -27,6 +30,7 @@ export function ArticleJsonLD({
 	datePublished,
 	dateModified,
 	inLanguage,
+	neutralAuthor = false,
 }: IArticleJSONLD): JSX.Element {
 	const articleImg = homepageUrl + coverImage?.src;
 	const articleUrl = homepageUrl + urlPath;
@@ -49,6 +53,7 @@ export function ArticleJsonLD({
 				name: profile.name,
 				alternateName: profile.alternateNames,
 				jobTitle: profile.jobTitle,
+				...(neutralAuthor && { description: profile.oneLiner }),
 				url: `${homepageUrl}/about`,
 			},
 		],

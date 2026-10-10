@@ -9,6 +9,10 @@ The About page is the story. The homepage earns the click; About delivers
   12-chapter life story is the right shape; protect it.
 - Open with a hook, never with "John is an Engineering Manager". The first
   paragraph promises a story worth reading.
+- Lead the hero introduction with the shared AI-first development summary.
+  Place the same dated case-study and talk links near the introduction, then
+  preserve the chronological life-story chapters. Source copy lives in
+  src/data/ai-positioning.ts and evidence in src/data/ai-evidence.ts.
 - Each chapter carries one wow beat where the facts allow: the teenage
   WorldSkills medalist, teaching 2,000+ students, the $1M raise and the
   million-user month, growing Jibres to 1,200+ businesses, the move to

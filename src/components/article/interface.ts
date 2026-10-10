@@ -13,6 +13,7 @@ export interface IArticleLayout {
 	datePublished: string;
 	dateModified: string;
 	readTimeMinutes?: number;
+	neutralAuthor?: boolean;
 	faq?: IFaqQA[];
 	breadcrumb?: IBreadcrumbItem[];
 	nextPrev?: INavNextPrev;

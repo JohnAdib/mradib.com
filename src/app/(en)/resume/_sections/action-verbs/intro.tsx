@@ -34,7 +34,10 @@ export function ActionVerbsIntro(): JSX.Element {
 			</p>
 
 			<figure>
-				<Image src={imgVerbTaskMetric} alt="resume-action-verb-task-metric" />
+				<Image
+					src={imgVerbTaskMetric}
+					alt="Achievement formula with the metric at the end: action verb, task or project, result"
+				/>
 				<figcaption dir="ltr">
 					1. Metric at the end. Action Verb + Task or Project + Metric or Result
 				</figcaption>
@@ -46,7 +49,10 @@ export function ActionVerbsIntro(): JSX.Element {
 				or how you did it. In this example, fewer support calls was the result.
 			</p>
 			<figure>
-				<Image src={imgVerbMetricTask} alt="resume-action-verb-metric-task" />
+				<Image
+					src={imgVerbMetricTask}
+					alt="Achievement formula with the metric in the middle: action verb, result, task or project"
+				/>
 				<figcaption dir="ltr">
 					2. Metric in the middle. Action Verb + Metric or Result + Task or
 					Project

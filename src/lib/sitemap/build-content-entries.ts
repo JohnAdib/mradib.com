@@ -1,5 +1,6 @@
 import { articlesMeta } from "@/data/articles/articles-meta";
 import { flagshipAwards } from "@/data/awards";
+import { podcastEpisode } from "@/data/podcast/episode";
 import { talks } from "@/data/talks/talks";
 import { type SitemapEntry, sitemapEntry } from "@/lib/sitemap/sitemap-entry";
 
@@ -21,10 +22,17 @@ function awardEntries(): SitemapEntry[] {
 
 function talkEntries(): SitemapEntry[] {
 	return talks.flatMap((talk) =>
-		talk.path ? [sitemapEntry(talk.path, talk.date)] : [],
+		talk.path
+			? [sitemapEntry(talk.path, talk.pageUpdated ?? talk.date ?? undefined)]
+			: [],
 	);
 }
 
 export function buildContentEntries(): SitemapEntry[] {
-	return [...articleEntries(), ...awardEntries(), ...talkEntries()];
+	return [
+		...articleEntries(),
+		...awardEntries(),
+		...talkEntries(),
+		sitemapEntry(podcastEpisode.path, podcastEpisode.pageUpdated),
+	];
 }

@@ -33,7 +33,7 @@ export function WhatIsAts(): JSX.Element {
 			</p>
 			<p>
 				You are probably surprised. You may be telling yourself, if a robot is
-				going to say no to me, why spend all this time getting my resume right
+				going to say no to me, why spend all this time getting my resume right?
 				:(
 			</p>
 			<figure>

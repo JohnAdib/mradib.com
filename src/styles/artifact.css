@@ -1,0 +1,125 @@
+/* The living artifact: the hero object cycles through a guide's steps, in
+   CSS alone. Each step is stacked absolutely, fades in for its window, and the
+   step count picks the keyframes. Hover pauses; reduced motion shows step one. */
+.artifact-cycle > .artifact-step {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	animation-duration: calc(var(--artifact-count) * 2.8s);
+	animation-delay: calc(var(--artifact-index) * 2.8s);
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+.artifact-cycle[data-cycle="6"] > .artifact-step {
+	animation-name: artifact-cycle-6;
+}
+.artifact-cycle[data-cycle="9"] > .artifact-step {
+	animation-name: artifact-cycle-9;
+}
+.artifact-cycle[data-cycle="10"] > .artifact-step {
+	animation-name: artifact-cycle-10;
+}
+.artifact-cycle[data-cycle="12"] > .artifact-step {
+	animation-name: artifact-cycle-12;
+}
+
+.artifact-cycle:hover > .artifact-step {
+	animation-play-state: paused;
+}
+
+/* One window is 100 / count percent of the loop; 0.4s of it fades in and out. */
+@keyframes artifact-cycle-6 {
+	0% {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	2.4% {
+		opacity: 1;
+		transform: none;
+	}
+	14.3% {
+		opacity: 1;
+		transform: none;
+	}
+	16.66% {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes artifact-cycle-9 {
+	0% {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	1.6% {
+		opacity: 1;
+		transform: none;
+	}
+	9.5% {
+		opacity: 1;
+		transform: none;
+	}
+	11.11% {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes artifact-cycle-10 {
+	0% {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	1.4% {
+		opacity: 1;
+		transform: none;
+	}
+	8.6% {
+		opacity: 1;
+		transform: none;
+	}
+	10% {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes artifact-cycle-12 {
+	0% {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	1.2% {
+		opacity: 1;
+		transform: none;
+	}
+	7.1% {
+		opacity: 1;
+		transform: none;
+	}
+	8.33% {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.artifact-cycle > .artifact-step {
+		animation: none;
+	}
+	.artifact-cycle > .artifact-step:first-child {
+		opacity: 1;
+	}
+}

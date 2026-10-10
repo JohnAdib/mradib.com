@@ -26,17 +26,24 @@ export function TiltCard({
 	maxTilt = 12,
 	restingRotate = 0,
 	tracking = "element",
+	disabled = false,
 }: {
 	className?: string;
 	children: React.ReactNode;
 	maxTilt?: number;
 	restingRotate?: number;
 	tracking?: PointerTracking;
+	disabled?: boolean;
 }) {
 	const ref = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
+		if (disabled && ref.current) {
+			ref.current.style.transition = RESET_TRANSITION;
+			ref.current.style.transform = restingTransform(restingRotate);
+		}
 		if (
+			disabled ||
 			tracking !== "viewport" ||
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches
 		) {
@@ -102,10 +109,11 @@ export function TiltCard({
 				window.cancelAnimationFrame(animationFrame);
 			}
 		};
-	}, [maxTilt, restingRotate, tracking]);
+	}, [disabled, maxTilt, restingRotate, tracking]);
 
 	function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
 		if (
+			disabled ||
 			tracking !== "element" ||
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches
 		) {
@@ -123,7 +131,7 @@ export function TiltCard({
 	}
 
 	function handleMouseLeave() {
-		if (tracking === "element" && ref.current) {
+		if (!disabled && tracking === "element" && ref.current) {
 			ref.current.style.transition = RESET_TRANSITION;
 			ref.current.style.transform = restingTransform(restingRotate);
 		}

@@ -27,6 +27,16 @@ framing; no page is ever written "for recruiters".
 Need approachability and a way in. Served by /mentor and the guides. Warmth
 lives there; it never dilutes the leader frame on the homepage or About.
 
+## 5. Founders raising a round
+
+They arrive from search, not from John's name, looking for one document:
+the deck, the one-pager, the demo, the founder video, the model, the
+application. Served by the fundraising kit at /fundraising and its six
+guides. They need the complete answer with nothing to wade through: the
+artifact step by step, a pass test per step, and files their AI can read.
+The kit wins them the way the guides win mentees, with depth and
+generosity, never at the primary's expense.
+
 ## The 5-second rule per page
 
 - Homepage: the primary reader must see the arc and one or two undeniable

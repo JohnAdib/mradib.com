@@ -26,9 +26,13 @@ export function Button({
 		className,
 	);
 
-	return typeof props.href === "undefined" ? (
-		<button className={className} {...props} />
-	) : (
-		<Link className={className} {...props} />
-	);
+	if (typeof props.href === "undefined") {
+		return <button className={className} {...props} />;
+	}
+	// Hash links stay plain anchors: Link would client-route a same-page jump.
+	if (typeof props.href === "string" && props.href.startsWith("#")) {
+		const { href, ...anchorProps } = props;
+		return <a className={className} href={href} {...anchorProps} />;
+	}
+	return <Link className={className} {...props} />;
 }

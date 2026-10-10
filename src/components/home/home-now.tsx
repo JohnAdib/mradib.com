@@ -1,9 +1,6 @@
-import Link from "next/link";
+import { AiEvidenceLinks } from "@/components/ai-evidence-links";
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal/reveal";
-import { getTalk } from "@/data/talks/get-talk";
-
-const talk = getTalk("ai-first-architecture");
 
 function Strong({ children }: { children: React.ReactNode }) {
 	return <strong className="font-semibold text-white">{children}</strong>;
@@ -38,12 +35,7 @@ export function HomeNow() {
 							I took the thesis to the <Strong>AI Coding Summit</Strong>, 800+
 							engineers, and to <Strong>React Advanced London</Strong> at Figma.
 						</p>
-						<Link
-							href={talk.path ?? "/talks"}
-							className="mt-8 inline-block text-sm font-medium text-accent-400 transition hover:text-accent-300"
-						>
-							The thesis: AI-First Architecture →
-						</Link>
+						<AiEvidenceLinks inverse />
 					</div>
 				</div>
 			</Reveal>

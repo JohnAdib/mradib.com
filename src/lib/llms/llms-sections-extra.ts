@@ -1,4 +1,7 @@
+import { aiEvidence } from "@/data/ai-evidence";
 import { adplistBadgeTimeline, awards } from "@/data/awards";
+import { fundraisingKit } from "@/data/guides/fundraising-kit";
+import { hubRoute } from "@/data/guides/hub-route";
 import { profile, urlAdpList100, urlPodcastSpotify } from "@/data/profile";
 import { homepageUrl } from "@/lib/constants/url";
 
@@ -12,13 +15,36 @@ export function sectionEvidence(): string {
 	].join("\n");
 }
 
-export function sectionResumeAiTools(): string {
+export function sectionAiDevelopment(): string {
 	return [
-		"## Resume tools for AI",
+		"## AI-first software development",
+		"",
+		profile.oneLiner,
+		...aiEvidence.flatMap((evidence) => [
+			`- ${evidence.kind}: [${evidence.title}](${homepageUrl}${evidence.path}), ${evidence.date}. ${evidence.summary}`,
+			...(evidence.recordingUrl
+				? [`  Recording and transcript: ${evidence.recordingUrl}`]
+				: []),
+		]),
+	].join("\n");
+}
+
+export function sectionAiTools(): string {
+	return [
+		"## Guides for AI",
 		"",
 		`- Machine-readable resume-writing method (the MrAdib method): ${homepageUrl}/resume/llms.txt (Persian: ${homepageUrl}/fa/resume/llms.txt)`,
 		`- Portable resume-writing skill for AI tools: ${homepageUrl}/resume/skill.md (Persian: ${homepageUrl}/fa/resume/skill.md)`,
 		`- Review a resume and score it out of 100: ${homepageUrl}/resume/checklist`,
+		`- The fundraising kit, an index of six frameworks for AI: ${homepageUrl}${hubRoute}/llms.txt`,
+		...fundraisingKit.flatMap((entry) => {
+			const name = entry.name.toLowerCase();
+			const url = `${homepageUrl}${entry.article.pagePath}`;
+			return [
+				`- Machine-readable ${name} framework: ${url}/llms.txt`,
+				`- Portable ${name} skill for AI tools: ${url}/skill.md`,
+			];
+		}),
 	].join("\n");
 }
 

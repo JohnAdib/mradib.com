@@ -38,9 +38,11 @@ function Caption() {
 export function TalkPdfPreview({
 	href,
 	previewImage,
+	title,
 }: {
 	href: string;
 	previewImage?: string;
+	title: string;
 }) {
 	if (!previewImage) {
 		return <IconCard href={href} />;
@@ -56,9 +58,10 @@ export function TalkPdfPreview({
 			<span className="relative block aspect-video w-full bg-zinc-100 dark:bg-zinc-800">
 				<Image
 					src={previewImage}
-					alt="Slides preview"
+					alt={`First slide of ${title}`}
 					fill
-					className="object-cover"
+					sizes="(max-width: 768px) 100vw, 672px"
+					className="object-contain"
 				/>
 			</span>
 			<span className="flex items-center justify-between gap-3 bg-surface px-5 py-4 dark:bg-zinc-800/40">

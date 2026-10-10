@@ -19,8 +19,8 @@ export function ArticleReadTime({
 	}
 
 	const readTimeMinutesFa = minutes.toLocaleString("fa");
-	const readTimeTxt = `در ${readTimeMinutesFa} دقیقه بخوانید‍‍‍‍‍‍`;
-	const readTimeTitle = `ما تخمین می‌زنیم که شما این نوشته را در ${readTimeMinutesFa} دقیقه بخوانید.`;
+	const readTimeTxt = `در ${readTimeMinutesFa} دقیقه بخوانید`;
+	const readTimeTitle = `تخمین می‌زنیم خواندن این نوشته حدود ${readTimeMinutesFa} دقیقه طول بکشد.`;
 
 	return <abbr title={readTimeTitle}>{readTimeTxt}</abbr>;
 }

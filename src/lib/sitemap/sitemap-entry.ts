@@ -9,11 +9,14 @@ function toUrl(path: string): string {
 }
 
 /** Build one sitemap entry, attaching hreflang alternates when the path is paired. */
-export function sitemapEntry(path: string, lastModified: string): SitemapEntry {
+export function sitemapEntry(
+	path: string,
+	lastModified?: string,
+): SitemapEntry {
 	const languages = languageAlternates(path);
 	return {
 		url: toUrl(path),
-		lastModified,
+		...(lastModified ? { lastModified } : {}),
 		...(languages ? { alternates: { languages } } : {}),
 	};
 }

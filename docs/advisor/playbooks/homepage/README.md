@@ -22,19 +22,18 @@ first screen could describe a thousand engineers, it fails.
 
 ## The architecture: one rising story
 
-Five sections. The hero compresses the whole arc for the 5-second
-reader. The scroll then runs in time order, past to future, so momentum
-is what the reader feels. Each section carries one message, one chapter
-of one chronology, and one path deeper. Only the hero stacks proofs side
-by side; that is its job. That is how the page passes the 5-second test
-without becoming the trophy shelf John rejected.
+Five sections. The hero leads with pioneering AI-first software development
+and defines the practical workflow. The AI section follows immediately with
+dated evidence, before the earlier career story and institutional recognition.
+The homepage still carries one arc, now anchored in the work John wants to be
+known for. The existing visual language and section count stay intact.
 
 | # | Section | File | Chapter | Path deeper |
 |---|---------|------|---------|-------------|
 | 1 | Hero | 01-hero.md | The whole arc, compressed | /about |
-| 2 | Rise | 02-rise.md | Past: medals, classrooms, companies | /about |
-| 3 | Recognition | 03-recognition.md | The world responds | /awards |
-| 4 | Now | 04-now.md | Present: AI-first | the AI-First Architecture talk |
+| 2 | Now | 04-now.md | Present: AI-first and published evidence | case study and talks |
+| 3 | Rise | 02-rise.md | Past: medals, classrooms, companies | /about |
+| 4 | Recognition | 03-recognition.md | The world responds | /awards |
 | 5 | Invitation | 05-invitation.md | Future: the open door | /contact |
 
 Each file carries its own status: draft, approved, or built.
@@ -43,16 +42,16 @@ Each file carries its own status: draft, approved, or built.
 
 Order highlights by wow weight for the primary audience:
 
-1. The World's Most Influential Mentor, selected from 32,000+ mentors
+1. Published AI-first engineering practice: the QA workflow case study,
+   guardrails talk and AI-first architecture talk, with dates and sources.
+2. The World's Most Influential Mentor, selected from 32,000+ mentors
    across 140+ countries.
-2. 2x co-founder: $1M raised, one million users in a month, 1,200+
+3. 2x co-founder: $1M raised, one million users in a month, 1,200+
    businesses served.
-3. UK government endorsement: Global Talent, exceptional talent in
+4. UK government endorsement: Global Talent, exceptional talent in
    technology.
-4. Stages: AI Coding Summit (800+ engineers), React Advanced London at
+5. Stages: AI Coding Summit (800+ engineers), React Advanced London at
    Figma.
-5. AI-first practice: releases taken from monthly to weekly, AI
-   reviewers on every pull request.
 
 ## Rules
 
@@ -61,8 +60,8 @@ Order highlights by wow weight for the primary audience:
   ("from 32,000+ mentors") or cut it.
 - Numbers live inside the story. No standalone stat band; every number
   sits in the sentence that says what it meant (decided 2026-07-19).
-- Every section ends with a path deeper. One per section; the closing
-  Invitation carries the two conversion buttons.
+- Every section offers a path deeper. The AI section groups three dated
+  sources; the closing Invitation carries the two conversion buttons.
 - Never add a homepage section without removing or tightening another.
   The page gets sharper, not longer.
 - The hero paragraph is the canonical shareable intro. It lives in

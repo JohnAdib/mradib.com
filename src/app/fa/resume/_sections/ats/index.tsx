@@ -11,7 +11,7 @@ import { WhatIsAts } from "./what-is-ats";
 export function SectionAts(): JSX.Element {
 	return (
 		<section id="ats" className="scroll-mt-24">
-			<SectionHeading anchor="ats">ATS سیستم ردیابی متقاضی</SectionHeading>
+			<SectionHeading anchor="ats">ATS، سیستم ردیابی متقاضی</SectionHeading>
 			{WhatIsAts()}
 			{KeywordTailoring()}
 			<SectionChecklist

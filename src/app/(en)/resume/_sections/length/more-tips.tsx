@@ -10,7 +10,7 @@ export function LengthMoreTips(): JSX.Element {
 			<p>
 				Unless your employer went to the same school, once you have a university
 				degree there is no need to list your high school diploma and
-				pre-university studies
+				pre-university studies.
 			</p>
 
 			<h4 id="repetition">
@@ -47,7 +47,7 @@ export function LengthMoreTips(): JSX.Element {
 			</h4>
 			<p>
 				Changing the design of your resume yourself might be hard. Sites built
-				for creating resumes have plenty of ready made one page templates, and
+				for creating resumes have plenty of ready-made one-page templates, and
 				you just need to enter your content and it fits everything on one page
 				for you.
 			</p>

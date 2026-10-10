@@ -70,7 +70,7 @@ export function ExperienceBySeniority(): JSX.Element {
 
 			<h4 id="senior">
 				<a href="#senior" className="no-underline text-inherit hover:underline">
-					Senior professionals
+					Senior professional
 				</a>
 			</h4>
 			<p>

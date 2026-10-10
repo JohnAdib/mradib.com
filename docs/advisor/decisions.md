@@ -4,6 +4,423 @@ Append-only. Newest first. Date, decision, why. The shared log for the
 whole advisory board: brand (docs/advisor) and design (docs/designer). Log
 every new direction John gives in any session.
 
+
+## 2026-10-09: October QA evidence and confirmed London meetup
+
+Refresh the article and the reviewed 32-slide presentation together. Use the
+8 October checkpoint: 2,257 unit test files, 404 Maestro YAML files, 33 nightly
+jobs and 99.26% measured line coverage. Explain the changed coverage scope and
+distinguish the 28.3% CI route reach from complete inventory route reach.
+October activity is partial, not a complete month or a productivity measure.
+The talk is confirmed for React Native London Meetup on 22 October 2026,
+hosted at Funding Circle, 71 Queen Victoria Street, London. Keep the article
+anonymous and the PDF as the only website deck download. Preserve the slide
+story, fonts and layout, with short keyword notes.
+
+## 2026-10-06: Publish the coaching method as a standalone article
+
+John requested a public presentation and write-up about three coaching moves.
+Use A Coach for Every Learner as a standalone article, listed under Articles.
+Keep the teaching methods and examples. Publish only a sanitised deck with a
+generic title and author, without organisation references, private session
+context, event date or speaker notes. The original private file stays outside
+the repository. Provide a PDF download and keep the clean PPTX in resources.
+
+
+## 2026-10-05: Background motion must be immediately perceptible
+
+John still could not see background movement and accepted the rest of the card.
+Replace the single broad gradient drift with two separate soft light pools that
+travel in opposite directions on seven- and nine-second paths. Start partway
+through each path so movement does not begin with a long easing pause. Preserve
+the clean blue palette, fixed card, portrait, name and lower links exactly.
+Both light layers respect reduced motion and hidden-tab pausing; optional sensor
+parallax remains additive. Validate rendered background change, not only active
+CSS keyframes.
+
+
+## 2026-10-05: Visible background movement and stronger identity
+
+John could not see mobile background movement and asked for a larger portrait
+and name, with the remaining details lower in the card. Increase clean gradient
+travel and contrast with a 10-second alternating drift, and keep it running
+alongside sensor parallax so a stationary phone does not freeze the background.
+Use a 128px portrait and 50px name in the normal layout, anchoring the lower
+panel to the bottom. Compact short screens use an 84px portrait and 36px name.
+Preserve fixed card dimensions, stable identity in QR view, reduced motion and
+hidden-tab pausing. Do not add controls or sensor permission prompts.
+
+
+## 2026-10-05: Subtle background and phone motion
+
+John requested sensor-driven movement of the background and card, with ambient
+background movement as the fallback. Use a slow 24-second alternating gradient
+drift. On secure touch devices that allow orientation events without a permission
+prompt, move the background up to 14px and tilt the card up to two degrees from
+its starting position. Permission-gated or unavailable sensors keep ambient drift;
+no extra controls or prompts are introduced. Keep QR sharing still for scanning,
+respect reduced motion, pause hidden tabs and clean up all sensor listeners.
+
+## 2026-10-05: Enlarge the fixed profile card
+
+John requested an actual increase after finding the CSS-millimetre rendering too
+small. Use a fixed 320px portrait width and ISO ID-1 aspect ratio, about 57% larger
+than the previous 204px-wide rendering. Enlarge portrait and typography while
+preserving generous side padding and compact neutral social controls. Keep both
+views the same size, with no calibration or automatic frame shrinking. This is a
+larger screen rendering, not a verified physical-size match on every display.
+Short viewports retain the frame size and use compact content so controls remain
+visible while the bottom of the frame can extend past the viewport.
+
+## 2026-10-05: Remove all visitor-facing card calibration
+
+John explicitly rejected the sizing feature. Remove its trigger, settings panel,
+local-storage scaling and supporting component. Keep the existing card content
+and fixed portrait proportions. ISO ID-1 dimensions are 85.60 by 53.98mm, but
+CSS millimetres are not reliable physical screen measurements. Do not claim a
+universal life-size match; device-specific sizing remains unresolved until the
+phone model and display behavior can be verified.
+
+## 2026-10-05: Plain text hover for card navigation
+
+John rejected the circular hover treatment on About, Talks and Website.
+Remove the pill background and use only a smooth text-colour change on hover.
+Keep the link hit areas and a clear, slightly rounded keyboard focus outline.
+
+## 2026-10-05: Put identity ahead of social buttons on the at-sign card
+
+John requested smaller social buttons, wider card-side padding, a larger portrait
+and name, and more balanced spacing. Increase the portrait to 68px and name to
+32px, with 22px side insets. Use compact 32px social buttons and a consistent
+neutral glass treatment, including LinkedIn. Rebalance navigation and QR spacing
+within the fixed card; preserve calibration and both sharing states.
+
+## 2026-10-05: Keep the at-sign card at a fixed physical reference size
+
+John clarified that the card must keep both its dimensions and proportions,
+regardless of viewport size. Replace responsive sizing and landscape rotation
+with a fixed portrait 53.98mm by 85.6mm reference. Compact the content to fit.
+Browser millimetres do not reliably correspond to physical screen measurements,
+so a discreet size adjustment stores a calibration locally on each device.
+The chosen size remains fixed across resize, reload and QR view. A viewport
+smaller than the chosen card necessarily crops its edges instead of shrinking it.
+
+## 2026-10-05: Fixed bank-card proportions for the at-sign page
+
+John requested a taller card with identical proportions in links and QR mode.
+Use portrait bank-card proportions (53.98:85.6), constrained by the available
+viewport. Rotate those proportions on short landscape screens to keep controls
+readable. Anchor identity above the shared panel and distribute the extra space
+within the card. Preserve glass styling, subtle tilt and mobile scroll locking.
+
+## 2026-10-05: Clean glass and sharing inside the at-sign card
+
+John requested a clean background without grain, more polished buttons, subtle
+3D movement and QR sharing inside the existing card. Keep the avatar and name
+in place while the lower panel crossfades between links and QR. Use translucent
+glass surfaces with smooth background lighting. GitHub and X are text-only;
+LinkedIn retains its blue treatment. Reuse TiltCard with viewport tracking capped
+at 2.5 degrees, smooth pointer-leave return and reduced-motion support. Preserve
+the mobile scroll lock, personal email, QR destination and native sharing.
+
+## 2026-10-05: Lock the at-sign page against mobile scrolling
+
+John requested that `/@` cannot move vertically on mobile, including browser
+overscroll. Fix its document and surface to the viewport, disable overscroll and
+allow pinch zoom without single-finger panning. Apply the same gesture policy to
+the QR dialog. Compact short phone and landscape layouts keep links visible.
+The lock is scoped to the at-sign page; ordinary website pages still scroll.
+
+## 2026-10-05: Redesign the at-sign page and retire Instagram links
+
+John rejected the flat list design on `/@` and requested a more polished mobile
+UI, a richer background, different link shapes and no selectable content.
+Use a compact ink-coloured card on a textured, theme-aware background, a blue
+LinkedIn button, paired GitHub and X tiles and pill-shaped site navigation.
+Keep the About portrait, personal email at the bottom and the top-right morphing
+QR panel. This changes the at-sign page, not the existing Contact page.
+
+Remove Instagram links throughout the website, including shared navigation,
+photography pages, the email signature and the AI-readable social index.
+Retain `/instagram` as a legacy redirect to `/@`, with no external destination.
+
+## 2026-10-05, presentation pages explain the talk and show its first slide
+
+John requested one to two paragraphs about the actual content of every talk
+with a PDF, based on reading that deck. Use two paragraphs in the existing
+content column and give every PDF the same first-slide preview and existing
+download treatment. Preserve the current visual style. The podcast page and
+transcription are a separate follow-up after this presentation pass is reviewed.
+All five PDF pages use the plain title header. The AI-first architecture page's
+decorative event video was removed because its slide poster overlapped the page
+title. The actual talk recording remains linked in Resources.
+
+## 2026-10-04, PR activity supports the product engineering story
+
+John requested a clearer distinction between visible development activity
+and meaningful feature delivery. PR counts show work moving through review;
+they are not a productivity target or equal units of effort. A day without
+merged PRs can contain substantial work, and more PRs need not mean more
+features, value or effort. Keep the monthly data and explain these limits.
+
+John reports faster feature development and delivery while a smaller
+engineering team took on broader product and web responsibilities. Describe
+the organisational direction as product engineering. Keep staffing general,
+without exact headcounts, reductions or details of departmental departures.
+Distinguish this first-hand experience from the chart measurements; do not
+derive feature lead-time, output per engineer or causal AI effects from PRs.
+
+## 2026-10-04, the QA article gets joining context and its final route
+
+John approved "Beyond the QA Bottleneck" and requested a descriptive URL
+that follows the title. Use /beyond-the-qa-bottleneck. April 2026 is the
+confirmed joining month. Mark it on relevant histories with a labelled
+dashed line, without inventing a joining day or claiming causation. Keep
+the documented process changes from May distinct from this context.
+
+Breadcrumb arrows point right in English and left in Persian, following
+reading direction. Breadcrumb text is not selectable. Verify sharing
+images, sitemap, source coverage, privacy and all required checks before
+merging the article PR and checking the published page.
+
+## 2026-10-04, the QA article gets a short title and a deeper privacy check
+
+John requested a catchy title, a short page path and another check that the
+article exposes no employer or confidential business information. The
+article is titled "Beyond the QA Bottleneck" at /ai-qa. Search metadata
+also names AI adoption; the article registry drives its public links.
+
+Keep the authorised aggregate engineering measurements and general process
+lessons. Generalise internal release and test policy, configuration and
+current operational gaps. Check visible text, metadata, structured data,
+route payloads and directly loaded browser code for employer data.
+
+## 2026-10-04, the QA article shows the skills and improves chart motion
+
+John requested one chart per row, vertical bars for test-file and UI-flow
+histories, and chart animation as the reader reaches each figure. Add
+meaningful evidence views and the eight-skill workflow to make the case
+study more concrete. Retain the existing reading layout and both themes.
+
+Do not offer CSV downloads. Remove the download links, numeric export
+assets and generator; resources describe the approach and link to public
+technique documentation. Do not distribute internal skill files.
+
+## 2026-10-04, the QA article keeps its measurements
+
+John rejected the first article as too general. Anonymisation must remove
+identities and private resources while retaining useful aggregate numbers.
+The revision uses monthly merged PR and work-item counts, dated test and
+UI-flow inventories, recorded-error trends and concrete workflow details.
+The narrative is a measured case study of adopting AI in development.
+
+The visible exact-count disclosure duplicated the chart labels and adds
+no useful information. Remove it. Recreate historical charts from neutral
+data, with readable dates and units in both themes. Keep the boundaries of
+each measurement clear without replacing the results with general advice.
+
+## 2026-10-04, AI adoption article leads with confidence
+
+John requested a comprehensive article before a meetup presentation. The
+story starts with slow development, regressions, lengthy QA, low confidence
+and requests waiting, then explains positive process improvements through
+AI adoption. The talk title remains undecided.
+
+The article uses general engineering lessons and an explicitly illustrative
+settings example. Aggregate counts and timings may be discussed, but company
+identities, staff history, private resource links and original screenshots
+remain excluded. Charts are recreated as native, accessible components with
+clear measurement scope. Recorded error events do not imply a crash rate or
+prove that AI caused a reliability improvement.
+
+The new writing root layout uses a neutral author biography and schema. The
+existing site design and other profile pages retain their conventions.
+John explicitly requested a PR, authorising the separate article branch to
+be pushed for review. Main-branch publication remains separate.
+
+## 2026-09-30, the kit moves under /fundraising: paths, titles, dates
+
+John's verdict on the first URLs: application-answers made no sense as a
+path, the others were not the best either, titles had to be understandable,
+and six guides could not all claim the same publish day. He left the parent
+path to the board, including whether to keep the word fundraising, then
+confirmed it over startup, funding and raise. Rulings, all binding:
+
+- Every guide lives under the hub: /fundraising/pitch-deck, one-pager,
+  product-demo, founder-video, financial-model and accelerator-application.
+  The URL now mirrors the breadcrumb, and the hub's llms.txt is the parent
+  of the six AI files. The deck moves with the rest: one scheme for six
+  siblings beats a flagship whose URL hides its family. Fundraising stays
+  because it names the job the documents do and is the kit's name; the head
+  search terms (startup pitch deck, startup financial model) belong in the
+  titles, not the folder.
+- The application guide is the accelerator application: that is the
+  document, and "application answers" only named its format. Its skill is
+  accelerator-application-writer.
+- Browser titles share one shape, the artifact then the promise, keyword
+  first: "Startup Pitch Deck Guide: 12 Slides, One Investor Question Each"
+  and so on. H1s keep the "Your X is Y" claim, but Y must stand without
+  context: the one-pager is nine blocks on one page, the accelerator
+  application is 10 straight answers.
+- Publish dates follow build order over four days, the deck on the 27th as
+  it really shipped, the accelerator application on the 30th; every guide's
+  modified date is this edit. The article index and the RSS feed run newest
+  first, so the dates read as a timeline.
+- Old paths keep working through data: src/data/routes/moved-routes.ts
+  drives one redirect stub per old URL (noindex, canonical on the new page)
+  and a one-line pointer at each old llms.txt and skill.md. The hub route
+  lives once, in src/data/guides/hub-route.ts, and every guide path, card
+  slug and link derives from it.
+## 2026-09-30, every question opens and closes with motion
+
+John's direction: whenever a Q&A is clicked it must have an opening and a
+closing animation, a very nice and smooth one, on every page. An instant
+open or close is not acceptable. Rulings:
+
+- Every <details> on the site animates both ways: the height eases between
+  the question alone and the full answer, the answer fades and rises into
+  place, and the chevron turns. The close runs the same path backwards and
+  the element only shuts once the panel has, so nothing jumps. A click
+  mid-run reverses from wherever the panel is.
+- One mechanism, site wide: DetailsMotion is mounted once in RootShell, so
+  guide FAQs, the audit FAQ, the resume guide's expandable lists, the
+  inline table of contents, the full-checklist toggle, the scorecard's
+  issue cards and any future disclosure all move the same way.
+- The static FAQ lists (article pages, /contact, /mentor, /talks) become
+  the same accordions, so every Q&A on the site is clickable and animated.
+  FAQ structured data is unchanged.
+- Timing comes from the motion tokens: --duration-base with --ease-rise for
+  the height and the opening fade, --duration-fast for the closing fade.
+- A disclosure's height is the one sanctioned layout animation, recorded
+  as an exception in docs/designer/motion.md. Reduced motion keeps the
+  native instant toggle.
+
+## 2026-09-30, the fundraising guides get a living artifact
+
+John's verdict on the first build of the six guides: the UI should be much
+better, it is not number one in the world. The board's reading: the pages
+were clean but templated. Every part was a same-grey ring card, the hero was
+text only, and nothing on a phone said who built this. The fix follows
+direction.md: one striking idea per page, dark dramatic objects on warm
+paper, motion that impresses, sections that look designed. Rulings, all
+binding for the guide kit:
+
+- The one idea is the artifact itself, alive. Every guide is about a
+  document, so the page shows that document being built. The hero carries a
+  dark, glowing miniature of the artifact (a 16:9 slide, a portrait page, a
+  browser window, a viewfinder, a ruled sheet, a form) that cycles through
+  the guide's steps on its own, tilts toward the cursor on desktop, and
+  stacks under the words on phones. The cycle is CSS only
+  (src/styles/artifact.css), one window per step, paused on hover; reduced
+  motion shows the first step.
+- The overview is a slide sorter: every step is a tile in the shape of the
+  artifact with its numeral and title, and its question from the small
+  breakpoint up. Portrait pages sit three across even on phones, and the
+  grids are capped so a tile never grows past a thumbnail.
+- Each step has one dark punctuation mark: the pass test is a dark strip,
+  and an example is set on the artifact in the guide's own frame. Put in
+  reads as accent, leave out as rose, tinted panels instead of grey rings.
+- The kit is six objects: the kit section and the hub show each guide as
+  its own tile with a caption, and the hub hero cycles through the six
+  guides as one living artifact.
+- The AI prompt sits on a dark glow panel, the site's signature treatment,
+  with the copy button on it. Section rhythm and headings match the
+  homepage: mt-20 sm:mt-28 between parts, display headings at 3xl and 4xl.
+- Engineering: StageFrame takes a size (stage, tile, banner) and every
+  ornament scales to it; StageSlide is the one rendering of a step on the
+  artifact, shared by the hero, the presenter stage and the tiles; each
+  guide's frame lives once in its copy-hero and the kit entries carry it.
+  No guide copy changed, the tests' DOM contract is unchanged, and all
+  tests pass.
+
+## 2026-09-27, the fundraising kit: five sibling guides and a hub
+
+The pitch deck gets its five siblings, the documents a founder prepares to
+raise or apply: one-pager, product demo, founder video, financial model and
+application answers. With the deck they are the fundraising kit, introduced
+by a hub at /fundraising. John's rulings, all binding:
+
+- One kit, one implementation. The deck's page parts became a shared kit:
+  types in src/data/guides, the AI-file builders in src/lib/guides, and
+  every page part in src/components/guide, where sections take the guide
+  and leaves take props. A guide is numbered steps (slides, blocks, beats,
+  sheets, answers) that each answer one question, with what goes in, what
+  stays out and a pass test, plus the cases that bend the default and the
+  optional extras. Every guide page is an ordered list of parts, and each
+  guide's data folder holds every string it renders.
+- The six link as a series. The order lives once in
+  src/data/guides/fundraising-kit.ts and drives the breadcrumbs (Fundraising
+  kit, then the guide), the position line beside the hero eyebrow, the kit
+  section near the end of every guide with the current one marked, the
+  closing panel's second button (the next guide, unless the closing names
+  its own), the article list, and the "Guides for AI" lines of llms.txt.
+- The hub at /fundraising is a top-level page, not an article: the six
+  cards, the method in four moves (write the facts once, tell the story in
+  the deck, cut it and show it, price it and apply), an AI part that lists
+  every framework and skill plus /fundraising/llms.txt as an index, and an
+  ItemList. Its breadcrumb is the kit alone. No hub FAQ: the guides carry
+  the FAQs.
+- Titles claim the artifact, as the deck does: the deck in 60 seconds, one
+  flow in three minutes, one minute one take, the plan in numbers, 10
+  straight answers. Slugs are top level and hyphenated where needed
+  (/one-pager, /product-demo, /founder-video, /financial-model,
+  /application-answers). Anchors are one word: blocks, beats, sheets,
+  answers for the steps; format, formats, cases for the rules.
+- Application answers model the questions Y Combinator, Antler and Techstars
+  ask, in programme-neutral wording, and each answer carries "Asked by"
+  chips naming the programmes that ask it. The chips follow the programmes'
+  published forms; John confirms them when a form changes.
+- Founders raising a round are a named audience of the guides, served after
+  the primary audience and never at its expense (audiences.md, section 5).
+- The presenter stage takes the shape of the artifact: a 16:9 slide, a
+  portrait page, a browser window, a viewfinder, a ruled sheet with
+  horizontal rows only, a form with two faint fields. Button renders hash
+  hrefs as plain anchors so hero CTAs stop copying its classes.
+- On the shipped deck: the breadcrumb reads Fundraising kit, the hero gains
+  the position line, the kit section sits before the closing, the optional
+  slides Product demo and Financial plan link to their guides, and the
+  closing's second button hands over to the one-pager instead of the resume
+  guide. Its llms.txt and skill.md are unchanged byte for byte.
+- Facts about John on these pages stay to the two the profile supports: a
+  two-time founder who raised $1M as a CEO, and a mentor to startup founders
+  through MassChallenge Switzerland and UK. Reference links could not be
+  verified from the build sandbox; npm run verify:links checks them where
+  the network is open, before launch.
+
+## 2026-09-27, the pitch deck guide
+
+A third guide at /pitch-deck: the 12-slide pitch deck, slide by slide, as a
+standard founders can reuse from a £0 idea to a company with early traction.
+John's rulings, all binding:
+
+- The structure is his twelve slides and order, refined: Introduction becomes
+  Cover, Market Opportunity becomes Market, why now stays inside Solution.
+  Three reorder rules (Traction up when it is the strongest card, Team up at
+  the idea stage, why now standalone when timing is the story) and an
+  optional-slides strip make the standard flex without changing it.
+- Every slide carries one investor question, a plain definition, "Put on
+  it", "Leave off", and a one-sentence pass test. The framework lives once in
+  src/data/pitch-deck; the page, /pitch-deck/llms.txt and /pitch-deck/skill.md
+  all render from it (src/lib/pitch-deck), the same shape as the resume method.
+- The title is bold and about the pitch deck itself, never "early-stage":
+  "Your pitch deck is 12 questions". Early stage is the framing inside the
+  content, not in the title.
+- The AI prompt follows the resume pattern: a short copyable prompt that points
+  the AI at the llms.txt file, which carries the whole framework. The site-wide
+  llms.txt now advertises both guides' AI files under "Guides for AI".
+- Mobile is summary-first: the twelve slides as a tappable list, a tap scrolls
+  to the slide, and a presenter pill pinned to the bottom of the screen shows
+  "05 / 12 Solution" with previous and next. It sits at the bottom, in the
+  thumb zone, so nothing stacks under the sticky header. Desktop (xl) adds a
+  sticky slide stage beside the sections that tracks the reader by scroll.
+- Engineering: every part of the page is its own component under
+  src/app/(en)/pitch-deck/_sections, one folder per part, leaves take props
+  only, and page.tsx is an ordered list of parts so a part moves or drops by
+  editing one line. A guide may be composed without ArticleLayout when it
+  needs sticky UI; Prose clips sticky children.
+- References: a data-driven list of the sources (Sequoia, Y Combinator,
+  Antler, Paul Graham, Guy Kawasaki, DocSend), external links with nofollow.
+
 ## 2026-08-18, AI Coding Summit audience is 800+, not 5,000+
 
 The 5,000+ figure came from an early GitNation landing page and was not
@@ -804,6 +1221,102 @@ the footer, and mentorship remains a channel tile on /contact. The CV at
 https://resume.mradib.com (urlSocial.resume) opens in a new tab from three
 places: the About closing (already existed), a footer "CV ↗" link, and a
 "My CV" tile on /contact. It never enters the header.
+
+## 2026-10-05: Upcoming talk with unconfirmed event details
+
+John requested a directly accessible page for Beyond the QA Bottleneck before event details are finalized. Use an Upcoming talks section, keep unknown details null and display TBC. Retain the PPTX outside public assets and expose only the PDF download. Keep the existing article URL separate.
+
+## 2026-10-05: Refine the event contact card
+
+John changed the canonical page to `/@`. Use the About hero portrait and the
+Contact page's shared EmailLink component at the bottom. Remove the separate
+work-email field. Identity is only the portrait and name. Social links are flat
+rows without arrows or hover movement, with LinkedIn blue. A plain top-right
+share icon morphs into the QR panel. Tapping the address invokes native sharing,
+with clipboard fallback. Reduced motion skips the spatial animation.
+
+The shared dynamic root route generates `@` and existing moved-guide redirects;
+its root layout omits site chrome only for the contact card. Decode the route
+parameter because Next encodes `@` in the page render. QR assets and the final
+presentation slide use `https://mradib.com/@`.
+
+## 2026-10-05: A contact card for events
+
+John requested a compact, mobile page he can share at events, with social links,
+About, Talks, Website, his explicitly supplied work email, and a QR display.
+Use `/share`, a memorable spoken URL. Keep the page free of marketing copy and
+site navigation, with a dedicated root layout. Use the existing portrait,
+Newsreader/Inter typography and teal accent. LinkedIn is the primary social link.
+Native sharing falls back to copying the address. The QR dialog keeps a white
+quiet zone, traps focus, dismisses with Escape and restores focus to its trigger.
+
+The page fits standard phone and landscape viewports without scrolling. Content
+remains reachable at exceptional text zoom rather than being clipped. Generate
+both QR assets from `src/data/share.ts` with `npm run qr:build` and verify they
+decode to the canonical URL with `npm run test:share`. The final talk slide uses
+the same QR, so it can stay visible during questions.
+
+## 2026-10-05: One visual for the QA talk cover
+
+John chose the dark social-card design with soft teal light for the opening slide as well. Use the slide cover for the page preview and social image, with a social crop. Keep the subtitle “Building confidence in React Native with AI”. No TBC wording in the artwork; uncertainty stays in the page details.
+
+
+## 2026-10-05: Podcast article direction
+
+John approved ten first-person topic summaries of the Joe's Room episode, with varied paragraph lengths and selected pull quotes. Keep the employer to one introductory mention; omit company operations, internal project names and company metrics. The page should centre John's engineering ideas.
+
+After reviewing the standalone draft, John requested the existing site header, footer and page frame, Spotify-only listening, clearer discussion timestamps, stronger ownership and leadership excerpts, and a chart for the interview segments. Use topic numbering because the agreed order is thematic. Mark lightly edited quotations explicitly. Show the discussed interview durations honestly: 45 minutes, a 20 to 30 minute range illustrated at 25, and about 5 minutes. Do not assign the remaining portion of the 90-minute interview without evidence.
+
+
+## 2026-10-05: Podcast chronology and attribution follow-up
+
+John requested chronological topic order, a link from Joe Bignell's name to https://www.linkedin.com/in/joebignell/, and quote captions containing only "John Adib", without editing labels or quote timestamps. Topic timestamps remain visible. He approved this ownership quote wording: "As a product engineer, measuring the success of the feature you deliver is your responsibility now." This supersedes the earlier thematic-order and visible-editing-label decisions. Keep source provenance in the editorial notes.
+
+
+## 2026-10-05: Podcast card navigation
+
+John requested the entire podcast card on /talks link to its internal article. Use one accessible link around the card, with a visual call to action inside rather than a nested link. Spotify listening remains available from the article.
+
+
+## 2026-10-05: Podcast introduction and opening quote
+
+John requested a pull quote for the first, engineering-management topic, explicit June 2026 context, and a personal joke about hoping not to laugh at these predictions in a couple of years. Remove the explanatory paragraph describing the topic order and timestamps; he found it artificial.
+
+
+## 2026-10-05: Balanced talk slide layouts
+
+John requested equal top and bottom margins on every section slide, with bold emphasis instead of a larger active title. Centre body groups beneath their headings and above footers throughout the deck. Remove invisible navigation space from PDF exports. Expand slide 30 to cover the design system, monorepo and ways of working, product engineering, AI development, and an AI harness defined as context, skills, tools and checks around agents. Close with “Confidence in AI-assisted development”, mobile development in the subtitle, and a small takeaway and speaker footer. Publish the updated 32-slide PDF; retain the editable PPTX outside public assets.
+
+## 2026-10-05: Use the short contact URL in the talk
+
+Revision 31 changes the final slide QR and printed address to `mradib.com/@`,
+matching the redesigned contact page in PR #156. Regenerate both the PDF and
+editable PPTX. Preserve the regular PDF chart labels and the existing slide layout.
+
+
+## 2026-10-05: Slides before talk descriptions
+
+John requested the slide preview and PDF download immediately after the event-facts card, before the descriptive paragraphs. Apply this order through the shared talk layout. Keep other Resources links at the bottom and preserve the existing PDF card styling.
+
+## 2026-10-06: Lead with AI-first software development
+
+John requested that public descriptions lead with pioneering AI-first software
+development and approved a separate website PR. The homepage and About opening
+define the workflow through agents, testing, code review and delivery. Shared
+profile biographies, search descriptions, JSON-LD and social previews follow
+the same positioning. The actual job title remains Engineering Manager.
+
+The existing homepage AI panel follows the hero. It groups three dated sources:
+the published QA workflow case study, the guardrails talk and the AI-first
+architecture talk. About exposes the same links near its introduction while
+preserving the chronological chapters. Generated biographies use those sources
+too, including the independently hosted architecture recording and transcript.
+
+This is an evidence-backed description of John's practice, without claims of
+an industry-first invention or a formal pioneer award. Do not turn observational
+case-study metrics into causal AI productivity claims. External professional
+profile updates and reindexing follow publication. No new AI-specific markup or
+hidden instructions are needed to express the positioning.
 
 ## 2026-10-10, pixel story experiment
 

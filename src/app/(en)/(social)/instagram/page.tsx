@@ -1,9 +1,8 @@
 import { RedirectPage } from "@/components/redirect-page";
-import { urlSocial } from "@/lib/constants/url-social";
 import { redirectMetadata } from "@/lib/redirect-metadata";
 
-export const metadata = redirectMetadata(urlSocial.instagram);
+export const metadata = redirectMetadata("/@");
 
 export default function Home() {
-	return <RedirectPage target={urlSocial.instagram} />;
+	return <RedirectPage target={"/@"} />;
 }

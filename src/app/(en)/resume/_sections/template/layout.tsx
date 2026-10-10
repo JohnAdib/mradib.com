@@ -47,7 +47,9 @@ export function LayoutRules(): JSX.Element {
 			</p>
 
 			<h5 id="white-space">Enough white space</h5>
-			<p>Keep it in mind especially in the margins around the page.</p>
+			<p>
+				Leave enough white space, especially in the margins around the page.
+			</p>
 
 			<h5 id="font-family">Choose a readable font</h5>
 			<p>
@@ -58,7 +60,7 @@ export function LayoutRules(): JSX.Element {
 
 			<h5 id="font-size">Choose a suitable font size</h5>
 			<p>
-				As a general rule, size 11 to 12 for body text and size 14 to 16 for
+				As a general rule, use size 11 to 12 for body text and size 14 to 16 for
 				headings.
 			</p>
 
@@ -72,7 +74,7 @@ export function LayoutRules(): JSX.Element {
 			<p>
 				We strongly recommend never letting your resume file exceed one
 				megabyte. If you can, keep it under half a megabyte. If you can, under
-				200 kilobytes. Below that gets hard. Images and special fonts can push
+				200 kilobytes. Going lower gets hard. Images and special fonts can push
 				the size unusually high. Some places accept up to 5 megabytes, but when
 				you can reduce the size, do it.
 			</p>
@@ -81,8 +83,8 @@ export function LayoutRules(): JSX.Element {
 			<p>
 				Imagine a recruiter has downloaded your resume file and it is named
 				myresume.pdf. Isn't it better to spend a few seconds and fix the file
-				name? Your name, a dash, the word resume, and if you like a version
-				number so you know which is the latest when you make changes. For
+				name? Use your name, a dash, the word resume and, if you like, a version
+				number, so you know which file is the latest after each edit. For
 				example, this is how I name mine. Do not forget that a resume is
 				different from a CV.
 			</p>

@@ -22,7 +22,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		question: "Did you use a suitable format for your resume?",
 		title: "Resume format",
 		problem: "The layout is hard to scan and may break in an ATS.",
-		fix: "Use a clean single column template with standard headings and export to PDF.",
+		fix: "Use a clean single-column template with standard headings and export to PDF.",
 	},
 	sect: {
 		question: "Did you include all the essential sections in your resume?",
@@ -49,10 +49,10 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		fix: "Keep the PDF under about a megabyte by compressing images.",
 	},
 	fontcolor: {
-		question: "Are the font and colours professional and restrained?",
-		title: "Font and colours",
-		problem: "Loud fonts or colours pull focus from the content.",
-		fix: "Use one clean font and at most one accent colour.",
+		question: "Are the font and colors professional and restrained?",
+		title: "Font and colors",
+		problem: "Loud fonts or colors pull focus from the content.",
+		fix: "Use one clean font and at most one accent color.",
 	},
 	cont: {
 		question: "Does the contact section include all the essential details?",
@@ -71,7 +71,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 			"Are you using a professional email address, like name.family@gmail.com?",
 		title: "Professional email",
 		problem: "The email looks casual and undercuts a professional impression.",
-		fix: "Switch to a name based address such as name.family@gmail.com.",
+		fix: "Switch to a name-based address such as name.family@gmail.com.",
 	},
 	links: {
 		question: "Did you add your LinkedIn link?",
@@ -89,7 +89,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		question: "Is the file named professionally?",
 		title: "File name",
 		problem: "A name like resume-final.pdf or myresume.pdf looks careless.",
-		fix: "Name it Firstname-Lastname-Resume.pdf. A version like v2 at the end is fine to track the latest.",
+		fix: "Name it Firstname-Lastname-Resume.pdf. You can add a version number like v2 at the end to keep track of the latest one.",
 	},
 	summ: {
 		question: "Did you keep the summary to two or three lines at most?",
@@ -137,7 +137,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 	firstperson: {
 		question: "Did you keep pronouns out of your bullets?",
 		title: "Pronouns",
-		problem: "Bullets use I, my, or other pronouns, which reads informal.",
+		problem: "Bullets use I, my, or other pronouns, which reads as informal.",
 		fix: "Drop all pronouns and lead each bullet with an action verb.",
 	},
 	dates: {
@@ -173,7 +173,8 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 	personal: {
 		question: "Did you remove personal details that do not belong?",
 		title: "Personal details",
-		problem: "Age, marital status, or a photo invite bias and waste space.",
+		problem:
+			"Details like age, marital status, or a photo invite bias and waste space.",
 		fix: "Remove personal details and let your work speak.",
 	},
 	len: {
@@ -212,7 +213,7 @@ export const itemCopyEn: Record<string, IChecklistItemCopy> = {
 		question: "Did you leave references off the resume?",
 		title: "No references",
 		problem:
-			"A references section or an available on request line wastes space.",
+			"A references section or an available-on-request line wastes space.",
 		fix: "Remove references entirely; share them only when asked.",
 	},
 };

@@ -26,7 +26,7 @@ export function SummaryObjective(): JSX.Element {
 					job title at a certain company
 				</li>
 				<li>
-					To help with the responsibilities you can take on so they get done
+					To help the company by taking on responsibilities you can deliver
 					successfully
 				</li>
 			</ol>

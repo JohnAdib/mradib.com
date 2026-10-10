@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { Accordion } from "@/components/accordion/accordion";
 import type { FaqLanguage, IFaqQA } from "./faq-interface";
 import { FaqJsonLD } from "./faq-json-ld";
 
@@ -55,17 +56,12 @@ export default function Faq({
 						</p>
 					)}
 				</div>
-				<div className="mt-10 lg:col-span-7 lg:mt-0">
-					<div className="space-y-10">
-						{list?.map((faq) => (
-							<div id={`faq-${faq.id}`} key={faq.id}>
-								<h3 className="text-base font-semibold leading-7">{faq.q}</h3>
-								<p className="mt-2 text-sm leading-7 text-slate-500 dark:text-slate-300">
-									{faq.a}
-								</p>
-							</div>
-						))}
-					</div>
+				<div className="mt-10 space-y-4 lg:col-span-7 lg:mt-0">
+					{list.map((faq) => (
+						<Accordion key={faq.id} id={`faq-${faq.id}`} title={faq.q}>
+							<p>{faq.a}</p>
+						</Accordion>
+					))}
 				</div>
 			</div>
 			<FaqJsonLD faqData={list} title={title} />

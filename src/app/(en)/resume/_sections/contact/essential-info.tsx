@@ -64,9 +64,9 @@ export function EssentialInfo(): JSX.Element {
 				</a>
 			</h4>
 			<p>
-				Recruiters and hiring managers call directly. Often before any message,
-				sometimes just from finding your CV. So your phone number genuinely
-				matters. Make sure it is correct and reachable.
+				Recruiters and hiring managers call you directly, often before any
+				message and sometimes just from finding your CV. So your phone number
+				genuinely matters. Make sure it is correct and reachable.
 			</p>
 
 			<h4 id="location">

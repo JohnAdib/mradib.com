@@ -40,14 +40,30 @@ John asks for them. Until then, tiers live only in this registry.
 | Prose | src/components/prose.tsx | candidate |
 | SimpleLayout | src/components/simple-layout.tsx | candidate |
 | StatBand | src/components/stat-band.tsx | candidate |
+| AiEvidenceLinks | src/components/ai-evidence-links.tsx | candidate |
 | LinkChipGrid | src/components/link-chip-grid.tsx | candidate |
 | CtaOnDarkPanel | src/components/cta-on-dark-panel/ | candidate |
 | TiltCard | src/components/tilt-card/ | candidate |
 | Reveal | src/components/reveal/ | candidate |
+| DetailsMotion | src/components/motion/details-motion.tsx | candidate |
+| Accordion | src/components/accordion/accordion.tsx | candidate |
 | HighlightCard | src/components/home/highlight-card.tsx | candidate |
 | YouTubeEmbed | src/components/video/youtube-embed.tsx | candidate |
 | TalkMedia | src/components/talk/talk-media.tsx | candidate |
 | PricingCard | src/components/pricing/pricing-card.tsx | candidate |
+| SectionShell | src/components/guide/shell/section-shell.tsx | candidate |
+| GuideSectionHeading | src/components/guide/shell/section-heading.tsx | candidate |
+| RuleChips | src/components/guide/hero/rule-chips.tsx | candidate |
+| GuidePresenter | src/components/guide/presenter/ | candidate |
+| StageFrame | src/components/guide/presenter/stage-frame.tsx | candidate |
+| StageSlide | src/components/guide/presenter/stage-slide.tsx | candidate |
+| ArtifactHero | src/components/guide/hero/artifact-hero.tsx | candidate |
+| StepListCard | src/components/guide/steps/step-list-card.tsx | candidate |
+| RuleCard | src/components/guide/rules/rule-card.tsx | candidate |
+| AiFileCard | src/components/guide/ai/ai-file-card.tsx | candidate |
+| PromptPanel | src/components/guide/ai/prompt-panel.tsx | candidate |
+| ReferenceCard | src/components/guide/references/reference-card.tsx | candidate |
+| KitCard | src/components/guide/kit/kit-card.tsx | candidate |
 
 Components not listed are feature components; add them here when they show
 reuse potential.

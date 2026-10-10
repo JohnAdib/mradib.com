@@ -14,11 +14,11 @@ export function IndustryLists(): JSX.Element {
 				</a>
 			</h4>
 			<Pre language="plaintext">
-				Data analysis, Web analytics, SEO/SEM, HTML & CSS, Wordpress, Email
-				marketing, Web scraping, CRO and A/B Testing Data visualization &
+				Data analysis, Web analytics, SEO/SEM, HTML & CSS, WordPress, Email
+				marketing, Web scraping, CRO and A/B Testing, Data visualization &
 				pattern-finding through critical thinking, Search Engine and Keyword
 				Optimization, Project/campaign management, Social media and mobile
-				marketing,Paid social media advertisements, B2B Marketing, The 4 P-s of
+				marketing, Paid social media advertisements, B2B Marketing, The 4 Ps of
 				Marketing, Consumer Behavior Drivers, Brand management, Creativity,
 				Copywriting, Storytelling, Sales, CMS Tools
 			</Pre>
@@ -32,8 +32,8 @@ export function IndustryLists(): JSX.Element {
 				</a>
 			</h4>
 			<Pre language="plaintext">
-				Six Sigma techniques, The McKinsey 7s Framework, Porter’s Five Forces,
-				PESTEL, Emotional Intelligence,Dealing with work-related stress,
+				Six Sigma techniques, The McKinsey 7-S Framework, Porter's Five Forces,
+				PESTEL, Emotional Intelligence, Dealing with work-related stress,
 				Motivation, Task delegation, Technological savviness, People management,
 				Business Development, Strategic Management, Negotiation, Planning,
 				Proposal writing, Problem-solving, Innovation, Charisma
@@ -77,7 +77,7 @@ export function IndustryLists(): JSX.Element {
 			</h4>
 			<Pre language="plaintext">
 				Microsoft Office Pack: Word, Excel, Access, Publisher, Outlook,
-				Powerpoint, Filing and paper management, Data entry, Bookkeeping through
+				PowerPoint, Filing and paper management, Data entry, Bookkeeping through
 				Excel or TurboTax, Research and data analysis, Basic knowledge of user
 				interface communication, Technical writing, Cloud networking and file
 				sharing
@@ -93,10 +93,10 @@ export function IndustryLists(): JSX.Element {
 			</h4>
 			<Pre language="plaintext">
 				Microsoft Excel (Advanced), Enterprise Resource Planning, Big Data
-				Analysis & SQL, Know Your Customers (KYC), Cognos Analytics (IBM),
-				Visual Basic, Accounting Software, Revenue recognition, Anti Money
-				Laundering, Clear communication, General business knowledge, Numerical
-				competence, Accuracy, Attention to detail
+				Analysis & SQL, Know Your Customer (KYC), Cognos Analytics (IBM), Visual
+				Basic, Accounting Software, Revenue recognition, Anti-Money Laundering,
+				Clear communication, General business knowledge, Numerical competence,
+				Accuracy, Attention to detail
 			</Pre>
 
 			<h4 id="teaching">
@@ -123,8 +123,8 @@ export function IndustryLists(): JSX.Element {
 				</a>
 			</h4>
 			<Pre language="plaintext">
-				HTML/CSS, CSS preprocessors, Javascript, Wordpress, Graphic User
-				Interfaces (GUI), Git/Version control (Github, gitlab), Search Engine
+				HTML/CSS, CSS preprocessors, JavaScript, WordPress, Graphical User
+				Interfaces (GUI), Git/Version control (GitHub, GitLab), Search Engine
 				Optimization (SEO), Application Programming Interface (API), Adobe
 				Photoshop, InDesign, Content Management Systems (CMS),
 				Testing/Debugging, Responsive design principles
@@ -140,7 +140,7 @@ export function IndustryLists(): JSX.Element {
 			</h4>
 			<Pre language="plaintext">
 				SQL (a must) and Hive (optional), Programming language (R, Python,
-				Scala, Matlab), STATA, SPSS, SAS, Data Mapping, Entity Relationship
+				Scala, MATLAB), STATA, SPSS, SAS, Data Mapping, Entity Relationship
 				Diagrams, Wireframes, Big Data tools, Microsoft Visio, Agile Business
 				Analysis, Machine learning, System Context Diagrams, Business Process
 				Modeling, Technical and non-technical communication
@@ -156,7 +156,7 @@ export function IndustryLists(): JSX.Element {
 			</h4>
 			<Pre language="plaintext">
 				Mathematics, CPR, Patient care and assistance, Paperwork/record-keeping
-				abilities, Compassion, Advanced Cardiac, Life Support (ACLS), Telemetry,
+				abilities, Compassion, Advanced Cardiac Life Support (ACLS), Telemetry,
 				Attention to detail, Physical endurance, Acute care, Infection control,
 				Surgery preparation
 			</Pre>

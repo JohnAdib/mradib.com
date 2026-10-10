@@ -1,6 +1,8 @@
 import { articlesMeta } from "@/data/articles/articles-meta";
 import { adplistBadgeTimeline, flagshipAwards } from "@/data/awards";
 import { career } from "@/data/career";
+import { hubCopy } from "@/data/guides/hub-copy";
+import { hubRoute } from "@/data/guides/hub-route";
 import { mentoringStats } from "@/data/mentoring-stats";
 import { profile, urlGitNation } from "@/data/profile";
 import { podcastAppearances, talks } from "@/data/talks/talks";
@@ -24,6 +26,8 @@ export function sectionKeyFacts(): string {
 			`- Award: ${award.name} (${award.issuer}, ${award.date}). ${award.summary}`,
 	);
 	const talkLines = talks.map((talk) => {
+		if (talk.status === "upcoming")
+			return `- Upcoming talk: "${talk.title}". Event, venue and date TBC. Slides are a work in progress.`;
 		const venue = talk.venue ? ` at ${talk.venue}` : "";
 		const audience = talk.audience ? `, ${talk.audience}` : "";
 		return `- Talk: "${talk.title}" at ${talk.event}${venue} on ${talk.date}${audience}.`;
@@ -70,12 +74,19 @@ export function sectionPages(): string {
 		"## Pages",
 		"",
 		`- [Home](${homepageUrl}/)`,
+		`- [Links & contact](${homepageUrl}/@): social profiles, email and a QR code for sharing.`,
 		`- [About John Adib](${homepageUrl}/about)`,
 		`- [Awards & Recognition](${homepageUrl}/awards): every award, with evidence and the story behind it.`,
 		...awardLines,
 		`- [Mentorship](${homepageUrl}/mentor): book a mentorship session with John.`,
 		`- [Talks & Speaking](${homepageUrl}/talks): all talks with slides, the podcast, and how to invite John to speak.`,
 		...talkPageLines,
+		...podcastAppearances.flatMap((pod) =>
+			pod.path
+				? [`- [${pod.title}](${homepageUrl}${pod.path}): ${pod.summary}`]
+				: [],
+		),
+		`- [${hubCopy.itemListName}](${homepageUrl}${hubRoute}): ${hubCopy.hero.thesis}`,
 		`- [Articles](${homepageUrl}/articles)`,
 		...articleLines,
 		`- [Review a CV](${homepageUrl}/resume/checklist): score any resume out of 100 section by section, flag each issue with its fix, and share the result as a link.`,
@@ -95,7 +106,6 @@ export function sectionProfiles(): string {
 		`- GitNation (speaker profile): ${urlGitNation}`,
 		`- X/Twitter: ${urlSocial.twitter}`,
 		`- YouTube: ${urlSocial.youtube}`,
-		`- Instagram: ${urlSocial.instagram}`,
 		`- Telegram: ${urlSocial.telegram}`,
 		`- Resume: ${urlSocial.resume}`,
 	].join("\n");

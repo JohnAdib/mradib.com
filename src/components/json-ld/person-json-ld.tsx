@@ -6,7 +6,11 @@ import { homepageUrl } from "@/lib/constants/url";
 
 export const personId = `${homepageUrl}/#person`;
 
-export function PersonJsonLd(): JSX.Element {
+export function PersonJsonLd({
+	neutralAuthor = false,
+}: {
+	neutralAuthor?: boolean;
+} = {}): JSX.Element {
 	const jsonLd: WithContext<Person> = {
 		"@context": "https://schema.org",
 		"@type": "Person",
@@ -14,14 +18,16 @@ export function PersonJsonLd(): JSX.Element {
 		name: profile.name,
 		alternateName: profile.alternateNames,
 		jobTitle: profile.jobTitle,
-		description: profile.shortBio,
+		description: neutralAuthor ? profile.oneLiner : profile.shortBio,
 		url: homepageUrl,
 		image: `${homepageUrl}${profile.image}`,
-		worksFor: {
-			"@type": "Organization",
-			name: profile.company.name,
-			url: profile.company.url,
-		},
+		...(!neutralAuthor && {
+			worksFor: {
+				"@type": "Organization",
+				name: profile.company.name,
+				url: profile.company.url,
+			},
+		}),
 		alumniOf: {
 			"@type": "CollegeOrUniversity",
 			name: profile.education.school,

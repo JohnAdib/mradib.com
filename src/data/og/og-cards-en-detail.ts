@@ -3,6 +3,15 @@ import type { IOgCard } from "./og-card-interface";
 // Social cards for the award pages, the guides, and the personal pages.
 export const ogCardsEnDetail: IOgCard[] = [
 	{
+		slug: "a-coach-for-every-learner",
+		route: "/a-coach-for-every-learner",
+		lang: "en",
+		eyebrow: "Coaching and teaching",
+		headline: "A Coach for Every Learner",
+		proof:
+			"Show the standard. Practise under pressure. Teach learners to assess their own work.",
+	},
+	{
 		slug: "awards-uk-global-talent",
 		route: "/awards/uk-global-talent",
 		lang: "en",

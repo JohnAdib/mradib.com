@@ -21,7 +21,7 @@ export function StructureCompare(): JSX.Element {
 			<figure className="m-0">
 				<Image
 					src={imgResumeFormatStructureFunctional}
-					alt="فرمت رزومه در ساختار کاربری یا مهارت محور"
+					alt="فرمت رزومه در ساختار کاربردی یا مهارت محور"
 					sizes="(min-width: 640px) 33vw, 100vw"
 					className="rounded-lg border border-zinc-200 dark:border-zinc-700/40"
 				/>
