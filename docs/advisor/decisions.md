@@ -1317,3 +1317,15 @@ an industry-first invention or a formal pioneer award. Do not turn observational
 case-study metrics into causal AI productivity claims. External professional
 profile updates and reindexing follow publication. No new AI-specific markup or
 hidden instructions are needed to express the positioning.
+
+## 2026-10-10, pixel story experiment
+
+An unlisted /lab/pixel-story page explores the 8-bit inspired pixel art
+language in the Tetris film. It uses an original full-viewport canvas scene
+of London with Tower Bridge, Elizabeth Tower, the London Eye, and a playable
+figure. Dollar coins spin and fall in front of the figure. Catching them
+adds to the score with a short sound and visual burst. Levels change the
+palette and caption automatically every 15 points. Arrow keys and touch
+controls move, jump, and crouch; scenery shifts with movement. The page has
+its own shell without site chrome, and the sound can be muted. Reduced-motion
+visitors can still play. This is a trial, not a site-wide visual direction.
