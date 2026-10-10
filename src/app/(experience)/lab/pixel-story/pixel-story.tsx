@@ -2,13 +2,20 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { levelForScore, POINTS_PER_LEVEL } from "./game-rules";
 import {
 	type GameInput,
 	initialGameState,
 	type Pose,
 	stepGame,
 } from "./game-state";
-import { drawScene } from "./scene-art";
+import {
+	advanceCoins,
+	type Coin,
+	drawScene,
+	newCoins,
+	sceneMetrics,
+} from "./scene-art";
 import { chapters } from "./story-data";
 import "./pixel-story.css";
 
@@ -24,7 +31,11 @@ export function PixelStory() {
 		jump: false,
 	});
 	const timeRef = useRef(0);
-	const [chapter, setChapter] = useState(0);
+	const coins = useRef<Coin[]>([]);
+	const scoreRef = useRef(0);
+	const [score, setScore] = useState(0);
+	const [level, setLevel] = useState(1);
+	const chapter = (level - 1) % chapters.length;
 	const [pose, setPose] = useState<Pose>("standing");
 	const [paused, setPaused] = useState(false);
 	const [reducedMotion, setReducedMotion] = useState(false);
@@ -80,9 +91,15 @@ export function PixelStory() {
 		const ctx = canvas?.getContext("2d", { alpha: false });
 		if (!canvas || !stage || !ctx) return;
 		const resize = () => {
-			const pixelSize = stage.clientWidth < 600 ? 3 : 4;
+			const pixelSize = 2;
 			canvas.width = Math.ceil(stage.clientWidth / pixelSize);
 			canvas.height = Math.ceil(stage.clientHeight / pixelSize);
+			const { ground, personScale } = sceneMetrics(
+				canvas.width,
+				canvas.height,
+				game.current,
+			);
+			coins.current = newCoins(canvas.width, ground, personScale);
 		};
 		const observer = new ResizeObserver(resize);
 		observer.observe(stage);
@@ -93,7 +110,28 @@ export function PixelStory() {
 		const tick = (now: number) => {
 			const delta = last ? Math.min((now - last) / 1000, 0.05) : 0;
 			last = now;
-			if (delta > 0) stepGame(game.current, input.current, delta);
+			if (delta > 0 && !paused) stepGame(game.current, input.current, delta);
+			if (delta > 0 && !paused) {
+				const { ground, playerX, personScale } = sceneMetrics(
+					canvas.width,
+					canvas.height,
+					game.current,
+				);
+				const caught = advanceCoins(
+					coins.current,
+					canvas.width,
+					ground,
+					playerX,
+					game.current.y,
+					personScale,
+					delta,
+				);
+				if (caught) {
+					scoreRef.current += caught;
+					setScore(scoreRef.current);
+					setLevel(levelForScore(scoreRef.current));
+				}
+			}
 			if (game.current.pose !== poseRef.current) {
 				poseRef.current = game.current.pose;
 				setPose(game.current.pose);
@@ -105,6 +143,7 @@ export function PixelStory() {
 					time: timeRef.current,
 					player: game.current,
 					reducedMotion: paused || reducedMotion,
+					coins: coins.current,
 				});
 				canvas.dataset.playerX = game.current.x.toFixed(1);
 				canvas.dataset.cameraX = camera.toFixed(1);
@@ -138,26 +177,30 @@ export function PixelStory() {
 	const hold = (direction: "left" | "right" | "crouch", active: boolean) => {
 		input.current[direction] = active;
 	};
-	const next = () => setChapter((value) => (value + 1) % chapters.length);
-	const previous = () =>
-		setChapter((value) => (value + chapters.length - 1) % chapters.length);
-
 	return (
 		<main ref={stageRef} className="pixel-story" data-pixel-story>
 			<canvas
 				ref={canvasRef}
 				className="pixel-story-canvas"
 				role="img"
-				aria-label="Playable pixel art London scene with Tower Bridge, Elizabeth Tower, a person, and falling pound coins"
+				aria-label="Playable pixel art London scene with Tower Bridge, Elizabeth Tower, a person, and spinning pound coins to catch"
 			/>
 			<div className="pixel-story-shade" aria-hidden="true" />
 			<header className="pixel-story-hud">
 				<Link href="/" className="pixel-story-back">
 					← JOHN ADIB
 				</Link>
-				<span className="pixel-story-level">
-					LEVEL {chapters[chapter].number} / 03
-				</span>
+				<div className="pixel-story-scoreboard">
+					<span className="pixel-story-level" data-level>
+						LEVEL {level}
+					</span>
+					<span className="pixel-story-score" data-score>
+						SCORE {String(score).padStart(2, "0")}
+					</span>
+					<span className="pixel-story-progress">
+						{score % POINTS_PER_LEVEL}/{POINTS_PER_LEVEL} TO NEXT LEVEL
+					</span>
+				</div>
 				{canFullscreen ? (
 					<button
 						type="button"
@@ -184,7 +227,7 @@ export function PixelStory() {
 			</div>
 			<div className="pixel-story-status">
 				<span>
-					CHAPTER {chapters[chapter].number} / {chapters[chapter].label}
+					STAGE {chapters[chapter].number} / {chapters[chapter].label}
 				</span>
 				<output data-testid={`player-pose-${pose}`} aria-live="off">
 					{pose.toUpperCase()}
@@ -233,17 +276,7 @@ export function PixelStory() {
 						↓ <span>DUCK</span>
 					</button>
 				</fieldset>
-				<div className="pixel-story-chapters">
-					<button
-						type="button"
-						onClick={previous}
-						aria-label="Previous chapter"
-					>
-						←
-					</button>
-					<button type="button" onClick={next} aria-label="Next chapter">
-						NEXT CHAPTER →
-					</button>
+				<div className="pixel-story-actions">
 					{!reducedMotion && (
 						<button
 							type="button"
@@ -255,7 +288,6 @@ export function PixelStory() {
 					)}
 				</div>
 			</div>
-			<p className="pixel-story-hint">← → MOVE &nbsp; ↑ JUMP &nbsp; ↓ DUCK</p>
 		</main>
 	);
 }

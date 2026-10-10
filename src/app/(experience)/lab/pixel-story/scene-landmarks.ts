@@ -36,9 +36,14 @@ export function drawTowerBridge(
 	}
 	block(ctx, 22, -67, 60, 5, color.shadow);
 	block(ctx, 22, -62, 60, 2, color.gold);
-	for (let cableX = 24; cableX < 82; cableX += 4) {
-		const drop = 18 - Math.abs(cableX - 52) / 2;
-		block(ctx, cableX, -59, 1, 32 + drop, color.stone);
+	// Tower Bridge's paired suspension chains sag between the towers.
+	for (let cableX = 22; cableX <= 82; cableX += 2) {
+		const arc = 17 * (1 - ((cableX - 52) / 30) ** 2);
+		const chainY = Math.round(-63 + arc);
+		block(ctx, cableX, chainY, 3, 2, color.shadow);
+		block(ctx, cableX, chainY, 2, 1, color.gold);
+		if ((cableX - 22) % 8 === 0)
+			block(ctx, cableX + 1, chainY + 2, 1, -27 - chainY - 2, color.gold);
 	}
 	block(ctx, -12, -27, 128, 6, color.shadow);
 	block(ctx, -12, -20, 128, 2, color.gold);

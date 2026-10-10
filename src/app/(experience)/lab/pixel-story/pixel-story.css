@@ -35,10 +35,10 @@
 
 .pixel-story-hud,
 .pixel-story-level,
+.pixel-story-scoreboard,
 .pixel-story-kicker,
 .pixel-story-status,
-.pixel-story-bottom,
-.pixel-story-hint {
+.pixel-story-bottom {
 	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-weight: 700;
 	letter-spacing: 0.08em;
@@ -50,7 +50,7 @@
 	top: 0;
 	left: 0;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	width: 100%;
 	min-height: 70px;
@@ -67,10 +67,29 @@
 	text-decoration: underline;
 }
 
-.pixel-story-level {
-	padding: 0.65rem 0.9rem;
+.pixel-story-scoreboard {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 0.72rem;
+}
+
+.pixel-story-level,
+.pixel-story-score,
+.pixel-story-progress {
+	padding: 0.65rem 0.8rem;
 	border: 2px solid #232b48;
 	background: #f7ead4dd;
+}
+
+.pixel-story-score {
+	background: #f8c86e;
+}
+
+.pixel-story-progress {
+	border-color: #f7ead4dd;
+	background: #232b48;
+	color: #f7ead4;
 }
 
 .pixel-story-icon-button,
@@ -176,7 +195,7 @@
 }
 
 .pixel-story-game-controls,
-.pixel-story-chapters {
+.pixel-story-actions {
 	display: flex;
 	gap: 0.5rem;
 }
@@ -194,23 +213,10 @@
 	font-size: 0.65rem;
 	vertical-align: middle;
 }
-.pixel-story-chapters button {
+.pixel-story-actions button {
 	padding: 0 0.9rem;
 	font-size: 0.67rem;
 	font-weight: 800;
-}
-.pixel-story-chapters button:nth-child(2) {
-	background: #f8c86e;
-}
-
-.pixel-story-hint {
-	position: absolute;
-	bottom: max(90px, 11vh);
-	left: clamp(18px, 3vw, 42px);
-	margin: 0;
-	color: #fff5e9;
-	font-size: 0.68rem;
-	text-shadow: 1px 1px #29304a;
 }
 
 @media (max-width: 700px) {
@@ -218,8 +224,17 @@
 		min-height: 58px;
 		font-size: 0.62rem;
 	}
-	.pixel-story-level {
+	.pixel-story-scoreboard {
+		gap: 0.25rem;
+		font-size: 0.55rem;
+	}
+	.pixel-story-level,
+	.pixel-story-score,
+	.pixel-story-progress {
 		padding: 0.5rem;
+	}
+	.pixel-story-progress {
+		display: none;
 	}
 	.pixel-story-intro {
 		top: 14%;
@@ -248,14 +263,8 @@
 	.pixel-story-game-controls button {
 		flex: 1;
 	}
-	.pixel-story-chapters {
+	.pixel-story-actions {
 		justify-content: center;
-	}
-	.pixel-story-chapters button:nth-child(2) {
-		flex: 1;
-	}
-	.pixel-story-hint {
-		display: none;
 	}
 }
 

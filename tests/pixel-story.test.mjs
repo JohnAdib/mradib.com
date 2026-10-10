@@ -42,7 +42,7 @@ after(async () => {
 		process.kill(-server.pid, "SIGTERM");
 });
 
-test("pixel story advances through its three scenes", async () => {
+test("pixel story starts as a coin-catching game without chapter controls", async () => {
 	const page = await browser.newPage({ viewport: { width: 375, height: 812 } });
 	await page.goto(`${baseUrl}/lab/pixel-story`);
 	await page.getByRole("heading", { name: "One move at a time" }).waitFor();
@@ -50,16 +50,13 @@ test("pixel story advances through its three scenes", async () => {
 		await page.locator("[data-scene-caption]").innerText(),
 		/London/i,
 	);
-	await page.getByRole("button", { name: "Next chapter" }).click();
-	assert.match(
-		await page.locator("[data-scene-caption]").innerText(),
-		/possibility/i,
+	assert.equal(
+		await page.getByRole("button", { name: "Next chapter" }).count(),
+		0,
 	);
-	await page.getByRole("button", { name: "Next chapter" }).click();
-	assert.match(
-		await page.locator("[data-scene-caption]").innerText(),
-		/next move/i,
-	);
+	assert.equal(await page.locator(".pixel-story-hint").count(), 0);
+	assert.match(await page.locator("[data-score]").innerText(), /0/);
+	assert.match(await page.locator("[data-level]").innerText(), /LEVEL 1/i);
 	assert.equal(await page.locator("canvas[aria-label]").count(), 1);
 	await page.close();
 });
@@ -77,8 +74,24 @@ test("reduced motion keeps the story usable", async () => {
 	);
 	assert.equal(
 		await page.getByRole("button", { name: "Next chapter" }).count(),
-		1,
+		0,
 	);
+	await page.close();
+});
+
+test("a foreground coin can be caught for a point", async () => {
+	const page = await browser.newPage({ viewport: { width: 900, height: 700 } });
+	await page.goto(`${baseUrl}/lab/pixel-story`);
+	await page.waitForFunction(
+		() =>
+			Number(
+				document.querySelector("[data-score]")?.textContent?.match(/\d+/)?.[0],
+			) >= 1,
+		null,
+		{ timeout: 8000 },
+	);
+	assert.match(await page.locator("[data-score]").innerText(), /01/);
+	assert.match(await page.locator("[data-level]").innerText(), /LEVEL 1/);
 	await page.close();
 });
 

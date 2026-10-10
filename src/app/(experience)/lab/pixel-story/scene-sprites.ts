@@ -6,19 +6,35 @@ export function drawPoundCoin(
 	x: number,
 	y: number,
 	scale: number,
+	phase: number,
 ) {
 	ctx.save();
 	ctx.translate(Math.round(x), Math.round(y));
-	ctx.scale(scale, scale);
-	block(ctx, 3, 0, 8, 2, "#fff2b5");
-	block(ctx, 1, 2, 12, 10, "#ad6c30");
-	block(ctx, 3, 12, 8, 2, "#8a4d2c");
-	block(ctx, 2, 3, 10, 8, "#f6be54");
-	block(ctx, 4, 4, 6, 6, "#fff0a0");
-	block(ctx, 6, 4, 4, 1, "#76412e");
-	block(ctx, 5, 5, 2, 5, "#76412e");
-	block(ctx, 4, 7, 5, 1, "#76412e");
-	block(ctx, 4, 10, 7, 1, "#76412e");
+	const face = Math.cos(phase);
+	ctx.scale(scale * (0.62 + 0.38 * Math.abs(face)), scale);
+	const rim = face >= 0 ? "#965025" : "#9c6539";
+	const rowWidths = [6, 10, 12, 14, 14, 14, 14, 14, 14, 14, 14, 12, 10, 6];
+	for (let row = 0; row < rowWidths.length; row++) {
+		const width = rowWidths[row];
+		const yRow = row - 7;
+		block(ctx, -width / 2, yRow, width, 1, rim);
+		if (row > 0 && row < rowWidths.length - 1)
+			block(
+				ctx,
+				-width / 2 + 1,
+				yRow,
+				width - 2,
+				1,
+				row < 7 ? "#ffe596" : "#f8b84e",
+			);
+	}
+	block(ctx, -3, -6, 6, 1, "#fff3bb");
+	if (Math.abs(face) > 0.36) {
+		block(ctx, -1, -4, 2, 7, "#9a542c");
+		block(ctx, -3, -1, 6, 2, "#9a542c");
+		block(ctx, -3, -4, 5, 1, "#9a542c");
+		block(ctx, -3, 2, 6, 1, "#9a542c");
+	}
 	ctx.restore();
 }
 

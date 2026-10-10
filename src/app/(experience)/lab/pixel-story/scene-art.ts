@@ -42,29 +42,107 @@ export interface SceneFrame {
 	time: number;
 	player: GameState;
 	reducedMotion: boolean;
+	coins: Coin[];
+}
+
+export interface Coin {
+	x: number;
+	y: number;
+	speed: number;
+	phase: number;
+	seed: number;
+}
+
+export function sceneMetrics(width: number, height: number, player: GameState) {
+	const ground =
+		height - (width < 160 ? 42 : Math.max(33, Math.round(height * 0.13)));
+	const scale = Math.max(0.75, Math.min(2.5, width / 300, (ground - 18) / 158));
+	const playerX = Math.max(
+		20,
+		Math.min(width - 20, width / 2 + player.x * 0.63),
+	);
+	const personScale = Math.min(scale, Math.max(0.42, (ground - 10) / 110));
+	return { ground, scale, playerX, personScale };
+}
+
+export function newCoins(
+	width: number,
+	ground: number,
+	personScale: number,
+): Coin[] {
+	return Array.from({ length: 6 }, (_, seed) => ({
+		x: seed === 0 ? width / 2 : 22 + ((seed * 89) % Math.max(30, width - 44)),
+		y: seed === 0 ? ground - 82 * personScale - 25 : -seed * 55,
+		speed: 26 + (seed % 3) * 8,
+		phase: seed * 1.7,
+		seed,
+	}));
+}
+
+export function advanceCoins(
+	coins: Coin[],
+	width: number,
+	ground: number,
+	playerX: number,
+	playerY: number,
+	personScale: number,
+	seconds: number,
+) {
+	let caught = 0;
+	for (const coin of coins) {
+		coin.y += coin.speed * seconds;
+		coin.phase += seconds * 5.5;
+		const touching =
+			Math.abs(coin.x - playerX) < 11 * personScale + 7 &&
+			coin.y > ground + playerY - 72 * personScale &&
+			coin.y < ground + playerY - 3 * personScale;
+		if (touching || coin.y > ground + 12) {
+			if (touching) caught++;
+			coin.seed += 6;
+			coin.x = 18 + ((coin.seed * 89) % Math.max(30, width - 36));
+			coin.y = -20 - (coin.seed % 4) * 36;
+			coin.speed = 26 + (coin.seed % 4) * 7;
+		}
+	}
+	return caught;
 }
 
 export function drawScene(ctx: Context, frame: SceneFrame) {
 	const { width, height } = ctx.canvas;
-	const { chapter, player, reducedMotion, time } = frame;
+	const { chapter, player, reducedMotion, time, coins } = frame;
 	const color = palettes[chapter];
-	const ground =
-		height - (width < 160 ? 42 : Math.max(33, Math.round(height * 0.13)));
-	const camera = player.x * 0.34;
-	const scale = Math.max(
-		0.32,
-		Math.min(1.35, width / 280, (ground - 10) / 150),
+	const { ground, scale, playerX, personScale } = sceneMetrics(
+		width,
+		height,
+		player,
 	);
+	const camera = player.x * 0.34;
 	ctx.imageSmoothingEnabled = false;
 	block(ctx, 0, 0, width, height, color.sky);
-	block(ctx, 0, Math.round(height * 0.25), width, height, color.haze);
-	block(ctx, 0, Math.round(height * 0.53), width, height, color.sky);
-	for (let i = -2; i < Math.ceil(width / 13) + 4; i++) {
-		const x = Math.round(i * 13 - ((camera * 0.16) % 13));
-		const roof = ground - 38 - ((i * 17 + 300) % 35);
-		block(ctx, x, roof, 11, ground - roof, color.far);
-		block(ctx, x + 4, roof + 9, 2, 4, color.haze);
+	block(ctx, 0, Math.round(height * 0.62), width, height, color.haze);
+	ctx.globalAlpha = 0.13;
+	for (let y = 0; y < ground; y += 4)
+		for (let x = (y / 4) % 2; x < width; x += 4)
+			block(ctx, x, y, 1, 1, color.shadow);
+	ctx.globalAlpha = 0.43;
+	for (let i = -2; i < Math.ceil(width / 7) + 5; i++) {
+		const x = Math.round(i * 7 - ((camera * 0.13) % 7));
+		const roof = ground - 30 - ((i * 13 + 500) % 35);
+		block(ctx, x, roof, 6, ground - roof, color.far);
+		if (i % 3 === 0) block(ctx, x + 2, roof - 3, 2, 3, color.far);
+		for (let wy = roof + 6; wy < ground - 4; wy += 7)
+			block(ctx, x + 2, wy, 1, 2, color.sky);
 	}
+	ctx.globalAlpha = 0.55;
+	for (let i = -2; i < Math.ceil(width / 15) + 4; i++) {
+		const x = Math.round(i * 15 - ((camera * 0.24) % 15));
+		const roof = ground - 22 - ((i * 19 + 300) % 25);
+		block(ctx, x, roof, 12, ground - roof, color.far);
+		for (let wy = roof + 5; wy < ground - 3; wy += 7)
+			for (let wx = x + 3; wx < x + 11; wx += 5)
+				block(ctx, wx, wy, 1, 2, color.gold);
+	}
+	ctx.globalAlpha = 1;
 	block(ctx, 0, ground - 19, width, 21, color.water);
 	for (let x = -20; x < width + 20; x += 27) {
 		block(ctx, x - ((camera * 0.3) % 27), ground - 8, 14, 2, color.haze);
@@ -77,25 +155,18 @@ export function drawScene(ctx: Context, frame: SceneFrame) {
 		scale,
 		color,
 	);
-	const coinTime = reducedMotion ? 0 : time;
-	for (let i = 0; i < 8; i++) {
-		const span = width + 30;
-		const x = ((((i * 73 + 32 - camera * 0.18) % span) + span) % span) - 10;
-		const y = ((i * 61 + coinTime * (8 + (i % 3) * 5)) % (ground + 35)) - 18;
-		drawPoundCoin(ctx, x, y, Math.max(0.8, scale * 0.9));
-	}
 	block(ctx, 0, ground, width, height - ground, color.shadow);
 	for (let x = -25; x < width + 25; x += 25) {
 		block(ctx, x - ((camera * 0.65) % 25), ground + 4, 13, 2, color.gold);
 	}
-	const playerX = Math.max(
-		20,
-		Math.min(width - 20, width / 2 + player.x * 0.63),
-	);
-	const personScale = Math.min(
-		Math.max(0.55, scale),
-		Math.max(0.35, (ground - 10) / 110),
-	);
 	drawPerson(ctx, playerX, ground, personScale, player, time, reducedMotion);
+	for (const coin of coins)
+		drawPoundCoin(
+			ctx,
+			coin.x,
+			coin.y,
+			Math.max(1.15, scale * 0.88),
+			reducedMotion ? 0 : coin.phase,
+		);
 	return camera;
 }
