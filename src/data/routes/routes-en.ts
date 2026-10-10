@@ -12,7 +12,6 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/articles", lastModified: "2026-07-19" },
 	{ path: "/audit", lastModified: "2026-07-23" },
 	{ path: "/awards", lastModified: "2026-07-19" },
-	{ path: "/conversations", lastModified: "2026-10-11" },
 	{ path: "/contact", lastModified: "2026-07-19" },
 	{ path: hubRoute, lastModified: "2026-09-30" },
 	{ path: "/gallery", lastModified: "2026-07-19" },

@@ -1333,3 +1333,7 @@ visitors can still play. This is a trial, not a site-wide visual direction.
 ## 2026-10-11: Hosted conversations
 
 John approved a host section after Podcast and a shared conversations page. Distinguish hosting from guest appearances and authored talks. YouTube is primary; keep Luma for registration and event context. Use short topic summaries rather than full transcripts.
+
+### Revised direction
+
+John requested direct banner cards on Talks, no separate conversations page and no public Luma links. Add guest LinkedIn links and Tech Immigrants channel/website links. YouTube banners are compressed locally.

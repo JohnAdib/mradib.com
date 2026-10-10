@@ -233,3 +233,12 @@ overflow. Reused Newsreader titles, warm surfaces, neutral buttons and the
 YouTube embed. Guest identity, host attribution and upcoming status remain
 visible on mobile. No hover movement or decorative dividers were introduced.
 Screenshot evidence: /tmp/conversations-qa.
+
+### Banner-card revision
+
+Removed the separate page. Reviewed the direct video cards on Talks at 375,
+430 and 1440px in both themes. All three banners load and retain their 16:9
+composition. Mobile stacks image and copy; desktop places them side by side.
+No horizontal overflow. Guest LinkedIn links stay separate from video links;
+channel and community website links appear above the cards. Evidence:
+/tmp/conversations-banner-qa.
