@@ -224,3 +224,12 @@ detail captures, with no horizontal overflow. The article remains anonymous;
 the previously approved speaker role remains on the talk cover. Evidence:
 `/tmp/qa-october-page-qa`, `/tmp/qa-october-pdf-sheet.png`,
 `/tmp/qa-october-pptx-sheet.png` and the private `qa-october` build directory.
+
+## 2026-10-11: Hosted conversations
+
+Reviewed /conversations at 375, 430, 768, 1024, 1440, 1920 and 2560px in
+both themes, plus the new /talks section at 375, 430 and 1440px. No horizontal
+overflow. Reused Newsreader titles, warm surfaces, neutral buttons and the
+YouTube embed. Guest identity, host attribution and upcoming status remain
+visible on mobile. No hover movement or decorative dividers were introduced.
+Screenshot evidence: /tmp/conversations-qa.

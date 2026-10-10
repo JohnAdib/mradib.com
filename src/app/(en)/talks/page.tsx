@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/container";
+import { HostedConversations } from "@/components/conversations/hosted-conversations";
 import { CopyButton } from "@/components/copy-button";
 import Faq from "@/components/faq/faq";
 import { ItemListJsonLd } from "@/components/json-ld/item-list-json-ld";
@@ -68,6 +69,7 @@ export default function TalksPage() {
 					<div id="podcast" className="mt-12 scroll-mt-24">
 						<TalksPodcast podcast={podcastAppearances[0]} />
 					</div>
+					<HostedConversations />
 				</section>
 
 				<section id="faq" className="scroll-mt-24">

@@ -98,3 +98,11 @@ refer to PDF pages. Keep the original decks and their public URLs intact.
 
 Preview images represent page 1 of each PDF. The design systems page previously
 used an event poster; replace its preview with the actual title slide.
+
+## Tech Immigrants conversations hosted by John Adib
+
+- 2 October 2026: Can you still get hired in tech? Guest Joe Bignell. Recording: https://www.youtube.com/watch?v=zHnhGOTUwyQ. Event: https://luma.com/f1hpgc87.
+- 16 October 2026: How to get hired by a UK startup? Guest Sam Baldwin. Upcoming YouTube: https://www.youtube.com/watch?v=9tEpHryZLE8. Event: https://luma.com/pgzxv1x5.
+- 21 October 2026: Why do good engineers get rejected? Guest Sam Barcia. Upcoming YouTube: https://www.youtube.com/watch?v=GnZ_dYrQ2NU. Event: https://luma.com/199d35ca.
+
+Public Luma descriptions verify host, guests and planned topics. No transcript-based recap or view count is claimed.

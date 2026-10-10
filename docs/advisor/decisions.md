@@ -1329,3 +1329,7 @@ palette and caption automatically every 15 points. Arrow keys and touch
 controls move, jump, and crouch; scenery shifts with movement. The page has
 its own shell without site chrome, and the sound can be muted. Reduced-motion
 visitors can still play. This is a trial, not a site-wide visual direction.
+
+## 2026-10-11: Hosted conversations
+
+John approved a host section after Podcast and a shared conversations page. Distinguish hosting from guest appearances and authored talks. YouTube is primary; keep Luma for registration and event context. Use short topic summaries rather than full transcripts.

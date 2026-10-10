@@ -12,6 +12,7 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/articles", lastModified: "2026-07-19" },
 	{ path: "/audit", lastModified: "2026-07-23" },
 	{ path: "/awards", lastModified: "2026-07-19" },
+	{ path: "/conversations", lastModified: "2026-10-11" },
 	{ path: "/contact", lastModified: "2026-07-19" },
 	{ path: hubRoute, lastModified: "2026-09-30" },
 	{ path: "/gallery", lastModified: "2026-07-19" },
@@ -19,7 +20,7 @@ export const routesEn: ISiteRoute[] = [
 	{ path: "/mentor", lastModified: "2026-07-19", faPath: "/fa/mentor" },
 	{ path: "/now", lastModified: "2026-07-19" },
 	{ path: "/smileisgold", lastModified: "2026-07-19" },
-	{ path: "/talks", lastModified: "2026-07-19" },
+	{ path: "/talks", lastModified: "2026-10-11" },
 	{ path: "/resume/action-verbs/list", lastModified: "2026-07-18" },
 	{
 		path: "/resume/review",
