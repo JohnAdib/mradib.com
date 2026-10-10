@@ -804,3 +804,13 @@ the footer, and mentorship remains a channel tile on /contact. The CV at
 https://resume.mradib.com (urlSocial.resume) opens in a new tab from three
 places: the About closing (already existed), a footer "CV ↗" link, and a
 "My CV" tile on /contact. It never enters the header.
+
+## 2026-10-10, pixel story experiment
+
+An unlisted /lab/pixel-story page explores the 8-bit inspired pixel art
+language in the Tetris film. It uses an original low-resolution canvas scene
+of London, a central figure, and falling coins. Three manually controlled
+chapters change the palette and caption. The experiment uses the site's
+existing chrome and needs no animation dependency. Reduced-motion visitors
+get a still scene with working chapter controls. This is a trial, not a new
+site-wide visual direction.

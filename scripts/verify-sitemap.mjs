@@ -8,13 +8,13 @@ import { htmlPages, OUT_ROOT } from "./lib/walk-out.mjs";
 const SITE = "https://mradib.com";
 const redirects = new Set(redirectRoutes);
 
-// Static passthroughs from public/ that are utilities, not site pages.
-const STATIC_ASSETS = new Set(["/email/signature"]);
+// Utilities and unlisted experiments are intentionally absent from the sitemap.
+const UNLISTED_PAGES = new Set(["/email/signature", "/lab/pixel-story"]);
 
 function isExcluded(route) {
 	if (route === "/404" || route === "/_not-found") return true;
 	if (route.endsWith("/_not-found")) return true;
-	if (STATIC_ASSETS.has(route)) return true;
+	if (UNLISTED_PAGES.has(route)) return true;
 	return redirects.has(route);
 }
 
