@@ -260,3 +260,7 @@ reduced padding, heading size and gaps while preserving guest/community links
 and the right-side video action. Status is calculated after hydration and
 refreshed every minute and on visibility changes; scheduled end boundaries and
 upcoming/past ordering have focused tests. Evidence: /tmp/conversations-compact-qa.
+
+### Conversation rows
+
+Further reduced cards to 156px on tested phones and 164px on desktop. Date/status, title, guest and a single-row community/video footer replace the larger card layout. Reviewed 375, 430 and 1440px in both themes without horizontal overflow. Evidence: /tmp/conversations-row-qa.
