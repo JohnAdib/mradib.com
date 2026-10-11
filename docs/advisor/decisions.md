@@ -1353,3 +1353,7 @@ Group three panels under one conference header on Talks. Show the conference dat
 ### Consistent upcoming rows and 2026 event page
 
 Upcoming appearances now reuse TalkTimeline, matching previous talks. TechLead 2026 has one event page with three panel sections, verified co-panelists and correct roles. Use this year’s practical AI-in-development theme, not the 2025 technical-debt recap. Keep date only.
+
+## 2026-10-11: Upcoming talks newest first
+
+Order upcoming appearances by date descending, matching John’s preference for the latest event on top. TechLead on 23 October comes before React Native London on 22 October. Undated drafts follow dated events.
