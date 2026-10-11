@@ -276,3 +276,7 @@ Upcoming appearances now reuse TalkTimeline, with the same logo, title, right-al
 ## 2026-10-11: Newest upcoming event first
 
 Verified TechLead 23 October above React Native London 22 October at 375, 430 and 1440px in both themes. Shared row styling stays unchanged and no horizontal overflow. Evidence: /tmp/upcoming-newest-qa.
+
+## 2026-10-11: Conversation timeline treatment
+
+Replaced boxed cards with previous-talk-style rows: neutral 48px play tile, community/date header, 15px title and guest/status line. Each row measures 78.5px at 375, 430 and 1440px in both themes, down from 156px on mobile. Reviewed every capture with no horizontal overflow; date uses the right edge and each row is one accessible YouTube link. Runtime ordering and status remain intact. Evidence: /tmp/conversations-timeline-qa.

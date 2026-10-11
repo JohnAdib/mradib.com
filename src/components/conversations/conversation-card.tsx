@@ -1,12 +1,6 @@
-import {
-	conversationDate,
-	type HostedConversation,
-} from "@/data/conversations";
-
+import { PlayIcon } from "@heroicons/react/24/solid";
+import type { HostedConversation } from "@/data/conversations";
 import { conversationStatus } from "@/lib/conversations/session-status";
-
-const externalLink =
-	"rounded-md py-2 underline-offset-4 transition-colors hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-700";
 
 export function ConversationCard({
 	session,
@@ -16,69 +10,55 @@ export function ConversationCard({
 	now: number | null;
 }) {
 	const status = conversationStatus(session, now);
+	const date = new Date(`${session.date}T12:00:00Z`).toLocaleDateString(
+		"en-GB",
+		{
+			day: "numeric",
+			month: "short",
+			year: "numeric",
+			timeZone: "Europe/London",
+		},
+	);
 	return (
-		<article className="rounded-2xl bg-surface p-3 ring-1 ring-zinc-900/10 sm:p-4 dark:bg-zinc-800/40 dark:ring-white/10">
-			<div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-zinc-500 dark:text-zinc-400">
-				<time dateTime={session.date}>{conversationDate(session.date)}</time>
-				{status && (
-					<span className="rounded-full bg-accent-500/10 px-2 py-0.5 font-medium text-accent-700 dark:text-accent-400">
-						{status}
-					</span>
-				)}
-			</div>
-			<h3 className="mt-1 font-display text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-				<a
-					href={session.youtube}
-					target="_blank"
-					rel="noopener noreferrer"
-					className={externalLink}
+		<article>
+			<a
+				href={session.youtube}
+				target="_blank"
+				rel="noopener noreferrer"
+				className="group flex items-start gap-4 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-700"
+			>
+				<span
+					aria-hidden="true"
+					className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-zinc-100 text-zinc-500 transition-colors group-hover:text-accent-700 dark:bg-zinc-800 dark:text-zinc-400 dark:group-hover:text-accent-400"
 				>
-					{session.title}
-				</a>
-			</h3>
-			<p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
-				With{" "}
-				<a
-					href={session.guestLinkedin}
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label={`${session.guest} on LinkedIn (opens in a new tab)`}
-					className={`${externalLink} font-semibold text-zinc-800 dark:text-zinc-100`}
-				>
-					{session.guest}
-				</a>
-			</p>
-
-			<div className="mt-1 flex flex-wrap items-end justify-between gap-x-3 gap-y-1">
-				<div className="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-400">
-					<a
-						href={session.community.website}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label={`${session.community.name} website (opens in a new tab)`}
-						className={externalLink}
-					>
-						{session.community.name}
-					</a>
-					<a
-						href={session.community.youtube}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label={`${session.community.name} YouTube channel (opens in a new tab)`}
-						className={externalLink}
-					>
-						Channel
-					</a>
+					<PlayIcon className="h-5 w-5" />
+				</span>
+				<div className="min-w-0 flex-1">
+					<div className="flex items-baseline justify-between gap-3 text-xs">
+						<p className="truncate font-medium text-zinc-500 dark:text-zinc-400">
+							{session.community.name}
+						</p>
+						<time
+							dateTime={session.date}
+							className="flex-none text-zinc-400 dark:text-zinc-500"
+						>
+							{date}
+						</time>
+					</div>
+					<h3 className="mt-1 text-[15px] font-semibold text-zinc-800 transition-colors group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-400">
+						{session.title}
+					</h3>
+					<p className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-zinc-500 dark:text-zinc-400">
+						<span>With {session.guest}</span>
+						{status && (
+							<span className="text-accent-700 dark:text-accent-400">
+								{status}
+							</span>
+						)}
+					</p>
+					<span className="sr-only">Watch on YouTube (opens in a new tab)</span>
 				</div>
-				<a
-					href={session.youtube}
-					target="_blank"
-					rel="noopener noreferrer"
-					className={`${externalLink} ml-auto text-xs font-semibold text-accent-700 dark:text-accent-400`}
-				>
-					View on YouTube<span className="sr-only"> (opens in a new tab)</span>
-				</a>
-			</div>
+			</a>
 		</article>
 	);
 }

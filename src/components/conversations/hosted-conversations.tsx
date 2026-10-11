@@ -27,7 +27,7 @@ export function HostedConversations() {
 				I host conversations with recruiters and industry specialists, bringing
 				their perspectives and questions from the community into the discussion.
 			</p>
-			<div className="mt-5 space-y-3">
+			<div className="mt-5 space-y-6">
 				{orderedConversations.map((session) => (
 					<ConversationCard key={session.id} session={session} now={now} />
 				))}

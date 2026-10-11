@@ -1357,3 +1357,7 @@ Upcoming appearances now reuse TalkTimeline, matching previous talks. TechLead 2
 ## 2026-10-11: Upcoming talks newest first
 
 Order upcoming appearances by date descending, matching John’s preference for the latest event on top. TechLead on 23 October comes before React Native London on 22 October. Undated drafts follow dated events.
+
+## 2026-10-11: Hosted conversation timeline rows
+
+Use the previous-talk row treatment for conversations: community at top left, short date on the right, title links directly to YouTube, guest and runtime status below. Remove guest LinkedIn, channel and repeated video actions from the visible UI. Keep Tech Immigrants named per row.
