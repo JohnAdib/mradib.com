@@ -224,3 +224,43 @@ detail captures, with no horizontal overflow. The article remains anonymous;
 the previously approved speaker role remains on the talk cover. Evidence:
 `/tmp/qa-october-page-qa`, `/tmp/qa-october-pdf-sheet.png`,
 `/tmp/qa-october-pptx-sheet.png` and the private `qa-october` build directory.
+
+## 2026-10-11: Hosted conversations
+
+Reviewed /conversations at 375, 430, 768, 1024, 1440, 1920 and 2560px in
+both themes, plus the new /talks section at 375, 430 and 1440px. No horizontal
+overflow. Reused Newsreader titles, warm surfaces, neutral buttons and the
+YouTube embed. Guest identity, host attribution and upcoming status remain
+visible on mobile. No hover movement or decorative dividers were introduced.
+Screenshot evidence: /tmp/conversations-qa.
+
+### Banner-card revision
+
+Removed the separate page. Reviewed the direct video cards on Talks at 375,
+430 and 1440px in both themes. All three banners load and retain their 16:9
+composition. Mobile stacks image and copy; desktop places them side by side.
+No horizontal overflow. Guest LinkedIn links stay separate from video links;
+channel and community website links appear above the cards. Evidence:
+/tmp/conversations-banner-qa.
+
+### Portrait-free cards and per-session communities
+
+Reviewed 375, 430 and 1440px in both themes with no horizontal overflow.
+Removed all guest banners. Community identity and two quieter links live in
+each card, alongside a right-aligned View on YouTube action. Upcoming sessions
+appear first, with the recording last. All external links use safe new-tab
+attributes; guest links announce the destination. Evidence:
+/tmp/conversations-refined-qa.
+
+### Compact cards with a runtime clock
+
+Reviewed 375, 430 and 1440px in both themes with no overflow. Cards now measure
+216px high on tested phones and 224px on desktop. Removed summary paragraphs,
+reduced padding, heading size and gaps while preserving guest/community links
+and the right-side video action. Status is calculated after hydration and
+refreshed every minute and on visibility changes; scheduled end boundaries and
+upcoming/past ordering have focused tests. Evidence: /tmp/conversations-compact-qa.
+
+### Conversation rows
+
+Further reduced cards to 156px on tested phones and 164px on desktop. Date/status, title, guest and a single-row community/video footer replace the larger card layout. Reviewed 375, 430 and 1440px in both themes without horizontal overflow. Evidence: /tmp/conversations-row-qa.

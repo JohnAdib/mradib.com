@@ -1329,3 +1329,19 @@ palette and caption automatically every 15 points. Arrow keys and touch
 controls move, jump, and crouch; scenery shifts with movement. The page has
 its own shell without site chrome, and the sound can be muted. Reduced-motion
 visitors can still play. This is a trial, not a site-wide visual direction.
+
+## 2026-10-11: Hosted conversations
+
+John approved a host section after Podcast and a shared conversations page. Distinguish hosting from guest appearances and authored talks. YouTube is primary; keep Luma for registration and event context. Use short topic summaries rather than full transcripts.
+
+### Revised direction
+
+John requested direct banner cards on Talks, no separate conversations page and no public Luma links. Add guest LinkedIn links and Tech Immigrants channel/website links. YouTube banners are compressed locally.
+
+### Conversation cards without portraits
+
+John found guest portraits too prominent on his personal site. Removed banners, moved community name/channel/website links into each card and placed a neutral YouTube action at the right. Upcoming conversations appear first in date order; recordings follow. Guest LinkedIn and other external links open in new tabs. Community data belongs to each session so future hosts can differ.
+
+### Compact cards and runtime dates
+
+John requested smaller cards and automatic upcoming status. Reduced padding, title size and gaps; removed the summary paragraph from cards. The visitor's clock determines status and order after hydration, refreshed every minute and on tab visibility changes. Verified event end times retain Upcoming during the session. Past session does not imply a verified recording.
