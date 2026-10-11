@@ -264,3 +264,11 @@ upcoming/past ordering have focused tests. Evidence: /tmp/conversations-compact-
 ### Conversation rows
 
 Further reduced cards to 156px on tested phones and 164px on desktop. Date/status, title, guest and a single-row community/video footer replace the larger card layout. Reviewed 375, 430 and 1440px in both themes without horizontal overflow. Evidence: /tmp/conversations-row-qa.
+
+## 2026-10-11: TechLead 2026 panel event
+
+Reviewed the Talks additions at 375, 430 and 1440px in both themes. One event header carries date, London and venue; three panel rows carry distinct role labels. No times, repeated conference cards or new pages. The earlier meetup now displays its confirmed date. All text fits with no horizontal overflow, neutral surfaces and restrained accent role labels. Reveal and reduced-motion behavior are reused. Evidence: /tmp/techlead-panels-qa, including full pages, section crops and matrix.png.
+
+### Shared timeline and full conference page
+
+Upcoming appearances now reuse TalkTimeline, with the same logo, title, right-aligned date and facts as previous talks. Reviewed index at 375, 430 and 1440px in both themes. The new /techlead-conf-london-2026 page reuses TalkLayout, adds three role-labelled panel sections and co-panelist lists, and links to 2025 and the official programme. Reviewed 375, 430, 768, 1024, 1440, 1920 and 2560px in both themes. All text fits without horizontal overflow. New derived 1200x630 OG card inspected. Evidence: /tmp/techlead-2026-page-qa.

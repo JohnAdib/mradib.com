@@ -1345,3 +1345,11 @@ John found guest portraits too prominent on his personal site. Removed banners, 
 ### Compact cards and runtime dates
 
 John requested smaller cards and automatic upcoming status. Reduced padding, title size and gaps; removed the summary paragraph from cards. The visitor's clock determines status and order after hydration, refreshed every minute and on tab visibility changes. Verified event end times retain Upcoming during the session. Past session does not imply a verified recording.
+
+## 2026-10-11: TechLead panels
+
+Group three panels under one conference header on Talks. Show the conference date only, no session times. John is moderator and panelist for the juniors panel, and panelist for the other two. No separate panel pages. Keep conversation cards compact.
+
+### Consistent upcoming rows and 2026 event page
+
+Upcoming appearances now reuse TalkTimeline, matching previous talks. TechLead 2026 has one event page with three panel sections, verified co-panelists and correct roles. Use this year’s practical AI-in-development theme, not the 2025 technical-debt recap. Keep date only.
