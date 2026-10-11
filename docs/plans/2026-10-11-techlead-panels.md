@@ -1,5 +1,5 @@
-# TechLead 2026 panels
+# TechLead 2026 appearance
 
-Use one compact event card with three panel titles and explicit roles. Reuse the Talks section, data model, Reveal and theme tokens. No new pages or panel times. Group pathless panels by event/date and order upcoming events chronologically. Keep individual talks separate and replace the outdated TBC label when a date is known.
+Reuse TalkTimeline for upcoming appearances, identical to previous talks. Show one linked TechLead conference appearance and keep the three panels as data feeding its page. The page reuses TalkLayout and includes the 2026 theme, correct roles, short topic descriptions, verified co-panelists, programme link and a related 2025 appearance. No session times or invented recordings.
 
-Validate grouping, roles, date-only output, repository checks and both-theme screenshots at 375, 430 and 1440px. Review before creating the separate PR from main after PR169 merges.
+Generate the derived OG image and verify sitemap, metadata, build, types and panel tests. Review the index at 375, 430 and 1440px and the new page across the full seven-width matrix in both themes.

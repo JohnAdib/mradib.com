@@ -110,3 +110,7 @@ Public Luma descriptions verify host, guests and planned topics. No transcript-b
 ## TechLead Conf London 2026, 23 October
 
 John returns to TechLead Conf for the second time, at The Brewery in London. Moderator and panelist: Skipping the Struggle: Can AI-Native Juniors Become Seniors? Panelist: AI-Era Hiring: What Skills Last? Panelist: Measuring AI/Agent Impact: KPIs, ROI, Real Productivity. User confirmed roles and requested date only, with no panel times. Official programme: https://techleadconf.com/schedule-offline.
+
+### 2026 page refresh
+
+The 2026 conference theme is hands-on engineering leadership and practical AI across the software development lifecycle. Source checked 11 October: https://techleadconf.com/. Three panel lineups verified against https://techleadconf.com/schedule-offline. One public page at /techlead-conf-london-2026, with distinct panel roles and no session times.

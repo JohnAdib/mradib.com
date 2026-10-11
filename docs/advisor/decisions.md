@@ -1349,3 +1349,7 @@ John requested smaller cards and automatic upcoming status. Reduced padding, tit
 ## 2026-10-11: TechLead panels
 
 Group three panels under one conference header on Talks. Show the conference date only, no session times. John is moderator and panelist for the juniors panel, and panelist for the other two. No separate panel pages. Keep conversation cards compact.
+
+### Consistent upcoming rows and 2026 event page
+
+Upcoming appearances now reuse TalkTimeline, matching previous talks. TechLead 2026 has one event page with three panel sections, verified co-panelists and correct roles. Use this year’s practical AI-in-development theme, not the 2025 technical-debt recap. Keep date only.

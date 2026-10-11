@@ -48,7 +48,15 @@ export function TalkTimelineItem({
 					<span>📍 {placeOf(talk)}</span>
 					{talk.host ? <span>🏢 {talk.host}</span> : null}
 					{talk.audience ? <span>👥 {talk.audience}</span> : null}
-					{talk.format === "panel" ? <span>Panel</span> : null}
+					{talk.role ? (
+						<span>
+							{talk.role === "moderator-panelist"
+								? "Moderator and panelist"
+								: "Panelist"}
+						</span>
+					) : talk.format === "panel" ? (
+						<span>Panel</span>
+					) : null}
 					{talk.format === "workshop" ? <span>Workshop</span> : null}
 				</p>
 			</div>
