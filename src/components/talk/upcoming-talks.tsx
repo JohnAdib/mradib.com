@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Reveal } from "@/components/reveal/reveal";
 import type { ITalk } from "@/data/talks/talk-interface";
+import { groupUpcomingTalks, talkDateLabel } from "@/lib/talks/group-upcoming";
+import { UpcomingPanelEvent } from "./upcoming-panel-event";
 
 export function UpcomingTalks({ talks }: { talks: ITalk[] }) {
 	if (!talks.length) return null;
@@ -16,27 +18,35 @@ export function UpcomingTalks({ talks }: { talks: ITalk[] }) {
 				Upcoming talks
 			</h2>
 			<div className="mt-6 grid gap-4">
-				{talks.map((talk) => (
-					<Reveal key={talk.slug}>
-						<Link
-							href={talk.path ?? "/talks"}
-							className="group block rounded-3xl bg-surface p-6 ring-1 ring-zinc-200 transition hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
-						>
-							<p className="text-xs font-medium text-accent-700 dark:text-accent-400">
-								Event details TBC
-							</p>
-							<h3 className="mt-3 text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-								{talk.title}
-							</h3>
-							<p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-								{talk.summary}
-							</p>
-							<span className="mt-5 inline-block text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-								Explore the talk &rarr;
-							</span>
-						</Link>
-					</Reveal>
-				))}
+				{groupUpcomingTalks(talks).map((group) => {
+					const talk = group[0];
+					return (
+						<Reveal key={talk.slug}>
+							{talk.format === "panel" && !talk.path ? (
+								<UpcomingPanelEvent panels={group} />
+							) : (
+								<Link
+									href={talk.path ?? "/talks"}
+									className="group block rounded-3xl bg-surface p-6 ring-1 ring-zinc-200 transition hover:-translate-y-1 hover:shadow-lg motion-reduce:transform-none dark:bg-zinc-800/40 dark:ring-zinc-700/50"
+								>
+									<p className="text-xs font-medium text-accent-700 dark:text-accent-400">
+										{talkDateLabel(talk.date)}
+										{talk.event && ` · ${talk.event}`}
+									</p>
+									<h3 className="mt-3 text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+										{talk.title}
+									</h3>
+									<p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+										{talk.summary}
+									</p>
+									<span className="mt-5 inline-block text-sm font-semibold text-zinc-800 dark:text-zinc-100">
+										Explore the talk &rarr;
+									</span>
+								</Link>
+							)}
+						</Reveal>
+					);
+				})}
 			</div>
 		</section>
 	);

@@ -106,3 +106,7 @@ used an event poster; replace its preview with the actual title slide.
 - 21 October 2026: Why do good engineers get rejected? Guest Sam Barcia. Upcoming YouTube: https://www.youtube.com/watch?v=GnZ_dYrQ2NU. Event: https://luma.com/199d35ca.
 
 Public Luma descriptions verify host, guests and planned topics. No transcript-based recap or view count is claimed.
+
+## TechLead Conf London 2026, 23 October
+
+John returns to TechLead Conf for the second time, at The Brewery in London. Moderator and panelist: Skipping the Struggle: Can AI-Native Juniors Become Seniors? Panelist: AI-Era Hiring: What Skills Last? Panelist: Measuring AI/Agent Impact: KPIs, ROI, Real Productivity. User confirmed roles and requested date only, with no panel times. Official programme: https://techleadconf.com/schedule-offline.

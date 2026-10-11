@@ -25,6 +25,7 @@ export interface ITalk {
 	subtitle?: string;
 	/** Defaults to a talk when unset. */
 	format?: TalkFormat;
+	role?: "panelist" | "moderator-panelist";
 	/** Upcoming talks are not counted as past appearances. */
 	status?: "upcoming" | "delivered";
 	/** Page update date, independent of the event date. */

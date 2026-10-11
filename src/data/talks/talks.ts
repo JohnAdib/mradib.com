@@ -3,9 +3,11 @@ import { urlGitNation } from "@/data/profile";
 import { qaBottleneckTalk } from "./qa-bottleneck-talk";
 import { talkDescriptions } from "./talk-descriptions";
 import type { IPodcastAppearance, ITalk } from "./talk-interface";
+import { techlead2026Panels } from "./techlead-2026-panels";
 
 // newest first, drives /talks, the talk pages, the sitemap, and llms.txt
 export const talks: ITalk[] = [
+	...techlead2026Panels,
 	qaBottleneckTalk,
 	{
 		slug: "compound-effect-guardrails",
