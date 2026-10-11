@@ -272,3 +272,7 @@ Reviewed the Talks additions at 375, 430 and 1440px in both themes. One event he
 ### Shared timeline and full conference page
 
 Upcoming appearances now reuse TalkTimeline, with the same logo, title, right-aligned date and facts as previous talks. Reviewed index at 375, 430 and 1440px in both themes. The new /techlead-conf-london-2026 page reuses TalkLayout, adds three role-labelled panel sections and co-panelist lists, and links to 2025 and the official programme. Reviewed 375, 430, 768, 1024, 1440, 1920 and 2560px in both themes. All text fits without horizontal overflow. New derived 1200x630 OG card inspected. Evidence: /tmp/techlead-2026-page-qa.
+
+## 2026-10-11: Newest upcoming event first
+
+Verified TechLead 23 October above React Native London 22 October at 375, 430 and 1440px in both themes. Shared row styling stays unchanged and no horizontal overflow. Evidence: /tmp/upcoming-newest-qa.

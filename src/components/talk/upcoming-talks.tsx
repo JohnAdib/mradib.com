@@ -4,7 +4,7 @@ import { TalkTimeline } from "./talk-timeline";
 export function UpcomingTalks({ talks }: { talks: ITalk[] }) {
 	if (!talks.length) return null;
 	const ordered = [...talks].sort((a, b) =>
-		(a.date ?? "9999").localeCompare(b.date ?? "9999"),
+		(b.date ?? "").localeCompare(a.date ?? ""),
 	);
 	return (
 		<section
