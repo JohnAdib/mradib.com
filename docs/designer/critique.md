@@ -264,3 +264,7 @@ upcoming/past ordering have focused tests. Evidence: /tmp/conversations-compact-
 ### Conversation rows
 
 Further reduced cards to 156px on tested phones and 164px on desktop. Date/status, title, guest and a single-row community/video footer replace the larger card layout. Reviewed 375, 430 and 1440px in both themes without horizontal overflow. Evidence: /tmp/conversations-row-qa.
+
+## 2026-10-11: Conversation timeline treatment
+
+Replaced boxed cards with previous-talk-style rows: neutral 48px play tile, community/date header, 15px title and guest/status line. Each row measures 78.5px at 375, 430 and 1440px in both themes, down from 156px on mobile. Reviewed every capture with no horizontal overflow; date uses the right edge and each row is one accessible YouTube link. Runtime ordering and status remain intact. Evidence: /tmp/conversations-timeline-qa.

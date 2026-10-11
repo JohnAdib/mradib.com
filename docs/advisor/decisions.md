@@ -1345,3 +1345,7 @@ John found guest portraits too prominent on his personal site. Removed banners, 
 ### Compact cards and runtime dates
 
 John requested smaller cards and automatic upcoming status. Reduced padding, title size and gaps; removed the summary paragraph from cards. The visitor's clock determines status and order after hydration, refreshed every minute and on tab visibility changes. Verified event end times retain Upcoming during the session. Past session does not imply a verified recording.
+
+## 2026-10-11: Hosted conversation timeline rows
+
+Use the previous-talk row treatment for conversations: community at top left, short date on the right, title links directly to YouTube, guest and runtime status below. Remove guest LinkedIn, channel and repeated video actions from the visible UI. Keep Tech Immigrants named per row.
