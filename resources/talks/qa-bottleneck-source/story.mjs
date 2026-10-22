@@ -383,9 +383,9 @@ export const slides = [
 		theme: "paper",
 		title: "Fewer recorded errors, with variation",
 		lead: "",
-		foot: "Daily events, all environments. 7 July to 30 September 2026.\nFixes, filters and sampling affect counts. No usage denominator.",
+		foot: "65% fewer events: 7 Jul to 5 Aug vs 22 Sep to 21 Oct 2026. Both windows are 30 complete days.\nAll environments. Fixes, filters and sampling affect counts. No usage denominator.",
 		notes:
-			"• 86 complete days: 7 July to 30 September\n• Raw daily variation, including September rise\n• All environments; no usage denominator\n• Fixes, filters and sampling affect volume\n• No crash-rate or AI-causality claim",
+			"• 107 complete days: 7 July to 21 October\n• Windows: 7 Jul to 5 Aug vs 22 Sep to 21 Oct\n• 364,417 then 127,531 events. About 65% fewer\n• Android snapshot: about 690 to 290 events/day. Short window\n• October new error types: 37, not the earlier zero\n• Weekly crashes: 458, 409, then 887. Monitoring still matters\n• Fixes, filters and sampling affect counts. No usage denominator",
 		chapter: "",
 	},
 	{

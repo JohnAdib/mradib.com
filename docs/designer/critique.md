@@ -280,3 +280,9 @@ Verified TechLead 23 October above React Native London 22 October at 375, 430 an
 ## 2026-10-11: Conversation timeline treatment
 
 Replaced boxed cards with previous-talk-style rows: neutral 48px play tile, community/date header, 15px title and guest/status line. Each row measures 78.5px at 375, 430 and 1440px in both themes, down from 156px on mobile. Reviewed every capture with no horizontal overflow; date uses the right edge and each row is one accessible YouTube link. Runtime ordering and status remain intact. Evidence: /tmp/conversations-timeline-qa.
+
+## 2026-10-22: Sentry refresh
+
+Reviewed the extended daily error chart at 375, 430 and 1440px in both themes with no horizontal overflow. Labels and complete-window totals remain readable. The article now ends the daily chart on 21 October and excludes the incomplete current day. Evidence: /tmp/qa-oct22-article-qa.
+
+The deck retains 32 slides and four editable charts. Slide 25 extends to 21 October with a complete-window comparison and concise notes on Android, new issues and the crash rebound. Reviewed the regenerated PDF overview and native PPTX renders, with full-size checks of the changed chart and PDF slide 29 numbers. Existing fonts, cover, section maps and 8 October measurements remain intact. Evidence: /tmp/qa-oct22-pdf-sheet.png and the private qa-oct22 build directory.

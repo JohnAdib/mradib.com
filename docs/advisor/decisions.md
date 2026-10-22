@@ -1361,3 +1361,7 @@ Order upcoming appearances by date descending, matching John’s preference for 
 ## 2026-10-11: Hosted conversation timeline rows
 
 Use the previous-talk row treatment for conversations: community at top left, short date on the right, title links directly to YouTube, guest and runtime status below. Remove guest LinkedIn, channel and repeated video actions from the visible UI. Keep Tech Immigrants named per row.
+
+## 2026-10-22: Sentry evidence refresh
+
+John approved one PR updating the anonymous article and 32-slide deck. Use complete-day observations through 21 October and two complete 30-day windows, giving 65% fewer recorded events. Include the short Android snapshot and the crash/new-issue rebound. Keep 8 October labels on unchanged inventory, coverage and PR data. Preserve existing story, typography and PDF-only public downloads.

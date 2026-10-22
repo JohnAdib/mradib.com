@@ -1,14 +1,19 @@
 # Beyond the QA Bottleneck
 
-Reviewed 32-slide story and literal chart values for the 9 October refresh.
-The inventory and coverage checkpoint is 8 October 2026. October PR activity
-covers 1 to 8 October only. Daily error observations remain on complete days
-from July to September because no October daily series was supplied.
+Reviewed 32-slide story with the 22 October Sentry refresh. Daily recorded errors
+cover 107 complete days, 7 July to 21 October 2026. The comparison uses two
+complete 30-day windows: 364,417 events (7 July to 5 August) and 127,531
+(22 September to 21 October), approximately 65% fewer. The incomplete 6 July
+and 22 October days are excluded.
 
-The editable PPTX lives in resources/talks.
-Only the PDF is exposed as a website download. Preserve the reviewed story,
-fonts, section progress and brief speaker notes on future revisions. Measured
-coverage has a changed denominator; flow inventory is not CI execution coverage.
+Inventory and coverage remain the 8 October checkpoint. October PR activity
+still covers 1 to 8 October only. New Sentry observations do not update those
+measurements. Keep weekly production-only counts separate from the daily
+all-environment series. Notes preserve the Android short-window limitation,
+37 new October error types and the weekly crash rebound.
+
+The editable PPTX lives in resources/talks. Only the PDF is exposed as a website
+download. Preserve story, fonts, section progress and brief speaker notes.
 
 Event: React Native London Meetup, 22 October 2026. Funding Circle,
 71 Queen Victoria Street, London. https://luma.com/gxz3g6se
