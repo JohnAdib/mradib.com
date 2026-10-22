@@ -1365,3 +1365,7 @@ Use the previous-talk row treatment for conversations: community at top left, sh
 ## 2026-10-22: Sentry evidence refresh
 
 John approved one PR updating the anonymous article and 32-slide deck. Use complete-day observations through 21 October and two complete 30-day windows, giving 65% fewer recorded events. Include the short Android snapshot and the crash/new-issue rebound. Keep 8 October labels on unchanged inventory, coverage and PR data. Preserve existing story, typography and PDF-only public downloads.
+
+### October wording
+
+Use month names for monthly figures. State October’s 37 new error types directly, without describing the correction from an earlier report. Keep actual date axes and complete-window ranges on the daily event chart.
