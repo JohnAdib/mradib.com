@@ -10,7 +10,7 @@ Inventory and coverage remain the 8 October checkpoint. October PR activity
 still covers 1 to 8 October only. New Sentry observations do not update those
 measurements. Keep weekly production-only counts separate from the daily
 all-environment series. Notes preserve the Android short-window limitation,
-37 new October error types and the weekly crash rebound.
+37 new October error types.
 
 The editable PPTX lives in resources/talks. Only the PDF is exposed as a website
 download. Preserve story, fonts, section progress and brief speaker notes.

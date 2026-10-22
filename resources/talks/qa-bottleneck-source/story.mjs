@@ -385,7 +385,7 @@ export const slides = [
 		lead: "",
 		foot: "65% fewer events: 7 Jul to 5 Aug vs 22 Sep to 21 Oct 2026. Both windows are 30 complete days.\nAll environments. Fixes, filters and sampling affect counts. No usage denominator.",
 		notes:
-			"• 107 complete days: 7 July to 21 October\n• Windows: 7 Jul to 5 Aug vs 22 Sep to 21 Oct\n• 364,417 then 127,531 events. About 65% fewer\n• Android snapshot: about 690 to 290 events/day. Short window\n• Oct: 37 new error types\n• Weekly crashes: 458, 409, then 887. Monitoring still matters\n• Fixes, filters and sampling affect counts. No usage denominator",
+			"• 107 complete days: 7 July to 21 October\n• Windows: 7 Jul to 5 Aug vs 22 Sep to 21 Oct\n• 364,417 then 127,531 events. About 65% fewer\n• Android snapshot: about 690 to 290 events/day. Short window\n• Oct: 37 new error types\n• Fixes, filters and sampling affect counts. No usage denominator",
 		chapter: "",
 	},
 	{
